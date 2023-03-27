@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en-in">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>
+            JSON Server 
+        </title>
+        <style>
+            html {
+                font-size:calc(10px + 0.390625vw);
+            }
+
+            body {
+                font-family:Verdana, sans-serif;
+                font-size:1rem;
+                line-height:1.5;
+            }
+
+            .edit {
+                background-color:#f1f1f1;
+                color:red;
+            }
+
+            .edit1 {
+                background-color:rgba(255,255,0,0.3);
+                padding:2rem;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>
+            JSON Server 
+        </h1>
+
+        <div>
+            A common use of JSON is to exchange data to/from a web server. 
+            <br>
+            When receiving data from a web server, the data is always a string. 
+            <br>
+            Parse the data with <span class="edit">JSON.parse()</span>, and the data becomes a JavaScript object. 
+        </div>
+
+        <hr>
+
+        <h2>
+            Sending Data 
+        </h2>
+
+        <div>
+            If you have data stored in a JavaScript object, you can convert the object into JSON, and send it to a server. 
+            <br>
+            Example:- 
+            <br>
+            <p id="demo1"></p>
+        </div>
+
+        <hr>
+
+        <h2>
+            Receiving Data 
+        </h2>
+
+        <div>
+            If you receive data in JSON format, you can easily convert it into a JavaScript object. 
+            <br>
+            Example:- 
+            <br>
+            <p id="demo2"></p>
+        </div>
+
+        <hr>
+
+        <h2>
+            JSON From a Server 
+        </h2>
+
+        <div>
+            You can request JSON from the server by using an AJAX request. 
+            <br>
+            As long as the response from the server is written in JSON format, you can parse the string into a JavaScript object. 
+            <br>
+            Example:- 
+            <br>
+            <b>
+                Use the XMLHttpRequest to get data from the server:- 
+            </b>
+            <br>
+            <p id="demo3"></p>
+
+            <br>
+            Take a look at <a href="json_demo.txt" target="_blank">json_demo.txt</a>
+        </div>
+
+        <hr>
+
+        <h2>
+            Array as JSON 
+        </h2>
+
+        <div>
+            When using the <span class="edit">JSON.parse()</span> on JSON derived from an array, the method will return a JavaScript array, instead of a JavaScript object. 
+            <br>
+            Example:- 
+            <br>
+            <b>
+                JSON returned from a server as an array:- 
+            </b>
+            <br>
+            <p id="demo4"></p>
+
+            <br>
+            Take a look at <a href="json_demo_array.txt" target="_blank">json_demo_array.txt</a> 
+        </div>
+
+        <script>
+            const myObj1 = { name: "John", age: 31, city: "New York" };
+            const myJSON1 = JSON.stringify(myObj1);
+            window.location = "demo_json.php?x=" + myJSON1;
+
+            const myJSON2 = '{"name":"John", "age":31, "city":"New York"}';
+            const myObj2 = JSON.parse(myJSON2);
+            document.getElementById("demo2").innerHTML = myObj2.name;
+
+            const xmlhttp = new XMLHttpRequest();
+            xmlhttp.onload = function() {
+                const myObj = JSON.parse(this.responseText);
+                document.getElementById("demo3").innerHTML = myObj.name;
+            }
+            xmlhttp.open("GET", "json_demo.txt");
+            xmlhttp.send();
+
+            const xmlhttp1 = new XMLHttpRequest();
+            xmlhttp.onload = function() {
+                const myArr1 = JSON.parse(this.responseText);
+                document.getElementById("demo4").innerHTML = myArr1[0];
+            }
+            xmlhttp.open("GET", "json_demo_array.txt", true);
+            xmlhttp.send();
+        </script>
+    </body>
+</html>

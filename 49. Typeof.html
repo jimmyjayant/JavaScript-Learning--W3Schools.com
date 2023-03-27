@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            JavaScript typeof 
+        </title>
+        <style>
+            .edit {
+                background-color:#f1f1f1;
+                color:red;
+            }
+            .edit1 {
+                background-color:rgba(255,255,0,0.3);
+                padding:20px;
+            }
+            body {
+                font-family:verdana, sans-serif;
+                font-size:20px;
+                line-height:1.5;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>
+            JavaScript typeof 
+        </h1>
+
+        <p>
+           In JavaScript there are 5 different data types that can contain values:- 
+           <br>
+           <ul>
+            <li><span class="edit">string</span></li>
+            <li><span class="edit">number</span></li>
+            <li><span class="edit">boolean</span></li>
+            <li><span class="edit">object</span></li>
+            <li><span class="edit">function</span></li>
+           </ul>
+
+           <br>
+           <br>
+
+           There are 6 types of objects:- 
+           <br>
+           <ul>
+            <li><span class="edit">Object</span></li>
+            <li><span class="edit">Date</span></li>
+            <li><span class="edit">Array</span></li>
+            <li><span class="edit">String</span></li>
+            <li><span class="edit">Number</span></li>
+            <li><span class="edit">Boolean</span></li>
+           </ul>
+
+           <br>
+           <br>
+
+           And 2 data types that cannot contain values:- 
+           <br>
+           <ul>
+            <li><span class="edit">null</span></li>
+            <li><span class="edit">undefined</span></li>
+           </ul>
+
+        </p>
+
+        <hr>
+
+        <h2>
+            The typeof Operator 
+        </h2>
+
+        <p>
+            You can use the <span class="edit">typeof</span> operator to find the data type of a JavaScript variable. 
+            <br>
+            Example:- 
+            <br>
+            <p id="demo1"></p>
+
+            <br>
+            <br>
+
+            Please observe:- 
+            <br>
+            <ul>
+                <li>The data type of NaN is number</li>
+                <li>The data type of an array is object</li>
+                <li>The data type of a date is object</li>
+                <li>The data type of null is object</li>
+                <li>The data type of an undefined variable is <strong>undefined</strong>*</li>
+                <li>The data type of a variable that has not been assigned a value is also <strong>undefined</strong>*</li>
+            </ul>
+
+            <br>
+            <br>
+
+            <p class="edit1">
+                You cannot use <span class="edit">typeof</span> to determine if a JavaScript object is an array (or a date). 
+            </p>
+        </p>
+
+        <hr>
+        <br>
+        <hr>
+
+        <h2>
+            Primitive Data 
+        </h2>
+
+        <p>
+            A primitive data value is a single simple data value with no additional properties and methods. 
+            <br>
+            The <span class="edit">typeof</span> operator can return one of these primitive types:- 
+            <br>
+            <ul>
+                <li><span class="edit">string</span></li>
+                <li><span class="edit">number</span></li>
+                <li><span class="edit">boolean</span></li>
+                <li><span class="edit">undefined</span></li>
+            </ul>
+
+            <br>
+            <br>
+            Example:- 
+            <br>
+            <p id="demo2"></p>
+        </p>
+
+        <hr>
+
+        <h2>
+            Complex Data 
+        </h2>
+
+        <p>
+            The <span class="edit">typeof</span> operator can return one of two complex types:- 
+            <br>
+            <ul>
+                <li><span class="edit">function</span></li>
+                <li><span class="edit">object</span></li>
+            </ul>
+
+            <br>
+            The <span class="edit">typeof</span> operator returns "object" for objects, arrays, and null. 
+            <br>
+            The <span class="edit">typeof</span> operator does not return "object" for functions. 
+            <br>
+            Example:- 
+            <br>
+            <p id="demo3"></p>
+
+            <br>
+
+            <p class="edit1">
+                The <span class="edit">typeof</span> operator returns "<span class="edit">object</span>" for arrays because in JavaScript arrays are objects. 
+            </p>
+        </p>
+
+        <hr>
+
+        <h2>
+            The Data Type of typeof 
+        </h2>
+
+        <p>
+            The <span class="edit">typeof</span> operator is not a variable. It is an operator. Operators (+ - * /) do not have any data type. 
+            <br>
+            But, the <span class="edit">typeof</span> operator always <strong>returns a string</strong> (containing the type of the operand). 
+        </p>
+
+        <hr>
+
+        <h2>
+            The constructor Property 
+        </h2>
+
+        <p>
+            The <span class="edit">constructor</span> property returns the constructor function for all JavaScript variables. 
+            <br>
+            Example:- 
+            <br>
+            <p id="demo4"></p>
+
+            <br>
+            <br>
+
+            You can check the constructor property to find out if an object is an <span class="edit">Array</span> (contains the word "Array"). 
+            <br>
+            Example:- 
+            <br>
+            <p id="demo5"></p> 
+
+            <br>
+            <br>
+            Or even simpler, you can check if the object is an <strong>Array function</strong>. 
+            <br>
+            Example:- 
+            <br>
+            <p id="demo6"></p>
+
+            <br>
+            <br>
+            You can check the constructor property to find out if an object is a <span class="edit">Date</span> (contains the word "Date"). 
+            <br>
+            Example:- 
+            <br>
+            <p id="demo7"></p>
+
+            <br>
+            <br>
+            Or even simpler, you can check if the object is a <strong>Date function</strong>. 
+            <br>
+            Example:- 
+            <br>
+            <p id="demo8"></p>
+        </p>
+
+        <hr>
+
+        <h2>
+            Undefined 
+        </h2>
+
+        <p>
+            In JavaScript, a variable without a value, has the value <span class="edit">undefined</span>. The type is also <span class="edit">undefined</span>. 
+            <br>
+            Example:- 
+            <br>
+            <p id="demo9"></p>
+
+            <br>
+            <br>
+
+            Any variable can be emptied, by setting the value to <span class="edit">undefined</span>. The type will also be <span class="edit">undefined</span>. 
+            <br>
+            Example:- 
+            <br>
+            <p id="demo10"></p>
+
+            <br>
+
+            <p id="demo11"></p>
+        </p>
+
+        <hr>
+
+        <h2>
+            Empty Values 
+        </h2>
+
+        <p>
+            An empty value has nothing to do with <span class="edit">undefined</span>. 
+            <br>
+            An empty string has both a legal value and a type. 
+            <br>
+            Example:- 
+            <br>
+            <p id="demo12"></p>
+        </p>
+
+        <hr>
+
+        <h2>
+            Null 
+        </h2>
+
+        <p>
+            In JavaScript <span class="edit">null</span> is "nothing". It is supposed to be something that doesn't exist. 
+            <br>
+            Unfortunately, in JavaScript, the data type of <span class="edit">null</span> is an object. 
+            <br>
+            <br>
+            <p class="edit1">
+                You can consider it a bug in JavaScript that <span class="edit">typeof null</span> is an object. It should be <span class="edit">null</span>. 
+            </p>
+            <br>
+            You can empty an object by setting it to <span class="edit">null</span>. 
+            <br>
+            Example:- 
+            <br>
+            <p id="demo13"></p>
+            <br>
+            <p id="demo14"></p>
+
+            <br>
+            <br>
+
+            You can also empty an object by setting it to <span class="edit">undefined</span>. 
+            <br>
+            Example:- 
+            <br>
+            <p id="demo15"></p>
+            <br>
+            <p id="demo16"></p>
+        </p>
+
+        <hr>
+
+        <h2>
+            Difference Between Undefined and Null 
+        </h2>
+
+        <p>
+            <span class="edit">undefined</span> and <span class="edit">null</span> are equal in value but different in type. 
+            <br>
+            Example:- 
+            <br>
+            <p id="demo17"></p>
+        </p>
+
+        <hr>
+
+        <h2>
+            The instanceof Operator 
+        </h2>
+
+        <p>
+            The <span class="edit">instanceof</span> operator returns <span class="edit">true</span> if an object is an instance of the specified object. 
+            <br>
+            Example:- 
+            <br>
+            <p id="demo18"></p>
+        </p>
+
+        <hr>
+
+        <h2>
+            The void Operator 
+        </h2>
+
+        <p>
+            The <strong>void</strong> operator evaluates an expression and returns <strong>undefined</strong>. This operator is often used to obtain the undefined primitive value, using "void(0)" (useful when evaluating an expression without using the return value). 
+            <br>
+            Example:- 
+            <br>
+            <a href="javascript:void(0);">Useless Link</a>
+            <br>
+            <br>
+            <a href="javascript:void(document.body.style.backgroundColor='red');">
+                Click me to change the background color of body to red. 
+            </a>
+        </p>
+
+
+        <script>
+            document.getElementById("demo1").innerHTML = 
+            "type of " + "\"John\" is:- " + typeof "John" + "<br>" + 
+            "type of 3.14 is:- " + typeof 3.14 + "<br>" + 
+            "type of NaN is:- " + typeof NaN + "<br>" + 
+            "type of false is:- " + typeof false + "<br>" + 
+            "type of [1,2,3,4] is:- " + typeof [1,2,3,4] + "<br>" + 
+            "type of {name:\"John\", age:34} is:- " + typeof {name:"John", age:34} + "<br>" + 
+            "type of new Date() is:- " + typeof new Date() + "<br>" + 
+            "type of function(){} is:- " + typeof function(){} + "<br>" + 
+            "type of myCar(an undefined variable) is:- " + typeof myCar + "<br>" + 
+            "type of null is:- " + typeof null;
+
+            document.getElementById("demo2").innerHTML = 
+            "type of " + "\"John\" is:- " + typeof "John" + "<br>" + 
+            "type of 3.14 is:- " + typeof 3.14 + "<br>" + 
+            "type of false is:- " + typeof false + "<br>" + 
+            "type of true is:- " + typeof true + "<br>" + 
+            "type of x(if x has no value) is:- " + typeof x;
+
+            document.getElementById("demo3").innerHTML = 
+            "type of {name:'John', age:34} is:- " + typeof {name:"John",age:34} + "<br>" + 
+            "type of [1,2,3,4] is:- " + typeof [1,2,3,4] + "<br>" + 
+            "type of null is:- " + typeof null + "<br>" + 
+            "type of function myFunc(){} is:- " + typeof function myFunc(){};
+
+            document.getElementById("demo4").innerHTML = 
+            "\"John\".constructor returns :- " + "John".constructor + "<br>" + 
+            "(3.14).constructor returns :- " + (3.14).constructor + "<br>" + 
+            "false.constructor returns :- " + false.constructor + "<br>" + 
+            "[1,2,3,4].constructor returns :- " + [1,2,3,4].constructor + "<br>" + 
+            "{name:'John',age:34}.constructor returns :- " + {name:"John",age:34}.constructor + "<br>" + 
+            "new Date().constructor returns :- " + new Date().constructor + "<br>" + 
+            "function() {}.constructor returns :- " + function(){}.constructor;
+
+            const fruits1 = ["Banana", "Orange", "Apple"];
+            document.getElementById("demo5").innerHTML = isArray(fruits1);
+
+            function isArray(myArray) {
+                return myArray.constructor.toString().indexOf("Array") > -1;
+            }
+
+            document.getElementById("demo6").innerHTML = isArray(fruits1);
+
+            function isArray(myArray)
+            {
+                return myArray.constructor === Array;
+            }
+
+            const myDate = new Date();
+            document.getElementById("demo7").innerHTML = isDate(myDate);
+
+            function isDate(myDate)
+            {
+                return myDate.constructor.toString().indexOf("Date") > -1;
+            }
+
+            document.getElementById("demo8").innerHTML = isDate(myDate);
+            function isDate(myDate)
+            {
+                return myDate.constructor === Date;
+            }
+
+            let car1;
+
+            document.getElementById("demo9").innerHTML = 
+            "Variable car1 value is:- " + car1 + "<br>" + 
+            "And its type is:- " + typeof car1;
+
+            let car2 = "Volvo";
+            document.getElementById("demo10").innerHTML = 
+            "The value of variable car2 is:- " + car2 + "<br>" + 
+            "And its type is:- " + typeof car2;
+
+            car2 = undefined;
+
+            document.getElementById("demo11").innerHTML = 
+            "After emptying the variable car2, its value is:- " + car2 + 
+            "<br>" + 
+            "And its type is:- " + typeof car2;
+
+            let car3 = "";
+            document.getElementById("demo12").innerHTML = 
+            "The value of empty variable car3 is:- " + car3 + "<br>" + 
+            "And its type is:- " + typeof car3;
+
+            let person1 = {firstName:"John",lastName:"Doe",age:29};
+            document.getElementById("demo13").innerHTML = 
+            "The object person is:- " + "<br>" + 
+            person1.firstName + " " + person1.lastName + " " + person1.age + 
+            "<br>" + "And its type is:- " + typeof person1;
+
+            //After emptying the person object
+            person1 = null;
+
+            document.getElementById("demo14").innerHTML = 
+            /*"The object person is:- " + 
+            person1.firstName + " " + person1.lastName + " " + person1.age + */
+            "<br>" + "After emptying the person object, its type is:- " + typeof person1;
+
+            let person2 = {
+             firstName:"Jimmy",
+             lastName:"Jayant",
+             age:29,
+             eyeColor:"black"
+            };
+
+            document.getElementById("demo15").innerHTML = 
+            "The object person is:- " + "<br>" + 
+            person2.firstName + " " + person2.lastName + " " + 
+            person2.age + " " + person2.eyeColor + "<br>" + 
+            "And its type is:- " + typeof person2;
+
+            person2 = undefined;
+
+            document.getElementById("demo16").innerHTML = 
+            "The object person type after emptying it by setting its value to undefined is:- " + 
+            typeof person2;
+            
+
+            document.getElementById("demo17").innerHTML = 
+            "The type of undefined is:- " + typeof undefined + "<br>" + 
+            "The type of null is:- " + typeof null + "<br>" + 
+            "Are null and undefined equal in value and type? = " + (null === undefined) + 
+            "<br>" + "Are null and undefined equal in value? = " + (null == undefined);
+
+            const cars4 = ["BMW", "Volvo", "Audi"];
+
+            document.getElementById("demo18").innerHTML = 
+            "Is the variable cars4 an instance of Array? = " + (cars4 instanceof Array) + 
+            "<br>" + "Is the variable cars4 an instance of Object? = " + (cars4 instanceof Object) + 
+            "<br>" + "Is the variable cars4 an instance of String? = " + (cars4 instanceof String) + 
+            "<br>" + "Is the variable cars4 an instance of Number? = " + (cars4 instanceof Number);
+
+
+        </script>
+    </body>
+</html> 

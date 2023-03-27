@@ -1,0 +1,591 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            JavaScript Get Date Methods 
+        </title>
+        <style>
+            .edit {
+                background-color:#f1f1f1;
+                color:red;
+            }
+            .edit1 {
+                background-color:rgba(255,255,0,0.3);
+                padding:20px;
+            }
+            body {
+                font-family:verdana, sans-serif;
+                font-size:20px;
+                line-height:1.5;
+            }
+            .table1 {
+                width:100%;
+                border:1px solid #ddd;
+                border-collapse:collapse;
+            }
+            .table1 tr {
+                height:40px;
+            }
+            .table1 tr:nth-child(even) {
+                background-color:#ddd;
+            }
+            .table1 th {
+                text-align:left;
+                padding:10px;
+            }
+            .table1 td {
+                padding:10px;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>
+            JavaScript Get Date Methods 
+        </h1>
+
+        <hr>
+
+        <h2>
+            The new Date() constructor 
+        </h2>
+
+        <p>
+           In JavaScript, date objects are created with <span class="edit">new Date()</span>. 
+           <br>
+           <span class="edit">new Date()</span> returns a date object with the current date and time. 
+           <br>
+           Example:- 
+           <br>
+           <p id="demo1"></p>
+        </p>
+
+        <hr>
+
+        <h2>
+            Date Get Methods 
+        </h2>
+
+        <p>
+            <table class="table1">
+                <tr>
+                    <th>Method</th>
+                    <th>Description</th>
+                </tr>
+                <tr>
+                    <td>getFullYear()</td>
+                    <td>Get <strong>year</strong> as a four digit number (yyyy)</td>
+                </tr>
+                <tr>
+                    <td>getMonth()</td>
+                    <td>Get <strong>month</strong> as a number (0-11)</td>
+                </tr>
+                <tr>
+                    <td>getDate()</td>
+                    <td>Get <strong>date</strong> as a number (1-31)</td>
+                </tr>
+                <tr>
+                    <td>getDay()</td>
+                    <td>Get <strong>weekday</strong> as a number (0-6)</td>
+                </tr>
+                <tr>
+                    <td>getHours()</td>
+                    <td>Get <strong>hour</strong> (0-23)</td>
+                </tr>
+                <tr>
+                    <td>getMinutes()</td>
+                    <td>Get <strong>minute</strong> (0-59)</td>
+                </tr>
+                <tr>
+                    <td>getSeconds()</td>
+                    <td>Get <strong>second</strong> (0-59)</td>
+                </tr>
+                <tr>
+                    <td>getMilliseconds()</td>
+                    <td>Get <strong>millisecond</strong> (0-999)</td>
+                </tr>
+                <tr>
+                    <td>getTime()</td>
+                    <td>Get <strong>time</strong> (milliseconds since January 1, 1970)</td>
+                </tr>
+            </table>
+
+            <br>
+            <br>
+
+            <p class="edit1">
+                <span style="font-size:30px">Note 1</span>
+                <br>
+                The get methods above return <strong>Local time</strong>. 
+                <br>
+                <strong>Universal time</strong> (UTC) is documented at the bottom of this page. 
+            </p>
+
+            <br>
+
+            <p class="edit1">
+                <span style="font-size:30px">Note 2</span>
+                <br>
+                The get methods return information from existing date objects. 
+                <br>
+                In a date object, the time is static. The "clock" is not "running". 
+                <br>
+                The time in a date object is NOT the same as current time. 
+            </p>
+        </p>
+
+        <hr>
+
+        <h2>
+            The getFullYear() Method 
+        </h2>
+
+        <p>
+            The <span class="edit">getFullYear()</span> method returns the year of a date as a four digit number. 
+            <br>
+            Example:- 
+            <br>
+            <p id="demo2"></p>
+
+            <br>
+            <br>
+            Example:- 
+            <br>
+            <p id="demo3"></p>
+
+            <br>
+            <br>
+
+            <p style="background-color:pink;padding:20px;">
+            <span style="font-size:30px;">Warning !</span>
+            <br>
+            Old JavaScript code might use the non-standard method getYear(). 
+            <br>
+            getYear() is supposed to return a 2-digit year. 
+            <br>
+            getYear() is deprecated. Do not use it! 
+            </p>
+        </p>
+
+        <hr>
+
+        <h2>
+            The getMonth() Method 
+        </h2>
+
+        <p>
+            The <span class="edit">getMonth()</span> method returns the month of a date as a number (0-11). 
+            <br>
+            <br>
+            <p class="edit1">
+                <span style="font-size:30px;">Note</span>
+                <br>
+                In JavaScript, January is month number 0, February is number 1, ..... 
+                <br>
+                Finally, December is month number 11. 
+            </p>
+
+            <br>
+
+            Example:- 
+            <br>
+            Since JavaScript counts month from 0 to 11, so to get the correct month number, you must add 1. 
+            <br>
+            <p id="demo4"></p>
+
+            <br>
+            <br>
+            Example:- 
+            <br>
+            <p id="demo5"></p>
+
+            <br>
+            <br>
+
+            <p class="edit1">
+                <span style="font-size:30px;">Note</span>
+                <br>
+                You can use an array of names to return the month as a name. 
+            </p>
+
+            <br>
+            Example:- 
+            <br>
+            <p id="demo6"></p>
+
+            <br>
+            <br>
+            Example:- 
+            <br>
+            <p id="demo7"></p>
+        </p>
+
+        <hr>
+
+        <h2>
+            The getDate() Method 
+        </h2>
+
+        <p>
+            The <span class="edit">getDate()</span> method returns the day of a date as a number (1-31). 
+            <br>
+            Example:- 
+            <br>
+            <p id="demo8"></p>
+
+            <br>
+            Example:- 
+            <br>
+            <p id="demo9"></p>
+        </p>
+
+        <hr>
+        <br>
+        <br>
+        <hr>
+
+        <h2>
+            The getHours() Method 
+        </h2>
+
+        <p>
+            The <span class="edit">getHours()</span> method returns the hours of a date as a number (0-23). 
+            <br>
+            Example:- 
+            <br>
+            <p id="demo10"></p>
+
+            <br>
+            Example:- 
+            <br>
+            <p id="demo11"></p>
+        </p>
+
+        <hr>
+
+        <h2>
+            The getMinutes() Method 
+        </h2>
+
+        <p>
+            The <span class="edit">getMinutes()</span> method returns the minutes of a date as a number (0-59). 
+            <br>
+            Example:- 
+            <br>
+            <p id="demo12"></p>
+
+            <br>
+            Example:- 
+            <br>
+            <p id="demo13"></p>
+        </p>
+
+        <hr>
+
+        <h2>
+            The getSeconds() Method 
+        </h2>
+
+        <p>
+            The <span class="edit">getSeconds()</span> method returns the seconds of a date as a number (0-59). 
+            <br>
+            Example:- 
+            <br>
+            <p id="demo14"></p>
+
+            <br>
+            Example:- 
+            <br>
+            <p id="demo15"></p>
+        </p>
+
+        <hr>
+
+        <h2>
+            The getMilliseconds() Method 
+        </h2>
+
+        <p>
+            The <span class="edit">getMilliseconds()</span> method returns the milliseconds of a date as a number (0-999). 
+            <br>
+            Example:- 
+            <br>
+            <p id="demo16"></p>
+
+            <br>
+            Example:- 
+            <br>
+            <p id="demo17"></p>
+        </p>
+
+        <hr>
+
+        <h2>
+            The getDay() Method 
+        </h2>
+
+        <p>
+            The <span class="edit">getDay()</span> method returns the weekday of a date as a number (0 - 6). 
+            <br>
+            <p class="edit1">
+                <span style="font-size:30px">Note</span>
+                <br>
+                In JavaScript, the first day of the week (day 0) is Sunday. 
+                <br>
+                Some countries in the world consider the first day of the week to be Monday. 
+            </p>
+            <br>
+            Example:- 
+            <br>
+            <p id="demo18"></p>
+
+            <br>
+            Example:- 
+            <br>
+            <p id="demo19"></p>
+
+            <br>
+            <br>
+
+            <p class="edit1">
+                <span style="font-size:30px;">Note</span>
+                <br>
+                You can use an array of names, and <span class="edit">getDay()</span> to return weekday as a name. 
+            </p>
+        </p>
+
+        <hr>
+
+        <h2>
+            The getTime() Method 
+        </h2>
+
+        <p>
+            The <span class="edit">getTime()</span> method returns the number of milliseconds since January 1, 1970. 
+            <br>
+            Example:- 
+            <br>
+            <p id="demo20"></p>
+        </p>
+
+        <hr>
+
+        <h2>
+            The Date.now() Method 
+        </h2>
+
+        <p>
+            <span class="edit">Date.now()</span> returns the number of milliseconds since January 01, 1970. 
+            <br>
+            Example:- 
+            <br>
+            <p id="demo21"></p>
+
+            <br>
+            <br>
+            Example:- 
+            <br>
+            Calculate the number of years since January 01, 1970:- 
+            <br>
+            <p id="demo22"></p>
+
+            <br>
+            <br>
+            <span class="edit">Date.now()</span> is a static method of the Date object. 
+            <br>
+            You cannot use it on a date object like <span class="edit">myDate.now()</span>. 
+            <br>
+            The syntax is always <span class="edit">Date.now()</span>. 
+        </p>
+
+        <hr>
+
+        <h2>
+            UTC Date Get Methods 
+        </h2>
+
+        <p>
+            <table class="table1">
+                <tr>
+                    <th>Method</th>
+                    <th>Same As</th>
+                    <th>Description</th>
+                </tr>
+                <tr>
+                    <td>getUTCDate()</td>
+                    <td>getDate()</td>
+                    <td>Returns the UTC date</td>
+                </tr>
+                <tr>
+                    <td>getUTCFullYear()</td>
+                    <td>getFullYear()</td>
+                    <td>Returns the UTC Year</td>
+                </tr>
+                <tr>
+                    <td>getUTCMonth()</td>
+                    <td>getMonth()</td>
+                    <td>Returns the UTC Month</td>
+                </tr>
+                <tr>
+                    <td>getUTCDay()</td>
+                    <td>getDay()</td>
+                    <td>Returns the UTC Day</td>
+                </tr>
+                <tr>
+                    <td>getUTCHours()</td>
+                    <td>getHours()</td>
+                    <td>Returns the UTC Hours</td>
+                </tr>
+                <tr>
+                    <td>getUTCMinutes()</td>
+                    <td>getMinutes()</td>
+                    <td>Returns the UTC Minutes</td>
+                </tr>
+                <tr>
+                    <td>getUTCSeconds()</td>
+                    <td>getSeconds()</td>
+                    <td>Returns the UTC Seconds</td>
+                </tr>
+                <tr>
+                    <td>getUTCMilliseconds()</td>
+                    <td>getMilliseconds()</td>
+                    <td>Returns the UTC Milliseconds</td>
+                </tr>
+            </table>
+
+            <br>
+            <br>
+
+            UTC methods use UTC time (Coordinated Universal Time). 
+            <br>
+            UTC time is the same as GMT (Greenwich Mean Time). 
+            <br>
+            The difference between Local Time and UTC time can be up to 24 hours.   
+        </p>
+
+        <hr>
+
+        <h2>
+            The getTimezoneOffset() Method 
+        </h2>
+
+        <p>
+            The <span class="edit">getTimezoneOffset()</span> method returns the difference (in minutes) between local time and UTC time. 
+            <br>
+            Example:- 
+            <br>
+            <p id="demo23"></p>
+        </p>
+
+
+
+        <script>
+          const d1 = new Date();
+          document.getElementById("demo1").innerHTML = d1;
+
+          const d2 = new Date("2021-03-25");
+          document.getElementById("demo2").innerHTML = 
+          "The year in the date 2021-03-25 is:- " + d2.getFullYear();
+
+          const d3 = new Date();
+          document.getElementById("demo3").innerHTML = 
+          "The year of the current date is:- " + d3.getFullYear();
+
+          const d4 = new Date("2021-03-25");
+          document.getElementById("demo4").innerHTML = 
+          "The month in the date 2021-03-25 is:- " + (d4.getMonth() + 1);
+
+          const d5 = new Date();
+          document.getElementById("demo5").innerHTML = 
+          "The month in the current date is:- " + (d5.getMonth() + 1);
+
+          const months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+
+          const d6 = new Date("2021-03-25");
+          let month1 = months[d6.getMonth()];
+          document.getElementById("demo6").innerHTML = 
+          "The month name in the date 2021-03-25 is:- " + month1;
+
+          const d7 = new Date();
+          let month2 = months[d7.getMonth()];
+          document.getElementById("demo7").innerHTML = 
+          "The month name in the current date is:- " + month2;
+
+          const d8 = new Date("2021-03-25");
+          document.getElementById("demo8").innerHTML = 
+          "The date in the date 2021-03-25 is:- " + d8.getDate();
+
+          const d9 = new Date();
+          document.getElementById("demo9").innerHTML = 
+          "The current date is:- " + d9.getDate();
+
+          const d10 = new Date("2021-03-25");
+          document.getElementById("demo10").innerHTML = 
+          "The hours of the date 2021-03-25 is:- " + d10.getHours();
+
+          const d11 = new Date();
+          document.getElementById("demo11").innerHTML = 
+          "The hour of the current date is:- " + d11.getHours();
+
+          const d12 = new Date("2021-03-25");
+          document.getElementById("demo12").innerHTML = 
+          "The minutes in the date 2021-03-25 is:- " + d12.getMinutes();
+
+          const d13 = new Date();
+          document.getElementById("demo13").innerHTML = 
+          "The minutes of the current date is:- " + d13.getMinutes();
+
+          const d14 = new Date("2021-03-25");
+          document.getElementById("demo14").innerHTML = 
+          "The seconds in the date 2021-03-25 is:- " + d14.getSeconds();
+
+          const d15 = new Date();
+          document.getElementById("demo15").innerHTML = 
+          "The seconds of the current date is:- " + d15.getSeconds();
+
+          const d16 = new Date("2021-03-25");
+          document.getElementById("demo16").innerHTML = 
+          "The number of milliseconds in the date 2021-03-25 is:- " + d16.getMilliseconds();
+
+          const d17 = new Date();
+          document.getElementById("demo17").innerHTML = 
+          "The number of milliseconds in the current date is:- " + d17.getMilliseconds();
+          
+
+          const weekday = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+          
+          const d18 = new Date("2021-03-25");
+          let weekday1 = weekday[d18.getDay()];
+          document.getElementById("demo18").innerHTML = 
+          "The weekday of the date 2021-03-25 is:- " + (d18.getDay()) + " which is " + weekday1;
+
+          const d19 = new Date();
+          let weekday2 = weekday[d19.getDay()];
+          document.getElementById("demo19").innerHTML = 
+          "The weekday of the current date is:- " + d19.getDay() + " which is " + weekday2;
+
+          const d20 = new Date("2021-03-25");
+          const d21 = new Date("1970-01-01");
+          const d22 = new Date();
+          document.getElementById("demo20").innerHTML = 
+          "The number of milliseconds of date 2021-03-25 is:- " + d20.getTime() + "<br>" + 
+          "And the number of milliseconds of date 1970-01-01 is:- " + d21.getTime() + "<br>" +
+          "And the number of milliseconds of current date is:- " + d22.getTime();
+
+          const d23 = Date.now();
+          document.getElementById("demo21").innerHTML = d23;
+          
+          let years = Math.round(Date.now() / (365*24*60*60*1000));
+          document.getElementById("demo22").innerHTML = 
+          "The number of years since January 01, 1970 is:- " + years;
+
+          const d24 = new Date();
+          let diff = d24.getTimezoneOffset();
+          let hours1 = (diff / 60);
+          document.getElementById("demo23").innerHTML = 
+          "The time zone difference in minutes is:- " + d24.getTimezoneOffset()
+          + "<br>" + "That is:- " + hours1 + " hours.";
+          
+
+        </script>
+    </body>
+</html>

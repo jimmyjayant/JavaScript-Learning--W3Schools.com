@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en-in">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>
+            Google Chart 
+        </title>
+        <style>
+            html {
+                font-size:calc(10px + 0.390625vw);
+            }
+
+            body {
+                font-size:1rem;
+                font-family:verdana, sans-serif;
+                line-height:1.5;
+            }
+
+            .edit {
+                background-color:#f1f1f1;
+                color:red;
+            }
+
+            .edit1 {
+                background-color:rgba(255,255,0,0.3);
+                padding:2rem;
+            }
+        </style>
+        <script src="https://www.gstatic.com/charts/loader.js"></script>
+    </head>
+    <body>
+        <h1>
+          Google Chart 
+        </h1>
+
+        <div style="background-color:rgba(0,255,0,0.1);padding:2rem;">
+          From simple line charts to complex hierarchical tree maps, the Google Chart gallery provides a large number of ready-to-use chart types: 
+          <br>
+          <ul>
+            <li>Scatter Chart</li>
+            <li>Line Chart</li>
+            <li>Bar / Column Chart</li>
+            <li>Area Chart</li>
+            <li>Pie Chart</li>
+            <li>Donut Chart</li>
+            <li>Org Chart</li>
+            <li>Map / Geo Chart</li>
+          </ul>
+        </div>
+
+        <hr>
+
+        <h2>
+            How to Use Google Chart? 
+        </h2>
+
+        <div>
+            To use Google Chart in your web page, <strong>add a link</strong> to the charts loader: 
+            <br>
+            <p class="edit1">
+                &lt;script 
+                <br>
+                src="https://www.gstatic.com/charts/loader.js"&gt; 
+                <br>
+                &lt;/script&gt; 
+            </p>
+
+            <br>
+            Google Chart is easy to use. 
+            <br>
+            Just add a <strong>&lt;div&gt;</strong> element to display the chart: 
+            <br>
+            <p class="edit1">
+                &lt;div id="myChart" style="width:100%;max-width:700px;height:400px;"&gt;&lt;/div&gt; 
+            </p>
+
+            <br>
+            The &lt;div&gt; element must have a unique id. 
+            <br>
+            Then load the Google Graph API: 
+            <br>
+            <ol>
+                <li>Load the Visualization API and the corechart package</li>
+                <li>Set a callback function to call when the API is loaded</li>
+            </ol>
+
+            <br>
+            <p class="edit1">
+                1 google.charts.load('current', {packages:['corechart']});
+                <br>
+                2 google.charts.setOnLoadCallback(drawChart); 
+            </p>
+
+            <br>
+            That's all! 
+        </div>
+
+        <hr>
+
+        <h2>
+            Line Graph 
+        </h2>
+
+        <div>
+            Example:- 
+            <br>
+            <div id="myChart1" style="width:100%; max-width:600px; height:500px;"></div>
+        </div>
+
+        <hr>
+        <br>
+        <br>
+        <hr>
+
+        <h2>
+            Scatter Plots 
+        </h2>
+
+        <div>
+            To <strong>scatter plot</strong> the same data, change google.visualization to ScatterChart. 
+            <br>
+            Example:- 
+            <br>
+            <div id="myChart2" style="width:100%; max-width:600px; height:500px;"></div>
+        </div>
+
+        <hr>
+
+        <h2>
+            Bar Charts 
+        </h2>
+
+        <div>
+            Example:- 
+            <br>
+            <div id="myChart3" style="width:100%; max-width:600px; height:500px;"></div>
+        </div>
+
+        <hr>
+
+        <h2>
+            Pie Charts 
+        </h2>
+
+        <div>
+            To convert a <strong>Bar</strong> Chart to a <strong>Pie</strong> chart, just replace: 
+            <br>
+            google.visualization.<strong>BarChart</strong>
+            <br>
+            with: 
+            <br>
+            google.visualization.<strong>PieChart</strong>
+            <br>
+            Example:- 
+            <br>
+            <div id="myChart4" style="width:100%; max-width:600px; height:500px;"></div>
+        </div>
+
+        <hr>
+
+        <h2>
+            3D Pie 
+        </h2>
+
+        <div>
+            To display the Pie in 3D, just add <strong>is3D: true</strong> to the options. 
+            <br>
+            Example:- 
+            <br>
+            <div id="myChart5" style="width:100%; max-width:600px; height:500px;"></div>
+        </div>
+
+        <script>
+            google.charts.load('current', {packages:['corechart']});
+
+            //Line Chart 
+            google.charts.setOnLoadCallback(drawChart1);
+
+            function drawChart1() {
+                //Set Data
+                var data = google.visualization.arrayToDataTable([
+                    ['Price', 'Size'],
+                    [50,7],[60,8],[70,8],[80,9],[90,9],
+                    [100,9],[110,10],[120,11],
+                    [130,14],[140,14],[150,15]
+                ]);
+
+                //Set Options
+                var options = {
+                    title: 'House Prices vs. Size',
+                    hAxis: {title: 'Square Meters'},
+                    vAxis: {title: 'Price in Millions'},
+                    legend: 'none'
+                };
+                //Draw
+                var chart = new google.visualization.LineChart(document.getElementById("myChart1"));
+                chart.draw(data, options);
+            }
+
+            //Scatter Chart 
+            google.charts.setOnLoadCallback(drawChart2);
+
+            function drawChart2() {
+                //Set Data
+                var data = google.visualization.arrayToDataTable([
+                    ['Price', 'Size'],
+                    [50,7],[60,8],[70,8],[80,9],[90,9],
+                    [100,9],[110,10],[120,11],
+                    [130,14],[140,14],[150,15]
+                ]);
+
+                //Set Options
+                var options = {
+                    title: 'House Prices vs. Size',
+                    hAxis: {title: 'Square Meters'},
+                    vAxis: {title: 'Price in Millions'},
+                    legend: 'none'
+                };
+
+                //Draw
+                var chart = new google.visualization.ScatterChart(document.getElementById('myChart2'));
+                chart.draw(data, options);
+            }
+            
+            //Bar Chart
+            google.charts.setOnLoadCallback(drawChart3);
+
+            function drawChart3() {
+                var data = google.visualization.arrayToDataTable([
+                    ['Country', 'Mhl'],
+                    ['Italy', 55],
+                    ['France', 49],
+                    ['Spain', 44],
+                    ['USA', 24],
+                    ['Argentina', 15]
+                ]);
+
+                var options = {
+                    title: 'World Wide Wine Production'
+                };
+
+                var chart = new google.visualization.BarChart(document.getElementById('myChart3'));
+                chart.draw(data, options);
+            }
+            
+            //Pie Chart
+            google.charts.setOnLoadCallback(drawChart4);
+
+            function drawChart4() {
+                var data = google.visualization.arrayToDataTable([
+                    ['Country', 'Mhl'],
+                    ['Italy', 54.8],
+                    ['France',48.6],
+                    ['Spain',44.4],
+                    ['USA',23.9],
+                    ['Argentina',14.5]
+                ]);
+
+                var options = {
+                    title: 'World Wide Wine Production'
+                };
+
+                var chart = new google.visualization.PieChart(document.getElementById('myChart4'));
+                chart.draw(data, options);
+            }
+
+            //3D Pie
+            google.charts.setOnLoadCallback(drawChart5);
+
+            function drawChart5() {
+                var data = google.visualization.arrayToDataTable([
+                    ['Country','Mhl'],
+                    ['Italy',54.8],
+                    ['France',48.6],
+                    ['Spain',44.4],
+                    ['USA',23.9],
+                    ['Argentina',14.5]
+                ]);
+
+                var options = {
+                    title: 'World Wide Wine Production',
+                    is3D: true 
+                };
+
+                var chart = new google.visualization.PieChart(document.getElementById('myChart5'));
+                chart.draw(data, options);
+            }
+        </script>
+    </body>
+</html>

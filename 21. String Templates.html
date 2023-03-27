@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            JavaScript String Templates 
+        </title>
+        <style>
+            .edit {
+                background-color:#f1f1f1;
+                color:red;
+            }
+            .edit1 {
+                background-color:rgba(255,255,0,0.3);
+                padding:10px;
+            }
+            .table1 {
+                width:100%;
+                border:1px solid #ddd;
+                border-collapse:collapse;
+            }
+            .table1 tr {
+                height:40px;
+            }
+            .table1 tr:nth-child(even) {
+                background-color:#f1f1f1;
+            }
+            .table1 td {
+                text-align:center;
+                padding:10px;
+                border:1px solid #ddd;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>
+            JavaScript Template Literals 
+        </h1>
+
+        <div style="background-color:lightgreen;padding:10px;">
+        <p>
+            Synonyms:- 
+            <br>
+            <ul>
+                <li>Template Literals</li>
+                <li>Template Strings</li>
+                <li>String Templates</li>
+                <li>Back-Tics Syntax</li>
+            </ul>
+        </p>
+        </div>
+
+        <hr>
+
+        <h2>
+            Back-Tics Syntax 
+        </h2>
+
+        <p>
+            <strong>Template Literals</strong> use back-tics (``) rather than the quotes("") to define a string. 
+            <br>
+            Example:- 
+            <br>
+            <p id="demo1"></p>
+            <br>
+            Template Literals are not supported in Internet Explorer. 
+        </p>
+
+        <hr>
+
+        <h2>
+            Quotes Inside Strings 
+        </h2>
+
+        <p>
+            With <strong>template literals</strong>, you can use both single and double quotes inside a string. 
+            <br>
+            Example:- 
+            <br>
+            <p id="demo2"></p>
+        </p>
+
+        <hr>
+
+        <h2>
+            Multiline Strings 
+        </h2>
+
+        <p>
+            <strong>Template literals</strong> allows multiline strings. 
+            <br>
+            Example:- 
+            <br>
+            <p id="demo3"></p>
+        </p>
+
+        <hr>
+
+        <h2>
+            Interpolation 
+        </h2>
+
+        <p>
+            <strong>Template literals</strong> provide an easy way to interpolate variables and expressions into strings. 
+            <br>
+            The method is called string interpolation. 
+            <br>
+            The syntax is:- 
+            <br>
+            <p class="edit1">
+                ${......} 
+            </p>
+        </p>
+
+        <hr>
+
+        <br>
+        <br>
+        <hr>
+
+        <h2>
+            Variable Substitutions 
+        </h2>
+
+        <p>
+            <strong>Template literals</strong> allow variables in strings. 
+            <br>
+            Example:- 
+            <br>
+            <p id="demo4"></p>
+
+            <br>
+            <br>
+
+            <p class="edit1">
+                Automatic replacing of variables with real values is called <strong>string interpolation</strong>. 
+            </p>
+        </p>
+
+        <hr>
+
+        <h2>
+            Expression Substitution 
+        </h2>
+
+        <p>
+            <strong>Template literals</strong> allow expressions in strings. 
+            <br>
+            Example:- 
+            <br>
+            <p id="demo5"></p>
+
+            <br>
+            <br>
+
+            <p class="edit1">
+                Automatic replacing of expressions with real values is called <strong>string interpolation</strong>. 
+            </p>
+        </p>
+
+        <hr>
+
+        <h2>
+            HTML Templates 
+        </h2>
+
+        <p>
+            Example:- 
+            <br>
+            <p id="demo6"></p>
+        </p>
+
+        <hr>
+
+        <h2>
+            Browser Support 
+        </h2>
+
+        <p>
+            <span class="edit">Template Literals</span> is an ES6 feature (JavaScript 2015). 
+            <br>
+            It is supported in all modern browsers. 
+            <br>
+            <br>
+            <table class="table1">
+                <tr>
+                    <td><img src="Image4.svg.png" height="38" width="38" alt="Google Chrome"></td>
+                    <td><img src="Image5.png" height="38" width="38" alt="Microsoft Edge"></td>
+                    <td><img src="Image6.png" height="38" width="38" alt="Mozilla Firefox"></td>
+                    <td><img src="Image7.png" height="38" width="38" alt="Apple Safari"></td>
+                    <td><img src="Image8.png" height="38" width="38" alt="Opera"></td>
+                </tr>
+                <tr>
+                    <td>Chrome</td>
+                    <td>Edge</td>
+                    <td>Firefox</td>
+                    <td>Safari</td>
+                    <td>Opera</td>
+                </tr>
+                <tr>
+                    <td>Yes</td>
+                    <td>Yes</td>
+                    <td>Yes</td>
+                    <td>Yes</td>
+                    <td>Yes</td>
+                </tr>
+            </table>
+
+            <br>
+            <br>
+
+            <span class="edit">Template Literals</span> is not supported in Internet Explorer. 
+        </p>
+
+
+
+        <script>
+        let text1 = `Hello World!`;
+        document.getElementById("demo1").innerHTML = text1;
+
+        let text2 = `He's often called "Johnny"`;
+        document.getElementById("demo2").innerHTML = text2;
+
+        let text3 = 
+        `The quick
+        brown fox
+        jumps over
+        the lazy dog.`;
+        document.getElementById("demo3").innerHTML = text3;
+
+        let firstName1 = "John";
+        let lastName1 = "Doe";
+        let text4 = `Welcome ${firstName1}, ${lastName1}!`;
+
+        document.getElementById("demo4").innerHTML = text4;
+
+        let price = 10;
+        let VAT = 0.25;
+        let total = `Total: ${(price * (1 + VAT)).toFixed(2)}`;
+
+        document.getElementById("demo5").innerHTML = total;
+
+        let header = "Templates Literals";
+        let tags = ["template literals", "javascript", "es6"];
+
+        let html = `<h2>${header}</h2><ul>`;
+        
+        for (const x of tags) {
+            html += `<li>${x}</li>`;
+        }
+
+        html += `<ul>`;
+            document.getElementById("demo6").innerHTML = html;
+        </script>
+    </body>
+</html>

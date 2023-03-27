@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            JavaScript Const 
+        </title>
+        <style>
+         .edit {
+            background-color:#f1f1f1;
+            color:red;
+         }
+         .edit1 {
+            background-color:rgba(255,255,0,0.3);
+            padding:20px;
+         }
+         .table1 {
+            width:100%;
+            border:1px solid #f1f1f1;
+            border-collapse:collapse;
+         }
+         .table1 tr {
+            height:40px;
+            border:1px solid #f1f1f1;
+         }
+         .table1 tr:nth-child(even) {
+            background-color:#f1f1f1;
+         }
+         .table1 td {
+            text-align:center;
+         }
+        </style>
+    </head>
+    <body>
+        <h1>
+            JavaScript Const 
+        </h1>
+
+        <p style="background-color:lightgreen;padding:10px;">
+            The <span class="edit">const</span> keyword was introduced in ES6 (2015). 
+            <br>
+            Variables defined with <span class="edit">const</span> cannot be Redeclared. 
+            <br>
+            Variables defined with <span class="edit">const</span> cannot be Reassigned. 
+            <br>
+            Variables defined with <span class="edit">const</span> have Block Scope. 
+        </p>
+
+        <hr>
+
+        <h2>
+            Cannot be Reassigned 
+        </h2>
+
+        <p>
+           A <span class="edit">const</span> variable cannot be REASSIGNED. 
+           <br>
+           <p class="edit1">
+            const PI = 3.141592653589793;
+            <br>
+            PI = 3.14; // This will give an error 
+            <br>
+            PI = PI + 10; // This will also give an error 
+           </p>
+           Example:- 
+           <br>
+           <p id="demo1"></p>
+        </p>
+
+        <hr>
+
+        <h2>
+            Must Be Assigned 
+        </h2>
+
+        <p>
+            JavaScript <span class="edit">const</span> variables must be assigned a value when they are declared. 
+            <br>
+            <span style="font-size:30px;font-weight:bold;">Correct</span>
+            <br>
+            <p class="edit1">
+                const PI = 3.141;
+            </p>
+            <br>
+            <span style="font-size:30px;font-weight:bold;">Incorrect</span>
+            <br>
+            <p style="background-color:pink;padding:20px;">
+                const PI;
+                <br>
+                PI = 3.141;
+            </p>
+
+            <br>
+            <br>
+
+            <p class="edit1">
+                <span style="font-size:30px;display:inline-block;">When to use JavaScript const? </span>
+                <br>
+                <span style="font-weight:bold;display:inline-block;">Always declare a variable with <span class="edit">const</span> when you know the value should not be changed. </span>
+                
+                <br>
+                <br>
+                Use <span class="edit">const</span> when you declare:- 
+                <br>
+                <br>
+                <ul>
+                    <li>A new Array</li>
+                    <li>A new Object</li>
+                    <li>A new Function</li>
+                    <li>A new RegExp</li>
+                </ul>
+            </p>
+
+            <hr>
+
+            <h2>
+                Constant Objects and Arrays 
+            </h2>
+
+            <p>
+               The keyword <span class="edit">const</span> is a little misleading. 
+               <br>
+               It does not define a constant value. It defines a constant reference to a value. 
+               <br>
+               <br>
+               Because of this you can NOT:- 
+               <br>
+               <ul>
+                <li>Reassign a constant value</li>
+                <li>Reassign a constant array</li>
+                <li>Reassign a constant object</li>
+               </ul> 
+
+               <br>
+               <br>
+
+               But you CAN:- 
+               <br>
+               <ul>
+                <li>Change the elements of constant array</li>
+                <li>Change the properties of constant object</li>
+               </ul>
+            </p>
+        </p>
+
+        <hr>
+
+        <h2>
+            Constant Arrays 
+        </h2>
+
+        <p>
+            You can change the elements of a constant array. 
+            <br>
+            Example:- 
+            <br>
+            So, DECLARING a constant array does NOT make the elements UNCHANGEABLE. 
+            <br>
+            <p id="demo2"></p>
+
+            <br>
+            <br>
+
+            But you can NOT reassign the array. 
+            <br>
+            <p style="background-color:pink;padding:20px;">
+            const cars = ["Saab", "Volvo", "BMW"];
+            <br>
+            cars = ["Toyoto", "Volvo", "Audi"];  //ERROR 
+            </p>
+            Example:- 
+            <br>
+            <p id="demo3"></p>
+        </p>
+
+        <hr>
+
+        <h2>
+            Constant Objects 
+        </h2>
+
+        <p>
+            You can change the properties of a constant object. 
+            <br>
+            Example:- 
+            <br>
+            <p id="demo4"></p>
+
+            <br>
+            <br>
+
+            But you can Not reassign the object. 
+            <br>
+            Example:- 
+            <br>
+            <p id="demo5"></p>
+        </p>
+
+        <hr>
+
+        <h2>
+            Browser Support 
+        </h2>
+
+        <p>
+            The <span class="edit">const</span> keyword is not fully supported in Internet Explorer. 
+            <br>
+            The following table defines the first browser versions with full support for the <span class="edit">const</span> keyword. 
+            <br>
+            <table class="table1">
+               <tr>
+                <td><img src="Image4.svg.png" height="40" width="40" alt="Google Chrome"></td>
+                <td><img src="Image5.png" height="40" width="40" alt="Microsoft Edge"></td>
+                <td><img src="Image6.png" height="40" width="40" alt="Mozilla Firefox"></td>
+                <td><img src="Image7.png" height="40" width="40" alt="Apple Safari"></td>
+                <td><img src="Image8.png" height="40" width="40" alt="Opera"></td>
+               </tr>
+               <tr>
+                <td>Chrome 49</td>
+                <td>Edge 12</td>
+                <td>Firefox 36</td>
+                <td>Safari 11</td>
+                <td>Opera 36</td>
+               </tr>
+               <tr>
+                <td>Mar, 2016</td>
+                <td>Jul, 2015</td>
+                <td>Feb, 2015</td>
+                <td>Sep, 2017</td>
+                <td>Mar, 2016</td>
+               </tr>
+            </table>
+        </p>
+
+        <hr>
+        <br>
+        <br>
+        <hr>
+
+        <h2>
+            Block Scope 
+        </h2>
+
+        <p>
+           Declaring a variable with <span class="edit">const</span> is similar to <span class="edit">let</span> when it comes to <strong>Block Scope</strong>. 
+           <br>
+           The x declared in the block, in this example, is not the same as the x declared outside the block. 
+           <br>
+           <p class="edit1">
+           const x = 10;
+           <br>
+           // Here x is 10
+           <br>
+           <br>
+           {
+            <br>
+            const x = 2;
+            <br>
+            // Here x is 2
+            <br>
+           }
+           <br>
+           // Here x is 10
+           </p>
+           <br>
+           Example:- 
+           <br>
+           <p id="demo6"></p> 
+        </p>
+
+        <hr>
+
+        <h2>
+            Redeclaring 
+        </h2>
+
+        <p>
+            Redeclaring a JavaScript <span class="edit">var</span> variable is allowed anywhere in a program. 
+            <br>
+            Example:- 
+            <br>
+            <p class="edit1">
+                var x = 2; //Allowed
+                <br>
+                var x = 3; //Allowed
+                <br>
+                x = 4;  //Allowed 
+            </p>
+
+            <br>
+            <br>
+
+            Redeclaring an existing <span class="edit">var</span> or <span class="edit">let</span> variable to <span class="edit">const</span>, in the same scope, is not allowed. 
+            <br>
+            Example:- 
+            <br>
+            <p class="edit1">
+                var x = 2;  //Allowed 
+                <br>
+                const x = 2; //Not allowed 
+                <br>
+                <br>
+                {
+                    <br>
+                    let x = 2; //Allowed 
+                    <br>
+                    const x = 2; //Not allowed 
+                    <br>
+                }
+                <br>
+                <br>
+                {
+                    <br>
+                    const x = 2; //Allowed 
+                    <br>
+                    const x = 2; //Not Allowed 
+                    <br>
+                }
+            </p>
+
+            <br>
+            <br>
+
+            Reassigning an existing <span class="edit">const</span> variable, in the same scope, is not allowed. 
+            <br>
+            Example:- 
+            <br>
+            <p class="edit1">
+                const x = 2; //Allowed 
+                <br>
+                x = 2; //Not allowed 
+                <br>
+                var x = 2; //Not allowed 
+                <br>
+                let x = 2; //Not allowed 
+                <br>
+                const x = 2; //Not allowed 
+                <br>
+                <br>
+                {
+                    <br>
+                    const x = 2; //Allowed 
+                    <br>
+                    x = 2; //Not allowed 
+                    <br>
+                    var x = 2; //Not allowed 
+                    <br>
+                    let x = 2; //Not allowed 
+                    <br>
+                    const x = 2; //Not allowed 
+                    <br>
+                }
+            </p>
+
+            <br>
+            <br>
+
+            Redeclaring a variable with <span class="edit">const</span>, in another scope, or in another block, is allowed. 
+            <br>
+            Example:- 
+            <br>
+            <p class="edit1">
+                const x = 2; //Allowed 
+                <br>
+                {
+                    <br>
+                    const x = 3; //Allowed 
+                    <br>
+                }
+                <br>
+                <br>
+                {
+                    <br>
+                    const x = 4; //Allowed 
+                    <br>
+                }
+            </p>
+        </p>
+
+        <hr>
+
+        <h2>
+            Hoisting 
+        </h2>
+
+        <p>
+            Variables defined with <span class="edit">var</span> are <strong>hoisted</strong> to the top and can be initialized at any time. 
+            <br>
+            Meaning: You can use the variable before it is declared. 
+            <br>
+            Example:- 
+            <br>
+            This is OK- 
+            <br>
+            <p class="edit1">
+                carName = "Volvo";
+                <br>
+                var carName; 
+            </p>
+            <br>
+            <p id="demo7"></p>
+
+            <br>
+            <br>
+
+            Variables defined with <span class="edit">const</span> are also hoisted to the top, but not initialized. 
+            <br>
+            Meaning: Using a <span class="edit">const</span> variable before it is declared will result in a <span class="edit">ReferenceError</span>. 
+            <br>
+            Example:- 
+            <br>
+            <p id="demo8"></p>
+        </p>
+
+
+        <script>
+            try {
+                const PI = 3.141592653589793;
+                PI = 3.14;
+            }
+
+            catch(err) {
+                document.getElementById("demo1").innerHTML = err;
+            }
+
+            //Create an Array:- 
+            const cars = ["Saab", "Volvo", "BMW"];
+
+            //Change an element:- 
+            cars[0] = "Toyoto";
+
+            //Add an element:- 
+            cars.push("Audi");
+
+            //Display the Array:- 
+            document.getElementById("demo2").innerHTML = cars;
+
+            try {
+                const cars = ["Saab", "Volvo", "BMW"];
+                cars = ["Toyota", "Volvo", "Audi"];
+            }
+            catch(err) {
+                document.getElementById("demo3").innerHTML = err;
+            }
+
+            //Create an object:- 
+            const car1 = {type:"Fiat", model:"500", color:"white"};
+
+            //Change a property:- 
+            car1.color = "red";
+
+            //Add a property:- 
+            car1.owner = "Johnson";
+
+            //Display the property:- 
+            document.getElementById("demo4").innerHTML = "Car owner is :- " + car1.owner;
+
+            try {
+                const car2 = {type:"Fiat", model:"700", color:"white"};
+                car2 = {type:"Volvo", model:"EX60", color:"red"};
+            }
+
+            catch(err) {
+                document.getElementById("demo5").innerHTML = err;
+            }
+
+            const x = 10;
+            //Here x is 10
+
+            {
+                const x = 2;
+                //Here x is 2
+            }
+
+            //Here x is 10
+            document.getElementById("demo6").innerHTML = "x is:- " + x;
+
+            carName = "Volvo";
+            document.getElementById("demo7").innerHTML = carName;
+            var carName; //Even without using this statement "Volvo" will be shown in demo7.
+
+            try {
+                alert(carName1);
+                const carName1 = "Volvo";
+            }
+            catch(err) {
+                document.getElementById("demo8").innerHTML = err;
+            }
+        </script>
+    </body>
+</html>

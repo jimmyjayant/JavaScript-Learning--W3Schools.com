@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en-in">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>
+            JavaScript Class Inheritance 
+        </title>
+        <style>
+            html {
+                font-size:62.5%; 
+            }
+            body {
+                font-family:verdana, sans-serif;
+                font-size:2rem;
+                line-height:1.5;
+            }
+            .edit {
+                background-color:#f1f1f1;
+                color:red;
+            }
+            .edit1 {
+                background-color:rgba(255,255,0,0.3);
+                padding:2rem;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>
+            JavaScript Class Inheritance 
+        </h1>
+
+        <hr>
+
+        <h2>
+            Class Inheritance 
+        </h2>
+
+        <div>
+            To create a class inheritance, use the <span class="edit">extends</span> keyword. 
+            <br>
+            A class created with a class inheritance inherits all the methods from another class. 
+            <br>
+            Example:- 
+            <br>
+            Create a class named "Model1" which will inherit the methods from the "Car1" class. 
+            <br>
+            Use the "extends" keyword to inherit all methods from another class. 
+            <br>
+            Use the "super" method to call the parent's constructor function. 
+            <br> 
+            <p id="demo1"></p>
+
+            <br>
+            The <span class="edit">super()</span> method refers to the parent class. 
+            <br>
+            By calling the <span class="edit">super()</span> method in the constructor method, we call the parent's constructor method and gets access to the parent's properties and methods. 
+            <br>
+            <p class="edit1">
+                Inheritance is useful for code reusability: reuse properties and methods of an existing class when you create a new class. 
+            </p>
+        </div>
+
+        <hr>
+        <br>
+        <hr>
+
+        <h2>
+            Getters and Setters 
+        </h2>
+
+        <div>
+            Classes also allows you to use getters and setters. 
+            <br>
+            It can be smart to use getters and setters for your properties, especially if you want to do something special with the value before returning them, or before you set them. 
+            <br>
+            To add getters and setters in the class, use the <span class="edit">get</span> and <span class="edit">set</span> keywords. 
+            <br>
+            Example:- 
+            <br>
+            Create a getter and setter for the "carname" property. 
+            <br>
+            <p id="demo2"></p>
+            <br>
+            <p class="edit1">
+                <strong>Note: </strong> even if the getter is a method, you do not use parentheses when you want to get the property value. 
+            </p>
+            <br>
+            The name of the getter/setter method cannot be same as the name of the property, in this case <span class="edit">carname</span>. 
+            <br>
+            Many programmers use an underscore character <span class="edit">_</span> before the property name to separate the getter/setter from the actual property. 
+            <br>
+            Example:- 
+            <br>
+            You can use the underscore character to separate the getter/setter from the actual property. 
+            <br>
+            <p id="demo3"></p>
+
+            <br>
+            <br>
+            To use a <i>setter</i>, use the same syntax as when you set a property value, without parentheses. 
+            <br>
+            Example:- 
+            <br>
+            Use a setter to change the carname to "Volvo". 
+            <br>
+            <p id="demo4"></p>
+            <br>
+            After changing the carname:- 
+            <br>
+            <p id="demo5"></p>
+        </div>
+
+        <hr>
+
+        <h2>
+            Hoisting 
+        </h2>
+
+        <div>
+            Unlike functions, and other JavaScript declarations, class declarations are not hoisted. 
+            <br>
+            That means that you must declare a class before you can use it. 
+            <br>
+            Example:- 
+            <br>
+            <p id="demo6"></p>
+
+            <br>
+
+            <p class="edit1">
+                <strong>Note: </strong> For other declarations, like functions, you will NOT get an error when you try to use it before it is declared, because the default behavior of JavaScript declarations are hoisting (moving the declaration to the top).  
+            </p>
+        </div>
+
+        <script>
+            class Car1 {
+                constructor(brand) {
+                    this.carname = brand;
+                }
+                present() {
+                    return 'I have a ' + this.carname;
+                }
+            }
+
+            class Model1 extends Car1 {
+                constructor(brand, mod) {
+                    super(brand);
+                    this.model = mod;
+                }
+                show() {
+                    return this.present() + ', it is a ' + this.model;
+                }
+            }
+
+            let myCar1 = new Model1("Ford", "Mustang");
+            document.getElementById("demo1").innerHTML = myCar1.show();
+
+            class Car2 {
+                constructor(brand) {
+                    this.carname = brand;
+                }
+                get cnam() {
+                    return this.carname;
+                }
+                set cnam(x) {
+                    this.carname = x;
+                }
+            }
+
+            let myCar2 = new Car2("Ford");
+            document.getElementById("demo2").innerHTML = myCar2.cnam;
+
+            class Car3 {
+                constructor(brand) {
+                    this._carname = brand;
+                }
+                get carname() {
+                    return this._carname;
+                }
+                set carname(x) {
+                    this._carname = x;
+                }
+            }
+
+            let myCar3 = new Car3("Mustang");
+            document.getElementById("demo3").innerHTML = myCar3.carname;
+
+            class Car4 {
+                constructor(brand) {
+                    this._carname = brand;
+                }
+                get carname() {
+                    return this._carname;
+                }
+                set carname(x) {
+                    this._carname = x;
+                }
+            }
+
+            let myCar4 = new Car4("Ford");
+            document.getElementById("demo4").innerHTML = myCar4.carname;
+
+            myCar4.carname = "Volvo";
+            document.getElementById("demo5").innerHTML = myCar4.carname;
+
+            //You cannot use the class yet. 
+            //myCar5 = new Car5("Ford") 
+            //This would raise an error.
+
+            class Car5 {
+                constructor(brand) {
+                    this.carname = brand;
+                }
+            }
+
+            //Now you can use the class:- 
+            let myCar5 = new Car5("Ford");
+            document.getElementById("demo6").innerHTML = myCar5.carname;
+        </script>
+    </body>
+</html>

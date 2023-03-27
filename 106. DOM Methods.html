@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en-in">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>
+            JavaScript - HTML DOM Methods 
+        </title>
+        <style>
+            html {
+                font-size:62.5%;
+            }
+            body {
+                font-family:verdana, sans-serif;
+                font-size:2rem;
+                line-height:1.5;
+            }
+            .edit {
+                background-color:#f1f1f1;
+                color:red;
+            }
+            .edit1 {
+                background-color:rgba(255,255,0,0.3);
+                padding:2rem;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>
+            JavaScript - HTML DOM Methods 
+        </h1>
+
+        <div>
+            HTML DOM methods are <strong>actions</strong> you can perform (on HTML Elements). 
+            <br>
+            HTML DOM properties are <strong>values</strong> (of HTML Elements) that you can set or change.  
+        </div>
+
+        <hr>
+
+        <h2>
+            The DOM Programming Interface 
+        </h2>
+
+        <div>
+            The HTML DOM can be accessed with JavaScript (and with other programming languages). 
+            <br>
+            In the DOM, all HTML elements are defined as <strong>objects</strong>. 
+            <br>
+            The programming interface is the properties and methods of each object. 
+            <br>
+            A <strong>property</strong> is a value that you can get or set (like changing the content of a HTML element). 
+            <br>
+            A <strong>method</strong> is an action you can do (like add or deleting a HTML element).   
+        </div>
+
+        <hr>
+
+        <h2>
+            Example 
+        </h2>
+
+        <div>
+            The following example changes the content (like <span class="edit">innerHTML</span>) of the <span class="edit">&lt;p&gt;</span> element with <span class="edit">id="demo1"</span>. 
+            <br>
+            Example:- 
+            <br>
+            <p id="demo1"></p>
+            <br>
+            In the example above, <span class="edit">getElementById</span> is a <strong>method</strong>, while <span class="edit">innerHTML</span> is a <strong>property</strong>. 
+        </div>
+
+        <hr>
+
+        <h2>
+            The getElementById Method 
+        </h2>
+
+        <div>
+            The most common way to access a HTML element is to use the <span class="edit">id</span> of the element. 
+            <br>
+            In the example above the <span class="edit">getElementById</span> method used <span class="edit">id="demo1"</span> to find the element. 
+        </div>
+
+        <hr>
+
+        <h2>
+            The innerHTML Property 
+        </h2>
+
+        <div>
+            The easiest way to get the content of an element is by using the <span class="edit">innerHTML</span> property. 
+            <br>
+            The <span class="edit">innerHTML</span> property is useful for getting or replacing the content of HTML elements. 
+            <br>
+            <p class="edit1">
+                The <span class="edit">innerHTML</span> property can be used to get or change any HTML element, including <span class="edit">&lt;html&gt;</span> and <span class="edit">&lt;body&gt;</span>. 
+            </p>
+        </div>
+
+        <script>
+            document.getElementById("demo1").innerHTML = "Hello World!";
+        </script>
+    </body>
+</html>

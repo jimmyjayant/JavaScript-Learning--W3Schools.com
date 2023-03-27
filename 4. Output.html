@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            JavaScript Output 
+        </title>
+        <style>
+         .edit {
+            background-color:#f1f1f1;
+            color:red;
+         }
+         .edit1 {
+            background-color:rgba(255,255,0,0.3);
+            padding:20px;
+         }
+        </style>
+    </head>
+    <body>
+        <h1>
+            JavaScript Output 
+        </h1>
+
+        <hr>
+
+        <h2>
+            JavaScript Display Possibilities 
+        </h2>
+
+        <p>
+           JavaScript can "display" data in different ways:- 
+           <br>
+           <ul>
+            <li>Writing into a HTML element, using <span class="edit">innerHTML</span>.</li>
+            <li>Writing into the HTML output using <span class="edit">document.write()</span>.</li>
+            <li>Writing into an alert box, using <span class="edit">window.alert()</span>.</li>
+            <li>Writing into the browser console, using <span class="edit">console.log()</span>.</li>
+           </ul>
+        </p>
+
+        <hr>
+
+        <h2>
+            Using innerHTML 
+        </h2>
+
+        <p>
+            To access a HTML element, JavaScript can use the <span class="edit">document.getElementById(id)</span> method. 
+            <br>
+            The <span class="edit">id</span> attribute defines the HTML element. The <span class="edit">innerHTML</span> property defines the HTML content. 
+            <br>
+            Example:- 
+            <br>
+            <p id="demo1">
+            </p>
+
+            <p class="edit1">
+                Changing the innerHTML property of a HTML element is a common way to display data in HTML. 
+            </p>
+        </p>
+
+        <hr>
+
+        <h2>
+            Using document.write() 
+        </h2>
+
+        <p>
+            For testing purposes, it is convenient to use <span class="edit">document.write()</span>. 
+            <br>
+            Example:- 
+            <br>
+            <p>
+                Never call document.write after the document has finished loading. 
+                <br>
+                It will overwrite the whole document. 
+            </p>
+            <script>
+                document.write(5 + 6);
+            </script>
+        
+
+           <p style="background-color:pink;padding:20px;">
+              Using document.write() after a HTML document is loaded, will <strong>delete all existing HTML</strong>. 
+           </p>
+
+           <br>
+           <br>
+
+           Example:- 
+           <br>
+           <button type="button" onclick="document.write(5+6)">Try It</button>
+           
+           <br>
+
+           <p class="edit1">
+            The document.write() method should only be used for testing. 
+           </p>
+        </p>
+
+        <hr>
+        <br>
+        <hr>
+
+        <h2>
+            Using window.alert() 
+        </h2>
+
+        <p>
+            You can use an alert box to display data. 
+            <br>
+            Example:- 
+            <br>
+            <button type="button" onclick="window.alert(5 + 6)">Alert</button>
+
+            <br>
+            <br>
+
+            You can skip the <span class="edit">window</span> keyword. 
+            <br>
+            In JavaScript, the window object is the global scope object. This means that variables, properties, and methods by default belong to the window object. This also means that specifying the <span class="edit">window</span> keyword is optional. 
+
+            <br>
+            <br>
+            Example:- 
+            <br>
+            <button type="button" onclick="alert(5 + 15)">Alert Button</button>
+        </p>
+
+        <hr>
+
+        <h2>
+            Using console.log() 
+        </h2>
+
+        <p>
+            For debugging purposes, you can call the <span class="edit">console.log()</span> method in the browser to display data. 
+            <br>
+            Example:- 
+            <br>
+            <h3>
+                Activate Debugging 
+            </h3>
+            <p>
+                F12 on your keyboard will activate debugging. 
+            </p>
+            <p>
+                Then select "Console" in the debugger menu. 
+            </p>
+            <p>
+                There you will see 15 as the answer (sum of 5 + 10).  
+            </p>
+            <script>
+                console.log(5 + 10);
+            </script>
+        </p>
+
+        <hr>
+
+        <h2>
+            JavaScript Print 
+        </h2>
+
+        <p>
+            JavaScript does not have any print objects or print methods. 
+            <br>
+            You cannot output devices from JavaScript. 
+            <br>
+            The only exception is that you can call the <span class="edit">window.print()</span> method in the browser to print the content of the current window. 
+            <br>
+            Example:- 
+            <br>
+            <p>
+                Click the button below to print the page. 
+            </p>
+            <button type="button" onclick="window.print()">Print this Page</button>
+        </p>
+
+        <script>
+            document.getElementById("demo1").innerHTML = 5 + 6;
+        </script>
+    </body>
+</html>

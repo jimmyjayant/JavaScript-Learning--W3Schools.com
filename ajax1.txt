@@ -1,0 +1,7 @@
+<h1>
+This is AJAX task 1.
+</h2>
+
+<h2>
+This text is in the file ajax1.txt. 
+</h2>

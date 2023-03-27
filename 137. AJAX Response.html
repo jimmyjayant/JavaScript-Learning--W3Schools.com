@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en-in">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>
+            AJAX - Server Response 
+        </title>
+        <style>
+            html {
+                font-size:calc(10px + 0.390625vw);
+            }
+
+            body {
+                font-family:verdana, sans-serif;
+                font-size:1rem;
+                line-height:1.5;
+            }
+
+            .edit {
+                background-color:#f1f1f1;
+                color:red;
+            }
+
+            .edit1 {
+                background-color:rgba(255,255,0,0.3);
+                padding:2rem;
+            }
+
+            .table1 {
+                width: 100%;
+                border:1px solid #ddd;
+                border-collapse:collapse;
+            }
+
+            .table1 tr:nth-child(even) {
+                background-color:#f1f1f1;
+            }
+
+            .table1 th {
+                text-align:left;
+                padding:0.5rem;
+            }
+
+            .table1 td {
+                padding:0.5rem;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>
+            AJAX - Server Response 
+        </h1>
+
+        <hr>
+
+        <h2>
+            Server Response Properties 
+        </h2>
+
+        <div>
+            <table class="table1">
+                <tr>
+                    <th>Property</th>
+                    <th>Description</th>
+                </tr>
+                <tr>
+                    <td>responseText</td>
+                    <td>get the response data as a string</td>
+                </tr>
+                <tr>
+                    <td>responseXML</td>
+                    <td>get the response data as XML data</td>
+                </tr>
+            </table>
+        </div>
+
+        <hr>
+
+        <h2>
+            The responseText Property 
+        </h2>
+
+        <div>
+            The <span class="edit">responseText</span> property returns the server response as a JavaScript string, and you can use it accordingly. 
+            <br>
+            Example:- 
+            <br>
+            <div id="demo1">
+                <h2>The XMLHttpRequest Object</h2>
+                <button type="button" onclick="myFunction1()">Change Content</button>
+            </div>
+        </div>
+
+        <hr>
+
+        <h2>
+            The responseXML Property 
+        </h2>
+
+        <div>
+            The XMLHttpRequest object has an in-built XML parser. 
+            <br>
+            The <span class="edit">responseXML</span> property returns the server response as an XML DOM object. 
+            <br>
+            Using this property you can parse the response as an XML DOM object. 
+            <br>
+            Example:- 
+            <br>
+            Request the file <a href="cd_catalog.xml" target="_blank">cd_catalog.xml</a> and parse the response.
+            <br>
+            <p id="demo2"></p>
+        </div>
+
+        <hr>
+        <br>
+        <hr>
+
+        <h2>
+            Server Response Methods 
+        </h2>
+
+        <div>
+            <table class="table1">
+                <tr>
+                    <th>Method</th>
+                    <th>Description</th>
+                </tr>
+                <tr>
+                    <td>getResponseHeader()</td>
+                    <td>Returns specific header information from the server resource</td>
+                </tr>
+                <tr>
+                    <td>getAllResponseHeaders()</td>
+                    <td>Returns all the header information from the server resource</td>
+                </tr>
+            </table>
+        </div>
+
+        <hr>
+
+        <h2>
+            The getAllResponseHeaders() Method 
+        </h2>
+
+        <div>
+            The <span class="edit">getAllResponseHeaders()</span> method returns all header information from the server response. 
+            <br>
+            Example:- 
+            <br>
+            <p>
+                The getAllResponseHeaders() method or function returns all the header information of a resource, like length, server-type, content-type, last-modified, etc. 
+            </p>
+
+            <br>
+
+            <p id="demo3"></p>
+        </div>
+
+        <hr>
+
+        <h2>
+            The getResponseHeader() Method 
+        </h2>
+
+        <div>
+            The <span class="edit">getResponseHeader()</span> method returns specific header information from the server response. 
+            <br>
+            Example:- 
+            <br>
+            <p>
+                The getResponseHeader() function is used to return specific header information from a resource, like length, server-type, content-type, last-modified, etc. 
+            </p>
+
+            <br>
+
+            <p>Last modified: <span id="demo4"></span></p>
+        </div>
+
+        <script>
+            function myFunction1() {
+                const xhttp = new XMLHttpRequest();
+                xhttp.onload = function() {
+                    document.getElementById("demo1").innerHTML = this.responseText;
+                }
+                xhttp.open("GET", "ajax_info.txt");
+                xhttp.send();
+            }
+            
+            function myFunction2() {
+                const xhttp = new XMLHttpRequest();
+                xhttp.onload = function() {
+                    const xmlDoc = this.responseXML;
+                    const x = xmlDoc.getElementsByTagName("ARTIST");
+                    let txt = "";
+                    for (let i = 0; i < x.length; i++) {
+                        txt = txt + x[i].childNodes[0].nodeValue + "<br>";
+                    }
+                    document.getElementById("demo2").innerHTML = txt;
+                }
+                xhttp.open("GET", "cd_catalog.xml");
+                xhttp.send();
+            }
+
+            myFunction2();
+
+            function myFunction3() {
+                const xhttp = new XMLHttpRequest();
+                xhttp.onload = function() {
+                    document.getElementById("demo3").innerHTML = this.getAllResponseHeaders();
+                }
+                xhttp.open("GET", "ajax_info.txt");
+                xhttp.send();
+            }
+
+            myFunction3();
+
+            function myFunction4() {
+                const xhttp = new XMLHttpRequest();
+                xhttp.onload = function() {
+                    document.getElementById("demo4").innerHTML = 
+                    this.getResponseHeader("Last-Modified");
+                }
+                xhttp.open("GET", "ajax_info.txt");
+                xhttp.send();
+            }
+
+            myFunction4();
+        </script>
+    </body>
+</html>

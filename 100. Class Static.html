@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en-in">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>
+            JavaScript Static Methods 
+        </title>
+        <style>
+            html {
+                font-size:62.5%;
+            }
+            body {
+                font-family:Verdana, sans-serif;
+                font-size:2rem;
+                line-height:1.5;
+            }
+            .edit {
+                background-color:#f1f1f1;
+                color:red;
+            }
+            .edit1 {
+                background-color:rgba(255,255,0,0.3);
+                padding:2rem;
+            }
+        </style>
+    </head>
+    <body>
+            <h1>
+                JavaScript Static Methods 
+            </h1>
+
+            <div>
+            <p style="background-color:rgba(0,255,0,0.1);padding:2rem;">
+              Static class methods are defined on the class itself. 
+              <br>
+              You cannot call a <span class="edit">static</span> method on an object, only on an object class. 
+            </p>
+            <br>
+            Example:- 
+            <br>
+            <p id="demo1"></p>
+
+            <br>
+            <br>
+            If you want to use the myCar2 object inside the <span class="edit">static</span> method, you can spend it as a parameter. 
+            <br>
+            Example:- 
+            <br>
+            <p id="demo2"></p>
+
+            </div>
+
+           <script>
+            class Car1 {
+                constructor(brand) {
+                    this.name = name;
+                }
+                static hello() {
+                    return "Hello!";
+                }
+            }
+
+            let myCar1 = new Car1("Ford");
+
+            //You can call 'hello()' on the Car1 class:- 
+            document.getElementById("demo1").innerHTML = Car1.hello();
+
+            //But NOT on a Car1 object:- 
+            //document.getElementById("demo1").innerHTML = myCar1.hello();
+            //this will raise an error. 
+
+            class Car2 {
+                constructor(name) {
+                    this.name = name;
+                }
+                static hello(x) {
+                    return "Hello " + x.name;
+                }
+            }
+
+            let myCar2 = new Car2("Ford");
+            document.getElementById("demo2").innerHTML = Car2.hello(myCar2);
+           </script>
+    </body>
+</html>

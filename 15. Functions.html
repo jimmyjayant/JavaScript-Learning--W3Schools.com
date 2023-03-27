@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            JavaScript Functions 
+        </title>
+        <style>
+            .edit {
+                background-color:#f1f1f1;
+                color:red;
+            }
+            .edit1 {
+                background-color:rgba(255,255,0,0.3);
+                padding:20px;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>
+            JavaScript Functions 
+        </h1>
+
+        <p>
+            A JavaScript function is a block of code designed to perform a particular task. 
+            <br>
+            A JavaScript function is executed when "something" invokes it (calls it). 
+            <br>
+            <p class="edit1">
+                //Function to compute the product of p1 and p2 
+                <br>
+                function myFunction(p1, p2) {
+                    <br>
+                    return p1 * p2;
+                    <br>
+                }
+            </p>
+            <br>
+            Example:- 
+            <br>
+            <p id="demo1"></p>
+        </p>
+
+        <hr>
+
+        <h2>
+           JavaScript Function Syntax 
+        </h2>
+
+        <p>
+            A JavaScript function is defined with the <span class="edit">function</span> keyword, followed by a <strong>name</strong>, followed by parentheses <strong>()</strong>. 
+            <br>
+            Function names can contain letters, digits, underscores, and dollar signs (same rules as variables). 
+            <br>
+            The parentheses may include parameter names separated by commas:- 
+            <br>
+            <strong>(parameter1, parameter2, ....)</strong>
+            <br>
+            The code to be executed, by the function, is placed inside curly brackets: <strong>{}</strong>
+            <br>
+            <br>
+            <p class="edit1">
+                function name(parameter1, parameter2, parameter3) {
+                    <br>
+                    //code to be executed 
+                    <br>
+                }
+            </p>
+            <br>
+            Function <strong>parameters</strong> are listed inside the parentheses () in the function definition. 
+            <br>
+            Function <strong>arguments</strong> are the <strong>values</strong> received by the function when it is invoked. 
+            <br>
+            Inside the function, the arguments (the parameters) behave as local variables. 
+        </p>
+
+        <hr>
+
+        <h2>
+            Function Invocation 
+        </h2>
+
+        <p>
+           The code inside the function will execute when "something" <strong>invokes</strong> (calls) the function: 
+           <br>
+           <ul>
+            <li>When an event occurs (when a user clicks a button)</li>
+            <li>When it is invoked (called) from Javascript code</li>
+            <li>Automatically (self invoked)</li>
+           </ul> 
+        </p>
+
+        <hr>
+        <br>
+        <br>
+        <hr>
+
+        <h2>
+            Function Return 
+        </h2>
+
+        <p>
+            When JavaScript reaches a <span class="edit">return</span> statement, the function will stop executing. 
+            <br>
+            If the function was invoked from a statement, JavaScript will "return" to execute the code after the invoking statement. 
+            <br>
+            Functions often compute a <strong>return value</strong>. The return value is "returned" back to the "caller". 
+            <br>
+            Example:- 
+            <br>
+            Calculate the product of two numbers, and return the result. 
+            <br>
+            <p id="demo2"></p>
+        </p>
+
+        <hr>
+
+        <h2>
+            Why Functions? 
+        </h2>
+
+        <p>
+            You can reuse the code: Define the code once, and use it many times. 
+            <br>
+            You can use the same code many times with different arguments, to produce different results. 
+            <br>
+            Example:- 
+            <br>
+            Convert Fahrenheit to Celsius: 
+            <br>
+            <p id="demo3"></p>
+        </p>
+
+        <hr>
+
+        <h2>
+            The () Operator Invokes the Function 
+        </h2>
+
+        <p>
+            Using the example above, <span class="edit">toCelsius</span> refers to the function object, and <span class="edit">toCelsius()</span> refers to the function result. 
+            <br>
+            Accessing a function without () will return the function object instead of the function result. 
+            <br>
+            Example:- 
+            <br>
+            <p id="demo4"></p>
+        </p>
+
+        <hr>
+
+        <h2>
+            Functions Used as Variable Values 
+        </h2>
+
+        <p>
+            Functions can be used the same way as you use variables, in all types of formulas, assignments, and calculations. 
+            <br>
+            Example:- 
+            <br>
+            Instead of using a variable to store the return value of a function. 
+            <br>
+            <p class="edit1">
+                let x = toCelsius(77);
+                <br>
+                let text = "The temperature is " + x + " Celsius";
+            </p>
+            <br>
+            You can use the function directly, as a variable value. 
+            <br>
+            <p class="edit1">
+                let text = "The temperature is " + toCelsius(77) + " Celsius";
+            </p>
+            <br>
+            <br>
+            <p id="demo5"></p>
+        </p>
+
+        <hr>
+
+        <h2>
+            Local Variables 
+        </h2>
+
+        <p>
+            Variables declared within a JavaScript function, become <strong>LOCAL</strong> to the function. 
+            <br>
+            Local variables can only be accessed from within the function. 
+            <br>
+            <p class="edit1">
+                //code here can Not use carName 
+                <br>
+                <br>
+                function myFunction() {
+                    <br>
+                    let carName = "Volvo";
+                    <br>
+                    //code here CAN use carName 
+                    <br>
+                }
+
+                <br>
+                // code here can NOT use carName 
+            </p>
+
+            Example:- 
+            <br>
+            <p id="demo6"></p>
+
+            <br>
+            <br>
+
+            <p id="demo7"></p>
+
+            <br>
+            <br>
+
+            Since local variables are only recognized inside their functions, variables with the same name can be used in different functions. 
+            <br>
+            Local variables are created when a function starts, and deleted when the function is completed. 
+        </p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <script>
+            function myFunction(p1,p2)
+            {
+                return p1*p2;
+            }
+            document.getElementById("demo1").innerHTML = "The product of 4 and 3 is:- " + myFunction(4,3);
+
+            let x = myFunction(3,8); //Function is called, return value will end up in x
+
+            document.getElementById("demo2").innerHTML = "The product of 3 and 8 is:- " + x;
+
+            function myFunction(a,b) {
+                return a * b;            //Function returns the product of a and b 
+            }
+
+            function toCelsius(f) {
+                return (5/9) * (f-32);
+            }
+
+            document.getElementById("demo3").innerHTML = "Convert 77 fahrenheit to Celsius:- " + toCelsius(77);
+
+            document.getElementById("demo4").innerHTML = toCelsius;
+
+            document.getElementById("demo5").innerHTML = 
+            "The temperature is " + toCelsius(77) + " Celsius";
+
+            myFunction1();
+
+            function myFunction1() {
+                let carName = "Volvo";
+                document.getElementById("demo6").innerHTML =
+                typeof carName + " " + carName;
+            }
+
+            document.getElementById("demo7").innerHTML = 
+            typeof carName;
+        </script>
+    </body>
+</html>

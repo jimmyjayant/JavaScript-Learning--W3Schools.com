@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en-in">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>
+            AJAX Introduction
+        </title>
+        <style>
+            html {
+                font-size:calc(10px + 0.390625vw);
+            }
+
+            body {
+                font-family:verdana, sans-serif;
+                font-size:1rem;
+                line-height:1.5;
+            }
+
+            .edit {
+                background-color:#f1f1f1;
+                color:red;
+            }
+
+            .edit1 {
+                background-color:rgba(255,255,0,0.3);
+                padding:1.5rem;
+            }
+            
+            ol {
+                width:70%;
+                border-collapse:collapse;
+                list-style-position:inside;
+            }
+
+            li {
+                padding:0.5rem;
+                border:1px solid #ddd;
+            }
+
+        </style>
+    </head>
+    <body>
+        <h1>
+            AJAX Introduction
+        </h1>
+
+        <div>
+            <div style="background-color:rgba(0,255,0,0.1);padding:1rem;">
+            AJAX is a developer's dream, because you can:-
+            <br>
+            <ul>
+                <li>Read data from a web server - after the page has loaded</li>
+                <li>Update a web page without reloading the page</li>
+                <li>Send data to a web server - in the background</li>
+            </ul>
+        </div>
+
+        <br>
+        Example:-
+        <br>
+        <div id="demo1">
+            <h2>
+                The XMLHttpRequest Object
+            </h2>
+            <button type="button" onclick="loadDoc()">Change Content</button>
+        </div>
+        </div>
+
+        <hr>
+
+        <h2>
+            AJAX Example Explained
+        </h2>
+
+        <div>
+            <b>
+            &lt;div&gt; section with id="demo1".
+            </b>
+
+            <p class="edit1">
+              &lt;div id="demo1"&gt;
+              <br>
+              &lt;h2&gt;Let AJAX change this text.&lt;/h2&gt;
+              <br>
+              &lt;button type="button" onclick="loadDoc()"&gt;Change Content&lt;/button&gt;
+              <br>
+              &lt;/div&gt;
+            </p>
+
+            <br>
+            The HTML page contains a &lt;div&gt; section and a &lt;button&gt;.
+            <br>
+            The &lt;div&gt; section is used to display information from a server.
+            <br>
+            The &lt;button&gt; calls a function (if it is clicked).
+            <br>
+            The function requests data from a web server and displays it.
+            <br>
+            <br>
+            <b>
+                Function loadDoc()
+            </b>
+
+            <br>
+
+            <p class="edit1">
+               function loadDoc() {
+                <br>
+                const xhttp1 = new XMLHttpRequest();
+                <br>
+                xhttp1.onload = function() {
+                    <br>
+                    document.getElementById("demo1").innerHTML =
+                    <br>
+                    this.responseText;
+                    <br>
+                }
+                <br>
+                xhttp1.open("GET", "ajax_info.txt");
+                <br>
+                xhttp1.send();
+                <br>
+               }
+            </p>
+        </div>
+
+        <hr>
+        <br>
+        <hr>
+
+        <h2>
+            What is AJAX?
+        </h2>
+
+        <div>
+            AJAX = <b>A</b>synchronous <b>J</b>avaScript <b>A</b>nd <b>X</b>ML.
+            <br>
+            AJAX is not a programming language.
+            <br>
+            AJAX just uses a combination of:-
+            <br>
+            <ul>
+                <li>A browser built-in <span class="edit">XMLHttpRequest</span> object (to request data from a web server)</li>
+                <li>JavaScript and HTML DOM (to display or use the data)</li>
+            </ul>
+
+            <br>
+
+            <p class="edit1">
+                AJAX is a misleading name. AJAX applications might use XML to transport data, but it is equally common to transport data as plain text or JSON text.
+            </p>
+
+            <br>
+
+            AJAX allows web pages to be updated asynchronously by exchanging data with a web server behind the scenes. This means that it is possible to update parts of a web page, without reloading the whole page.
+        </div>
+
+        <hr>
+
+        <h2>
+            How AJAX Works
+        </h2>
+
+        <div>
+            <img src="Image14.gif" alt="How AJAX Works">
+
+            <br>
+            <br>
+                <ol>
+                    <li>An event occurs in a web page (the page is loaded, a button is clicked)</li>
+                    <li>An XMLHttpRequest object is created by JavaScript</li>
+                    <li>The XMLHttpRequest object sends a request to a web server</li>
+                    <li>The server processes the request</li>
+                    <li>The server sends a response back to the web page</li>
+                    <li>The response is read by JavaScript</li>
+                    <li>Proper action (like page update) is performed by JavaScript</li>
+                </ol>
+        </div>
+
+        <hr>
+
+        <h2>
+            Modern Browsers (Fetch API)  
+        </h2>
+
+        <div>
+            Modern Browsers can use Fetch API instead of the XMLHttpRequest Object. 
+            <br>
+            The Fetch API interface allows web browser to make HTTP requests to web servers. 
+            <br>
+            If you use the XMLHttpRequest Object, Fetch can do the same in a simpler way. 
+            <br>
+            Example:- 
+            <br>
+            <div id="demo2">
+                <h2>
+                    Change this text using Fetch API. 
+                </h2>
+                <button onclick="req()">Change</button>
+            </div>
+        </div>
+
+        <script>
+            function loadDoc() {
+                const xhttp1 = new XMLHttpRequest();
+                xhttp1.onload = function() {
+                    document.getElementById("demo1").innerHTML =
+                    this.responseText;
+                }
+                xhttp1.open("GET", "ajax_info.txt");
+                xhttp1.send();
+            }
+            
+            function req() {
+            fetch("ajax_info.txt") 
+            .then (x => x.text())
+            .then(y => document.getElementById("demo2").innerHTML = y);
+            }
+            
+    </script>
+    </body>
+</html>

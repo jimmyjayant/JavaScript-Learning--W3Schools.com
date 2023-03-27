@@ -1,0 +1,994 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            JavaScript Array Iteration 
+        </title>
+        <style>
+            body {
+                font-size:16px;
+                font-family:verdana, sans-serif;
+            }
+            .edit {
+                background-color:#f1f1f1;
+                color:red;
+            }
+            .edit1 {
+                background-color:rgba(255,255,0,0.3);
+                padding:20px;
+            }
+            .table1 {
+                width:100%;
+                border:1px solid #ddd;
+                border-collapse:collapse;
+            }
+            .table1 tr:nth-child(even) {
+                background-color:#f1f1f1;
+            }
+            .table1 tr {
+                height:40px;
+            }
+            .table1 td, .table1 th {
+                border:1px solid #ddd;
+                padding:10px;
+            }
+            .table2 td {
+                text-align:center;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>
+            JavaScript Array Iteration 
+        </h1>
+
+        <p>
+            Array Iteration methods operate on every array item. 
+        </p>
+
+        <hr>
+
+        <h2>
+            JavaScript Array forEach() 
+        </h2>
+
+        <p>
+            The <span class="edit">forEach()</span> method calls a function (a callback function) once for each array element. 
+            <br>
+            Example:- 
+            <br>
+            <p id="demo1"></p>
+
+            <br>
+            <br>
+
+            Note that the function takes 3 arguments:- 
+            <br>
+            <ul>
+                <li>The item value</li>
+                <li>The item index</li>
+                <li>The array itself</li>
+            </ul>
+            <br>
+            The example above uses only the value parameter. The example can be rewritten to:- 
+            <br>
+            Example:- 
+            <br>
+            <p id="demo2"></p>
+        </p>
+
+        <hr>
+
+        <h2>
+            JavaScript Array map() 
+        </h2>
+
+        <p>
+            The <span class="edit">map()</span> method creates a new array by performing a function on each array element. 
+            <br>
+            The <span class="edit">map()</span> method does not execute the function for array elements without values. 
+            <br>
+            The <span class="edit">map()</span> method does not change the original array. 
+            <br>
+            This example multiplies each array value by 2. 
+            <br>
+            Example:- 
+            <br>
+            <p id="demo3"></p>
+
+            <br>
+            <br>
+            Note that the function takes 3 arguments:- 
+            <br>
+            <ul>
+                <li>The item value</li>
+                <li>The item index</li>
+                <li>The array itself</li>
+            </ul>
+            <br>
+            When a callback function uses only the value parameter, the index and array parameters can be omitted. 
+            <br>
+            Example:- 
+            <br>
+            <p id="demo4"></p>
+        </p>
+
+        <hr>
+        <br>
+        <br>
+        <hr>
+
+        <h2>
+            JavaScript Array filter() 
+        </h2>
+
+        <p>
+            The <span class="edit">filter()</span> method creates a new array with array elements that pass a test. 
+            <br>
+            This example creates a new array from elements with a value larger than 18. 
+            <br>
+            Example:- 
+            <br>
+            <p id="demo5"></p>
+
+            <br>
+            <br>
+            Note that the function takes 3 arguments:- 
+            <br>
+            <ul>
+                <li>The item value</li>
+                <li>The item index</li>
+                <li>The array itself</li>
+            </ul>
+            <br>
+            In the example above, the callback function does not use the index and array parameters, so they can be omitted. 
+            <br>
+            Example:- 
+            <br>
+            <p id="demo6"></p>
+        </p>
+
+        <hr>
+
+        <h2>
+            JavaScript Array reduce() 
+        </h2>
+
+        <p>
+            The <span class="edit">reduce()</span> method runs a function on each array element to produce (reduce it to) a single value. 
+            <br>
+            The <span class="edit">reduce()</span> method works from left-to-right in the array. See also <span class="edit">reduceRight()</span>. 
+            <br>
+            <p class="edit1">
+                The <span class="edit">reduce()</span> method does not reduce the original array. 
+            </p>
+
+            <br>
+            This example finds the sum of all numbers in an array. 
+            <br>
+            Example:- 
+            <br>
+            <p id="demo7"></p>
+
+            <br>
+            <br>
+            Note that the function takes 4 arguments:- 
+            <br>
+            <ul>
+                <li>The total (the initial value / previously returned value)</li>
+                <li>The item value</li>
+                <li>The item index</li>
+                <li>The array itself</li>
+            </ul>
+            <br>
+            The example above does not use the index and array parameters. It can be rewritten to:- 
+            <br>
+            Example:- 
+            <br>
+            <p id="demo8"></p>
+
+            <br>
+            <br>
+
+            The <span class="edit">reduce()</span> method can accept an initial value. 
+            <br>
+            Example:- 
+            <br>
+            <p id="demo9"></p>
+        </p>
+
+        <hr>
+
+        <h2>
+            JavaScript Array reduceRight() 
+        </h2>
+
+        <p>
+            The <span class="edit">reduceRight()</span> method runs a function on each array element to produce (reduce it to) a single value. 
+            <br>
+            The <span class="edit">reduceRight()</span> works from right-to-left in the array. See also <span class="edit">reduce()</span>. 
+            <br>
+            <p class="edit1">
+                The <span class="edit">reduceRight()</span> method does not reduce the original array. 
+            </p>
+            <br>
+            This example finds the sum of all numbers in an array. 
+            <br>
+            Example:- 
+            <br>
+            <p id="demo10"></p>
+
+            <br>
+            <br>
+            Note that the function takes 4 arguments:- 
+            <br>
+            <ul>
+                <li>The total (the initial value / previously returned value)</li>
+                <li>The item value</li>
+                <li>The item index</li>
+                <li>The array itself</li>
+            </ul>
+            <br>
+            The example above does not use the index and array parameters. It can be rewritten to:- 
+            <br>
+            Example:- 
+            <br>
+            <p id="demo11"></p>
+        </p>
+
+        <hr>
+
+        <h2>
+            JavaScript Array every() 
+        </h2>
+
+        <p>
+            The <span class="edit">every()</span> method checks if all array values pass a test. 
+            <br>
+            <p class="edit1">
+                IT RETURNS TRUE OR FALSE. 
+            </p>
+            <br>
+            This example checks if all array values are larger than 18. 
+            <br>
+            Example:- 
+            <br>
+            <p id="demo12"></p>
+
+            <br>
+            <br>
+            Note that the function takes 3 arguments:- 
+            <br>
+            <ul>
+                <li>The item value</li>
+                <li>The item index</li>
+                <li>The array itself</li>
+            </ul>
+            <br>
+            When a callback function uses the first parameter only (value), the other parameters can be omitted. 
+            <br>
+            Example:- 
+            <br>
+            <p id="demo13"></p>
+        </p>
+
+        <hr>
+
+        <h2>
+            JavaScript Array some() 
+        </h2>
+
+        <p>
+            The <span class="edit">some()</span> method checks if some array value pass a test. 
+            <br>
+            <p class="edit1">
+                IT RETURNS TRUE OR FALSE. 
+            </p>
+            <br>
+            This example checks if some array values are larger than 18. 
+            <br>
+            Example:- 
+            <br>
+            <p id="demo14"></p>
+
+            <br>
+            <br>
+            Note that the function takes 3 arguments:- 
+            <br>
+            <ul>
+                <li>The item value</li>
+                <li>The item index</li>
+                <li>The array itself</li>
+            </ul>
+        </p>
+
+        <hr>
+
+        <h2>
+            JavaScript Array indexOf() 
+        </h2>
+
+        <p>
+            The <span class="edit">indexOf()</span> method searches an array for an element value and returns its position. 
+            <br>
+            <p class="edit1">
+                <strong>Note: </strong>The first item has position 0, the second item has position 1, and so on. 
+            </p>
+            <br>
+            Example:- 
+            <br>
+            Search an array for the item "Apple". 
+            <br>
+            <p id="demo15"></p>
+
+            <br>
+            <br>
+            Syntax:- 
+            <br>
+            <p class="edit1">
+                <i>array.indexOf(item, start)</i>
+            </p>
+
+            <br>
+            <br>
+            
+            <table class="table1">
+                <tr>
+                    <th>item</th>
+                    <td>Required. The item to search for</td>
+                </tr>
+                <tr>
+                    <th>start</th>
+                    <td>Optional. Where to start the search. Negative values will start at the given position counting from the end, and search to the end.</td>
+                </tr>
+            </table>
+
+            <br>
+            <br>
+            <span class="edit">Array.indexOf()</span> returns -1 if the item is not found. 
+            <br>
+            If the item is present more than once, it returns the position of the first occurence. 
+        </p>
+
+        <hr>
+
+        <h2>
+            JavaScript Array lastIndexOf() 
+        </h2>
+
+        <p>
+            <span class="edit">Array.lastIndexOf()</span> is the same as <span class="edit">Array.indexOf()</span>, but returns the position of the last occurrence of the specified element. 
+            <br>
+            Example:- 
+            <br>
+            Search an array for the item "Apple". 
+            <br>
+            <p id="demo16"></p>
+
+            <br>
+            <br>
+            Syntax:- 
+            <br>
+            <p class="edit1">
+                array.lastIndexOf(item, start);
+            </p>
+            <br>
+            <br>
+            <table class="table1">
+                <tr>
+                    <th>item</th>
+                    <td>Required. The item to search for</td>
+                </tr>
+                <tr>
+                    <th>start</th>
+                    <td>Optional. Where to start the search. Negative values will start at the given position counting from the end, and search to the beginning.</td>
+                </tr>
+            </table>
+        </p>
+
+        <hr>
+
+        <h2>
+            JavaScript Array find() 
+        </h2>
+
+        <p>
+            The <span class="edit">find()</span> method returns the value of the first array element that passes a test function. 
+            <br>
+            This example finds (returns the value of) the first element that is larger than 18. 
+            <br>
+            Example:- 
+            <br>
+            <p id="demo17"></p>
+
+            <br>
+            <br>
+
+            <h2>
+                Browser Support 
+            </h2>
+
+            <br>
+
+            <span class="edit">find()</span> is an ES6 feature (JavaScript 2015). 
+            <br>
+            It is supported in all modern browsers. 
+            <br>
+            <table class="table1 table2">
+                <tr>
+                    <td><img src="Image4.svg.png" alt="Google Chrome" height="38" width="38"></td>
+                    <td><img src="Image5.png" alt="Microsoft Edge" height="38" width="38"></td>
+                    <td><img src="Image6.png" alt="Mozilla Firefox" height="38" width="38"></td>
+                    <td><img src="Image7.png" alt="Apple Safari" height="38" width="38"></td>
+                    <td><img src="Image8.png" alt="Opera" height="38" width="38"></td>
+                </tr>
+                <tr>
+                    <td>Chrome</td>
+                    <td>Edge</td>
+                    <td>Firefox</td>
+                    <td>Safari</td>
+                    <td>Opera</td>
+                </tr>
+                <tr>
+                    <td>Yes</td>
+                    <td>Yes</td>
+                    <td>Yes</td>
+                    <td>Yes</td>
+                    <td>Yes</td>
+                </tr>
+            </table>
+
+            <br>
+            <span class="edit">find()</span> is not supported in Internet Explorer. 
+        </p>
+
+        <hr>
+
+        <h2>
+            JavaScript Array findIndex() 
+        </h2>
+
+        <p>
+            The <span class="edit">findIndex()</span> method returns the index of the first array element that passes a test function. 
+            <br>
+            This example finds the index of the first element that is larger than 18. 
+            <br>
+            Example:- 
+            <br>
+            <p id="demo18"></p>
+
+            <br>
+            Note that the function takes 3 arguments:- 
+            <br>
+            <ul>
+                <li>The item value</li>
+                <li>The item index</li>
+                <li>The array itself</li>
+            </ul>
+            
+            <br>
+            <br>
+
+            <h2>
+                Browser Support 
+            </h2>
+
+            <br>
+
+            <span class="edit">findIndex()</span> is an ES6 feature (JavaScript 2015). 
+            <br>
+            It is supported in all modern browsers. 
+            <br>
+            <br>
+            <table class="table1 table2">
+                <tr>
+                    <td><img src="Image4.svg.png" alt="Google Chrome" height="38" width="38"></td>
+                    <td><img src="Image5.png" alt="Microsoft Edge" height="38" width="38"></td>
+                    <td><img src="Image6.png" alt="Mozilla Firefox" height="38" width="38"></td>
+                    <td><img src="Image7.png" alt="Apple Safari" height="38" width="38"></td>
+                    <td><img src="Image8.png" alt="Opera" height="38" width="38"></td>
+                </tr>
+                <tr>
+                    <td>Chrome</td>
+                    <td>Edge</td>
+                    <td>Firefox</td>
+                    <td>Safari</td>
+                    <td>Opera</td>
+                </tr>
+                <tr>
+                    <td>Yes</td>
+                    <td>Yes</td>
+                    <td>Yes</td>
+                    <td>Yes</td>
+                    <td>Yes</td>
+                </tr>
+            </table>
+
+            <br>
+
+            <span class="edit">findIndex()</span> is not supported in Internet Explorer. 
+        </p>
+
+        <hr>
+        <br>
+        <br>
+        <hr>
+
+        <h2>
+            JavaScript Array.from() 
+        </h2>
+
+        <p>
+            The <span class="edit">Array.from()</span> method returns an Array object from any object with a length property or any iterable object. 
+            <br>
+            Example:- 
+            <br>
+            Create an Array from a String:- 
+            <br>
+            <p id="demo19"></p>
+
+            <br>
+
+            <h2>
+                Browser Support 
+            </h2>
+
+            <br>
+
+            <span class="edit">from()</span> is an ES6 feature (JavaScript 2015). 
+            <br>
+            It is supported in all modern browsers. 
+            <br>
+            <br>
+            <table class="table1 table2">
+                <tr>
+                    <td><img src="Image4.svg.png" alt="Google Chrome" height="38" width="38"></td>
+                    <td><img src="Image5.png" alt="Microsoft Edge" height="38" width="38"></td>
+                    <td><img src="Image6.png" alt="Mozilla Firefox" height="38" width="38"></td>
+                    <td><img src="Image7.png" alt="Apple Safari" height="38" width="38"></td>
+                    <td><img src="Image8.png" alt="Opera" height="38" width="38"></td>
+                </tr>
+                <tr>
+                    <td>Chrome</td>
+                    <td>Edge</td>
+                    <td>Firefox</td>
+                    <td>Safari</td>
+                    <td>Opera</td>
+                </tr>
+                <tr>
+                    <td>Yes</td>
+                    <td>Yes</td>
+                    <td>Yes</td>
+                    <td>Yes</td>
+                    <td>Yes</td>
+                </tr>
+            </table>
+
+            <br>
+            <span class="edit">from()</span> is not supported in Internet Explorer. 
+        </p>
+
+        <hr>
+
+        <h2>
+            JavaScript Array keys() 
+        </h2>
+
+        <p>
+            The <span class="edit">Array.keys()</span> method returns an Array Iterator object with the keys of an array. 
+            <br>
+            Example:- 
+            <br>
+            Create an Array Iterator object, containing the keys of the array:- 
+            <br>
+            <p id="demo20"></p>
+
+            <br>
+            <br>
+
+            <h2>
+                Browser Support 
+            </h2>
+
+            <br>
+
+            <span class="edit">keys()</span> is an ES6 feature (JavaScript 2015). 
+            <br>
+            It is supported in all modern browsers. 
+            <br>
+            <br>
+            <table class="table1 table2">
+                <tr>
+                    <td><img src="Image4.svg.png" alt="Google Chrome" height="38" width="38"></td>
+                    <td><img src="Image5.png" alt="Microsoft Edge" height="38" width="38"></td>
+                    <td><img src="Image6.png" alt="Mozilla Firefox" height="38" width="38"></td>
+                    <td><img src="Image7.png" alt="Apple Safari" height="38" width="38"></td>
+                    <td><img src="Image8.png" alt="Opera" height="38" width="38"></td>
+                </tr>
+                <tr>
+                    <td>Chrome</td>
+                    <td>Edge</td>
+                    <td>Firefox</td>
+                    <td>Safari</td>
+                    <td>Opera</td>
+                </tr>
+                <tr>
+                    <td>Yes</td>
+                    <td>Yes</td>
+                    <td>Yes</td>
+                    <td>Yes</td>
+                    <td>Yes</td>
+                </tr>
+            </table>
+
+            <br>
+
+            <span class="edit">keys()</span> is not supported in Internet Explorer. 
+        </p>
+
+        <hr>
+
+        <h2>
+            Array entries() 
+        </h2>
+
+        <p>
+            The Array <span class="edit">entries()</span> method returns an Array Iterator object with key/value pairs. 
+            <br>
+            Example:- 
+            <br>
+            Create an Array Iterator, and then iterate over the key/value pairs:- 
+            <br>
+            <p id="demo21"></p>
+            <br>
+            The <span class="edit">entries()</span> method does not change the original array. 
+
+            <br>
+            <br>
+
+            <h2>
+                Browser Support 
+            </h2>
+
+            <br>
+
+            <span class="edit">entries()</span> is an ES6 feature (JavaScript 2015). 
+            <br>
+            It is supported in all modern browsers. 
+            <br>
+            <br>
+            <table class="table1 table2">
+                <tr>
+                    <td><img src="Image4.svg.png" alt="Google Chrome" height="38" width="38"></td>
+                    <td><img src="Image5.png" alt="Microsoft Edge" height="38" width="38"></td>
+                    <td><img src="Image6.png" alt="Mozilla Firefox" height="38" width="38"></td>
+                    <td><img src="Image7.png" alt="Apple Safari" height="38" width="38"></td>
+                    <td><img src="Image8.png" alt="Opera" height="38" width="38"></td>
+                </tr>
+                <tr>
+                    <td>Chrome</td>
+                    <td>Edge</td>
+                    <td>Firefox</td>
+                    <td>Safari</td>
+                    <td>Opera</td>
+                </tr>
+                <tr>
+                    <td>Yes</td>
+                    <td>Yes</td>
+                    <td>Yes</td>
+                    <td>Yes</td>
+                    <td>Yes</td>
+                </tr>
+            </table>
+
+            <br>
+
+            <span class="edit">entries()</span> is not supported in Internet Explorer. 
+        </p>
+
+        <hr>
+
+        <h2>
+            JavaScript Array includes() 
+        </h2>
+
+        <p>
+            ECMAScript 2016 introduced <span class="edit">Array.includes()</span> to arrays. This allows us to check if an element is present in an array (including NaN, unlike indexOf). 
+            <br>
+            Example:- 
+            <br>
+            <p id="demo22"></p>
+
+            <br>
+            Syntax:- 
+            <br>
+            <p class="edit1">
+                array.includes(search-item)
+            </p>
+
+            <br>
+            <br>
+            
+            <p class="edit1">
+                Array.includes() allows to check for NaN values. Unlike Array. indexOf(). 
+            </p>
+
+            <br>
+
+            Array.includes() is not supported in Internet Explorer and Edge 12/13. 
+            <br>
+            The first browser versions with full support are:- 
+            <br>
+            <br>
+            <h2>
+                Browser Support 
+            </h2>
+
+            <br>
+
+            <span class="edit">includes()</span> is an ECMAScript 2016 feature. 
+            <br>
+            It is supported in all modern browsers. 
+            <br>
+            <br>
+            <table class="table1 table2">
+                <tr>
+                    <td><img src="Image4.svg.png" alt="Google Chrome" height="38" width="38"></td>
+                    <td><img src="Image5.png" alt="Microsoft Edge" height="38" width="38"></td>
+                    <td><img src="Image6.png" alt="Mozilla Firefox" height="38" width="38"></td>
+                    <td><img src="Image7.png" alt="Apple Safari" height="38" width="38"></td>
+                    <td><img src="Image8.png" alt="Opera" height="38" width="38"></td>
+                </tr>
+                <tr>
+                    <td>Chrome</td>
+                    <td>Edge</td>
+                    <td>Firefox</td>
+                    <td>Safari</td>
+                    <td>Opera</td>
+                </tr>
+                <tr>
+                    <td>Yes</td>
+                    <td>Yes</td>
+                    <td>Yes</td>
+                    <td>Yes</td>
+                    <td>Yes</td>
+                </tr>
+            </table>
+        </p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <script>
+            const numbers1 = [45,4,9,16,25];
+            let text1 = "";
+            numbers1.forEach(myFunction1);
+            document.getElementById("demo1").innerHTML = 
+            "Array is:- " + numbers1 + "<br><br>" + 
+            "Array using forEach() method:- <br>" + text1;
+
+            function myFunction1(value, index, array)
+            {
+                text1 += value + "<br>";
+            }
+
+            let text2 = "";
+
+            numbers1.forEach(myFunction2);
+
+            document.getElementById("demo2").innerHTML = 
+            "Array is:- " + numbers1 + "<br><br>" + 
+            "Array using forEach() method:-<br> " + text2;
+
+            function myFunction2(value)
+            { 
+              text2 += value + "<br>";
+            }
+
+            const numbers2 = numbers1.map(myFunction3);
+
+            function myFunction3(value, index, array)
+            {
+                return value * 2;
+            }
+            
+            let text3 = "";
+            numbers2.forEach(myFunction4);
+            
+            
+
+            function myFunction4(value)
+            {
+                text3 += value + "<br>";
+            }
+
+            document.getElementById("demo3").innerHTML = 
+            "Original Array is:-<br> " + numbers1 + "<br>" + 
+            "When multiplied by 2 becomes:- <br>" + text3;
+
+            const numbers3 = numbers1.map(myFunction5);
+
+            function myFunction5(value)
+            {
+                return value * 2;
+            }
+            
+            let text4 = "";
+            function myFunction6(value)
+            {
+                text4 += value + "<br>";
+            }
+            numbers3.forEach(myFunction6);
+
+            
+
+            document.getElementById("demo4").innerHTML = 
+            "Original Array is:-<br> " + numbers1 + "<br>" + 
+            "When multiplied by 2 becomes:- <br>" + text4;
+
+            //array filter() method
+            const over18 = numbers1.filter(myFunction7);
+
+            document.getElementById("demo5").innerHTML = 
+            "The original array:- " + numbers1 + "<br>" + 
+            "The array with elements greater than 18:- " + over18;
+
+            function myFunction7(value, index, array)
+            {
+                return value > 18;
+            }
+
+            const over18s = numbers1.filter(myFunction8);
+            function myFunction8(value)
+            {
+                return value > 18;
+            }
+            document.getElementById("demo6").innerHTML = 
+            "The original array:- " + numbers1 + "<br>" + 
+            "The array with elements greater than 18:- " + over18s;
+
+            let sum = numbers1.reduce(myFunction8);
+            
+
+            function myFunction8(total, value, index, array)
+            {
+                return total + value;
+            }
+
+            document.getElementById("demo7").innerHTML = 
+            "The sum is:- " + sum;
+
+            let sum1 = numbers1.reduce(myFunction9);
+
+            function myFunction9(total, value)
+            {
+                return total + value;
+            }
+
+            document.getElementById("demo8").innerHTML = 
+            "The sum is:- " + sum1;
+
+            let sum2 = numbers1.reduce(myFunction8,100);
+
+            document.getElementById("demo9").innerHTML = 
+            "The sum is:- " + sum2;
+
+            let sum3 = numbers1.reduceRight(myFunction8);
+
+            document.getElementById("demo10").innerHTML = 
+            "The sum is:- " + sum3;
+
+            let sum4 = numbers1.reduceRight(myFunction9);
+
+            function myFunction9(total, value)
+            {
+             return total + value;
+            }
+
+            document.getElementById("demo11").innerHTML = 
+            "The sum is:- " + sum4;
+
+             //every() JavaScript Method 
+            let allOver18 = numbers1.every(myFunction10);
+
+            function myFunction10(value, index, array)
+            {
+                return value > 18;
+            }
+
+            document.getElementById("demo12").innerHTML = 
+            "All over 18 is:- " + allOver18;
+
+            let allOver18s = numbers1.every(myFunction11);
+
+            function myFunction11(value)
+            {
+                return value > 18;
+            }
+
+            document.getElementById("demo13").innerHTML = 
+            "All over 18 is:- " + allOver18s;
+
+            let someOver18 = numbers1.some(myFunction12);
+
+            function myFunction12(value, index, array)
+            {
+                return value > 18;
+            }
+
+            document.getElementById("demo14").innerHTML = 
+            "Some over 18 is:- " + someOver18;
+
+            const fruits1 = ["Apple", "Orange", "Apple", "Mango"];
+            let position1 = fruits1.indexOf("Apple") + 1;
+            document.getElementById("demo15").innerHTML = 
+            "Apple is found in position:- " + position1;
+
+            let position2 = fruits1.lastIndexOf("Apple") + 1;
+
+            document.getElementById("demo16").innerHTML = 
+            "Apple is found in position:- " + position2;
+            
+            //find() JavaScript method 
+            let find1 = numbers1.find(myFunction13);
+
+            function myFunction13(value, index, array)
+            {
+                return value > 18;
+            }
+
+            document.getElementById("demo17").innerHTML = 
+            "First number over 18 is:- " + find1;
+            
+            //findIndex() JavaScript method 
+            let find2 = numbers1.findIndex(myFunction13);
+            document.getElementById("demo18").innerHTML = 
+            "The array is:- " + numbers1 + "<br>" + 
+            "First number over 18 has index:- " + find2;
+
+            const myArr1 = Array.from("ABCDEFGH");
+            document.getElementById("demo19").innerHTML = 
+            "String is:- " + "ABCDEFGH" + 
+            "<br>" + "The Array is:- " + myArr1;
+
+            const keys = fruits1.keys();
+
+            let text5="";
+            for(let x of keys)
+            {
+                text5 += x + "<br>";
+            }
+
+            document.getElementById("demo20").innerHTML = 
+            "The array is:- " + fruits1 + "<br><br>" + 
+            "And the Array Iterator object with keys of the array are:- <br>" + text5;
+
+            const f = fruits1.entries();
+
+            for(let x of f)
+            {
+                document.getElementById("demo21").innerHTML += x + "<br>";
+            }
+
+            document.getElementById("demo22").innerHTML = 
+            "Is Mango present in the fruits1 array? = " + fruits1.includes("Mango");
+
+            
+        </script>
+    </body>
+</html>

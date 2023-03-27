@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            JavaScript Sets 
+        </title>
+        <style>
+            .edit {
+                background-color:#f1f1f1;
+                color:red;
+            }
+            .edit1 {
+                background-color:rgba(255,255,0,0.3);
+                padding:20px;
+            }
+            body {
+                font-family:verdana, sans-serif;
+                font-size:20px;
+                line-height:1.5;
+            }
+            .table1 {
+                width:100%;
+                border:1px solid #ddd;
+                border-collapse:collapse;
+            }
+            .table1 tr {
+                height:40px;
+            }
+            .table1 tr:nth-child(even) {
+                background-color:#ddd;
+            }
+            .table1 th {
+                text-align:left;
+                padding:10px;
+            }
+            .table1 td {
+                padding:10px;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>
+            JavaScript Sets 
+        </h1>
+
+        <p style="background-color:rgba(0,255,0,0.3);padding:20px;">
+         A JavaScript Set is a collection of unique values. 
+         <br>
+         Each value can only occur once in a Set. 
+        </p>
+
+        <hr>
+
+        <h2>
+            Essential Set Methods 
+        </h2>
+
+        <table class="table1">
+            <tr>
+                <th>Method</th>
+                <th>Description</th>
+            </tr>
+            <tr>
+                <td>new Set()</td>
+                <td>Creates a new Set</td>
+            </tr>
+            <tr>
+                <td>add()</td>
+                <td>Adds a new element to the Set</td>
+            </tr>
+            <tr>
+                <td>delete()</td>
+                <td>Removes an element from a Set</td>
+            </tr>
+            <tr>
+                <td>has()</td>
+                <td>Returns true if a value exists in the Set</td>
+            </tr>
+            <tr>
+                <td>forEach()</td>
+                <td>Invokes a callback function for each element in the Set</td>
+            </tr>
+            <tr>
+                <td>values()</td>
+                <td>Returns an iterator with all the values in a Set</td>
+            </tr>
+            <tr>
+                <th>Property</th>
+                <th>Description</th>
+            </tr>
+            <tr>
+                <td>size</td>
+                <td>Returns the number of elements in a Set</td>
+            </tr>
+        </table>
+
+        <hr>
+        <br>
+        <br>
+        <hr>
+
+        <h2>
+            How to Create a Set 
+        </h2>
+
+        <p>
+            You can create a JavaScript Set by:- 
+            <br>
+            <ul>
+                <li>Passing an Array to <span class="edit">new Set()</span></li>
+                <li>Create a new Set and use <span class="edit">add()</span> to add values</li>
+                <li>Create a new Set and use <span class="edit">add()</span> to add variables</li>
+            </ul>
+        </p>
+
+        <hr>
+
+        <h2>
+            The new Set() Method 
+        </h2>
+
+        <p>
+            Pass an Array to the <span class="edit">new Set()</span> constructor. 
+            <br>
+            Example:- 
+            <br>
+            <p id="demo1"></p>
+
+            <br>
+            <br>
+            Create a Set and add values:- 
+            <br>
+            Example:- 
+            <br>
+            <p id="demo2"></p>
+
+            <br>
+            <br>
+            Create a Set and add variables:- 
+            <br>
+            Example:- 
+            <br>
+            <p id="demo3"></p>
+        </p>
+
+        <hr>
+
+        <h2>
+            The add() Method 
+        </h2>
+
+        <p>
+            Example:- 
+            <br>
+            <p id="demo4"></p>
+
+            <br>
+            <br>
+            If you add equal elements, only the first will be saved. 
+            <br>
+            Example:- 
+            <br>
+            <p id="demo5"></p>
+        </p>
+
+        <hr>
+        <br>
+        <br>
+        <hr>
+
+        <h2>
+            The forEach() Method 
+        </h2>
+
+        <p>
+            The <span class="edit">forEach()</span> method invokes (calls) a function for each Set element. 
+            <br>
+            Example:- 
+            <br>
+            <p id="demo6"></p>
+        </p>
+
+        <hr>
+
+        <h2>
+            The values() Method 
+        </h2>
+
+        <p>
+            The <span class="edit">values()</span> method returns a new iterator object containing all the values in a Set. 
+            <br>
+            Example:- 
+            <br>
+            <p id="demo7"></p>
+
+            <br>
+            <br>
+            Now you can use the Iterator object to access the elements. 
+            <br>
+            Example:- 
+            <br>
+            <p id="demo8"></p>
+        </p>
+
+        <script>
+            //Create a Set
+            const letters1 = new Set(["a", "b", "c", "d"]);
+
+            //Display set.size
+            document.getElementById("demo1").innerHTML = 
+            "The size of the Set is:- " + letters1.size;
+
+            //Create a Set
+            const letters2 = new Set();
+
+            //Add values to the Set
+            letters2.add("a");
+            letters2.add("b");
+            letters2.add("c");
+            letters2.add("d");
+
+            //Display set.size
+            document.getElementById("demo2").innerHTML = 
+            "The size of the Set is:- " + letters2.size;
+
+            //Create a Set
+            const letters3 = new Set();
+
+            //Create Variables
+            const a = "a";
+            const b = "b";
+            const c = "c";
+
+            //Add variables to the Set
+            letters3.add(a);
+            letters3.add(b);
+            letters3.add(c);
+
+            //Display set.size
+            document.getElementById("demo3").innerHTML = 
+            "The size of the Set is:- " + letters3.size;
+
+            //Create a new Set
+            const letters4 = new Set(["a", "b", "c", "d"]);
+
+            //Add a new Element
+            letters4.add("d");
+            letters4.add("e");
+
+            //Display set.size
+            document.getElementById("demo4").innerHTML = 
+            "The size of the Set is:- " + letters4.size;
+
+            //Create a new Set
+            const letters5 = new Set();
+
+            //Add values to the Set
+            letters5.add("a");
+            letters5.add("b");
+            letters5.add("c");
+            letters5.add("c");
+            letters5.add("c");
+            letters5.add("c");
+            letters5.add("c");
+            letters5.add("c");
+
+            //Display set.size
+            document.getElementById("demo5").innerHTML = 
+            "The size of the Set is:- " + letters5.size;
+
+            //Create a Set
+            const letters6 = new Set(["a","b","c","d"]);
+
+            //List all elements
+            let text1 = "";
+            letters6.forEach(myFunction1);
+            function myFunction1(value)
+            {
+                text1 += value + "<br>";
+            }
+
+            document.getElementById("demo6").innerHTML = text1;
+
+            //Display set.size
+            document.getElementById("demo7").innerHTML = 
+            letters6.values(); //return a Set Iterator, that is, [object Set Iterator]
+
+            //List all elements
+            let text2 = "";
+            for(let x of letters6.values())
+            {
+                text2 += x + "<br>";
+            }
+            document.getElementById("demo8").innerHTML = text2;
+        </script>
+    </body>
+
+</html>

@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html lang="en-in">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>
+            JavaScript Objects 
+        </title>
+        <style>
+            .edit {
+                background-color:#f1f1f1;
+                color:red;
+            }
+            .edit1 {
+                background-color:rgba(255,255,0,0.3);
+                padding:20px;
+            }
+            body {
+                font-family:verdana, sans-serif;
+                font-size:20px;
+                line-height:1.5;
+            }
+            .table1 {
+                width: 100%;
+                border:1px solid #ddd;
+                border-collapse:collapse;
+            }
+            .table1 tr {
+                height:40px;
+            }
+            .table1 tr:nth-child(even) {
+                background-color:#f1f1f1;
+            }
+            .table1 th {
+                text-align:left;
+                padding:10px;
+            }
+            .table1 td {
+                padding:10px;
+            }
+            .table2 {
+                width:30%;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>
+            JavaScript Objects 
+        </h1>
+
+        <div class="edit1">
+            In JavaScript, objects are king. If you understand objects, you understand JavaScript. 
+        </div>
+
+        <hr>
+
+        <div>
+            In JavaScript, almost "everything" is an object. 
+            <br>
+            <ul>
+                <li>Booleans can be objects (if defined with the <span class="edit">new</span> keyword)</li>
+                <li>Numbers can be objects (if defined with the <span class="edit">new</span> keyword)</li>
+                <li>Strings can be objects (if defined with the <span class="edit">new</span> keyword)</li>
+                <li>Dates are always objects</li>
+                <li>Maths are always objects</li>
+                <li>Regular expressions are always objects</li>
+                <li>Arrays are always objects</li>
+                <li>Functions are always objects</li>
+                <li>Objects are always objects</li>
+            </ul>
+            <br>
+            All JavaScript values, except primitives, are objects. 
+        </div>
+
+        <hr>
+
+        <h2>
+            JavaScript Primitives 
+        </h2>
+
+        <div>
+            A <strong>primitive value</strong> is a value that has no properties or methods. 
+            <br>
+            <strong>3.14</strong> is a primitive value. 
+            <br>
+            A <strong>primitive data type</strong> is data that has a primitive value. 
+            <br>
+            JavaScript defines 7 types of primitive data types. 
+            <br>
+            <br>
+            
+            <h2>
+                Examples 
+            </h2>
+
+            <ul>
+                <li><span class="edit">string</span></li>
+                <li><span class="edit">number</span></li>
+                <li><span class="edit">boolean</span></li>
+                <li><span class="edit">null</span></li>
+                <li><span class="edit">undefined</span></li>
+                <li><span class="edit">symbol</span></li>
+                <li><span class="edit">bigint</span></li>
+            </ul>
+
+            <br>
+            <br>
+
+            <div class="edit1">
+                <span style="font-size:30px;">Immutable</span>
+                <br>
+                Primitive values are immutable (they are hardcoded and cannot be changed). 
+                <br>
+                if x = 3.14, you can change the value of x, but you cannot change the value of 3.14. 
+            </div>
+
+            <br>
+            <br>
+
+            <table class="table1">
+                <tr>
+                    <th>Value</th>
+                    <th>Type</th>
+                    <th>Comment</th>
+                </tr>
+                <tr>
+                    <td>"Hello"</td>
+                    <td>string</td>
+                    <td>"Hello" is always "Hello"</td>
+                </tr>
+                <tr>
+                    <td>3.14</td>
+                    <td>number</td>
+                    <td>3.14 is always 3.14</td>
+                </tr>
+                <tr>
+                    <td>true</td>
+                    <td>boolean</td>
+                    <td>true is always true</td>
+                </tr>
+                <tr>
+                    <td>false</td>
+                    <td>boolean</td>
+                    <td>false is always false</td>
+                </tr>
+                <tr>
+                    <td>null</td>
+                    <td>null (object)</td>
+                    <td>null is always null</td>
+                </tr>
+                <tr>
+                    <td>undefined</td>
+                    <td>undefined</td>
+                    <td>undefined is always undefined</td>
+                </tr>
+            </table>
+        </div>
+
+        <hr>
+
+        <h2>
+            Objects are Variables 
+        </h2>
+
+        <div>
+            JavaScript variables can contain single values. 
+            <br>
+            Example:- 
+            <br>
+            <p id="demo1"></p>
+
+            <br>
+            <br>
+            JavaScript variables can also contain many values. 
+            <br>
+            Objects are variables too. But objects can contain many values. 
+            <br>
+            Objects values are written as <strong>name : value</strong> pairs (name and value separated by a colon). 
+            <br>
+            Example:- 
+            <br>
+            <p id="demo2"></p> 
+
+            <br>
+
+            <p class="edit1">
+                A JavaScript object is a collection of <strong>named values</strong> 
+            </p>
+
+            <br>
+            <br>
+            It is a common practice to declare objects with the <span class="edit">const</span> keyword. 
+            <br>
+            Example:- 
+            <br>
+            <p id="demo3"></p>
+        </div>
+
+        <hr>
+
+        <h2>
+            Object Properties 
+        </h2>
+
+        <div>
+            The named values, in JavaScript objects, are called <strong>properties</strong>. 
+            <br>
+            <br>
+            <table class="table1 table2">
+                <tr>
+                    <th>Property</th>
+                    <th>Value</th>
+                </tr>
+                <tr>
+                    <td>firstName</td>
+                    <td>John</td>
+                </tr>
+                <tr>
+                    <td>lastName</td>
+                    <td>Doe</td>
+                </tr>
+                <tr>
+                    <td>age</td>
+                    <td>50</td>
+                </tr>
+                <tr>
+                    <td>eyeColor</td>
+                    <td>blue</td>
+                </tr>
+            </table>
+
+            <br>
+            <br>
+
+            Objects written as name value pairs are similar to:- 
+            <br>
+            <ul>
+                <li>Associative arrays in PHP</li>
+                <li>Dictionaries in Python</li>
+                <li>Hash tables in C</li>
+                <li>Hash maps in Java</li>
+                <li>Hashes in Ruby and Perl</li>
+            </ul>
+        </div>
+
+        <hr>
+
+        <h2>
+            Object Methods 
+        </h2>
+
+        <div>
+            Methods are <strong>actions</strong> that can be performed on objects. 
+            <br>
+            Object properties can be both primitive values, other objects, and functions. 
+            <br>
+            An <strong>object method</strong> is an object property containing a <strong>function definition</strong>. 
+            <br>
+            <br>
+            <table class="table1">
+                <tr>
+                    <th>Property</th>
+                    <th>Value</th>
+                </tr>
+                <tr>
+                    <td>firstName</td>
+                    <td>John</td>
+                </tr>
+                <tr>
+                    <td>lastName</td>
+                    <td>Doe</td>
+                </tr>
+                <tr>
+                    <td>age</td>
+                    <td>50</td>
+                </tr>
+                <tr>
+                    <td>eyeColor</td>
+                    <td>blue</td>
+                </tr>
+                <tr>
+                    <td>fullName</td>
+                    <td>function() {return this.firstName + " " + this.lastName}</td>
+                </tr>
+            </table>
+            <br>
+            <p class="edit1">
+                JavaScript objects are containers for named values, called properties and methods. 
+            </p>
+        </div>
+
+        <hr>
+
+        <h2>
+            Creating a JavaScript Object 
+        </h2>
+
+        <div>
+            With JavaScript, you can define and create your own objects. 
+            <br>
+            There are different ways to create new objects:- 
+            <br>
+            <ul>
+                <li>Create a single object, using an object literal.</li>
+                <li>Create a single object, with the keyword <span class="edit">new</span>.</li>
+                <li>Define an object constructor, and then create objects of the constructed type.</li>
+                <li>Create an object using <span class="edit">Object.create()</span>.</li> 
+            </ul>
+        </div>
+
+        <hr>
+
+        <h2>
+            Using an Object Literal 
+        </h2>
+
+        <div>
+            This is the easiest way to create a JavaScript Object. 
+            <br>
+            Using an object literal, you both define and create an object in one statement. 
+            <br>
+            An object literal is a list of name:value pairs (like age:50) inside curly braces {}. 
+            <br>
+            The following example creates a new JavaScript object with four properties. 
+            <br>
+            Example:- 
+            <br>
+            <p id="demo4"></p>
+
+            <br>
+            <br>
+            Spaces and line breaks are not important. An object definition can span multiple lines. 
+            <br>
+            Example:- 
+            <br>
+            <p id="demo5"></p>
+
+            <br>
+            <br>
+            This example creates an empty JavaScript object, and then adds 4 properties. 
+            <br>
+            Example:- 
+            <br>
+            <p id="demo6"></p>
+        </div>
+
+        <hr>
+
+        <h2>
+            Using the JavaScript Keyword new 
+        </h2>
+
+        <div>
+            The following example create a new JavaScript object using <span class="edit">new Object()</span>, and then adds 4 properties. 
+            <br>
+            Example:- 
+            <br>
+            <p id="demo7"></p>
+
+            <br>
+
+            <p class="edit1">
+                The examples above do exactly the same. 
+                <br>
+                But there is no need to use <span class="edit">new Object()</span>. 
+                <br>
+                For readability, simplicity and execution speed, use the object literal method. 
+            </p>
+        </div>
+
+        <hr>
+
+        <h2>
+            JavaScript Objects are Mutable 
+        </h2>
+
+        <div>
+            Objects are mutable: They are addressed by reference, not by value. 
+            <br>
+            If person is an object, the following statement will not create a copy of person. 
+            <br>
+            <p class="edit1">
+                const x = person; // Will not create a copy of person. 
+            </p>
+
+            <br>
+            <br>
+
+            The object x is <strong>not a copy</strong> of person. It <strong>is</strong> person. Both x and person are the same object. 
+            <br>
+            Any changes to x will also change person, because x and person are the same object. 
+            <br>
+            Example:- 
+            <br>
+            <p id="demo8"></p>
+
+            <br>
+            After changing age, the person object is:- 
+            <br>
+            <p id="demo9"></p>
+        </div>
+
+
+        <script>
+            //Create and display a variable:- 
+            let person = "John Doe";
+            document.getElementById("demo1").innerHTML = person;
+
+            //Create a object:- 
+            let person1 = {
+                firstName: "John",
+                lastName: "Doe",
+                age: 50,
+                eyeColor: "blue"
+            };
+            document.getElementById("demo2").innerHTML = 
+            person1.firstName + " " + person1.lastName; 
+
+            document.getElementById("demo3").innerHTML = 
+            person1.firstName + " " + person1.lastName; 
+
+            document.getElementById("demo4").innerHTML = 
+            person1.firstName + " is " + person1.age + " years old.";
+
+            //Create an object:- 
+            const person2 = {
+                firstName: "Jimmy",
+                lastName: "Jayant",
+                age: 29,
+                eyeColor: "black"
+            };
+            document.getElementById("demo5").innerHTML = 
+            person2.firstName + " " + person2.lastName + 
+            " is " + person2.age + " years old.";
+
+            //Create an empty object:- 
+            const person3 = {};
+
+            //Then add 4 properties:- 
+            person3.firstName = "Peter";
+            person3.lastName = "Parker";
+            person3.age = 50;
+            person3.eyeColor = "blue";
+
+            document.getElementById("demo6").innerHTML = 
+            person3.firstName + " " + person3.lastName + 
+            " is " + person3.age + " years old.";
+
+            //Create an empty object using keyword new:- 
+            const person4 = new Object();
+
+            //Then adds 4 properties:- 
+            person4.firstName = "Aaron";
+            person4.lastName = "Smith";
+            person4.age = 25;
+            person4.eyeColor = "blue";
+
+            document.getElementById("demo7").innerHTML = 
+            person4.firstName + " " + person4.lastName + " is " + 
+            person4.age + " years old and has " + 
+            person4.eyeColor + " eyes.";
+
+            const person5 = {
+                firstName: "Jimmy",
+                lastName : "Jayant",
+                age: 29,
+                eyeColor: "black"
+            };
+
+            document.getElementById("demo8").innerHTML = 
+            person5.firstName + " " + person5.lastName + 
+            " is " + person5.age + " years old and has " + 
+            person5.eyeColor + " eyes.";
+
+            const x = person5;
+            x.age = 20;
+
+            document.getElementById("demo9").innerHTML = 
+            person5.firstName + " " + person5.lastName + 
+            " is " + person5.age + " years old and has " + 
+            person5.eyeColor + " eyes.";
+
+
+        </script>
+    </body>
+</html>

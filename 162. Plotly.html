@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en-in">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>
+            Plotly.js 
+        </title>
+        <style>
+            html {
+                font-size:calc(10px + 0.390625vw);
+            }
+
+            body {
+                font-size:1rem;
+                font-family:verdana, sans-serif;
+                line-height:1.5;
+            }
+
+            .edit {
+                background-color:#f1f1f1;
+                color:red;
+            }
+
+            .edit1 {
+                background-color:rgba(255,255,0,0.3);
+                padding:2rem;
+            }
+        </style>
+        <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+    </head>
+    <body>
+        <h1>
+          Plotly.js 
+        </h1>
+
+        <div style="background-color:rgba(0,255,0,0.1);padding:2rem;">
+          <strong>Plotly.js</strong> is a charting library that comes with over 40 chart types, 3D charts, statistical graphs, and SVG maps. 
+        </div>
+
+        <hr>
+
+        <h2>
+            Scatter Plots 
+        </h2>
+
+        <div>
+         <div id="myPlot1" style="width:100%; max-width:700px;"></div>
+        </div>
+
+        <hr>
+
+        <h2>
+            Line Graphs 
+        </h2>
+
+        <div>
+            <div id="myPlot2" style="width:100%; max-width:700px;"></div>
+        </div>
+
+        <hr>
+        <br>
+        <br>
+        <hr>
+
+        <h2>
+            Linear Graphs 
+        </h2>
+
+        <div>
+            <div id="myPlot3" style="width:100%; max-width:700px;"></div>
+        </div>
+
+        <hr>
+
+        <h2>
+            Multiple Lines 
+        </h2>
+
+        <div> 
+            <div id="myPlot4" style="width:100%; max-width:700px;"></div>
+        </div>
+
+        <hr>
+
+        <h2>
+            Bar Charts 
+        </h2>
+
+        <div>
+            <div id="myPlot5" style="width:100%; max-width:700px;"></div>
+        </div>
+
+        <hr>
+
+        <h2>
+            Horizontal Bar Charts 
+        </h2>
+
+        <div>
+            <div id="myPlot6" style="width:100%; max-width:700px;"></div>
+        </div>
+
+        <hr>
+
+        <h2>
+            Pie Charts 
+        </h2>
+
+        <div>
+            To display a pie instead of bars, change x and y to labels and values, and change the type to "pie". 
+            <br>
+            Example:- 
+            <br>
+            <div id="myPlot7" style="width:100%; max-width:700px;"></div>
+        </div>
+
+        <hr>
+
+        <h2>
+            Donut Charts 
+        </h2>
+
+        <div>
+            To display a donut instead of a pie, add a hole. 
+            <br>
+            Example:- 
+            <br>
+            <div id="myPlot8" style="width:100%; max-width:700px;"></div>
+        </div>
+
+        <hr>
+
+        <h2>
+            Plotting Equations 
+        </h2>
+
+        <div>
+            Example:- 
+            <br>
+            <b>y = Math.sin(x)</b>
+            <div id="myPlot9" style="width:100%; max-width:700px;"></div>
+
+            <br>
+            <br>
+            <b>y = Math.cos(x)</b>
+            <div id="myPlot10" style="width:100%; max-width:700px;"></div>
+        </div>
+
+        <script>
+          var xArray1 = [50,60,70,80,90,100,110,120,130,140,150];
+          var yArray1 = [7,8,8,9,9,9,10,11,14,14,15];
+
+          // Define Data
+          var data1 = [{
+            x:xArray1,
+            y:yArray1,
+            mode:"markers"
+          }];
+
+          // Define Layout 
+          var layout1 = {
+            xaxis: {range: [40, 160], title: "Square Meters"},
+            yaxis: {range: [5, 16], title: "Price in Millions"},
+            title: "House Prices vs. Size"
+          };
+
+          // Display using Plotly 
+          Plotly.newPlot("myPlot1", data1, layout1);
+
+          /*Line Graphs*/
+
+          var xArray2 = [50,60,70,80,90,100,110,120,130,140,150];
+          var yArray2 = [7,8,8,9,9,9,10,11,14,14,15];
+
+          // Define Data
+          var data2 = [{
+           x: xArray2,
+           y: yArray2,
+           mode:"lines"
+          }];
+
+          // Define Layout
+          var layout2 = {
+           xaxis: {range: [40, 160], title: "Square Meters"},
+           yaxis: {range: [5, 16], tilte: "Price in Millions"},
+           title: "House Prices vs. Size"
+          };
+
+          // Display using Plotly 
+          Plotly.newPlot("myPlot2", data2,  layout2);
+
+          /*Linear Graphs*/
+
+          var exp1 = "x + 17";
+
+          // Generate values
+          var xValues1 = [];
+          var yValues1 = [];
+          for (var x = 0; x <= 10; x += 1)
+          {
+            xValues1.push(x);
+            yValues1.push(eval(exp1));
+          }
+
+          // Define Data
+          var data3 = [{
+            x: xValues1,
+            y: yValues1,
+            mode:"lines"
+          }];
+
+          // Define Layout
+          var layout3 = {title: "y = " + exp1};
+
+          // Display using Plotly 
+          Plotly.newPlot("myPlot3", data3, layout3);
+
+          /*Mutiple Lines*/
+
+          var exp2 = "x1";
+          var exp3 = "1.5*x1";
+          var exp4 = "1.5*x1 + 7";
+
+          //Generate values
+          var x1Values = [];
+          var x2Values = [];
+          var x3Values = [];
+          var y1Values = [];
+          var y2Values = [];
+          var y3Values = [];
+
+          for (var x1 = 0; x1 <= 10; x1 += 1)
+          {
+            x1Values.push(x1);
+            x2Values.push(x1);
+            x3Values.push(x1);
+            y1Values.push(eval(exp2));
+            y2Values.push(eval(exp3));
+            y3Values.push(eval(exp4));
+          }
+
+          // Define Data
+          var data4 = [
+            {x: x1Values, y:y1Values, mode:"lines"},
+            {x: x2Values, y:y2Values, mode:"lines"},
+            {x: x3Values, y:y3Values, mode:"lines"}
+          ];
+
+          // Define Layout
+          var layout4 = {title: "[y=" + exp2 + "] [y=" + exp3 + "] [y=" + exp4 + "]"};
+
+          // Display using Plotly
+          Plotly.newPlot("myPlot4", data4, layout4);
+
+          /*Bar Graphs*/
+
+          var xArray3 = ["Italy", "France", "Spain", "USA", "Argentina"];
+          var yArray3 = [55, 49, 44, 24, 15];
+
+          var data5 = [{
+            x:xArray3,
+            y:yArray3,
+            type:"bar"
+          }];
+
+          var layout5 = {title: "World Wide Wine Production"};
+
+          Plotly.newPlot("myPlot5", data5, layout5);
+
+          /*Horizontal Bar Charts*/
+
+          var xArray4 = [55, 49, 44, 24, 15];
+          var yArray4 = ["Italy", "France", "Spain", "USA", "Argentina"];
+
+          var data6 = [{
+            x:xArray4,
+            y:yArray4,
+            type:"bar",
+            orientation:"h",
+            marker:{color:"rgba(255,0,0,0.6)"}
+          }];
+
+          var layout6 = {title: "World Wide Wine Production"};
+
+          Plotly.newPlot("myPlot6", data6, layout6);
+
+          /*Pie Charts*/
+
+          var xArray5 = ["Italy", "France", "Spain", "USA", "Argentina"];
+          var yArray5 = [55, 49, 44, 24, 15];
+
+          var layout7 = {title: "World Wide Wine Production"};
+
+          var data7 = [{
+            labels:xArray5,
+            values:yArray5, 
+            type:"pie"
+          }];
+
+          Plotly.newPlot("myPlot7", data7, layout7);
+
+          /*Donut Charts*/
+
+          var xArray6 = ["Italy", "France", "Spain", "USA", "Argentina"];
+          var yArray6 = [55, 49, 44, 24, 15];
+
+          var layout8 = {title: "World Wide Wine Productions"};
+
+          var data8 = [{
+            labels:xArray6,
+            values:yArray6,
+            hole:.4,
+            type:"pie"
+          }];
+
+          Plotly.newPlot("myPlot8", data8, layout8);
+
+          /*Plotting Equations*/
+
+          //y = Math.sin(a)
+
+          var exp5 = "Math.sin(a)";
+
+          //Generate values
+          var xValues2 = [];
+          var yValues2 = [];
+          for(var a = 0; a <= 10; a += 0.1) {
+            xValues2.push(a);
+            yValues2.push(eval(exp5));
+          }
+
+          //Display using Plotly 
+          var data9 = [{
+            x:xValues2,
+            y:yValues2,
+            mode:"lines"
+          }];
+
+          var layout9 = {title:"y = " + exp5};
+
+          Plotly.newPlot("myPlot9", data9, layout9);
+
+          //y = Math.cos(b)
+
+          var exp6 = "Math.cos(b)";
+
+          //Generate Values
+          var xValues3 = [];
+          var yValues3 = [];
+          for (var b = 0; b <= 10; b += 0.2) {
+            yValues3.push(eval(exp6));
+            xValues3.push(b);
+          }
+
+          //Display using Plotly
+          var data10 = [{
+            x:xValues3,
+            y:yValues3,
+            mode:"markers"
+          }];
+
+          var layout10 = {title: "y = " + exp6};
+
+          Plotly.newPlot("myPlot10" ,data10, layout10);
+        </script>
+    </body>
+</html>

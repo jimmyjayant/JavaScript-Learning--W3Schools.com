@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            JavaScript Array Const 
+        </title>
+        <style>
+            body {
+                font-family:verdana, sans-serif;
+                font-size:20px;
+                line-height:1.5;
+            }
+            .edit {
+                background-color:#f1f1f1;
+                color:red;
+            }
+            .edit1 {
+                background-color:rgba(255,255,0,0.3);
+                padding:20px;
+            }
+            .table1 {
+                width:100%;
+                border:1px solid #ddd;
+                border-collapse:collapse;
+            }
+            .table1 tr {
+                height:40px;
+            }
+            .table1 tr:nth-child(even) {
+                background-color:#f1f1f1;
+            }
+            .table1 td {
+                text-align:center;
+                padding:10px;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>
+            JavaScript Array Const 
+        </h1>
+
+        <hr>
+
+        <h2>
+            ECMAScript 2015 (ES6) 
+        </h2>
+
+        <p>
+            In 2015, JavaScript introduced an important new keyword: <span class="edit">const</span>. 
+            <br>
+            It has become a common practice to declare arrays using <span class="edit">const</span>. 
+            <br>
+            Example:- 
+            <br>
+            <p id="demo1"></p>
+        </p>
+
+        <hr>
+
+        <h2>
+            Cannot be Reassigned 
+        </h2>
+
+        <p>
+            An array declared with <span class="edit">const</span> cannot be reassigned. 
+            <br>
+            Example:- 
+            <br>
+            <p id="demo2"></p>
+        </p>
+
+        <hr>
+
+        <h2>
+            Arrays are Not Constants 
+        </h2>
+
+        <p>
+            The keyword <span class="edit">const</span> is a little misleading. 
+            <br>
+            It does NOT define a constant array. It defines a constant reference to an array. 
+            <br>
+            Because of this, we can still change the elements of a constant array. 
+        </p>
+
+        <hr>
+
+        <h2>
+            Elements Can be Reassigned 
+        </h2>
+
+        <p>
+           You can change the elements of a constant array. 
+           <br>
+           Example:- 
+           <br>
+           <p id="demo3"></p>
+           <br>
+           <p id="demo4"></p>
+        </p>
+
+        <hr>
+
+        <h2>
+            Browser Support 
+        </h2>
+
+        <p>
+            The <span class="edit">const</span> keyword is not supported in Internet Explorer 10 or earlier. 
+            <br>
+            The following table defines the first browser versions with full support for the <span class="edit">const</span> keyword. 
+            <br>
+            <br>
+            <table class="table1">
+                <tr>
+                    <td><img src="Image4.svg.png" alt="Google Chrome" height="38" width="38"></td>
+                    <td><img src="Image5.png" alt="Microsoft Edge" height="38" width="38"></td>
+                    <td><img src="Image6.png" alt="Mozilla Firefox" height="38" width="38"></td>
+                    <td><img src="Image7.png" alt="Apple Safari" height="38" width="38"></td>
+                    <td><img src="Image8.png" alt="Opera" height="38" width="38"></td>
+                </tr>
+                <tr>
+                    <td>Chrome 49</td>
+                    <td>IE 11 / Edge</td>
+                    <td>Firefox 36</td>
+                    <td>Safari 10</td>
+                    <td>Opera 36</td>
+                </tr>
+                <tr>
+                    <td>Mar, 2016</td>
+                    <td>Oct, 2013</td>
+                    <td>Feb, 2015</td>
+                    <td>Sep, 2016</td>
+                    <td>Mar, 2016</td>
+                </tr>
+            </table>
+        </p>
+
+        <hr>
+
+        <h2>
+            Assigned when Declared 
+        </h2>
+
+        <p>
+            JavaScript <span class="edit">const</span> variables must be assigned a value when they are declared. 
+            <br>
+            Meaning: An array declared with <span class="edit">const</span> must be initialized when it is declared. 
+            <br>
+            Using <span class="edit">const</span> without initializing the array is a syntax error. 
+            <br>
+            <p style="background-color:pink;padding:20px;">
+            This will not work:- 
+            <br>
+            const cars;
+            <br>
+            cars = ["Saab", "Volvo", "BMW"];
+            </p>
+            <br>
+            Arrays declared with <span class="edit">var</span> can be initialized at any time. 
+            <br>
+            You can even use the array before it is declared. 
+            <br>
+            <p style="background-color:lightgreen;padding:20px;">
+            This is OK:- 
+            <br>
+            cars = ["Saab", "Volvo", "BMW"];
+            <br>
+            var cars; 
+            </p>
+        </p>
+
+        <hr>
+
+        <h2>
+            Const Block Scope 
+        </h2>
+
+        <p>
+            An array declared with <span class="edit">const</span> has <strong>Block Scope</strong>. 
+            <br>
+            An array declared in a block is not the same as an array declared outside the block. 
+            <br>
+            Example:- 
+            <br>
+            <p id="demo5"></p>
+
+            <br>
+            An array declared with <span class="edit">var</span> does not have block scope. 
+            <br>
+            Example:- 
+            <br>
+            <p id="demo6"></p>
+        </p>
+
+        <hr>
+
+        <h2>
+            Redeclaring Arrays 
+        </h2>
+
+        <p>
+            Redeclaring an array declared with <span class="edit">var</span> is allowed anywhere in a program. 
+            <br>
+            Example:- 
+            <br>
+            <p class="edit1">
+                var cars = ["Volvo", "BMW"]; //Allowed 
+                <br>
+                var cars = ["Toyota", "BMW"]; //Allowed 
+                <br>
+                cars = ["Volvo", "Saab"];    //Allowed 
+            </p>
+
+            <br>
+
+            Redeclaring or reassigning an array to <span class="edit">const</span>, in the same scope, or in the same block, is not allowed. 
+            <br>
+            Example:- 
+            <br>
+            <p class="edit1">
+                var cars = ["Volvo", "BMW"]; //Allowed 
+                <br>
+                const cars = ["Volvo", "BMW"]; //Not allowed 
+                <br>
+                {
+                    <br>
+                    vars cars = ["Volvo", "BMW"];   //Allowed 
+                    <br>
+                    const cars = ["Volvo", "BMW"];   //Now Allowed 
+                    <br>
+                }
+            </p>
+
+            <br>
+
+            Redeclaring or reassigning an existing <span class="edit">const</span> array, in the same scope, or in the same block, is not allowed. 
+            <br>
+            Example:- 
+            <br>
+            <p class="edit1">
+                const cars = ["Volvo", "BMW"];   //Allowed 
+                <br>
+                const cars = ["Volvo", "BMW"];  //Not allowed 
+                <br>
+                var cars = ["Volvo", "BMW"];    //Not allowed 
+                <br>
+                cars = ["Volvo", "BMW"];        //Not allowed 
+                <br>
+                <br>
+                {
+                    <br>
+                    const cars = ["Volvo", "BMW"];  //Allowed 
+                    <br>
+                    const cars = ["Volvo", "BMW"];  //Not allowed 
+                    <br>
+                    var cars = ["Volvo", "BMW"];   //Not allowed 
+                    <br>
+                    cars = ["Volvo", "BMW"];       //Not allowed 
+                    <br>
+                }
+            </p>
+
+            <br>
+            <br>
+
+            Redeclaring an array with <span class="edit">const</span>, in another scope, or in another block, is allowed. 
+            <br>
+            Example:- 
+            <br>
+            <p class="edit1">
+                const cars = ["Volvo", "BMW"];   //Allowed 
+                <br>
+                {
+                    <br>
+                    const cars = ["Volvo", "BMW"];  //Allowed 
+                    <br>
+                }
+                <br>
+                {
+                    <br>
+                    const cars = ["Volvo", "BMW"];  //Allowed 
+                    <br>
+                }
+            </p>
+        </p>
+
+
+
+
+
+        <script>
+            const cars1 = ["Saab", "Volvo", "BMW"];
+            document.getElementById("demo1").innerHTML = 
+            "The array is:- " + cars1;
+
+            try {
+                const cars2 = ["Saab", "Volvo", "BMW"];
+                cars2 = ["Toyota", "Audi", "Volvo"];
+            }
+
+            catch(err)
+            {
+                document.getElementById("demo2").innerHTML = err;
+            }
+            
+            //Create an Array:- 
+            const cars3 = ["Audi", "Toyota", "Saab"];
+            document.getElementById("demo3").innerHTML = "Original Array:- " + cars3;
+            
+            //Change an element:- 
+            cars3[0] = "Volvo";
+
+            //Add an element
+            cars3.push("Maruti");
+
+            //Display the array
+            document.getElementById("demo4").innerHTML = 
+            "Array after changing and adding elements:- " + cars3;
+
+            const cars4 = ["Audi", "Saab", "BMW"];
+            //Here cars4[0] is "Audi"
+
+            {
+                const cars4 = ["Toyota", "Volvo", "Maruti"];
+                //Here cars4[0] is "Toyota"
+            }
+
+            //Here cars4[0] is "Audi"
+
+            document.getElementById("demo5").innerHTML = cars4[0];
+
+            var cars5 = ["Saab", "Volvo", "BMW"];
+            //Here cars5[0] is "Saab"
+
+            {
+                var cars5 = ["Toyota", "Volvo", "BMW"];
+                //Here cars5[0] is "Toyota"
+            }
+
+            //Here cars5[0] is "Toyota"
+            document.getElementById("demo6").innerHTML = cars5[0];
+        </script>
+    </body>
+</html>

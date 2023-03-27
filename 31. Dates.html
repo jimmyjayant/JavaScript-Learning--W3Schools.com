@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            JavaScript Dates 
+        </title>
+        <style>
+            .edit {
+                background-color:#f1f1f1;
+                color:red;
+            }
+            .edit1 {
+                background-color:rgba(255,255,0,0.3);
+                padding:20px;
+            }
+            body {
+                font-family:verdana, sans-serif;
+                font-size:20px;
+            }
+            #demo1, #demo4 {
+                font-weight:bold;
+                font-size:25px;
+            }
+            
+        </style>
+    </head>
+    <body>
+        <h1>
+            JavaScript Date Objects 
+        </h1>
+
+        <p>
+            JavaScript <strong>Date Objects</strong> let us work with dates:- 
+            <br>
+            <p id="demo1"></p>
+            <br>
+            <br>
+            Example:- 
+            <br>
+            new Date() without arguments, creates a date objects with the current time and date. 
+            <br>
+            <p id="demo2"></p>
+
+            <br>
+            <br>
+            Example:- 
+            <br>
+            new Date() with arguments, creates a date object with specified date and time according to location which will not be current time.  
+            <br>
+            <p id="demo3"></p>
+
+            <br>
+
+            <p class="edit1">
+                <span style="font-size:30px;">Note</span>
+                <br>
+                Date objects are static. The "clock" is not "running". 
+                <br>
+                The computer clock is ticking, date objects are not. 
+            </p>
+        </p>
+
+        <hr>
+
+        <h2>
+            JavaScript Date Output 
+        </h2>
+
+        <p>
+            By default, JavaScript will use the browser's time zone and display a date as a full text string. 
+            <br>
+            <p id="demo4"></p>
+        </p>
+
+        <hr>
+        
+        <h2>
+            Creating Date Objects 
+        </h2>
+
+        <p>
+            Date objects are created with the <span class="edit">new Date()</span> constructor. 
+            <br>
+            There are <strong>9 ways</strong> to create a new date object. 
+            <br>
+            <p class="edit1">
+                new Date() 
+                <br>
+                new Date(date string)
+                <br>
+                new Date(year, month)
+                <br>
+                new Date(year, month, day)
+                <br>
+                new Date(year, month, day, hours)
+                <br>
+                new Date(year, month, day, hours, minutes)
+                <br>
+                new Date(year, month, day, hours, minutes, seconds)
+                <br>
+                new Date(year, month, day, hours, minutes, seconds, ms)
+                <br>
+                new Date(milliseconds)
+            </p>
+        </p>
+
+        <hr>
+
+        <h2>
+            JavaScript new Date() 
+        </h2>
+
+        <p>
+            <span class="edit">new Date()</span> creates a date object with the <strong>current date and time</strong>. 
+            <br>
+            Example:- 
+            <br>
+            <p id="demo5"></p>
+        </p>
+
+        <hr>
+        
+        <h2>
+            new Date(date string) 
+        </h2>
+
+        <p>
+            <span class="edit">new Date(date string)</span> creates a date object from a <strong>date string</strong>. 
+            <br>
+            Example:- 
+            <br>
+            <p id="demo6"></p>
+            <br>
+            <br>
+            Example:- 
+            <br>
+            <p id="demo7"></p>
+        </p>
+
+        <hr>
+
+        <h2>
+            new Date(year, month, .....) 
+        </h2>
+
+        <p>
+            <span class="edit">new Date(year, month, .....)</span> creates a date object with the <strong>specified date and time</strong>. 
+            <br>
+            7 numbers specify year, month, day ,hour, minutes, seconds, milliseconds (in that order). 
+            <br>
+            Example:- 
+            <br>
+            <p id="demo8"></p>
+
+            <br>
+            <br>
+            <p class="edit1">
+                <span style="font-size:30px;">Note</span>
+                <br>
+                JavaScript counts months from <strong>0</strong> to <strong>11</strong>. 
+                <br>
+                <strong>
+                    January = 0. 
+                    <br>
+                    December = 11.  
+                </strong>
+            </p>
+            <br>
+            Specifying a month higher than 11 will not result in error but add to the overflow in next year. 
+            <br>
+            <p class="edit1">
+                const d = new Date(2018, 15, 24, 10, 33, 30);
+                <br>
+                <strong>is same as:- </strong>
+                <br>
+                const d = new Date(2019, 3, 24, 10, 33, 30);
+            </p>
+            <br>
+            Example:- 
+            <br>
+            <p id="demo9"></p>
+
+            <br>
+            <br>
+            Similarly, specifying a day higher than max, will not result in error but adds to the overflow in next month. 
+            <br>
+            <p class="edit1">
+                const d = new Date(2018, 5, 35, 10, 33, 30);
+                <br>
+                <strong>is same as:- </strong>
+                <br>
+                const d = new Date(2018, 6, 5, 10, 33, 30);
+            </p>
+            <br>
+            Example:- 
+            <br>
+            <p id="demo10"></p>
+        </p>
+
+        <hr>
+
+        <h2>
+            Using 6, 4, 3 or 2 Numbers 
+        </h2>
+
+        <p>
+            6 numbers specify year, month, day, hour, minute, second. 
+            <br>
+            Example:- 
+            <br>
+            <p id="demo11"></p>
+            <br>
+            <br>
+            5 numbers specify year, month, day, hour, minute. 
+            <br>
+            Example:-
+            <br>
+            <p id="demo12"></p>
+
+            <br>
+            <br>
+            4 numbers specify year, month, day, hour. 
+            <br>
+            Example:- 
+            <br>
+            <p id="demo13"></p>
+            <br>
+            <br>
+            3 numbers specify year, month, day. 
+            <br>
+            Example:- 
+            <br>
+            <p id="demo14"></p>
+            <br>
+            <br>
+            2 numbers specify year, month. 
+            <br>
+            Example:- 
+            <br>
+            <p id="demo15"></p>
+            <br>
+            <p class="edit1">
+                You cannot omit month. If you supply only one parameter, it will be treated as milliseconds. 
+            </p>
+
+            <br>
+            Supplying only 1 number that is year. 
+            <br>
+            Example:- 
+            <br>
+            <p id="demo16"></p>
+        </p>
+
+        <hr>
+
+        <h2>
+            Previous Century 
+        </h2>
+
+        <p>
+            One and two digit years will be interpreted as 19xx. 
+            <br>
+            Example:- 
+            <br>
+            <p id="demo17"></p>
+            <br>
+            <br>
+            Example:- 
+            <br>
+            <p id="demo18"></p>
+
+            <br>
+            <br>
+            <p class="edit1">
+                <span style="font-size:30px;">JavaScript Stores Dates as Milliseconds</span>
+                <br>
+                JavaScript stores dates as number of milliseconds since January 01, 1970. 
+                <br>
+                <strong>
+                    Zero time is January 01, 1970 00:00:00 UTC 
+                </strong>
+                <br>
+                One day (24 hours) is 86 400 000 milliseconds. 
+                <br>
+                Now the time is:- <strong>1674614204596</strong> milliseconds past January 01, 1970. 
+            </p>
+        </p>
+
+        <hr>
+
+        <h2>
+            new Date(milliseconds)  
+        </h2>
+
+        <p>
+            <span class="edit">new Date(milliseconds)</span> creates a new date object as <strong>milliseconds</strong> plus zero time. 
+            <br>
+            Example:- 
+            <br>
+            January 01, 1970 <strong>plus</strong> 100 000 000 000 milliseconds is:- 
+            <br>
+            <p id="demo19"></p>
+
+            <br>
+            <br>
+            January 01, 1970 <strong>minus</strong> 100 000 000 000 milliseconds is:- 
+            <br>
+            <p id="demo20"></p>
+
+            <br>
+            <br>
+            January 01, 1970 <strong>plus</strong> 24 hours is:- 
+            <br>
+            <p id="demo21"></p>
+
+            <br>
+            <br>
+            January 01, 1970 <strong>plus</strong> 0 milliseconds is:- 
+            <br>
+            <p id="demo22"></p>
+        </p>
+
+        <hr>
+        <br>
+        <br>
+        <hr>
+
+        <h2>
+            Date Methods 
+        </h2>
+
+        <p>
+            When a date object is created, a number of <strong>methods</strong> allow you to operate on it.
+            <br>
+            Date methods allow you to get and set the year, month, day, hour, minute, second, and millisecond of date objects, using either local time or UTC (universal, or GMT) time. 
+            <br>
+        </p>
+
+        <hr>
+
+        <h2>
+            Displaying Dates 
+        </h2>
+
+        <p>
+            JavaScript will (by default) output dates in full text string format. 
+            <br>
+            Example:- 
+            <br>
+            <p id="demo23"></p>
+
+            <br>
+            <br>
+            When you display a date object in HTML, it is automatically converted to a string, with the <span class="edit">toString()</span> method. 
+            <br>
+            Example:- 
+            <br>
+            <p id="demo24"></p>
+
+            <br>
+            <br>
+            The <span class="edit">toDateString()</span> method converts a date to a more readable format. 
+            <br>
+            Example:- 
+            <br>
+            <p id="demo25"></p>
+
+            <br>
+            <br>
+            The <span class="edit">toUTCString()</span> method converts a date to a string using the UTC standard. 
+            <br>
+            Example:- 
+            <br>
+            <p id="demo26"></p>
+
+            <br>
+            <br>
+            The <span class="edit">toISOString()</span> method converts a date to a string using the ISO standard. 
+            <br>
+            Example:- 
+            <br>
+            <p id="demo27"></p>
+        </p>
+
+
+
+
+
+        <script>
+            document.getElementById("demo1").innerHTML = Date();
+
+            const d1 = new Date();
+            document.getElementById("demo2").innerHTML = d1;
+
+            const d2 = new Date("2022-03-25");
+            document.getElementById("demo3").innerHTML = d2;
+
+            document.getElementById("demo4").innerHTML = d1;
+
+            document.getElementById("demo5").innerHTML = d1;
+
+            const d3 = new Date("13 October, 2014 11:30:00");
+            document.getElementById("demo6").innerHTML = d3;
+
+            document.getElementById("demo7").innerHTML = d2;
+
+            const d4 = new Date(2022,2,12,11,30,30,0);
+            document.getElementById("demo8").innerHTML = d4;
+
+            const d5 = new Date(2018, 15, 24, 10, 33, 30);
+            document.getElementById("demo9").innerHTML = d5;
+
+            const d6 = new Date(2018, 5, 35, 10, 33, 30);
+            document.getElementById("demo10").innerHTML = d6;
+
+            const d7 = new Date(2022, 11, 23, 10, 33, 30);
+            document.getElementById("demo11").innerHTML = d7;
+
+            const d8 = new Date(2022, 11, 23, 10, 33);
+            document.getElementById("demo12").innerHTML = d8;
+
+            const d9 = new Date(2022, 11, 23, 10);
+            document.getElementById("demo13").innerHTML = d9;
+
+            const d10 = new Date(2022, 11, 23);
+            document.getElementById("demo14").innerHTML = d10;
+
+            const d11 = new Date(2022, 11);
+            document.getElementById("demo15").innerHTML = d11;
+
+            const d12 = new Date(2022);
+            document.getElementById("demo16").innerHTML = d12;
+
+            const d13 = new Date(99, 11, 24);
+            document.getElementById("demo17").innerHTML = d13;
+
+            const d14 = new Date(9, 11, 24);
+            document.getElementById("demo18").innerHTML = d14;
+
+            const d15 = new Date(100000000000);
+            document.getElementById("demo19").innerHTML = d15;
+
+            const d16 = new Date(-100000000000);
+            document.getElementById("demo20").innerHTML = d16;
+
+            const d17 = new Date(86400000);
+            //const d17 = new Date(24*60*60*1000);
+            document.getElementById("demo21").innerHTML = d17;
+
+            const d18 = new Date(0);
+            document.getElementById("demo22").innerHTML = d18;
+
+            document.getElementById("demo23").innerHTML = d1;
+
+            document.getElementById("demo24").innerHTML = d1.toString();
+
+            document.getElementById("demo25").innerHTML = d1.toDateString();
+
+            document.getElementById("demo26").innerHTML = d1.toUTCString();
+
+            document.getElementById("demo27").innerHTML = d1.toISOString();
+        </script>
+    </body>
+
+</html>

@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en-in">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>
+            JSON Array  
+        </title>
+        <style>
+            html {
+                font-size:calc(10px + 0.390625vw);
+            }
+
+            body {
+                font-family:Verdana, sans-serif;
+                font-size:1rem;
+                line-height:1.5;
+            }
+
+            .edit {
+                background-color:#f1f1f1;
+                color:red;
+            }
+
+            .edit1 {
+                background-color:rgba(255,255,0,0.3);
+                padding:2rem;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>
+            JSON Array Literals 
+        </h1>
+
+        <div>
+            This is a JSON string: 
+            <br>
+            <p class="edit1">
+                '["Ford", "BMW", "Fiat"]' 
+            </p>
+
+            <br>
+            Inside the JSON string there is a JSON array literal. 
+            <br>
+            <p class="edit1">
+                ["Ford", "BMW", "Fiat"]
+            </p>
+
+            <br>
+            Arrays in JSON are almost the same as arrays in JavaScript. 
+            <br>
+            In JSON, array values must be of type string, number, object, array, boolean or <i>null</i>. 
+            <br>
+            In JavaScript, array values can be all of the above, plus any other valid JavaScript expression, including functions, dates, and <i>undefined</i>. 
+        </div>
+
+        <hr>
+
+        <h2>
+            JavaScript Arrays 
+        </h2>
+
+        <div>
+            You can create a JavaScript array from a literal. 
+            <br>
+            Example:- 
+            <br>
+            <p id="demo1"></p>
+
+            <br>
+            <br>
+            You can create a JavaScript array by parsing a JSON string: 
+            <br>
+            Example:- 
+            <br>
+            <p id="demo2"></p>
+        </div>
+
+        <hr>
+
+        <h2>
+            Accessing Array Values 
+        </h2>
+
+        <div>
+            You access array values by index. 
+            <br>
+            Example:- 
+            <br>
+            <p id="demo3"></p>
+        </div>
+
+        <hr>
+
+        <h2>
+            Arrays in Objects 
+        </h2>
+
+        <div>
+            Objects can contain arrays. 
+            <br>
+            Example:- 
+            <br>
+            <p class="edit1">
+                {
+                    <br>
+                    "name":"John", 
+                    <br>
+                    "age":30, 
+                    <br>
+                    "cars":["Ford", "BMW", "Fiat"]
+                    <br>
+                }
+            </p>
+
+            <br>
+
+            You can access array values by index. 
+            <br>
+            Example:- 
+            <br>
+            <p id="demo4"></p>
+        </div>
+
+        <hr>
+        <br>
+        <br>
+        <hr>
+
+        <h2>
+            Looping Through an Array 
+        </h2>
+
+        <div>
+            You can access array values by using a <span class="edit">for in</span> loop. 
+            <br>
+            Example:- 
+            <br>
+            <p id="demo5"></p>
+
+            <br>
+            <br>
+            Or you can use a <span class="edit">for</span> loop. 
+            <br>
+            Example:- 
+            <br>
+            <p id="demo6"></p>
+        </div>
+
+        <script>
+            const myArray1 = ["Ford", "BMW", "Fiat"];
+            document.getElementById("demo1").innerHTML = myArray1;
+
+            const myJSON1 = '["Ford", "BMW", "Fiat"]';
+            const myArray2 = JSON.parse(myJSON1);
+            document.getElementById("demo2").innerHTML = myArray2;
+
+            document.getElementById("demo3").innerHTML = myArray2[0];
+
+            const myJSON2 = '{"name":"John", "age":30, "cars":["Ford", "BMW", "Fiat"]}';
+            const myObj1 = JSON.parse(myJSON2);
+            document.getElementById("demo4").innerHTML = myObj1.cars[0];
+
+            let text1 = "";
+            for(let x in myObj1.cars) {
+                text1 += myObj1.cars[x] + ", ";
+            }
+            document.getElementById("demo5").innerHTML = text1;
+
+            let text2 = "";
+            for(let i = 0; i < myObj1.cars.length; i++) {
+                text2 += myObj1.cars[i] + ", ";
+            }
+            document.getElementById("demo6").innerHTML = text2;
+        </script>
+    </body>
+</html>

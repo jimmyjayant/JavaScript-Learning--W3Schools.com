@@ -1,0 +1,550 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            JavaScript Number Methods 
+        </title>
+        <style>
+            .edit {
+                background-color: #f1f1f1;
+                color:red;
+            }
+            .edit1 {
+                background-color:rgba(255,255,0,0.3);
+                padding:10px;
+            }
+            .table1 {
+                width:50%;
+                border:1px solid #ddd;
+                border-collapse:collapse;
+            }
+            .table1 tr {
+                height:40px;
+            }
+            .table1 tr:nth-child(even) {
+                background-color:#f1f1f1;
+            }
+            .table1 td {
+                padding:10px;
+            }
+            .table1 th {
+                text-align:left;
+                padding:10px;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>
+            JavaScript Number Methods 
+        </h1>
+
+        <hr>
+
+        <h2>
+            JavaScript Number Methods 
+        </h2>
+
+        <p>
+           These <strong>number methods</strong> can be used on all JavaScript numbers: 
+           <br>
+           <br>
+           <table class="table1">
+            <tr>
+                <th>Method</th>
+                <th>Description</th>
+            </tr>
+            <tr>
+                <td>toString()</td>
+                <td>Returns a number as a string</td>
+            </tr>
+            <tr>
+                <td>toExponential()</td>
+                <td>Returns a number written in exponential notation</td>
+            </tr>
+            <tr>
+                <td>toFixed()</td>
+                <td>Returns a number written with a number of decimals</td>
+            </tr>
+            <tr>
+                <td>toPrecision()</td>
+                <td>Returns a number written with a specified length</td>
+            </tr>
+            <tr>
+                <td>ValueOf()</td>
+                <td>Returns a number as a number</td>
+            </tr>
+           </table>
+        </p>
+
+        <hr>
+
+        <h2>
+            The toString() Method 
+        </h2>
+
+        <p>
+            The <span class="edit">toString()</span> method returns a number as a string. 
+            <br>
+            All number methods can be used on any type of numbers (literals, variables, or expressions). 
+            <br>
+            <p class="edit1">
+                let x = 123;
+                <br>
+                x.toString();
+                <br>
+                (123).toString();
+                <br>
+                (100 + 23).toString();
+            </p>
+            Example:- 
+            <br>
+            <p id="demo1"></p>
+        </p>
+
+        <hr>
+
+        <h2>
+            The toExponential() Method 
+        </h2>
+
+        <p>
+            <span class="edit">toExponential()</span> returns a string, with a number rounded and written using exponential notation. 
+            <br>
+            A parameter defines the number of characters behind the decimal point. 
+            <br>
+            Example:- 
+            <br>
+            <p id="demo2"></p>
+
+            <br>
+            <br>
+            The parameter is optional. If you don't specify it, JavaScript will not round the number. 
+        </p>
+
+        <hr>
+        <br>
+        <br>
+        <hr>
+
+        <h2>
+            The toFixed() Method 
+        </h2>
+
+        <p>
+            <span class="edit">toFixed()</span> returns a string, with a number written using a specified number of decimals. 
+            <br>
+            Example:- 
+            <br>
+            <p id="demo3"></p>
+
+            <br>
+            <br>
+
+            <p class="edit1">
+                <span class="edit">toFixed(2)</span> is perfect for working with money. 
+            </p>
+        </p>
+
+        <hr>
+
+        <h2>
+            The toPrecision() Method 
+        </h2>
+
+        <p>
+            <span class="edit">toPrecision()</span> returns a string, with a number written with a specified length. 
+            <br>
+            Example:- 
+            <br>
+            <p id="demo4"></p>
+        </p>
+
+        <hr>
+
+        <h2>
+            The valueOf() Method 
+        </h2>
+
+        <p>
+            <span class="edit">valueOf()</span> returns a number as a number. 
+            <br>
+            Example:- 
+            <br>
+            <p id="demo5"></p>
+
+            <br>
+            <br>
+
+            In JavaScript, a number can be a primitive value (typeof = number) or an object (typeof = object). 
+            <br>
+            The <span class="edit">valueOf()</span> method is used internally in JavaScript to convert Number objects to primitive values. 
+            <br>
+            There is no reason to use it in your code. 
+            <br>
+            <p class="edit1">
+                All JavaScript data types have a <span class="edit">valueOf()</span> and a <span class="edit">toString()</span> method. 
+            </p> 
+        </p>
+
+        <hr>
+
+        <h2>
+            Converting Variables to Numbers 
+        </h2>
+
+        <p>
+            There are 3 JavaScript methods that can be used to convert a variable to a number. 
+            <br>
+            <table class="table1">
+                <tr>
+                    <th>Method</th>
+                    <th>Description</th>
+                </tr>
+                <tr>
+                    <td>Number()</td>
+                    <td>Returns a number converted from its argument</td>
+                </tr>
+                <tr>
+                    <td>parseFloat()</td>
+                    <td>Parses its argument and returns a floating point number</td>
+                </tr>
+                <tr>
+                    <td>parseInt()</td>
+                    <td>Parses its argument and returns a whole number</td>
+                </tr>
+            </table>
+
+            <br>
+            <br>
+
+            <p class="edit1">
+                The methods above are not <strong>number</strong> methods. They are <strong>global</strong> JavaScript methods. 
+            </p>
+
+        </p>
+
+        <hr>
+
+        <h2>
+            The Number() Method 
+        </h2>
+
+        <p>
+            The <span class="edit">Number()</span> method can be used to convert JavaScript variables to numbers. 
+            <br>
+            Example:- 
+            <br>
+            <p id="demo6"></p>
+
+            <br>
+
+            <p class="edit1">
+                If the number cannot be converted, <span class="edit">NaN</span> (Not a Number) is returned. 
+            </p>
+        </p>
+
+        <hr>
+
+        <h2>
+            The Number() Method Used on Dates 
+        </h2>
+
+        <p>
+            <span class="edit">Number()</span> can also convert a date to a number. 
+            <br>
+            Example:- 
+            <br>
+            <p id="demo7"></p>
+            <br>
+            <p class="edit1">
+                The <span class="edit">Number()</span> method returns the number of milliseconds since 1.1.1970. 
+            </p>
+            <br>
+            The number of milliseconds between 1970-01-02 and 1970-01-01 is 86400000. 
+            <br>
+            Example:- 
+            <br>
+            <p id="demo8"></p>
+
+            <br>
+            <br>
+            Example:- 
+            <br>
+            <p id="demo9"></p>
+        </p>
+
+        <hr>
+
+        <h2>
+            The parseInt() Method 
+        </h2>
+
+        <p>
+            <span class="edit">parseInt()</span> parses a string and returns a whole number. Spaces are allowed. Only the first number is returned. 
+            <br>
+            Example:- 
+            <br>
+            <p id="demo10"></p>
+
+            <br>
+            If the number cannot be converted, <span class="edit">NaN</span> (Not a Number) is returned. 
+        </p>
+
+        <hr>
+
+        <h2>
+            The parseFloat() Method 
+        </h2>
+
+        <p>
+            <span class="edit">parseFloat()</span> parses a string and returns a number. Spaces are allowed. Only the first number is returned. 
+            <br>
+            Example:- 
+            <br>
+            <p id="demo11"></p>
+            <br>
+            If a number cannot be converted, <span class="edit">NaN</span> (Not a Number) is returned. 
+        </p>
+
+        <hr>
+
+        <h2>
+            Number Object Methods 
+        </h2>
+
+        <p>
+            These <strong>object methods</strong> belong to the <strong>Number</strong> object. 
+            <br>
+            <table class="table1">
+                <tr>
+                    <th>Method</th>
+                    <th>Description</th>
+                </tr>
+                <tr>
+                    <td>Number.isInteger()</td>
+                    <td>Returns true if the argument is an integer</td>
+                </tr>
+                <tr>
+                    <td>Number.isSafeInteger()</td>
+                    <td>Returns true if the argument is a safe integer</td>
+                </tr>
+                <tr>
+                    <td>Number.parseFloat()</td>
+                    <td>Converts a string to a number</td>
+                </tr>
+                <tr>
+                    <td>Number.parseInt()</td>
+                    <td>Converts a string to a whole number</td>
+                </tr>
+            </table>
+
+            <br>
+            <br>
+
+            <p class="edit1">
+                <span style=font-size:30px;>Number Methods Cannot be Used on Variables</span>
+                <br>
+                The number methods above belong to the JavaScript <strong>Number Object</strong>. 
+                <br>
+                These methods can only be accessed like <span class="edit">Number.isInteger()</span>. 
+                <br>
+                Using X.isInteger() where X is a variable, will result in an error: 
+                <br>
+                <span class="edit">TypeError X.isInteger is not a function</span>.             
+            </p>
+        </p>
+
+        <hr>
+
+        <h2>
+            The Number.isInteger() Method 
+        </h2>
+
+        <p>
+            The <span class="edit">Number.isInteger()</span> method returns <span class="edit">true</span> if the argument is an integer. 
+            <br>
+            Example:- 
+            <br>
+            <p id="demo12"></p>
+        </p>
+
+        <hr>
+
+        <h2>
+            The Number.isSafeInteger() Method 
+        </h2>
+
+        <p>
+            A safe integer is an integer that can be exactly represented as a double precision number. 
+            <br>
+            The <span class="edit">Number.isSafeInteger()</span> method returns <span class="edit">true</span> if the argument is a safe integer. 
+            <br>
+            Example:- 
+            <br>
+            <p id="demo13"></p>
+
+            <br>
+            <br>
+            <p class="edit1">
+                Safe integers are all integers from -(2<sup>53</sup> - 1) to +(2<sup>53</sup> - 1).
+                <br>
+                This is safe: 9007199254740991. This is not safe: 9007199254740992.  
+            </p>
+        </p>
+
+        <hr>
+
+        <h2>
+            The Number.parseFloat() Method 
+        </h2>
+
+        <p>
+            <span class="edit">Number.parseFloat()</span> parses a string and returns a number. 
+            <br>
+            Spaces are allowed. Only the first number is returned. 
+            <br>
+            Example:- 
+            <br>
+            <p id="demo14"></p>
+            <br>
+            If the number cannot be converted, <span class="edit">NaN</span> (Not a Number) is returned. 
+            <br>
+            <br>
+            <p class="edit1">
+                <span style="font-size:30px;">Note</span>
+                <br>
+                The <strong>Number</strong> methods <span class="edit">Number.parseInt()</span> and <span class="edit">Number.parseFloat()</span>
+                <br>
+                are the same as the 
+                <br>
+                <strong>Global</strong> methods <span class="edit">parseInt()</span> and <span class="edit">parseFloat()</span>. 
+                <br>
+                The purpose is modularization of globals (to make it easier to use the same JavaScript code outside the browser). 
+            </p>
+        </p>
+
+        <hr>
+
+        <h2>
+            The Number.parseInt() Method 
+        </h2>
+
+        <p>
+            <span class="edit">Number.parseInt()</span> parses a string and returns a whole number. 
+            <br>
+            Spaces are allowed. Only the first number is returned. 
+            <br>
+            Example:- 
+            <br>
+            <p id="demo15"></p>
+            <br>
+            If the number cannot be converted, <span class="edit">NaN</span> (Not a Number) is returned. 
+        </p>
+
+
+
+
+        <script>
+            let a = 123;
+            document.getElementById("demo1").innerHTML = 
+            "a.toString() where a is 123 = " + a.toString() +
+            "<br>" + "(123).toString() is = " + (123).toString() + "<br>" + 
+            "(100 + 23).toString() is= " + (100 + 23).toString();
+
+            let b = 9.656;
+            document.getElementById("demo2").innerHTML = 
+            b.toExponential() + "<br>" + 
+            b.toExponential(2) + "<br>" + 
+            b.toExponential(4) + "<br>" + 
+            b.toExponential(6);
+
+            
+            document.getElementById("demo3").innerHTML = 
+            b.toFixed(0) + "<br>" + 
+            b.toFixed(2) + "<br>" + 
+            b.toFixed(4) + "<br>" + 
+            b.toFixed(6);
+
+            document.getElementById("demo4").innerHTML = 
+            b.toPrecision() + "<br>" + 
+            b.toPrecision(2) + "<br>" + 
+            b.toPrecision(4) + "<br>" + 
+            b.toPrecision(6);
+            
+
+            document.getElementById("demo5").innerHTML = 
+            a.valueOf() + "<br>" + 
+            (123).valueOf() + "<br>" + 
+            (100 + 23).valueOf();
+
+            document.getElementById("demo6").innerHTML = 
+            Number(true) + "<br>" + 
+            Number(false) + "<br>" + 
+            Number("10") + "<br>" + 
+            Number(" 10") + "<br>" + 
+            Number("10 ") + "<br>" + 
+            Number(" 10 ") + "<br>" + 
+            Number("10.33") + "<br>" + 
+            Number("10,33") + "<br>" + 
+            Number("10 33") + "<br>" + 
+            Number("John");
+
+            let c = new Date("1970-01-01");
+            let d = new Date("1980-01-01");
+            document.getElementById("demo7").innerHTML = 
+            "1970-01-01 is converted to number = " + Number(c) + 
+            "<br>" + 
+            "1980-01-01 is converted to number = " + Number(d);
+
+            let e = new Date("1970-01-02");
+            document.getElementById("demo8").innerHTML = 
+            "1970-01-02 is converted to number = " + Number(e);
+
+            let f = new Date("2017-09-30");
+            document.getElementById("demo9").innerHTML = 
+            "2017-09-30 is converted to number = " + Number(f);
+
+            document.getElementById("demo10").innerHTML = 
+            parseInt("-10") + "<br>" +
+            parseInt("-10.33") + "<br>" + 
+            parseInt("10") + "<br>" + 
+            parseInt("10.33") + "<br>" + 
+            parseInt("10 6") + "<br>" + 
+            parseInt("10 years") + "<br>" + 
+            parseInt("years 10");
+
+            document.getElementById("demo11").innerHTML = 
+            parseFloat("10") + "<br>" + 
+            parseFloat("10.33") + "<br>" + 
+            parseFloat("10 6") + "<br>" + 
+            parseFloat("10 years") + "<br>" + 
+            parseFloat("years 10");
+
+            document.getElementById("demo12").innerHTML = 
+            "Is 10 an integer? = " + Number.isInteger(10) + 
+            "<br>" +  
+            "Is 10.5 an integer? = " + Number.isInteger(10.5);
+
+            document.getElementById("demo13").innerHTML = 
+            "Is 10 a safe integer? = " + Number.isSafeInteger(10) + "<br>" + 
+            "Is 12345678901234567890 a safe integer? = " + Number.isSafeInteger(12345678901234567890);
+
+            document.getElementById("demo14").innerHTML = 
+            Number.parseFloat("10") + "<br>" + 
+            Number.parseFloat("10.33") + "<br>" + 
+            Number.parseFloat("10 20 30") + "<br>" + 
+            Number.parseFloat("10 years") + "<br>" + 
+            Number.parseFloat("years 10");
+
+            document.getElementById("demo15").innerHTML = 
+            Number.parseInt("-10") + "<br>" + 
+            Number.parseInt("-10.33") + "<br>" + 
+            Number.parseInt("10") + "<br>" + 
+            Number.parseInt("10.33") + "<br>" + 
+            Number.parseInt("10 6") + "<br>" + 
+            Number.parseInt("10 years") + "<br>" + 
+            Number.parseInt("years 10");
+            
+        </script>
+    </body>
+</html>

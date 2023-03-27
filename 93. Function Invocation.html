@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en-in">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>
+            JavaScript Function Invocation 
+        </title>
+        <style>
+            html {
+                font-size:62.5%;
+            }
+            body {
+                font-family:verdana, sans-serif;
+                font-size:2rem;
+                line-height:1.5;
+            }
+            .edit {
+                background-color:#f1f1f1;
+                color:red;
+            }
+            .edit1 {
+                background-color:rgba(255,255,0,0.3);
+                padding:2rem;
+            }
+            .table1 {
+                width: 100%;
+                border:0.1rem solid #ddd;
+                border-collapse:collapse;
+            }
+            .table1 tr {
+                height:4rem;
+            }
+            .table1 tr:nth-child(even) {
+                background-color:#f1f1f1;
+            }
+            .table1 td {
+                padding:1rem;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>
+            JavaScript Function Invocation 
+        </h1>
+
+        <div>
+            The code inside a JavaScript <span class="edit">function</span> will execute when "something" invokes it. 
+        </div>
+
+        <hr>
+
+        <h2>
+            Invoking a JavaScript Function 
+        </h2>
+
+        <div>
+            The code inside a function is not executed when the function is <strong>defined</strong>. 
+            <br>
+            The code inside a function is executed when the function is <strong>invoked</strong>. 
+            <br>
+            It is common to use the term <strong>"call a function"</strong> instead of <strong>"invoke a function"</strong>. 
+            <br>
+            It is also common to say "call upon a function", "start a function", or "execute a function". 
+            <br>
+            In this tutorial, we will use <strong>invoke</strong>, because a JavaScript function can be invoked without being called. 
+        </div>
+
+        <hr>
+
+        <h2>
+            Invoking a Function as a Function 
+        </h2>
+
+        <div>
+            Example:- 
+            <br>
+            <p id="demo1"></p>
+            <br>
+            The function above does not belong to any object. But in JavaScript there is always a default global object. 
+            <br>
+            In HTML the default global object is the HTML page itself, so the function above "belongs" to the HTML page. 
+            <br>
+            In a browser the page object is the browser window. The function above automatically becomes a window function. 
+            <br>
+            <br>
+            <div class="edit1">
+                <span style="font-size:3rem;">Note</span>
+                <br>
+                This is a common way to invoke a JavaScript function, but not a very good practice. 
+                <br>
+                Global variables, methods, or functions can easily create name conflicts and bugs in the global object.  
+            </div>
+
+            <br>
+            <br>
+            myFunction1() and window.myFunction1() is the same function. 
+            <br>
+            Example:- 
+            <br>
+            <p id="demo2"></p>
+        </div>
+
+        <hr>
+
+        <h2>
+            What is this? 
+        </h2>
+
+        <div>
+            In JavaScript, the <span class="edit">this</span> keyword refers to an <strong>object</strong>. 
+            <br>
+            <strong>Which</strong> object depends on how <span class="edit">this</span> is being invoked (used or called). 
+            <br>
+            The <span class="edit">this</span> keyword refers to different objects depending on how it is used. 
+            <br>
+            <br>
+            <table class="table1">
+                <tr>
+                    <td>In an object method, <span class="edit">this</span> refers to the <strong>object</strong>.</td>
+                </tr>
+                <tr>
+                    <td>Alone, <span class="edit">this</span> refers to the <strong>global object</strong>.</td>
+                </tr>
+                <tr>
+                    <td>In a function, <span class="edit">this</span> refers to the <strong>global object</strong>.</td>
+                </tr>
+                <tr>
+                    <td>In a function, in strict mode, <span class="edit">this</span> is <span class="edit">undefined</span>.</td>
+                </tr>
+                <tr>
+                    <td>In an event, <span class="edit">this</span> refers to the <strong>element</strong> that received the event.</td>
+                </tr>
+                <tr>
+                    <td>Methods like <span class="edit">call()</span>, <span class="edit">apply()</span>, and <span class="edit">bind()</span> can refer <span class="edit">this</span> to <strong>any object</strong>.</td>
+                </tr>
+            </table>
+
+            <br>
+            <br>
+
+            <div class="edit1">
+                <span style="font-size:3rem;">Note</span>
+                <br>
+                <span class="edit">this</span> is not a variable. It is a keyword. You cannot change the value of <span class="edit">this</span>. 
+            </div>
+        </div>
+
+        <hr>
+        <br>
+        <hr>
+
+        <div>
+            The Global Object 
+        </div>
+
+        <div>
+            When a function is called without an owner object, the value of <span class="edit">this</span> becomes the global object. 
+            <br>
+            In a web browser the global object is the browser window. 
+            <br>
+            This example returns the window object as the value of <span class="edit">this</span>. 
+            <br>
+            Example:- 
+            <br>
+            <p id="demo3"></p>
+            <br>
+            <p class="edit1">
+                Invoking a function as a global function, causes the value of <strong>this</strong> to be the global object. 
+                <br>
+                Using the window object as a variable can easily crash your program. 
+            </p>
+        </div>
+
+        <hr>
+
+        <h2>
+            Invoking a Function as a Method 
+        </h2>
+
+        <div>
+            In JavaScript you can define functions as object methods. 
+            <br>
+            The following example creates an object (<strong>myObject1</strong>), with two properties (<strong>firstName</strong> and <strong>lastName</strong>), and a method (<strong>fullName</strong>). 
+            <br>
+            Example:- 
+            <br>
+            <p id="demo4"></p>
+
+            <br>
+            <br>
+            The <strong>fullName</strong> method is a function. The function belongs to the object. <strong>myObject1</strong> is the owner of the function. 
+            <br>
+            The thing called <span class="edit">this</span>, is the object that "owns" the JavaScript code. In this case the value of <span class="edit">this</span> is <strong>myObject1</strong>. 
+            <br>
+            Test it! Change the <strong>fullName</strong> method to return the value of <span class="edit">this</span>. 
+            <br>
+            Example:- 
+            <br>
+            <p id="demo5"></p>
+
+            <br>
+
+            <p class="edit1">
+                Invoking a function as an object method, causes the value of <span class="edit">this</span> to be the object itself. 
+            </p>
+        </div>
+
+        <hr>
+
+        <h2>
+            Invoking a Function with a Function Constructor 
+        </h2>
+
+        <div>
+            If a function invocation is preceded with the <span class="edit">new</span> keyword, it is a constructor invocation. 
+            <br>
+            It looks like you create a new function, but since JavaScript functions are objects you actually create a new object. 
+            <br>
+            Example:- 
+            <br>
+            <p id="demo6"></p>
+
+            <br>
+            <br>
+            A constructor invocation creates a new object. The new object inherits the properties and methods from its constructor. 
+
+            <br>
+            <br>
+
+            <p class="edit1">
+                The <span class="edit">this</span> keyword in the constructor does not have a value. 
+                <br>
+                The value of <span class="edit">this</span> will be the new object created when the function is invoked. 
+            </p>
+        </div>
+
+        <script>
+            function myFunction1(a,b) {
+                return a * b;
+            }
+            document.getElementById("demo1").innerHTML = myFunction1(10,2);
+            document.getElementById("demo2").innerHTML = window.myFunction1(10,2);
+
+            let a = myFunction3();
+            function myFunction3() {
+                return this; 
+            }
+            document.getElementById("demo3").innerHTML = a;
+
+            //Create an object 'myObject1':- 
+            const myObject1 = {
+                firstName: "John",
+                lastName: "Doe",
+                fullName: function() {
+                    return this.firstName + " " + this.lastName;
+                },
+                ObjOwner: function() {
+                    return this;
+                }
+            }
+            document.getElementById("demo4").innerHTML = myObject1.fullName();
+            
+            //This will return [object Object] (the owner object)  
+            document.getElementById("demo5").innerHTML = myObject1.ObjOwner();
+            
+           //Function Constructor:-
+           function myFunction4(arg1, arg2) {
+            this.firstName = arg1;
+            this.lastName = arg2;
+           }
+
+           const myObject2 = new myFunction4("John", "Doe");
+           document.getElementById("demo6").innerHTML = 
+           myObject2.firstName + " " + myObject2.lastName; 
+        </script>
+    </body>
+</html>

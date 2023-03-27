@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en-in">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>
+            JavaScript HTML DOM Elements 
+        </title>
+        <style>
+            html {
+                font-size:62.5%;
+            }
+            body {
+                font-family:verdana, sans-serif;
+                font-size:2rem;
+                line-height:1.5;
+            }
+            .edit {
+                background-color:#f1f1f1;
+                color:red;
+            }
+            .edit1 {
+                background-color:rgba(255,255,0,0.3);
+                padding:2rem;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>
+            JavaScript HTML DOM Elements 
+        </h1>
+
+        <div>
+            This page teaches you how to find and access HTML elements in a HTML page. 
+        </div>
+
+        <hr>
+
+        <h2>
+            Finding HTML Elements 
+        </h2>
+
+        <div>
+            Often, with JavaScript, you want to manipulate HTML elements. 
+            <br>
+            To do so, you have to find the elements first. There are several ways to do this. 
+            <br>
+            <ul>
+                <li>Finding HTML elements by id</li>
+                <li>Finding HTML elements by tag name</li>
+                <li>Finding HTML elements by class name</li>
+                <li>Finding HTML elements by CSS selectors</li>
+                <li>Finding HTML elements by HTML object collections</li>
+            </ul>
+        </div>
+
+        <hr>
+
+        <h2>
+            Finding HTML Element by Id 
+        </h2>
+
+        <div>
+            The easiest way to find a HTML element in the DOM, is by using the element id. 
+            <br>
+            This example finds the element with <span class="edit">id="demo1"</span>. 
+            <br>
+            Example:- 
+            <br>
+            <p id="demo1">Finding HTML Elements by Id</p>
+            <br>
+            <p id="demo2"></p>
+            <br>
+            If the element is found, the method will return the element as an object (in element). 
+            <br>
+            If the element is not found, element will contain <span class="edit">null</span>.  
+        </div>
+
+        <hr>
+
+        <h2>
+            Finding HTML Elements by Tag Name 
+        </h2>
+
+        <div>
+            This example finds all <span class="edit">&lt;p&gt;</span> elements. 
+            <br>
+            Example:- 
+            <br>
+            <p style="background-color:mediumseagreen">Finding HTML Elements by Tag Name.</p>
+            <br>
+            <p id="demo3"></p>
+
+            <br>
+            <br>
+            This example finds the element with <span class="edit">id="demo4"</span>, and then finds all <span class="edit">&lt;p&gt;</span> elements inside <span class="edit">"demo4"</span>. 
+            <br>
+            Example:- 
+            <br>
+            <div id="demo4">
+                <p>
+                    Finding HTML Elements by Tag Name 
+                </p>
+                <p>
+                    This example demonstrates the <b>getElementsByTagName</b> method. 
+                </p>
+            </div>
+            <br>
+            <p id="demo5"></p>
+        </div>
+
+        <hr>
+        <br>
+        <hr>
+
+        <h2>
+            Finding HTML Elements by Class Name 
+        </h2>
+
+        <div>
+            If you want to find all HTML elements with the same class name, use <span class="edit">getElementsByClassName()</span>. 
+            <br>
+            This example returns a list of all elements with <span class="edit">class="intro"</span>. 
+            <br>
+            Example:- 
+            <br>
+            <p class="intro">Hello World!</p>
+            
+            <p class="intro">This example demonstrates the <b>getElementsByClassName</b> method.</p>
+            
+            <p id="demo6"></p>
+        </div>
+
+        <hr>
+
+        <h2>
+            Finding HTML Elements by CSS Selectors 
+        </h2>
+
+        <div>
+            If you want to find all HTML elements that match a specified CSS selector (id, class names, types, attributes, values of attributes, etc), use the <span class="edit">querySelectorAll()</span> method. 
+            <br>
+            This example returns a list of all <span class="edit">&lt;p&gt;</span> elements with <span class="edit">intro1</span>. 
+            <br>
+            Example:- 
+            <br>
+            <p class="intro1">Hello World!</p>
+            <p class="intro1">This example demonstrates the <b>querySelectorAll</b> method.</p>
+            <p id="demo7"></p>
+        </div>
+
+        <hr>
+
+        <h2>
+            Finding HTML Elements by HTML Object Collections 
+        </h2>
+
+        <div>
+            This example finds the form element with <span class="edit">id="frm1"</span>, in the forms collection, and displays all element values. 
+            <br>
+            Example:- 
+            <br>
+            <form id="frm1" action="https://www.w3schools.com/action_page.php">
+                First Name: <input type="text" name="fname" value="Donald"><br>
+                Last Name: <input type="text" name="lname" value="Duck"><br>
+                <br> 
+                <input type="submit" value="Submit">
+            </form>
+            <p>
+                These are the values of each element in the form. 
+            </p>
+            <p id="demo8"></p>
+
+            <br>
+            <br>
+
+            The following HTML objects (and object collections) are also accessible. 
+            <br>
+            <ul>
+                <li>document.anchors</li>
+                <li>document.body</li>
+                <li>document.documentElement</li>
+                <li>document.embeds</li>
+                <li>document.forms</li>
+                <li>document.head</li>
+                <li>document.images</li>
+                <li>document.links</li>
+                <li>document.scripts</li>
+                <li>document.title</li>
+            </ul>
+        </div>
+
+        <script>
+            const element1 = document.getElementById("demo1");
+
+            document.getElementById("demo2").innerHTML = 
+            "The text from the demo1 paragraph is:- " + element1.innerHTML;
+
+            const element2 = document.getElementsByTagName("p");
+            document.getElementById("demo3").innerHTML = 
+            "The text in third paragraph [above paragraph] (index 2) is:- " + 
+            element2[2].innerHTML;
+
+            const a = document.getElementById("demo4");
+            const b = a.getElementsByTagName("p");
+
+            document.getElementById("demo5").innerHTML = 
+            "The first paragraph (index 0) inside 'demo4' is:- " + b[0].innerHTML;
+
+            const c = document.getElementsByClassName("intro");
+            document.getElementById("demo6").innerHTML = 
+            'The first paragraph (index 0) with class="intro" is:- ' + c[0].innerHTML;
+
+            const d = document.querySelectorAll("p.intro1");
+            document.getElementById("demo7").innerHTML = 
+            'The first paragraph (index 0) with class="intro1" is:- ' + d[0].innerHTML;
+
+            const e = document.forms["frm1"];
+            let text1 = "";
+            for(let i = 0; i < e.length; i++) 
+            {
+                text1 += e.elements[i].value + "<br>";
+            }
+            document.getElementById("demo8").innerHTML = text1;
+        </script>
+    </body>
+</html>

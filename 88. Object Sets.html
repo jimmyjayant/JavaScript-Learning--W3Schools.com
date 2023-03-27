@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="en-in">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>
+            JavaScript Sets 
+        </title>
+        <style>
+            .edit {
+                background-color:#f1f1f1;
+                color:red;
+            }
+            .edit1 {
+                background-color:rgba(255,255,0,0.3);
+                padding:20px;
+            }
+            body {
+                font-family:verdana, sans-serif;
+                font-size:20px;
+                line-height:1.5;
+            }
+            .table1 {
+                width:100%;
+                border:1px solid #ddd;
+                border-collapse:collapse;
+            }
+            .table1 tr {
+                height:40px;
+            }
+            .table1 tr:nth-child(even) {
+                background-color:#f1f1f1;
+            }
+            .table1 th {
+                text-align:left;
+                padding:10px;
+            }
+            .table1 td {
+                padding:10px;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>
+            JavaScript Sets 
+        </h1>
+
+        <div style="background-color:rgba(0,255,0,0.1);padding:20px;">
+         A JavaScript Set is a collection of unique values. 
+         <br>
+         Each value can only occur once in a Set. 
+         <br>
+         A Set can hold any value of any data type. 
+        </div>
+
+        <hr>
+
+        <h2>
+            Set Methods 
+        </h2>
+
+        <div>
+            <table class="table1">
+                <tr>
+                    <th>Method</th>
+                    <th>Description</th>
+                </tr>
+                <tr>
+                    <td>new Set()</td>
+                    <td>Creates a new Set</td>
+                </tr>
+                <tr>
+                    <td>add()</td>
+                    <td>Adds a new element to the Set</td>
+                </tr>
+                <tr>
+                    <td>delete()</td>
+                    <td>Removes an element from a Set</td>
+                </tr>
+                <tr>
+                    <td>has()</td>
+                    <td>Returns true if a value exists</td>
+                </tr>
+                <tr>
+                    <td>clear()</td>
+                    <td>Removes all elements from a Set</td>
+                </tr>
+                <tr>
+                    <td>forEach()</td>
+                    <td>Invokes a callback for each element</td>
+                </tr>
+                <tr>
+                    <td>values()</td>
+                    <td>Returns an Iterator with all the values in a Set</td>
+                </tr>
+                <tr>
+                    <td>keys()</td>
+                    <td>Same as values()</td>
+                </tr>
+                <tr>
+                    <td>entries()</td>
+                    <td>Returns an Iterator with the [value,value] pairs from a Set</td>
+                </tr>
+            </table>
+
+            <br>
+
+            <table class="table1">
+                <tr>
+                    <th>Property</th>
+                    <th>Description</th>
+                </tr>
+                <tr>
+                    <td>size</td>
+                    <td>Returns the number of elements in a Set</td>
+                </tr>
+            </table>
+        </div>
+
+        <hr>
+
+        <h2>
+            How to Create a Set 
+        </h2>
+
+        <div>
+            You can create a JavaScript Set by:- 
+            <br>
+            <ul>
+                <li>Passing an Array to <span class="edit">new Set()</span></li>
+                <li>Create a new Set and use <span class="edit">add()</span> to add values</li>
+                <li>Create a new Set and use <span class="edit">add()</span> to add variables</li>
+            </ul>
+        </div>
+        
+        <hr>
+
+        <h2>
+            The new Set() Method 
+        </h2>
+
+        <div>
+            Pass an Array to the <span class="edit">new Set()</span> constructor. 
+            <br>
+            Example:- 
+            <br>
+            <p id="demo1"></p>
+
+            <br>
+            <br>
+            Create a Set and add literal values. 
+            <br>
+            Example:- 
+            <br>
+            <p id="demo2"></p>
+
+            <br>
+            <br>
+            Create a Set and add variables. 
+            <br>
+            Example:- 
+            <br>
+            <p id="demo3"></p>
+        </div>
+
+        <hr>
+
+        <h2>
+            The add() Method 
+        </h2>
+
+        <div>
+            Example:- 
+            <br>
+            <p id="demo4"></p>
+
+            <br>
+            <br>
+            If you add equal elements, only the first will be saved. 
+            <br>
+            Example:- 
+            <br>
+            <p id="demo5"></p>
+        </div>
+
+        <hr>
+
+        <h2>
+            The forEach() Method 
+        </h2>
+
+        <div>
+            The <span class="edit">forEach()</span> method invokes a function for each Set element. 
+            <br>
+            Example:- 
+            <br>
+            <p id="demo6"></p>
+        </div>
+
+        <hr>
+
+        <h2>
+            The values() Method 
+        </h2>
+
+        <div>
+            The <span class="edit">values()</span> method returns an Iterator object containing all the values in a Set. 
+            <br>
+            Example:- 
+            <br>
+            <p id="demo7"></p>
+
+            <br>
+            <br>
+            Now you can use the Iterator object to access the elements. 
+            <br>
+            Example:- 
+            <br>
+            <p id="demo8"></p>
+        </div>
+
+        <hr>
+
+        <h2>
+            The keys() Method 
+        </h2>
+
+        <div>
+            <p class="edit1">
+                A Set has no keys. 
+                <br>
+                <span class="edit">keys()</span> returns the same as <span class="edit">values()</span>. 
+                <br>
+                This makes Sets compatible with Maps. 
+            </p>
+
+            <br>
+            Example:- 
+            <br>
+            <p id="demo9"></p>
+        </div>
+
+        <hr>
+
+        <h2>
+            The entries() Method 
+        </h2>
+
+        <div>
+            <p class="edit1">
+                A Set has no keys. 
+                <br>
+                <span class="edit">entries()</span> returns [value, value] pairs instead of [key, value] pairs. 
+                <br>
+                This makes Sets compatible with Maps. 
+            </p>
+
+            <br>
+            Example:- 
+            <br>
+            <p id="demo10"></p>
+        </div>
+
+        <hr>
+
+        <h2>
+            Sets are Objects 
+        </h2>
+
+        <div>
+            For a Set, <span class="edit">typeof</span> returns object. 
+            <br>
+            Example:- 
+            <br>
+            <p id="demo11"></p>
+
+            <br>
+            <br>
+            For a Set, <span class="edit">instanceof Set</span> returns true. 
+            <br>
+            Example:- 
+            <br>
+            <p id="demo12"></p>
+        </div>
+
+
+        <script>
+          //Create a Set:- 
+          const letters1 = new Set(["a", "b", "c"]);
+
+          //Display the size of set:- 
+          document.getElementById("demo1").innerHTML = letters1.size;
+
+          //Create a Set:- 
+          const letters2 = new Set();
+
+          //Add values to the set:- 
+          letters2.add("a");
+          letters2.add("b");
+          letters2.add("c");
+
+          //Display the size of the set:- 
+          document.getElementById("demo2").innerHTML = letters2.size;
+
+          //Create a Set:- 
+          const letters3 = new Set();
+
+          //Create variables:- 
+          const a = "a";
+          const b = "b";
+          const c = "c";
+
+          //Add the variables to the set:- 
+          letters3.add(a);
+          letters3.add(b);
+          letters3.add(c);
+
+          //Display the size of the set:- 
+          document.getElementById("demo3").innerHTML = letters3.size;
+
+          //Create a new Set:- 
+          const letters4 = new Set(["a", "b", "c"]);
+
+          //Add new element:- 
+          letters4.add("d");
+          letters4.add("e");
+
+          //Display the set size:- 
+          document.getElementById("demo4").innerHTML = letters4.size;
+
+          //Create a new set:- 
+          const letters5 = new Set();
+
+          //Add values to the set:- 
+          letters5.add("a");
+          letters5.add("b");
+          letters5.add("c");
+          letters5.add("c");
+          letters5.add("c");
+          letters5.add("c");
+          letters5.add("c");
+          letters5.add("c");
+
+          //Display the set size:- 
+          document.getElementById("demo5").innerHTML = letters5.size;
+
+          //Create a Set:- 
+          const letters6 = new Set(["x", "y", "z"]);
+
+          //List all the elements:- 
+          let text1 = "";
+          letters6.forEach(function(value) {
+            text1 += value + "<br>";
+          })
+
+          document.getElementById("demo6").innerHTML = text1;
+
+          //Display the set size:- 
+          document.getElementById("demo7").innerHTML = letters6.values();
+         
+
+          //List all the elements:- 
+          let text2 = "";
+          for (const x of letters6.values())
+          {
+            text2 += x + "<br>";
+          }
+
+          document.getElementById("demo8").innerHTML = text2;
+
+          //Display the set size:- 
+          document.getElementById("demo9").innerHTML = letters6.keys();
+
+          //List all entries:- 
+          const iterator1 = letters6.entries();
+          let text3 = "";
+          for(const entry of iterator1)
+          {
+            text3 += entry + "<br>";
+          }
+
+          document.getElementById("demo10").innerHTML = text3;
+
+          //Display typeof 
+          document.getElementById("demo11").innerHTML = 
+          "The type of Set letters6 is:- " + typeof letters6;
+
+          //Display the instance of Set:- 
+          document.getElementById("demo12").innerHTML = 
+          "Is the object letters6 an instance of Set? = " + (letters6 instanceof Set);
+
+
+        </script>
+    </body>
+</html>

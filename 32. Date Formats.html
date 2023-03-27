@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            JavaScript Date Formats 
+        </title>
+        <style>
+            .edit {
+                background-color:#f1f1f1;
+                color:red;
+            }
+            .edit1 {
+                background-color:rgba(255,255,0,0.3);
+                padding:20px;
+            }
+            body {
+                font-family:verdana, sans-serif;
+                font-family:20px;
+            }
+            .table1 {
+                width:100%;
+                border:1px solid #ddd;
+                border-collapse:collapse;
+            }
+            .table1 tr {
+                height:40px;
+            }
+            .table1 tr:nth-child(even) {
+                background-color:#ddd;
+            }
+            .table1 th {
+                text-align:left;
+                padding:10px;
+            }
+            .table1 td {
+                padding:10px;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>
+            JavaScript Date Formats 
+        </h1>
+
+        <hr>
+
+        <h2>
+            JavaScript Date Input 
+        </h2>
+
+        <p>
+            There are generally 3 types of JavaScript date input formats:- 
+            <br>
+            <table class="table1">
+                <tr>
+                    <th>Type</th>
+                    <th>Example</th>
+                </tr>
+                <tr>
+                    <td>ISO Date</td>
+                    <td>"2015-03-25" (The International Standard)</td>
+                </tr>
+                <tr>
+                    <td>Short Date</td>
+                    <td>"03/25/2015"</td>
+                </tr>
+                <tr>
+                    <td>Long Date</td>
+                    <td>"Mar 25 2015" or "25 Mar 2015"</td>
+                </tr>
+            </table>
+
+            <br>
+
+            <p class="edit1">
+                The ISO Format follows a strict standard in JavaScript. 
+                <br>
+                The other formats are not so well defined and might be browser specific. 
+            </p>
+        </p>
+
+        <hr>
+
+        <h2>
+            JavaScript Date Output 
+        </h2>
+
+        <p>
+            Independent of input format, JavaScript will (by default) output dates in full text string format. 
+            <br>
+            <p class="edit1">
+                <span id="demo1"></span>
+            </p>
+        </p>
+
+        <hr>
+
+        <h2>
+            JavaScript ISO Dates 
+        </h2>
+
+        <p>
+            ISO 8601 is the international standard for the representation of dates and times. 
+            <br>
+            The ISO 8601 syntax (YYYY-MM-DD) is also the preferred JavaScript date format. 
+            <br>
+            Example:- 
+            <br>
+            <p id="demo2"></p>
+
+            <br>
+
+            <p class="edit1">
+                The computed date will be relative to your time zone. 
+                <br>
+                Depending on your time zone, the result above will vary between March 24 and March 25. 
+            </p>
+        </p>
+
+        <hr>
+        <br>
+        <br>
+        <hr>
+
+        <h2>
+            ISO Dates (Year and Month) 
+        </h2>
+
+        <p>
+            ISO dates can be written without specifying the day (YYYY-MM). 
+            <br>
+            Example:- 
+            <br>
+            <p id="demo3"></p>
+
+            <br>
+
+            <p class="edit1">
+                Time zones will vary the result above between February 28 and March 01. 
+            </p>
+        </p>
+
+        <hr>
+
+        <h2>
+            ISO Dates (Only Year) 
+        </h2>
+
+        <p>
+            ISO dates can be written without month and day (YYYY). 
+            <br>
+            Example:- 
+            <br>
+            <p id="demo4"></p>
+            <br>
+            <p class="edit1">
+                Time zones will vary the result above between December 31 2014 and January 01 2015. 
+            </p>
+        </p>
+
+        <hr>
+
+        <h2>
+            ISO Dates (Date-Time) 
+        </h2>
+
+        <p>
+            ISO dates can be written with added hours, minutes, and seconds (YYYY-MM-DDTHH:MM:SSZ). 
+            <br>
+            Separate date and Time with a capital T. 
+            <br>
+            Indicate UTC time with a capital Z. 
+            <br>
+            Example:- 
+            <br>
+            <p id="demo5"></p>
+            <br>
+            Date and time is separated with a capital T. 
+            <br>
+            UTC time is defined with a capital letter Z. 
+            <br>
+            If you want to modify the time relative to UTC, remove the Z and add +HH:MM or -HH:MM instead. 
+            <br>
+            Example:- 
+            <br>
+            <p id="demo6"></p>
+
+            <br>
+
+            <p class="edit1">
+                UTC (Universal Time Coordinated) is the same as GMT (Greenwich Mean Time). 
+            </p>
+
+            <br>
+
+            <p style="background-color:pink;padding:20px;">
+            Omitting T or Z in a date-time string can give different results in different browsers. 
+            </p>
+        </p>
+
+        <hr>
+
+        <h2>
+            Time Zones 
+        </h2>
+
+        <p>
+            When setting a date, without specifying the time zone, JavaScript will use the browser's time zone. 
+            <br>
+            When getting a date, without specifying the time zone, the result is converted to the browser's time zone. 
+            <br>
+            In other words: If a date/time is created in GMT (Greenwich Mean Time), the date/time will be converted to CDT (Central US Daylight Time) if a user browses from central US. 
+        </p>
+
+        <hr>
+
+        <h2>
+            JavaScript Short Dates 
+        </h2>
+
+        <p>
+            Short dates are written with an "MM/DD/YYYY" syntax like this:- 
+            <br>
+            Example:- 
+            <br>
+            <p id="demo7"></p>
+        </p>
+
+        <hr>
+
+        <h2>
+            WARNINGS ! 
+        </h2>
+
+        <p>
+            In some browsers, months or days with no leading zeroes may produce an error. 
+            <br>
+            Example:- 
+            <br>
+            <p class="edit1">
+                const d = new Date("2015-3-25");
+            </p>
+
+            <br>
+            <br>
+
+            The behavior of "YYYY/MM/DD" is undefined. 
+            <br>
+            Some browsers will try to guess the format. Some will return NaN. 
+            <br>
+            Example:- 
+            <br>
+            <p class="edit1">
+                const d = new Date("2015/03/25");
+            </p>
+
+            <br>
+            <br>
+            The behavior of "DD-MM-YYYY" is also undefined. 
+            <br>
+            Some browsers will try to guess the format. Some will return NaN. 
+            <br>
+            Example:- 
+            <br>
+            <p class="edit1">
+                const d = new Date("25-03-2015");
+            </p>
+        </p>
+
+        <hr>
+
+        <h2>
+            JavaScript Long Dates 
+        </h2>
+
+        <p>
+            Long dates are most often written with a "MMM DD YYYY" syntax like this:- 
+            <br>
+            Example:- 
+            <br>
+            <p id="demo8"></p>
+
+            <br>
+            <br>
+            Month and day can be in any order. 
+            <br>
+            Example:-
+            <br>
+            <p id="demo9"></p>
+
+            <br>
+            <br>
+            And, month can be written in full (January), or abbreviated (Jan). 
+            <br>
+            Example:- 
+            <br>
+            <p id="demo10"></p>
+
+            <br>
+            Example:- 
+            <br>
+            <p id="demo11"></p>
+
+            <br>
+            <br>
+            Commas are ignored. Names are case insensitive. 
+            <br>
+            Example:- 
+            <br>
+            <p id="demo12"></p>
+        </p>
+
+        <hr>
+
+        <h2>
+            Date Input - Parsing Dates 
+        </h2>
+
+        <p>
+            If you have a valid date string, you can use the <span class="edit">Date.parse()</span> method to convert it to milliseconds. 
+            <br>
+            <span class="edit">Date.parse()</span> returns the number of milliseconds between the date and January 1, 1970. 
+            <br>
+            Example:- 
+            <br>
+            <p id="demo13"></p>
+
+            <br>
+            <br>
+            You can then use the number of milliseconds to <strong>convert it to a date</strong> object. 
+            <br>
+            Example:- 
+            <br>
+            <p id="demo14"></p>
+        </p>
+
+
+
+    <script>
+        const d1 = new Date();
+        document.getElementById("demo1").innerHTML = d1;
+
+        const d2 = new Date("2015-03-25");
+        document.getElementById("demo2").innerHTML = d2;
+
+        const d3 = new Date("2015-03");
+        document.getElementById("demo3").innerHTML = d3;
+
+        const d4 = new Date("2015");
+        document.getElementById("demo4").innerHTML = d4;
+
+        const d5 = new Date("2015-03-25T12:00:00Z");
+        document.getElementById("demo5").innerHTML = d5;
+
+        const d6 = new Date("2015-03-25T12:00:00-06:00");
+        document.getElementById("demo6").innerHTML = d6;
+
+        const d7 = new Date("03/25/2015");
+        document.getElementById("demo7").innerHTML = d7;
+
+        const d8 = new Date("Mar 25 2015");
+        document.getElementById("demo8").innerHTML = d8;
+
+        const d9 = new Date("25 Mar 2015");
+        document.getElementById("demo9").innerHTML = d9;
+
+        const d10 = new Date("January 25 2015");
+        //const d10 = new Date("Jan 25 2015");
+        //const d10 = new Date("25 Jan 2015");
+        document.getElementById("demo10").innerHTML = d10;
+
+        const d11 = new Date("Jan 25 2015");
+        document.getElementById("demo11").innerHTML = d11;
+
+        const d12 = new Date("JANUARY, 25, 2015");
+        document.getElementById("demo12").innerHTML = d12;
+
+        const msec = Date.parse("March, 21, 2012");
+        document.getElementById("demo13").innerHTML = 
+        "Number of milliseconds between January 01, 1970 and March, 21, 2012 = " + msec;
+
+        const d13 = new Date(msec);
+        document.getElementById("demo14").innerHTML = d13;
+    </script>
+    </body>
+</html>

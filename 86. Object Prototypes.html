@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en-in">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>
+            JavaScript Object Prototypes 
+        </title>
+        <style>
+            .edit {
+                background-color:#f1f1f1;
+                color:red;
+            }
+            .edit1 {
+                background-color:rgba(255,255,0,0.3);
+                padding:20px;
+            }
+            body {
+                font-family:verdana, sans-serif;
+                font-size:20px;
+                line-height:1.5;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>
+            JavaScript Object Prototypes 
+        </h1>
+
+        <div>
+            All JavaScript objects inherit properties and methods from a prototype. 
+            <br>
+            In the previous chapter we learned how to use an <strong>object constructor</strong>.  
+            <br>
+            Example:- 
+            <br>
+            <p id="demo1"></p>
+
+            <br>
+            <br>
+            We also learned that you can <strong>NOT</strong> add a new property to an existing object constructor. 
+            <br>
+            Example:- 
+            <br>
+            <p id="demo2"></p>
+
+            <br>
+            <br>
+            To add a new property to a constructor, you must add it to the constructor function. 
+            <br>
+            Example:- 
+            <br>
+            <p id="demo3"></p>
+        </div>
+
+        <hr>
+
+        <h2>
+            Prototype Inheritance 
+        </h2>
+
+        <div>
+            All JavaScript objects inherit properties and methods from a prototype. 
+            <br>
+            <ul>
+                <li><span class="edit">Date</span> objects inherit from <span class="edit">Date.prototype</span></li>
+                <li><span class="edit">Array</span> objects inherit from <span class="edit">Array.prototype</span></li>
+                <li><span class="edit">Person</span> objects inherit from <span class="edit">Person.prototype</span></li>
+            </ul>
+            <br>
+            The <span class="edit">Object.prototype</span> is on the top of the prototype inheritance chain. 
+            <br>
+            <span class="edit">Date</span> objects, <span class="edit">Array</span> objects, and <span class="edit">Person</span> objects inherit from <span class="edit">Object.prototype</span>. 
+        </div>
+
+        <hr>
+
+        <h2>
+            Adding Properties and Methods to Objects 
+        </h2>
+
+        <div>
+            Sometimes you want to add new properties (or methods) to all existing objects of a given type. 
+            <br>
+            Sometimes you want to add new properties (or methods) to an object constructor. 
+        </div>
+
+        <hr>
+
+        <h2>
+            Using the prototype Property 
+        </h2>
+
+        <div>
+            The JavaScript <span class="edit">prototype</span> property allows you to add new properties to object constructors. 
+            <br>
+            Example:- 
+            <br>
+            <p id="demo4"></p>
+
+            <br>
+            <br>
+            The JavaScript <span class="edit">prototype</span> property also allows you to add new methods to objects constructors. 
+            <br>
+            Example:- 
+            <br>
+            <p id="demo5"></p>
+
+            <br>
+
+            <p style="background-color:rgba(255,0,0,0.2);padding:20px;">
+            Only modify your <strong>own</strong> prototypes. Never modify the prototypes of standard JavaScript objects. 
+            </p>
+        </div>
+
+        <script>
+            function Person1(first, last, age, eye) {
+                this.firstName = first;
+                this.lastName = last;
+                this.age = age;
+                this.eyeColor = eye;
+            }
+
+            const myFather = new Person1("John", "Sally", 50, "blue");
+            const myMother = new Person1("Sally", "Rally", 48, "green");
+
+            document.getElementById("demo1").innerHTML = 
+            "My father is " + myFather.age + 
+            ". My mother is " + myMother.age;
+
+            Person1.nationality = "English";
+
+            const myFather1 = new Person1("John", "Doe", 50, "blue");
+            const myMother1 = new Person1("Sally", "Rally", 48, "green");
+
+            document.getElementById("demo2").innerHTML = 
+            "The nationality of my father is " + myFather1.nationality;
+
+            function Person2(first, last, age, eye)
+            {
+                this.firstName = first;
+                this.lastName = last;
+                this.age = age;
+                this.eyeColor = eye;
+                this.nationality = "Indian";
+            }
+
+            const myMember1 = new Person2("Jimmy", "Jayant", 29, "black");
+            const myMember2 = new Person2("Simmy", "Prashant", 27, "black");
+
+            document.getElementById("demo3").innerHTML = 
+            "The nationality of first member is " + myMember1.nationality + 
+            ". The nationality of the second member is " + 
+            myMember2.nationality;
+
+            Person2.prototype.gender = "Male";
+
+            document.getElementById("demo4").innerHTML = 
+            "The gender of the first member is " + myMember1.gender;
+
+            Person2.prototype.name = function() {
+                return this.firstName + " " + this.lastName;
+            }
+
+            document.getElementById("demo5").innerHTML = 
+            "The first member is " + myMember1.name();
+        </script>
+    </body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            JavaScript Regular Expression Patterns [abc] 
+        </title>
+        <style>
+            
+        </style>
+    </head>
+    <body>
+        <h1>
+            Regular Expression Patterns [abc]    
+        </h1>
+
+        <h2>
+            Do a global search for the character "h" in a string "Is this all there is?".  
+        </h2>
+
+        <p id="demo1"></p>
+
+        <script>
+            let text1 = "Is this all there is?";
+            let result = text1.match(/[h]/g);
+            document.getElementById("demo1").innerHTML = result;
+        </script>
+
+    </body>
+
+</html>

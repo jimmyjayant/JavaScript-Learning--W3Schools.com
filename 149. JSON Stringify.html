@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en-in">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>
+            JSON Stringify 
+        </title>
+        <style>
+            html {
+                font-size:calc(10px + 0.390625vw);
+            }
+
+            body {
+                font-family:verdana, sans-serif;
+                font-size:1rem;
+                line-height:1.5;
+            }
+
+            .edit {
+                background-color:#f1f1f1;
+                color:red;
+            }
+
+            .edit1 {
+                background-color:rgba(255,255,0,0.3);
+                padding:2rem;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>
+            JSON.stringify() 
+        </h1>
+
+        <div>
+            A common use of JSON is to exchange data to/from a web server. 
+            <br>
+            When sending data to a web server, the data has to be a string. 
+            <br>
+            Convert a JavaScript object into a string with <span class="edit">JSON.stringify()</span>. 
+        </div>
+
+        <hr>
+
+        <h2>
+            Stringify a JavaScript Object 
+        </h2>
+
+        <div>
+            Imagine we have this object in JavaScript. 
+            <br>
+            Example:- 
+            <br>
+            <p class="edit1">
+                const obj = {name: "John", age:30, city: "New York"}; 
+            </p>
+
+            <br>
+
+            Use the JavaScript function <span class="edit">JSON.stringify()</span> to convert it into a string. 
+            <br>
+            Example:- 
+            <br>
+            <p class="edit1">
+                const myJSON = JSON.stringify(obj); 
+            </p>
+
+            <br>
+
+            <p class="edit1">
+                The result will be a string following the JSON notation. 
+            </p>
+
+            <br>
+
+            <span class="edit">myJSON</span> is now a string, and ready to be sent to a server. 
+            <br>
+            Example:- 
+            <br>
+            <b>
+                Create a JSON string from a JavaScript object. 
+            </b>
+
+            <p id="demo1"></p>
+
+            <br>
+            You will learn how to send JSON to a server in the next chapters. 
+        </div>
+
+        <hr>
+
+        <h2>
+            Stringify a JavaScript Array 
+        </h2>
+
+        <div>
+            It is also possible to stringify JavaScript arrays. 
+            <br>
+            Imagine we have this array in JavaScript. 
+            <br>
+            Example:- 
+            <br>
+            <p class="edit1">
+                const arr1 = ["John", "Peter", "Sally", "Jane"]; 
+            </p>
+
+            <br>
+            Use the JavaScript function <span class="edit">JSON.stringify()</span> to convert it into a string. 
+            <br>
+            Example:- 
+            <br>
+            <p class="edit1">
+                const myJSON2 = JSON.stringify(arr1); 
+            </p>
+
+            <br>
+
+            <p class="edit1">
+                The result will be a string following the JSON notation. 
+            </p>
+
+            <br>
+
+            <span class="edit">myJSON2</span> is now a string, and ready to be sent to a server. 
+            <br>
+            Example:- 
+            <br>
+            <p id="demo2"></p>
+            <br>
+            You will learn how to send a JSON string to a server in the next chapters. 
+        </div>
+
+        <hr>
+
+        <h2>
+            Storing Data 
+        </h2>
+
+        <div>
+            When storing data, the data has to be a certain format, and regardless of where you choose to store it, <i>text</i> is always one of the legal formats. 
+            <br>
+            JSON makes it possible to store JavaScript objects as text. 
+            <br>
+            Example:- 
+            <br>
+            <b>
+                Storing data in local storage:- 
+            </b>
+
+            <p id="demo3"></p>
+        </div>
+
+        <hr>
+        <br>
+        <br>
+        <hr>
+
+        <h2>
+            Exceptions 
+        </h2>
+
+        <div>
+            <h3>
+                Stringify Dates 
+            </h3>
+
+            In JSON, date objects are not allowed. The <span class="edit">JSON.stringify()</span> function will convert any dates into strings. 
+            <br>
+            Example:-
+            <br>
+            <p id="demo4"></p>
+
+            <br>
+            You can convert the string back into a date object at the receiver. 
+        </div>
+
+        <hr>
+
+        <h2>
+            Stringify Functions 
+        </h2>
+
+        <div>
+            In JSON, functions are not allowed as object values. 
+            <br>
+            The <span class="edit">JSON.stringify()</span> function will remove any functions from a JavaScript object, both the key and the value. 
+            <br>
+            Example:- 
+            <br>
+            <p id="demo5"></p>
+
+            <br>
+            This can be omitted if you convert your functions into strings before running the <span class="edit">JSON.stringify()</span> function. 
+            <br>
+            Example:- 
+            <br>
+            <p id="demo6"></p>
+
+            <br>
+
+            <p style="background-color:rgba(255,0,0,0.2);padding:2rem;">
+              If you send functions using JSON, the functions will lose their scope, and the receiver would have to use eval() to convert them back into functions. 
+            </p>
+        </div>
+
+        <script>
+            const obj1 = {name: "John", age: 30, city: "New York"}; 
+            const myJSON1 = JSON.stringify(obj1);
+            document.getElementById("demo1").innerHTML = myJSON1;
+
+            const arr1 = ["John", "Peter", "Sally", "Jane"];
+            const myJSON2 = JSON.stringify(arr1);
+            document.getElementById("demo2").innerHTML = myJSON2;
+
+            //Storing data:- 
+            const myObj2 = { name: "John", age: 30, city: "New York" };
+            const myJSON3 = JSON.stringify(myObj2);
+            localStorage.setItem("testJSON", myJSON3);
+
+            //Retrieving data:- 
+            let text1 = localStorage.getItem("testJSON");
+            let obj2 = JSON.parse(text1);
+            document.getElementById("demo3").innerHTML = obj2.name;
+
+            const obj3 = {name: "John", today: new Date(), city: "New York"};
+            const myJSON4 = JSON.stringify(obj3);
+            document.getElementById("demo4").innerHTML = myJSON4;
+
+            const obj4 = {name: "John", age: function() {return 30;}, city: "New York"};
+            const myJSON5 = JSON.stringify(obj4);
+            document.getElementById("demo5").innerHTML = myJSON5;
+
+            const obj5 = {name: "John", age: function() {return 30;}, city: "New York"};
+            obj5.age = obj5.age.toString();
+            const myJSON6 = JSON.stringify(obj5);
+            document.getElementById("demo6").innerHTML = myJSON6;
+        </script>
+    </body>
+</html>

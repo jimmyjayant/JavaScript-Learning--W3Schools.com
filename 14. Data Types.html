@@ -1,0 +1,641 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            JavaScript Data Types 
+        </title>
+        <style>
+            .edit {
+                background-color:#f1f1f1;
+                color:red;
+            }
+            .edit1 {
+                background-color:rgba(255,255,0,0.3);
+                padding:20px;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>
+            JavaScript Data Types 
+        </h1>
+        
+        <div style="background-color:lightgreen;padding:20px;">
+          <span style="font-size:30px;">JavaScript has 8 Datatypes</span>
+          <br>
+          <ol>
+            <li>String</li>
+            <li>Number</li>
+            <li>Bigint</li>
+            <li>Boolean</li>
+            <li>Undefined</li>
+            <li>Null</li>
+            <li>Symbol</li>
+            <li>Object</li>
+          </ol>
+
+          <br>
+          <br>
+
+          <span style="font-size:30px;">The Object Datatype</span>
+          <br>
+          <ol>
+            <li>An object</li>
+            <li>An array</li>
+            <li>A date</li>
+          </ol>
+        </div>
+
+        <br>
+        <br>
+
+        Example:- 
+        <br>
+        <p class="edit1">
+            //Numbers:- 
+            <br>
+            let length = 16;
+            <br>
+            let weight = 7.5;
+
+            <br>
+            <br>
+
+            //Strings:- 
+            <br>
+            let color = "Yellow";
+            <br>
+            let lastName = "Johnson";
+
+            <br>
+            <br>
+
+            //Booleans
+            <br>
+            let x = true;
+            <br>
+            let y = false;
+
+            <br>
+            <br>
+
+            //Object:- 
+            <br>
+            const person = {firstName:"John", lastName:"Doe"};
+
+            <br>
+            <br>
+
+            //Array object:- 
+            <br>
+            const cars = ["Saab", "Volvo", "BMW"];
+
+            <br>
+            <br>
+
+            //Date object:- 
+            <br>
+            const date = new Date("2022-03-25");
+        </p>
+
+        <br>
+        <br>
+
+        <p class="edit1">
+            <span style="font-size:30px;">Note</span>
+            <br>
+            A JavaScript variable can hold any type of data. 
+        </p>
+
+        <br>
+        <br>
+
+        <h2>
+            The Concept of Data Types 
+        </h2>
+
+        <p>
+            In programming, data types is an important concept. 
+            <br>
+            To be able to operate on variables, it is important to know something about the type. 
+            <br>
+            Without data types, a computer cannot safely solve this:- 
+            <br>
+            <p class="edit1">
+                let x = 16 + "Volvo";
+            </p>
+
+            <br>
+            <br>
+
+            Does it make any sense to add "Volvo" to sixteen? Will it produce an error or will it produce a result? 
+            <br>
+            JavaScript will treat the example above as:- 
+            <br>
+            <p class="edit1">
+                let x = "16" + "Volvo"; 
+            </p>
+
+            <br>
+            <br>
+
+            <p class="edit1">
+                When adding a number and a string, JavaScript will treat the number as a string. 
+            </p>
+
+            <br>
+            <br>
+
+            Example:- 
+            <br>
+            <p id="demo1"></p>
+
+            <br>
+            <br>
+            Another Example:- 
+            <br>
+            <p id="demo2"></p>
+
+            <br>
+            <br>
+
+            JavaScript evaluates expressions from left to right. Different sequences can produce different results. 
+            <br>
+            Example:- 
+            <br>
+            <p class="edit1">
+                let z = 16 + 4 + "Volvo";
+            </p>
+            <br>
+            <p id="demo3"></p>
+
+            <br>
+            <br>
+
+            Example:- 
+            <br>
+            <p class="edit1">
+                let a = "Volvo" + 16 + 4;
+            </p>
+            <br>
+            <p id="demo4"></p>
+
+            <br>
+            <br>
+
+            In the first example, JavaScript treats 16 and 4 as numbers, until it reaches "Volvo". 
+            <br>
+            In the second example, since the first operand is a string, all operands are treated as strings. 
+        </p>
+
+        <hr>
+        <br>
+        <br>
+        <hr>
+
+        <h2>
+            JavaScript Types are Dynamic 
+        </h2>
+
+        <p>
+            JavaScript has dynamic types. This means that the same variable can be used to hold different data types. 
+            <br>
+            Example:- 
+            <br>
+            <p class="edit1">
+                let b; //Now b is undefined 
+                <br>
+                b = 5; //Now b is a Number 
+                <br>
+                b = "John"; //Now b is a String  
+            </p>
+            <br>
+            <br>
+            The value of b is:- 
+            <br>
+
+            <p id="demo5"></p>
+        </p>
+
+        <hr>
+
+        <h2>
+            JavaScript Strings 
+        </h2>
+
+        <p>
+            A string (or a text string) is a series of characters like "John Doe". 
+            <br>
+            Strings are written with quotes. You can use single or double quotes. 
+            <br>
+            Example:- 
+            <br>
+            <p class="edit1">
+                //Using double quotes:- 
+                <br>
+                let carName1 = "Volvo XC60";
+                <br>
+                <br>
+                //Using single quotes:- 
+                <br>
+                let carName2 = 'Volvo XC60';
+            </p>
+            <br>
+            <br>
+            <p id="demo6"></p>
+
+            <br>
+            <br>
+
+            You can use quotes inside a string, as long as they don't match the quotes surrounding the string. 
+            <br>
+            Example:- 
+            <br>
+            <p class="edit1">
+                //Single quote inside double quotes:- 
+                <br>
+                let answer1 = "It's alright.";
+                <br>
+                <br>
+                //Single quotes inside double quotes:- 
+                <br>
+                let answer2 = "He is called 'Johnny'.";
+                <br>
+                <br>
+                //Double quotes inside single quotes:- 
+                <br>
+                let answer3 = 'He is called "Johnny".';
+                <br>
+            </p>
+            <br>
+            <br>
+            <p id="demo7"></p>
+        </p>
+
+        <hr>
+        
+        <h2>
+            JavaScript Numbers 
+        </h2>
+
+        <p>
+            All JavaScript numbers are stored as decimal numbers (floating point). 
+            <br>
+            Numbers can be written with, or without decimals. 
+            <br>
+            Example:- 
+            <br>
+            <p class="edit1">
+                let x1 = 34.00;
+                <br>
+                let x2 = 34;
+                <br>
+                let x3 = 3.14;
+            </p>
+            <br>
+            <p id="demo8"></p>
+        </p>
+
+        <hr>
+
+        <h2>
+            Exponential Notation 
+        </h2>
+
+        <p>
+            Extra large or extra small numbers can be written with scientific (exponential) notation. 
+            <br>
+            Example:- 
+            <br>
+            <p class="edit1">
+                let y = 123e5;  //12300000
+                <br>
+                let z = 123e-5;  //0.00123
+                <br>
+            </p>
+            <br>
+            <p id="demo9"></p>
+        </p>
+
+        <hr>
+
+        <p class="edit1">
+            <span style="font-size:30px;">Note</span>
+            <br>
+            Most programming languages have many number types: 
+            <br>
+            Whole numbers (integers): 
+            <br>
+            byte(8-bit), short(16-bit), int(32-bit), long(64-bit)
+            <br>
+            <br>
+            Real numbers(floating-point): 
+            <br>
+            float(32-bit), double(64-bit). 
+            <br>
+            <br>
+            <strong>
+                JavaScript are always one type: 
+                <br>
+                double(64-bit floating point). 
+            </strong>
+        </p>
+
+        <hr>
+
+        <h2>
+            JavaScript BigInt 
+        </h2>
+
+        <p>
+            All JavaScript numbers are stored in a 64-bit floating point format. 
+            <br>
+            JavaScript BigInt is a new datatype (2020) that can be used to store integer values that are too big to be represented by a normal JavaScript number. 
+            <br>
+            A BigInt cannot have DECIMALS. 
+            <br>
+            Also you cannot perform math between a BigInt type and a Number type. 
+            <br>
+            <p class="edit1">
+                let x = BigInt("123456789012345678901234567890");
+            </p>
+            <br>
+            Example:- 
+            <br>
+            <p id="demo10"></p>
+        </p>
+
+        <hr>
+
+        <h2>
+            JavaScript Booleans 
+        </h2>
+
+        <p>
+            Booleans can only have two values:- <span class="edit">true</span> or <span class="edit">false</span>. 
+            <br>
+            <p class="edit1">
+                let x = 5;
+                <br>
+                let y = 5;
+                <br>
+                let z = 6;
+                <br>
+                (x == y) //Returns true 
+                <br>
+                (x == z) //Returns false 
+                <br>
+            </p>
+            <br>
+            Example:- 
+            <br>
+            <p id="demo11"></p>
+            <br>
+            <br>
+            Booleans are often used in conditional testing. 
+        </p>
+
+        <hr>
+
+        <h2>
+            JavaScript Arrays 
+        </h2>
+
+        <p>
+            JavaScript arrays are written with square brackets. 
+            <br>
+            Array items are separated by commas. 
+            <br>
+            <p class="edit1">
+                const cars = ["Saab", "Volvo", "BMW"];
+            </p>
+            <br>
+            The following code declares (creates) an array called <span class="edit">cars</span>, containing three items (car names). 
+            <br>
+            <p id="demo12"></p>
+            <br>
+            <br>
+            Array indexes are zero-based, which means the first item is [0], second is [1], and so on. 
+        </p>
+
+        <hr>
+
+        <h2>
+            JavaScript Objects 
+        </h2>
+
+        <p>
+            JavaScript objects are written with curly braces <span class="edit">{}</span>. 
+            <br>
+            Object properties are written as name: value pairs, separated by commas. 
+            <br>
+            <p class="edit1">
+                const person = {firstName: "John", lastName: "Doe", age:50, eyeColor:"blue"};
+            </p>
+            <br>
+            Example:-  
+            <br>
+            <p id="demo13"></p>
+            <br>
+            <br>
+            The object (person) in the example above has 4 properties: firstName, lastName, age, and eyeColor. 
+        </p>
+
+        <hr>
+
+        <h2>
+            The typeof Operator 
+        </h2>
+
+        <p>
+            You can use the JavaScript <span class="edit">typeof</span> operator to find the type of a JavaScript variable. 
+            <br>
+            The <span class="edit">typeof</span> operator returns the type of a variable or an expression. 
+            <br>
+            <p class="edit1">
+                typeof ""     //Returns "string"
+                <br>
+                typeof "John" //Returns "string"
+                <br>
+                typeof "John Doe"  //Returns "string"
+            </p>
+            <br>
+            Example:- 
+            <br>
+            <p id="demo14"></p>
+
+            <br>
+            <br>
+            Example:- 
+            <br>
+            <p id="demo15"></p>
+        </p>
+
+        <hr>
+
+        <h2>
+            Undefined 
+        </h2>
+
+        <p>
+            In JavaScript, a variable without a value, has the value <span class="edit">undefined</span>. The type is also <span class="edit">undefined</span>. 
+            <br>
+            <p class="edit1">
+                let car;   //Value is undefined, type is also undefined 
+            </p>
+            <br>
+            Example:- 
+            <br>
+            <p id="demo16"></p>
+
+            <br>
+            <br>
+            Any variable can be emptied, by setting the value to <span class="edit">undefined</span>. The type will also be <span class="edit">undefined</span>. 
+            <br>
+            <p class="edit1">
+                car = undefined;    //Value is undefined, type is undefined 
+            </p>
+            <br>
+            Example:- 
+            <br>
+            <p id="demo17"></p>
+        </p>
+
+        <hr>
+
+        <h2>
+            Empty Values 
+        </h2>
+
+        <p>
+            An empty value has nothing to do with <span class="edit">undefined</span>. 
+            <br>
+            An empty string has both a legal value and a type. 
+            <br>
+            <p class="edit1">
+                let tr = ""; //The value is "", the typeof is "string" 
+            </p>
+            <br>
+            Example:- 
+            <br>
+            <p id="demo18"></p>
+        </p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <script>
+        let x = 16 + "Volvo";
+        document.getElementById("demo1").innerHTML = x;
+
+        let y = "Volvo" + 16;
+        document.getElementById("demo2").innerHTML = y;
+
+        let z = 16 + 4 + "Volvo";
+        document.getElementById("demo3").innerHTML = z;
+
+        let a = "Volvo" + 16 + 4;
+        document.getElementById("demo4").innerHTML = a;
+
+        let b; //Now b is undefined
+        b = 5;  //Now b is a Number
+        b = "John"; //Now b is a String
+        document.getElementById("demo5").innerHTML = b;
+
+        let carName1 = "Volvo XC60";
+        let carName2 = 'Volvo XC60';
+
+        document.getElementById("demo6").innerHTML =
+        carName1 + "<br>" +
+        carName2;
+
+        let answer1 = "It's alright.";
+        let answer2 = "He is called 'Johnny'.";
+        let answer3 = 'He is called "Johnny".';
+
+        document.getElementById("demo7").innerHTML =
+        answer1 + "<br>" +
+        answer2 + "<br>" +
+        answer3;
+
+        let x1 = 34.00;
+        let x2 = 34.;
+        let x3 = 3.14;
+        document.getElementById("demo8").innerHTML = 
+        x1 + "<br>" + x2 + "<br>" + x3;
+
+        let x4 = 123e5;
+        let x5 = 123e-5;
+        document.getElementById("demo9").innerHTML =
+        x4 + "<br>" + x5;
+        
+        let x6 = BigInt("123456789012345678901234567890");
+        document.getElementById("demo10").innerHTML = x6;
+
+        let x7 = 5;
+        let x8 = 5;
+        let x9 = 6;
+
+        document.getElementById("demo11").innerHTML =
+        "Is 5 equal to 5? = " + (x7 == x8) + "<br>" + "Is 5 equal to 6? = " + (x7 == x9);
+
+        const cars = ["Saab", "Volvo", "BMW"];
+        document.getElementById("demo12").innerHTML = "The first element of array cars is:- " + cars[0];
+
+        const person = {
+            firstName: "John",
+            lastName: "Doe",
+            age: 50,
+            eyeColor: "blue"
+        };
+
+        document.getElementById("demo13").innerHTML = 
+        person.firstName + " is " + person.age + " years old.";
+
+        document.getElementById("demo14").innerHTML = 
+        "Type of empty string is:- " + typeof "" + "<br>" +
+        "Type of 'John' is:- " + typeof "John" + "<br>" +
+        "Type of 'John Doe' is:- " + typeof "John Doe";
+
+        document.getElementById("demo15").innerHTML =
+        "Type of 0 is:- " + typeof 0 + "<br>" +
+        "Type of 314 is:- " + typeof 314 + "<br>" +
+        "Type of 3.14 is:- " + typeof 3.14 + "<br>" +
+        "Type of (3) is:- " + typeof (3) + "<br>" +
+        "Type of (3 + 4) is:- " + typeof (3 + 4);
+
+        let car;
+        document.getElementById("demo16").innerHTML =
+        car + "<br>" + typeof car;
+
+        let car1 = "Volvo";
+        car = undefined;
+
+        document.getElementById("demo17").innerHTML = car1 + "<br>" + typeof car;
+
+        let tr = "";
+        document.getElementById("demo18").innerHTML =
+        "The value is:- " +
+        tr + "<br>" +
+        "The type is:- " + typeof tr;
+        </script>
+    </body>
+</html>

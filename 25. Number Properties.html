@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            JavaScript Number Properties 
+        </title>
+        <style>
+            .edit {
+                background-color:#f1f1f1;
+                color:red;
+            }
+            .edit1 {
+                background-color:rgba(255,255,0,0.3);
+                padding:20px;
+            }
+            .table1 {
+                width:70%;
+                border:1px solid #ddd;
+                border-collapse:collapse;
+            }
+            .table1 tr {
+                height:40px;
+            }
+            .table1 tr:nth-child(even) {
+                background-color:#f1f1f1;
+            }
+            .table1 th {
+                text-align:left;
+                padding:10px;
+            }
+            .table1 td {
+                padding:10px;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>
+            JavaScript Number Properties 
+        </h1>
+
+        <table class="table1">
+            <tr>
+                <th>Property</th>
+                <th>Description</th>
+            </tr>
+            <tr>
+                <td>EPSILON</td>
+                <td>The difference between 1 and the smallest JS number.</td>
+            </tr>
+            <tr>
+                <td>MAX_VALUE</td>
+                <td>The largest number possible in JavaScript</td>
+            </tr>
+            <tr>
+                <td>MIN_VALUE</td>
+                <td>The smallest number possible in JavaScript</td>
+            </tr>
+            <tr>
+                <td>MAX_SAFE_INTEGER</td>
+                <td>The maximum safe integer (2<sup>53</sup> - 1)</td>
+            </tr>
+            <tr>
+                <td>MIN_SAFE_INTEGER</td>
+                <td>The minimum safe integer -(2<sup>53</sup> - 1)</td>
+            </tr>
+            <tr>
+                <td>POSITIVE_INFINITY</td>
+                <td>Infinity (returned on overflow)</td>
+            </tr>
+            <tr>
+                <td>NEGATIVE_INFINITY</td>
+                <td>Negative infinity (returned on overflow)</td>
+            </tr>
+            <tr>
+                <td>NaN</td>
+                <td>A "Not-a-Number" value</td>
+            </tr>
+        </table>
+
+        <hr>
+
+        <h2>
+            JavaScript EPSILON 
+        </h2>
+
+        <p>
+            <span class="edit">Number.EPSILON</span> represents the difference between 1 and the smallest floating point number. 
+            <br>
+            Example:- 
+            <br>
+            <p class="edit1">
+                let a = Number.EPSILON;
+            </p>
+            <br>
+            <p id="demo1"></p>
+            <br>
+            <br>
+            <p class="edit1">
+                <span style="font-size:30px;">Note</span>
+                <br>
+                <span class="edit">Number.EPSILON</span> is an ES6 feature. 
+                <br>
+                It does not work in Internet Explorer. 
+            </p>
+        </p>
+
+        <hr>
+
+        <h2>
+            JavaScript MAX_VALUE 
+        </h2>
+
+        <p>
+            <span class="edit">Number.MAX_VALUE</span> is a constant representing the largest possible number in JavaScript. 
+            <br>
+            Example:- 
+            <br>
+            <p class="edit1">
+                let b = Number.MAX_VALUE; 
+            </p>
+            <br>
+            <p id="demo2"></p>
+            <br>
+            <br>
+            <p class="edit1">
+                <span style="font-size:30px;">Number Properties Cannot be Used on Variables</span>
+                <br>
+                Number properties belong to the JavaScript <strong>Number Object</strong>. 
+                <br>
+                These properties can only be accessed as <span class="edit">Number.MAX_VALUE</span>. 
+                <br>
+                Using x.MAX_VALUE, where x is a variable or a value, will return <span class="edit">undefined</span>. 
+            </p>
+            <br>
+            Example:- 
+            <br>
+            <p id="demo3"></p>
+        </p>
+
+        <hr>
+
+        <h2>
+            JavaScript MIN_VALUE 
+        </h2>
+
+        <p>
+            <span class="edit">Number.MIN_VALUE</span> is a constant representing the lowest possible number in JavaScript. 
+            <br>
+            <p class="edit1">
+                let d = Number.MIN_VALUE;
+            </p>
+            <br>
+
+            Example:- 
+            <br>
+            <p id="demo4"></p>
+        </p>
+
+        <hr>
+
+        <h2>
+            JavaScript MAX_SAFE_INTEGER 
+        </h2>
+
+        <p>
+            <span class="edit">Number.MAX_SAFE_INTEGER</span> represents the maximum safe integer in JavaScript. 
+            <br>
+            <span class="edit">Number.MAX_SAFE_INTEGER</span> is (2<sup>53</sup> - 1).
+            <br>
+            <p class="edit1">
+                let e = Number.MAX_SAFE_INTEGER; 
+            </p>
+            <br>
+            Example:- 
+            <br>
+            <p id="demo5"></p> 
+        </p>
+
+        <hr>
+
+        <h2>
+            JavaScript MIN_SAFE_INTEGER 
+        </h2>
+
+        <p>
+            <span class="edit">Number.MIN_SAFE_INTEGER</span> represents the minimum safe integer in JavaScript. 
+            <br>
+            <span class="edit">Number.MIN_SAFE_INTEGER</span> is -(2<sup>53</sup> - 1).
+            <br>
+            <p class="edit1">
+                let f = Number.MIN_SAFE_INTEGER;
+            </p> 
+            <br>
+            Example:- 
+            <br>
+            <p id="demo6"></p>
+
+            <br>
+            <br>
+            <p class="edit1">
+                <span style="font-size:30px;">Note</span>
+                <br>
+                <span class="edit">MAX_SAFE_INTEGER</span> and <span class="edit">MIN_SAFE_INTEGER</span> are ES6 features. 
+                <br>
+                They do not work in Internet Explorer. 
+            </p>
+        </p>
+
+        <hr>
+        <br>
+        <br>
+        <hr>
+
+        <h2>
+            JavaScript POSITIVE_INFINITY 
+        </h2>
+
+        <p>
+            <p class="edit1">
+                let g = Number.POSITIVE_INFINITY;
+            </p>
+            <br>
+            Example:- 
+            <p id="demo7"></p>
+
+            <br>
+            <br>
+            <span class="edit">POSITIVE_INFINITY</span> is returned on Overflow. 
+            <br>
+            <p id="demo8"></p>
+        </p>
+
+        <hr>
+
+        <h2>
+            JavaScript NEGATIVE_INFINITY 
+        </h2>
+
+        <p>
+            <p class="edit1">
+                let i = Number.NEGATIVE_INFINITY;
+            </p>
+            <br>
+            Example:- 
+            <br>
+            <p id="demo9"></p>
+
+            <br>
+            <br>
+            <span class="edit">NEGATIVE_INFINITY</span> is returned on overflow. 
+            <br>
+            Example:- 
+            <br>
+            <p id="demo10"></p>
+        </p>
+
+        <hr>
+
+        <h2>
+            JavaScript NaN - Not a Number 
+        </h2>
+
+        <p>
+            <span class="edit">NaN</span> is a JavaScript reserved word for a number that is not a legal number. 
+            <br>
+            Example:- 
+            <br>
+            <p id="demo11"></p>
+
+            <br>
+            <br>
+            Trying to do arithmetic with a non-numeric string will result in <span class="edit">NaN</span> (Not a Number). 
+            <br>
+            Example:- 
+            <br>
+            <p id="demo12"></p> 
+        </p>
+
+
+
+
+
+
+
+
+        <script>
+            let a = Number.EPSILON;
+            document.getElementById("demo1").innerHTML = 
+            "The value of a will be:- " + a;
+
+            let b = Number.MAX_VALUE;
+            document.getElementById("demo2").innerHTML = 
+            "The largest possible number in JavaScript (MAX_VALUE) is:- " + b;
+
+            let c = 6;
+            document.getElementById("demo3").innerHTML = 
+            "6.MAX_VALUE will be:- " + c.MAX_VALUE;
+
+            let d = Number.MIN_VALUE;
+            document.getElementById("demo4").innerHTML = 
+            "The minimum possible number in JavaScript (MIN_VALUE) is:- " + d;
+
+            let e = Number.MAX_SAFE_INTEGER;
+            document.getElementById("demo5").innerHTML = 
+            "The maximum safe integer in JavaScript (MAX_SAFE_INTEGER) is:- " + e;
+
+            let f = Number.MIN_SAFE_INTEGER;
+            document.getElementById("demo6").innerHTML = 
+            "The minimum safe integer in JavaScript (MIN_SAFE_INTEGER) is:- " + f;
+
+            let g = Number.POSITIVE_INFINITY;
+            document.getElementById("demo7").innerHTML = 
+            "The POSITIVE_INFINITY is:- " + g;
+
+            let h = 1 / 0;
+            document.getElementById("demo8").innerHTML = 
+            "1 divided by 0 is:- " + h;
+
+            let i = Number.NEGATIVE_INFINITY;
+            document.getElementById("demo9").innerHTML = 
+            "The NEGATIVE_INFINITY is:- " + i;
+
+            let j = -1 / 0;
+            document.getElementById("demo10").innerHTML = 
+            "-1 divided by 0 is:- " + j;
+
+            document.getElementById("demo11").innerHTML = 
+            "The Not a Number in JavaScript is represented by:- " + Number.NaN;
+
+            document.getElementById("demo12").innerHTML = 
+            "100 divided by string Apple is:- " + (100 / "Apple");
+        </script>
+    </body>
+</html>

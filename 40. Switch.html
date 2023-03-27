@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            JavaScript Switch Statement 
+        </title>
+        <style>
+            .edit {
+                background-color:#f1f1f1;
+                color:red;
+            }
+            .edit1 {
+                background-color:rgba(255,255,0,0.3);
+                padding:20px;
+            }
+            body {
+                font-family:verdana, sans-serif;
+                font-size:20px;
+                line-height:1.5;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>
+            JavaScript Switch Statement 
+        </h1>
+
+        <p>
+            The <span class="edit">switch</span> statement is used to perform different actions based on different conditions. 
+        </p>
+
+        <hr>
+
+        <h2>
+            The JavaScript Switch Statement 
+        </h2>
+
+        <p>
+            Use the <span class="edit">switch</span> statement to select one of many code blocks to be executed. 
+            <br>
+            Syntax:- 
+            <br>
+            <p class="edit1">
+                switch(expression) {
+                    <br>
+                    case x: 
+                    <br>
+                    //code block 
+                    <br>
+                    break;
+                    <br>
+                    case y: 
+                    <br>
+                    //code block 
+                    <br>
+                    break;
+                    <br>
+                    default:
+                    <br>
+                    //code block 
+                    <br>
+                }
+            </p>
+            <br>
+            This is how it works:- 
+            <br>
+            <ul>
+                <li>The switch expression is evaluated once.</li>
+                <li>The value of the expression is compared with the values of each case.</li>
+                <li>If there is a match, the associated block of code is executed.</li>
+                <li>If there is no match, the default code block is executed.</li>
+            </ul>
+            <br>
+            Example:- 
+            <br>
+            The <span class="edit">getDay()</span> method returns the weekday as a number between 0 and 6. 
+            <br>
+            (Sunday = 0, Monday = 1, Tuesday = 2 ..) 
+            <br>
+            This example uses the weekday number to calculate the weekday name. 
+            <br>
+            <p id="demo1"></p>
+        </p>
+
+        <hr>
+
+        <h2>
+            The break Keyword 
+        </h2>
+
+        <p>
+            When JavaScript reaches a <span class="edit">break</span> keyword, it breaks out of the switch block. 
+            <br>
+            This will stop the execution inside the switch block. 
+            <br>
+            It is not necessary to break the last case in a switch block. The block break (ends) there anyway. 
+            <br>
+            <p class="edit1">
+                <strong>Note: </strong> If you omit the break statement, the next case will be executed even if the evaluation does not match the case. 
+            </p>
+        </p>
+
+        <hr>
+
+        <h2>
+            The default Keyword 
+        </h2>
+
+        <p>
+            The <span class="edit">default</span> keyword specifies the code to run if there is no case match. 
+            <br>
+            Example:- 
+            The <span class="edit">getDay()</span> method returns the weekday as a number between 0 and 6. 
+            <br>
+            If today is neither Saturday (6) nor Sunday (0), write a default message:- 
+            
+            <br>
+            <p id="demo2"></p>
+
+            <br>
+            <br>
+            The <span class="edit">default</span> case does not have to be the last case in a switch block. 
+            <br>
+            Example:- 
+            <br>
+            <p id="demo3"></p>
+
+            <br>
+
+            <p class="edit1">
+                If <span class="edit">default</span> is not the last case in the switch block, remember to end the default case with a break. 
+            </p>
+        </p>
+
+        <hr>
+
+        <h2>
+            Common Code Blocks 
+        </h2>
+
+        <p>
+            Sometimes you will want different switch cases to use the same code. 
+            <br>
+            In this example, case 4 and 5 share the same code block, and 0 and 6 share another code block. 
+            <br>
+            Example:- 
+            <br>
+            <p id="demo4"></p>
+        </p>
+
+        <hr>
+
+        <h2>
+            Switching Details 
+        </h2>
+
+        <p>
+            If multiple cases matches a case value, the <strong>first</strong> case is selected. 
+            <br>
+            If no matching cases are found, the program continues to the <strong>default</strong> label. 
+            <br>
+            If no default label is found, the program continues to the statement(s) <strong>after the switch</strong>. 
+        </p>
+
+        <hr>
+
+        <h2>
+            Strict Comparison 
+        </h2>
+
+        <p>
+            Switch cases use <strong>strict</strong> comparison (===). 
+            <br>
+            The values must be of the same type to match. 
+            <br>
+            A strict comparison can only be true if the operands are of the same type. 
+            <br>
+            In this example, there will be no match for x. 
+            <br>
+            Example:- 
+            <br>
+            <p id="demo5"></p> 
+        </p>
+
+        <script>
+            let day;
+            switch(new Date().getDay())
+            {
+                case 0: 
+                day = "Sunday";
+                break;
+
+                case 1: 
+                day="Monday";
+                break;
+
+                case 2: 
+                day="Tuesday";
+                break;
+
+                case 3:
+                day="Wednesday";
+                break;
+
+                case 4: 
+                day="Thursday";
+                break;
+
+                case 5: 
+                day="Friday";
+                break;
+
+                case 6:
+                day="Saturday";
+            }
+            document.getElementById("demo1").innerHTML = "Today is " + day;
+
+            let day1;
+            switch(new Date().getDay())
+            {
+             case 6: 
+             day1 = "Today is Saturday";
+             break;
+             case 0: 
+             day1 = "Today is Sunday";
+             break;
+             default: 
+             day1 = "Looking forward to the Weekend";
+            }
+            document.getElementById("demo2").innerHTML = day1;
+
+            let day2;
+            switch(new Date().getDay())
+            {
+                default: 
+                day2 = "Looking forward to the Weekend";
+                break;
+                case 6: 
+                day2 = "Today is Saturday";
+                break;
+                case 0: 
+                day2 = "Today is Sunday";
+            }
+            document.getElementById("demo3").innerHTML = day2;
+            
+            let day3;
+            switch(new Date().getDay())
+            {
+                case 4: 
+                case 5: 
+                day3 = "Soon it is Weekend";
+                break;
+                case 0: 
+                case 6: 
+                day3 = "It is Weekend";
+                break;
+                default: 
+                day3 = "Looking forward to the Weekend";
+            }
+            document.getElementById("demo4").innerHTML = day3;
+
+            let x = "0";
+            let text1;
+            switch(x)
+            {
+                case 0: 
+                text1 = "OFF";
+                break;
+                case 1: 
+                text1 = "ON";
+                break;
+                default: 
+                text1 = "No value found";
+            }
+            document.getElementById("demo5").innerHTML = text1;
+        </script>
+    </body>
+
+</html>

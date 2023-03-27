@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en-in">
+    <head>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>
+            jQuery CSS 
+        </title>
+        <style>
+            html {
+                font-size:calc(10px + 0.390625vw);
+            }
+
+            body {
+                font-family:verdana, sans-serif;
+                font-size:1rem;
+                line-height:1.5;
+            }
+
+            .edit {
+                background-color:#f1f1f1;
+                color:red;
+            }
+
+            .edit1 {
+                background-color:rgba(255,255,0,0.3);
+                padding:2rem;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>
+            JavaScript / jQuery CSS Styles 
+        </h1>
+
+        <hr>
+
+        <h2>
+            jQuery vs JavaScript 
+        </h2>
+
+        <div>
+            jQuery was created in 2006 by John Resig. It was designed to handle Browser Incompatibilities and to simplify HTML DOM Manipulation, Event Handling, Animations, and Ajax. 
+            <br>
+            For more than 10 years, jQuery has been the most popular JavaScript library in the world. 
+            <br>
+            However, after JavaScript Version 5 (2009), most of the jQuery utilities can be solved with a few lines of standard JavaScript. 
+        </div>
+
+        <hr>
+
+        <h2>
+            Hiding HTML Elements 
+        </h2>
+
+        <div>
+            Hide a HTML element. 
+            <br>
+            Example:- 
+            <br>
+            <b>jQuery</b>
+            <br>
+            <p id="01">Hello World!</p>
+            <p id="02">Hello Sweden!</p>
+            <p id="03">Hello Japan!</p>
+
+            <br>
+            <br>
+            <b>JavaScript</b>
+            <br>
+            <p id="04">Hello World!</p>
+            <p id="05">Hello Sweden!</p>
+            <p id="06">Hello Japan!</p>
+        </div>
+
+        <hr>
+
+        <h2>
+            Showing HTML Elements 
+        </h2>
+
+        <div>
+            Show a HTML Element. 
+            <br>
+            Example:- 
+            <br>
+            <b>jQuery</b>
+            <br>
+            <p id="07" style="display:none;">Hello World!</p>
+            <p id="08" style="display:none;">Hello Sweden!</p>
+            <p id="09" style="display:none;">Hello Japan!</p>
+
+            <br>
+            <br>
+            <b>JavaScript</b>
+            <br>
+            <p id="10" style="display:none;">Hello World!</p>
+            <p id="11" style="display:none;">Hello Sweden!</p>
+            <p id="12" style="display:none;">Hello Japan!</p>
+        </div>
+
+        <hr>
+
+        <h2>
+            Styling HTML Elements 
+        </h2>
+
+        <div>
+            Change the font size of a HTML element. 
+            <br>
+            Example:- 
+            <br>
+            <b>jQuery</b>
+            <br>
+            <p id="demo1">Change the style of a HTML element.</p>
+
+            <br>
+            <br>
+            <b>JavaScript</b>
+            <br>
+            <p id="demo2">Change the style of a HTML element.</p>
+        </div>
+
+        <script>
+            $(document).ready(function() {
+                $("#02").hide();
+            });
+
+            document.getElementById("05").style.display = "none";
+
+            $(document).ready(function(){
+                $("#08").show();
+            });
+
+            document.getElementById("11").style.display = "block";  // or ""; 
+
+            $(document).ready(function() {
+                $("#demo1").css("font-size","35px");
+            });
+
+            document.getElementById("demo2").style.fontSize = "35px";
+        </script>
+    </body>
+</html>

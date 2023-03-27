@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en-in">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>
+            JavaScript Function apply() 
+        </title>
+        <style>
+            html {
+                font-size:62.5%;
+            }
+            body {
+                font-family:verdana, sans-serif;
+                font-size:2rem;
+                line-height:1.5;
+            }
+            .edit {
+                background-color:#f1f1f1;
+                color:red;
+            }
+            .edit1 {
+                background-color:rgba(255,255,0,0.3);
+                padding:2rem;
+            }
+            .table1 {
+                width:100%;
+                border:0.1rem solid #ddd;
+                border-collapse:collapse;
+            }
+            .table1 tr {
+                height:4rem;
+            }
+            .table1 tr:nth-child(even) {
+                background-color:#f1f1f1;
+            }
+            .table1 td {
+                padding:1rem;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>
+            JavaScript Function apply() 
+        </h1>
+
+        <hr>
+
+        <h2>
+            Method Reuse 
+        </h2>
+
+        <div>
+            With the <span class="edit">apply()</span> method, you can write a method that can be used on different objects. 
+        </div>
+
+        <hr>
+
+        <h2>
+            The JavaScript apply() Method 
+        </h2>
+
+        <div>
+            The <span class="edit">apply()</span> method is similar to the <span class="edit">call()</span> method. 
+            <br>
+            In this example the <strong>fullName</strong> method of <strong>person1</strong> is <strong>applied</strong> on <strong>person2</strong>. 
+            <br>
+            Example:- 
+            <br>
+            <p id="demo1"></p>
+        </div>
+
+        <hr>
+
+        <h2>
+            The Difference Between call() and apply() 
+        </h2>
+
+        <div>
+            The difference is:- 
+            <br>
+            The <span class="edit">call()</span> method takes arguments <strong>separately</strong>. 
+            <br>
+            The <span class="edit">apply()</span> method takes arguments as an <strong>array</strong>. 
+            <br>
+            <p class="edit1">
+                The apply() method is very handy if you want to use an array instead of an argument list. 
+            </p>
+        </div>
+
+        <hr>
+
+        <h2>
+            The apply() Method with Arguments 
+        </h2>
+
+        <div>
+            The <span class="edit">apply()</span> method accepts arguments in an array. 
+            <br>
+            Example:- 
+            <br>
+            <p id="demo2"></p>
+
+            <br>
+            <br>
+            Compared with the <span class="edit">call()</span> method. 
+            <br>
+            Example:- 
+            <br>
+            <p id="demo3"></p>
+        </div>
+
+        <hr>
+
+        <h2>
+            Simulate a Max Method on Arrays 
+        </h2>
+
+        <div>
+            You can find the largest number (in a list of numbers) using the <span class="edit">Math.max()</span> method. 
+            <br>
+            Example:- 
+            <br>
+            <p id="demo4"></p>
+
+            <br>
+            <br>
+            Since JavaScript <strong>arrays</strong> do not have a max() method, you can apply the <span class="edit">Math.max()</span> method instead. 
+            <br>
+            Example:- 
+            <br>
+            <p id="demo5"></p>
+
+            <br>
+            The first argument (null) does not matter. It is not used in this example. 
+            <br>
+            These examples will give the same result. 
+            <br>
+            Example:- 
+            <br>
+            <p id="demo6"></p>
+
+            <br>
+            <br>
+            Example:- 
+            <br>
+            <p id="demo7"></p>
+
+            <br>
+            <br>
+            Example:- 
+            <br>
+            <p id="demo8"></p>
+        </div>
+
+        <hr>
+
+        <h2>
+            JavaScript Strict Mode 
+        </h2>
+
+        <div>
+            In JavaScript strict mode, if the first argument of the <span class="edit">apply()</span> method is not an object, it becomes the owner (object) of the invoked function. In "non-strict" mode, it becomes the global object. 
+        </div>
+
+        <script>
+            const person1 = {
+                fullName: function() {
+                    return this.firstName + " " + this.lastName;
+                }
+            }
+
+            const person2 = {
+                firstName: "John",
+                lastName: "Doe"
+            }
+
+            document.getElementById("demo1").innerHTML = 
+            person1.fullName.apply(person2);
+
+            const person0 = {
+                fullName: function(city, country) {
+                    return this.firstName + " " + this.lastName + "," + city + "," + country;
+                }
+            }
+
+            document.getElementById("demo2").innerHTML = 
+            person0.fullName.apply(person2,["Oslo", "Norway"]);
+
+            document.getElementById("demo3").innerHTML = 
+            person0.fullName.call(person2,"Oslo", "Norway");
+
+            document.getElementById("demo4").innerHTML = 
+            "The largest among 1,2 and 3 is:- " + Math.max(1,2,3);
+
+            document.getElementById("demo5").innerHTML = 
+            "The largest among 1,2,3 in array is:- " + Math.max.apply(null,[1,2,3]);
+
+            document.getElementById("demo6").innerHTML = 
+            "The largest among 1,2,3 in array is:- " + Math.max.apply(Math,[1,2,3]);
+
+            document.getElementById("demo7").innerHTML = 
+            "The largest among 1,2,3 in array is:- " + Math.max.apply(" ",[1,2,3]); //or double quotes without space ("") 
+
+            document.getElementById("demo8").innerHTML = 
+            "The largest among 1,2,3 in array is:- " + Math.max.apply(0, [1,2,3]);
+        </script>
+    </body>
+</html>

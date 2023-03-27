@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            Introduction 
+        </title>
+        <style>
+        .edit {
+            background-color:#f1f1f1;
+            color:red;
+        }
+        .edit1 {
+            background-color:rgba(255,255,0,0.3);
+            padding:20px;
+        }
+        </style>
+    </head>
+    <body>
+        <h1>
+            JavaScript Introduction 
+        </h1>
+
+        <p>
+            This page contains some examples of what JavaScript can do. 
+        </p>
+
+        <hr>
+
+        <h2>
+            JavaScript Can Change HTML Content         
+        </h2>
+
+        <p>
+            One of the many JavaScript HTML Methods is <span class="edit">getElementById()</span>. 
+            <br>
+            The example below "finds" the HTML element (with id="demo"), and changes the element content (innerHTML) to "Hello JavaScript". 
+            <br>
+            Example:- 
+            <br>
+            <p id="demo">
+                JavaScript can change HTML content. 
+            </p>
+
+            <button type="button" onclick='document.getElementById("demo").innerHTML = "Hello JavaScript!"'>Click Me!</button>
+
+            <br>
+            <br>
+
+            <p class="edit1">
+                JavaScript accepts both double and single quotes. 
+            </p>
+
+            <br>
+            Example:- 
+            <br>
+            <p>
+                <span style="padding:10px;font-size:20px;color:red;display:inline-block;background-color:rgba(255,255,0,0.3);">
+                "document.getElementById('demo').innerHTML = 'Hello JavaScript!'"
+                </span>
+                <br>
+                OR
+                <br>
+                <span style="padding:10px;font-size:20px;color:green;display:inline-block;background-color:rgba(255,255,0,0.3);">
+                'document.getElementById("demo").innerHTML = "Hello JavaScript!"'
+                </span>
+            </p>
+            
+        </p>
+
+        <hr>
+
+        <h2>
+            JavaScript Can Change HTML Attributes Values 
+        </h2>
+
+        <p>
+            In this example JavaScript changes the value of the <span class="edit">src</span> (source) attribute of an <span class="edit">&lt;img&gt;</span> tag. 
+            <br>
+            Example:- 
+            <br>
+            <p style="font-size:25px;font-weight:bold;">
+            The Light Bulb 
+            </p>
+            <br>
+            <br>
+            <button type="button" onclick="document.getElementById('myImage').src = 'Image3.gif'">Turn on the light</button>
+
+            <img src="Image2.gif" id="myImage" style="width:100px">
+
+            <button type="button" onclick="document.getElementById('myImage').src = 'Image2.gif'">Turn off the light</button>
+        </p>
+
+        <hr>
+        <br>
+        <br>
+        <hr>
+
+        <h2>
+            JavaScript Can Change HTML Styles (CSS) 
+        </h2>
+
+        <p>
+            Changing the style of a HTML element, is a variant of changing a HTML attribute. 
+            <br>
+            Example:- 
+            <br>
+            <p id="demo1">
+                JavaScript can change the style of a HTML element. 
+            </p>
+            <button type="button" onclick="document.getElementById('demo1').style.fontSize = '35px'">Click Me!</button>
+        </p>
+
+        <hr>
+
+        <h2>
+            JavaScript Can Hide HTML Elements 
+        </h2>
+
+        <p>
+            Hiding HTML elements can be done by changing the <span class="edit">display</span> style. 
+            <br>
+            Example:- 
+            <br>
+            <p id="demo2">
+                JavaScript can hide HTML elements. 
+            </p>
+            <button type="button" onclick="document.getElementById('demo2').style.display= 'none'">
+            Click Me! 
+            </button>
+        </p>
+
+        <hr>
+
+        <h2>
+            JavaScript Can Show HTML Elements 
+        </h2>
+
+        <p>
+            Showing hidden HTML elements can also be done by changing the <span class="edit">display</span> style. 
+            <br>
+            Example:- 
+            <br>
+            <p>
+                JavaScript can show hidden HTML elements. 
+            </p>
+            <p id="demo3" style="display:none">
+                Hello JavaScript! 
+            </p>
+            <button type="button" onclick="document.getElementById('demo3').style.display = 'block'">
+            Click Me! 
+            </button>
+        </p>
+
+        <hr>
+
+        <p class="edit1">
+            
+              <span style="font-size:30px;font-weight:bold;">Did You Know? </span>
+            
+              <br>
+              <br>
+            
+              JavaScript and Java are completely different languages, both in concept and design. 
+              <br>
+              JavaScript was invented by Brendan Eich in 1995, and became an ECMA standard in 1997. 
+              <br>
+              ECMA-262 is the official name of the standard. ECMAScript is the official name of the language. 
+        
+        </p>
+    </body>
+
+</html>

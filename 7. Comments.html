@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            JavaScript Comments 
+        </title>
+        <style>
+         .edit {
+            background-color:#f1f1f1;
+            color:red;
+         }
+         .edit1 {
+            background-color:rgba(255,255,0,0.3);
+            padding:20px;
+         }
+        </style>
+    </head>
+    <body>
+        <h1>
+            JavaScript Comments 
+        </h1>
+
+        <hr>
+
+        <p>
+            JavaScript comments can be used to explain JavaScript code, and to make it more readable. 
+            <br>
+            JavaScript comments can also be used to prevent execution, when testing alternative code. 
+        </p>
+
+        <hr>
+
+        <h2>
+            Single Line Comments 
+        </h2>
+
+        <p>
+            Single line comments start with <span class="edit"> &frasl; &frasl; </span>. 
+            <br>
+            Any text between <span class="edit"> &frasl; &frasl; </span> and the end of the line will be ignored by JavaScript (will not be executed). 
+            <br>
+            This example uses a single-line comment before each code line. 
+            <br>
+            Example:- 
+            <br>
+            <h3 id="demo1"></h3>
+            <p id="demo2"></p>
+
+            <br>
+            <br>
+            This example uses a single line comment at the end of each line to explain the code. 
+            <br>
+            Example:- 
+            <br>
+            <p id="demo3"></p>
+        </p>
+
+        <hr>
+
+        <h2>
+            Multi-line Comments 
+        </h2>
+
+        <p>
+            Multi-line comments start with <span class="edit">/*</span> and end with <span class="edit">*/</span>. 
+            <br>
+            Any text between <span class="edit">/*</span> and <span class="edit">*/</span> will be ignored by JavaScript. 
+            <br>
+            This example uses a multi-line comment (a comment block) to explain the code. 
+            <br>
+            Example:- 
+            <br>
+            <h3 id="demo4"></h3>
+            <p id="demo5"></p>
+
+            <br>
+            <br>
+
+            <p class="edit1">
+                It is most common to use single line comments.
+                <br>
+                Block comments are often used for formal documentation. 
+            </p>
+        </p>
+
+        <hr>
+        <br>
+        <br>
+        <hr>
+
+        <h2>
+            Using Comments to Prevent Execution 
+        </h2>
+
+        <p>
+           Using comments to prevent execution of code is suitable for code testing. 
+           <br>
+           Adding <span class="edit">&frasl; &frasl; </span> in front of a code line changes the code lines from an executable line to a comment. 
+           <br>
+           This example uses // to prevent execution of one of the code lines:- 
+           <br>
+           Example:- 
+           <br>
+           <h3 id="demo6"></h3>
+           <p id="demo7"></p>
+
+           <br>
+           <br>
+
+           This example uses a comment block to prevent execution of multiple lines. 
+           <br>
+           Example:- 
+           <br>
+           <h3 id="demo8"></h3>
+           <p id="demo9"></p>
+        </p>
+
+        
+    <script>
+        //Change Heading:- 
+        document.getElementById("demo1").innerHTML = "JavaScript Comments";
+        
+        //Change Paragraph:- 
+        document.getElementById("demo2").innerHTML = "My first paragraph";
+
+        let a = 5; //Declare a, give it the value of 5
+        let b = a + 2; //Declare b, give it the value of a + 2
+
+        //Write b to demo3:- 
+        document.getElementById("demo3").innerHTML = b;
+
+        /*
+        The code below will change
+        the heading with id="demo4"
+        and the paragraph with id="demo5"
+        */
+       document.getElementById("demo4").innerHTML = "JavaScript Comments";
+       document.getElementById("demo5").innerHTML = "My first Paragraph";
+
+       //document.getElementById("demo6").innerHTML = "My First Page";
+       document.getElementById("demo7").innerHTML = "My first Paragraph";
+
+       /*
+       document.getElementById("demo8").innerHTML = "Welcome to my Homepage";
+       document.getElementById("demo9").innerHTML = "This is my first paragraph.";
+       */
+      document.getElementById("demo9").innerHTML = "The comment-block is not executed.";
+    </script>
+    </body>
+</html>

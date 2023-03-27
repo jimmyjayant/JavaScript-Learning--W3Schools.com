@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html>
+    <head>
+      <title>
+        JavaScript Statements 
+      </title>
+      <style>
+        .edit {
+            background-color:#f1f1f1;
+            color:red;
+        }
+        .edit1 {
+            background-color:rgba(255,255,0,0.3);
+            padding:20px;
+        }
+        .table1 {
+            border:1px solid #ddd;
+            border-collapse:collapse;
+            width:50%;
+        }
+        .table1 th {
+            text-align:left;
+            padding-left:5px;
+        }
+        .table1 td {
+            padding-left:5px;
+        }
+        .table1 tr:nth-child(even) {
+            background-color:#ddd;
+        }
+        .table1 tr {
+            height:40px;
+        }
+      </style>
+    </head>
+    <body>
+        <h1>
+            JavaScript Statements 
+        </h1>
+
+        <hr>
+
+        <p>
+            Example:- 
+            <br>
+            A <strong>JavaScript program </strong>is a list of <strong>statements </strong>to be executed by the computer. 
+            <br>
+            <p id="demo1"></p> 
+        </p>
+
+        <hr>
+
+        <h2>
+            JavaScript Programs 
+        </h2>
+
+        <p>
+           A <strong>computer program</strong> is a list of "instructions" to be "executed" by a computer. 
+           <br>
+           In a programming language, these programming instructions are called <strong>statements</strong>. 
+           <br>
+           A <strong>JavaScript Program</strong> is a list of programming <strong>statements</strong>. 
+           <br>
+           <br>
+           <p class="edit1">
+            In HTML, JavaScript programs are executed by the web browser. 
+           </p>
+        </p>
+
+        <hr>
+
+        <h2>
+            JavaScript Statements 
+        </h2>
+
+        <p>
+            JavaScript Statements are composed of:- 
+            <br>
+            Values, Operators, Expressions, Keywords, and Comments. 
+            <br>
+            This statement tells the browser to write "Hello Dolly" inside a HTML element with id="demo2". 
+            <br>
+            Example:- 
+            <br>
+            <p id="demo2"></p>
+
+            <br>
+            <br>
+
+            Most JavaScript programs contain many JavaScript statements. 
+            <br>
+            The statements are executed, one by one, in the same order as they are written. 
+
+            <br>
+            <br>
+
+            <p class="edit1">
+                JavaScript programs (and JavaScript Statements) are often called JavaScript Code. 
+            </p>
+        </p>
+
+        <hr>
+
+        <h2>
+            Semicolons ; 
+        </h2>
+
+        <p>
+            Semicolons separate JavaScript statements. 
+            <br>
+            Add a semicolon at the end of each executable statement. 
+            <br>
+            Example:- 
+            <br>
+            <p id="demo3"></p>
+
+            <br>
+
+            When separated by semicolons, multiple statements on one line are allowed. 
+            <br>
+            <p class="edit1">a = 5;b = 6;c = a + b;</p>
+
+            <br>
+            <br>
+
+            <p class="edit1">
+                On the web, you might see examples without semicolons. 
+                <br>
+                Ending statements with semicolon is not required, but highly recommended. 
+            </p>
+        </p>
+
+        <hr>
+        <br>
+        <hr>
+
+        <h2>
+            JavaScript White Space 
+        </h2>
+
+        <p>
+            JavaScript ignores multiple spaces. You can add white space to your script to make it more readable. 
+            <br>
+            The following lines are equivalent:-  
+            <br>
+            <p class="edit1">
+                let person="Hege";
+                <br>
+                let person = "Hege";
+            </p>
+
+            <br>
+            <br>
+            A good practice is to put spaces around operators (= + - * /). 
+            <br>
+            <p class="edit1">
+                let x = y + z; 
+            </p>
+        </p>
+
+        <hr>
+
+        <h2>
+            JavaScript Line Length and Line Breaks 
+        </h2>
+
+        <p>
+            For best readability, programmers often like to avoid code lines longer than 80 characters. 
+            <br>
+            If a JavaScript statement does not fit on one line, the best place to break it is after an operator. 
+            <br>
+            Example:- 
+            <br>
+            <p class="edit1">
+                document.getElementById("demo").innerHTML =
+                "Hello Dolly!"; 
+            </p> 
+        </p>
+
+        <hr>
+
+        <h2>
+            JavaScript Code Blocks 
+        </h2>
+
+        <p>
+            JavaScript statements can be grouped together in code blocks, inside curly brackets {......}. 
+            <br>
+            The purpose of code blocks is to define statements to be executed together. 
+            <br>
+            One place you will find statements grouped together in blocks, is in JavaScript functions. 
+            <br>
+            Example:- 
+            <br>
+            <p class="edit1">
+                function myFunction()
+                <br>
+                {
+                    <br>
+                    document.getElementById("id1").innerHTML = "Hello Dolly!"; 
+                    <br>
+                    document.getElementById("id2").innerHTML = "How are you?";
+                <br>
+                }
+            </p>
+        </p>
+
+        <hr>
+
+        <h2>
+            JavaScript Keywords 
+        </h2>
+
+        <p>
+            JavaScript statements often start with a <strong>keyword</strong> to identify the JavaScript action to be performed. 
+            <br>
+            Here is a list of some of the keywords:- 
+            <br>
+            <table class="table1">
+                <tr>
+                    <th>Keyword</th>
+                    <th>Description</th>
+                </tr>
+                <tr>
+                    <td>var</td>
+                    <td>Declares a variable</td>
+                </tr>
+                <tr>
+                    <td>let</td>
+                    <td>Declares a block variable</td>
+                </tr>
+                <tr>
+                    <td>const</td>
+                    <td>Declares a block constant</td>
+                </tr>
+                <tr>
+                    <td>if</td>
+                    <td>Marks a block of statements to be executed on a condition</td>
+                </tr>
+                <tr>
+                    <td>switch</td>
+                    <td>Marks a block of statements to be executed in different cases</td>
+                </tr>
+                <tr>
+                    <td>for</td>
+                    <td>Marks a block of statements to be executed in a loop</td>
+                </tr>
+                <tr>
+                    <td>function</td>
+                    <td>Declares a function</td>
+                </tr>
+                <tr>
+                    <td>return</td>
+                    <td>Exits a function</td>
+                </tr>
+                <tr>
+                    <td>try</td>
+                    <td>Implements error handling to a block of statements</td>
+                </tr>
+
+            </table>
+        </p>
+
+        <hr>
+
+        <p class="edit1">
+            JavaScript keywords are reserved words. Reserved words cannot be used as names of variables. 
+        </p>
+
+
+
+        <script>
+            let x, y, z; //Statement 1
+            x = 5;     //Statement 2
+            y = 6;     //Statement 3
+            z = x + y; //Statement 4
+
+            document.getElementById("demo1").innerHTML = "The value of z is " + z + ".";
+
+            document.getElementById("demo2").innerHTML = "Hello Dolly";
+
+            let a, b, c;
+            a = 5;
+            b = 6;
+            c = a + b;
+
+            document.getElementById("demo3").innerHTML = c; 
+        </script>
+    </body>
+</html>

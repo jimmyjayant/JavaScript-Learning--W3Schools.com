@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en-in">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>
+            AJAX ASP 
+        </title>
+        <style>
+            html {
+                font-size:calc(10px + 0.390625vw);
+            }
+
+            body {
+                font-family:verdana, sans-serif;
+                font-size:1rem;
+                line-height:1.5;
+            }
+
+            .edit {
+                background-color:#f1f1f1;
+                color:red;
+            }
+
+            .edit1 {
+                background-color:rgba(255,255,0,0.3);
+                padding:2rem;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>
+            AJAX ASP Example 
+        </h1>
+
+        <div>
+            AJAX is used to create more interactive applications. 
+        </div>
+
+        <hr>
+
+        <h2>
+            AJAX ASP Example 
+        </h2>
+
+        <div>
+            The following example will demonstrate how a web page can communicate with a web server while a user type characters in an input field. 
+            <br>
+            Example:- 
+            <br>
+            <b>
+                Start typing a name in the input field below: 
+                <br>
+                Suggestions:
+                <br>
+                <label for="fname">
+                    First Name: 
+                </label>
+                <input type="text" id="fname" name="fname">
+            </b>
+        </div>
+
+        <hr>
+
+        <h2>
+        Example Explained 
+        </h2>
+
+        <div>
+            In the example above, when a user types a character in the input field, a function called <span class="edit">showHint()</span> is executed. 
+            <br>
+            The function is triggered by the <span class="edit">onkeyup</span> event. 
+            <br>
+            Here is the code: 
+            <br>
+            Example:- 
+            <br>
+            <h2>
+                The XMLHttpRequest Object 
+            </h2>
+
+            <h3>
+                Start typing a name in the input field below: 
+            </h3>
+
+            <p>Suggestions: <span id="txtHint"></span></p>
+            <p>
+                First name: 
+                <input type="text" id="txt1" onkeyup="showHint(this.value)">
+            </p>
+
+            <br>
+            <br>
+            Code explanation: 
+            <br>
+            First, check if the input field is empty (str.length == 0). If it is, clear the content of the txtHint placeholder and exit the function. 
+            <br>
+            However, if the input field is not empty, do the following: 
+            <br>
+            <ul>
+                <li>Create an XMLHttpRequest object</li>
+                <li>Create the function to be executed when the server response is ready</li>
+                <li>Send the request off to an ASP file (gethint.asp) on the server</li>
+                <li>Notice that q parameter is added gethint.asp?q="+str</li>
+                <li>The str variable holds the content of the input field</li>
+            </ul>
+        </div>
+
+        <hr>
+        <br>
+        <br>
+        <hr>
+
+        <h2>
+            The ASP File - "gethint.asp" 
+        </h2>
+
+        <div>
+            The ASP file checks an array of names, and returns the corresponding name(s) to the browser. 
+            <br>
+            
+        </div>
+
+        <script>
+            function showHint(str) {
+                if(str.length == 0) {
+                    document.getElementById("txtHint").innerHTML = "";
+                    return;
+                }
+                const xhttp = new XMLHttpRequest();
+                xhttp.onload = function() {
+                    document.getElementById("txtHint").innerHTML = this.responseText;
+                }
+                xhttp.open("GET", "gethint.asp?q="+str);
+                xhttp.send();
+            }
+        </script>
+    </body>
+</html>

@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            ECMAScript 2020 
+        </title>
+        <style>
+            .edit {
+                background-color:#f1f1f1;
+                color:red;
+            }
+            .edit1 {
+                background-color:rgba(255,255,0,0.3);
+                padding:20px;
+            }
+            body {
+                font-family:verdana, sans-serif;
+                font-size:20px;
+                line-height:1.5;
+            }
+            .table1 {
+                width:100%;
+                border:1px solid #ddd;
+                border-collapse:collapse;
+            }
+            .table1 tr {
+                height:40px;
+            }
+            .table1 tr:nth-child(even) {
+                background-color:#f1f1f1;
+            }
+            .table1 td {
+                padding:10px;
+                text-align:center;
+                border:1px solid #ddd;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>
+            ECMAScript 2020 
+        </h1>
+
+        <div style="background-color:rgba(0,255,0,0.2);padding:20px;">
+        Original JavaScript version numbers were ES5 (2009) and ES6 (2015). 
+        <br>
+        Since 2016 versions are named by year.  
+        </div>
+
+        <hr>
+
+        <h2>
+            New Features in ES2020 
+        </h2>
+
+        <div>
+            <ul>
+                <li>BigInt</li>
+                <li>String matchAll()</li>
+                <li>The Nullish Coalescing Operator (??)</li>
+                <li>The Optional Chaining Operator (?.)</li>
+                <li>Logical AND Assignment Operator (&&=)</li>
+                <li>Logical OR Assignment (||=)</li>
+                <li>Nullish Coalescing Assignment (??=)</li>
+                <li>Promise allSettled():
+                    <br>
+                    <span class="edit">Promise.allSettled([prom1, prom2, prom3]).then {}</span>
+                </li>
+                <li>Dynamic Import</li>
+            </ul>
+
+            <br>
+
+            <div style="background-color:rgba(255,0,0,0.3);padding:20px;">
+            <span style="font-size:30px;">Warning</span>
+            <br>
+            These features are relatively new. Old browser may need an alternative code (Polifill) 
+            </div>
+        </div>
+
+        <hr>
+
+        <h2>
+            JavaScript BigInt 
+        </h2>
+
+        <div>
+            JavaScript <span class="edit">BigInt</span> variables are used to store big integer values that are too big to be represented by a normal JavaScript <span class="edit">Number</span>. 
+            <br>
+            JavaScript integers are only accurate upto about 15 digits. 
+            <br>
+            Example:- 
+            <br>
+            Integer Example:- 
+            <br>
+            <p id="demo1"></p>
+
+            <br>
+            <br>
+            BigInt Example:- 
+            <br>
+            <p id="demo2"></p>
+
+            <br>
+            <br>
+            To create a <span class="edit">BigInt</span>, append n to the end of an integer or call <span class="edit">BigInt()</span>. 
+            <br>
+            Example:- 
+            <br>
+            <p id="demo3"></p>
+
+            <br>
+            <br>
+            The JavaScript <span class="edit">typeof</span> of <span class="edit">BigInt</span> is "bigint". 
+            <br>
+            Example:- 
+            <br>
+            <p id="demo4"></p>
+
+            <br>
+            <br>
+            <span class="edit">BigInt</span> is supported in all browsers since September 2020. 
+            <br>
+            <br>
+            <table class="table1">
+                <tr>
+                    <td><img src="Image4.svg.png" height="38" width="38" alt="Google Chrome"></td>
+                    <td><img src="Image5.png" height="38" width="38" alt="Microsoft Edge"></td>
+                    <td><img src="Image6.png" height="38" width="38" alt="Mozilla Firefox"></td>
+                    <td><img src="Image7.png" height="38" width="38" alt="Apple Safari"></td>
+                    <td><img src="Image8.png" height="38" width="38" alt="Opera"></td>
+                </tr>
+                <tr>
+                    <td>Chrome 67</td>
+                    <td>Edge 79</td>
+                    <td>Firefox 68</td>
+                    <td>Safari 14</td>
+                    <td>Opera 54</td>
+                </tr>
+                <tr>
+                    <td>May 2018</td>
+                    <td>Jan 2020</td>
+                    <td>Jul 2019</td>
+                    <td>Sep 2020</td>
+                    <td>Jun 2018</td>
+                </tr>
+            </table>
+        </div>
+
+        <hr>
+
+        <h2>
+            JavaScript String matchAll() 
+        </h2>
+
+        <div>
+            Before ES2020 there was no string method that could be used to search for all occurrences of a string in a string. 
+            <br>
+            Example:- 
+            <br>
+            <p id="demo5"></p>
+
+            <br>
+            <br>
+            If the parameter is a regular expression, the global flag (g) must be set, otherwise a TypeError is thrown. 
+            <br>
+            Example:- 
+            <br>
+            <p id="demo6"></p>
+
+            <br>
+            <br>
+            If you want to search case insensitive, the insensitive flag (i) must be set. 
+            <br>
+            Example:- 
+            <br>
+            <p id="demo7"></p>
+
+            <br>
+            <br>
+            <div class="edit1">
+                <span style="font-size:30px;">Note</span>
+                <br>
+                ES2021 introduced the string method replaceAll(). 
+            </div>
+        </div>
+
+        <hr>
+
+        <h2>
+            The Nullish Coalescing Operator (??) 
+        </h2>
+
+        <div>
+            The <span class="edit">??</span> operator returns the first argument if it is not <strong>nullish</strong> (<span class="edit">null</span> or <span class="edit">undefined</span>). 
+            <br>
+            Otherwise it returns the second. 
+            <br>
+            Example:- 
+            <br>
+            Let us suppose the first variable "f" value is "null" and the second variable "g" value is "missing". 
+            <br>
+            So the nullish coalescing operator (??) will return the second variable value since the first one is null. 
+            <br>
+            <p id="demo8"></p> 
+
+            <br>
+            Example:- 
+            <br>
+            If first variable value is null and the second one is undefined. Then it will return the second variable value. 
+            <br>
+            <p id="demo9"></p>
+
+            <br>
+            <br>
+            The nullish operator is supported in all browsers since March 2020. 
+            <br>
+            <br>
+            <table class="table1">
+                <tr>
+                    <td><img src="Image4.svg.png" height="38" width="38" alt="Google Chrome"></td>
+                    <td><img src="Image5.png" height="38" width="38" alt="Microsoft Edge"></td>
+                    <td><img src="Image6.png" height="38" width="38" alt="Mozilla Firefox"></td>
+                    <td><img src="Image7.png" height="38" width="38" alt="Apple Safari"></td>
+                    <td><img src="Image8.png" height="38" width="38" alt="Opera"></td>
+                </tr>
+                <tr>
+                    <td>Chrome 80</td>
+                    <td>Edge 80</td>
+                    <td>Firefox 72</td>
+                    <td>Safari 13.1</td>
+                    <td>Opera 67</td>
+                </tr>
+                <tr>
+                    <td>Feb 2020</td>
+                    <td>Feb 2020</td>
+                    <td>Jan 2020</td>
+                    <td>Mar 2020</td>
+                    <td>Mar 2020</td>
+                </tr>
+            </table>
+        </div>
+
+        <hr>
+
+        <h2>
+            The Optional Chaining Operator (?.) 
+        </h2>
+
+        <div>
+            The <strong>Optional Chaining Operator</strong> returns <span class="edit">undefined</span> if an object is <span class="edit">undefined</span> or <span class="edit">null</span> (instead of throwing an error). 
+            <br>
+            Example:- 
+            <br>
+            <p id="demo10"></p>
+
+            <br>
+            <br>
+            The <span class="edit">?.=</span> is operator is supported in all browsers since March 2020. 
+            <br>
+            <br>
+            <table class="table1">
+                <tr>
+                    <td><img src="Image4.svg.png" height="38" width="38" alt="Google Chrome"></td>
+                    <td><img src="Image5.png" height="38" width="38" alt="Microsoft Edge"></td>
+                    <td><img src="Image6.png" height="38" width="38" alt="Mozilla Firefox"></td>
+                    <td><img src="Image7.png" height="38" width="38" alt="Apple Safari"></td>
+                    <td><img src="Image8.png" height="38" width="38" alt="Opera"></td>
+                </tr>
+                <tr>
+                    <td>Chrome 80</td>
+                    <td>Edge 80</td>
+                    <td>Firefox 74</td>
+                    <td>Safari 13.1</td>
+                    <td>Opera 67</td>
+                </tr>
+                <tr>
+                    <td>Feb 2020</td>
+                    <td>Feb 2020</td>
+                    <td>Mar 2020</td>
+                    <td>Mar 2020</td>
+                    <td>Mar 2020</td>
+                </tr>
+            </table>
+        </div>
+
+        <hr>
+
+        <h2>
+            The &&= Operator 
+        </h2>
+
+        <div>
+            The <strong>Logical AND Assignment Operator</strong> is used between two values. 
+            <br>
+            If the first value is <span class="edit">true</span>, the second value is assigned. 
+            <br>
+            Example:- 
+            <br>
+            <p id="demo11"></p>
+
+            <br>
+            The <span class="edit">&&=</span> operator is supported in all browsers since September 2020. 
+            <br>
+            <br>
+            <table class="table1">
+                <tr>
+                    <td><img src="Image4.svg.png" height="38" width="38" alt="Google Chrome"></td>
+                    <td><img src="Image5.png" height="38" width="38" alt="Microsoft Edge"></td>
+                    <td><img src="Image6.png" height="38" width="38" alt="Mozilla Firefox"></td>
+                    <td><img src="Image7.png" height="38" width="38" alt="Apple Safari"></td>
+                    <td><img src="Image8.png" height="38" width="38" alt="Opera"></td>
+                </tr>
+                <tr>
+                    <td>Chrome 85</td>
+                    <td>Edge 85</td>
+                    <td>Firefox 79</td>
+                    <td>Safari 14</td>
+                    <td>Opera 71</td>
+                </tr>
+                <tr>
+                    <td>Aug 2020</td>
+                    <td>Aug 2020</td>
+                    <td>Mar 2020</td>
+                    <td>Sep 2020</td>
+                    <td>Sep 2020</td>
+                </tr>
+            </table>
+        </div>
+
+        <hr>
+
+        <h2>
+            The ||= Operator 
+        </h2>
+
+        <div>
+            The <strong>Logical OR Assignment Operator</strong> is used between two values. 
+            <br>
+            If the first value is <span class="edit">false</span>, the second value is assigned. 
+            <br>
+            Example:- 
+            <br>
+            <p id="demo12"></p>
+
+            <br>
+            The <span class="edit">||=</span> operator is supported in all browsers since September 2020. 
+            <br>
+            <br>
+            <table class="table1">
+                <tr>
+                    <td><img src="Image4.svg.png" height="38" width="38" alt="Google Chrome"></td>
+                    <td><img src="Image5.png" height="38" width="38" alt="Microsoft Edge"></td>
+                    <td><img src="Image6.png" height="38" width="38" alt="Mozilla Firefox"></td>
+                    <td><img src="Image7.png" height="38" width="38" alt="Apple Safari"></td>
+                    <td><img src="Image8.png" height="38" width="38" alt="Opera"></td>
+                </tr>
+                <tr>
+                    <td>Chrome 85</td>
+                    <td>Edge 85</td>
+                    <td>Firefox 79</td>
+                    <td>Safari 14</td>
+                    <td>Opera 71</td>
+                </tr>
+                <tr>
+                    <td>Aug 2020</td>
+                    <td>Aug 2020</td>
+                    <td>Mar 2020</td>
+                    <td>Sep 2020</td>
+                    <td>Sep 2020</td>
+                </tr>
+            </table>
+        </div>
+
+        <hr>
+
+        <h2>
+            The ??= Operator 
+        </h2>
+
+        <div>
+            The <strong>Nullish Coalescing Assignment Operator</strong> is used between two values. 
+            <br>
+            If the first value is <span class="edit">undefined</span> or <span class="edit">null</span>, the second value is assigned. 
+            <br>
+            Example:- 
+            <br>
+            <p id="demo13"></p>
+
+            <br>
+            The <span class="edit">??=</span> operator is supported in all browsers since September 2020. 
+            <br>
+            <br>
+            <table class="table1">
+                <tr>
+                    <td><img src="Image4.svg.png" height="38" width="38" alt="Google Chrome"></td>
+                    <td><img src="Image5.png" height="38" width="38" alt="Microsoft Edge"></td>
+                    <td><img src="Image6.png" height="38" width="38" alt="Mozilla Firefox"></td>
+                    <td><img src="Image7.png" height="38" width="38" alt="Apple Safari"></td>
+                    <td><img src="Image8.png" height="38" width="38" alt="Opera"></td>
+                </tr>
+                <tr>
+                    <td>Chrome 85</td>
+                    <td>Edge 85</td>
+                    <td>Firefox 79</td>
+                    <td>Safari 14</td>
+                    <td>Opera 71</td>
+                </tr>
+                <tr>
+                    <td>Aug 2020</td>
+                    <td>Aug 2020</td>
+                    <td>Mar 2020</td>
+                    <td>Sep 2020</td>
+                    <td>Sep 2020</td>
+                </tr>
+            </table>
+        </div>
+
+        <script>
+            let a = 999999999999999;
+            let b = 9999999999999999; //too big
+            document.getElementById("demo1").innerHTML = a + "<br>" + b;
+
+            let c = BigInt("9999999999999999");
+            document.getElementById("demo2").innerHTML = b + "<br>" + c;
+
+            let d = 123456789012345678901234567890n;
+            let e = BigInt("123456789012345678901234567890");
+            document.getElementById("demo3").innerHTML = d + "<br>" + e;
+
+            document.getElementById("demo4").innerHTML = 
+            e + "<br>" + "The type of above number is:- " + typeof e;
+
+            let text1 = "I love cats. Cats are very easy to love. Cats are very popular.";
+            const iterator1 = text1.matchAll("Cats");
+            document.getElementById("demo5").innerHTML = Array.from(iterator1);
+
+            const iterator2 = text1.matchAll(/Cats/g);
+            document.getElementById("demo6").innerHTML = Array.from(iterator2);
+
+            const iterator3 = text1.matchAll(/Cats/gi);
+            document.getElementById("demo7").innerHTML = Array.from(iterator3);
+
+            let f = null;
+            let g = "missing";
+            document.getElementById("demo8").innerHTML = f ?? g;
+
+            let h = undefined;
+            document.getElementById("demo9").innerHTML = f ?? h;
+
+            const car1 = {type:"Fiat", model:"500", color:"white"};
+            let obj1 = car1?.name;
+            document.getElementById("demo10").innerHTML = obj1;
+
+            let i = 100;
+            i &&= 5;
+            document.getElementById("demo11").innerHTML = "Value of i is:- " + i;
+
+            let j = undefined;
+            j ||= 5;
+            document.getElementById("demo12").innerHTML = "Value of j is:- " + j;
+
+            let k = 100;
+            k ??= 5;
+            document.getElementById("demo13").innerHTML = "Value of k is:- " + k;
+
+            
+            
+        </script>
+    </body>
+</html>

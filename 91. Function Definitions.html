@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en-in">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+        JavaScript Function Definitions 
+    </title>
+    <style>
+        html {
+            font-size:62.5%;
+        }
+        body {
+            font-family:verdana, sans-serif;
+            font-size:2rem;
+            line-height:1.5;
+        }
+        .edit {
+            background-color:#f1f1f1;
+            color:red;
+        }
+        .edit1 {
+            background-color:rgba(255,255,0,0.3);
+            padding:2rem;
+        }
+    </style>
+</head>
+<body>
+    <h1>
+        JavaScript Function Definitions 
+    </h1>
+
+    <hr>
+
+    <div>
+        JavaScript functions are <strong>defined</strong> with the <span class="edit">function</span> keyword. 
+        <br>
+        You can use a function <strong>declaration</strong> or a function <strong>expression</strong>. 
+    </div>
+
+    <hr>
+
+    <h2>
+        Function Declarations 
+    </h2>
+
+    <div>
+        Earlier in this tutorial, you learned that functions are <strong>declared</strong> with the following syntax. 
+        <br>
+        <p class="edit1">
+            function <i>functionName</i>(<i>parameters</i>) {
+                <br>
+                //<i>code to be executed</i>
+                <br>
+            }
+        </p>
+        <br>
+        Declared functions are not executed immediately. They are "saved for later use", and will be executed later, when they are invoked (called upon). 
+        <br>
+        Example:- 
+        <br>
+        <p id="demo1"></p> 
+        <br>
+        <p class="edit1">
+            Semicolons are used to separate executable JavaScript statements. 
+            <br>
+            Since a function <strong>declaration</strong> is not an executable statement, it is not common to end it with a semicolon. 
+        </p>
+    </div>
+
+    <hr>
+
+    <h2>
+        Function Expressions 
+    </h2>
+
+    <div>
+        A JavaScript function can also be defined using an <strong>expression</strong>. 
+        <br>
+        A function expression can be stored in a variable. 
+        <br>
+        Example:- 
+        <br>
+        <p id="demo2"></p>
+
+        <br>
+        <br>
+        After a function expression has been stored in a variable, the variable can be used as a function. 
+        <br>
+        Example:- 
+        <br>
+        <p id="demo3"></p>
+
+        <br>
+        The function above is actually an <strong>anonymous function</strong> (a function without a name). 
+        <br>
+        Functions stored in variables do not need function names. They are always invoked (called) using the variable names. 
+        <br>
+        <p class="edit1">
+            The function above ends with a semicolon because it is a part of an executable statement. 
+        </p> 
+    </div>
+
+    <hr>
+    <br>
+    <hr>
+
+    <h2>
+        The Function() Constructor 
+    </h2>
+
+    <div>
+        As you have seen in the previous examples, JavaScript functions are defined with the <span class="edit">function</span> keyword. 
+        <br>
+        Functions can also be defined with a built-in JavaScript function constructor called <span class="edit">Function()</span>. 
+        <br>
+        Example:- 
+        <br>
+        <p id="demo4"></p>
+
+        <br>
+        You actually don't have to use the function constructor. The example above is the same as writing. 
+        <br>
+        Example:- 
+        <br>
+        <p id="demo5"></p>
+
+        <br>
+        <p class="edit1">
+            Most of the time, you can avoid using the <span class="edit">new</span> keyword in JavaScript. 
+        </p>
+    </div>
+
+    <hr>
+
+    <h2>
+        Function Hoisting 
+    </h2>
+
+    <div>
+        Earlier in this tutorial, you learned about "hoisting" (JavaScript Hoisting). 
+        <br>
+        Hoisting is JavaScript's default behavior of moving <strong>declarations</strong> to the top of the current scope. 
+        <br>
+        Hoisting applies to variable declarations and to function declarations. 
+        <br>
+        Because of this, JavaScript functions can be called before they are declared. 
+        <br>
+        <p class="edit1">
+            myFunction(5); 
+            <br>
+            function myFunction(y) {
+                <br>
+                return y * y; 
+                <br>
+            } 
+        </p> 
+        <br>
+        Functions defined using an expression are not hoisted. 
+    </div>
+
+    <hr>
+
+    <h2>
+        Self-Invoking Functions 
+    </h2>
+
+    <div>
+        Function expressions can be made "self-invoking". 
+        <br>
+        A self-invoking expression is invoked (started) automatically, without being called. 
+        <br>
+        Function expressions will execute automatically if the expression is followed by (). 
+        <br>
+        You cannot self-invoke a function declaration. 
+        <br>
+        You have to add parentheses around the function to indicate that it is a function expression. 
+        <br>
+        Example:- 
+        <br>
+        <p id="demo6"></p>
+
+        <br>
+        The function above is actually an <strong>anonymous self-invoking function</strong> (function without name).  
+    </div>
+
+    <hr>
+
+    <h2>
+        Functions Can Be Used as Values 
+    </h2>
+
+    <div>
+        JavaScript functions can be used as values. 
+        <br>
+        Example:- 
+        <br>
+        <p id="demo7"></p>
+
+        <br>
+        JavaScript functions can be used in expressions. 
+        <br>
+        Example:- 
+        <br>
+        <p id="demo8"></p>
+    </div>
+
+    <hr>
+
+    <h2>
+        Functions are Objects 
+    </h2>
+
+    <div>
+        The <span class="edit">typeof</span> operator in JavaScript returns "function" for functions. 
+        <br>
+        But, JavaScript functions can best be described as objects. 
+        <br>
+        JavaScript functions have both <strong>properties</strong> and <strong>methods</strong>. 
+        <br>
+        The <span class="edit">arguments.length</span> property returns the number of arguments received when the function was invoked. 
+        <br>
+        Example:- 
+        <br>
+        <p id="demo9"></p>
+
+        <br>
+        <br>
+        The <span class="edit">toString()</span> method returns the function as a string. 
+        <br>
+        Example:- 
+        <br>
+        <p id="demo10"></p>
+
+        <br>
+        <p class="edit1">
+            A function defined as the property of an object, is called a method to the object. 
+            <br>
+            A function designed to create new objects, is called an object constructor. 
+        </p>
+    </div>
+
+    <hr>
+
+    <h2>
+        Arrow Functions 
+    </h2>
+
+    <div>
+        Arrow functions allows a short syntax for writing function expressions. 
+        <br>
+        You don't need the <span class="edit">function</span> keyword, the <span class="edit">return</span> keyword, and the <strong>curly brackets</strong>. 
+        <br>
+        Example:- 
+        <br>
+        <p id="demo11"></p>
+
+        <br>
+        <br>
+        Arrow functions do not have their own <span class="edit">this</span>. They are not well suited for defining <strong>object methods</strong>. 
+        <br>
+        Arrow functions are not hoisted. They must be defined <strong>before</strong> they are used. 
+        <br>
+        Using <span class="edit">const</span> is safer than using <span class="edit">var</span>, because a function expression is always constant value. 
+        <br>
+        You can only omit the <span class="edit">return</span> keyword and the curly brackets if the function is a single statement. Because of this, it might be a good habit to always keep them. 
+        <br>
+        Example:- 
+        <br>
+        <p id="demo12"></p>
+        <br>
+        <p class="edit1">
+            Arrow functions are not supported in IE11 or earlier. 
+        </p>
+    </div>
+
+    <script>
+        var a = myFunction1(4,3);
+        document.getElementById("demo1").innerHTML = a;
+        function myFunction1(a,b) {
+            return a * b;
+        }
+
+        const b = function(a,b) {return a * b}; //Also a function constructor 
+
+        document.getElementById("demo2").innerHTML = b;
+
+        document.getElementById("demo3").innerHTML = b(4,3);
+        
+        //Function Constructor 
+        const myFunction2 = new Function("a", "b", "return a * b");
+        document.getElementById("demo4").innerHTML = myFunction2(4,3);
+        
+        //Function Constructor
+        const myFunction3 = function(x,y) {return x * y};
+        document.getElementById("demo5").innerHTML = myFunction3(4,3);
+
+        //Self-invoking functions
+        (function () {
+            document.getElementById("demo6").innerHTML = "Hello! I called myself.";
+        })();
+
+        function myFunction4(c,d) {
+            return c * d;
+        }
+
+        let c = myFunction4(4,3);
+        document.getElementById("demo7").innerHTML = c;
+
+        let d = myFunction4(4,3) * 2;
+        document.getElementById("demo8").innerHTML = d;
+
+        function myFunction5(a,b) {
+            return arguments.length;
+        }
+
+        document.getElementById("demo9").innerHTML = myFunction5(4,3);
+
+        document.getElementById("demo10").innerHTML = 
+        myFunction4.toString(); //or myFunction4 
+        
+        //ES5 
+        /*const e = function(x,y) {
+            return x * y;
+        }*/
+
+        //ES6 
+        const e = (x,y) => x * y; 
+        document.getElementById("demo11").innerHTML = e(5,5);
+
+        const f = (x,y) => {return x * y};
+        document.getElementById("demo12").innerHTML = f(5,5);
+
+    </script>
+</body>
+</html>

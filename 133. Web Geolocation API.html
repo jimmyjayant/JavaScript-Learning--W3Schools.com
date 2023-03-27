@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="en-in">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>
+            Web Geolocation API 
+        </title>
+        <style>
+            html {
+                font-size:calc(10px + 0.390625vw);
+            }
+
+            body {
+                font-family:verdana, sans-serif;
+                font-size:1rem;
+                line-height:1.5;
+            }
+
+            .edit {
+                background-color:#f1f1f1;
+                color:red;
+            }
+
+            .edit1 {
+                background-color:rgba(255,2550,0,0.3);
+                padding:1rem;
+            }
+
+            .table1 {
+                width: 100%;
+                border:1px solid #ddd;
+                border-collapse:collapse;
+            }
+
+            .table1 tr {
+                height:3rem;
+            }
+
+            .table1 tr:nth-child(even) {
+                background-color:#f1f1f1;
+            }
+
+            .table1 td {
+                text-align:center;
+                padding:0.5rem;
+                border:1px solid #ddd;
+            }
+
+            .table2 th {
+                text-align:left;
+                padding:0.5rem;
+            }
+
+            .table2 td {
+                border:none;
+                text-align:left;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>
+            Web Geolocation API 
+        </h1>
+
+        <hr>
+
+        <h2>
+            Locate the User's Position 
+        </h2>
+
+        <div>
+            The HTML Geolocation API is used to get the geographical position of a user. 
+            <br>
+            Since this can compromise privacy, the position is not available unless the user approves it. 
+            <br>
+            <div class="edit1">
+                <span style="font-size:2rem;font-weight:bold;">Note</span>
+                <br>
+                <p>
+                    Geolocation is most accurate for devices with GPS, like smartphones. 
+                </p>
+            </div>
+        </div>
+
+        <hr>
+
+        <h2>
+            Browser Support 
+        </h2>
+
+        <div>
+            The Geolocation API is supported in all browsers. 
+            <br>
+            <br>
+            <table class="table1">
+                <tr>
+                    <td><img src="Image4.svg.png" height="35" width="35" alt="Google Chrome"></td>
+                    <td><img src="Image5.png" height="35" width="35" alt="Microsoft Edge"></td>
+                    <td><img src="Image6.png" height="35" width="35" alt="Mozilla Firefox"></td>
+                    <td><img src="Image7.png" height="35" width="35" alt="Apple Safari"></td>
+                    <td><img src="Image8.png" height="35" width="35" alt="Opera"></td>
+                </tr>
+                <tr>
+                    <td>Yes</td>
+                    <td>Yes</td>
+                    <td>Yes</td>
+                    <td>Yes</td>
+                    <td>Yes</td>
+                </tr>
+            </table>
+        </div>
+
+        <hr>
+
+        <div class="edit1">
+            <span style="font-size:2rem;font-weight:bold;">Note</span>
+            <br>
+            <p>
+                The Geolocation API will only work on secure contexts such as HTTPS. 
+                <br>
+                If your site is hosted on a non-secure origin (such as HTTP) the requests to get the users location will no longer function. 
+            </p>
+        </div>
+
+        <hr>
+
+        <h2>
+            Using the Geolocation API 
+        </h2>
+
+        <div>
+            The <span class="edit">getCurrentPosition()</span> method is used to return the user's position. 
+            <br>
+            The example below returns the latitude and longitude of the user's position. 
+            <br>
+            Example:- 
+            <br>
+            <p>
+                Click the button to get your coordinates. 
+            </p>
+
+            <button onclick="getLocation1()">Try It</button>
+
+            <p id="demo1"></p>
+
+            <br>
+            Example explained:- 
+            <br>
+            <ul>
+                <li>Check if Geolocation is supported</li>
+                <li>If supported, run the getCurrentPosition() method. If not, display a message to the user.</li>
+                <li>If the getCurrentPosition() method is successful, it returns a coordinates object to the function specified in the parameter (showPosition)</li>
+                <li>The showPosition() function outputs the Latitude and Longitude.</li>
+            </ul>
+
+            <br>
+            The example above is a very basic Geolocation script, with no error handling. 
+        </div>
+
+        <hr>
+        <br>
+        <br>
+        <hr>
+
+        <h2>
+            Handling Errors and Rejections 
+        </h2>
+
+        <div>
+            The second parameter of the <span class="edit">getCurrentPosition()</span> method is used to handle errors. It specifies a function to run if it fails to get the user's location. 
+            <br>
+            Example:- 
+            <br>
+            <p>
+                Click the button to get your coordinates. 
+            </p>
+
+            <button onclick="getLocation2()">Try It</button>
+
+            <p id="demo2"></p>
+        </div>
+
+        <hr>
+
+        <h2>
+            Displaying the Result in a Map 
+        </h2>
+
+        <div>
+            To display the result in a map, you need access to a map service, like Google Maps. 
+            <br>
+            In the example below, the returned latitude and longitude is used to show the location in a Google Map (using a static image). 
+            <br>
+            Example:- 
+            <br>
+            Click the button below to show your location in the map. 
+            <br>
+            <button onclick="getLocation3()">Try It</button>
+
+            <br>
+            <p id="demo3"></p>
+            <br>
+
+            <img id="mapholder" src="" alt="Google Map Current Location">
+
+            <br>
+
+            <p style="background-color:rgba(255,0,0,0.1);padding:1rem;font-weight:bold;color:red;">
+            There is a problem in using "key=YOUR_KEY" in the showPosition function. Instead use the API key from the google. To get the API key, search the google for "google map api key". 
+            </p>
+        </div>
+
+        <hr>
+
+        <h2>
+            Location-specific Information 
+        </h2>
+
+        <div>
+            This page has demonstrated how to show a user's position on a map. 
+            <br>
+            Geolocation is also very useful for location-specific information, like:- 
+            <br>
+            <ul>
+                <li>Up-to-date local information</li>
+                <li>Showing Points-of-interest near the user</li>
+                <li>Turn-by-turn navigation (GPS)</li>
+            </ul>
+        </div>
+
+        <hr>
+
+        <h2>
+            The getCurrentPosition() Method - Return Data 
+        </h2>
+
+        <div>
+            The <span class="edit">getCurrentPosition()</span> method returns an object on success. The latitude, longitude and accuracy properties are always returned. The other properties are returned if available. 
+            <br>
+            <br>
+            <table class="table1 table2">
+                <tr>
+                    <th>Property</th>
+                    <th>Returns</th>
+                </tr>
+                <tr>
+                    <td>coords.latitude</td>
+                    <td>The latitude as a decimal number (always returned)</td>
+                </tr>
+                <tr>
+                    <td>coords.longitude</td>
+                    <td>The longitude as a decimal number (always returned)</td>
+                </tr>
+                <tr>
+                    <td>coords.accuracy</td>
+                    <td>The accuracy of position (always returned)</td>
+                </tr>
+                <tr>
+                    <td>coords.altitude</td>
+                    <td>The altitude in meters above the mean sea level (returned if available)</td>
+                </tr>
+                <tr>
+                    <td>coords.altitudeAccuracy</td>
+                    <td>The altitude accuracy of position (returned if available)</td>
+                </tr>
+                <tr>
+                    <td>coords.heading</td>
+                    <td>The heading as degrees clockwise from North (returned if available)</td>
+                </tr>
+                <tr>
+                    <td>coords.speed</td>
+                    <td>The speed in meters per second (returned if available)</td>
+                </tr>
+                <tr>
+                    <td>timestamp</td>
+                    <td>The date/time of the response (returned if available)</td>
+                </tr>
+            </table>
+        </div>
+
+        <hr>
+
+        <h2>
+            Geolocation Object - Other interesting Methods 
+        </h2>
+
+        <div>
+            The Geolocation object also has other interesting methods:- 
+            <br>
+            <ul>
+                <li><span class="edit">watchPosition()</span> - Returns the current position of the user and continues to return updated position as the user moves (like the GPS in a car).</li>
+                <li><span class="edit">clearWatch()</span> - Stops the <span class="edit">watchPosition()</span> method.</li>
+            </ul>
+
+            <br>
+            The example below shows the <span class="edit">watchPosition()</span> method. You need an accurate GPS device to test this (like smartphone). 
+            <br>
+            Example:- 
+            <br>
+            <p>
+                Click the button to get your coordinates. 
+            </p>
+
+            <button onclick="getLocation4()">Try It</button>
+
+            <br>
+
+            <p id="demo4"></p>
+        </div>
+
+        <script>
+            const a = document.getElementById("demo1");
+
+            function getLocation1() {
+                if(navigator.geolocation) {
+                    navigator.geolocation.getCurrentPosition(showPosition1);
+                }
+                else {
+                    a.innerHTML = "Geolocation is not supported by this browser.";
+                }
+            }
+
+            function showPosition1(position) {
+                a.innerHTML = "Latitude: " + position.coords.latitude + 
+                "<br>Longitude: " + position.coords.longitude;
+            }
+
+            const b = document.getElementById("demo2");
+
+            function getLocation2() {
+                if(navigator.geolocation) {
+                    navigator.geolocation.getCurrentPosition(showPosition2, showError);
+                }
+                else {
+                    b.innerHTML = "Geolocation is not supported by this browser.";
+                }
+            }
+
+            function showPosition2(position) {
+                b.innerHTML = "Latitude: " + position.coords.latitude + 
+                "<br>Longitude: " + position.coords.longitude;
+            }
+
+            function showError(error) {
+                switch(error.code) {
+                    case error.PERMISSION_DENIED: 
+                    b.innerHTML = "User denied the request for Geolocation.";
+                    break;
+
+                    case error.POSITION_UNAVAILABLE: 
+                    b.innerHTML = "Location information is unavailable.";
+                    break;
+
+                    case error.TIMEOUT: 
+                    b.innerHTML = "The request to get user location timed out.";
+                    break;
+
+                    case error.UNKNOWN_ERROR: 
+                    b.innerHTML = "An unknown error occurred.";
+                    break;
+                }
+                
+            }
+            
+            const c = document.getElementById("demo3");
+
+            function getLocation3() {
+              if(navigator.geolocation) {
+                navigator.geolocation.getCurrentPosition(showPosition3);
+              }
+              else {
+                c.innerHTML = "Geolocation is not supported by this browser.";
+              }
+            }
+
+            const d = document.getElementById("mapholder");
+
+            function showPosition3(position) {
+                let latlon = position.coords.latitude + "," + position.coords.longitude;
+
+                let img_url = "https://maps.googleapis.com/maps/api/staticmap?center="+latlon+"&zoom=14&size=1000x1900&sensor=false&key=AIzaSyAa8HeLH2lQMbPeOiMlM9D1VxZ7pbGQq8o";
+
+                d.src = img_url;
+            }
+
+            const e = document.getElementById("demo4");
+
+            function getLocation4() {
+                if(navigator.geolocation) {
+                    navigator.geolocation.watchPosition(showPosition4);
+                }
+                else {
+                    e.innerHTML = "Geolocation is not supported by this browser.";
+                }
+            }
+
+            function showPosition4(position) {
+                e.innerHTML = "Latitude: " + position.coords.latitude + 
+                "<br>Longitude: " + position.coords.longitude;
+            }
+        </script>
+
+    </body>
+</html>

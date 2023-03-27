@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            JavaScript Hoisting 
+        </title>
+        <style>
+            .edit {
+                background-color:#f1f1f1;
+                color:red;
+            }
+            .edit1 {
+                background-color:rgba(255,255,0,0.3);
+                padding:20px;
+            }
+            body {
+                font-family:verdana, sans-serif;
+                font-size:20px;
+                line-height:1.5;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>
+            JavaScript Hoisting 
+        </h1>
+
+        <div>
+            Hoisting is JavaScript's default behavior of moving declarations to the top. 
+        </div>
+
+        <hr>
+
+        <h2>
+            JavaScript Declarations are Hoisted 
+        </h2>
+
+        <div>
+            In JavaScript, a variable can be declared after it has been used. 
+            <br>
+            In other words; a variable can be used before it has been declared. 
+            <br>
+            <strong>Example 1</strong> gives the same result as <strong>Example 2</strong>: 
+            <br>
+            Example 1:- 
+            <br>
+            <p id="demo1"></p>
+
+            <br>
+            <br>
+            Example 2:- 
+            <br>
+            <p id="demo2"></p>
+
+            <br>
+            To understand this, you have to understand the term "hoisting". 
+            <br>
+            Hoisting is JavaScript's default behavior of moving all declarations to the top of the current scope (to the top of the current script or the current function). 
+        </div>
+
+        <hr>
+
+        <h2>
+            The let and const Keywords 
+        </h2>
+
+        <div>
+            Variables defined with <span class="edit">let</span> and <span class="edit">const</span> are hoisted to the top of the block, but not <i>initialized</i>. 
+            <br>
+            Meaning: The block of code is aware of the variable, but it cannot be used until it has been declared. 
+            <br>
+            Using a <span class="edit">let</span> variable before it is declared will result in a <span class="edit">ReferenceError</span>. 
+            <br>
+            The variable is in a "temporal dead zone" from the start of the block until it is declared. 
+            <br>
+            Example:- 
+            <br>
+            This will result in a <span class="edit">ReferenceError</span>: 
+            <br>
+            <p id="demo3"></p>
+
+            <br>
+            <br>
+            Using a <span class="edit">const</span> variable before it is declared, is a syntax error, so the code will simply not run. 
+            <br>
+            Example:- 
+            <br>
+            This code will not run. 
+            <br>
+            <p class="edit1">
+                carName2 = "Volvo";
+                <br>
+                const carName2;
+                <br>
+                //This will result in Syntax Error because const variables must be initialized when declared. 
+            </p>
+        </div>
+
+        <hr>
+
+        <h2>
+            JavaScript Initializations are Not Hoisted 
+        </h2>
+
+        <div>
+            JavaScript only hoists declarations, not initializations. 
+            <br>
+            <strong>Example 1</strong> does <strong>not</strong> give the same result as <strong>Example 2</strong>. 
+            <br>
+            Example 1:- 
+            <br>
+            <p id="demo4"></p>
+
+            <br>
+            <br>
+            Example 2:- 
+            <br>
+            <p id="demo5"></p>
+
+            <br>
+            <br>
+            Does it make sense that d is undefined in the last example? 
+            <br>
+            This is because only the declaration (var d), not the initialization (=7) is hoisted to the top. 
+            <br>
+            Because of hoisting, d has been declared before it is used, but because initializations are not hoisted, the value of d is undefined. 
+            <br>
+            Example 2 is the same as writing. 
+            <br>
+            <p class="edit1">
+                var c = 5; //Initialize c 
+                <br>
+                var d; //Declare d 
+                <br>
+                elem4 = document.getElementById("demo6"); //Find an element 
+                <br>
+                elem4.innerHTML = c + " " + d; //Display c and d 
+                <br>
+                d = 7; //Assign 7 to y 
+            </p>
+            <br>
+            Example:- 
+            <br>
+            <p id="demo6"></p>
+        </div>
+
+        <hr>
+
+        <h2>
+            Declare Your Variables At the Top! 
+        </h2>
+
+        <div>
+            Hoisting is (to many developers) an unknown or overlooked behavior of JavaScript. 
+            <br>
+            If a developer doesn't understand hoisting, programs may contain bugs (errors). 
+            <br>
+            To avoid bugs, always declare all variables at the beginning of every scope. 
+            <br>
+            Since this is how JavaScript interprets the code, it is always a good rule. 
+            <br>
+            <br>
+            <p class="edit1">
+                JavaScript in strict mode does not allow variables to be used if they are not declared. 
+            </p> 
+        </div>
+
+        <script>
+            x = 5; //Assign 5 to x 
+
+            elem = document.getElementById("demo1");  //Find an element 
+            elem.innerHTML = x;  //Display x in the element 
+
+            var x;  //Declare x 
+
+            var y; //Declare y 
+            y = 5; //Assign 5 to y 
+            elem1 = document.getElementById("demo2"); //Find an element
+            elem1.innerHTML = y;  //Display y in the element 
+            
+
+            try {
+                carName1 = "Saab";
+                let carName1 = "Volvo";
+            }
+            catch(err)
+            {
+                document.getElementById("demo3").innerHTML = err;
+            }
+
+            var a = 5; //Initialize a
+            var b = 7; //Initialize b
+
+            elem2 = document.getElementById("demo4");   //Find an element 
+            elem2.innerHTML = a + " " + b;  //Display a and b 
+
+            var c = 5; //Initialize c 
+            elem3 = document.getElementById("demo5");  //Find an element
+            elem3.innerHTML = "c is " + c + " and d is " + d; //Display c and d 
+
+            var d = 7;  //Initialize d 
+
+            var e = 5; //Initialize e
+            var f; //Declare f 
+
+            elem4 = document.getElementById("demo6"); //Find an element
+            elem4.innerHTML = e + " " + f; //Display e and f 
+            f = 7; //Assign 7 to f
+
+        </script>
+    </body>
+</html>

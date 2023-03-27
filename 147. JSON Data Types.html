@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en-in">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>
+            JSON Data Types 
+        </title>
+        <style>
+            html {
+                font-size:calc(10px + 0.390625vw);
+            }
+
+            body {
+                font-size:1rem;
+                font-family:Verdana, sans-serif;
+                line-height:1.5;
+            }
+
+            .edit {
+                background-color:#f1f1f1;
+                color:Red;
+            }
+
+            .edit1 {
+                background-color:rgba(255,255,0,0.3);
+                padding:2rem;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>
+            JSON Data Types 
+        </h1>
+
+        <hr>
+
+        <h2>
+            Valid Data Types 
+        </h2>
+
+        <div>
+            In JSON, values must be one of the following data types:- 
+            <br>
+            <ul>
+                <li>a string</li>
+                <li>a number</li>
+                <li>an object (JSON Object)</li>
+                <li>an array</li>
+                <li>a boolean</li>
+                <li><i>null</i></li>
+            </ul>
+
+            <br>
+
+            <div style="background-color:rgba(255,0,0,0.2);padding:1rem;">
+            JSON values <b>cannot</b> be one of the following data types:- 
+            <br>
+            <ul>
+                <li>a function</li>
+                <li>a date</li>
+                <li><i>undefined</i></li>
+            </ul>
+            </div>
+        </div>
+
+        <hr>
+
+        <h2>
+            JSON Strings 
+        </h2>
+
+        <div>
+            Strings in JSON must be written in double quotes. 
+            <br>
+            Example:- 
+            <br>
+            <p class="edit1">
+                {"name":"John"} 
+            </p>
+        </div>
+
+        <hr>
+
+        <h2>
+            JSON Numbers 
+        </h2>
+
+        <div>
+            Numbers in JSON must be an integer or a floating point. 
+            <br>
+            Example:- 
+            <br>
+            <p class="edit1">
+                {"age":30} 
+            </p>
+        </div>
+
+        <hr>
+
+        <h2>
+            JSON Objects 
+        </h2>
+
+        <div>
+            Values in JSON can be objects. 
+            <br>
+            Example:- 
+            <br>
+            <p class="edit1">
+                {
+                    <br>
+                    "employee":{"name":"John", "age":30, "city":"New York"} 
+                    <br>
+                }
+            </p>
+            <br>
+            <p class="edit1">
+                Objects as values in JSON must follow the JSON syntax. 
+            </p>
+        </div>
+
+        <hr>
+        <br>
+        <br>
+        <hr>
+
+        <h2>
+            JSON Arrays 
+        </h2>
+
+        <div>
+            Values in JSON can be arrays. 
+            <br>
+            Example:- 
+            <br>
+            <p class="edit1">
+                {
+                    <br>
+                    "employees":["John", "Anna", "Peter"] 
+                    <br>
+                }
+            </p>
+        </div>
+
+        <hr>
+
+        <h2>
+            JSON Booleans 
+        </h2>
+
+        <div>
+            Values in JSON can be true/false. 
+            <br>
+            Example:- 
+            <br>
+            <p class="edit1">
+                {"sale":true} 
+            </p>
+        </div>
+
+        <hr>
+
+        <h2>
+            JSON null 
+        </h2>
+
+        <div>
+            Values in JSON can be null. 
+            <br>
+            Example:- 
+            <br>
+            <p class="edit1">
+                {"middlename":null} 
+            </p>
+        </div>
+    </body>
+</html>

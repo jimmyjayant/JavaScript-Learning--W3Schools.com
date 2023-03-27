@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en-in">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>
+            Web History API 
+        </title>
+        <style>
+            html {
+                font-size:calc(10px + 0.390625vw);
+            }
+
+            body {
+                font-size:1rem;
+                font-family:verdana, sans-serif;
+                line-height:1.5;
+            }
+
+            .edit {
+                background-color:#f1f1f1;
+                color:red;
+            }
+
+            .edit1 {
+                background-color:rgba(255,255,0,0.3);
+                padding:2rem;
+            }
+            
+            .table1 {
+                width:100%;
+                border:1px solid #ddd;
+                border-collapse:collapse;
+            }
+
+            .table1 tr {
+                height:3rem;
+            }
+
+            .table1 tr:nth-child(even) {
+                background-color:#f1f1f1;
+            }
+
+            .table1 td {
+                text-align:center;
+                padding:0.5rem;
+                border:1px solid #ddd;
+            }
+
+            .table2 {
+                width: 100%;
+                border:1px solid #ddd;
+                border-collapse:collapse;
+            }
+
+            .table2 tr {
+                height:3rem;
+            }
+
+            .table2 tr:nth-child(even) {
+                background-color:#f1f1f1;
+            }
+
+            .table2 td {
+                padding:0.5rem;
+            }
+
+            .table2 th {
+                text-align:left;
+                padding:0.5rem;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>
+            Web History API 
+        </h1>
+        
+        <div>
+        <p style="background-color:rgba(0,255,0,0.2);padding:2rem;">
+        The Web History API provides easy methods to access the windows.history object. 
+        <br>
+        The window.history object contains the URLs (Web Sites) visited by the user. 
+        </p>
+
+        <br>
+
+        The Web History API is supported in all browsers. 
+        <br>
+        <br>
+        <table class="table1">
+            <tr>
+                <td><img src="Image4.svg.png" height="35" width="35" alt="Google Chrome"></td>
+                <td><img src="Image5.png" height="35" width="35" alt="Microsoft Edge"></td>
+                <td><img src="Image6.png" height="35" width="35" alt="Mozilla Firefox"></td>
+                <td><img src="Image7.png" height="35" width="35" alt="Apple Safari"></td>
+                <td><img src="Image8.png" height="35" width="35" alt="Opera"></td>
+            </tr>
+            <tr>
+                <td>Yes</td>
+                <td>Yes</td>
+                <td>Yes</td>
+                <td>Yes</td>
+                <td>Yes</td>
+            </tr>
+        </table>
+        </div>
+
+        <hr>
+
+        <h2>
+            The History back() Method 
+        </h2>
+
+        <div>
+            The back() method loads the previous URL in the window.history list. 
+            <br>
+            It is the same as clicking the "back arrow" in your browser. 
+            <br>
+            Example:- 
+            <br>
+            <button onclick="myFunction1()">Go Back</button>
+        </div>
+
+        <hr>
+
+        <h2>
+            The History go() Method 
+        </h2>
+
+        <div>
+            The go() method loads a specific URL from the history list. 
+            <br>
+            Example:- 
+            <br>
+            <button onclick="myFunction2()">Go Back 2 Pages</button>
+        </div>
+
+        <hr>
+
+        <h2>
+            History Object Properties 
+        </h2>
+
+        <div>
+            <table class="table2">
+                <tr>
+                    <th>Property</th>
+                    <th>Description</th>
+                </tr>
+                <tr>
+                    <td>length</td>
+                    <td>Returns the number of URLs in the history list</td>
+                </tr>
+            </table>
+        </div>
+
+        <h2>
+            History Object Methods 
+        </h2>
+
+        <div>
+            <table class="table2">
+                <tr>
+                    <th>Method</th>
+                    <th>Description</th>
+                </tr>
+                <tr>
+                    <td>back()</td>
+                    <td>Loads the previous URL in the history list</td>
+                </tr>
+                <tr>
+                    <td>forward()</td>
+                    <td>Loads the next URL in the history list</td>
+                </tr>
+                <tr>
+                    <td>go()</td>
+                    <td>Loads a specific URL from the history list</td>
+                </tr>
+            </table>
+        </div>
+
+        <script>
+            function myFunction1() {
+                window.history.back();
+            }
+
+            function myFunction2() {
+                window.history.go(-2);
+            }
+        </script>
+    </body>
+</html>

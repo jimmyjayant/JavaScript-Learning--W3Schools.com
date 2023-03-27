@@ -1,0 +1,515 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            JavaScript Assignment 
+        </title>
+        <style>
+            .edit {
+                background-color:#f1f1f1;
+                color:red;
+            }
+            .edit1 {
+                background-color:rgba(255,255,0,0.3);
+                padding:20px;
+            }
+            .table1 {
+                width: 100%;
+                border:1px solid #ddd;
+                border-collapse:collapse;
+            }
+            .table1 tr {
+                height:40px;
+            }
+            .table1 tr:nth-child(even) {
+                background-color:#f1f1f1;
+            }
+            .table1 td {
+                text-align:center;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>
+            JavaScript Assignment 
+        </h1>
+        
+        <hr>
+
+        <h2>
+            JavaScript Assignment Operators 
+        </h2>
+
+        <p>
+            Assignment Operators assign values to JavaScript variables. 
+            <br>
+            <table class="table1">
+                <tr>
+                    <th>Operator</th>
+                    <th>Example</th>
+                    <th>Same As</th>
+                </tr>
+                <tr>
+                    <td>=</td>
+                    <td>x = y</td>
+                    <td>x = y</td>
+                </tr>
+                <tr>
+                    <td>+=</td>
+                    <td>x += y</td>
+                    <td>x = x + y</td>
+                </tr>
+                <tr>
+                    <td>-=</td>
+                    <td>x -= y</td>
+                    <td>x = x - y</td>
+                </tr>
+                <tr>
+                    <td>*=</td>
+                    <td>x *= y</td>
+                    <td>x = x * y</td>
+                </tr>
+                <tr>
+                    <td>/=</td>
+                    <td>x /= y</td>
+                    <td>x = x / y</td>
+                </tr>
+                <tr>
+                    <td>%=</td>
+                    <td>x %= y</td>
+                    <td>x = x % y</td>
+                </tr>
+                <tr>
+                    <td>**=</td>
+                    <td>x **= y</td>
+                    <td>x = x ** y</td>
+                </tr>
+            </table>
+        </p>
+
+        <hr>
+
+        <h2>
+            Shift Assignment Operators 
+        </h2>
+
+        <table class="table1">
+            <tr>
+                <th>Operator</th>
+                <th>Example</th>
+                <th>Same As</th>
+            </tr>
+            <tr>
+                <td>&lt; &lt; = </td>
+                <td>x &lt; &lt; = y</td>
+                <td>x = x &lt; &lt; y</td>
+            </tr>
+            <tr>
+                <td>&gt; &gt; = </td>
+                <td>x &gt; &gt;= y</td>
+                <td>x = x &gt; &gt; y</td>
+            </tr>
+            <tr>
+                <td>&gt; &gt; &gt;= </td>
+                <td>x &gt; &gt; &gt;= y</td>
+                <td>x = x &gt; &gt; &gt; y</td>
+            </tr>
+        </table>
+
+        <hr>
+
+        <h2>
+            Bitwise Assignment Operators 
+        </h2>
+
+        <table class="table1">
+            <tr>
+                <th>Operator</th>
+                <th>Example</th>
+                <th>Same As</th>
+            </tr>
+            <tr>
+                <td>&=</td>
+                <td>x &= y</td>
+                <td>x = x & y</td>
+            </tr>
+            <tr>
+                <td>^=</td>
+                <td>x ^= y</td>
+                <td>x = x ^ y</td>
+            </tr>
+            <tr>
+                <td>|=</td>
+                <td>x |= y</td>
+                <td>x = x|y</td>
+            </tr>
+        </table>
+
+        <hr>
+
+        <h2>
+            Logical Assignment Operators 
+        </h2>
+
+        <table class="table1">
+            <tr>
+                <th>Operator</th>
+                <th>Example</th>
+                <th>Same As</th>
+            </tr>
+            <tr>
+                <td>&&=</td>
+                <td>x &&= y</td>
+                <td>x = x && (x = y)</td>
+            </tr>
+            <tr>
+                <td>||=</td>
+                <td>x ||= y</td>
+                <td>x = x || (x = y)</td>
+            </tr>
+            <tr>
+                <td>??=</td>
+                <td>x ??= y</td>
+                <td>x = x ?? (x = y)</td>
+            </tr>
+        </table>
+
+        <br>
+
+        <p class="edit1">
+            <span style="font-size:30px;">Note</span>
+            <br>
+            The Logical assignment operators are ES2020. 
+        </p>
+
+        <hr>
+
+        <h2>
+            The = Operator 
+        </h2>
+
+        <p>
+            The <strong>Simple Assignment Operator</strong> assigns a value to a variable. 
+            <br>
+            Example:- 
+            <br>
+            <p id="demo1"></p>
+            <br>
+            <br>
+            Another Example:- 
+            <br>
+            <p id="demo2"></p>
+        </p>
+
+        <hr>
+
+        <h2>
+            The += Operator 
+        </h2>
+
+        <p>
+            The <strong>Addition Assignment Operator</strong> adds a value to a variable. 
+            <br>
+            Example:- 
+            <br>
+            <p id="demo3"></p>
+            <br>
+            <br>
+            Another Example:- 
+            <br>
+            <p id="demo4"></p>
+        </p>
+
+        <hr>
+
+        <h2>
+            The -= Operator 
+        </h2>
+
+        <p>
+            The <strong>Subtraction Assignment Operator</strong> subtracts a value from a variable. 
+            <br>
+            Example:- 
+            <br>
+            <p id="demo5"></p>
+        </p>
+
+        <hr>
+
+        <h2>
+            The *= Operator 
+        </h2>
+
+        <p>
+            The <strong>Multiplication Assignment Operator</strong> multiplies a variable. 
+            <br>
+            Example:- 
+            <br>
+            <p id="demo6"></p>
+        </p>
+
+        <hr>
+
+        <h2>
+            The **= Operator 
+        </h2>
+
+        <p>
+            The <strong>Exponentiation Assignment Operator</strong> raises a variable to the power of the operand. 
+            <br>
+            Example:- 
+            <br>
+            <p id="demo7"></p>
+        </p>
+
+        <hr>
+
+        <h2>
+            The /= Operator 
+        </h2>
+
+        <p>
+            The <strong>Division Assignment Operator</strong> divides a variable. 
+            <br>
+            Example:- 
+            <br>
+            <p id="demo8"></p>
+        </p>
+
+        <hr>
+
+        <h2>
+            The %= Operator 
+        </h2>
+
+        <p>
+            The <strong>Remainder Assignment Operator</strong> assigns a remainder to a variable. 
+            <br>
+            Example:- 
+            <br>
+            <p id="demo9"></p>
+        </p>
+
+        <hr>
+        <br>
+        <br>
+        <hr>
+
+        <h2>
+            The &lt; &lt; = Operator 
+        </h2>
+
+        <p>
+            The <strong>Left Shift Assignment Operator</strong> left shifts a variable. 
+            <br>
+            Example:- 
+            <br>
+            <p id="demo10"></p>
+        </p>
+
+        <hr>
+
+        <h2>
+            The &gt; &gt; = Operator 
+        </h2>
+
+        <p>
+            The <strong>Right Shift Assignment Operator</strong> right shifts a variable (signed). 
+            <br>
+            Example:- 
+            <br>
+            <p id="demo11"></p>
+        </p>
+
+        <hr>
+
+        <h2>
+            The &gt; &gt; &gt;= Operator 
+        </h2>
+
+        <p>
+            The <strong>Unsigned Right Shift Assignment Operator</strong> right shifts a variable (unsigned). 
+            <br>
+            Example:- 
+            <br>
+            <p id="demo12"></p>
+        </p>
+
+        <hr>
+
+        <h2>
+            The &= Operator 
+        </h2>
+
+        <p>
+            The <strong>Bitwise AND Assignment Operator</strong> does a bitwise AND operation on two operands and assigns the result to the other variable. 
+            <br>
+            Example:- 
+            <br>
+            <p id="demo13"></p>
+        </p>
+
+        <hr>
+
+        <h2>
+            The |= Operator 
+        </h2>
+
+        <p>
+            The <strong>Bitwise OR Assignment Operator</strong> does a bitwise OR operation on two operands and assigns the result to the variable. 
+            <br>
+            Example:- 
+            <br>
+            <p id="demo14"></p>
+        </p>
+
+        <hr>
+
+        <h2>
+            The ^= Operator 
+        </h2>
+
+        <p>
+            The <strong>Bitwise XOR Assignment Operator</strong> does a bitwise XOR operation on two operands and assigns the result to the variable. 
+            <br>
+            Example:- 
+            <br>
+            <p id="demo15"></p>
+        </p>
+
+        <hr>
+
+        <h2>
+            The &&= Operator 
+        </h2>
+
+        <p>
+            The <strong>Logical AND assignment operator</strong> is used between two values. 
+            <br>
+            If the first value is true, the second value is assigned. 
+            <br>
+            Example:- 
+            <br>
+            <p id="demo16"></p>
+            <br>
+            <br>
+            <p class="edit1">
+                The <span class="edit">&&=</span> operator is an ES2020 feature. 
+            </p>
+        </p>
+
+        <hr>
+
+        <h2>
+            The ||= Operator 
+        </h2>
+
+        <p>
+            The <strong>Logical OR assignment operator</strong> is used between two values. 
+            <br>
+            If the first value is false, the second value is assigned. 
+            <br>
+            Example:- 
+            <br>
+            <p id="demo17"></p>
+            <br>
+            <br>
+            <p class="edit1">
+                The <span class="edit">||=</span> operator is an ES2020 feature. 
+            </p>
+        </p>
+
+        <hr>
+
+        <h2>
+            The ??= Operator 
+        </h2>
+
+        <p>
+            The <strong>Nullish coalescing assignment operator</strong> is used between two values. 
+            <br>
+            If the first value is undefined or null, the second value is assigned. 
+            <br>
+            Example:- 
+            <br>
+            <p id="demo18"></p>
+            <br>
+            <br>
+            <p class="edit1">
+                The <span class="edit">??=</span> operator is an ES2020 feature. 
+            </p>
+        </p>
+    <script>
+       let x = 10;
+       document.getElementById("demo1").innerHTML = "The Value of x is:- " + x;
+
+       let y = 50;
+       let z = 10 + y;
+       document.getElementById("demo2").innerHTML = "Value of z is:- " + z;
+
+       let a = 10;
+       a += 5;
+       document.getElementById("demo3").innerHTML = "The Value of a is:- " + a;
+
+       let text = "Hello";
+       text += " World";
+       document.getElementById("demo4").innerHTML = text;
+
+       let b = 10;
+       b -= 5;
+       document.getElementById("demo5").innerHTML = "The Value of b is:- " + b;
+
+       let c = 10;
+       c *= 5;
+       document.getElementById("demo6").innerHTML = "The Value of c is:- " + c;
+
+       let d = 10;
+       d **= 5;
+       document.getElementById("demo7").innerHTML = "The value of d is:- " + d;
+
+       let e = 10;
+       e /= 5;
+       document.getElementById("demo8").innerHTML = e;
+
+       let f = 10;
+       f %= 5;
+       document.getElementById("demo9").innerHTML = "The Value of f is:- " + f;
+
+       let g = -100;
+       g <<= 5;
+       document.getElementById("demo10").innerHTML = "The Value of g is:- " + g;
+
+       let h = -100;
+       h >>= 5;
+       document.getElementById("demo11").innerHTML = "The Value of h is:- " + h;
+
+       let i = -100;
+       i >>>= 5;
+       document.getElementById("demo12").innerHTML = "The Value of i is:- " + i;
+
+       let j = 100;
+       j &= 5;
+       document.getElementById("demo13").innerHTML = "The Value of j is:- " + j;
+
+       let k = 100;
+       k |= 5;
+       document.getElementById("demo14").innerHTML = "The Value of k is:- " + k;
+
+       let l = 100;
+       l ^= 5;
+       document.getElementById("demo15").innerHTML = "The Value of l is:- " + l;
+
+       let m = 100;
+       m &&= 5;
+       document.getElementById("demo16").innerHTML = "The Value of m is:- " + m;
+
+       let n = undefined;
+       n ||= 5;
+       document.getElementById("demo17").innerHTML = "The Value of n is:- " + n;
+
+       let o = 100;
+       o ??= 5;
+       document.getElementById("demo18").innerHTML = "The Value of o is:- " + o;
+    </script>
+    </body>
+</html>

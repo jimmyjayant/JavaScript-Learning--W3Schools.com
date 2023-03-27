@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en-in">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>
+            JavaScript Window - The Browser Object Model 
+        </title>
+        <style>
+            html {
+                font-size:62.5%;
+            }
+            body {
+                font-family:verdana, sans-serif;
+                font-size:2rem;
+                line-height:1.5;
+            }
+            .edit {
+                background-color:#f1f1f1;
+                color:red;
+            }
+            .edit1 {
+                background-color:rgba(255,255,0,0.3);
+                padding:2rem;
+            }
+        </style> 
+    </head>
+    <body>
+        <h1>
+            JavaScript Window - The Browser Object Model 
+        </h1>
+
+        <div>
+            The Browser Object Model (BOM) allows JavaScript to "talk to" the browser.  
+        </div>
+
+        <hr>
+
+        <h2>
+            The Browser Object Model (BOM)  
+        </h2>
+
+        <div>
+            There are no official standards for the <b>B</b>rowser <b>O</b>bject <b>M</b>odel (BOM). 
+            <br>
+            Since modern browsers have implemented (almost) the same methods and properties for JavaScript interactivity, it is often referred to, as methods and properties of the BOM.  
+        </div>
+
+        <hr>
+
+        <h2>
+            The Window Object 
+        </h2>
+
+        <div>
+            The <span class="edit">window</span> object is supported by all browsers. It represents the browser's window. 
+            <br>
+            All global JavaScript objects, functions, and variables automatically become members of the window object. 
+            <br>
+            Global variables are properties of the window object. 
+            <br>
+            Global functions are methods of the window object. 
+            <br>
+            Even the document object (of the HTML DOM) is a property of the window object. 
+            <br>
+            <p class="edit1">
+                window.document.getElementById("header"); 
+            </p>
+
+            <br>
+            is the same as:- 
+            <br>
+            <p class="edit1">
+                document.getElementById("header"); 
+            </p>
+        </div>
+
+        <hr>
+
+        <h2>
+            Window Size 
+        </h2>
+
+        <div>
+            Two properties can be used to determine the size of the browser window. 
+            <br>
+            Both properties return the sizes in pixels. 
+            <br>
+            <ul>
+                <li><span class="edit">window.innerHeight</span> - the inner height of the browser window (in pixels)</li>
+                <li><span class="edit">window.innerWidth</span> - the inner width of the browser window (in pixels)</li>
+            </ul>
+
+            <br>
+
+            <p class="edit1">
+                The browser window (the browser viewport) is NOT including toolbars and scrollbars. 
+            </p>
+
+            <br>
+            Example:- 
+            <br>
+            <p id="demo1"></p>
+
+            <br>
+            Example:- 
+            <br>
+            Click the following button to close the current window. 
+            <br>
+            <button type="button" onclick="myFunction1()">Close Window</button>
+            
+            <br>
+            <br>
+            Example:- 
+            <br>
+            Click the following button to open the new window. 
+            <br>
+            <button type="button" onclick="myFunction2()">Open Window</button>
+            
+            <br>
+            <br>
+            Example:- 
+            <br>
+            Click the following button to move the newly opened window to new location. 
+            <br>
+            <button onclick="myFunction3()">Move</button>
+
+            <br>
+            <br>
+            Example:- 
+            <br>
+            Click the following button to resize the newly opened window. 
+            <br>
+            <button type="button" onclick="myFunction4()">Resize</button>
+        </div>
+
+        <hr>
+
+        <h2>
+            Other Window Methods 
+        </h2>
+
+        <div>
+            Some other methods:- 
+            <br>
+            <ul>
+                <li><span class="edit">window.open()</span> - open a new window</li>
+                <li><span class="edit">window.close()</span> - close the current window</li>
+                <li><span class="edit">window.moveTo()</span> - move the current window</li>
+                <li><span class="edit">window.resizeTo()</span> - resize the current window</li>
+            </ul>
+        </div>
+
+        <script>
+            document.getElementById("demo1").innerHTML = 
+            "Browser inner window width:- " + window.innerWidth + "px<br>" + 
+            "Browser inner window height: " + window.innerHeight + "px";
+
+            function myFunction1() {
+                window.close();
+            }
+
+            function myFunction2() {
+                window.open();
+            }
+
+            let myWindow;
+
+            function myFunction3() {
+                myWindow = window.open("","","width=400, height=200");
+                myWindow.moveTo(300,100);
+            }
+
+            let myWindow1;
+
+            function myFunction4() {
+                myWindow1 = window.open("","","width=200, height=200");
+                myWindow1.resizeTo(700,700);
+            }
+        </script>
+    </body>
+</html>

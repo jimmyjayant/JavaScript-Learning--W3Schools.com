@@ -1,0 +1,587 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            JavaScript Math Object 
+        </title>
+        <style>
+            .edit {
+                background-color:#f1f1f1;
+                color:red;
+            }
+            .edit1 {
+                background-color:rgba(255,255,0,0.3);
+                padding:20px;
+            }
+            body {
+                font-family:verdana, sans-serif;
+                font-size:20px;
+                line-height:1.5;
+            }
+            .table1 {
+                width:100%;
+                border:1px solid #ddd;
+                border-collapse:collapse;
+            }
+            .table1 tr {
+                height:40px;
+            }
+            .table1 tr:nth-child(even) {
+                background-color:#f1f1f1;
+            }
+            .table1 td {
+                padding:10px;
+            }
+            .table1 th {
+                text-align:left;
+                padding:10px;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>
+            JavaScript Math Object 
+        </h1>
+
+        <div style="background-color:rgba(0,255,0,0.3);padding:20px;">
+          The JavaScript Math Object allows you to perform mathematical tasks on numbers. 
+          <br>
+          Example:- 
+          <br>
+          Math.PI returns the ratio of a circle's circumference to its diameter. 
+          <br>
+          <p id="demo1"></p>
+        </div>
+
+        <hr>
+
+        <h2>
+            The Math Object 
+        </h2>
+
+        <p>
+            Unlike other objects, the Math object has no constructor. 
+            <br>
+            The Math object is static. 
+            <br>
+            All methods and properties can be used without creating a Math object first. 
+        </p>
+
+        <hr>
+
+        <h2>
+            Math Properties (Constants) 
+        </h2>
+
+        <p>
+           The syntax for any Math property is: <span class="edit">Math.property</span>. 
+           <br>
+           JavaScript provides 8 mathematical constants that can be accessed as Math properties. 
+           <br>
+           Example:- 
+           <br>
+           <p id="demo2"></p> 
+        </p>
+
+        <hr>
+
+        <h2>
+            Math Methods 
+        </h2>
+
+        <p>
+            The syntax for Math any methods is:- <span class="edit">Math.method(number)</span>. 
+        </p>
+
+        <hr>
+
+        <h2>
+            Number to Integer 
+        </h2>
+
+        <p>
+            There are 4 common methods to round a number to an integer. 
+            <br>
+            <br>
+            <table class="table1">
+                <tr>
+                    <td>Math.round(x)</td>
+                    <td>Returns x rounded to its nearest integer</td>
+                </tr>
+                <tr>
+                    <td>Math.ceil(x)</td>
+                    <td>Returns x rounded up to its nearest integer</td>
+                </tr>
+                <tr>
+                    <td>Math.floor(x)</td>
+                    <td>Returns x rounded down to its nearest integer</td>
+                </tr>
+                <tr>
+                    <td>Math.trunc(x)</td>
+                    <td>Returns the integer part of x (new in ES6)</td>
+                </tr>
+            </table>
+        </p>
+
+        <hr>
+
+        <h2>
+            Math.round() 
+        </h2>
+
+        <p>
+            <span class="edit">Math.round()</span> returns the nearest integer. 
+            <br>
+            Example:- 
+            <br>
+            <p id="demo3"></p>
+        </p>
+
+        <hr>
+
+        <h2>
+            Math.ceil() 
+        </h2>
+        
+        <p>
+            <span class="edit">Math.ceil()</span> returns the value of x rounded <strong>up</strong> to its nearest integer. 
+            <br>
+            Example:- 
+            <br>
+            <p id="demo4"></p>
+        </p>
+
+        <hr>
+
+        <h2>
+            Math.floor() 
+        </h2>
+
+        <p>
+            <span class="edit">Math.floor()</span> returns the value of x rounded <strong>down</strong> to its nearest integer. 
+            <br>
+            Example:- 
+            <br>
+            <p id="demo5"></p>
+        </p>
+
+        <hr>
+
+        <h2>
+            Math.trunc() 
+        </h2>
+
+        <p>
+            <span class="edit">Math.trunc()</span> returns the integer part of x. 
+            <br>
+            Example:- 
+            <br>
+            <p id="demo6"></p>
+        </p>
+
+        <hr>
+
+        <h2>
+            Math.sign() 
+        </h2>
+
+        <p>
+            <span class="edit">Math.sign()</span> returns if x is negative, null or positive. 
+            <br>
+            Math.sign() returns -1 for negative, 0 for null and 1 for positive. 
+            <br>
+            Example:- 
+            <br>
+            <p id="demo7"></p>
+
+            <br>
+            <br>
+
+            <p class="edit1">
+                Math.trunc() and Math.sign() were added to JavaScript 2015 - ES6. 
+            </p>
+        </p>
+
+        <hr>
+        <br>
+        <br>
+        <hr>
+
+        <h2>
+            Math.pow() 
+        </h2>
+
+        <p>
+            <span class="edit">Math.pow(x,y)</span> returns the value of x to the power of y. 
+            <br>
+            Example:- 
+            <br>
+            <p id="demo8"></p>
+        </p>
+
+        <hr>
+
+        <h2>
+            Math.sqrt() 
+        </h2>
+
+        <p>
+            <span class="edit">Math.sqrt(x)</span> returns the square root of x. 
+            <br>
+            Example:- 
+            <br>
+            <p id="demo9"></p>
+        </p>
+
+        <hr>
+
+        <h2>
+            Math.abs() 
+        </h2>
+
+        <p>
+            <span class="edit">Math.abs()</span> returns the absolute (positive) value of x. 
+            <br>
+            Example:- 
+            <br>
+            <p id="demo10"></p>
+        </p>
+
+        <hr>
+
+        <h2>
+            Math.sin() 
+        </h2>
+
+        <p>
+            <span class="edit">Math.sin()</span> returns the sine (a value between -1 and 1) of the angle x (given in radians). 
+            <br>
+            If you want to use degrees instead of radians, you have to convert degrees to radians. 
+            <br>
+            Angle in radians = Angle in degrees X PI / 180. 
+            <br>
+            Example:- 
+            <br>
+            <p id="demo11"></p>
+        </p>
+
+        <hr>
+
+        <h2>
+            Math.cos() 
+        </h2>
+
+        <p>
+            <span class="edit">Math.cos()</span> returns the cosine (a value between -1 and 1) of the angle x (given in radians). 
+            <br>
+            If you want to use degrees instead of radians, you have to convert degrees to radians. 
+            <br>
+            Angle in radians = Angle in degrees X PI / 180. 
+            <br>
+            Example:- 
+            <br>
+            <p id="demo12"></p> 
+        </p>
+
+        <hr>
+
+        <h2>
+            Math.min() and Math.max() 
+        </h2>
+
+        <p>
+            <span class="edit">Math.min()</span> and <span class="edit">Math.max()</span> can be used to find the lowest or highest value in a list of arguments. 
+            <br>
+            Example:- 
+            <br>
+            <p id="demo13"></p>
+        </p>
+
+        <hr>
+
+        <h2>
+            Math.random() 
+        </h2>
+
+        <p>
+            <span class="edit">Math.random()</span> returns a random number between 0 (inclusive), and 1 (exclusive). 
+            <br>
+            Example:- 
+            <br>
+            Click the button below to generate random number. 
+            <br>
+            <button type="button" onclick="myFunction1()">Generate Random Number</button>
+            <br>
+            <p id="demo14"></p>
+        </p>
+
+
+        <hr>
+
+        <h2>
+           The Math.log() Method 
+        </h2>
+
+        <p>
+            <span class="edit">Math.log(x)</span> returns the natural logarithm of x. 
+            <br>
+            The natural logarithm returns the time needed to reach a certain level of growth. 
+            <br>
+            Example:- 
+            <br>
+            <p id="demo15"></p>
+
+            <br>
+            <br>
+            Math.E and Math.log() are twins. 
+            <br>
+            Example:- 
+            <br>
+            How many times must we multiply Math.E to get 10? = 
+            <br>
+            <p id="demo16"></p>
+        </p>
+
+        <hr>
+
+        <h2>
+            The Math.log2() Method 
+        </h2>
+
+        <p>
+            <span class="edit">Math.log2(x)</span> returns the base 2 logarithm of x. 
+            <br>
+            Example:- 
+            <br>
+            How many times must we multiply 2 to get 8? = 
+            <br>
+            <p id="demo17"></p> 
+        </p>
+
+        <hr>
+
+        <h2>
+            The Math.log10() Method 
+        </h2>
+
+        <p>
+            <span class="edit">Math.log10(x)</span> returns the base 10 logarithm of x. 
+            <br>
+            Example:- 
+            <br>
+            How many times must we multiply 10 to get 1000? 
+            <br>
+            <p id="demo18"></p>
+        </p>
+
+        <hr>
+
+        <h2>
+            JavaScript Math Methods 
+        </h2>
+
+        <table class="table1">
+            <tr>
+                <th>Method</th>
+                <th>Description</th>
+            </tr>
+            <tr>
+                <td>abs(x)</td>
+                <td>Returns the absolute value of x</td>
+            </tr>
+            <tr>
+                <td>acos(x)</td>
+                <td>Returns the arccosine of x, in radians</td>
+            </tr>
+            <tr>
+                <td>acosh(x)</td>
+                <td>Returns the hyperbolic arccosine of x</td>
+            </tr>
+            <tr>
+                <td>asin(x)</td>
+                <td>Returns the arcsine of x, in radians</td>
+            </tr>
+            <tr>
+                <td>asinh(x)</td>
+                <td>Returns the hyperbolic arcsine of x</td>
+            </tr>
+            <tr>
+                <td>atan(x)</td>
+                <td>Returns the arctangent of x as a numeric value between -PI/2 and PI/2 radians</td>
+            </tr>
+            <tr>
+                <td>atan2(y,x)</td>
+                <td>Returns the arctangent of the quotient of its arguments</td>
+            </tr>
+            <tr>
+                <td>atanh(y,x)</td>
+                <td>Returns the hyperbolic arctangent of x</td>
+            </tr>
+            <tr>
+                <td>cbrt(x)</td>
+                <td>Returns the cubic root of x</td>
+            </tr>
+            <tr>
+                <td>ceil(x)</td>
+                <td>Returns x, rounded upwards to the nearest integer</td>
+            </tr>
+            <tr>
+                <td>cos(x)</td>
+                <td>Returns the cosine of x (x is in radians)</td>
+            </tr>
+            <tr>
+                <td>cosh(x)</td>
+                <td>Returns the hyperbolic cosine of x</td>
+            </tr>
+            <tr>
+                <td>exp(x)</td>
+                <td>Returns the value of E<sup>x</sup></td>
+            </tr>
+            <tr>
+                <td>floor(x)</td>
+                <td>Returns x, rounded downwards to the nearest integer</td>
+            </tr>
+            <tr>
+                <td>log(x)</td>
+                <td>Returns the natural logarithm (base E) of x</td>
+            </tr>
+            <tr>
+                <td>max(x,y,z, ....,n)</td>
+                <td>Returns the number with the highest value</td>
+            </tr>
+            <tr>
+                <td>min(x,y,z, .....,n)</td>
+                <td>Returns the number with the lowest value</td>
+            </tr>
+            <tr>
+                <td>pow(x,y)</td>
+                <td>Returns the value of x to the power of y</td>
+            </tr>
+            <tr>
+                <td>random()</td>
+                <td>Returns the random number between 0 and 1</td>
+            </tr>
+            <tr>
+                <td>round(x)</td>
+                <td>Rounds x to the nearest integer</td>
+            </tr>
+            <tr>
+                <td>sign(x)</td>
+                <td>Returns if x is negative, null or positive (-1, 0, 1)</td>
+            </tr>
+            <tr>
+                <td>sin(x)</td>
+                <td>Returns the sine of x (x is in radians)</td>
+            </tr>
+            <tr>
+                <td>sinh(x)</td>
+                <td>Returns the hyperbolic sine of x</td>
+            </tr>
+            <tr>
+                <td>sqrt(x)</td>
+                <td>Returns the square root of x</td>
+            </tr>
+            <tr>
+                <td>tan(x)</td>
+                <td>Returns the tangent of an angle</td>
+            </tr>
+            <tr>
+                <td>tanh(x)</td>
+                <td>Returns the hyperbolic tangent of a number</td>
+            </tr>
+            <tr>
+                <td>trunc(x)</td>
+                <td>Returns the integer part of a number (x)</td>
+            </tr>
+        </table>
+
+
+
+
+
+
+
+
+        <script>
+            document.getElementById("demo1").innerHTML = Math.PI;
+
+            document.getElementById("demo2").innerHTML = 
+            "<b>Math.E</b> = It returns the Euler's number = " + Math.E + "<br>" + 
+            "<b>Math.PI</b> = It returns PI = " + Math.PI + "<br>" + 
+            "<b>Math.SQRT2</b> = It returns the square root of 2 = " + Math.SQRT2 + "<br>" +
+            "<b>Math.SQRT1_2</b> = It returns the square root of 1/2 = " + Math.SQRT1_2 + "<br>" +
+            "<b>Math.LN2</b> = It returns the natural logarithm of 2 = " + Math.LN2 + "<br>" +
+            "<b>Math.LN10</b> = It returns the natural logarithm of 10 = " + Math.LN10 + "<br>" + 
+            "<b>Math.LOG2E</b> = It returns base 2 logarithm of E = " + Math.LOG2E + "<br>" + 
+            "<b>Math.LOG10E</b> = It returns base 10 logarithm of E = " + Math.LOG10E;
+
+            document.getElementById("demo3").innerHTML = 
+            "The number 4.6 rounded is:- " + Math.round(4.6) + "<br>" +
+            "The number 4.5 rounded is:- " + Math.round(4.5) + "<br>" +
+            "The number 4.4 rounded is:- " + Math.round(4.4);
+
+            document.getElementById("demo4").innerHTML = 
+            "The number 4.9 rounded up is:- " + Math.ceil(4.9) + "<br>" +
+            "The number 4.7 rounded up is:- " + Math.ceil(4.7) + "<br>" + 
+            "The number 4.4 rounded up is:- " + Math.ceil(4.4) + "<br>" + 
+            "The number 4.2 rounded up is:- " + Math.ceil(4.2) + "<br>" + 
+            "The number -4.2 rounded up is:- " + Math.ceil(-4.2);
+
+            document.getElementById("demo5").innerHTML = 
+            "The number 4.9 rounded down is:- " + Math.floor(4.9) + "<br>" + 
+            "The number 4.7 rounded down is:- " + Math.floor(4.7) + "<br>" + 
+            "The number 4.4 rounded down is:- " + Math.floor(4.4) + "<br>" + 
+            "The number 4.2 rounded down is:- " + Math.floor(4.2) + "<br>" + 
+            "The number -4.2 rounded down is:- " + Math.floor(-4.2);
+
+            document.getElementById("demo6").innerHTML = 
+            "The number 4.9 truncated is:- " + Math.trunc(4.9) + "<br>" + 
+            "The number 4.7 truncated is:- " + Math.trunc(4.7) + "<br>" + 
+            "The number 4.4 truncated is:- " + Math.trunc(4.4) + "<br>" + 
+            "The number 4.2 truncated is:- " + Math.trunc(4.2) + "<br>" + 
+            "The number -4.2 truncated is:- " + Math.trunc(-4.2);
+
+            document.getElementById("demo7").innerHTML = 
+            "The number -4 is:- " + Math.sign(-4) + "<br>" + 
+            "The number 0 is:- " + Math.sign(0) + "<br>" + 
+            "The number 4 is:- " + Math.sign(4);
+
+            document.getElementById("demo8").innerHTML = 
+            "The value of 8 to the power of 2 is:- " + Math.pow(8,2);
+
+            document.getElementById("demo9").innerHTML = 
+            "The square root of 64 is:- " + Math.sqrt(64);
+
+            document.getElementById("demo10").innerHTML = 
+            "The absolute (positive) value of -4.7 is:= " + Math.abs(-4.7);
+
+            document.getElementById("demo11").innerHTML = 
+            "The sine value of 90 degrees is:- " + Math.sin(90 * Math.PI / 180);
+
+            document.getElementById("demo12").innerHTML = 
+            "The cosine value of 0 degrees is:- " + Math.cos(0 * Math.PI / 180);
+
+            document.getElementById("demo13").innerHTML = 
+            "The lowest number in the list (0, 150, 30, 20, -8, -200) is:- " + 
+            Math.min(0,150,30,20,-8,-200) + "<br>" + 
+            "And the highest number is:- " + Math.max(0,150,30,20,-8,-200);
+
+            function myFunction1()
+            {
+                document.getElementById("demo14").innerHTML = Math.random();
+            }
+
+            document.getElementById("demo15").innerHTML = 
+            "The natural log of 1 is:- " + Math.log(1) + "<br>" + 
+            "The natural log of 2 is:- " + Math.log(2) + "<br>" + 
+            "The natural log of 3 is:- " + Math.log(3);
+
+            document.getElementById("demo16").innerHTML = Math.log(10);
+
+            document.getElementById("demo17").innerHTML = Math.log2(8);
+
+            document.getElementById("demo18").innerHTML = Math.log10(1000);
+            
+        </script>
+    </body>
+</html>

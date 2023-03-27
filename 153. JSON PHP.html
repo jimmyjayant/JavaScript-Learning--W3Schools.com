@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en-in">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>
+            JSON PHP 
+        </title>
+        <style>
+            html {
+                font-size:calc(10px + 0.390625vw);
+            }
+
+            body {
+                font-family:verdana, sans-serif;
+                font-size:1rem;
+                line-height:1.5;
+            }
+
+            .edit {
+                background-color:#f1f1f1;
+                color:red;
+            }
+
+            .edit1 {
+                background-color:rgba(255,255,0,0.3);
+                padding:2rem;
+            }
+        </style>
+        </head>
+        <body>
+            <h1>
+                JSON PHP 
+            </h1>
+
+            <div>
+                A common use of JSON is to read data from a web server, and display the data in a web page. 
+                <br>
+                This chapter will teach you how to exchange JSON data between the client and a PHP server. 
+            </div>
+
+            <hr>
+
+            <h2>
+                The PHP File 
+            </h2>
+
+            <div>
+                PHP has some built-in functions to handle JSON. 
+                <br>
+                Objects in PHP can be converted into JSON by using the PHP function <span class="edit">json_encode()</span>. 
+                <br>
+                <b>PHP File</b>
+                <br>
+                <p id="demo1"></p>
+            </div>
+
+            <hr>
+
+            <h2>
+                The Client JavaScript 
+            </h2>
+
+            <div>
+                Here is a JavaScript on the client, using an AJAX call to request the PHP file from the example above. 
+                <br>
+                Example:- 
+                <br>
+                <b>Use JSON.parse() to convert the result into a JavaScript object:- </b>
+                <br>
+                <p id="demo2"></p>
+            </div>
+
+            <hr>
+            <br>
+            <br>
+            <hr>
+
+            <h2>
+                PHP Array 
+            </h2>
+
+            <div>
+                Arrays in PHP will also be converted into JSON when using the PHP function <span class="edit">json_encode()</span>. 
+                <br>
+                <b>PHP File</b>
+                <br>
+                Example:- 
+                <br>
+                <p id="demo3"></p>
+            </div>
+
+            <hr>
+
+            <h2>
+                The Client JavaScript 
+            </h2>
+
+            <div>
+                Here is a JavaScript on the client, using an AJAX call to request the PHP file from the array example above. 
+                <br>
+                Example:- 
+                <br>
+                <b>
+                    Use JSON.parse() to convert the result into a JavaScript array:- 
+                </b>
+                <br>
+                <p id="demo4"></p>
+            </div>
+
+            <hr>
+
+            <h2>
+                PHP Database 
+            </h2>
+
+            <div>
+                PHP is a server side programming language, and can be used to access a database. 
+                <br>
+                Imagine you have a database on your server, and you want to send a request to it from the client where you ask for the 10 first rows in a table called "customers". 
+                <br>
+                On the client, make a JSON object that describes the numbers of rows you want to return. 
+                <br>
+                Before you send the request to the server, convert the JSON object into a string and send it as a parameter to the url of the PHP page. 
+                <br>
+                Example:- 
+                <br>
+                <b>
+                    Use JSON.stringify() to convert the JavaScript object into JSON:- 
+                </b>
+                <br>
+                <p id="demo5"></p>
+
+                <br>
+                <b>
+                    Example Explained:- 
+                </b>
+
+                <br>
+
+                <ul>
+                    <li>Define an object containing a "limit" property and value</li>
+                    <li>Convert the object into a JSON string.</li>
+                    <li>Send a request to the PHP file, with the JSON string as a parameter.</li>
+                    <li>Wait until the request returns with the result (as JSON)</li>
+                    <li>Display the result received from the PHP file.</li>
+                </ul>
+
+                <br>
+                Take a look at the PHP file:- 
+                <br>
+                <b>
+                    PHP File 
+                </b>
+                <br>
+                <p class="edit1">
+                      &lt;?php
+                      <br>
+                      header("Content-Type: application/json; charset=UTF-8");
+                      <br>
+                      $obj = json_decode($_GET["x"], false);
+                      <br>
+                      $conn = new mysqli("myServer", "myUser", "myPassword", "Northwind");
+                      <br>
+                      $stmt = $conn-&gt;prepare("SELECT name FROM customers LIMIT ?");
+                      <br>
+                      $stmt-&gt;bind_param("s", $obj-&gt;limit);
+                      <br>
+                      $stmt-&gt;execute();
+                      <br>
+                      $result = $stmt-&gt;get_result();
+                      <br>
+                      $outp = $result-&gt;fetch_all(MYSQLI_ASSOC);
+                      <br>
+                      echo json_encode($outp);
+                      <br>
+                      ?&gt; 
+                </p>
+
+                <br>
+
+                <b>PHP File explained:- </b>
+                <br>
+                <ul>
+                    <li>Convert the request into an object, using the PHP function <span class="edit">json_decode()</span>.</li>
+                    <li>Access the database, and fill an array with the requested data.</li>
+                    <li>Add the array to an object, and return the object as JSON using the <span class="edit">json_encode()</span>.</li>
+                </ul>
+            </div>
+
+            <hr>
+
+            <h2>
+                Use the Data 
+            </h2>
+
+            <div>
+                Example:- 
+                <br>
+                <p id="demo6"></p>
+
+                <br>
+                <p>Try changing the "limit" property from 10 to 5.</p>
+            </div>
+
+            <hr>
+
+            <h2>
+                PHP Method = POST 
+            </h2>
+
+            <div>
+                When sending data to the server, it is often best to use the HTTP <span class="edit">POST</span> method. 
+                <br>
+                To send AJAX requests using the <span class="edit">POST</span> method, specify the method, and the correct header. 
+                <br>
+                The data sent to the server must now be an argument to the <span class="edit">send()</span> method. 
+                <br>
+                Example:- 
+                <br>
+                <u>
+                    Use HTTP POST to get JSON Data from a PHP Server. 
+                </u>
+
+                <br>
+                <p id="demo7"></p>
+
+                <br>
+                <br>
+                The only difference in the PHP file is the method for getting the transferred data. 
+                <br>
+                Example:- 
+                <br>
+                <b>PHP File</b>
+                <br>
+                <u>
+                    Use $_POST instead of $_GET:- 
+                </u>
+                <br>
+                <p class="edit1">
+                    &lt;?php
+                    <br>
+                    header("Content-Type: application/json; charset=UTF-8");
+                    <br>
+                    $obj = json_decode($_POST["x"], false);
+                    <br>
+                    $conn = new mysqli("myServer", "myUser", "myPassword", "Northwind");
+                    <br>
+                    $stmt = $conn-&gt;prepare("SELECT name FROM customers LIMIT ?");
+                    <br>
+                    $stmt-&gt;bind_param("s", $obj-&gt;limit);
+                    <br>
+                    $stmt-&gt;execute();
+                    <br>
+                    $result = $stmt-&gt;get_result();
+                    <br>
+                    $outp = $result-&gt;fetch_all(MYSQLI_ASSOC);
+                    <br>
+                    echo json_encode($outp);
+                    <br>
+                    ?&gt; 
+                </p>
+            </div>
+
+            <script>
+                function loadPHP() {
+                    const xhttp = new XMLHttpRequest();
+                    xhttp.onload = function() {
+                        document.getElementById("demo1").innerHTML = this.responseText;
+                    }
+                    xhttp.open("GET", "json_php.php");
+                    xhttp.send();
+                }
+
+                loadPHP();
+
+                function loadPHP1() {
+                    const xhttp = new XMLHttpRequest();
+                    xhttp.onload = function() {
+                        const myObj = JSON.parse(this.responseText);
+                        document.getElementById("demo2").innerHTML = myObj.name;
+                    }
+                    xhttp.open("GET", "json_php.php");
+                    xhttp.send();
+                }
+
+                loadPHP1();
+
+                function loadPHPArray() {
+                    const xhttp = new XMLHttpRequest();
+                    xhttp.onload = function() {
+                        document.getElementById("demo3").innerHTML = this.responseText;
+                    }
+                    xhttp.open("GET", "json_php_array.php");
+                    xhttp.send();
+                }
+
+                loadPHPArray();
+
+                function loadPHPArray1() {
+                    const xhttp = new XMLHttpRequest();
+                    xhttp.onload = function() {
+                        const myArr = JSON.parse(this.responseText);
+                        document.getElementById("demo4").innerHTML = myArr;
+                    }
+                    xhttp.open("GET", "json_php_array.php");
+                    xhttp.send();
+                }
+
+                loadPHPArray1();
+
+                function SendReqPHPDB() {
+                    const obj = {"limit":10};
+                    const dbParam = JSON.stringify(obj);
+                    const xhttp = new XMLHttpRequest();
+                    xhttp.onload = function() {
+                        document.getElementById("demo5").innerHTML = this.responseText;
+                    }
+                    xhttp.open("GET", "json_demo_db.php?x=" + dbParam);
+                    xhttp.send();
+                }
+
+                SendReqPHPDB();
+
+                function SendReqPHPDB1() {
+                    const obj = {"limit":10};
+                    const dbParam = JSON.stringify(obj);
+                    const xhttp = new XMLHttpRequest();
+                    xhttp.onload = function() {
+                        myObj = JSON.parse(this.responseText);
+                        let text = "";
+                        for(let x in myObj) {
+                            text += myObj[x].name + "<br>";
+                        }
+                        document.getElementById("demo6").innerHTML = text;
+                    };
+                    xhttp.open("GET", "json_demo_db.php?x=" + dbParam);
+                    xhttp.send();
+                }
+
+                SendReqPHPDB1();
+
+                function SendHTTPPOSTReq() {
+                    const dbParam = JSON.stringify({"limit":10});
+                    const xhttp = new XMLHttpRequest();
+                    xhttp.onload = function() {
+                        myObj = JSON.parse(this.responseText);
+                        let text = "";
+                        for(let x in myObj) {
+                            text += myObj[x].name + "<br>";
+                        }
+                        document.getElementById("demo7").innerHTML = text;
+                    }
+                    xhttp.open("POST", "json_demo_db_post.php");
+                    xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+                    xhttp.send("x=" + dbParam);
+                }
+
+                SendHTTPPOSTReq();
+            </script>
+        </body>
+</html>

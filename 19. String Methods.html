@@ -1,0 +1,988 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            JavaScript String Methods 
+        </title>
+        <style>
+            .edit {
+                background-color:#f1f1f1;
+                color:red;
+            }
+            .edit1 {
+                background-color:rgba(255,255,0,0.3);
+                padding:10px;
+            }
+            .table1 {
+                width: 100%;
+                background-color:lightgreen;
+                border:none;
+            }
+            .table1 td {
+                padding:20px;
+                font-size:20px;
+            }
+
+            .table2 {
+                width:100%;
+                border:1px solid #ddd;
+                border-collapse:collapse;
+            }
+            .table2 tr {
+                height:40px;
+            }
+            .table2 tr:nth-child(even) {
+                background-color:#ddd;
+            }
+            .table2 td {
+                text-align:center;
+                padding:10px;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>
+            JavaScript String Methods 
+        </h1>
+
+        <table class="table1">
+        <tr>
+            <td>String length</td>
+            <td>String trim()</td>
+        </tr>
+        <tr>
+            <td>String slice()</td>
+            <td>String trimStart()</td>
+        </tr>
+        <tr>
+            <td>String substring()</td>
+            <td>String trimEnd()</td>
+        </tr>
+        <tr>
+            <td>String substr()</td>
+            <td>String padStart()</td>
+        </tr>
+        <tr>
+            <td>String replace()</td>
+            <td>String padEnd()</td>
+        </tr>
+        <tr>
+            <td>String replaceAll()</td>
+            <td>String charAt()</td>
+        </tr>
+        <tr>
+            <td>String toUpperCase()</td>
+            <td>String charCodeAt()</td>
+        </tr>
+        <tr>
+            <td>String toLowerCase()</td>
+            <td>String split()</td>
+        </tr>
+        <tr>
+            <td>String concat()</td>
+        </tr>
+        </table>
+
+        <hr>
+
+        <h2>
+            JavaScript String Length 
+        </h2>
+
+        <p>
+            The <span class="edit">length</span> property returns the length of a string. 
+            <br>
+            Example:- 
+            <br>
+            <p id="demo1"></p>
+        </p>
+
+        <hr>
+
+        <h2>
+            Extracting String Parts 
+        </h2>
+
+        <p>
+            There are 3 methods for extracting a part of a string: 
+            <br>
+            <ul>
+                <li><span class="edit">slice(start, end)</span></li>
+                <li><span class="edit">substring(start, end)</span></li>
+                <li><span class="edit">substr(start, length)</span></li>
+            </ul>
+        </p>
+
+        <hr>
+
+        <h2>
+            JavaScript String slice() 
+        </h2>
+
+        <p>
+            <span class="edit">slice()</span> extracts a part of a string and returns the extracted part in a new string. 
+            <br>
+            The method takes 2 parameters: start position, and end position (end not included). 
+            <br>
+            Example:- 
+            <br>
+            Slice out a portion of a string from position 7 to position 13:- 
+            <br>
+            <p id="demo2"></p>
+
+            <br>
+            <br>
+
+            <p class="edit1">
+                <span style="font-size:30px;">Note</span>
+                <br>
+                JavaScript counts positions from zero. 
+                <br>
+                First position is 0. 
+                <br>
+                Second position is 1. 
+            </p>
+
+            <br>
+            <br>
+            Example:- 
+            <br>
+            If you omit the second parameter, the method will slice out the rest of the string:- 
+            <br>
+            <p id="demo3"></p>
+
+            <br>
+            <br>
+            If a parameter is negative, the position is counted from the end of the string:- 
+            <br>
+            <p id="demo4"></p>
+            <br>
+            <br>
+            <p class="edit1">
+                From END, counting starts from 1 not 0. 
+            </p>
+
+            <br>
+            <br>
+            Example:- 
+            <br>
+            This example slices out a portion of a string from position -12 to position -6:- 
+            <br>
+            <p id="demo5"></p>
+
+            <br>
+            <br>
+            <p class="edit1">
+                If the second parameter of slice method, i.e., end, is less than or equal to start parameter. Then the resultant string will be an <strong>EMPTY STRING</strong>. 
+            </p>
+        </p>
+
+        <hr>
+        <br>
+        <hr>
+
+        <h2>
+        JavaScript String substring() 
+        </h2>
+
+        <p>
+            <span class="edit">substring()</span> is similar to <span class="edit">slice()</span>. 
+            <br>
+            The difference is that start and end values less than 0 are treated as 0 in <span class="edit">substring()</span>. 
+            <br>
+            Example:- 
+            <br>
+            <p id="demo6"></p>
+
+            <br>
+            <br>
+            If you omit the second parameter, <span class="edit">substring()</span> will slice out the rest of the string. 
+        </p>
+
+        <hr>
+
+        <h2>
+            JavaScript String substr() 
+        </h2>
+
+        <p>
+            <span class="edit"> substr() </span> is similar to <span class="edit"> slice() </span>. 
+            <br>
+            The difference is that the second parameter specifies the <strong>length</strong> of the extracted part. 
+            <br>
+            Example:- 
+            <br>
+            <p id="demo7"></p>
+            <br>
+            If you omit the second parameter, <span class="edit"> substr() </span> will slice out the rest of the string. 
+
+            <br>
+            <br>
+            Example:- 
+            <br>
+            <p id="demo8"></p>
+            <br>
+            <br>
+            If the first parameter is negative, the position counts from the end of the string. 
+            <br>
+            Example:- 
+            <br>
+            <p id="demo9"></p>
+
+        </p>
+
+        <hr>
+
+        <h2>
+            Replacing String Content 
+        </h2>
+
+        <p>
+            The <span class="edit"> replace() </span> method replaces a specified value with another value in a string. 
+            <br>
+            Example:- 
+            <br>
+            Replace "Microsoft" with "W3Schools" in the paragraph below:- 
+            <br>
+            <button onclick="myFunction1()">Try it</button>
+            <br>
+            <p id="demo10">Please visit Microsoft!</p>
+
+            <br>
+            <br>
+
+            <p class="edit1">
+                <span style="font-size:30px;">Note</span>
+                <br>
+                The <span class="edit"> replace() </span> method does not change the string it is called on. 
+                <br>
+                The <span class="edit"> replace() </span> method returns a new string. 
+                <br>
+                The <span class="edit"> replace() </span> method replaces <strong>only the first</strong> match. 
+                <br>
+                If you want to replace all matches, use a regular expression with the /g flag set. 
+            </p>
+
+            <br>
+            <br>
+
+            By default, the <span class="edit"> replace() </span> method replaces <strong>only the first</strong> match. 
+            <br>
+            Example:- 
+            <br>
+            <button onclick="myFunction2()">Try it</button>
+            <br>
+            <p id="demo11">Please visit Microsoft and Microsoft!</p>
+
+            <br>
+            <br>
+
+            By default, the <span class="edit">replace()</span> method is case sensitive. Writing MICROSOFT (with upper-case) will not work. 
+            <br>
+            Example:- 
+            <br>
+            <button onclick="myFunction3()">Try it</button>
+            <p id="demo12">Please visit Microsoft!</p>
+
+            <br>
+            <br>
+
+            To replace case insensitive, use a <strong>regular expression</strong> with an <span class="edit"> /i </span> flag (insensitive). 
+            <br>
+            Example:- 
+            <br>
+            <button onclick="myFunction4()">Try it</button>
+            <p id="demo13">Please visit Microsoft!</p> 
+
+            <br>
+            <br>
+
+            <p class="edit1">
+                <span style="font-size:30px;">Note</span>
+                <br>
+                Regular expressions are written without quotes. 
+            </p>
+
+            <br>
+            <br>
+
+            To replace all matches, use a <strong>regular expression</strong> with a <span class="edit"> /g </span> flag (global match). 
+            <br>
+            Example:- 
+            <br>
+            <button onclick="myFunction5()">Try it</button>
+            <br>
+            <p id="demo14">Please visit Microsoft and Microsoft!</p>
+        </p>
+
+        <hr>
+
+        <h2>
+            JavaScript String ReplaceAll() 
+        </h2>
+
+        <p>
+            In 2021, JavaScript introduced the string method <span class="edit">replaceAll()</span>. 
+            <br>
+            Example:- 
+            <br>
+            <p id="demo15"></p>
+
+            <br>
+            <br>
+
+            The <span class="edit">replaceAll()</span> method allows you to specify a regular expression instead of a string to be replaced. 
+            <br>
+            If the parameter is a regular expression, the global flag (g) must be set, otherwise a TypeError is thrown. 
+            <br>
+            Example:- 
+            <br>
+            <p id="demo16"></p>
+
+            <br>
+            <br>
+
+            <p class="edit1">
+                <span style="font-size:30px;">Note</span>
+                <br>
+                <span class="edit">replaceAll()</span> is an ES2021 feature. 
+                <br>
+                <span class="edit">replaceAll()</span> does not work in Internet Explorer. 
+            </p>
+        </p>
+
+        <hr>
+
+        <h2>
+            Converting to Upper and Lower Case 
+        </h2>
+
+        <p>
+            A string is converted to upper case with <span class="edit">toUpperCase()</span>. 
+            <br>
+            A string is converted to lower case with <span class="edit">toLowerCase()</span>. 
+        </p>
+
+        <hr>
+
+        <h2>
+            JavaScript String toUpperCase() 
+        </h2>
+
+        <p>
+            Example:- 
+            <br>
+            <button onclick="myFunction6()">Try it</button>
+            <br>
+            <p id="demo17">Hello World!</p>
+        </p>
+
+        <br>
+
+        <h2>
+            JavaScript String toLowerCase() 
+        </h2>
+
+        <p>
+            Example:- 
+            <br>
+            <button onclick="myFunction7()">Try it</button>
+            <br>
+            <p id="demo18">Hello World!</p>
+        </p>
+
+        <hr>
+
+        <h2>
+            JavaScript String concat() 
+        </h2>
+
+        <p>
+            <span class="edit"> concat() </span> joins two or more strings. 
+            <br>
+            Example:- 
+            <br>
+            <p id="demo19"></p>
+
+            <br>
+            <br>
+            The <span class="edit"> concat() </span> method can be used instead of the plus operator. These two lines do the same. 
+            <br>
+            <p class="edit1">
+                text = "Hello" + " " + "World!";
+                <br>
+                text = "Hello".concat(" ", "World!");
+            </p>
+
+            <br>
+            <br>
+
+            <p class="edit1">
+                <span style="font-size:30px;">Note</span>
+                <br>
+                All string methods return a new string. They don't modify the original string. 
+                <br>
+                Formally said: 
+                <br>
+                Strings are immutable: Strings cannot be changed, only replaced. 
+            </p>
+
+        </p>
+
+        <hr>
+
+        <h2>
+            JavaScript String trim() 
+        </h2>
+
+        <p>
+            The <span class="edit">trim()</span> method removes whitespace from both sides of a string. 
+            <br>
+            Example:- 
+            <br>
+            text = "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Hello World!&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"
+            <br>
+            After trimming, text = "Hello World!"
+            <br>
+            <p id="demo20"></p>
+        </p>
+
+        <hr>
+
+        <h2>
+            JavaScript String trimStart() 
+        </h2>
+
+        <p>
+            ECMAScript 2019 added the String method <span class="edit"> trimStart() </span> to JavaScript. 
+            <br>
+            The <span class="edit">trimStart()</span> method works like <span class="edit">trim()</span>, but removes whitespace only from the start of a string. 
+            <br>
+            Example:- 
+            <br>
+            <p id="demo21"></p>
+
+            <br>
+            <br>
+
+            JavaScript String <span class="edit">trimStart()</span> is supported in all browsers since January 2020. 
+            <br>
+            <table class="table2">
+                <tr>
+                    <td><img src="Image4.svg.png" height="35" width="35" alt="Google Chrome"></td>
+                    <td><img src="Image5.png" height="35" width="35" alt="Microsoft Edge"></td>
+                    <td><img src="Image6.png" height="35" width="35" alt="Mozilla Firefox"></td>
+                    <td><img src="Image7.png" height="35" width="35" alt="Apple Safari"></td>
+                    <td><img src="Image8.png" height="35" width="35" alt="Opera"></td>
+                </tr>
+                <tr>
+                    <td>Chrome 66</td>
+                    <td>Edge 79</td>
+                    <td>Firefox 61</td>
+                    <td>Safari 12</td>
+                    <td>Opera 50</td>
+                </tr>
+                <tr>
+                    <td>Apr 2018</td>
+                    <td>Jan 2020</td>
+                    <td>Jun 2018</td>
+                    <td>Sep 2018</td>
+                    <td>May 2018</td>
+                </tr>
+            </table>
+        </p>
+
+        <hr>
+
+        <h2>
+            JavaScript String trimEnd() 
+        </h2>
+
+        <p>
+            ECMAScript 2019 added the String method <span class="edit">trimEnd()</span> to JavaScript. 
+            <br>
+            The <span class="edit">trimEnd()</span> method works like <span class="edit">trim()</span>, but removes whitespace only from the end of a string. 
+            <br>
+            Example:- 
+            <br>
+            <p id="demo22"></p>
+
+            <br>
+            <br>
+            JavaScript String <span class="edit">trimEnd()</span> is supported in all browsers since January 2020. 
+            <br>
+            <table class="table2">
+                <tr>
+                    <td><img src="Image4.svg.png" height="35" width="35" alt="Google Chrome"></td>
+                    <td><img src="Image5.png" height="35" width="35" alt="Microsoft Edge"></td>
+                    <td><img src="Image6.png" height="35" width="35" alt="Mozilla Firefox"></td>
+                    <td><img src="Image7.png" height="35" width="35" alt="Apple Safari"></td>
+                    <td><img src="Image8.png" height="35" width="35" alt="Opera"></td>
+                </tr>
+                <tr>
+                    <td>Chrome 66</td>
+                    <td>Edge 79</td>
+                    <td>Firefox 61</td>
+                    <td>Safari 12</td>
+                    <td>Opera 50</td>
+                </tr>
+                <tr>
+                    <td>Apr 2018</td>
+                    <td>Jan 2020</td>
+                    <td>Jun 2018</td>
+                    <td>Sep 2018</td>
+                    <td>May 2018</td>
+                </tr>
+            </table>
+        </p>
+
+        <hr>
+
+        <h2>
+            JavaScript String Padding 
+        </h2>
+
+        <p>
+            ECMAScript 2017 added two String methods: <span class="edit">padStart()</span> and <span class="edit">padEnd()</span> to support padding at the beginning and at the end of a string. 
+        </p>
+
+        <hr>
+
+        <h2>
+            JavaScript String padStart() 
+        </h2>
+
+        <p>
+           The <span class="edit">padStart()</span> method pads a string with another string. 
+           <br>
+           Example:- 
+           <br>
+           <p id="demo23"></p>
+
+           <br>
+           <br>
+           Example:- 
+           <br>
+           <p id="demo24"></p>
+
+           <br>
+           <br>
+
+           <p class="edit1">
+            <span style="font-size:30px;">Note</span>
+            <br>
+            The <span class="edit">padStart()</span> method is a string method. 
+            <br>
+            To pad a number, convert the number to a string first. 
+           </p>
+
+           <br>
+           Example:- 
+           <br>
+           <p id="demo25"></p>
+
+           <br>
+           <br>
+           <h2>
+            Browser Support 
+           </h2>
+
+           <br>
+
+           <span class="edit">padStart()</span> is an ECMAScript 2017 feature. 
+           <br>
+           It is supported in all modern browsers. 
+           <br>
+           <br>
+           <table class="table2">
+            <tr>
+                <td><img src="Image4.svg.png" height="35" width="35" alt="Google Chrome"></td>
+                <td><img src="Image5.png" height="35" width="35" alt="Microsoft Edge"></td>
+                <td><img src="Image6.png" height="35" width="35" alt="Mozilla Firefox"></td>
+                <td><img src="Image7.png" height="35" width="35" alt="Apple Safari"></td>
+                <td><img src="Image8.png" height="35" width="35" alt="Opera"></td>
+            </tr>
+            <tr>
+                <td>Chrome</td>
+                <td>Edge</td>
+                <td>Firefox</td>
+                <td>Safari</td>
+                <td>Opera</td>
+            </tr>
+            <tr>
+                <td>Yes</td>
+                <td>Yes</td>
+                <td>Yes</td>
+                <td>Yes</td>
+                <td>Yes</td>
+            </tr>
+           </table>
+
+           <br>
+           <br>
+           <span class="edit">padStart()</span> is not supported in Internet Explorer. 
+        </p>
+
+        <hr>
+
+        <h2>
+            JavaScript String padEnd() 
+        </h2>
+
+        <p>
+           The <span class="edit">padEnd()</span> method pads a string with another string. 
+           <br>
+           Example:- 
+           <br>
+           <p id="demo26"></p>
+
+           <br>
+           <br>
+           Example:- 
+           <br>
+           <p id="demo27"></p>
+
+           <br>
+           <br>
+
+           <p class="edit1">
+            <span style="font-size:30px;">Note</span>
+            <br>
+            The <span class="edit">padEnd()</span> method is a string method. 
+            <br>
+            To pad a number, convert the number to a string first. 
+           </p>
+
+           <br>
+           Example:- 
+           <br>
+           <p id="demo28"></p>
+
+           <br>
+           <br>
+
+           <h2>
+            Browser Support 
+           </h2>
+
+           <br>
+
+           <span class="edit">padEnd()</span> is an ECMAScript 2017 feature. 
+           <br>
+           It is supported in all modern browsers. 
+           <br>
+           <br>
+           <table class="table2">
+            <tr>
+                <td><img src="Image4.svg.png" height="35" width="35" alt="Google Chrome"></td>
+                <td><img src="Image5.png" height="35" width="35" alt="Microsoft Edge"></td>
+                <td><img src="Image6.png" height="35" width="35" alt="Mozilla Firefox"></td>
+                <td><img src="Image7.png" height="35" width="35" alt="Apple Safari"></td>
+                <td><img src="Image8.png" height="35" width="35" alt="Opera"></td>
+            </tr>
+            <tr>
+                <td>Chrome</td>
+                <td>Edge</td>
+                <td>Firefox</td>
+                <td>Safari</td>
+                <td>Opera</td>
+            </tr>
+            <tr>
+                <td>Yes</td>
+                <td>Yes</td>
+                <td>Yes</td>
+                <td>Yes</td>
+                <td>Yes</td>
+            </tr>
+           </table>
+
+           <br>
+
+           <span class="edit">padEnd()</span> is not supported in Internet Explorer. 
+        </p>
+
+        <hr>
+
+        <h2>
+            Extracting String Characters 
+        </h2>
+
+        <p>
+            There are 3 methods for extracting string characters:- 
+            <br>
+            <ul>
+                <li><span class="edit">charAt(position)</span></li>
+                <li><span class="edit">charCodeAt(position)</span></li>
+                <li>Property access [ ]</li>
+            </ul>
+        </p>
+
+        <hr>
+
+        <h2>
+            JavaScript String charAt() 
+        </h2>
+
+        <p>
+            The <span class="edit">charAt()</span> method returns the character at a specified index (position) in a string. 
+            <br>
+            Example:- 
+            <br>
+            <p id="demo29"></p>
+        </p>
+
+        <hr>
+
+        <h2>
+            JavaScript String charCodeAt() 
+        </h2>
+
+        <p>
+            The <span class="edit">charCodeAt()</span> method returns the unicode of the character at a specified index in a string. 
+            <br>
+            The method returns an UTF-16 code (an integer between 0 and 65535). 
+            <br>
+            Example:- 
+            <br>
+            <p id="demo30"></p>
+        </p>
+
+        <hr>
+
+        <h2>
+            Property Access 
+        </h2>
+
+        <p>
+            ECMAScript 5 (2009) allows property access [ ] on strings. 
+            <br>
+            Example:- 
+            <br>
+            <p id="demo31"></p>
+
+            <br>
+            <br>
+
+            <p class="edit1">
+                <span style="font-size:30px;">Note</span>
+                <br>
+                Property access might be a little <strong>unpredictable: </strong>
+                <br>
+                <ul>
+                    <li>It makes strings look like arrays (but they are not)</li>
+                    <li>If no character is found, [ ] returns undefined, while charAt() returns an empty string.</li>
+                    <li>It is read only. text[0] = "A" gives no error (but does not work!)</li>
+                </ul>
+            </p>
+
+            <br>
+            <br>
+            Example:- 
+            <br>
+            Property Access on strings are read only. 
+            <br>
+            Changing the first character of string "HELLO WORLD" to "A" and getting result:- 
+            <br>
+            <p id="demo32"></p>
+        </p>
+
+        <hr>
+
+        <h2>
+            Converting a String to an Array 
+        </h2>
+
+        <p>
+            <p class="edit1">
+                If you want to work with string as an array, you can convert it to an array. 
+            </p>
+        </p>
+
+        <br>
+
+        <h2>
+            JavaScript String split() 
+        </h2>
+
+        <p>
+            A string can be converted to an array with the <span class="edit">split()</span> method. 
+            <br>
+            <p class="edit1">
+                text.split(",")  //Split on commas
+                <br>
+                text.split(" ")  //Split on spaces
+                <br>
+                text.split("|")  //Split on pipe 
+            </p>
+            <br>
+            Example:- 
+            <br>
+            <p id="demo33"></p>
+
+            <br>
+            <br>
+
+            If a separator is omitted, the returned array will contain the whole string in index [0]. 
+            <br>
+            If the separator is "", the returned array will be an array of single characters. 
+            <br>
+            Example:- 
+            <br>
+            <p id="demo34"></p>
+        </p>
+
+
+
+
+
+        <script>
+            let text1 = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+            document.getElementById("demo1").innerHTML = 
+            "The length of string " + "\"ABCDEFGHIJKLMNOPQRSTUVWXYZ\"" + " is:- " + text1.length;
+
+            let text2 = "Apple, Banana, Kiwi";
+            let part1 = text2.slice(7,13);
+            document.getElementById("demo2").innerHTML = 
+            "The extracted part of string \"Apple, Banana, Kiwi\" is:- " + part1 + "<br>" + "The string will be counted from 0.";
+
+            let part2 = text2.slice(7);
+            document.getElementById("demo3").innerHTML = "Extract a part of above string from position 7:- " + part2;
+
+            let part3 = text2.slice(-12);
+            document.getElementById("demo4").innerHTML = part3;
+
+            let part4 = text2.slice(-12, -6);
+            document.getElementById("demo5").innerHTML = part4;
+
+            document.getElementById("demo6").innerHTML = text2.substring(7,13);
+
+            document.getElementById("demo7").innerHTML = text2.substr(7,6);
+
+            document.getElementById("demo8").innerHTML = text2.substr(7);
+
+            document.getElementById("demo9").innerHTML = text2.substr(-4);
+
+            function myFunction1() {
+                let text3 = document.getElementById("demo10").innerHTML;
+                document.getElementById("demo10").innerHTML = 
+                text3.replace("Microsoft", "W3Schools");
+            }
+
+            function myFunction2() {
+                let text4 = document.getElementById("demo11").innerHTML;
+                document.getElementById("demo11").innerHTML = 
+                text4.replace("Microsoft", "W3Schools");
+            }
+
+            function myFunction3() {
+                let text5 = document.getElementById("demo12").innerHTML;
+                document.getElementById("demo12").innerHTML = 
+                text5.replace("MICROSOFT", "W3Schools");
+            }
+
+            function myFunction4() {
+                let text6 = document.getElementById("demo13").innerHTML;
+                document.getElementById("demo13").innerHTML = 
+                text6.replace(/MICROSOFT/i, "W3Schools");
+            }
+
+            function myFunction5() {
+                let text = document.getElementById("demo14").innerHTML;
+                document.getElementById("demo14").innerHTML = 
+                text.replace(/Microsoft/g, "W3Schools");
+            }
+
+            let text3 = "I love cats. Cats are very easy to love. Cats are very popular.";
+            text3 = text3.replaceAll("Cats","Dogs");
+            text3 = text3.replaceAll("cats", "dogs");
+
+            document.getElementById("demo15").innerHTML = text3;
+
+            let text4 = "I love cats. Cats are very easy to love. Cats are very popular.";
+            text4 = text4.replaceAll(/Cats/g, "Dogs");
+            text4 = text4.replaceAll(/cats/g, "dogs");
+
+            document.getElementById("demo16").innerHTML = text4;
+
+            function myFunction6() {
+                let text = document.getElementById("demo17").innerHTML;
+                document.getElementById("demo17").innerHTML = 
+                text.toUpperCase();
+            }
+
+            function myFunction7() {
+                let text = document.getElementById("demo18").innerHTML;
+                document.getElementById("demo18").innerHTML = 
+                text.toLowerCase();
+            }
+
+            let text5 = "Hello";
+            let text6 = "World!";
+            let text7 = text5.concat(" ", text6);
+            document.getElementById("demo19").innerHTML = text7;
+
+            let text8 = "                Hello World!              ";
+            let text9 = text8.trim();
+
+            document.getElementById("demo20").innerHTML = 
+            "Length text1 = " + text8.length + "<br>" + "Length text2 = " + text9.length;
+
+            let text10 = "            Hello World!            ";
+            let text11 = text10.trimStart();
+
+            document.getElementById("demo21").innerHTML = 
+            "Length text1 = " + text10 + " is " + text10.length + " (With whitespaces) " + "<br>" + "Length text2 = " + text11 + " is " + text11.length + " (Without Whitespaces and after applying trimStart()) ";
+
+            let text12 = "        Hello World!           ";
+            let text13 = text12.trimEnd();
+
+            document.getElementById("demo22").innerHTML = 
+            "Length text1 = " + text12.length + "<br>" + "Length text2 = " + text13.length;
+
+            let text14 = "5";
+            document.getElementById("demo23").innerHTML = text14.padStart(4,"x");
+
+            let text15 = "5";
+            document.getElementById("demo24").innerHTML = text15.padStart(4,"0");
+
+            let num = 5;
+            let text16 = num.toString();
+            document.getElementById("demo25").innerHTML = text16.padStart(4,0);
+
+            let text17 = "5";
+            document.getElementById("demo26").innerHTML = text17.padEnd(4,"X");
+
+            let text18 = "5";
+            document.getElementById("demo27").innerHTML = text18.padEnd(4,"0");
+
+            let num1 = 56;
+            let text19 = num1.toString();
+
+            document.getElementById("demo28").innerHTML = text19.padEnd(4,"x");
+
+            var text20 = "HELLO WORLD";
+            document.getElementById("demo29").innerHTML = "Character at index 0 in string \"HELLO WORLD\" is:- " + text20.charAt(0);
+
+            document.getElementById("demo30").innerHTML = "Unicode of character at index 0 in string \"HELLO WORLD\" is:- " + text20.charCodeAt(0);
+
+            document.getElementById("demo31").innerHTML = "Character at location 0 is:- " + text20[0];
+
+            text20[0] = "A"; //Does not work
+            document.getElementById("demo32").innerHTML = text20;
+
+            let text21 = "a, b, c, d, e, f";
+            const myArray = text21.split(",");
+            document.getElementById("demo33").innerHTML = "The first array element after string split is:- " + myArray[0];
+
+            let text22 = "Hello";
+            const myArray2 = text22.split("");
+
+            text23 = "";
+            for (let i = 0;i < myArray2.length; i++)
+            {
+                text23 += myArray2[i] + "<br>"
+            }
+            document.getElementById("demo34").innerHTML = text23;
+        </script>
+    </body>
+</html>

@@ -1,0 +1,496 @@
+<!DOCTYPE html>
+<html lang="en-in">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>
+            AJAX Examples 
+        </title>
+        <style>
+            html {
+                font-size:calc(10px + 0.390625vw);
+            }
+
+            body {
+                font-size:1rem;
+                font-family:verdana, sans-serif;
+                line-height:1.5;
+            }
+
+            .edit {
+                background-color: #f1f1f1;
+                color:red;
+            }
+
+            .edit1 {
+                background-color:rgba(255,255,0,0.3);
+                padding:2rem;
+            }
+
+            table, th, td {
+                border:1px solid #ddd;
+                border-collapse:collapse;
+                padding:0.5rem;
+                text-align:left;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>
+            AJAX Examples 
+        </h1>
+
+        <hr>
+
+        <h2>
+            Simple Examples 
+        </h2>
+
+        <div>
+            <b>
+                Create a Simple XMLHttpRequest, and retrieve data from a TXT file:- 
+            </b>
+            <div id="demo1"></div>
+            <br>
+            <button type="button" onclick="myFunction1()">Change Content</button>
+
+            <br>
+            <br>
+
+            <b>
+                Create a XMLHttpRequest with a callback function, and retrieve data from a TXT file:- 
+            </b>
+            <div id="demo2"></div>
+            <br>
+            <button type="button" onclick="myFunction2('ajax_info.txt',myFunction3)">Change Content</button>
+        </div>
+
+        <hr>
+
+        <h2>
+            Request Header Information 
+        </h2>
+
+        <div>
+            <b>
+                Retrieve all header information of a resource (file):- 
+            </b>
+            <div id="demo3"></div>
+            <br>
+            <button onclick="myFunction4()">Get Header</button>
+
+            <br>
+            <br>
+
+            <b>
+                Retrieve specific header information of a resource (file):- 
+            </b>
+            <div id="demo4"></div>
+            <br>
+            <button onclick="myFunction5()">Get Specific Header</button>
+        </div>
+
+        <hr>
+
+        <h2>
+            Request XML Files 
+        </h2>
+
+        <div>
+            <b>
+                Load an XML file with AJAX:- 
+            </b>
+            <div id="demo5"></div>
+            <br>
+            <button onclick="myFunction6('note.xml')">Load XML</button>
+
+            <br>
+            <br>
+
+            <h3>
+                The XMLHttpRequest Object 
+            </h3>
+
+            <button type="button" onclick="myFunction7()">Get my CD Collection</button>
+            <br>
+            <br>
+            <table id="demo6"></table>
+        </div>
+
+        <hr>
+
+        <h2>
+            Retrieve Server Data with PHP and ASP 
+        </h2>
+
+        <div>
+            <b>
+                Retrieve the content of a PHP file:- 
+            </b>
+            <br>
+            <u>
+                Start typing a name in the input field below:- 
+            </u>
+
+            <p>
+                Suggestions:- <span id="txtHint1"></span>
+            </p>
+            <p>
+                First Name:- <input type="text" id="txt1" onkeyup="showHint1(this.value)">
+            </p>
+
+            <br>
+            <br>
+
+            <b>
+                Retrieve the content of an ASP file:- 
+            </b>
+
+            <br>
+
+            <u>
+                Start typing a name in the input field below:- 
+            </u>
+
+            <p>
+                Suggestions: <span id="txtHint2"></span>
+            </p>
+
+            <p>
+                First Name: <input type="text" id="txt2" onkeyup="showHint2(this.value)">
+            </p>
+        </div>
+
+        <hr>
+
+        <h2>
+            Retrieve Database Information 
+        </h2>
+
+        <div>
+            <b>
+                Retrieve content from a database:- 
+            </b>
+
+            <form action="">
+                <select name="customers" onchange="showCustomer1(this.value)">
+                <option value="">Select a customer:</option>
+                <option value="ALFKI">Alfreds Futterkiste</option>
+                <option value="NORTS">North/South</option>
+                <option value="WOLZA">Wolski Zajazd</option>
+                </select>
+            </form>
+            <br>
+            <div id="txtHint3">Customer info will be displayed here......</div>
+        </div>
+
+        <hr>
+
+        <h2>
+            AJAX Applications 
+        </h2>
+
+        <div>
+            <b>
+                View an XML CD Catalog:- 
+            </b>
+            <br>
+            <a href="cd_catalog.xml" target="_blank">cd_catalog.xml</a>
+
+            <br>
+            <br>
+
+            <b>
+                Display XML data in a HTML table:- 
+            </b>
+
+            <br>
+
+            <button type="button" onclick="loadXMLDoc1()">Get my  CD Collection</button>
+            <br>
+            <br>
+            <table id="demo7"></table>
+
+            <br>
+            <br>
+
+            <b>
+                Show XML data inside a HTML div element:- 
+            </b>
+
+            <br>
+
+            <div id="showCD"></div>
+
+            <br>
+            <br>
+
+            <b>
+                Navigate through XML Nodes:- 
+            </b>
+
+            <div id="showCD1"></div>
+            <br>
+            <input type="button" onclick="previous()" value="&lt;&lt;">
+            <input type="button" onclick="next()" value="&gt;&gt;">
+
+            <br>
+            <br>
+
+            <b>
+                A simple CD catalog application:- 
+            </b>
+
+            <p>
+                Click on a CD to display album information:- 
+            </p>
+
+            <p id="showCD2"></p>
+            <table id="demo8"></table>
+        </div>
+
+        <script>
+            function myFunction1() {
+                const xhttp = new XMLHttpRequest();
+                xhttp.onload = function() {
+                    document.getElementById("demo1").innerHTML = this.responseText;
+                }
+                xhttp.open("GET", "ajax_info.txt");
+                xhttp.send();
+            }
+
+            function myFunction2(url, xFunction) {
+                const xhttp = new XMLHttpRequest();
+                xhttp.onload = function() {xFunction(this);}
+                xhttp.open("GET",url);
+                xhttp.send();
+            }
+
+            function myFunction3(xhttp) {
+                document.getElementById("demo2").innerHTML = xhttp.responseText;
+            }
+
+            function myFunction4() {
+                const xhttp = new XMLHttpRequest();
+                xhttp.onload = function() {
+                    document.getElementById("demo3").innerHTML = 
+                    this.getAllResponseHeaders();
+                }
+                xhttp.open("GET", "ajax_info.txt");
+                xhttp.send();
+            }
+
+            function myFunction5() {
+                const xhttp = new XMLHttpRequest();
+                xhttp.onload = function() {
+                    document.getElementById("demo4").innerHTML = "Last Modified: " + 
+                    this.getResponseHeader("Last-Modified");
+                }
+                xhttp.open("GET", "ajax_info.txt");
+                xhttp.send();
+            }
+
+            function myFunction6(url) {
+                const xhttp = new XMLHttpRequest();
+                xhttp.onload = function() {
+                    document.getElementById("demo5").innerHTML = 
+                    "Status: " + this.status + "<br>" + 
+                    "Status Text: " + this.statusText + "<br>" +
+                    "Response: " + this.responseText;
+                }
+                xhttp.open("GET",url);
+                xhttp.send();
+            }
+
+            function myFunction7() {
+                const xhttp = new XMLHttpRequest();
+                xhttp.onload = function() {
+                    myFunction8(this);
+                }
+                xhttp.open("GET", "cd_catalog.xml");
+                xhttp.send();
+            }
+
+            function myFunction8(xml) {
+                const xmlDoc = xml.responseXML;
+                const cd = xmlDoc.getElementsByTagName("CD");
+                let table = "<tr><th>Artist</th><th>Title</th></tr>";
+
+                for(let i = 0; i < cd.length; i++) {
+                    table += "<tr><td>" + 
+                        cd[i].getElementsByTagName("ARTIST")[0].childNodes[0].nodeValue + 
+                        "</td><td>" + 
+                        cd[i].getElementsByTagName("TITLE")[0].childNodes[0].nodeValue + 
+                        "</td></tr>";
+                }
+                document.getElementById("demo6").innerHTML = table;
+            }
+
+            function showHint1(str) {
+                if(str.length == 0) {
+                    document.getElementById("txtHint1").innerHTML = "";
+                    return;
+                }
+                const xhttp = new XMLHttpRequest();
+                xhttp.onload = function() {
+                    document.getElementById("txtHint1").innerHTML = this.responseText;
+                }
+                xhttp.open("GET", "gethint.php?q="+str);
+                xhttp.send();
+            }
+
+            function showHint2(str) {
+                if(str.length == 0) {
+                    document.getElementById("txtHint2").innerHTML = "";
+                    return;
+                }
+                const xhttp = new XMLHttpRequest();
+                xhttp.onload = function() {
+                    document.getElementById("txtHint2").innerHTML = this.responseText;
+                }
+                xhttp.open("GET", "gethint.asp?q="+str);
+                xhttp.send();
+            }
+
+            function showCustomer1(str) {
+                if(str == "") {
+                    document.getElementById("txtHint3").innerHTML = "";
+                    return;
+                }
+                const xhttp = new XMLHttpRequest();
+                xhttp.onload = function() {
+                    document.getElementById("txtHint3").innerHTML = this.responseText;
+                }
+                xhttp.open("GET", "getcustomer.php?q="+str);
+                xhttp.send();
+            }
+
+            function loadXMLDoc1() {
+                const xhttp = new XMLHttpRequest();
+                xhttp.onload = function() {
+                    const xmlDoc = xhttp.responseXML;
+                    const cd = xmlDoc.getElementsByTagName("CD");
+                    myFunction9(cd);
+                }
+                xhttp.open("GET", "cd_catalog.xml");
+                xhttp.send();
+            }
+
+            function myFunction9(cd) {
+                let table = "<tr><th>ARTIST</th><th>TITLE</th></tr>";
+
+                for(let i = 0; i < cd.length; i++) {
+                   table += "<tr><td>" + 
+                    cd[i].getElementsByTagName("ARTIST")[0].childNodes[0].nodeValue + 
+                    "</td><td>" + 
+                    cd[i].getElementsByTagName("TITLE")[0].childNodes[0].nodeValue + 
+                    "</td></tr>";
+                }
+                document.getElementById("demo7").innerHTML = table;
+            }
+
+            function loadXMLDoc2() {
+                const xhttp = new XMLHttpRequest();
+                xhttp.onload = function() {
+                    const xmlDoc = xhttp.responseXML;
+                    const cd = xmlDoc.getElementsByTagName("CD");
+                    myFunction10(cd);
+                }
+                xhttp.open("GET", "cd_catalog.xml");
+                xhttp.send();
+            }
+
+            function myFunction10(cd) {
+                document.getElementById("showCD").innerHTML = 
+                "ARTIST: " + 
+                cd[0].getElementsByTagName("ARTIST")[0].childNodes[0].nodeValue + 
+                "<br>TITLE: " + 
+                cd[0].getElementsByTagName("TITLE")[0].childNodes[0].nodeValue + 
+                "<br>YEAR: " + 
+                cd[0].getElementsByTagName("YEAR")[0].childNodes[0].nodeValue;
+            }
+
+            loadXMLDoc2();
+
+            function loadXMLDoc3() {
+                const xhttp = new XMLHttpRequest();
+                xhttp.onload = function() {
+                    const xml = xhttp.responseXML;
+                    cd = xml.getElementsByTagName("CD");
+                    len = cd.length;
+                    display(i);
+                }
+                xhttp.open("GET", "cd_catalog.xml");
+                xhttp.send();
+            }
+
+            let len;
+            let i = 0;
+            let cd;
+
+            function display(i) {
+                document.getElementById("showCD1").innerHTML = 
+                "Artist: " + 
+                cd[i].getElementsByTagName("ARTIST")[0].childNodes[0].nodeValue + 
+                "<br>Title: " + 
+                cd[i].getElementsByTagName("TITLE")[0].childNodes[0].nodeValue + 
+                "<br>Year: " + 
+                cd[i].getElementsByTagName("YEAR")[0].childNodes[0].nodeValue;
+            }
+            
+            function next() {
+                if(i < len-1) {
+                    i++;
+                    display(i);
+                }
+            }
+
+            function previous() {
+                if(i > 0) {
+                    i--;
+                    display(i);
+                }
+            }
+
+            loadXMLDoc3();
+
+            function loadXMLDoc4() {
+                const xhttp = new XMLHttpRequest();
+                xhttp.onload = function() {
+                    const xml = xhttp.responseXML;
+                    const cd = xml.getElementsByTagName("CD");
+                    myFunction11(cd);
+                }
+                xhttp.open("GET", "cd_catalog.xml");
+                xhttp.send();
+            }
+
+            function myFunction11(cd) {
+                let table = "<tr><th>ARTIST</th><th>TITLE</th></tr>";
+
+                for(let i = 0; i < cd.length; i++) {
+                    table += "<tr onclick='displaylink(" + i + ")'><td>" +
+                    cd[i].getElementsByTagName("ARTIST")[0].childNodes[0].nodeValue + 
+                    "</td><td>" + 
+                    cd[i].getElementsByTagName("TITLE")[0].childNodes[0].nodeValue + 
+                    "</td><td>" + 
+                    cd[i].getElementsByTagName("YEAR")[0].childNodes[0].nodeValue + 
+                    "</td></tr>";
+                }
+                document.getElementById("demo8").innerHTML = table;
+            }
+
+            loadXMLDoc4();
+
+            function displaylink(i) {
+                document.getElementById("showCD2").innerHTML = 
+                "Artist: " + 
+                cd[i].getElementsByTagName("ARTIST")[0].childNodes[0].nodeValue + 
+                "<br>Title: " + 
+                cd[i].getElementsByTagName("TITLE")[0].childNodes[0].nodeValue + 
+                "<br>Year: " + 
+                cd[i].getElementsByTagName("YEAR")[0].childNodes[0].nodeValue;
+            }
+        </script>
+    </body>
+</html>

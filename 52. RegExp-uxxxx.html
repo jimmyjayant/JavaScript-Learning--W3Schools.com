@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            JavaScript Regular Expression Metacharacters \uxxxx  
+        </title>
+        <style>
+            body {
+                font-family:verdana, sans-serif;
+                font-size:20px;
+                line-height:1.5;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>
+            Regular Expression Metacharacters \uxxxx      
+        </h1>
+
+        <h2>
+            Do a global search for the hexadecimal number 0057 (W) in a string "Visit W3Schools. Hello World!".  
+        </h2>
+
+        <p id="demo1"></p>
+
+        <script>
+            let text1 = "Visit W3Schools. Hello World!"; 
+            let result = text1.match(/\u0057/g);
+            document.getElementById("demo1").innerHTML = result;
+        </script>
+
+    </body>
+
+</html>

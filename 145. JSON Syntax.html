@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en-in">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>
+            JSON Syntax 
+        </title>
+        <style>
+            html {
+                font-size:calc(10px + 0.390625vw);
+            }
+
+            body {
+                font-size:1rem;
+                font-family:verdana, sans-serif;
+                line-height:1.5;
+            }
+
+            .edit {
+                background-color:#f1f1f1;
+                color:red;
+            }
+
+            .edit1 {
+                background-color:rgba(255,255,0,0.3);
+                padding:2rem;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>
+            JSON Syntax 
+        </h1>
+
+        <div>
+            The JSON syntax is a subset of the JavaScript syntax. 
+        </div>
+
+        <hr>
+
+        <h2>
+            JSON Syntax Rules 
+        </h2>
+
+        <div>
+            JSON syntax is derived from JavaScript object notation syntax:- 
+            <br>
+            <ul>
+                <li>Data is in name/value pairs</li>
+                <li>Data is separated by commas</li>
+                <li>Curly braces hold objects</li>
+                <li>Square brackets hold arrays</li>
+            </ul>
+        </div>
+
+        <hr>
+
+        <h2>
+            JSON Data - A Name and a Value 
+        </h2>
+
+        <div>
+            JSON data is written as name/value pairs (aka key/value pairs). 
+            <br>
+            A name/value pair consists of a field name (in double quotes), followed by a colon, followed by a value. 
+            <br>
+            Example:- 
+            <br>
+            <p class="edit1">
+                "name":"John" 
+            </p> 
+
+            <br>
+
+            <p class="edit1">
+                JSON names require double quotes. 
+            </p>
+        </div>
+
+        <hr>
+
+        <h2>
+            JSON - Evaluates to JavaScript Objects 
+        </h2>
+
+        <div>
+            The JSON format is almost identical to JavaScript objects. 
+            <br>
+            In JSON, <i>keys</i> must be strings, written with double quotes. 
+            <br>
+            <b>JSON</b>
+            <br>
+            <p class="edit1">
+                {"name":"John"} 
+            </p>
+            <br>
+            In JavaScript, keys can be strings, numbers, or identifier names. 
+            <br>
+            <b>JavaScript</b>
+            <br>
+            <p class="edit1">
+                {name:"John"} 
+            </p>
+        </div>
+
+        <hr>
+        <br>
+        <br>
+        <hr>
+
+        <h2>
+            JSON Values 
+        </h2>
+
+        <div>
+            In <b>JSON</b>, <i>values</i> must be one of the following data types:- 
+            <br>
+            <ul>
+                <li>a string</li>
+                <li>a number</li>
+                <li>an object</li>
+                <li>an array</li>
+                <li>a boolean</li>
+                <li>null</li>
+            </ul>
+
+            <br>
+
+            In <b>JavaScript</b> values can be all of the above, plus any other valid JavaScript expression, including:- 
+            <br>
+            <ul>
+                <li>a function</li>
+                <li>a date</li>
+                <li>undefined</li>
+            </ul>
+
+            <br>
+            In JSON, <i>string values</i> must be written with double quotes. 
+            <br>
+            <b>JSON</b>
+            <br>
+            <p class="edit1">
+                {"name" : "John"} 
+            </p>
+
+            <br>
+            In JavaScript, you can write string values with double <i>or</i> single quotes. 
+            <br>
+            <b>JavaScript</b>
+            <br>
+            <p class="edit1">
+                {name: 'John'} 
+            </p>
+        </div>
+
+        <hr>
+
+        <h2>
+            JavaScript Objects 
+        </h2>
+
+        <div>
+            Because JSON syntax is derived from JavaScript object notation, very little extra software is needed to work with JSON within JavaScript. 
+            <br>
+            With JavaScript you can create an object and assign data to it, like this. 
+            <br>
+            Example:- 
+            <br>
+            <p class="edit1">
+                person = {name: "John", age:31, city:"New York"}; 
+            </p>
+
+            <br>
+            You can access a JavaScript object like this. 
+            <br>
+            Example:- 
+            <br>
+            <p id="demo1"></p>
+
+            <br>
+            <br>
+            It can also be accessed like this. 
+            <br>
+            Example:- 
+            <br>
+            <p id="demo2"></p>
+
+            <br>
+            <br>
+            Data can be modified like this. 
+            <br>
+            Example:- 
+            <br>
+            <p id="demo3"></p>
+
+            <br>
+            <br>
+            It can also be modified like this. 
+            <br>
+            Example:- 
+            <br>
+            <p id="demo4"></p>
+        </div>
+
+        <hr>
+
+        <h2>
+            JavaScript Arrays as JSON 
+        </h2>
+
+        <div>
+            The same way JavaScript objects can be written as JSON, JavaScript arrays can also be written as JSON. 
+        </div>
+
+        <hr>
+
+        <h2>
+            JSON Files 
+        </h2>
+
+        <div>
+            <ul>
+                <li>The file type for JSON files is ".json"</li>
+                <li>The MIME type for JSON text is "application/json"</li>
+            </ul>
+        </div>
+
+        <script>
+            const myObj1 = {name:"John", age:30, city:"New York"};
+            //returns John
+            document.getElementById("demo1").innerHTML = myObj1.name;
+
+            //returns John
+            document.getElementById("demo2").innerHTML = myObj1["name"];
+
+            const myObj2 = {name: "John", age:30, city: "New York"};
+            myObj2.name = "Gilbert";
+            document.getElementById("demo3").innerHTML = myObj2.name;
+
+            const myObj3 = {name: "John", age:30, city:"New York"};
+            myObj3["name"] = "Gilbert";
+            document.getElementById("demo4").innerHTML = myObj3["name"];  //or myObj3.name
+        </script>
+    </body>
+</html>

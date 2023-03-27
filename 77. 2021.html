@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            ECMAScript 2021 
+        </title>
+        <style>
+            .edit {
+                background-color:#f1f1f1;
+                color:red;
+            }
+            .edit1 {
+                background-color:rgba(255,255,0,0.3);
+                padding:20px;
+            }
+            body {
+                font-family:verdana, sans-serif;
+                font-size:20px;
+                line-height:1.5;
+            }
+            .table1 {
+                width:100%;
+                border:1px solid #ddd;
+                border-collapse:collapse;
+            }
+            .table1 td {
+                text-align:center;
+                padding:10px;
+                border:1px solid #ddd;
+            }
+            .table1 tr {
+                height:40px;
+            }
+            .table1 tr:nth-child(even) {
+                background-color:#f1f1f1;
+            }
+            
+        </style>
+    </head>
+    <body>
+        <h1>
+            ECMAScript 2021 
+        </h1>
+
+        <div style="background-color:rgba(0,255,0,0.2);padding:20px;">
+        Original JavaScript version numbers were ES5 (2009) and ES6 (2015). 
+        <br>
+        Since 2016 versions are named by year.  
+        </div>
+
+        <hr>
+
+        <h2>
+            New Features in ES2021 
+        </h2>
+
+        <div>
+            <ul>
+                <li>Promise any(): 
+                    <br>
+                    <span class="edit">const first = await Promise.any([prom1,prom2,prom3]);</span>
+                </li>
+                <li>String replaceAll()</li>
+                <li>Numeric Separators (_)</li>
+            </ul>
+
+            <br>
+
+            <div style="background-color:rgba(255,0,0,0.1);padding:20px;">
+            <span style="font-size:30px;">Warning</span>
+            <br>
+            These features are relatively new. Old browsers may need an alternative code (Polifill) 
+            </div>
+        </div>
+
+        <hr>
+
+        <h2>
+            JavaScript String ReplaceAll() 
+        </h2>
+
+        <div>
+            ES2021 introduced the string method <span class="edit">replaceAll()</span>. 
+            <br>
+            Example:- 
+            <br>
+            String is:- "I love cats. Cats are very easy to love. Cats are very popular." 
+            <br>
+            Replacing word cats and Cats with dogs and Dogs respectively we get:- 
+            <br>
+            <p id="demo1"></p>
+
+            <br>
+            <br>
+            The <span class="edit">replaceAll()</span> method allows you to specify a regular expression instead of a string to be replaced. 
+            <br>
+            If the parameter is a regular expression, the global flag (g) must be set, otherwise a TypeError is thrown. 
+            <br>
+            Example:- 
+            <br>
+            <p id="demo2"></p>
+
+            <br>
+
+            <div class="edit1">
+                <span style="font-size:30px;">Note</span>
+                <br>
+                ES2020 introduced the string method matchAll(). 
+            </div>
+        </div>
+
+        <hr>
+
+        <h2>
+            JavaScript Numeric Separator (_) 
+        </h2>
+
+        <div>
+            ES2021 introduced the numeric separator (_) to make numbers more readable. 
+            <br>
+            Example:- 
+            <br>
+            <p id="demo3"></p>
+
+            <br>
+            The numeric separator is only for visual use. 
+            <br>
+            Example:- 
+            <br>
+            <p id="demo4"></p>
+
+            <br>
+            The numeric separator can be placed anywhere in a number. 
+            <br>
+            Example:- 
+            <br>
+            <p id="demo5"></p>
+
+            <br>
+            
+            <div class="edit1">
+                <span style="font-size:30px;">Note</span>
+                <br>
+                The numeric separator is not allowed at the beginning or at the end of a number. 
+                <br>
+                In JavaScript only variables can start with _. 
+            </div>
+
+            <br>
+            <br>
+
+            The numeric separator is supported in all browsers since January 2020. 
+            <br>
+            <br>
+            <table class="table1">
+                <tr>
+                    <td><img src="Image4.svg.png" height="38" width="38" alt="Google Chrome"></td>
+                    <td><img src="Image5.png" height="38" width="38" alt="Microsoft Edge"></td>
+                    <td><img src="Image6.png" height="38" width="38" alt="Mozilla Firefox"></td>
+                    <td><img src="Image7.png" height="38" width="38" alt="Apple Safari"></td>
+                    <td><img src="Image8.png" height="38" width="38" alt="Opera"></td>
+                </tr>
+                <tr>
+                    <td>Chrome 75</td>
+                    <td>Edge 79</td>
+                    <td>Firefox 74</td>
+                    <td>Safari 13.1</td>
+                    <td>Opera 67</td>
+                </tr>
+                <tr>
+                    <td>Jun 2019</td>
+                    <td>Jan 2020</td>
+                    <td>Oct 2019</td>
+                    <td>Sep 2019</td>
+                    <td>Jun 2019</td>
+                </tr>
+            </table>
+        </div>
+
+        <script>
+            let text1 = "I love cats. Cats are very easy to love. Cats are very popular.";
+            text1 = text1.replaceAll("Cats","Dogs");
+            text1 = text1.replaceAll("cats","dogs");
+            document.getElementById("demo1").innerHTML = text1;
+
+            let text2 = "I love cats. Cats are very easy to love. Cats are very popular.";
+            text2 = text2.replaceAll(/Cats/g,"Dogs");
+            text2 = text2.replaceAll(/cats/g,"dogs");
+            document.getElementById("demo2").innerHTML = text2;
+
+            const num1 = 1_000_000_000;
+            document.getElementById("demo3").innerHTML = num1;
+
+            const num2 = 1000000000;
+            document.getElementById("demo4").innerHTML = 
+            "Is 1_000_000_000 the same as 1000000000? = " + (num1 === num2);
+
+            const num3 = 1_2_3_4_5;
+            document.getElementById("demo5").innerHTML = num3;
+        </script>
+    </body>
+</html>

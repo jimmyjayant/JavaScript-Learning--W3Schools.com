@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            JavaScript Let 
+        </title>
+        <style>
+            .edit {
+                background-color:#f1f1f1;
+                color:red;
+            }
+            .edit1 {
+                background-color:rgba(255,255,0,0.3);
+                padding:20px;
+            }
+            .table1 {
+                width:100%;
+                border-collapse:collapse;
+                border:1px solid #f1f1f1;
+            }
+            .table1 tr {
+                height:40px;
+            }
+            .table1 tr:nth-child(even) {
+                background-color:#f1f1f1;
+            }
+            .table1 td {
+                text-align:center;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>
+            JavaScript Let 
+        </h1>
+
+        <p style="background-color:lightgreen;padding:10px;">
+        The <span class="edit">let</span> keyword was introduced in ES6 (2015). 
+        <br>
+        Variables defined with <span class="edit">let</span> cannot be Redeclared. 
+        <br>
+        Variables defined with <span class="edit">let</span> must be Declared before use. 
+        <br>
+        Variables defined with <span class="edit">let</span> have Block Scope. 
+        </p>
+
+        <br>
+        <br>
+
+        <h2>
+            Cannot be Redeclared 
+        </h2>
+
+        <p>
+           Variables defined with <span class="edit">let</span> cannot be <strong>redeclared</strong>. 
+           <br>
+           You cannot accidentally redeclare a variable. 
+           <br>
+           With <span class="edit">let</span> you can not do this. 
+           <br>
+           Example:- 
+           <br>
+           <p class="edit1">
+            let a = "John Doe";
+            <br>
+            let a = 0;
+            <br>
+            //SyntaxError: 'a' has already been declared 
+           </p>
+
+           <br>
+           <br>
+
+           With <span class="edit"> var </span> you can:- 
+           <br>
+           Example:- 
+           <br>
+           <p class="edit1">
+            var x = "John Doe";
+            <br>
+            var x = 0;
+           </p>
+        </p>
+
+        <hr>
+
+        <h2>
+            Block Scope 
+        </h2>
+
+        <p>
+            Before ES6 (2015), JavaScript had only <strong>Global Scope</strong> and <strong>Function Scope</strong>. 
+            <br>
+            ES6 introduced two important new JavaScript keywords: <span class="edit">let</span> and <span class="edit">const</span>. 
+            <br>
+            These two keywords provide <strong>Block Scope</strong> in JavaScript. 
+            <br>
+            Variables declared inside a {} block cannot be accessed from outside the block. 
+            <br>
+            Example:- 
+            <br>
+            <p class="edit1">
+                {
+                    <br>
+                    let x = 2;
+                    <br>
+                }
+                <br>
+                // x can NOT be used here 
+            </p>
+
+            <br>
+            <br>
+
+            Variables declared with the <span class="edit">var</span> keyword can NOT have block scope. 
+            <br>
+            Variables declared inside a {} block can be accessed from outside the block. 
+            <br>
+            Example:- 
+            <br>
+            <p class="edit1">
+                {
+                    <br>
+                    var x = 2;
+                    <br>
+                }
+                <br>
+                // x CAN be used here 
+            </p> 
+        </p>
+
+        <hr>
+
+        <h2>
+            Redeclaring Variables 
+        </h2>
+
+        <p>
+            Redeclaring a variable using the <span class="edit">var</span> keyword can impose problems. 
+            <br>
+            Redeclaring a variable inside a block will also redeclare the variable outside the block. 
+            <br>
+            
+            <p class="edit1">
+                var x = 10;
+                <br>
+                // Here x is 10
+                <br>
+                {
+                    <br>
+                    var x = 2;
+                    <br>
+                    // Here x is 2 
+                    <br>
+                }
+                <br>
+                // Here x is 2 
+            </p>
+
+            <br>
+
+            Example:- 
+            <br>
+            <p id="demo1"></p>
+
+            <br>
+            <br>
+
+            Redeclaring a variable using the <span class="edit">let</span> keyword can solve this problem. 
+            <br>
+            Redeclaring a variable inside a block will not redeclare the variable outside the block. 
+            <br>
+            <p class="edit1">
+                let x = 10;
+                <br>
+                //Here x is 10
+                <br>
+                <br>
+                {
+                    <br>
+                    let x = 2;
+                    <br>
+                    //Here x is 2 
+                    <br>
+                }
+
+                <br>
+                //Here x is 10 
+            </p>
+            <br>
+            Example:- 
+            <br>
+            <p id="demo2"></p>
+        </p>
+
+        <hr>
+
+        <h2>
+            Browser Support 
+        </h2>
+
+        <p>
+            The <span class="edit">let</span> keyword is not fully supported in Internet Explorer 11 or earlier. 
+            <br>
+            The following table defines the first browser versions with full support for the <span class="edit">let</span> keyword. 
+            <br>
+            <table class="table1">
+                <tr>
+                    <td><img src="Image4.svg.png" height="40" width="40" alt="Google Chrome"></td>
+                    <td><img src="Image5.png" height="40" width="40" alt="Microsoft Edge"></td>
+                    <td><img src="Image6.png" height="40" width="40" alt="Mozilla Firefox"></td>
+                    <td><img src="Image7.png" height="40" width="40" alt="Apple Safari"></td>
+                    <td><img src="Image8.png" height="40" width="40" alt="Opera"></td>
+                </tr>
+                <tr>
+                    <td>Chrome 49</td>
+                    <td>Edge 12</td>
+                    <td>Firefox 44</td>
+                    <td>Safari 11</td>
+                    <td>Opera 36</td>
+                </tr>
+                <tr>
+                    <td>Mar, 2016</td>
+                    <td>Jul, 2015</td>
+                    <td>Jan, 2015</td>
+                    <td>Sep, 2017</td>
+                    <td>Mar, 2016</td>
+                </tr>
+            </table>
+        </p>
+
+        <hr>
+        <br>
+        <br>
+        <hr>
+
+        <h2>
+            Redeclaring 
+        </h2>
+
+        <p>
+            Redeclaring a JavaScript variable with <span class="edit">var</span> is allowed anywhere in a program. 
+            <br>
+            Example:- 
+            <br>
+            <p class="edit1">
+                var x = 2;
+                <br>
+                // Now x is 2
+                <br>
+                <br>
+                var x = 3;
+                <br>
+                // Now x is 3 
+            </p>
+            <br>
+            Example:- 
+            <br>
+            <p id="demo3"></p>
+
+            <br>
+            <br>
+
+            With <span class="edit">let</span>, redeclaring a variable in the same block is NOT allowed. 
+            <br>
+            Example:- 
+            <br>
+
+            <p class="edit1">
+                var x = 2; //allowed
+                <br>
+                let x = 3; //Not allowed
+
+                <br>
+                <br>
+
+                {
+                    <br>
+                    let x = 2; //allowed
+                    <br>
+                    let x = 3; //Not allowed 
+                    <br>
+                }
+
+                <br>
+                <br>
+
+                {
+                    <br>
+                    let x = 2;  //allowed
+                    <br>
+                    var x = 3; //Not allowed 
+                    <br>
+                }
+            </p>
+
+            <br>
+            <br>
+
+            Redeclaring a variable with <span class="edit">let</span>, in another block, IS allowed. 
+            <br>
+            
+            <p class="edit1">
+                let x = 2;  //Allowed 
+                <br>
+                {
+                    <br>
+                    let x = 3;  //Allowed
+                    <br>
+                }
+
+                <br>
+                <br>
+
+                {
+                    <br>
+                    let x = 4;  //Allowed 
+                    <br>
+                }
+            </p>
+
+            <br>
+            Example:- 
+            <br>
+            <p id="demo4"></p>
+
+        </p>
+
+        <hr>
+
+        <h2>
+            Let Hoisting 
+        </h2>
+
+        <p>
+            Variables defined with <span class="edit">var</span> are <strong>hoisted</strong> to the top and can be initialized at any time. 
+            <br>
+            Meaning: You can use the variable before it is declared. 
+            <br>
+            <p class="edit1">
+                This is OK:- 
+                <br>
+                carName = "Volvo";
+                <br>
+                var carName;
+            </p>
+            <br>
+            Example:- 
+            <br>
+            <p id="demo5"></p>
+
+            <br>
+            <br>
+
+            Variables defined with <span class="edit">let</span> are also hoisted to the top of the block, but not initialized. 
+            <br>
+            Meaning: Using a <span class="edit">let</span> variable before it is declared will result in a <span class="edit">ReferenceError</span>. 
+            <br>
+            Example:- 
+            <br>
+            <p id="demo6"></p>
+        </p>
+
+
+        <script>
+            var x = 10;
+            //Here x is 10
+
+            {
+                var x = 2;
+                //Here x is 2 
+            }
+
+            //Here x is 2 
+
+            document.getElementById("demo1").innerHTML = x;
+
+            let y = 10;
+            //Here y is 10
+            {
+                let y = 2;
+                //Here y is 2
+            }
+
+            //Here y is 10
+
+            document.getElementById("demo2").innerHTML = y;
+
+            var z = 2;
+            //Now z is 2
+
+            var z = 3;
+            //Now z is 3
+
+            document.getElementById("demo3").innerHTML = z;
+
+            let a = 2; //Allowed
+
+            {
+                let a = 3;  //Allowed
+            }
+
+            {
+                let a = 4;  //Allowed 
+            }
+
+            document.getElementById("demo4").innerHTML = a;
+
+            carName = "Volvo";
+            document.getElementById("demo5").innerHTML = carName;
+            var carName;
+
+            try {
+                carName1 = "Saab";
+                let carName1 = "Volvo";
+            }
+            catch(err) {
+                document.getElementById("demo6").innerHTML = err;
+            }
+        </script>
+    </body>
+</html>

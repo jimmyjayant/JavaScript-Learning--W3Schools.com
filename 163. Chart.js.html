@@ -1,0 +1,606 @@
+<!DOCTYPE html>
+<html lang="en-in">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>
+            Chart.js 
+        </title>
+        <style>
+            html {
+                font-size:calc(10px + 0.390625vw);
+            }
+
+            body {
+                font-family:verdana, sans-serif;
+                font-size:1rem;
+                line-height:1.5;
+            }
+
+            .edit {
+                background-color:#f1f1f1;
+                color:red;
+            }
+
+            .edit1 {
+                background-color:rgba(255,255,0,0.3);
+                padding:2rem;
+            }
+        </style>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
+    </head>
+    <body>
+        <h1>
+            Chart.js 
+        </h1>
+
+        <div style="background-color:rgba(0,255,0,0.1);padding:2rem;">
+            <strong>Chart.js</strong> is a free JavaScript library for making HTML-based charts. It is one of the simplest visualization libraries for JavaScript, and comes with the following built-in chart types:- 
+            <br>
+            <ul>
+                <li>Scatter Plot</li>
+                <li>Line Chart</li>
+                <li>Bar Chart</li>
+                <li>Pie Chart</li>
+                <li>Donut Chart</li>
+                <li>Bubble Chart</li>
+                <li>Area Chart</li>
+                <li>Radar Chart</li>
+                <li>Mixed Chart</li>
+            </ul>
+        </div>
+
+        <hr>
+
+        <h2>
+            How to Use Chart.js? 
+        </h2>
+
+        <div>
+            Chart.js is easy to use. 
+            <br>
+            <strong>First</strong>, add a link to the providing CDN (Content Delivery Network). 
+            <br>
+            <p class="edit1">
+                &lt;script 
+                <br>
+                src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"&gt; 
+                <br>
+                &lt;/script&gt; 
+            </p>
+
+            <br>
+            <strong>Then</strong>, add a &lt;canvas&gt; to where you want to draw the chart: 
+            <br>
+            <p class="edit1">
+                &lt;canvas id="myChart" style="width:100%;max-width:700px;"&gt;&lt;/canvas&gt; 
+            </p>
+
+            <br>
+            The canvas element must have a unique id. 
+            <br>
+            That's all! 
+            <br>
+            <br>
+
+            <p class="edit1">
+            <b>Typical Scatter Chart Syntax:</b>
+            <br>
+            const myChart = new Chart("myChart", {
+                <br>
+                type: "scatter",
+                <br>
+                data: {}, 
+                <br>
+                options: {}
+                <br>
+            });
+            </p>
+
+            <br>
+            <br>
+
+            <p class="edit1">
+                <b>Typical Line Chart Syntax:</b>
+                <br>
+                const myChart = new Chart("myChart", {
+                    <br>
+                    type: "line",
+                    <br>
+                    data: {},
+                    <br>
+                    options: {}
+                    <br>
+                });
+            </p>
+
+            <br>
+            <br>
+
+            <p class="edit1">
+                <b>Typical Bar Chart Syntax:</b>
+                <br>
+                const myChart = new Chart("myChart", {
+                    <br>
+                    type: "bar", 
+                    <br>
+                    data: {}, 
+                    <br>
+                    options: {}
+                    <br>
+                });
+            </p>
+        </div>
+
+        <hr>
+
+        <h2>
+            Scatter Plots 
+        </h2>
+
+        <div>
+            Example:- 
+            <br>
+            <canvas id="myChart1" style="width:100%;max-width:700px;"></canvas>
+        </div>
+
+        <hr>
+        <br>
+        <br>
+        <hr>
+
+        <h2>
+            Line Graphs 
+        </h2>
+
+        <div>
+            Example:- 
+            <br>
+            <canvas id="myChart2" style="width:100%;max-width:700px;"></canvas>
+
+            <br>
+            If you set the borderColor to zero, you can <strong>scatter plot</strong> the line graph: 
+            <br>
+            Example:- 
+            <br>
+            <canvas id="myChart3" style="width:100%;max-width:700px;"></canvas>
+        </div>
+
+        <hr>
+
+        <h2>
+            Multiple Lines 
+        </h2>
+
+        <div>
+            Example:- 
+            <br>
+            <canvas id="myChart4" style="width:100%;max-width:700px;"></canvas>
+        </div>
+
+        <hr>
+
+        <h2>
+            Linear Graphs 
+        </h2>
+
+        <div>
+            Example:- 
+            <br>
+            <canvas id="myChart5" style="width:100%;max-width:700px;"></canvas>
+        </div>
+
+        <hr>
+
+        <h2>
+            Functional Graphs 
+        </h2>
+
+        <div>
+            Example:- 
+            <br>
+            Same as Linear Graph. Just change the generateData parameter(s):- 
+            <br>
+            <canvas id="myChart6" style="width:100%;max-width:700px;"></canvas>
+        </div>
+
+        <hr>
+
+        <h2>
+            Bar Charts 
+        </h2>
+
+        <div>
+            Example:- 
+            <br>
+            <canvas id="myChart7" style="width:100%; max-width:700px;"></canvas>
+
+            <br>
+            <br>
+            Example:- 
+            <br>
+            <b>Color only one bar:- </b>
+            <br>
+            <canvas id="myChart8" style="width:100%;max-width:700px;"></canvas>
+
+            <br>
+            <br>
+            Example:- 
+            <br>
+            <b>Same color all bars:- </b>
+            <br>
+            <canvas id="myChart9" style="width:100%; max-width:700px;"></canvas>
+
+            <br>
+            <br>
+            Example:- 
+            <br>
+            <b>Color Shades:- </b>
+            <br>
+            <canvas id="myChart10" style="width:100%;max-width:700px;"></canvas>
+            
+            <br>
+            <br>
+            <h3>
+                Horizontal Bars 
+            </h3>
+            <br>
+            <b>Just Change type from "bar" to "horizontalBar":- </b>
+            <br>
+            Example:- 
+            <br>
+            <canvas id="myChart11" style="width:100%;max-width:700px;"></canvas>
+        </div>
+
+        <hr>
+
+        <h2>
+            Pie Charts 
+        </h2>
+
+        <div>
+            Example:- 
+            <br>
+            <canvas id="myChart12" style="width:100%;max-width:700px;"></canvas>
+        </div>
+
+        <hr>
+
+        <h2>
+            Doughnut charts
+        </h2>
+
+        <div>
+            Example:- 
+            <br>
+            <b>Just change type from "pie" to "doughnut":- </b>
+            <canvas id="myChart13" style="width:100%; max-width:700px;"></canvas>
+        </div>
+
+        <script>
+            var xyValues1 = [
+               {x:50, y:7},
+               {x:60, y:8},
+               {x:70, y:8},
+               {x:80, y:9},
+               {x:90, y:9},
+               {x:100, y:9},
+               {x:110, y:10},
+               {x:120, y:11},
+               {x:130, y:14},
+               {x:140, y:14},
+               {x:150, y:15}
+            ];
+
+            new Chart("myChart1", {
+                type:"scatter", 
+                data: {
+                    datasets: [{
+                        pointRadius: 4, 
+                        pointBackgroundColor: "rgba(0,0,255)",
+                        data: xyValues1
+                    }]
+                },
+                options: {
+                    legend: {display: false},
+                    scales: {
+                        xAxes: [{ticks: {min: 40, max:160}}],
+                        yAxes: [{ticks: {min: 6, max:16}}],
+                    }
+                }
+            });
+
+            const xValues1 = [50,60,70,80,90,100,110,120,130,140,150];
+            const yValues1 = [7,8,8,9,9,9,10,11,14,14,15];
+
+            new Chart("myChart2", {
+                type: "line",
+                data: {
+                    labels: xValues1,
+                    datasets: [{
+                        fill: false,
+                        lineTension: 0,
+                        backgroundColor: "rgba(0,0,255,1.0)",
+                        borderColor: "rgba(0,0,255,0.1)",
+                        data: yValues1
+                    }]
+                },
+                options: {
+                    legend: {display: false},
+                    scales: {
+                        yAxes: [{ticks: {min: 6, max:16}}],
+                    }
+                }
+            });
+
+            new Chart("myChart3", {
+                type: "line",
+                data: {
+                    labels: xValues1,
+                    datasets: [{
+                        fill: false,
+                        lineTension: 0,
+                        backgroundColor: "rgba(0,0,255,1.0)",
+                        borderColor: "rgba(0,0,0,0)",
+                        data: yValues1
+                    }]
+                },
+                options: {
+                    legend: {display: false},
+                    scales: {
+                        yAxes: [{ticks: {min: 6, max:16}}],
+                    }
+                }
+            });
+
+            const xValues2 = [100,200,300,400,500,600,700,800,900,1000];
+
+            new Chart("myChart4", {
+                type: "line",
+                data: {
+                    labels: xValues2,
+                    datasets: [{
+                        data: [860,1140,1060,1060,1070,1110,1330,2210,7830,2478],
+                        borderColor: "red",
+                        fill: false
+                    },{
+                        data: [1600,1700,1700,1900,2000,2700,4000,5000,6000,7000],
+                        borderColor: "green",
+                        fill : false 
+                    }, {
+                        data: [300,700,2000,5000,6000,4000,2000,1000,200,100],
+                        borderColor: "blue",
+                        fill: false 
+                    }]
+                },
+                options: {
+                    legend: {display: false}
+                }
+            });
+
+            const xValues3 = [];
+            const yValues2 = [];
+            generateData("x * 2 + 7", 0, 10, 0.5);
+
+            new Chart("myChart5", {
+                type: "line",
+                data: {
+                    labels: xValues3, 
+                    datasets: [{
+                        fill: false,
+                        pointRadius: 1,
+                        borderColor: "rgba(255,0,0,0.5)",
+                        data: yValues2 
+                    }]
+                },
+                options: {
+                    legend: {display: false},
+                    title: {
+                        display: true,
+                        text: "y = x * 2 + 7",
+                        fontSize: 16 
+                    }
+                }
+            });
+
+            function generateData(value, i1, i2, step = 1) {
+                for (let x = i1; x <= i2; x += step) {
+                    yValues2.push(eval(value));
+                    xValues3.push(x);
+                }
+            }
+
+            var xValues4 = [];
+            var yValues3 = [];
+            generateData1("Math.sin(a)", 0, 10, 0.5);
+
+            new Chart("myChart6", {
+                type: "line",
+                data: {
+                    labels: xValues4, 
+                    datasets: [{
+                        fill: false,
+                        pointRadius: 2,
+                        borderColor: "rgba(0,0,255,0.5)",
+                        data: yValues3 
+                    }]
+                }, 
+                options: {
+                    legend: {display: false},
+                    title: {
+                        display: true,
+                        text: "y = sin(a)",
+                        fontSize: 16
+                    }
+                }
+            });
+            function generateData1(value, i1, i2, step = 1) {
+                for (let a = i1; a <= i2; a += step) {
+                    yValues3.push(eval(value));
+                    xValues4.push(a);
+                }
+            }
+
+            var xValues5 = ["Italy", "France", "Spain", "USA", "Argentina"];
+            var yValues4 = [55, 49, 44, 24, 15, 10];
+            var barColors1 = ["red", "green", "blue", "orange", "brown"];
+
+            new Chart("myChart7", {
+                type: "bar",
+                data: {
+                    labels: xValues5,
+                    datasets: [{
+                        backgroundColor: barColors1,
+                        data: yValues4
+                    }]
+                },
+                options: {
+                    legend: {display: false},
+                    title: {
+                        display: true,
+                        text: "World Wine Production 2023"
+                    }
+                }
+            });
+
+            
+            var barColors2 = ["blue"];
+
+            new Chart("myChart8", {
+                type: "bar",
+                data: {
+                    labels: xValues5,
+                    datasets: [{
+                        backgroundColor: barColors2,
+                        data: yValues4
+                    }]
+                },
+                options: {
+                    legend: {display: false},
+                    scales: {
+                        yAxes: [{
+                            ticks: {
+                                beginAtZero: true 
+                            }
+                        }],
+                    }
+                }
+            });
+
+            var barColors3 = "red";
+
+            new Chart("myChart9", {
+                type: "bar",
+                data: {
+                    labels: xValues5,
+                    datasets: [{
+                        backgroundColor: barColors3,
+                        data: yValues4 
+                    }]
+                }, 
+                options: {
+                    legend: {display: false},
+                    scales: {
+                        yAxes: [{
+                            ticks: {
+                                beginAtZero: true 
+                            }
+                        }],
+                    }
+                }
+            });
+
+            var barColors4 = [
+               "rgba(255,0,0,1.0)",
+               "rgba(255,0,0,0.8)",
+               "rgba(255,0,0,0.6)",
+               "rgba(255,0,0,0.4)",
+               "rgba(255,0,0,0.2)"
+            ];
+
+            new Chart("myChart10", {
+                type: "bar",
+                data: {
+                    labels: xValues5, 
+                    datasets: [{
+                        backgroundColor: barColors4,
+                        data: yValues4 
+                    }]
+                },
+                options: {
+                    legend: {display: false},
+                    scales: {
+                        yAxes: [{
+                            ticks: {
+                                beginAtZero: true 
+                            }
+                        }],
+                    }
+                }
+            });
+
+            new Chart("myChart11", {
+                type: "horizontalBar",
+                data: {
+                    labels: xValues5,
+                    datasets: [{
+                        backgroundColor: barColors1,
+                        data: yValues4 
+                    }]
+                }, 
+                options: {
+                    legend: {display: false},
+                    title: {
+                        display: true,
+                        text: "World Wine Production 2023"
+                    },
+                    scales: {
+                        xAxes: [{ticks: {min: 10, max: 60}}]
+                    }
+                }
+            });
+
+            var barColors5 = [
+                "#b91d47",
+                "#00aba9",
+                "#2b5797",
+                "#e8c3b9",
+                "#1e7145"
+            ];
+
+            new Chart("myChart12", {
+                type: "pie",
+                data: {
+                    labels: xValues5,
+                    datasets: [{
+                        backgroundColor: barColors5,
+                        data: yValues4 
+                    }]
+                },
+                options: {
+                    title: {
+                        display: true,
+                        text: "World Wide Wine Production 2023"
+                    }
+                }
+            });
+
+            new Chart("myChart13", {
+                type: "doughnut",
+                data: {
+                    labels: xValues5,
+                    datasets: [{
+                        backgroundColor: barColors5,
+                        data: yValues4 
+                    }]
+                },
+                options: {
+                    title: {
+                        display: true,
+                        text: "World Wide Wine Production 2023"
+                    }
+                }
+            });
+        </script>
+    </body>
+</html>

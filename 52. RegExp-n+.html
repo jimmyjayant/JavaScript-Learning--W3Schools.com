@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            JavaScript Regular Expression Quantifiers n+  
+        </title>
+        <style>
+            body {
+                font-family:verdana, sans-serif;
+                font-size:20px;
+                line-height:1.5;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>
+            Regular Expression Quantifiers n+       
+        </h1>
+
+        <h2>
+            Do a global search for atleast one "o" in a string "Hellooo World! Hello W3Schools!". 
+        </h2>
+
+        <p id="demo1"></p>
+
+        <script>
+            let text1 = "Hellooo World! Hello W3Schools!"; 
+            let result = text1.match(/o+/g);
+            document.getElementById("demo1").innerHTML = result;
+        </script>
+
+    </body>
+
+</html>

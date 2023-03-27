@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en-in">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>
+            JavaScript HTML DOM Animation 
+        </title>
+        <style>
+            html {
+                font-size:62.5%;
+            }
+            body {
+                font-family:verdana, sans-serif;
+                font-size:2rem;
+                line-height:1.5;
+            }
+            .edit {
+                background-color:#f1f1f1;
+                color:red;
+            }
+            .edit1 {
+                background-color:rgba(255,255,0,0.3);
+                padding:2rem;
+            }
+            #demo1 {
+                position:relative;
+                width:400px;
+                height:400px;
+                background:yellow;
+            }
+            #demo2 {
+                position:absolute;
+                width:50px;
+                height:50px;
+                background:red;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>
+            JavaScript HTML DOM Animation 
+        </h1>
+
+        <div>
+            Learn to create HTML animations using JavaScript. 
+        </div>
+
+        <hr>
+
+        <h2>
+            A Basic Web Page 
+        </h2>
+
+        <div>
+            To demonstrate how to create HTML animations with JavaScript, we will use a simple web page. 
+            <br>
+            Example:- 
+            <br>
+            <p class="edit1">
+                &lt;div id="demo2"&gt;My animation will go here&lt;/div&gt; 
+            </p>
+            
+        </div>
+
+        <hr>
+
+        <h2>
+            Create an Animation Container 
+        </h2>
+
+        <div>
+            All aniations should be relative to a container element. 
+            <br>
+            Example:- 
+            <br>
+            <p class="edit1">
+                &lt;div id="demo1"&gt; 
+                <br>
+                &lt;div id="demo2"&gt;My animation will go here&lt;/div&gt; 
+                <br>
+                &lt;/div&gt; 
+            </p>
+        </div>
+
+        <hr>
+
+        <h2>
+            Style the Elements 
+        </h2>
+
+        <div>
+            The container element should be created with style = "<span class="edit">position: relative</span>". 
+            <br>
+            The animation element should be created with style = "<span class="edit">position: absolute</span>". 
+            <br>
+            Example:- 
+            <br>
+            <p class="edit1">
+                #demo1 {
+                    <br>
+                    width: 400px;
+                    <br>
+                    height: 400px;
+                    <br>
+                    position: relative;
+                    <br>
+                    background: yellow;
+                    <br>
+                }
+                <br>
+                #demo2 {
+                    <br>
+                    width: 50px;
+                    <br>
+                    height: 50px;
+                    <br>
+                    position: absolute;
+                    <br>
+                    background: red;
+                    <br>
+                }
+            </p>
+        </div>
+
+        <hr>
+        <br>
+        <hr>
+
+        <h2>
+            Animation Code 
+        </h2>
+
+        <div>
+            JavaScript animations are done by programming gradual changes in an element's style. 
+            <br>
+            The changes are called by a timer. When the timer interval is small, the animation looks continuous. 
+            <br>
+            The basic code is:- 
+            <br>
+            <p class="edit1">
+                id = setInterval(frame, 5);
+                <br>
+                function frame() {
+                    <br>
+                    if (/* test for finished */) {
+                        <br>
+                        clearInterval(id);
+                        <br>
+                    } else {
+                        <br>
+                        /* code to change the element style */ 
+                        <br>
+                    }
+                    <br>
+                }
+            </p>
+        </div>
+        
+        <hr>
+
+        <h2>
+            Create the Full Animation Using JavaScript 
+        </h2>
+
+        <div>
+            Example:- 
+            <br>
+            <button onclick="myMove()">Click Me</button>
+            <br>
+            <div id="demo1">
+                <div id="demo2"></div>
+              </div>
+        </div>
+
+        <script>
+            function myMove() {
+                let id = null;
+                const element1 = document.getElementById("demo2");
+                let pos = 0;
+                clearInterval(id);
+                id = setInterval(frame, 5);
+                function frame() {
+                    if(pos == 350) {
+                        clearInterval(id);
+                    }
+                    else {
+                        pos++;
+                        element1.style.top = pos + "px";
+                        element1.style.left = pos + "px";
+                    }
+                }
+            }
+        </script>
+    </body>
+</html>

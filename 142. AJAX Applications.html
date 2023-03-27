@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en-in">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>
+            AJAX Applications 
+        </title>
+        <style>
+            html {
+                font-size:calc(10px + 0.390625vw);
+            }
+
+            body {
+                font-size:1rem;
+                font-family:verdana, sans-serif;
+                line-height:1.5;
+            }
+
+            .edit {
+                background-color:#f1f1f1;
+                color:red;
+            }
+
+            .edit1 {
+                background-color:rgba(255,255,0,0.3);
+                padding:2rem;
+            }
+
+            table, th, td {
+                border:1px solid #ddd;
+                border-collapse:collapse;
+            }
+
+            th, td {
+                padding:0.5rem;
+                text-align:left;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>
+          XML Applications 
+        </h1>
+
+        <div>
+            This chapter demonstrates some HTML applications using XML, HTTP, DOM, and JavaScript. 
+        </div>
+
+        <hr>
+
+        <h2>
+            The XML Document Used 
+        </h2>
+
+        <div>
+            In this chapter we will use the XML file called "<a href='cd_catalog.xml' target='_blank'>cd_catalog.xml</a>". 
+        </div>
+
+        <hr>
+
+        <h2>
+            Display XML Data in a HTML Table 
+        </h2>
+
+        <div>
+            This example loops through each &lt;CD&gt; element, and displays the values of the &lt;ARTIST&gt; and the &lt;TITLE&gt; elements in the HTML table. 
+            <br>
+            Example:- 
+            <br>
+            <button type="button" onclick="loadXMLDoc()">Get my CD collection</button>
+            <br>
+            <br>
+            <table id="demo1"></table>
+        </div>
+
+        <hr>
+
+        <h2>
+            Display the First CD in a HTML div Element 
+        </h2>
+
+        <div>
+            This example uses a function to display the first CD element in a HTML element with id="demo2". 
+            <br>
+            Example:- 
+            <br>
+            <div id="demo2"></div>
+        </div>
+
+        <hr>
+
+        <h2>
+            Navigate Between the CDs 
+        </h2>
+
+        <div>
+            To navigate between the CDs in the example above, create a <span class="edit">next()</span> and <span class="edit">previous()</span> function. 
+            <br>
+            Example:- 
+            <br>
+            <div id="demo3"></div>
+            <br>
+            <input type="button" onclick="previous()" value="&lt;&lt;">
+            <input type="button" onclick="next()" value="&gt;&gt;">
+        </div>
+
+        <hr>
+
+        <h2>
+            Show Album Information When Clicking On a CD 
+        </h2>
+
+        <div>
+            The last example shows how you can show album information when the user clicks on a CD. 
+            <br>
+            Example:- 
+            <br>
+            <p>
+                Click on a CD to display album information. 
+            </p>
+
+            <p id="demo4"></p>
+            <table id="demo5"></table>
+        </div>
+
+        <script>
+            function loadXMLDoc() {
+                const xhttp = new XMLHttpRequest();
+                xhttp.onload = function() {
+                    const xmlDoc = xhttp.responseXML;
+                    const cd = xmlDoc.getElementsByTagName("CD");
+                    myFunction1(cd);
+                }
+                xhttp.open("GET", "cd_catalog.xml");
+                xhttp.send();
+            }
+
+            function myFunction1(cd) {
+                let table = "<table><tr><th>Artist</th><th>Title</th></tr>";
+                for (let i = 0; i < cd.length; i++) {
+                    table += "<tr><td>" + 
+                    cd[i].getElementsByTagName("ARTIST")[0].childNodes[0].nodeValue + 
+                    "</td><td>" + 
+                    cd[i].getElementsByTagName("TITLE")[0].childNodes[0].nodeValue + 
+                    "</td></tr></table>";
+                }
+                document.getElementById("demo1").innerHTML = table;
+            }
+
+            function loadXMLDoc1() {
+                const xhttp = new XMLHttpRequest();
+                xhttp.onload = function() {
+                    const xmlDoc = xhttp.responseXML;
+                    const cd = xmlDoc.getElementsByTagName("CD");
+                    myFunction2(cd);
+                }
+                xhttp.open("GET", "cd_catalog.xml");
+                xhttp.send();
+            }
+
+            function myFunction2(cd) {
+                let table = "<table><tr><th>ARTIST</th><th>TITLE</th><th>YEAR</th></tr>";
+
+                table += "<tr><td>" + 
+                    cd[0].getElementsByTagName("ARTIST")[0].childNodes[0].nodeValue + 
+                    "</td><td>" + 
+                    cd[0].getElementsByTagName("TITLE")[0].childNodes[0].nodeValue + 
+                    "</td><td>" + 
+                    cd[0].getElementsByTagName("YEAR")[0].childNodes[0].nodeValue + 
+                    "</td></tr></table>";
+
+                document.getElementById("demo2").innerHTML = table;
+            }
+
+            loadXMLDoc1();
+            
+            let i = 0;
+            let len;
+            let cd;
+
+            function loadXMLDoc2() {
+                const xhttp = new XMLHttpRequest();
+                xhttp.onload = function() {
+                    const xmlDoc = xhttp.responseXML;
+                    cd = xmlDoc.getElementsByTagName("CD");
+                    len = cd.length;
+                    displayCD(i);
+                }
+                xhttp.open("GET", "cd_catalog.xml");
+                xhttp.send();
+            }
+
+            function displayCD(i) {
+                document.getElementById("demo3").innerHTML = 
+                "Artist: " + 
+                cd[i].getElementsByTagName("ARTIST")[0].childNodes[0].nodeValue + 
+                "<br>Title: " + 
+                cd[i].getElementsByTagName("TITLE")[0].childNodes[0].nodeValue +
+                "<br>Year: " +
+                cd[i].getElementsByTagName("YEAR")[0].childNodes[0].nodeValue;
+            }
+
+            function next() {
+                // Display the next CD, unless you are on the last CD 
+                if(i < len-1) {
+                    i++;
+                    displayCD(i);
+                }
+            }
+
+            function previous() {
+                // Display the previous CD, unless you are on the first CD 
+                if(i > 0) {
+                    i--;
+                    displayCD(i);
+                }
+            }
+
+            loadXMLDoc2();
+
+            //Click on a CD to display information:- 
+
+            function loadXMLDoc3() {
+                const xhttp = new XMLHttpRequest();
+                xhttp.onload = function() {
+                    const xmlDoc = xhttp.responseXML;
+                    const cd = xmlDoc.getElementsByTagName("CD");
+                    myFunction3(cd);
+                }
+                xhttp.open("GET", "cd_catalog.xml");
+                xhttp.send();
+            }
+
+            function myFunction3(cd) {
+                let table = "<table><tr><th>ARTIST</th><th>TITLE</th></tr>";
+
+                for(let i = 0; i < cd.length; i++) {
+                    table += "<tr onclick='showData(" + i + ")'><td>" +
+                    cd[i].getElementsByTagName("ARTIST")[0].childNodes[0].nodeValue + 
+                    "</td><td>" + 
+                    cd[i].getElementsByTagName("TITLE")[0].childNodes[0].nodeValue + 
+                    "</td></tr>";
+                }
+
+                table += "</table>";
+                document.getElementById("demo5").innerHTML = table;
+            }
+
+            function showData(i) {
+                document.getElementById("demo4").innerHTML = 
+                "Artist: " +
+                cd[i].getElementsByTagName("ARTIST")[0].childNodes[0].nodeValue + 
+                "<br>Title: " + 
+                cd[i].getElementsByTagName("TITLE")[0].childNodes[0].nodeValue + 
+                "<br>Year: " + 
+                cd[i].getElementsByTagName("YEAR")[0].childNodes[0].nodeValue;
+            }
+
+            loadXMLDoc3();
+        </script>
+    </body>
+</html>

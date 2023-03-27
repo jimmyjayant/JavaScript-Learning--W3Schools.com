@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html lang="en-in">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>
+            JavaScript Object Constructors 
+        </title>
+        <style>
+            .edit {
+                background-color:#f1f1f1;
+                color:red;
+            }
+            .edit1 {
+                background-color:rgba(255,255,0,0.3);
+                padding:20px;
+            }
+            body {
+                font-size:20px;
+                font-family:verdana, sans-serif;
+                line-height:1.5;
+            }
+            .table1 {
+                width:100%;
+                border:1px solid #ddd;
+                border-collapse:collapse;
+            }
+            .table1 tr {
+                height:40px;
+            }
+            .table1 tr:nth-child(even) {
+                background-color:#f1f1f1;
+            }
+            .table1 td {
+                padding:10px;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>
+            JavaScript Object Constructors 
+        </h1>
+
+        <div>
+            Example:- 
+            <br>
+            <p id="demo1"></p>
+
+            <br>
+
+            <div class="edit1">
+                <span style="font-size:30px;">Notes</span>
+                <br>
+                It is considered good practice to name constructor functions with an upper-case first letter. 
+
+                <br>
+                <br>
+                <span style="font-size:30px;">About this</span>
+                <br>
+                In a constructor function <span class="edit">this</span> does not have a value. It is a substitute for the new object. The value of <span class="edit">this</span> will become the new object when a new object is created. 
+            </div>
+        </div>
+
+        <hr>
+
+        <h2>
+            Object Types (Blueprints) (Classes)  
+        </h2>
+
+        <div>
+            The examples from the previous chapters are limited. They only create single objects. 
+            <br>
+            Sometimes we need a "<strong>blueprint</strong>" for creating many objects of the same "type". 
+            <br>
+            The way to create an "object type", is to use an <strong>object constructor function</strong>. 
+            <br>
+            In the example above, <span class="edit">function Person()</span> is an object constructor function. 
+            <br>
+            Objects of the same type are created by calling the constructor function with the <span class="edit">new</span> keyword. 
+            <br>
+            Example:- 
+            <br>
+            <p id="demo2"></p>
+        </div>
+
+        <hr>
+        <br>
+        <br>
+        <hr>
+
+        <h2>
+            What is this? 
+        </h2>
+
+        <div>
+            In JavaScript, the <span class="edit">this</span> keyword refers to an <strong>object</strong>. 
+            <br>
+            <strong>Which</strong> object depends on how <span class="edit">this</span> is being invoked (used or called). 
+            <br>
+            The <span class="edit">this</span> keyword refers to the different objects depending on how it is used. 
+            <br>
+            <br>
+            <table class="table1">
+                <tr>
+                    <td>In an object method, <span class="edit">this</span> refers to the <strong>object</strong>.</td>
+                </tr>
+                <tr>
+                    <td>Alone, <span class="edit">this</span> refers to the <strong>global object</strong>.</td>
+                </tr>
+                <tr>
+                    <td>In a function, <span class="edit">this</span> refers to the <strong>global object</strong>.</td>
+                </tr>
+                <tr>
+                    <td>In a function, in strict mode, <span class="edit">this</span> is <span class="edit">undefined</span>.</td>
+                </tr>
+                <tr>
+                    <td>In an event, <span class="edit">this</span> refers to the <strong>element</strong> that received the event.</td>
+                </tr>
+                <tr>
+                    <td>Methods like <span class="edit">call()</span>, <span class="edit">apply()</span>, and <span class="edit">bind()</span> can refer <span class="edit">this</span> to <strong>any object</strong>.</td>
+                </tr>
+            </table> 
+
+            <br>
+            <br>
+
+            <div class="edit1">
+                <span style="font-size:30px;">Note</span>
+                <br>
+                <span class="edit">this</span> is not a variable. It is a keyword. You cannot change the value of <span class="edit">this</span>. 
+            </div>
+        </div>
+
+        <hr>
+
+        <h2>
+            Adding a Property to an Object 
+        </h2>
+
+        <div>
+            Adding a new property to an existing object is easy. 
+            <br>
+            Example:- 
+            <br>
+            <p id="demo3"></p>
+
+            <br>
+            The property will be added to mySelf2. Not to mySelf1. (Not to any other person objects).  
+        </div>
+
+        <hr>
+
+        <h2>
+            Adding a Method to an Object 
+        </h2>
+
+        <div>
+            Adding a new method to an existing object is easy. 
+            <br>
+            Example:- 
+            <br>
+            <p id="demo4"></p>
+            <br>
+            The method will be added to mySelf1. Not to mySelf2. (Not to any other person objects).  
+        </div>
+
+        <hr>
+
+        <h2>
+            Adding a Property to a Constructor 
+        </h2>
+
+        <div>
+            You cannot add a new property to an object constructor the same way you add a new property to an existing object. 
+            <br>
+            Example:- 
+            <br>
+            <p id="demo5"></p>
+
+            <br>
+            <br>
+            To add a new property to a constructor, you must add it to the constructor function. 
+            <br>
+            Example:- 
+            <br>
+            <p id="demo6"></p>
+            <br>
+            <p class="edit1">
+                This way object properties can have default values. 
+            </p>
+        </div>
+
+        <hr>
+
+        <h2>
+            Adding a Method to a Constructor 
+        </h2>
+
+        <div>
+            Your constructor function can also define methods. 
+            <br>
+            Example:- 
+            <br>
+            <p id="demo7"></p>
+
+            <br>
+            <br>
+
+            You cannot add a new method to an object constructor the same way you add a new method to an existing object. 
+            <br>
+            Adding methods to an object constructor must be done inside the constructor function. 
+            <br>
+            Example:- 
+            <br>
+            <p class="edit1">
+                function Person(firstName, lastName, age, eyeColor) {
+                    <br>
+                    this.firstName = firstName;
+                    <br>
+                    this.lastName = lastName;
+                    <br>
+                    this.age = age;
+                    <br>
+                    this.eyeColor = eyeColor;
+                    <br>
+                    this.changeName = function(name) {
+                        <br>
+                        this.lastName = name; 
+                        <br>
+                    };
+                    <br>
+                }
+            </p>
+
+            <br>
+            The changeName() function assigns the value of name to the person's lastName property. 
+            <br>
+            Example:- 
+            <br>
+            <p id="demo8"></p>
+            <br>
+            JavaScript knows which person you are talking about by "substituting" <strong>this</strong> with <strong>oldPerson1</strong>. 
+        </div>
+
+        <hr>
+
+        <h2>
+            Built-in JavaScript Constructors 
+        </h2>
+
+        <div>
+            JavaScript has built-in constructors for native objects. 
+            <br>
+            Example:- 
+            <br>
+            <p id="demo9"></p>
+
+            <br>
+            <br>
+
+            <p class="edit1">
+                The <span class="edit">Math()</span> object is not in the list. <span class="edit">Math</span> is a global object. The <span class="edit">new</span> keyword cannot be used on <span class="edit">Math</span>. 
+            </p>
+        </div>
+
+        <hr>
+
+        <h2>
+            Did You Know? 
+        </h2>
+
+        <div>
+            As you can see above, JavaScript has object versions of the primitive data types <span class="edit">String</span>, <span class="edit">Number</span>, and <span class="edit">Boolean</span>. But there is no reason to create complex objects. 
+            <br>
+            Primitive values are much faster:- 
+            <br>
+            <br>
+            Use string literals <span class="edit">""</span> instead of <span class="edit">new String()</span>. 
+            <br>
+            Use number literals <span class="edit">50</span> instead of <span class="edit">new Number()</span>. 
+            <br>
+            Use boolean literals <span class="edit">true / false</span> instead of <span class="edit">new Boolean()</span>. 
+            <br>
+            Use object literals <span class="edit">{}</span> instead of <span class="edit">new Object()</span>. 
+            <br>
+            Use array literals <span class="edit">[]</span> instead of <span class="edit">new Array()</span>. 
+            <br>
+            Use pattern literals <span class="edit">/()/</span> instead of <span class="edit">new RegExp()</span>. 
+            <br>
+            Use function expressions <span class="edit">() {}</span> instead of <span class="edit">new Function()</span>. 
+            <br>
+            Example:- 
+            <br>
+            <p id="demo10"></p>
+        </div>
+
+        <hr>
+
+        <h2>
+            String Objects 
+        </h2>
+
+        <div>
+            Normally, strings are created as primitives:- <span class="edit">firstName = "John"</span> 
+            <br>
+            But strings can also be created as objects using the <span class="edit">new</span> keyword: 
+            <br>
+            <span class="edit">firstName = new String("John")</span>
+        </div>
+
+        <hr>
+
+        <h2>
+            Number Objects 
+        </h2>
+
+        <div>
+            Normally, numbers are created as primitives:- <span class="edit">x = 30</span>
+            <br>
+            But numbers can also be created as objects using the <span class="edit">new</span> keyword: 
+            <br>
+            <span class="edit">x = new Number(30)</span>
+        </div>
+
+        <hr>
+
+        <h2>
+            Boolean Objects 
+        </h2>
+
+        <div>
+            Normally, booleans are created as primitives: <span class="edit">x = false</span>
+            <br>
+            But booleans can also be created as objects using the <span class="edit">new</span> keyword. 
+            <br>
+            <span class="edit">x = new Boolean(false)</span>
+        </div>
+
+        <script>
+            //Constructor function for Person objects:- 
+            function Person(first, last, age, eye) {
+                this.firstName = first;
+                this.lastName = last;
+                this.age = age;
+                this.eyeColor = eye;
+            }
+
+            //Create a Person object:- 
+            const mySelf = new Person("John", "Doe", 50, "blue");
+            
+            //Display age:- 
+            document.getElementById("demo1").innerHTML = 
+            "I am " + mySelf.age + ".";
+
+            //Create 2 Person object:- 
+            const mySelf1 = new Person("Sally", "Rally", 48, "green");
+            const mySelf2 = new Person("Peter", "Smith", 30, "black");
+
+            //Display Objects:- 
+            document.getElementById("demo2").innerHTML = 
+            mySelf1.firstName + " " + mySelf1.lastName + " " + mySelf1.age + " " + mySelf1.eyeColor + "<br>" + 
+            mySelf2.firstName + " " + mySelf2.lastName + " " + mySelf2.age + " " + mySelf2.eyeColor;
+
+            //Adding nationality to mySelf2 object:- 
+            mySelf2.nationality = "English";
+
+            //Display nationality:- 
+            document.getElementById("demo3").innerHTML = 
+            "I am " + mySelf2.nationality;
+
+            //Adding a name method to first object:- 
+            mySelf1.name = function() {
+                return this.firstName + " " + this.lastName; 
+            };
+
+            //Display full name:- 
+            document.getElementById("demo4").innerHTML = 
+            "I am " + mySelf1.name();
+
+            //You can NOT add a new property to a constructor function:- 
+            Person.nationality = "English";
+
+            //Displaying nationality:- 
+            document.getElementById("demo5").innerHTML = 
+            "The my nationality is " + mySelf1.nationality;
+
+            //Constructor function for Person1 objects:- 
+            function Person1(first, last, age, eye)
+            {
+                this.firstName = first;
+                this.lastName = last;
+                this.age = age;
+                this.eyeColor = eye;
+                this.nationality = "English";
+            }
+
+            //Create 2 Person1 objects:- 
+            const myPerson1 = new Person1("Aaron", "Smith", 34, "blue");
+            const myPerson2 = new Person1("Peter", "Jackson", 28, "black");
+
+            //Display nationality:- 
+            document.getElementById("demo6").innerHTML = 
+            "The new person is " + myPerson1.nationality + 
+            ". The second new person is " + myPerson2.nationality;
+
+            //Constructor function for Person2 objects:- 
+            function Person2(first, last, age, eye)
+            {
+                this.firstName = first;
+                this.lastName = last;
+                this.age = age;
+                this.eyeColor = eye;
+                this.name = function() 
+                {
+                    return this.firstName + " " + this.lastName
+                };
+            }
+
+            //Create a Person2 object:- 
+            const newPerson1 = new Person2("John", "Doe", 40, "blue");
+
+            //Display full name:- 
+            document.getElementById("demo7").innerHTML = 
+            "The new person is " + newPerson1.name();
+
+            //Constructor function for Person3 objects:- 
+            function Person3(firstName, lastName, age, eyeColor) {
+                this.firstName = firstName;
+                this.lastName = lastName;
+                this.age = age;
+                this.eyeColor = eyeColor;
+                this.changeName = function(name) {
+                    this.lastName = name;
+                }
+            }
+
+            //Create a Person3 object:- 
+            const oldPerson1 = new Person3("John", "Wick", 45, "green");
+
+            //Change last name:- 
+            oldPerson1.changeName("Doe");
+
+            //Display last name:- 
+            document.getElementById("demo8").innerHTML = 
+            "My mother's last name is " + oldPerson1.lastName;
+
+            const x1 = new String();   // A new String object
+            const x2 = new Number();   // A new Number object
+            const x3 = new Boolean();  // A new Boolean object
+            const x4 = new Object();   // A new Object object
+            const x5 = new Array();    // A new Array object
+            const x6 = new RegExp();   // A new RegExp object
+            const x7 = new Function(); // A new Function object
+            const x8 = new Date();     // A new Date object 
+
+            // Display the type of all objects:- 
+            document.getElementById("demo9").innerHTML = 
+            "x1: " + typeof x1 + "<br>" + 
+            "x2: " + typeof x2 + "<br>" + 
+            "x3: " + typeof x3 + "<br>" + 
+            "x4: " + typeof x4 + "<br>" + 
+            "x5: " + typeof x5 + "<br>" + 
+            "x6: " + typeof x6 + "<br>" + 
+            "x7: " + typeof x7 + "<br>" + 
+            "x8: " + typeof x8 + "<br>";
+
+            let a1 = "";   //string
+            let a2 = 0;   //number
+            let a3 = false; //boolean
+            let a4 = {}; //Object object
+            let a5 = []; //Array object
+            let a6 = /()/; //RegExp object
+            let a7 = function(){}; //function 
+
+
+            //Display the type of all:- 
+            document.getElementById("demo10").innerHTML = 
+            "a1: " + typeof a1 + "<br>" + 
+            "a2: " + typeof a2 + "<br>" + 
+            "a3: " + typeof a3 + "<br>" + 
+            "a4: " + typeof a4 + "<br>" + 
+            "a5: " + typeof a5 + "<br>" + 
+            "a6: " + typeof a6 + "<br>" + 
+            "a7: " + typeof a7 + "<br>";
+        </script>
+    </body>
+</html>

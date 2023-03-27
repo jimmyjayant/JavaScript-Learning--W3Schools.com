@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en-in">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>
+            JavaScript HTML DOM - Changing HTML 
+        </title>
+        <style>
+            html {
+                font-size:62.5%;
+            }
+            body {
+                font-family:verdana, sans-serif;
+                font-size:2rem;
+                line-height:1.5;
+            }
+            .edit {
+                background-color:#f1f1f1;
+                color:red;
+            }
+            .edit1 {
+                background-color:rgba(255,255,0,0.3);
+                padding:2rem;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>
+            JavaScript HTML DOM - Changing HTML 
+        </h1>
+
+        <div>
+            The HTML DOM allows JavaScript to change the content of HTML elements. 
+        </div>
+
+        <hr>
+
+        <h2>
+            Changing HTML Content 
+        </h2>
+
+        <div>
+            The easiest way to modify the content of a HTML element is by using the <span class="edit">innerHTML</span> property. 
+            <br>
+            To change the content of a HTML element, use this syntax. 
+            <br>
+            <p class="edit1">
+                document.getElementById(<i>id</i>).innerHTML = <i>new HTML</i>
+            </p>
+            <br>
+            This example changes the content of a <span class="edit">&lt;p&gt;</span> element.
+            <br>
+            Example:- 
+            <br>
+            <p id="demo1">Hello World!</p>
+            <br>
+            The above paragraph was changed by a script. 
+            <br>
+            Example Explained:- 
+            <br>
+            <ul>
+                <li>The HTML document above contains a <span class="edit">&lt;p&gt;</span> element with <span class="edit">id="demo1"</span></li>
+                <li>We use the HTML DOM to get the element with <span class="edit">id="demo1"</span></li>
+                <li>A JavaScript changes the content (<span class="edit">innerHTML</span>) of that element to "New Text!"</li>
+            </ul>
+            <br>
+            This example changes the content of an <span class="edit">&lt;h1&gt;</span> element. 
+            <br>
+            Example:- 
+            <br>
+            <h1 id="demo2">Old Heading</h1>
+            <br>
+            JavaScript changed above "Old Heading" to "New Heading". 
+            <br>
+            Example Explained:- 
+            <br>
+            <ul>
+                <li>The HTML document above contains a <span class="edit">&lt;h1&gt;</span> element with <span class="edit">id="demo2"</span></li>
+                <li>We use the HTML DOM to get the element with <span class="edit">id="demo2"</span></li>
+                <li>A JavaScript changes the content (<span class="edit">innerHTML</span>) of that element to "New Heading"</li>
+            </ul>
+        </div>
+
+        <hr>
+        <br>
+        <br>
+        <hr>
+
+        <h2>
+            Changing the Value of an Attribute 
+        </h2>
+
+        <div>
+            To change the value of a HTML attribute, use this syntax. 
+            <br>
+            <p class="edit1">
+                document.getElementById(<i>id</i>).<i>attribute = new value</i>
+            </p>
+            <br>
+            This example changes the value of the src attribute of an <span class="edit">&lt;img&gt;</span> element. 
+            <br>
+            Example:- 
+            <br>
+            <img src="Image2.gif" id="demo3" width="160" height="180" alt="Changing the value of img attribute by JavaScript">
+            <br>
+            The original image was "Image2.gif", but the script changed it to "Image3.gif". 
+            <br>
+            Example Explained:- 
+            <br>
+            <ul>
+                <li>The HTML document above contains an <span class="edit">&lt;img&gt;</span> element with <span class="edit">id="demo3"</span></li>
+                <li>We use the HTML DOM to get the element with <span class="edit">id="demo3"</span></li>
+                <li>A JavaScript changes the <span class="edit">src</span> attribute of that element from "Image2.gif" to "Image3.gif"</li>
+            </ul>
+        </div>
+
+        <hr>
+
+        <h2>
+            Dynamic HTML Content 
+        </h2>
+
+        <div>
+            JavaScript can create dynamic HTML content. 
+            <br>
+            Example:- 
+            <br>
+            <p id="demo4"></p>
+        </div>
+
+        <hr>
+
+        <h2>
+            document.write() 
+        </h2>
+
+        <div>
+            In JavaScript, <span class="edit">document.write()</span> can be used to write directly to the HTML output stream. 
+            <br>
+            Example:- 
+            <br>
+            <script>
+               document.getElementById("demo5").innerHTML = document.write(5+6);
+            </script>
+
+            <br>
+
+            <p class="edit1">
+                Never use <span class="edit">document.write()</span> after the document is loaded. It will overwrite the document. 
+            </p>
+        </div>
+
+        <script>
+            document.getElementById("demo1").innerHTML = "New Text!";
+            
+            const element1 = document.getElementById("demo2");
+            element1.innerHTML = "New Heading";
+
+            document.getElementById("demo3").src = "Image3.gif";
+
+            document.getElementById("demo4").innerHTML = "Date : " + Date();
+        </script>
+    </body>
+</html>

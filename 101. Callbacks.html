@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en-in">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>
+            JavaScript Callbacks 
+        </title>
+        <style>
+            html {
+                font-size:62.5%;
+            }
+
+            body {
+                font-family:verdana, sans-serif;
+                font-size:2rem;
+                line-height:1.5;
+            }
+
+            .edit {
+                background-color:#f1f1f1;
+                color:red;
+            }
+
+            .edit1 {
+                background-color:rgba(255,255,0,0.3);
+                padding:2rem;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>
+            JavaScript Callbacks 
+        </h1>
+
+        <div style="background-color:rgba(0,255,0,0.2);padding:2rem;text-align:center;">
+        <span style="font-size:2.5rem;font-style:italic;">"I will call back later!"</span>
+        <br>
+        A callback is a function passed as an argument to another function. 
+        <br>
+        This technique allows a function to call another function. 
+        <br>
+        A callback function can run after another function has finished. 
+        </div>
+
+        <hr>
+
+        <h2>
+            Function Sequence 
+        </h2>
+
+        <div>
+            JavaScript functions are executed in the sequence they are called. Not in the sequence they are defined. 
+            <br>
+            This example will end up displaying "Goodbye". 
+            <br>
+            Example:- 
+            <br>
+            <p id="demo1"></p>
+
+            <br>
+            <br>
+            This example will end up displaying "Hello". 
+            <br>
+            Example:- 
+            <br>
+            <p id="demo2"></p>
+        </div>
+
+        <hr>
+
+        <h2>
+            Sequence Control 
+        </h2>
+
+        <div>
+            Sometimes you would like to have better control over when to execute a function. 
+            <br>
+            Suppose you want to do a calculation, and then display the result. 
+            <br>
+            You could call a calculator function (<span class="edit">myCalculator1</span>), save the result, and then call another function (<span class="edit">myDisplayer2</span>) to display the result. 
+            <br>
+            Example:- 
+            <br>
+            <p id="demo3"></p>
+
+            <br>
+            <br>
+            The problem with the first example above, is that you have to call two functions to display the result. 
+            <br>
+            The problem with the second example, is that you cannot prevent the calculator function from displaying the result. 
+            <br>
+            Now it is time to bring in a callback. 
+        </div>
+
+        <hr>
+        <br>
+        <hr>
+
+        <h2>
+            JavaScript Callbacks 
+        </h2>
+
+        <div>
+            <p class="edit1">
+                A callback is a function passed as an argument to another function. 
+            </p>
+
+            <br>
+            Using a callback, you could call the calculator function (<span class="edit">myCalculator2</span>) with a callback (<span class="edit">myCallback1</span>), and let the calculator function run the callback after the calculation is finished. 
+            <br>
+            Example:- 
+            <br>
+            <p id="demo4"></p>
+
+            <br>
+            In the example above, <span class="edit">myDisplayer3</span> is called a <strong>callback function</strong>. 
+            <br>
+            It is passed to <span class="edit">myCalculator2()</span> as an <strong>argument</strong>. 
+            <br>
+            <div class="edit1">
+                <span style="font-size:3rem;">Note</span>
+                <br>
+                When you pass a function as an argument, remember not to use parenthesis. 
+                <br>
+                Right: myCalculator(5,5,myDisplayer); 
+                <br>
+                Wrong: <del>myCalculator(5,5,myDisplayer());</del>
+            </div> 
+
+            <br>
+            Example:- 
+            <br>
+            <p id="demo5"></p>
+
+            <br>
+            <p id="demo6"></p>
+
+            <br>
+            In the example above, <span class="edit">(x) => x >= 0</span> is a <strong>callback function</strong>. 
+            <br>
+            It is passed to <span class="edit">removeNeg()</span> as an <strong>argument</strong>. 
+        </div>
+
+        <hr>
+
+        <h2>
+            When to Use a Callback? 
+        </h2>
+
+        <div>
+            The examples above are not very exciting. 
+            <br>
+            They are simplified to teach you the callback syntax. 
+            <br>
+            Where callbacks really shine are in asynchronous functions, where one function has to wait for another function (like waiting for a file to load).  
+        </div>
+
+
+
+        <script>
+            function myDisplayer(some) {
+                document.getElementById("demo1").innerHTML = some;
+            }
+
+            function myFirst() {
+                myDisplayer("Hello");
+            }
+
+            function mySecond() {
+                myDisplayer("Goodbye");
+            }
+
+            myFirst();
+            mySecond();
+
+            function myDisplayer1(some) {
+                document.getElementById("demo2").innerHTML = some;
+            }
+
+            function myFirst1() {
+                myDisplayer1("Hello");
+            }
+
+            function mySecond1() {
+                myDisplayer1("Goodbye");
+            }
+
+            mySecond1();
+            myFirst1();
+
+            function myDisplayer2(some) {
+                document.getElementById("demo3").innerHTML = some;
+            }
+
+            function myCalculator1(num1,num2) {
+                let sum = num1 + num2;
+                return sum;
+            }
+
+            let result1 = myCalculator1(5,5);
+            myDisplayer2(result1);
+
+            function myDisplayer3(something) {
+                document.getElementById("demo4").innerHTML = something;
+            }
+
+            function myCalculator2(num1, num2, myCallback1) {
+                let sum = num1 + num2;
+                myCallback1(sum);
+            } 
+
+            myCalculator2(5,5,myDisplayer3);
+
+            //Create an Array:- 
+            const myNumbers1 = [4,1,-20,-7,5,9,-6];
+
+            document.getElementById("demo5").innerHTML = myNumbers1;
+
+            //Call removeNeg with a callback:- 
+            const posNumbers1 = removeNeg(myNumbers1, (x) => x >= 0);
+
+            //Display the result:- 
+            document.getElementById("demo6").innerHTML = 
+            "After removing negative numbers from the array, the array is:- <br>" + posNumbers1;
+
+            //Remove negative numbers:- 
+            function removeNeg(numbers, callback) {
+                const myArray = [];
+                for(const x of numbers) {
+                    if(callback(x)) {
+                        myArray.push(x);
+                    }
+                }
+                return myArray;
+            }
+        </script>
+    </body>
+</html>

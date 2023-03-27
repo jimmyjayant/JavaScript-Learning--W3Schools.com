@@ -1,0 +1,557 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            JavaScript Common Mistakes 
+        </title>
+        <style>
+            .edit {
+                background-color:#f1f1f1;
+                color:red;
+            }
+            .edit1 {
+                background-color:rgba(255,255,0,0.3);
+                padding:20px;
+            }
+            body {
+                font-family:verdana, sans-serif;
+                font-size:20px;
+                line-height:1.5;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>
+            JavaScript Common Mistakes 
+        </h1>
+
+        <div>
+            This chapter points out some common JavaScript mistakes. 
+        </div>
+
+        <hr>
+
+        <h2>
+            Accidentally Using the Assignment Operator 
+        </h2>
+
+        <div>
+            JavaScript programs may generate unexpected results if a programmer accidentally uses an assignment operator (<span class="edit">=</span>), instead of a comparison operator (<span class="edit">==</span>) in an if statement. 
+            <br>
+            This <span class="edit">if</span> statement returns <span class="edit">false</span> (as expected) because a is not equal to 10. 
+            <br>
+            Example:- 
+            <br>
+            <p id="demo1"></p>
+
+            <br>
+            <br>
+            This <span class="edit">if</span> statement returns <span class="edit">true</span> (maybe not as expected), because 10 is true. 
+            <br>
+            Example:- 
+            <br>
+            <p id="demo2"></p>
+
+            <br>
+            <br>
+            This <span class="edit">if</span> statement returns <span class="edit">false</span> (maybe not as expected), because 0 is false. 
+            <br>
+            Example:- 
+            <br>
+            <p id="demo3"></p>
+
+            <br>
+
+            <p class="edit1">
+                An assignment always returns the value of the assignment. 
+            </p>
+        </div>
+
+        <hr>
+
+        <h2>
+            Expecting Loose Comparison 
+        </h2>
+
+        <div>
+            In regular comparison, data type does not matter. This <span class="edit">if</span> statement returns true. 
+            <br>
+            Example:- 
+            <br>
+            <p id="demo4"></p>
+
+            <br>
+            <br>
+            In strict comparison, data type does matter. This <span class="edit">if</span> statement returns false. 
+            <br>
+            Example:- 
+            <br>
+            <p id="demo5"></p>
+
+            <br>
+            <br>
+            It is a common mistake to forget that <span class="edit">switch</span> statements use strict comparison. 
+            <br>
+            This <span class="edit">case switch</span> will work. 
+            <br>
+            Example:- 
+            <br>
+            <p id="demo6"></p>
+
+            <br>
+            <br>
+            This <span class="edit">case switch</span> will not work. 
+            <br>
+            Example:- 
+            <br>
+            <p id="demo7"></p>
+        </div>
+
+        <hr>
+
+        <h2>
+            Confusing Addition & Concatenation 
+        </h2>
+
+        <div>
+            <strong>Addition</strong> is about adding <strong>numbers</strong>. 
+            <br>
+            <strong>Concatenation</strong> is about adding <strong>strings</strong>. 
+            <br>
+            In JavaScript both operations use the same <span class="edit">+</span> operator. 
+            <br>
+            Because of this, adding a number as a number will produce a different result from adding a number as a string. 
+            <br>
+            Example:- 
+            <br>
+            <p id="demo8"></p>
+
+            <br>
+            <br>
+            When adding two variables, it can be difficult to anticipate the result. 
+            <br>
+            Example:- 
+            <br>
+            <p id="demo9"></p>
+        </div>
+
+        <hr>
+
+        <h2>
+            Misunderstanding Floats 
+        </h2>
+
+        <div>
+            All numbers in JavaScript are stored as 64-bits <strong>Floating point numbers</strong> (Floats). 
+            <br>
+            All programming languages, including JavaScript, have difficulties with precise floating point values. 
+            <br>
+            Example:- 
+            <br>
+            <p id="demo10"></p> 
+
+            <br>
+            <br>
+            To solve the problem above, it helps to multiply and divide. 
+            <br>
+            Example:- 
+            <br>
+            <p id="demo11"></p>
+        </div>
+
+        <hr>
+
+        <h2>
+            Breaking a JavaScript String 
+        </h2>
+
+        <div>
+            JavaScript will allow you to break a statement into two lines. 
+            <br>
+            Example:- 
+            <br>
+            <p id="demo12"></p>
+
+            <br>
+            <br>
+            But, breaking a statement in the middle of a string will not work. 
+            <br>
+            Example:- 
+            <br>
+            <p class="edit1">
+                document.getElementById("demo13").innerHTML = "Hello
+                <br>
+                World!";
+            </p>
+
+            <br>
+            <br>
+            You must use a "backlash" if you must break a statement in a string. 
+            <br>
+            Example:- 
+            <br>
+            <p id="demo13"></p>
+        </div>
+
+        <hr>
+
+        <h2>
+            Misplacing Semicolon 
+        </h2>
+
+        <div>
+            Because of a misplaced semicolon, this code block will execute regardless of the value of n. 
+            <br>
+            Example:- 
+            <br>
+            <p id="demo14"></p>
+        </div>
+
+        <hr>
+
+        <h2>
+            Breaking a Return Statement 
+        </h2>
+
+        <div>
+            It is a default JavaScript behavior to close a statement automatically at the end of a line. 
+            <br>
+            Because of this, these two examples will return the same result. 
+            <br>
+            Example:- 
+            <br>
+            <p id="demo15"></p>
+
+            <br>
+            <br>
+            Example:- 
+            <br>
+            <p id="demo16"></p>
+
+            <br>
+            <br>
+            JavaScript will also allow you to break a statement into two lines. 
+            <br>
+            Because of this, the below example will also return the same result. 
+            <br>
+            Example:- 
+            <br>
+            <p id="demo17"></p>
+
+            <br>
+            <br>
+            But, what happens if you break the return statement in two lines like this. 
+            <br>
+            Example:- 
+            <br>
+            <p id="demo18"></p>
+
+            <br>
+            The function will return <span class="edit">undefined</span>! 
+            <br>
+            Why? Because JavaScript thought you meant: 
+            <br>
+            Example:- 
+            <br>
+            <p id="demo19"></p>
+        </div>
+
+        <hr>
+
+        <h2>
+            Explanation 
+        </h2>
+
+        <div>
+            If a statement is incomplete like: 
+            <br>
+            <p class="edit1">
+                let 
+            </p>
+
+            <br>
+
+            JavaScript will try to complete the statement by reading the next line. 
+            <br>
+            <p class="edit1">
+                power = 10; 
+            </p>
+
+            <br>
+
+            But since this statement is complete:-  
+            <br>
+            <p class="edit1">
+                return 
+            </p>
+
+            <br>
+
+            JavaScript will automatically close it like this:- 
+            <br>
+            <p class="edit1">
+                return; 
+            </p>
+
+            <br>
+            <br>
+            This happens because closing (ending) statements with semicolon is optional in JavaScript. 
+            <br>
+            JavaScript will close to return statement at the end of the line, because it is a complete statement. 
+            <br>
+            <p style="background-color:rgba(255,0,0,0.3);padding:20px;">
+             Never break a return statement. 
+            </p>
+        </div>
+
+        <hr>
+
+        <h2>
+            Accessing Arrays with Named Indexes 
+        </h2>
+
+        <div>
+            Many programming languages support arrays with named indexes. 
+            <br>
+            Arrays with named indexes are called associative arrays (or hashes). 
+            <br>
+            JavaScript does <strong>not</strong> support arrays with named indexes. 
+            <br>
+            In JavaScript, <strong>arrays</strong> use <strong>numbered indexes</strong>. 
+            <br>
+            Example:- 
+            <br>
+            <p id="demo20"></p> 
+
+            <br>
+            <br>
+            In JavaScript, <strong>objects</strong> use <strong>named indexes</strong>. 
+            <br>
+            If you use a named index, when accessing an array, JavaScript will redefine the array to a standard object. 
+            <br>
+            After the automatic redefinition, array methods and properties will produce undefined or incorrect results. 
+            <br>
+            Example:- 
+            <br>
+            <p id="demo21"></p>
+        </div>
+
+        <hr>
+
+        <h2>
+            Ending Definitions with a Comma 
+        </h2>
+
+        <div>
+            Trailing commas in object and array definition are legal in ECMAScript 5. 
+            <br>
+            Object Example:- 
+            <br>
+            <p class="edit1">
+                person = {firstName: "John", lastName: "Doe", age: 46,}
+            </p>
+
+            <br>
+            Array Example:- 
+            <br>
+            <p class="edit1">
+                points = [40, 100, 1, 5, 25, 10,]; 
+            </p>
+
+            <br>
+
+            <p style="background-color:rgba(255,0,0,0.3);padding:20px;">
+                WARNING !! 
+                <br>
+                Internet Explorer 8 will crash. 
+                <br>
+                JSON does not allow trailing commas. 
+            </p>
+
+            <br>
+            <br>
+            JSON:- 
+            <br>
+            <p class="edit1">
+                person = {"firstName":"John", "lastName":"Doe", "age":46} 
+            </p>
+
+            <br>
+            JSON:- 
+            <br>
+            <p class="edit1">
+                points = [40, 100, 1, 5, 25, 10]; 
+            </p>
+        </div>
+
+        <hr>
+
+        <h2>
+            Undefined is Not Null 
+        </h2>
+
+        <div>
+            JavaScript objects, variables, properties, and methods can be <span class="edit">undefined</span>. 
+            <br>
+            In addition, empty JavaScript objects can have the value <span class="edit">null</span>. 
+            <br>
+            This can make it a little bit difficult to test if an object is empty. 
+            <br>
+            You can test if an object exists by testing if the type is <span class="edit">undefined</span>. 
+            <br>
+            Example:- 
+            <br>
+            <p id="demo22"></p>
+
+            <br>
+            <br>
+            But you cannot test if an object is <span class="edit">null</span>, because this will throw an error if the object is <span class="edit">undefined</span>. 
+            <br>
+            Incorrect:- 
+            <br>
+            <p class="edit1">
+                if (myObj === null) 
+            </p>
+
+            <br>
+            <br>
+            To solve this problem, you must test if an object is not <span class="edit">null</span>, and not <span class="edit">undefined</span>. 
+            <br>
+            But this can still throw an error. 
+            <br>
+            Incorrect:- 
+            <br>
+            <p class="edit1">
+                if (myObj !== null && typeof myObj !== "undefined") 
+            </p>
+
+            <br>
+            <br>
+            Because of this, you must test for not <span class="edit">undefined</span> before you can test for not <span class="edit">null</span>. 
+            <br>
+            Example:- 
+            <br>
+            <p class="edit1">
+                if (typeof myObj !== "undefined" && myObj !== null) 
+            </p>
+            <br>
+            <p id="demo23"></p>
+        </div>
+
+        <script>
+            let a = 0;
+            document.getElementById("demo1").innerHTML = Boolean(a == 10);
+
+            let b = 0;
+            document.getElementById("demo2").innerHTML = Boolean(b = 10);
+
+            let c = 0;
+            document.getElementById("demo3").innerHTML = Boolean(c = 0);
+
+            let d = 10;
+            let e = "10";
+            document.getElementById("demo4").innerHTML = Boolean(d == e);
+
+            document.getElementById("demo5").innerHTML = Boolean(d === e);
+
+            switch(d)
+            {
+                case 10: 
+                document.getElementById("demo6").innerHTML = "Hello";
+                break;
+            }
+
+            switch(d)
+            {
+                case "10": 
+                document.getElementById("demo7").innerHTML = "Hello";
+                break;
+            }
+
+            let f = 10;
+            f += "5";
+            document.getElementById("demo8").innerHTML = f; //now f is 105
+
+            let g = 10;
+            let h = "5";
+            let i = g + h;
+            document.getElementById("demo9").innerHTML = i;
+
+            let j = 0.1;
+            let k = 0.2;
+            let l = j + k;
+            document.getElementById("demo10").innerHTML = l;
+
+            let m = (j * 10 + k * 10) / 10;
+            document.getElementById("demo11").innerHTML = m;
+
+            document.getElementById("demo12").innerHTML = 
+            "Hello World!";
+
+            
+
+            document.getElementById("demo13").innerHTML = "Hello \
+            World!";
+
+            let n = 5;
+            if(n == 19);
+            {
+                document.getElementById("demo14").innerHTML = "Hello";
+            }
+
+            document.getElementById("demo15").innerHTML = myFunction1(55);
+            function myFunction1(a) {
+                let power = 10
+                return a * power 
+            }
+
+            document.getElementById("demo16").innerHTML = myFunction2(55);
+            function myFunction2(a) {
+                let power = 10;
+                return a * power;
+            }
+
+            document.getElementById("demo17").innerHTML = myFunction3(55);
+            function myFunction3(a) {
+                let 
+                power = 10;
+                return a * power; 
+            }
+
+            document.getElementById("demo18").innerHTML = myFunction4(55);
+            function myFunction4(a) {
+                let 
+                power = 10;
+                return 
+                a * power;
+            }
+
+            document.getElementById("demo19").innerHTML = myFunction5(55);
+            function myFunction5(a) {
+                let 
+                power = 10;
+                return;
+                a * power;
+            }
+
+            const person1 = [];
+            person1[0] = "John";
+            person1[1] = "Doe";
+            person1[2] = 46;
+            document.getElementById("demo20").innerHTML = 
+            person1[0] + " " + person1.length;
+
+            const person2 = [];
+            person2["firstName"] = "John";
+            person2["lastName"] = "Doe";
+            person2["age"] = 46;
+            document.getElementById("demo21").innerHTML = 
+            person2[0] + " " + person2.length;
+
+            document.getElementById("demo22").innerHTML = typeof myObj === "undefined";
+
+            document.getElementById("demo23").innerHTML = typeof myObj !== "undefined" && myObj !== null;
+            
+        </script>
+    </body>
+</html>

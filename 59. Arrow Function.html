@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            JavaScript Arrow Function 
+        </title>
+        <style>
+            .edit {
+                background-color:#f1f1f1;
+                color:red;
+            }
+            .edit1 {
+                background-color:rgba(255,255,0,0.3);
+                padding:20px;
+            }
+            body {
+                font-family:verdana, sans-serif;
+                font-size:20px;
+                line-height:1.5;
+            }
+            .table1 {
+                width:100%;
+                border:1px solid #ddd;
+                border-collapse:collapse;
+            }
+            .table1 tr {
+                height:40px;
+            }
+            .table1 tr:nth-child(even) {
+                background-color:#f1f1f1;
+            }
+            .table1 td {
+                text-align:center;
+                padding:10px;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>
+            JavaScript Arrow Function 
+        </h1>
+
+        <div>
+        <div style="background-color:rgba(0,255,0,0.3);padding:20px;">
+        Arrow Functions were introduced in ES6. 
+        <br>
+        Arrow functions allow us to write shorter function syntax:- 
+        <br>
+        Example:- 
+        <br>
+        <p id="demo1"></p>
+        </div>
+
+        <br>
+        <br>
+        Before Arrow:- 
+        <br>
+        <p class="edit1">
+            hello = function() {
+                <br>
+                return "Hello World!"; 
+                <br>
+            }
+        </p>
+        <br>
+        Example:- 
+        <br>
+        <p id="demo2"></p>
+
+        <br>
+        <br>
+        With Arrow Function:- 
+        <br>
+        <p class="edit1">
+            hello = () => {
+                <br>
+                return "Hello World!"; 
+                <br>
+            }
+        </p>
+        <br>
+        Example:- 
+        <br>
+        <p id="demo3"></p>
+
+        <br>
+        <br>
+        It gets shorter! If the function has only one statement, and the statement returns a value, you can remove the brackets <i>and</i> the <span class="edit">return</span> keyword. 
+        <br>
+        Arrow Functions Return Value by Default:- 
+        <br>
+        <p class="edit1">
+            hello = () => "Hello World!";
+        </p>
+        <br>
+        Example:- 
+        <br>
+        <p id="demo4"></p>
+
+        <br>
+
+        <p class="edit1">
+            <strong>Note: </strong> This works only if the function has only one statement. 
+        </p>
+
+        <br>
+        <br>
+        If you have parameters, you pass them inside the parentheses:- 
+        <br>
+        Arrow Function With Parameters:- 
+        <br>
+        <p class="edit1">
+            hello = (val) => "Hello " + val;
+        </p>
+        <br>
+        Example:- 
+        <br>
+        <p id="demo5"></p>
+
+        <br>
+        <br>
+        In fact, if you have only one parameter, you can skip the parentheses as well. 
+        <br>
+        Arrow Function Without Parentheses:- 
+        <br>
+        <p class="edti1">
+            hello = val => "Hello " + val; 
+        </p>
+        <br>
+        Example:- 
+        <br>
+        <p id="demo6"></p>
+        </div>
+
+        <hr>
+        <br>
+        <br>
+        <hr>
+
+        <h2>
+            What About <span class="edit">this</span>? 
+        </h2>
+
+        <div>
+            The handling of <span class="edit">this</span> is also different in arrow functions compared to regular functions. 
+            <br>
+            In short, with arrow functions there are no binding of <span class="edit">this</span>. 
+            <br>
+            In regular functions the <span class="edit">this</span> keyword represented the object that called the function, which could be the window, the document, a button or whatever. 
+            <br>
+            With arrow functions, the <span class="edit">this</span> keyword <i>always</i> represents the object that defined the arrow function. 
+            <br>
+            Let us take a look at two examples to understand the difference. 
+            <br>
+            Both examples call a method twice, first when the page loads, and once again when the user clicks a button. 
+            <br>
+            The first example uses a regular function, and the second example uses an arrow function. 
+            <br>
+            The result shows that the first example returns two different objects (window and button), and the second example returns the window object twice, because the window object is the "owner" of the function. 
+            <br>
+            Example:- 
+            <br>
+            <u><b>With a regular function <span class="edit">this</span> represents the object that <i>calls</i> the function:- </b></u>
+            <br>
+            <button type="button" id="btn">Click Me!</button>
+            <br>
+            <p id="demo7"></p>
+
+            <br>
+            <br>
+            Example:- 
+            <br>
+            <u><b>With an arrow function <span class="edit">this</span> represents the <i>owner</i> of the function:- </b></u>
+            <br>
+            <button type="button" id="btn1">Click Me!</button>
+            <br>
+            <p id="demo8"></p>
+
+            <br>
+            <br>
+            Remember these differences when you are working with functions. Sometimes the behavior of regular functions is what you want, if not, use arrow functions. 
+        </div>
+
+        <hr>
+
+        <h2>
+            Browser Support 
+        </h2>
+
+        <div>
+            The following table defines the first browser versions with full support for Arrow Functions in JavaScript:- 
+            <br>
+            <br>
+            <table class="table1">
+                <tr>
+                    <td><img src="Image4.svg.png" height="38" width="38" alt="Google Chrome"></td>
+                    <td><img src="Image5.png" height="38" width="38" alt="Microsoft Edge"></td>
+                    <td><img src="Image6.png" height="38" width="38" alt="Mozilla Firefox"></td>
+                    <td><img src="Image7.png" height="38" width="38" alt="Apple Safari"></td>
+                    <td><img src="Image8.png" height="38" width="38" alt="Opera"></td>
+                </tr>
+                <tr>
+                    <td>Chrome 45</td>
+                    <td>Edge 12</td>
+                    <td>Firefox 22</td>
+                    <td>Safari 10</td>
+                    <td>Opera 32</td>
+                </tr>
+                <tr>
+                    <td>Sep, 2015</td>
+                    <td>Jul, 2015</td>
+                    <td>May, 2013</td>
+                    <td>Sep, 2016</td>
+                    <td>Sep, 2015</td>
+                </tr>
+            </table>
+        </div>
+
+
+
+
+        <script>
+         let myFunction1 = (a,b) => a * b;
+         document.getElementById("demo1").innerHTML = myFunction1(4,5);
+
+         let hello1 = "";
+
+         hello1 = function() {
+            return "Hello World!";
+         }
+
+         document.getElementById("demo2").innerHTML = hello1();
+
+         let hello2 = "";
+
+         hello2 = () => {
+            return "Hello World!";
+         }
+
+         document.getElementById("demo3").innerHTML = hello2();
+
+         let hello3 = "";
+         hello3 = () => "Hello World!"; 
+         document.getElementById("demo4").innerHTML = hello3();
+
+         let hello4 = "";
+         hello4 = (val) => "Hello " + val;
+         document.getElementById("demo5").innerHTML = hello4("Universe!");
+
+         let hello5 = "";
+         hello5 = val => "Hello " + val;
+         document.getElementById("demo6").innerHTML = hello5("W3Schools.com!");
+
+         let hello6 = "";
+         hello6 = function() {
+            document.getElementById("demo7").innerHTML += this;
+         }
+
+         //The window object calls the function:- 
+         window.addEventListener("load",hello6);
+
+         //A button object calls the function:- 
+         document.getElementById("btn").addEventListener("click",hello6);
+
+         let hello7 = "";
+         hello7 = () => {
+            document.getElementById("demo8").innerHTML += this; 
+         }
+
+         //The window object calls the function:- 
+         window.addEventListener("load",hello7);
+
+         //A button object calls the function:- 
+         document.getElementById("btn1").addEventListener("click",hello7);
+        </script>
+    </body>
+</html>

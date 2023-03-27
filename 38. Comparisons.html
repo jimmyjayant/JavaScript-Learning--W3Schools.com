@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            JavaScript Comparison and Logical Operators 
+        </title>
+        <style>
+            .edit {
+                background-color:#f1f1f1;
+                color:red;
+            }
+            .edit1 {
+                background-color:rgba(255,255,0,0.3);
+                padding:20px;
+            }
+            body {
+                font-family:verdana, sans-serif;
+                font-size:20px;
+                line-height:1.5;
+            }
+            .table1 {
+                width:100%;
+                border:1px solid #ddd;
+                border-collapse:collapse;
+            }
+            .table1 tr {
+                height:40px;
+            }
+            .table1 tr:nth-child(even) {
+                background-color:#ddd;
+            }
+            .table1 th {
+                text-align:left;
+                padding:10px;
+            }
+            .table1 td {
+                padding:10px;
+            }
+
+            .table2 td {
+                text-align:center;
+                padding:10px;
+                border:1px solid grey;
+            }
+
+        </style>
+    </head>
+    <body>
+        <h1>
+            JavaScript Comparison and Logical Operators 
+        </h1>
+
+        <p>
+            Comparison and Logical Operators are used to test for <span class="edit">true</span> or <span class="edit">false</span>. 
+        </p>
+
+        <hr>
+
+        <h2>
+            Comparison Operators 
+        </h2>
+
+        <p>
+            Comparison operators are used in logical statements to determine equality or difference between variables or values. 
+            <br>
+            Given that <span class="edit">a = 5</span>, the table below explains the comparison operators. 
+            <br>
+            <br>
+            <table class="table1">
+                <tr>
+                    <th>Operator</th>
+                    <th>Description</th>
+                    <th>Comparing</th>
+                    <th>Returns</th>
+                    <th>Try it</th>
+                </tr>
+                <tr>
+                    <td>==</td>
+                    <td>equal to</td>
+                    <td>a == 8</td>
+                    <td>false</td>
+                    <td><a href="38. Comparisons-Equal to-Example 1.html" target="_blank">Try it &gt; &gt; </a></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td>a == 5</td>
+                    <td>true</td>
+                    <td><a href="38. Comparisons-Equal to-Example 2.html" target="_blank">Try it &gt; &gt; </a></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td>a == "5"</td>
+                    <td>true</td>
+                    <td><a href="38. Comparisons-Equal to-Example 3.html" target="_blank">Try it &gt; &gt; </a></td>
+                </tr>
+                <tr>
+                    <td>===</td>
+                    <td>equal value and equal type</td>
+                    <td>a === 5</td>
+                    <td>true</td>
+                    <td><a href="38. Comparisons-Equal to-Example 4.html" target="_blank">Try it &gt; &gt; </a></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td>a === "5"</td>
+                    <td>false</td>
+                    <td><a href="38. Comparisons-Equal to-Example 5.html" target="_blank">Try it &gt; &gt; </a></td>
+                </tr>
+                <tr>
+                    <td>!=</td>
+                    <td>not equal</td>
+                    <td>a != 8</td>
+                    <td>true</td>
+                    <td><a href="38. Comparisons-Equal to-Example 6.html" target="_blank">Try it &gt; &gt; </a></td>
+                </tr>
+                <tr>
+                    <td> !== </td>
+                    <td>not equal value and not equal type</td>
+                    <td>a !== 5</td>
+                    <td>false</td>
+                    <td><a href="38. Comparisons-Equal to-Example 7.html" target="_blank">Try it &gt; &gt; </a></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td>a !== "5"</td>
+                    <td>true</td>
+                    <td><a href="38. Comparisons-Equal to-Example 8.html" target="_blank">Try it &gt; &gt; </a></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td>a !== 8</td>
+                    <td>true</td>
+                    <td><a href="38. Comparisons-Equal to-Example 9.html" target="_blank">Try it &gt; &gt; </a></td>
+                </tr>
+                <tr>
+                    <td>&gt;</td>
+                    <td>greater than</td>
+                    <td>a &gt; 8</td>
+                    <td>false</td>
+                    <td><a href="38. Comparisons-Equal to-Example 10.html" target="_blank">Try it &gt; &gt; </a></td>
+                </tr>
+                <tr>
+                    <td>&lt;</td>
+                    <td>less than</td>
+                    <td>a &lt; 8</td>
+                    <td>true</td>
+                    <td><a href="38. Comparisons-Equal to-Example 11.html" target="_blank">Try it &gt; &gt; </a></td>
+                </tr>
+                <tr>
+                    <td>&gt;=</td>
+                    <td>greater than or equal to</td>
+                    <td>a &gt;= 8</td>
+                    <td>false</td>
+                    <td><a href="38. Comparisons-Equal to-Example 12.html" target="_blank">Try it &gt; &gt; </a></td>
+                </tr>
+                <tr>
+                    <td>&lt;=</td>
+                    <td>less than or equal to</td>
+                    <td>a &lt;= 8</td>
+                    <td>true</td>
+                    <td><a href="38. Comparisons-Equal to-Example 13.html" target="_blank">Try it &gt; &gt; </a></td>
+                </tr>
+            </table>
+        </p>
+
+        <hr>
+        <br>
+        <hr>
+
+        <h2>
+            How Can it be Used 
+        </h2>
+
+        <p>
+            Comparison Operators can be used in conditional statements to compare values and take action depending on the result. 
+            <br>
+            <p class="edit1">
+                if (age &lt; 18) text = "Too young to buy alcohol.";
+            </p>
+        </p>
+
+        <hr>
+
+        <h2>
+            Logical Operators 
+        </h2>
+
+        <p>
+            Logical Operators are used to determine the logic between variables and values. 
+            <br>
+            Given that <span class="edit">a = 6</span> and <span class="edit">b = 3</span>, the table below explains the logical operators. 
+            <br>
+            <br>
+            <table class="table1">
+                <tr>
+                    <th>Operator</th>
+                    <th>Description</th>
+                    <th>Example</th>
+                    <th>Try it</th>
+                </tr>
+                <tr>
+                    <td>&&</td>
+                    <td>and</td>
+                    <td>(a &lt; 10 && b &gt; 1) is true</td>
+                    <td><a href="38. Comparisons-Logical Operators-Example 1.html" target="_blank">Try it &gt;&gt;</a></td>
+                </tr>
+                <tr>
+                    <td>||</td>
+                    <td>or</td>
+                    <td>(a == 5 || b == 5) is false</td>
+                    <td><a href="38. Comparisons-Logical Operators-Example 2.html" target="_blank">Try it &gt;&gt;</a></td>
+                </tr>
+                <tr>
+                    <td>!</td>
+                    <td>not</td>
+                    <td>!(a == b) is true</td>
+                    <td><a href="38. Comparisons-Logical Operators-Example 3.html" target="_blank">Try it &gt;&gt;</a></td>
+                </tr>
+            </table>
+        </p>
+
+        <hr>
+
+        <h2>
+            Conditional (Ternary) Operator 
+        </h2>
+
+        <p>
+            JavaScript also contains a conditional operator that assigns a value to a variable based on some condition. 
+            <br>
+            Syntax:- 
+            <br>
+            <p class="edit1">
+                variablename = (condition) ? value1:value2 
+            </p>
+
+            <br>
+            Example:- 
+            <br>
+            Input your age and click the button. 
+            <br>
+            <input type="text" id="age1" value="18">
+            <br>
+            <button onclick="myFunction1()">Try it</button>
+            <br>
+            <p id="demo1"></p>
+            <br>
+            If the variable age is a value below 18, the value of the variable voteable will be "Too young", otherwise the value of voteable will be "Old enough". 
+        </p>
+
+        <hr>
+
+        <h2>
+            Comparing Different Types 
+        </h2>
+
+        <p>
+           Comparing data of different types may give unexpected results. 
+           <br>
+           When comparing a string with a number, JavaScript will convert the string to a number when doing the comparison. An empty string converts to 0. A non-numeric string converts to <span class="edit">NaN</span> which is always <span class="edit">false</span>. 
+           <br>
+           <br>
+           <table class="table1">
+            <tr>
+                <th>Case</th>
+                <th>Value</th>
+                <th>Try</th>
+            </tr>
+            <tr>
+                <td>2 &lt; 12</td>
+                <td>true</td>
+                <td><a href="38. Comparisons-Comparing Different Types-Example 1.html" target="_blank">Try it &gt; &gt; </a></td>
+            </tr>
+            <tr>
+                <td>2 &lt; "12"</td>
+                <td>true</td>
+                <td><a href="38. Comparisons-Comparing Different Types-Example 2.html" target="_blank">Try it &gt; &gt; </a></td>
+            </tr>
+            <tr>
+                <td>2 &lt; "John"</td>
+                <td>false</td>
+                <td><a href="38. Comparisons-Comparing Different Types-Example 3.html" target="_blank">Try it &gt; &gt; </a></td>
+            </tr>
+            <tr>
+                <td>2 &gt; "John"</td>
+                <td>false</td>
+                <td><a href="38. Comparisons-Comparing Different Types-Example 4.html" target="_blank">Try it &gt; &gt; </a></td>
+            </tr>
+            <tr>
+                <td>2 == "John"</td>
+                <td>false</td>
+                <td><a href="38. Comparisons-Comparing Different Types-Example 5.html" target="_blank">Try it &gt; &gt; </a></td>
+            </tr>
+            <tr>
+                <td>"2" &lt; "12"</td>
+                <td>false</td>
+                <td><a href="38. Comparisons-Comparing Different Types-Example 6.html" target="_blank">Try it &gt; &gt; </a></td>
+            </tr>
+            <tr>
+                <td>"2" &gt; "12"</td>
+                <td>true</td>
+                <td><a href="38. Comparisons-Comparing Different Types-Example 7.html" target="_blank">Try it &gt; &gt; </a></td>
+            </tr>
+            <tr>
+                <td>"2" == "12"</td>
+                <td>false</td>
+                <td><a href="38. Comparisons-Comparing Different Types-Example 8.html" target="_blank">Try it &gt; &gt; </a></td>
+            </tr>
+           </table>
+
+           <br>
+           <br>
+           When comparing two strings, "2" will be greater than "12", because (alphabetically) 1 is less than 2. 
+           <br>
+           To secure a proper result, variables should be converted to the proper type before comparison. 
+           <br>
+           Example:- 
+           <br>
+           Input your age and click the button below:- 
+           <br>
+           <input type="text" value="18" id="age2">
+           <br>
+           <button type="button" onclick="myFunction2()">Try it</button>
+           <br>
+           <p id="demo2"></p>
+        </p>
+
+        <hr>
+
+        <h2>
+            The Nullish Coalescing Operator (??)  
+        </h2>
+
+        <p>
+            The <span class="edit">??</span> operator returns the first argument if it is not <strong>nullish</strong> (<span class="edit">null</span> or <span class="edit">undefined</span>). 
+            <br>
+            Otherwise it returns the second argument. 
+            <br>
+            If both arguments are <strong>nullish</strong>, then it still returns the <strong>second argument</strong>. 
+            <br>
+            Example:- 
+            <br>
+            <p id="demo3"></p>
+
+            <br>
+            <br>
+            The nullish operator is supported in all browsers since March 2020. 
+            <br>
+            <br>
+            <table class="table1 table2">
+                <tr>
+                    <td><img src="Image4.svg.png" alt="Google Chrome" height="38" width="38"></td>
+                    <td><img src="Image5.png" alt="Microsoft Edge" height="38" width="38"></td>
+                    <td><img src="Image6.png" alt="Mozilla Firefox" height="38" width="38"></td>
+                    <td><img src="Image7.png" alt="Apple Safari" height="38" width="38"></td>
+                    <td><img src="Image8.png" alt="Opera" height="38" width="38"></td>
+                </tr>
+                <tr>
+                    <td>Chrome 80</td>
+                    <td>Edge 80</td>
+                    <td>Firefox 72</td>
+                    <td>Safari 13.1</td>
+                    <td>Opera 67</td>
+                </tr>
+                <tr>
+                    <td>Feb 2020</td>
+                    <td>Feb 2020</td>
+                    <td>Jan 2020</td>
+                    <td>Mar 2020</td>
+                    <td>Mar 2020</td>
+                </tr>
+            </table>
+        </p>
+
+        <hr>
+
+        <h2>
+            The Optional Chaining Operator (?.) 
+        </h2>
+
+        <p>
+            The Optional Chaining Operator <span class="edit">?.</span> accesses an object's property or calls a function. 
+            <br>
+            If the object accessed or function called is <span class="edit">undefined</span> or <span class="edit">null</span>, it returns <span class="edit">undefined</span> instead of throwing an error. 
+            <br>
+            Example:- 
+            <br>
+            <p id="demo4"></p>
+
+            <br>
+            <br>
+            The optional chaining operator is supported in all browsers since March 2020. 
+            <br>
+            <br>
+            <table class="table1 table2">
+                <tr>
+                    <td><img src="Image4.svg.png" alt="Google Chrome" height="38" width="38"></td>
+                    <td><img src="Image5.png" alt="Microsoft Edge" height="38" width="38"></td>
+                    <td><img src="Image6.png" alt="Mozilla Firefox" height="38" width="38"></td>
+                    <td><img src="Image7.png" alt="Apple Safari" height="38" width="38"></td>
+                    <td><img src="Image8.png" alt="Opera" height="38" width="38"></td>
+                </tr>
+                <tr>
+                    <td>Chrome 80</td>
+                    <td>Edge 80</td>
+                    <td>Firefox 72</td>
+                    <td>Safari 13.1</td>
+                    <td>Opera 67</td>
+                </tr>
+                <tr>
+                    <td>Feb 2020</td>
+                    <td>Feb 2020</td>
+                    <td>Jan 2020</td>
+                    <td>Mar 2020</td>
+                    <td>Mar 2020</td>
+                </tr>
+            </table>
+        </p>
+
+        
+        <script>
+           function myFunction1()
+           {
+            let age = document.getElementById("age1").value;
+            let voteable = (age < 18) ? "Too young":"Old enough";
+            document.getElementById("demo1").innerHTML = voteable + " to vote.";
+           }
+
+           function myFunction2()
+           {
+            let voteable;
+            let age = Number(document.getElementById("age2").value);
+            if(isNaN(age))
+            {
+                voteable = "Input is not a number";
+            }
+            else
+            {
+                voteable = (age < 18) ? "Too young" : "Old enough";
+            }
+            document.getElementById("demo2").innerHTML = voteable + " to vote.";
+           }
+
+           let name = null;
+           let text1 = "missing";
+           let result1 = name ?? text1;
+           document.getElementById("demo3").innerHTML = "The name is " + result1;
+
+           const car = {type:"Fiat", model:"500", color:"white"};
+           let name1 = car?.name;
+           let name2 = car.someNonExistentMethod?.();
+           document.getElementById("demo4").innerHTML = name1 + "<br>" + name2;
+        </script>
+    </body>
+</html>

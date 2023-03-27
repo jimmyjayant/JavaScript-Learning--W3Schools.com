@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            JavaScript Regular Expression Quantifiers n*
+        </title>
+        <style>
+            body {
+                font-family:verdana, sans-serif;
+                font-size:20px;
+                line-height:1.5;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>
+            Regular Expression Quantifiers n*      
+        </h1>
+
+        <h2>
+            Do a global search for an "l", followed by zero or more "o" characters. 
+        </h2>
+
+        <p id="demo1"></p>
+
+        <script>
+            let text1 = "Hellooo World! Hello W3Schools!"; 
+            let result = text1.match(/lo*/g);
+            document.getElementById("demo1").innerHTML = result;
+        </script>
+
+    </body>
+
+</html>

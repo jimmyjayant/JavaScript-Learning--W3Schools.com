@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            JavaScript Regular Expression Metacharacters \b  
+        </title>
+        <style>
+             body {
+                font-family:verdana, sans-serif;
+                font-size:20px;
+                line-height:1.5;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>
+            Regular Expression Metacharacters \b     
+        </h1>
+
+        <h2>
+            Search for the characters "LO" in the <u>beginning</u> of a word in the phrase "HELLO, LOOK AT YOU!". 
+        </h2>
+
+        <p id="demo1"></p>
+
+        <h2>
+            Search for the characters "LO" in the <u>end</u> of a word in the phrase "HELLO, LOOK AT YOU!".  
+        </h2>
+
+        <p id="demo2"></p>
+
+        <script>
+            let text1 = "HELLO, LOOK AT YOU!";
+            let result = text1.search(/\bLO/);
+            document.getElementById("demo1").innerHTML = 
+            "Found in position:- " + result;
+
+            let result1 = text1.search(/LO\b/);
+            document.getElementById("demo2").innerHTML = 
+            "Found in position:- " + result1;
+        </script>
+
+    </body>
+
+</html>

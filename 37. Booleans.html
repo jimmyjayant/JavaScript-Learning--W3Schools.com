@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            JavaScript Booleans 
+        </title>
+        <style>
+            .edit {
+                background-color:#f1f1f1;
+                color:red;
+            }
+            .edit1 {
+                background-color:rgba(255,255,0,0.3);
+                padding:20px;
+            }
+            body {
+                font-family:verdana, sans-serif;
+                font-size:20px;
+                line-height:1.5;
+            }
+            .table1 {
+                width:100%;
+                border:1px solid #ddd;
+                border-collapse:collapse;
+            }
+            .table1 tr {
+                height:40px;
+            }
+            .table1 tr:nth-child(even) {
+                background-color:#ddd;
+            }
+            .table1 th {
+                text-align:left;
+                padding:10px;
+            }
+            .table1 td {
+                padding:10px;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>
+            JavaScript Booleans 
+        </h1>
+
+        <div style="background-color:rgba(0,255,0,0.3);padding:20px;">
+        A JavaScript Boolean represents one of two values: <strong>true</strong> or <strong>false</strong>. 
+        </div>
+
+        <hr>
+
+        <h2>
+            Boolean Values 
+        </h2>
+
+        <p>
+            Very often, in programming, you will need a data type that can only have one of two values, like 
+            <br>
+            <ul>
+                <li>YES / NO</li>
+                <li>ON / OFF</li>
+                <li>TRUE / FALSE</li>
+            </ul>
+            <br>
+            For this, JavaScript has a <strong>Boolean</strong> data type. It can only take the values <strong>true</strong> or <strong>false</strong>. 
+        </p>
+
+        <hr>
+
+        <h2>
+            The Boolean() Function 
+        </h2>
+        
+        <p>
+            You can use the <span class="edit">Boolean()</span> function to find out if an expression (or a variable) is true. 
+            <br>
+            Example:- 
+            <br>
+            <p id="demo1"></p>
+
+            <br>
+            <br>
+            Or even easier:- 
+            <br>
+            Example:- 
+            <br>
+            <p id="demo2"></p>
+        </p>
+
+        <hr>
+
+        <h2>
+            Comparisons and Conditions 
+        </h2>
+
+        <p>
+            The chapter JS Comparisons gives a full overview of comparison operators. 
+            <br>
+            The chapter JS Conditions gives a full overview of conditional statements. 
+            <br>
+            Here are some examples:- 
+            <br>
+            <br>
+            <table class="table1">
+                <tr>
+                    <th>Operator</th>
+                    <th>Description</th>
+                    <th>Example</th>
+                </tr>
+                <tr>
+                    <td>==</td>
+                    <td>equal to</td>
+                    <td>if(day == "Monday")</td>
+                </tr>
+                <tr>
+                    <td>&gt;</td>
+                    <td>greater than</td>
+                    <td>if(salary &gt; 9000)</td>
+                </tr>
+                <tr>
+                    <td>&lt;</td>
+                    <td>less than</td>
+                    <td>if(age &lt; 18)</td>
+                </tr>
+            </table>
+
+            <br>
+            <br>
+
+            <p class="edit1">
+                The Boolean value of an expression is the basis of all JavaScript comparisons and conditions. 
+            </p>
+        </p>
+
+        <hr>
+        <br>
+        <br>
+        <hr>
+
+        <h2>
+            Everything With a "Value" is True 
+        </h2>
+
+        <p>
+            Example:- 
+            <br>
+            <p id="demo3"></p>
+        </p>
+
+        <hr>
+
+        <h2>
+            Everything Without a "Value" is False 
+        </h2>
+
+        <p>
+            The Boolean Value of <strong>0</strong> (zero) is <strong>false</strong>. 
+            <br>
+            Example:- 
+            <br>
+            <p id="demo4"></p>
+
+            <br>
+            <br>
+
+            The Boolean Value of <strong>-0</strong> (minus zero) is <strong>false</strong>. 
+            <br>
+            Example:- 
+            <br>
+            <p id="demo5"></p>
+
+            <br>
+            <br>
+
+            The Boolean Value of <strong>""</strong> (empty string) is <strong>false</strong>. 
+            <br>
+            Example:- 
+            <br>
+            <p id="demo6"></p>
+
+            <br>
+            <br>
+            The Boolean Value of <strong>undefined</strong> is <strong>false</strong>. 
+            <br>
+            Example:- 
+            <br>
+            <p id="demo7"></p>
+
+            <br>
+            <br>
+            The Boolean Value of <strong>null</strong> is <strong>false</strong>. 
+            <br>
+            Example:- 
+            <br>
+            <p id="demo8"></p>
+
+            <br>
+            <br>
+            The Boolean Value of <strong>false</strong> is (you guessed it) <strong>false</strong>. 
+            <br>
+            Example:- 
+            <br>
+            <p id="demo9"></p>
+
+            <br>
+            <br>
+            The Boolean Value of <strong>NaN</strong> is <strong>false</strong>. 
+            <br>
+            Example:- 
+            <br>
+            <p id="demo10"></p>
+        </p>
+
+        <hr>
+
+        <h2>
+            JavaScript Booleans as Objects 
+        </h2>
+
+        <p>
+            Normally JavaScript booleans are primitive values created from literals. 
+            <br>
+            <p class="edit1">
+                let x = false;
+            </p>
+            <br>
+            But Booleans can also be defined as objects with the keyword <span class="edit">new</span>. 
+            <br>
+            <p class="edit1">
+                let y = new Boolean(false);
+            </p>
+            <br>
+            Example:- 
+            <br>
+            <p id="demo11"></p>
+
+            <br>
+            <br>
+
+            <p class="edit1">
+                Do not create Boolean objects. 
+                <br>
+                The <span class="edit">new</span> keyword complicates the code and slows down execution speed. 
+                <br>
+                Boolean objects can produce unexpected results. 
+            </p>
+
+            <br>
+            <br>
+            When using the <span class="edit">==</span> operator, a2 and a3 are <strong>equal</strong>. 
+            <br>
+            <p class="edit1">
+                let a2 = false;
+                <br>
+                let a3 = new Boolean(false);
+            </p>
+            <br>
+            Example:- 
+            <br>
+            <p id="demo12"></p>
+
+            <br>
+            <br>
+            When using the <span class="edit">===</span> operator, a2 and a3 are <strong>not equal</strong>. 
+            <br>
+            Example:- 
+            <br>
+            <p id="demo13"></p>
+
+            <br>
+            <br>
+            <p class="edit1">
+                Note the difference between (x==y) and (x===y).  
+            </p>
+
+            <br>
+            <br>
+            <span class="edit">(x == y)</span> true or false? 
+            <br>
+            <p class="edit1">
+                let x = new Boolean(false);
+                <br>
+                let y = new Boolean(false);
+            </p>
+            <br>
+            Example:- 
+            <br>
+            <p id="demo14"></p>
+
+            <br>
+            <br>
+            <span class="edit">(x === y)</span> true or false? 
+            <br>
+            Example:- 
+            <br>
+            <p id="demo15"></p>
+
+            <br>
+            <br>
+
+            <p class="edit1">
+                Comparing two JavaScript objects <strong>always</strong> return <strong>false</strong>. 
+            </p>
+        </p>
+
+
+
+        <script>
+            document.getElementById("demo1").innerHTML = 
+            "Is 10 greater than 9? = " + Boolean(10 > 9);
+
+            document.getElementById("demo2").innerHTML = 
+            "Is 10 greater than 9? = " + (10 > 9);
+
+            document.getElementById("demo3").innerHTML = 
+            "100 is " + Boolean(100) + "<br>" + 
+            "3.14 is " + Boolean(3.14) + "<br>" + 
+            "-15 is " + Boolean(-15) + "<br>" + 
+            "Any (not empty) string is " + Boolean("Hello") + "<br>" + 
+            "Even the string 'false' is " + Boolean('false') + "<br>" + 
+            "Any expression (except zero) is " + Boolean(1 + 7 + 3.14);
+
+            document.getElementById("demo4").innerHTML = 
+            "The Boolean value of 0 is:- " + Boolean(0);
+
+            document.getElementById("demo5").innerHTML = 
+            "The Boolean value of -0 is:- " + Boolean(-0);
+
+            document.getElementById("demo6").innerHTML = 
+            "The Boolean Value of Empty String is:- " + Boolean("");
+
+            document.getElementById("demo7").innerHTML = 
+            "The Boolean Value of undefined is:- " + Boolean(undefined);
+
+            document.getElementById("demo8").innerHTML = 
+            "The Boolean Value of null is:- " + Boolean(null);
+
+            document.getElementById("demo9").innerHTML = 
+            "The Boolean Value of false is:- " + Boolean(false);
+
+            let a1 = 10 / "Hello";
+            document.getElementById("demo10").innerHTML = 
+            "The Boolean Value of NaN is:- " + Boolean(a1);
+
+            let a2 = false;
+            let a3 = new Boolean(false);
+            document.getElementById("demo11").innerHTML = 
+            "a2 = false is:- " + typeof a2 + "<br>" + 
+            "a3 = new Boolean(false) is:- " + typeof a3;
+
+            document.getElementById("demo12").innerHTML = 
+            "The a2 and a3 are equal in value:= " + (a2==a3);
+
+            document.getElementById("demo13").innerHTML = 
+            "The a2 and a3 are equal in value and type:- " + (a2===a3);
+
+            let x = new Boolean(false);
+            let y = new Boolean(false);
+            document.getElementById("demo14").innerHTML = 
+            "The x and y are equal in value:= " + (x==y);
+
+            document.getElementById("demo15").innerHTML = 
+            "The x and y are equal in value and type:= " + (x===y);
+        </script>
+
+    </body>
+</html>

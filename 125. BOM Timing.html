@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en-in">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>
+            JavaScript Timing Events 
+        </title>
+        <style>
+            html {
+                font-size:calc(10px + 0.390625vw);
+            }
+            body {
+                font-family:verdana, sans-serif;
+                font-size:1rem;
+                line-height:1.5;
+            }
+            .edit {
+                background-color:#f1f1f1;
+                color:red;
+            }
+            .edit1 {
+                background-color:rgba(255,255,0,0.3);
+                padding:2rem;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>
+            JavaScript Timing Events 
+        </h1>
+
+        <div>
+            JavaScript can be executed in time-intervals. 
+            <br>
+            This is called timing events. 
+        </div>
+
+        <hr>
+
+        <h2>
+            Timing Events 
+        </h2>
+
+        <div>
+            The <span class="edit">window</span> object allows execution of code at specified time intervals. 
+            <br>
+            These time intervals are called timing events. 
+            <br>
+            The two key methods to use with JavaScript are: 
+            <br>
+            <ul>
+                <li><span class="edit">setTimeout(<i>function, milliseconds</i>)</span>
+                <br>
+                Executes a function, after waiting a specified number of milliseconds. 
+                </li>
+                <li><span class="edit">setInterval(<i>function, milliseconds</i>)</span>
+                <br>
+               Same as setTimeout(), but repeats the execution of the function continuously.  
+               </li>
+            </ul>
+
+            <br>
+
+            <p class="edit1">
+                The <span class="edit">setTimeout()</span> and <span class="edit">setInterval()</span> are both methods of the HTML DOM Window Object. 
+            </p>
+        </div>
+
+        <hr>
+
+        <h2>
+            The setTimeout() Method 
+        </h2>
+
+        <div>
+            <p class="edit1">
+                window.setTimeout(<i>function, milliseconds</i>);  
+            </p>
+            <br>
+            The <span class="edit">window.setTimeout()</span> method can be written without the window prefix. 
+            <br>
+            The first parameter is a function to be executed. 
+            <br>
+            The second parameter indicates the number of milliseconds before execution. 
+            <br>
+            Example:- 
+            <br>
+            Click a button. Wait 3 seconds, and the page will alert "Hello". 
+            <br>
+            <button onclick="myFunction1()">Try it</button>
+        </div>
+
+        <hr>
+        <br>
+        <hr>
+
+        <h2>
+            How to Stop the Execution? 
+        </h2>
+
+        <div>
+            The <span class="edit">clearTimeout()</span> method stops the execution of the function specified in setTimeout(). 
+            <br>
+            <p class="edit1">
+                window.clearTimeout(<i>timeoutVariable</i>) 
+            </p>
+            <br>
+            The <span class="edit">window.clearTimeout()</span> method can be written without the window prefix. 
+            <br>
+            The <span class="edit">clearTimeout()</span> method uses the variable returned from <span class="edit">setTimeout()</span>. 
+            <br>
+            <p class="edit1">
+                myVar = setTimeout(<i>function, milliseconds</i>);
+                <br>
+                clearTimeout(myVar); 
+            </p>
+            <br>
+            If the function has not already been executed, you can stop the execution by calling the <span class="edit">clearTimeout()</span> method. 
+            <br>
+            Example:- 
+            <br>
+            Same example as above, but with an added "Stop" button. 
+            <br>
+            Click "Try it". Wait 3 seconds. The page will alert "Hello". 
+            <br>
+            Click "Stop" to prevent the first function to execute. 
+            <br>
+            (You must click "Stop" before the 3 seconds are up.) 
+            <br>
+            <button onclick="myVar = setTimeout(myFunction2, 3000)">Try it</button>
+
+            <button onclick="clearTimeout(myVar)">Stop it</button>
+        </div>
+
+        <hr>
+
+        <h2>
+            The setInterval() Method 
+        </h2>
+
+        <div>
+            The <span class="edit">setInterval()</span> method repeats a given function at every given time-interval. 
+            <br>
+            <p class="edit1">
+                window.setInterval(<i>function, milliseconds</i>); 
+            </p>
+            <br>
+            The <span class="edit">window.setInterval()</span> method can be written without the window prefix. 
+            <br>
+            The first parameter is the function to be executed. 
+            <br>
+            The second parameter indicates the length of the time-interval between each execution. 
+            <br>
+            This example executes a function called "myTimer" once every second (like a digital watch). 
+            <br>
+            Example:- 
+            <br>
+            Display the current time. 
+            <br>
+            <p id="demo1"></p>
+
+            <br>
+
+            <p class="edit1">
+                There are 1000 milliseconds in one second. 
+            </p>
+        </div>
+
+        <hr>
+
+        <h2>
+            How to Stop the Execution? 
+        </h2>
+
+        <div>
+            The <span class="edit">clearInterval()</span> method stops the executions of the function specified in the setInterval() method. 
+            <br>
+            <p class="edit1">
+                window.clearInterval(<i>timeVariable</i>) 
+            </p>
+
+            <br>
+            The <span class="edit">window.clearInterval()</span> method can be written without the window prefix. 
+            <br>
+            The <span class="edit">clearInterval()</span> method uses the variable returned from <span class="edit">setInterval()</span>. 
+            <br>
+            <p class="edit1">
+                let myVar = setInterval(<i>function, milliseconds</i>); 
+                <br>
+                clearInterval(myVar); 
+            </p>
+            <br>
+            Example:- 
+            <br>
+            Same example as above, but we have added a "Stop time" button. 
+            <br>
+            <p id="demo2"></p>
+
+            <button onclick="clearInterval(myVar1)">Stop time</button>
+        </div>
+
+        <script>
+            function myFunction1() {
+                setTimeout(function() {alert('Hello');}, 3000);
+            }
+            
+            function myFunction2() {
+                alert('Hello');
+            }
+
+            setInterval(myTimer, 1000);
+
+            function myTimer() {
+                const d = new Date();
+                document.getElementById("demo1").innerHTML = 
+                d.getHours() + ":" + d.getMinutes() + ":" + d.getSeconds() + "<br>" + 
+                d.toLocaleTimeString();  //or d.toLocaleTimeString();
+            }
+
+            let myVar1 = setInterval(myTimer1,1000);
+
+            function myTimer1() {
+                const d = new Date();
+                document.getElementById("demo2").innerHTML = d.toLocaleTimeString();
+            }
+
+
+
+        </script>
+    </body>
+</html>

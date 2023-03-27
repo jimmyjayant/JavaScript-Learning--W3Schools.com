@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            JavaScript For In 
+        </title>
+        <style>
+            .edit {
+                background-color:#f1f1f1;
+                color:red;
+            }
+            .edit1 {
+                background-color:rgba(255,255,0,0.3);
+                padding:20px;
+            }
+            body {
+                font-family:verdana, sans-serif;
+                font-size:20px;
+                line-height:1.5;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>
+            JavaScript For In 
+        </h1>
+
+        <hr>
+
+        <h2>
+            The For In Loop 
+        </h2>
+
+        <p>
+            The JavaScript <span class="edit">for in</span> statement loops through the properties of an Object. 
+            <br>
+            Syntax:- 
+            <br>
+            <p class="edit1">
+                <span style="color:blue">for</span> (key <span style="color:blue">in</span> object) {
+                    <br>
+                    <span style="color:green"><i>//code block to be executed </i></span>
+                    <br>
+                }
+            </p>
+            <br>
+            Example:- 
+            <br>
+            <p id="demo1"></p>
+
+            <br>
+            <br>
+            <strong>Example Explained</strong>
+            <br>
+            <ul>
+                <li>The <strong>for in</strong> loop iterates over a <strong>person</strong> object</li>
+                <li>Each iteration returns a <strong>key</strong> (x)</li>
+                <li>The key is used to access the <strong>value</strong> of the key</li>
+                <li>The value of the key is <strong>person[x]</strong></li>
+            </ul>
+        </p>
+
+        <hr>
+
+        <h2>
+            For In Over Arrays 
+        </h2>
+
+        <p>
+            The JavaScript <span class="edit">for in</span> statement can also loop over the properties of an Array. 
+            <br>
+            <p class="edit1">
+                for (variable in array) {
+                    <br>
+                    code 
+                    <br>
+                }
+            </p>
+            <br>
+            Example:- 
+            <br>
+            <p id="demo2"></p>
+
+            <br>
+            <br>
+
+            <p class="edit1">
+                Do not use <strong>for in</strong> over an Array if the index <strong>order</strong> is important. 
+                <br>
+                The index order is implementation-dependent, and array values may not be accessed in the order you expect. 
+                <br>
+                It is better to use a <strong>for</strong> loop, a <strong>for of</strong> loop, or <strong>Array.forEach()</strong> when the order is important. 
+            </p>
+        </p>
+
+        <hr>
+
+        <h2>
+            Array.forEach() 
+        </h2>
+
+        <p>
+            The <span class="edit">forEach()</span> method calls a function (a callback function) once for each array element. 
+            <br>
+            Example:- 
+            <br>
+            <p id="demo3"></p>
+
+            <br>
+            <br>
+
+            Note that the function takes 3 arguments:- 
+            <br>
+            <ul>
+                <li>The item value</li>
+                <li>The item index</li>
+                <li>The array itself</li>
+            </ul>
+            <br>
+            The example above uses only the value parameter. It can be rewritten to:- 
+            <br>
+            Example:- 
+            <br>
+            <p id="demo4"></p>
+        </p>
+
+        <script>
+            const person1 = {firstName:"John", lastName:"Doe", age:29};
+            let text1 = "";
+            for(let x in person1)
+            {
+                text1 += person1[x] + " ";
+            }
+            document.getElementById("demo1").innerHTML = text1;
+
+            const numbers1 = [45, 4, 9, 16, 25];
+            let text2 = "";
+            for(let x in numbers1)
+            {
+                text2 += numbers1[x] + "<br>";
+            }
+            document.getElementById("demo2").innerHTML = text2;
+
+            let text3 = "";
+            
+            function myFunction1(value,index,array)
+            {
+                text3 += value + "<br>";
+            }
+            numbers1.forEach(myFunction1);
+
+            document.getElementById("demo3").innerHTML = text3;
+
+            let text4 = "";
+            numbers1.forEach(myFunction2);
+
+            function myFunction2(value)
+            {
+                text4 += value + "<br>";
+            }
+
+            document.getElementById("demo4").innerHTML = text4;
+
+
+        </script>
+    </body>
+</html>

@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            JavaScript Best Practices 
+        </title>
+        <style>
+            .edit {
+                background-color:#f1f1f1;
+                color:red;
+            }
+            .edit1 {
+                background-color:rgba(255,255,0,0.3);
+                padding:20px;
+            }
+            body {
+                font-family:verdana, sans-serif;
+                font-size:20px;
+                line-height:1.5;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>
+            JavaScript Best Practices 
+        </h1>
+
+        <div>
+            Avoid global variables, avoid <span class="edit">new</span>, avoid <span class="edit"> == </span>, avoid <span class="edit">eval()</span>. 
+        </div>
+
+        <hr>
+
+        <h2>
+            Avoid Global Variables 
+        </h2>
+
+        <div>
+            Minimize the use of global variables. 
+            <br>
+            This includes all data types, objects, and functions. 
+            <br>
+            Global variables and functions can be overwritten by other scripts. 
+            <br>
+            Use local variables instead, and learn how to use closures. 
+        </div>
+
+        <hr>
+
+        <h2>
+            Always Declare Local Variables 
+        </h2>
+
+        <div>
+            All variables used in a function should be declared as <strong>local </strong> variables. 
+            <br>
+            Local variables <strong>must</strong> be declared with the <span class="edit">var</span>, the <span class="edit">let</span>, or the <span class="edit">const</span> keyword, otherwise they will become global variables. 
+            <br>
+            <p class="edit1">
+                Strict mode does not allow undeclared variables. 
+            </p>
+        </div>
+
+        <hr>
+
+        <h2>
+            Declarations on Top 
+        </h2>
+
+        <div>
+            It is a good coding practice to put all declarations at the top of each script or function. 
+            <br>
+            This will: 
+            <br>
+            <ul>
+                <li>Give cleaner code</li>
+                <li>Provide a single place to look for local variables</li>
+                <li>Make it easier to avoid unwanted (implied) global variables</li>
+                <li>Reduce the possibility of unwanted re-declarations</li>
+            </ul>
+
+            <br>
+            <br>
+
+            <p class="edit1">
+                //Declare at the beginning 
+                <br>
+                let firstName, lastName, price, discount, fullPrice; 
+                <br>
+                //Use later 
+                <br>
+                firstName = "John"; 
+                <br>
+                lastName = "Doe";
+                <br>
+                <br>
+                price = 19.90;
+                <br>
+                discount = 0.10; 
+                <br>
+                <br>
+                fullPrice = price - discount;
+            </p>
+
+            <br>
+            <br>
+            This also goes for loop variables: 
+            <br>
+            <p class="edit1">
+                for (let i = 0; i &lt; 5; i++) { 
+            </p>
+        </div>
+
+        <hr>
+        <br>
+        <br>
+        <hr>
+
+        <h2>
+            Initialize Variables 
+        </h2>
+
+        <div>
+            It is a good coding practice to initialize variables when you declare them. 
+            <br>
+            This will: 
+            <br>
+            <ul>
+                <li>Give cleaner code</li>
+                <li>Provide a single place to initialize variables</li>
+                <li>Avoid undefined values</li>
+            </ul>
+
+            <br>
+            <br>
+
+            <p class="edit1">
+                //Declare and initiate at the beginning 
+                <br>
+                let firstName = "";
+                <br>
+                let lastName = "";
+                <br>
+                let price = 0;
+                <br>
+                let discount = 0;
+                <br>
+                let fullPrice = 0;
+                <br>
+                const myArray = [];
+                <br>
+                const myObject = {}; 
+            </p>
+
+            <br>
+            <br>
+
+            <p class="edit1">
+                Initializing variables provides an idea of the intended use (and intended data type).  
+            </p>
+        </div>
+
+        <hr>
+
+        <h2>
+            Declare Objects with const 
+        </h2>
+
+        <div>
+            Declaring objects with const will prevent any accidental change of type: 
+            <br>
+            Example:- 
+            <br>
+            <p class="edit1">
+                let car = {type:"Fiat", model:"500", color:"white"}; 
+                <br>
+                car = "Fiat"; <span style="color:green;">//Changes object to string </span>
+            </p>
+
+            <br>
+
+            <p class="edit1">
+                const car = {type:"Fiat", model:"500", color:"white"};
+                <br>
+                car = "Fiat"; <span style="color:green">//Not Possible</span>
+            </p>
+        </div>
+
+        <hr>
+
+        <h2>
+            Declare Arrays with const 
+        </h2>
+
+        <div>
+            Declaring arrays with const will prevent any accidental change of type: 
+            <br>
+            Example:- 
+            <br>
+            <p class="edit1">
+                let cars = ["Saab", "Volvo", "BMW"];
+                <br>
+                cars = 3; <span style="color:green">//Change array to number</span>
+            </p>
+
+            <br>
+
+            <p class="edit1">
+                const cars = ["Saab", "Volvo", "BMW"];
+                <br>
+                cars = 3; <span style="color:green">//Not possible</span>
+            </p>
+        </div>
+
+        <hr>
+
+        <h2>
+            Don't Use new Object() 
+        </h2>
+
+        <div>
+            <ul>
+                <li>Use <span class="edit">""</span> instead of <span class="edit">new String()</span></li>
+                <li>Use <span class="edit">0</span> instead of <span class="edit">new Number()</span></li>
+                <li>Use <span class="edit">false</span> instead of <span class="edit">new Boolean()</span></li>
+                <li>Use <span class="edit">{}</span> instead of <span class="edit">new Object()</span></li>
+                <li>Use <span class="edit">[]</span> instead of <span class="edit">new Array()</span></li>
+                <li>Use <span class="edit">/()/</span> instead of <span class="edit">new RegExp()</span></li>
+                <li>Use <span class="edit">function () {}</span> instead of <span class="edit">new Function()</span></li>
+            </ul>
+            <br>
+            Example:- 
+            <br>
+            <p id="demo1"></p>
+        </div>
+
+        <hr>
+
+        <h2>
+            Beware of Automatic Type Conversions 
+        </h2>
+
+        <div>
+            JavaScript is loosely typed. 
+            <br>
+            A variable can contain all data types. 
+            <br>
+            A variable can change its data type. 
+            <br>
+            Example:- 
+            <br>
+            A variable can change its type. In this example, x is first a string then a number. 
+            <br>
+            <p id="demo2"></p>
+
+            <br>
+            <br>
+            Beware that numbers can accidentally be converted to strings or <span class="edit">NaN</span> (Not a Number). 
+            <br>
+             When doing mathematical operations, JavaScript can convert numbers to strings. 
+             <br>
+             Example:- 
+             <br>
+             <p id="demo3"></p>
+
+             <br>
+             <br>
+             Subtracting a string from a string, does not generate an error but returns <span class="edit">NaN</span> (Not a Number). 
+             <br>
+             Example:- 
+             <br>
+             <p id="demo4"></p> 
+        </div>
+
+        <hr>
+
+        <h2>
+            Use === Comparison 
+        </h2>
+
+        <div>
+            The <span class="edit">==</span> comparison operator always converts (to matching types) before comparison. 
+            <br>
+            The <span class="edit">===</span> operator forces comparison of values and type. 
+            <br>
+            Example:- 
+            <br>
+            <p id="demo5"></p>
+        </div>
+
+        <hr>
+
+        <h2>
+            Use Parameter Defaults 
+        </h2>
+
+        <div>
+            If a function is called with a missing argument, the value of the missing argument is set to <span class="edit">undefined</span>. 
+            <br>
+            Undefined values can break you code. It is a good habit to assign default values to arguments. 
+            <br>
+            Example:- 
+            <br>
+            <p id="demo6"></p>
+
+            <br>
+            <br>
+            ECMAScript 2015 allows default parameters in the function definition:- 
+            <br>
+            <p class="edit1">
+                function(a=1, b=1) { /*function code*/ }
+            </p>
+        </div>
+
+        <hr>
+
+        <h2>
+            End Your Switches with Defaults 
+        </h2>
+
+        <div>
+            Always end your <span class="edit">switch</span> statements with a <span class="edit">default</span>. Even if you think there is no need for it. 
+            <br>
+            Example:- 
+            <br>
+            <p id="demo7"></p>
+        </div>
+
+        <hr>
+
+        <h2>
+            Avoid Number, String, and Boolean as Objects 
+        </h2>
+
+        <div>
+            Always treat numbers, strings, or booleans as primitive values. Not as objects. 
+            <br>
+            Declaring these types as objects, slows down execution speed, and produces nasty side effects. 
+            <br>
+            Example:- 
+            <br>
+            Strings and objects can not be safely compared. 
+            <br>
+            <p id="demo8"></p>
+
+            <br>
+            <br>
+            or even worse:- 
+            <br>
+            Example:- 
+            <br>
+            JavaScript cannot compare objects. 
+            <br>
+            <p id="demo9"></p>
+        </div>
+
+        <hr>
+
+        <h2>
+            Avoid Using eval() 
+        </h2>
+
+        <div>
+            The <span class="edit">eval()</span> function is used to run text as code. In almost all cases, it should not be necessary to use it. 
+            <br>
+            Because it allows arbitrary code to be run, it also represents a security problem. 
+        </div>
+
+        <script>
+            let x1 = "";
+            let x2 = 0;
+            let x3 = false;
+            const x4 = {};
+            const x5 = [];
+            const x6 = /()/;
+            const x7 = function(){};
+
+            document.getElementById("demo1").innerHTML = 
+            "x1: " + typeof x1 + "<br>" + 
+            "x2: " + typeof x2 + "<br>" + 
+            "x3: " + typeof x3 + "<br>" + 
+            "x4: " + typeof x4 + "<br>" + 
+            "x5: " + typeof x5 + "<br>" + 
+            "x6: " + typeof x6 + "<br>" + 
+            "x7: " + typeof x7 + "<br>";
+
+            let x = "Hello";
+            x = 5;
+            document.getElementById("demo2").innerHTML = typeof x;
+
+            let y = 5;
+            //y = 5 + 7; //y.valueOf() is 12, typeof y is a number
+            //y = 5 + "7"; //y.valueOf() is 57, typeof y is a string
+            //y = "5" + 7; //y.valueOf() is 57, typeof y is a string
+            //y = 5 - 7; //y.valueOf() is -2, typeof y is a number
+            //y = 5 - "7"; //y.valueOf() is -2, typeof y is a number
+            //y = "5" - 7; //y.valueOf() is -2, typeof y is a number
+            //y = 5 - "y"; //y.valueOf() is NaN, typeof y is a number
+            
+            document.getElementById("demo3").innerHTML = y.valueOf() + " " + typeof y;
+
+            document.getElementById("demo4").innerHTML = "Hello" - "Dolly";
+
+            let z;
+            //z = (0 == ""); //true
+            //z = (1 == "1"); //true
+            //z = (1 == true); //true
+            //z = (0 === ""); //false
+            //z = (1 === "1"); //false
+            //z = (1 === true); //false
+            document.getElementById("demo5").innerHTML = z;
+
+            function myFunction1(x, y) {
+                if(y === undefined) {
+                    y = 0;
+                }
+                return x * y;
+            }
+            document.getElementById("demo6").innerHTML = myFunction1(4);
+
+            let day;
+            switch(new Date().getDay()) {
+                case 0: 
+                  day = "Sunday";
+                  break;
+                case 1: 
+                  day = "Monday";
+                  break;
+                case 2: 
+                  day = "Tuesday";
+                  break;
+                case 3: 
+                  day = "Wednesday";
+                  break;
+                case 4: 
+                  day = "Thursday";
+                  break;
+                case 5: 
+                  day = "Friday";
+                  break;
+                case 6:
+                  day = "Saturday";
+                  break;
+                default: 
+                  day = "unknown";
+            }
+            document.getElementById("demo7").innerHTML = "Today is:- " + day;
+
+            let a = "John"; //a is a string
+            let b = new String("John"); //b is an object
+            document.getElementById("demo8").innerHTML = (a === b); //is false because a is a string and b is an object 
+
+            let c = new String("John");
+            let d = new String("John");
+            document.getElementById("demo9").innerHTML = (c == d); //is false because c is an object and d is an object
+        </script>
+    </body>
+</html>

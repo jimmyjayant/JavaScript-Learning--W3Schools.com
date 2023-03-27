@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            JavaScript String Search 
+        </title>
+        <style>
+            .edit {
+                background-color:#f1f1f1;
+                color:red;
+            }
+            .edit1 {
+                background-color:rgba(255,255,0,0.3);
+                padding:10px;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>
+            JavaScript String Search 
+        </h1>
+
+        <div style="background-color:lightgreen;padding:20px;">
+        <p>
+          <span style="font-size:30px;">JavaScript Search Methods</span>
+          <br>
+          <ul>
+            <li>String indexOf()</li>
+            <li>String lastIndexOf()</li>
+            <li>String search()</li>
+            <li>String match()</li>
+            <li>String matchAll()</li>
+            <li>String includes()</li>
+            <li>String startsWith()</li>
+            <li>String endsWith()</li>
+          </ul>
+        </p>
+        </div>
+
+        <hr>
+
+        <h2>
+            JavaScript String indexOf() 
+        </h2>
+
+        <p>
+            The <span class="edit">indexOf()</span> method returns the index of (position of) the <strong>first</strong> occurrence of a string in a string. 
+            <br>
+            Example:- 
+            <br>
+            The position of <strong>FIRST OCCURRENCE</strong> of string "locate" in the string "Please locate where 'locate' occurs!". 
+            <br>
+            <p id="demo1"></p>
+
+            <br>
+            <br>
+
+            <p class="edit1">
+                <span style="font-size:30px;">Note</span>
+                <br>
+                JavaScript counts positions from zero. 
+                <br>
+                0 is the first position in a string, 1 is the second, 2 is the third, ... 
+            </p>
+        </p>
+
+        <hr>
+
+        <h2>
+            JavaScript String lastIndexOf() 
+        </h2>
+
+        <p>
+            The <span class="edit">lastIndexOf()</span> method returns the index of the <strong>last</strong> occurrence of a specified text in a string. 
+            <br>
+            Example:- 
+            <br>
+            The position of <strong>SECOND OCCURRENCE</strong> of string "locate" in the string "Please locate where 'locate' occurs!". 
+            <br>
+            <p id="demo2"></p>
+            <br>
+            <br>
+            Both <span class="edit">indexOf()</span> and <span class="edit">lastIndexOf()</span> return -1 if the text is not found. 
+            <br>
+            <br>
+            Example:- 
+            <br>
+            The position of <strong>FIRST OCCURRENCE</strong> of string "John" in the string "Please locate where 'locate' occurs!". 
+            <br>
+            <p id="demo3"></p>
+
+            <br>
+            <br>
+            Both methods accept a second parameter as the starting position for the search. 
+            <br>
+            Example:- 
+            <br>
+            The position of <strong>FIRST OCCURRENCE</strong> of string "locate" in the string "Please locate where 'locate' occurs!" and the starting position for search is 15. 
+            <br>
+            <p id="demo4"></p>
+
+            <br>
+            <br>
+            The <span class="edit">lastIndexOf()</span> methods searches backwards (from the end to the beginning), meaning: if the second parameter is <span class="edit"> 15 </span>, the search starts at position 15, and searches to the beginning of the string. 
+            <br>
+            Example:- 
+            <br>
+            <p id="demo5"></p>
+        </p>
+
+        <hr>
+
+        <h2>
+            JavaScript String search() 
+        </h2>
+
+        <p>
+            The <span class="edit">search()</span> method searches a string for a string (or a regular expression) and returns the position of the match. 
+            <br>
+            Example:- 
+            <br>
+            Please find the <strong>FIRST OCCURRENCE</strong> of string "locate" in the string "Please locate where 'locate' occurs!". 
+            <br>
+            <p id="demo6"></p>
+            <br>
+            <br>
+            Please find the <strong>FIRST OCCURRENCE</strong> of regular expression "locate" in the string "Please locate where 'locate' occurs!". 
+            <br>
+            <p id="demo7"></p>
+        </p>
+
+        <hr>
+
+        <h2>
+            Did You Notice? 
+        </h2>
+
+        <p>
+            The two methods, <span class="edit">indexOf()</span> and <span class="edit">search()</span>, are <strong>equal? </strong>
+            <br>
+            They accept the same arguments (parameters), and return the same value? 
+            <br>
+            The two methods are <strong>NOT</strong> equal. These are the differences: 
+            <br>
+            <ul>
+                <li>The <span class="edit">search()</span> method cannot take a second start position argument.</li>
+                <li>The <span class="edit">indexOf()</span> method cannot take powerful search values (regular expressions).</li>
+            </ul>
+        </p>
+
+        <hr>
+        <br>
+        <br>
+        <hr>
+
+        <h2>
+            JavaScript String match() 
+        </h2>
+
+        <p>
+            The <span class="edit">match()</span> method returns an array containing the results of matching a string against a string (or a regular expression). 
+            <br>
+            Example:- 
+            <br>
+            Perform a search for "ain" in the string "The rain in SPAIN stays mainly in the plain.". 
+            <br>
+            <p id="demo8"></p>
+
+            <br>
+            <br>
+            Perform a search for regular expression "ain" in the string "The rain in SPAIN stays mainly in the plain.". 
+            <br>
+            Example:- 
+            <br>
+            <p id="demo9"></p>
+
+            <br>
+            <br>
+            Example:- 
+            <br>
+            Perform a global, case-insensitive search for "ain" in the string "The rain in SPAIN stays mainly in the plain.". 
+            <br>
+            <p id="demo10"></p>
+
+            <br>
+            <br>
+
+            <p class="edit1">
+                <span style="font-size:30px;">Note</span>
+                <br>
+                If a regular expression does not include the g modifier (global match), <span class="edit">match()</span> will return only the first match in the string. 
+            </p>
+        </p>
+
+        <hr>
+
+        <h2>
+            JavaScript String matchAll() 
+        </h2>
+
+        <p>
+           The <span class="edit">matchAll()</span> method returns an iterator containing the results of matching a string against a string (or a regular expression). 
+           <br>
+           Example:- 
+           <br>
+           Please find the occurrences of word "Cats" in the string "I love cats. Cats are very easy to love. Cats are very popular."
+           <br>
+           <p id="demo11"></p>
+
+           <br>
+           <br>
+           If the parameter is a regular expression, the global flag (g) must be set, otherwise a TypeError is thrown. 
+           <br>
+           Example:- 
+           <br>
+           <p id="demo12"></p>
+
+           <br>
+           <br>
+
+           If you want to search case insensitive, the insensitive flag (i) must be set. 
+           <br>
+           Example:- 
+           <br>
+           <p id="demo13"></p>
+
+           <br>
+           <br>
+
+           <p class="edit1">
+            <span class="edit">matchAll()</span> is an ES2020 feature. 
+            <br>
+            <span class="edit">matchAll()</span> does not work in Internet Explorer. 
+           </p>
+        </p>
+
+        <hr>
+
+        <h2>
+            JavaScript String includes() 
+        </h2>
+
+        <p>
+            The <span class="edit">includes()</span> method returns true if a string contains a specified value. 
+            <br>
+            Otherwise it returns <span class="edit">false</span>. 
+            <br>
+            Example:- 
+            <br>
+            Check if a string "Hello world, welcome to the universe." includes "world". 
+            <br>
+            <p id="demo14"></p>
+            <br>
+            <br>
+            Example:- 
+            <br>
+            Check if the above string includes "world". Start at position 12. 
+            <br>
+            <p id="demo15"></p>
+
+            <br>
+            <br>
+
+            <p class="edit1">
+                <span style="font-size:30px;">Note</span>
+                <br>
+                <span class="edit">includes()</span> is case sensitive. 
+                <br>
+                <span class="edit">includes()</span> is an ES6 feature. 
+                <br>
+                <span class="edit">includes()</span> is not supported in Internet Explorer. 
+            </p>
+        </p>
+
+        <hr>
+
+        <h2>
+            JavaScript String startsWith() 
+        </h2>
+
+        <p>
+            The <span class="edit">startsWith()</span> method returns <span class="edit">true</span> if a string begins with a specified value. 
+            <br>
+            Otherwise it returns <span class="edit">false</span>. 
+            <br>
+            Example:- 
+            <br>
+            State whether the string "Hello world, welcome to the universe." begins with the word "Hello". 
+            <br>
+            <p id="demo16"></p>
+
+            <br>
+            <br>
+            Example:- 
+            <br>
+            State whether the string "Hello world, welcome to the universe." begins with the word "world". 
+            <br>
+            <p id="demo17"></p>
+
+            <br>
+            <br>
+            A start position for the search can be specified:- 
+            <br>
+            Example:- 
+            <br>
+            State whether the string "Hello world, welcome to the universe." begins with the word "world" starting at position 5:- 
+            <br>
+            <p id="demo18"></p>
+            
+
+            <br>
+            <br>
+            Example:- 
+            <br>
+            State whether the string "Hello world, welcome to the universe." begins with the word "world" starting at position 6:- 
+            <br>
+            <p id="demo19"></p>
+
+            <br>
+            <br>
+
+            <p class="edit1">
+                <span style="font-size:30px;">Note</span>
+                <br>
+                <span class="edit">startsWith()</span> is case sensitive. 
+                <br>
+                <span class="edit">startsWith()</span> is an ES6 feature. 
+                <br>
+                <span class="edit">startsWith()</span> is not supported in Internet Explorer. 
+            </p>
+        </p>
+
+        <hr>
+
+        <h2>
+            JavaScript String endsWith() 
+        </h2>
+
+        <p>
+            The <span class="edit">endsWith()</span> method returns <span class="edit">true</span> if a string ends with a specified value. 
+            <br>
+            Otherwise it returns <span class="edit">false</span>. 
+            <br>
+            Example:- 
+            <br>
+            Check if the string "John Doe" ends with the word "Doe". 
+            <br>
+            <p id="demo20"></p>
+
+            <br>
+            <br>
+            Check if the 11 first characters of a string "Hello world, welcome to the universe." ends with "world". 
+            <br>
+            Example:- 
+            <br>
+            <p id="demo21"></p>
+
+            <br>
+            <br>
+
+            <p class="edit1">
+                <span style="font-size:30px;">Note</span>
+                <br>
+                <span class="edit">endsWith()</span> is case sensitive. 
+                <br>
+                <span class="edit">endsWith()</span> is an ES6 feature. 
+                <br>
+                <span class="edit">endsWith()</span> is not supported in Internet Explorer. 
+            </p>
+
+        </p>
+
+
+
+        <script>
+            let text1 = "Please locate where 'locate' occurs!";
+            document.getElementById("demo1").innerHTML = text1.indexOf("locate");
+            
+            document.getElementById("demo2").innerHTML = text1.lastIndexOf("locate");
+
+            document.getElementById("demo3").innerHTML = text1.indexOf("John");
+
+            document.getElementById("demo4").innerHTML = text1.indexOf("locate", 15);
+
+            document.getElementById("demo5").innerHTML = text1.lastIndexOf("locate", 15);
+
+            document.getElementById("demo6").innerHTML = text1.search("locate");
+
+            document.getElementById("demo7").innerHTML = text1.search(/locate/);
+
+            let text2 = "The rain in SPAIN stays mainly in the plain.";
+            const myArr1 = text2.match("ain");
+            document.getElementById("demo8").innerHTML = myArr1.length + " " + myArr1;
+
+            const myArr2 = text2.match(/ain/);
+            document.getElementById("demo9").innerHTML = myArr2.length + " " + myArr2;
+
+            const myArr3 = text2.match(/ain/gi);
+            document.getElementById("demo10").innerHTML = myArr3.length + " " + myArr3;
+
+            let text3 = "I love cats. Cats are very easy to love. Cats are very popular.";
+            const iterator1 = text3.matchAll("Cats");
+            document.getElementById("demo11").innerHTML = Array.from(iterator1);
+
+            const iterator2 = text3.matchAll(/Cats/g);
+            document.getElementById("demo12").innerHTML = Array.from(iterator2);
+
+            const iterator3 = text3.matchAll(/Cats/gi);
+            document.getElementById("demo13").innerHTML = Array.from(iterator3);
+
+            let text4 = "Hello world, welcome to the universe.";
+            document.getElementById("demo14").innerHTML = text4.includes("world");
+
+            document.getElementById("demo15").innerHTML = text4.includes("world",12);
+
+            document.getElementById("demo16").innerHTML = text4.startsWith("Hello");
+
+            document.getElementById("demo17").innerHTML = text4.startsWith("world");
+
+            document.getElementById("demo18").innerHTML = text4.startsWith("world",5);
+
+            document.getElementById("demo19").innerHTML = text4.startsWith("world",6);
+            
+            let text5 = "John Doe";
+            document.getElementById("demo20").innerHTML = text5.endsWith("Doe");
+
+            document.getElementById("demo21").innerHTML = text4.endsWith("world", 11);
+        </script>
+    </body>
+</html>

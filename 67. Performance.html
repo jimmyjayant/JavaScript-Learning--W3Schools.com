@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            JavaScript Performance 
+        </title>
+        <style>
+            .edit {
+                background-color:#f1f1f1;
+                color:red;
+            }
+            .edit1 {
+                background-color:rgba(255,255,0,0.3);
+                padding:20px;
+            }
+            body {
+                font-family:verdana, sans-serif;
+                font-size:20px;
+                line-height:1.5;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>
+            JavaScript Performance 
+        </h1>
+
+        <div>
+            How to speed up your JavaScript code. 
+        </div>
+
+        <hr>
+
+        <h2>
+            Reduce Activity in Loops 
+        </h2>
+
+        <div>
+            Loops are often used in programming. 
+            <br>
+            Each statement in a loop, including the for statement, is executed for each iteration of the loop. 
+            <br>
+            Statements or assignments that can be placed outside the loop will make the loop run faster. 
+            <br>
+            Example:- 
+            <br>
+            <p style="background-color:rgba(255,0,0,0.3);padding:20px;">
+            Bad:-  
+            <br>
+            for (let i = 0; i &lt; arr.length; i++) { 
+            </p>
+
+            <br>
+
+            <p class="edit1">
+             Better Code:- 
+             <br>
+             let l = arr.length; 
+             <br>
+             for (let i = 0; i &lt; l; i++) { 
+            </p>
+
+            <br>
+
+            The bad code accesses the length property of an array each time the loop is iterated. 
+            <br>
+            The better code accesses the length property outside the loop and makes the loop run faster. 
+        </div>
+
+        <hr>
+
+        <h2>
+            Reduce DOM Access 
+        </h2>
+
+        <div>
+            Accessing the HTML DOM is very slow, compared to other JavaScript statements. 
+            <br>
+            If you expect to access a DOM element several times, access it once, and use it as a local variable. 
+            <br>
+            Example:- 
+            <br>
+            <p id="demo1"></p>
+        </div>
+
+        <hr>
+        <br>
+        <br>
+        <hr>
+
+        <h2>
+            Reduce DOM Size 
+        </h2>
+
+        <div>
+            Keep the number of elements in the HTML DOM small. 
+            <br>
+            This will always improve page loading, and speed up rendering (page display), especially on smaller devices. 
+            <br>
+            Every attempt to search the DOM (like getElementsByTagName) will benefit from a smaller DOM. 
+        </div>
+
+        <hr>
+
+        <h2>
+            Avoid Unnecessary Variables 
+        </h2>
+
+        <div>
+            Don't create new variables if you don't plan to save values. 
+            <br>
+            Often you can replace code like this:- 
+            <br>
+            Example:- 
+            <br>
+            <p class="edit1">
+                let fullName = firstName + " " + lastName;
+                <br>
+                document.getElementById("demo").innerHTML = fullName; 
+            </p>
+
+            <br>
+
+            With this:- 
+            <br>
+            Example:- 
+            <br>
+            <p class="edit1">
+                document.getElementById("demo").innerHTML = firstName + " " + lastName; 
+            </p>
+        </div>
+
+        <hr>
+
+        <h2>
+            Delay JavaScript Loading 
+        </h2>
+
+        <div>
+            Putting your scripts at the bottom of the page body lets the browser load the page first. 
+            <br>
+            While a script is downloading, the browser will not start any other downloads. In addition all parsing and rendering activity might be blocked. 
+            <br>
+            <p class="edit1">
+                The HTTP specification defines that browsers should not download more than two components in parallel. 
+            </p>
+            <br>
+            An alternative is to use <span class="edit">defer="true"</span> in the script tag. The defer attribute specifies that the script should be executed after the page has finished parsing, but it only works for external scripts. 
+            <br>
+            If possible, you can add your script to the page by code, after the page has loaded. 
+            <br>
+            Example:- 
+            <br>
+            <p class="edit1">
+                &lt;script&gt; 
+                <br>
+                window.onload = function() {
+                    <br>
+                    const element = document.createElement("script");
+                    <br>
+                    element.src = "myScript.js";
+                    <br>
+                    document.body.appendChild(element);
+                    <br>
+                };
+                <br>
+                &lt;/script&gt; 
+            </p>
+        </div>
+
+        <hr>
+
+        <h2>
+            Avoid Using with 
+        </h2>
+
+        <div>
+            Avoid using the <span class="edit">with</span> keyword. It has a negative effect on speed. It also clutters up JavaScript scopes. 
+            <br>
+            The <span class="edit">with</span> keyword is <strong>not allowed</strong> in strict mode. 
+        </div>
+            
+        <script>
+            const obj1 = document.getElementById("demo1");
+            obj1.innerHTML = "Hello";
+        </script>
+    </body>
+</html>

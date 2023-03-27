@@ -1,0 +1,543 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            JavaScript Errors 
+        </title>
+        <style>
+            .edit {
+                background-color:#f1f1f1;
+                color:red;
+            }
+            .edit1 {
+                background-color:rgba(255,255,0,0.3);
+                padding:20px;
+            }
+            body {
+                font-family:verdana, sans-serif;
+                font-size:20px;
+                line-height:1.5;
+            }
+            .table1 {
+                width:100%;
+                border:1px solid #ddd;
+                border-collapse:collapse;
+            }
+            .table1 tr {
+                height:40px;
+            }
+            .table1 tr:nth-child(even) {
+                background-color:#f1f1f1;
+            }
+            .table1 th {
+                text-align:left;
+                padding:10px;
+            }
+            .table1 td {
+                padding:10px;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>
+            JavaScript Errors 
+        </h1>
+
+        <hr>
+
+        <h2>
+            Throw, and Try...Catch...Finally 
+        </h2>
+
+        <div>
+            The <span class="edit">try</span> statement defines a code block to run (to try). 
+            <br>
+            The <span class="edit">catch</span> statement defines a code block to handle any error. 
+            <br>
+            The <span class="edit">finally</span> statement defines a code block to run regardless of the result. 
+            <br>
+            The <span class="edit">throw</span> statement defines a custom error. 
+        </div>
+
+        <hr>
+
+        <h2>
+            Errors Will Happen! 
+        </h2>
+
+        <div>
+            When executing JavaScript code, different errors can occur. 
+            <br>
+            Errors can be coding errors made by the programmer, errors due to wrong input, and other unforeseeable things. 
+            <br>
+            Example:- 
+            <br>
+            In this example, we misspelled "alert" as "adddlert" to deliberately produce an error:- 
+            <br>
+            <p id="demo1"></p>
+
+            <br>
+
+            <p class="edit1">
+                JavaScript catches <strong>adddlert</strong> as an error, and executes the catch code to handle it. 
+            </p>
+        </div>
+
+        <hr>
+
+        <h2>
+            JavaScript try and catch 
+        </h2>
+
+        <div>
+            The <span class="edit">try</span> statement allows you to define a block of code to be tested for errors while it is being executed. 
+            <br>
+            The <span class="edit">catch</span> statement allows you to define a block of code to be executed, if an error occurs in the try block. 
+            <br>
+            The JavaScript statements <span class="edit">try</span> and <span class="edit">catch</span> come in pairs. 
+            <br>
+            Example:- 
+            <br>
+            <p class="edit1">
+                try {
+                    <br>
+                    <i>Block of code to try</i>
+                    <br>
+                }
+                <br>
+                catch(err) {
+                    <br>
+                    <i>Block of code to handle errors</i>
+                    <br>
+                }
+            </p>
+        </div>
+
+        <hr>
+        <br>
+        <hr>
+
+        <h2>
+            JavaScript Throws Errors 
+        </h2>
+
+        <div>
+            When an error occurs, JavaScript will normally stop and generate an error message. 
+            <br>
+            The technical term for this is: JavaScript will <strong>throw an exception (throw an error).</strong> 
+            <br>
+            <p class="edit1">
+                JavaScript will actually create an <strong>Error object</strong> with two properties: <strong>name</strong> and <strong>message</strong>. 
+            </p>
+        </div>
+
+        <hr>
+
+        <h2>
+            The throw Statement 
+        </h2>
+
+        <div>
+            The <span class="edit">throw</span> statement allows you to create a custom error. 
+            <br>
+            Technically you can <strong>throw an exception (throw an error)</strong>. 
+            <br>
+            The exception can be a JavaScript <span class="edit">String</span>, a <span class="edit">Number</span>, a <span class="edit">Boolean</span> or an <span class="edit">Object</span>. 
+            <br>
+            <br>
+            <p class="edit1">
+                throw "Too big"; // throw a text 
+                <br>
+                throw 500; // throw a number 
+            </p>
+            <br>
+            If you use <span class="edit">throw</span> together with <span class="edit">try</span> and <span class="edit">catch</span>, you can control program flow and generate custom error messages. 
+        </div>
+
+        <hr>
+
+        <h2>
+            Input Validation Example 
+        </h2>
+
+        <div>
+            This example examines input. If the value is wrong, an exception (err) is thrown. 
+            <br>
+            The exception (err) is caught by the catch statement and a custom error message is displayed. 
+            <br>
+            Example:- 
+            <br>
+            Please input a number between 5 and 10:- 
+            <br>
+            <input type="text" id="textinput1">
+            <button type="button" onclick="myFunction1()">Test Input</button>
+            <br>
+            <p id="demo2"></p>
+        </div>
+
+        <hr>
+
+        <h2>
+            HTML Validation 
+        </h2>
+
+        <div>
+            The code above is just an example. 
+            <br>
+            Modern browsers will often use a combination of JavaScript and built-in HTML validation, using predefined validation rules defined in HTML attributes. 
+            <br>
+            <p class="edit1">
+                &lt;input id="demo" type="number" min="5" max="10" step="1"&gt; 
+            </p>
+        </div>
+
+        <hr>
+
+        <h2>
+            The finally Statement 
+        </h2>
+
+        <div>
+            The <span class="edit">finally</span> statement lets you execute code, after try and catch, regardless of the result. 
+            <br>
+            Syntax:- 
+            <br>
+            <p class="edit1">
+                try {
+                    <br>
+                    <i>Block of code to try</i>
+                    <br>
+                }
+                <br>
+                catch(err) {
+                    <br>
+                    <i>Block of code to handle errors</i>
+                    <br>
+                }
+                <br>
+                finally {
+                    <br>
+                    <i>Block of code to be executed regardless of the try / catch result</i>
+                    <br>
+                }
+            </p>
+
+            <br>
+            <br>
+            Example:- 
+            <br>
+            Please input a number between 5 and 10:- 
+            <br>
+            <input type="text" id="textinput2">
+            <button type="button" onclick="myFunction2()">Test Input</button>
+            <br>
+            <p id="demo3"></p>
+        </div>
+
+        <hr>
+
+        <h2>
+            The Error Object 
+        </h2>
+
+        <div>
+            JavaScript has a built-in error object that provides error information when an error occurs. 
+            <br>
+            The error object provides two useful properties: name and message. 
+        </div>
+
+        <hr>
+
+        <h2>
+            Error Object Properties 
+        </h2>
+
+        <div>
+            <table class="table1">
+                <tr>
+                    <th>Property</th>
+                    <th>Description</th>
+                </tr>
+                <tr>
+                    <td>name</td>
+                    <td>Sets or returns an error name</td>
+                </tr>
+                <tr>
+                    <td>message</td>
+                    <td>Sets or returns an error message (a string)</td>
+                </tr>
+            </table>
+        </div>
+
+        <hr>
+
+        <h2>
+            Error Name Values 
+        </h2>
+
+        <div>
+            Six different values can be returned by the error name property. 
+            <br>
+            <br>
+            <table class="table1">
+                <tr>
+                    <th>Error Name</th>
+                    <th>Description</th>
+                </tr>
+                <tr>
+                    <td>EvalError</td>
+                    <td>An error has occured in the eval() function</td>
+                </tr>
+                <tr>
+                    <td>RangeError</td>
+                    <td>A number "out of range" has occurred</td>
+                </tr>
+                <tr>
+                    <td>ReferenceError</td>
+                    <td>An illegal reference has occurred</td>
+                </tr>
+                <tr>
+                    <td>SyntaxError</td>
+                    <td>A syntax error has occurred</td>
+                </tr>
+                <tr>
+                    <td>TypeError</td>
+                    <td>A type error has occurred</td>
+                </tr>
+                <tr>
+                    <td>URIError</td>
+                    <td>An error in encodeURI() has occurred</td>
+                </tr>
+            </table>
+            <br>
+            The six different values are described below. 
+        </div>
+
+        <hr>
+
+        <h2>
+            Eval Error 
+        </h2>
+
+        <div>
+            An <span class="edit">EvalError</span> indicates an error in the eval() function. 
+            <br>
+            <p style="background-color:rgba(255,0,0,0.3);padding:20px;">
+            Newer versions of JavaScript do not throw EvalError. Use SyntaxError instead. 
+            </p>
+        </div>
+
+        <hr>
+
+        <h2>
+            Range Error 
+        </h2>
+
+        <div>
+            A <span class="edit">RangeError</span> is thrown if you use a number that is outside the range of legal values. 
+            <br>
+            For example: You cannot set the number of significant digits of a number to 500. 
+            <br>
+            Example:- 
+            <br>
+            <p id="demo4"></p>
+        </div>
+
+        <hr>
+
+        <h2>
+            Reference Error 
+        </h2>
+
+        <div>
+            A <span class="edit">ReferenceError</span> is thrown if you use (reference) a variable that has not been declared. 
+            <br>
+            Example:- 
+            <br>
+            <p id="demo5"></p>
+        </div>
+
+        <hr>
+
+        <h2>
+            Syntax Error 
+        </h2>
+
+        <div>
+            A <span class="edit">SyntaxError</span> is thrown if you try to evaluate code with a syntax error. 
+            <br>
+            Example:- 
+            <br>
+            <p id="demo6"></p>
+        </div>
+
+        <hr>
+
+        <h2>
+            Type Error 
+        </h2>
+
+        <div>
+            A <span class="edit">TypeError</span> is thrown if you use a value that is outside the range of expected types. 
+            <br>
+            Example:- 
+            <br>
+            <p id="demo7"></p>
+        </div>
+
+        <hr>
+
+        <h2>
+            URI (Uniform Resource Identifier) Error 
+        </h2>
+
+        <div>
+            A <span class="edit">URIError</span> is thrown if you use illegal characters in a URI function. 
+            <br>
+            Example:- 
+            <br>
+            Some characters cannot be decoded with decodeURI(). 
+            <br>
+            <p id="demo8"></p>
+        </div>
+
+        <hr>
+
+        <h2>
+            Non-Standard Error Object Properties 
+        </h2>
+
+        <div style="background-color:rgba(255,0,0,0.3);padding:20px;">
+            Mozilla and Microsoft define some non-standard error object properties: 
+            <br>
+            fileName (Mozilla) 
+            <br>
+            lineNumber (Mozilla) 
+            <br>
+            columnNumber (Mozilla) 
+            <br>
+            stack (Mozilla) 
+            <br>
+            description (Microsoft) 
+            <br>
+            number (Microsoft) 
+            <br>
+            <br>
+            Do not use these properties in public web sites. They will not work in all browsers. 
+        </div>
+
+
+        <script>
+            try {
+                adddlert("Welcome guest!");
+            }
+
+            catch(err)
+            {
+                document.getElementById("demo1").innerHTML = 
+                "Error Name:- " + err.name + "<br>" +
+                "Error Message:- " + err.message;
+            }
+
+            function myFunction1()
+            {
+                let x = document.getElementById("textinput1").value;
+                const message = document.getElementById("demo2");
+                message.innerHTML = "";
+
+                try {
+                    if(x.trim() == "")
+                    throw "empty";
+                    if(isNaN(x))
+                    throw "not a number";
+                    x = Number(x);
+                    if(x < 5)
+                    throw "too low";
+                    if(x > 10)
+                    throw "too high";
+                }
+
+                catch(err)
+                {
+                    message.innerHTML = "Input is " + err;
+                }
+            }
+
+            function myFunction2()
+            {
+                let x = document.getElementById("textinput2").value;
+                const message = document.getElementById("demo3");
+                message.innerHTML = "";
+
+                try {
+                    if(x.trim() == "")
+                    throw "empty";
+                    if(isNaN(x))
+                    throw "not a number";
+                    x = Number(x);
+                    if(x < 5)
+                    throw "too low";
+                    if(x > 10)
+                    throw "too high";
+                }
+                catch(err)
+                {
+                    message.innerHTML = "Input is " + err;
+                }
+                finally {
+                    document.getElementById("textinput2").value = "";
+                }
+            }
+
+            let num = 1;
+            try {
+                num.toPrecision(500); //A number cannot have 500 significant digits 
+            }
+            catch(err)
+            {
+                document.getElementById("demo4").innerHTML = 
+                "Error Name:- " + err.name + "<br>" + 
+                "Error Message:- " + err.message;
+            }
+
+            let x = 5;
+            try {
+                x = y + 1; //y cannot be used (referenced) 
+            }
+            catch(err)
+            {
+                document.getElementById("demo5").innerHTML = 
+                "Error Name:- " + err.name + "<br>" + 
+                "Error Message:- " + err.message;
+            }
+
+            try {
+                eval("alert('Hello)");  //Missing ' will produce an error 
+            }
+            catch(err)
+            {
+                document.getElementById("demo6").innerHTML = 
+                "Error Name:- " + err.name + "<br>" + 
+                "Error Message:- " + err.message;
+            }
+            let num1 = 1;
+            try {
+                num1.toUpperCase();   //You cannot convert a number to upper case 
+            }
+            catch(err)
+            {
+                document.getElementById("demo7").innerHTML = 
+                "Error Name:- " + err.name + "<br>" + 
+                "Error Message:- " + err.message;
+            }
+
+            try {
+                decodeURI("%%%"); //You cannot URI decode percent signs 
+            }
+            catch(err) {
+                document.getElementById("demo8").innerHTML = 
+                "Error Name:- " + err.name + "<br>" + "Error Message:- " + err.message;
+            }
+        </script>
+    </body>
+</html>

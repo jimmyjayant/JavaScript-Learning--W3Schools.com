@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            JavaScript Date Set Methods 
+        </title>
+        <style>
+            .edit {
+                background-color:#f1f1f1;
+                color:red;
+            }
+            .edit1 {
+                background-color:rgba(255,255,0,0.3);
+                padding:20px;
+            }
+            body {
+                font-family:verdana, sans-serif;
+                font-size:20px;
+                line-height:1.5;
+            }
+            .table1 {
+                width:100%;
+                border:1px solid #ddd;
+                border-collapse:collapse;
+            }
+            .table1 tr {
+                height:40px;
+            }
+            .table1 tr:nth-child(even) {
+                background-color:#ddd;
+            }
+            .table1 th {
+                text-align:left;
+                padding:10px;
+            }
+            .table1 td {
+                padding:10px;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>
+            JavaScript Set Date Methods 
+        </h1>
+
+        <p>
+            Set Date Methods let you set date values (years, months, days, hours, minutes, seconds, milliseconds) for a Date Object. 
+        </p>
+
+        <hr>
+
+        <h2>
+            Set Date Methods 
+        </h2>
+
+        <p>
+            Set Date Methods are used for setting a part of a date:- 
+            <br>
+            <br>
+            <table class="table1">
+                <tr>
+                    <th>Method</th>
+                    <th>Description</th>
+                </tr>
+                <tr>
+                    <td>setDate()</td>
+                    <td>Set the day as a number (1-31)</td>
+                </tr>
+                <tr>
+                    <td>setFullYear()</td>
+                    <td>Set the year (optionally month and day)</td>
+                </tr>
+                <tr>
+                    <td>setHours()</td>
+                    <td>Set the hour (0-23)</td>
+                </tr>
+                <tr>
+                    <td>setMilliseconds()</td>
+                    <td>Set the milliseconds (0-999)</td>
+                </tr>
+                <tr>
+                    <td>setMinutes()</td>
+                    <td>Set the minutes (0-59)</td>
+                </tr>
+                <tr>
+                    <td>setMonth()</td>
+                    <td>Set the month (0-11)</td>
+                </tr>
+                <tr>
+                    <td>setSeconds()</td>
+                    <td>Set the seconds (0-59)</td>
+                </tr>
+                <tr>
+                    <td>setTime()</td>
+                    <td>Set the time (milliseconds since January 01, 1970)</td>
+                </tr>
+            </table>
+        </p>
+
+        <hr>
+
+        <h2>
+            The setFullYear() Method 
+        </h2>
+
+        <p>
+            The <span class="edit">setFullYear()</span> method sets the year of a date object. In this example to 2020. 
+            <br>
+            Example:- 
+            <br>
+            <p id="demo1"></p>
+
+            <br>
+            <br>
+            The <span class="edit">setFullYear()</span> method can <strong>optionally</strong> set month and day. 
+            <br>
+            Example:- 
+            <br>
+            Please note that month counts from 0. December is month 11. 
+            <br>
+            <p id="demo2"></p>
+        </p>
+
+        <hr>
+        <br>
+        <br>
+        <hr>
+
+        <h2>
+            The setMonth() Method 
+        </h2>
+
+        <p>
+            The <span class="edit">setMonth()</span> method sets the month of a date object (0-11). 
+            <br>
+            Example:- 
+            <br>
+            <p id="demo3"></p>
+        </p>
+
+        <hr>
+
+        <h2>
+            The setDate() Method 
+        </h2>
+
+        <p>
+            The <span class="edit">setDate()</span> method sets the day of a date object (1-31). 
+            <br>
+            Example:- 
+            <br>
+            <p id="demo4"></p>
+
+            <br>
+            <br>
+            The <span class="edit">setDate()</span> method can also be used to <strong>add days</strong> to a date. 
+            <br>
+            Example:- 
+            <br>
+            <p id="demo5"></p>
+
+            <br>
+            <p class="edit1">
+                If adding days shifts the month or year, the changes are handled automatically by the Date object. 
+            </p>
+        </p>
+
+        <hr>
+
+        <h2>
+            The setHours() Method 
+        </h2>
+
+        <p>
+            The <span class="edit">setHours()</span> method sets the hours of a date object (0-23). 
+            <br>
+            Example:- 
+            <br>
+            <p id="demo6"></p>
+        </p>
+
+        <hr>
+
+        <h2>
+            The setMinutes() Method 
+        </h2>
+
+        <p>
+            The <span class="edit">setMinutes()</span> method sets the minutes of a date object (0-59). 
+            <br>
+            Example:- 
+            <br>
+            <p id="demo7"></p> 
+        </p>
+
+        <hr>
+
+        <h2>
+            The setSeconds() Method 
+        </h2>
+
+        <p>
+            The <span class="edit">setSeconds()</span> method sets the seconds of a date object (0-59). 
+            <br>
+            Example:- 
+            <br>
+            <p id="demo8"></p>
+        </p>
+
+        <hr>
+
+        <h2>
+            Compare Dates 
+        </h2>
+
+        <p>
+            Dates can easily be compared. 
+            <br>
+            The following example compares today's date with January 14, 2100. 
+            <br>
+            Example:- 
+            <br>
+            <p id="demo9"></p>
+
+            <br>
+            <br>
+
+            <p class="edit1">
+                JavaScript counts month from 0 to 11. January is 0. December is 11. 
+            </p>
+        </p>
+
+
+
+
+
+
+        <script>
+            const d1 = new Date();
+            const d2 = new Date();
+            d2.setFullYear(2020);
+            document.getElementById("demo1").innerHTML = 
+            "The current date is:- " + d1 + "<br>" + 
+            "The current date but year set to 2020 is:- " + d2;
+
+            const d3 = new Date();
+            d3.setFullYear(2020,11,03);
+            document.getElementById("demo2").innerHTML = 
+            "The date after setting year to 2020, month to december, and date to 03 is:- " + d3;
+
+            const d4 = new Date();
+            d4.setMonth(11);
+            document.getElementById("demo3").innerHTML = 
+            "The date and time after setting month to december is:- " + d4;
+
+            const d5 = new Date();
+            d5.setDate(15);
+            document.getElementById("demo4").innerHTML = 
+            "The date after setting date to 15 is:- " + d5;
+
+            const d6 = new Date();
+            d6.setDate(d6.getDate() + 50);
+            document.getElementById("demo5").innerHTML = d6;
+
+            const d7 = new Date();
+            d7.setHours(22);
+            document.getElementById("demo6").innerHTML = d7;
+
+            const d8 = new Date();
+            d8.setMinutes(30);
+            document.getElementById("demo7").innerHTML = d8;
+
+            const d9 = new Date();
+            d9.setSeconds(30);
+            document.getElementById("demo8").innerHTML = d9;
+
+            let text="";
+            const d10 = new Date();
+            const d11 = new Date();
+            d11.setFullYear(2100, 0, 14);
+
+            if(d11 > d10)
+            {
+                text = "Today is before January 14, 2100.";
+            }
+            else
+            {
+                text = "Today is after January 14, 2100.";
+            }
+
+            document.getElementById("demo9").innerHTML = text;
+        </script>
+    </body>
+</html>

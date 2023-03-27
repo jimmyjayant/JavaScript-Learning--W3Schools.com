@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en-in">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>
+            JSON Parse  
+        </title>
+        <style>
+            html {
+                font-size:calc(10px + 0.390625vw);
+            }
+
+            body {
+                font-size:1rem;
+                font-family:verdana, sans-serif;
+                line-height:1.5;
+            }
+
+            .edit {
+                background-color:#f1f1f1;
+                color:red;
+            }
+
+            .edit1 {
+                background-color:rgba(255,255,0,0.3);
+                padding:2rem;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>
+            JSON.parse() 
+        </h1>
+
+        <div>
+            A common use of JSON is to exchange data to/from a web server. 
+            <br>
+            When receiving data from a web server, the data is always a string. 
+            <br>
+            Parse the data with <span class="edit">JSON.parse()</span>, and the data becomes a JavaScript object. 
+        </div>
+
+        <hr>
+
+        <h2>
+            Example - Parsing JSON 
+        </h2>
+
+        <div>
+            Imagine we received this text from a web server. 
+            <br>
+            Example:- 
+            <br>
+            <p class="edit1">
+                '{"name":"John", "age":30, "city":"New York"}' 
+            </p>
+
+            <br>
+
+            Use the JavaScript function <span class="edit">JSON.parse()</span> to convert text into a JavaScript object. 
+            <br>
+            Example:- 
+            <br>
+            <p class="edit1">
+                const obj = JSON.parse('{"name":"John", "age":30, "city":"New York"}'); 
+            </p>
+
+            <br>
+
+            <p class="edit1">
+                Make sure the text is in JSON format, or else you will get a syntax error. 
+            </p>
+
+            <br>
+
+            Use the JavaScript object in your page. 
+            <br>
+            Example:- 
+            <br>
+            <p id="demo1"></p>
+        </div>
+
+        <hr>
+
+        <h2>
+            Array as JSON 
+        </h2>
+
+        <div>
+            When using the <span class="edit">JSON.parse()</span> on a JSON derived from an array, the method will return a JavaScript array, instead of a JavaScript object. 
+            <br>
+            Example:- 
+            <br>
+            <b>
+                Data written as JSON array will be parsed into a JavaScript array. 
+            </b>
+            <p id="demo2"></p>
+        </div>
+
+        <hr>
+        <br>
+        <br>
+        <hr>
+
+        <h2>
+            Exceptions 
+        </h2>
+
+        <div>
+            <h3>
+                Parsing Dates 
+            </h3>
+
+            Date objects are not allowed in JSON. 
+            <br>
+            If you need to include a date, write it as a string. 
+            <br>
+            You can convert it back into a date object later. 
+            <br>
+            Example:- 
+            <br>
+            <b>
+                Convert a string into a date:- 
+            </b>
+
+            <p id="demo3"></p>
+
+            <br>
+
+            Or, you can use the second parameter, of the <span class="edit">JSON.parse()</span> function, called <i>reviver</i>. 
+            <br>
+            The <i>reviver</i> parameter is a function that checks each property, before returning the value. 
+            <br>
+            Example:- 
+            <br>
+            <b>
+                Convert a string into a date, using the <i>reviver</i> function:- 
+            </b>
+
+            <p id="demo4"></p>
+
+            <br>
+            <br>
+
+            <h3>
+                Parsing Functions 
+            </h3>
+
+            
+                Functions are not allowed in JSON. 
+                <br>
+                If you need to include a function, write it as a string. 
+                <br>
+                You can convert it back into a function later. 
+                <br>
+                Example:- 
+                <br>
+                <b>
+                    Convert a string into a function:- 
+                </b>
+
+                <p id="demo5"></p>
+
+                <p style="background-color:rgba(255,0,0,0.1);padding:1rem;">
+                You should avoid using functions in JSON, the functions will lose their scope, and you would have to use <span class="edit">eval()</span> to convert them back into functions. 
+                </p>
+            
+        </div>
+
+        <script>
+            const txt1 = '{"name":"John", "age":30, "city":"New York"}';
+            const obj1 = JSON.parse(txt1);
+            document.getElementById("demo1").innerHTML = obj1.name + ", " + obj1.age;
+
+            const txt2 = '["Ford", "BMW", "Audi", "Fiat"]';
+            const myArr1 = JSON.parse(txt2);
+            document.getElementById("demo2").innerHTML = myArr1[0];
+
+            const text1 = '{"name":"John", "birth":"1986-12-14", "city":"New York"}';
+            const obj2 = JSON.parse(text1);
+            obj2.birth = new Date(obj2.birth);
+            document.getElementById("demo3").innerHTML = obj2.name + ", " + obj2.birth;
+
+            const text2 = '{"name":"John", "birth":"1986-12-14", "city":"New York"}';
+            const obj3 = JSON.parse(text2, function(key, value) {
+                if(key == "birth") {
+                    return new Date(value);
+                }
+                else {
+                    return value;
+                }
+            });
+            document.getElementById("demo4").innerHTML = obj3.name + ", " + obj3.birth; 
+
+            const text3 = '{"name":"John", "age":"function() {return 30;}", "city":"New York"}';
+            const obj4 = JSON.parse(text3);
+            obj4.age = eval("(" + obj4.age + ")"); //Or we can use = new Function('return ' + obj4.age)(); [OR] Function('return ' + obj4.age)();
+            document.getElementById("demo5").innerHTML = obj4.name + ", " + obj4.age();
+        </script>
+    </body>
+</html>

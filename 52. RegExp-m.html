@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            JavaScript Regular Expression Modifier m 
+        </title>
+        <style>
+            
+        </style>
+    </head>
+    <body>
+        <h1>
+            Regular Expression Modifier m   
+        </h1>
+
+        <h2>
+            Do a multiline search for "is" at the beginning of each line in a multiline string. 
+        </h2>
+
+        <p id="demo1"></p>
+
+        <script>
+            let text1 = "\nIs th\nis it?";
+            let result = text1.match(/^is/m);
+            document.getElementById("demo1").innerHTML = result;
+        </script>
+
+    </body>
+
+</html>

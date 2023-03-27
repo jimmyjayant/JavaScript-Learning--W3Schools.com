@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en-in">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>
+            JavaScript HTML DOM Events 
+        </title>
+        <style>
+            html {
+                font-size:62.5%;
+            }
+            body {
+                font-family:verdana, sans-serif;
+                font-size:2rem;
+                line-height:1.5;
+            }
+            .edit {
+                background-color:#f1f1f1;
+                color:red;
+            }
+            .edit1 {
+                background-color:rgba(255,255,0,0.3);
+                padding:2rem;
+            }
+        </style>
+    </head>
+    <body onload="checkCookies();mymessage();">
+        <h1>
+            JavaScript HTML DOM Events 
+        </h1>
+
+        <div>
+            HTML DOM allows JavaScript to react to HTML events. 
+        </div>
+
+        <hr>
+
+        <h2>
+            Reacting to Events 
+        </h2>
+
+        <div>
+            A JavaScript can be executed when an event occurs, like when a user clicks on a HTML element. 
+            <br>
+            To execute code when a user clicks on an element, add JavaScript code to a HTML event attribute. 
+            <br>
+            <p class="edit1">
+                onclick = <i>JavaScript</i>
+            </p>
+
+            <br>
+            Examples of HTML events:- 
+            <br>
+            <ul>
+                <li>When a user clicks the mouse</li>
+                <li>When a web page has loaded</li>
+                <li>When an image has been loaded</li>
+                <li>When the mouse moves over an element</li>
+                <li>When an input field is changed</li>
+                <li>When a HTML form is submitted</li>
+                <li>When a user strokes a key</li>
+            </ul>
+
+            <br>
+
+            In this example, the content of the <span class="edit">&lt;h1&gt;</span> element is changed when a user clicks on it. 
+            <br>
+            Example:- 
+            <br>
+            <p onclick="this.innerHTML = 'Ooops!'">Click on this text!</p> 
+            <br>
+            <br>
+            In this example, a function is called from the event handler. 
+            <br>
+            Example:- 
+            <br>
+            <p onclick="changeText(this)">Click on this text!</p>
+        </div>
+
+        <hr>
+        <br>
+        <hr>
+
+        <h2>
+            HTML Event Attributes 
+        </h2>
+
+        <div>
+            To assign events to HTML elements you can use event attributes. 
+            <br>
+            Example:- 
+            <br>
+            <b>Assign an onclick event to a button element:- </b>
+            <br>
+            <button onclick="displayDate()">The time is?</button>
+            <br>
+            <p id="demo1"></p>
+            <br>
+            In the example above, a function named <span class="edit">displayDate</span> will be executed when the button is clicked. 
+        </div>
+
+        <hr>
+
+        <h2>
+            Assign Events Using the HTML DOM 
+        </h2>
+
+        <div>
+            The HTML DOM allows you to assign events to HTML elements using JavaScript. 
+            <br>
+            Example:- 
+            <br>
+            <b>
+                Assign an onclick event to a button element:- 
+            </b>
+            <br>
+            <button id="demo2">Try it</button>
+            <br>
+            <p id="demo3"></p>
+            <br>
+            In the example above, a function named <span class="edit">displayDate1</span> is assigned to a HTML element with the <span class="edit">id="demo2"</span>. 
+            <br>
+            The function will be executed when the button is clicked. 
+        </div>
+
+        <hr>
+
+        <h2>
+            The onload and onunload Events 
+        </h2>
+
+        <div>
+            The <span class="edit">onload</span> and <span class="edit">onunload</span> events are triggered when the user enters or leaves the page. 
+            <br>
+            The <span class="edit">onload</span> event can be used to check the visitor's browser type and browser version, and load the proper version of the web page based on the information. 
+            <br>
+            The <span class="edit">onload</span> and <span class="edit">onunload</span> events can be used to deal with cookies. 
+            <br>
+            Example:- 
+            <br>
+            <p id="demo4"></p>
+        </div>
+
+        <hr>
+
+        <h2>
+            The onchange Event 
+        </h2>
+
+        <div>
+            The <span class="edit">onchange</span> event is often used in combination with validation of input fields. 
+            <br>
+            Below is an example of how to use the onchange. The <span class="edit">upperCase()</span> function will be called when a user changes the content of an input field. 
+            <br>
+            Example:- 
+            <br>
+            Enter you name: <input type="text" id="fname" onchange="upperCase()">
+            <br>
+            When you leave the input field, a function is triggered which transforms the input text to upper case. 
+        </div>
+
+        <hr>
+
+        <h2>
+            The onmouseover and onmouseout Events 
+        </h2>
+
+        <div>
+            The <span class="edit">onmouseover</span> and <span class="edit">onmouseout</span> events can be used to trigger a function when the user mouses over, or out of, a HTML element. 
+            <br>
+            Example:- 
+            <br>
+            <div onmouseover="mOver(this)" onmouseout="mOut(this)" style="background-color:red;width:160px;height:40px;padding:40px;text-align:center;color:white;">
+            Mouse Over Me 
+            </div>
+        </div>
+
+        <hr>
+
+        <h2>
+            The onmousedown, onmouseup and onclick Events 
+        </h2>
+
+        <div>
+            The <span class="edit">onmousedown</span>, <span class="edit">onmouseup</span>, and <span class="edit">onclick</span> events are all parts of a mouse-click. First when a mouse-button is clicked, the onmousedown event is triggered, then, when the mouse-button is released, the onmouseup event is triggered, finally, when the mouse-click is completed, the onclick event is triggered. 
+            <br>
+            Example:- 
+            <br>
+            <div onmousedown="mDown(this)" onmouseup="mUp(this)" style="background:red;width:150px;height:100px;text-align:center;padding:20px;">
+            Click Me 
+            </div>
+        </div>
+
+        <hr>
+
+        <h2>
+            More Examples 
+        </h2>
+
+        <div>
+            Change an image when a user holds down the mouse button. 
+            <br>
+            Example:- 
+            <br>
+            <img id="demo5" src="Image2.gif" width="100" height="180" alt="bulb" onmousedown="lighton(this)" onmouseup="lightoff(this)">
+            <br>
+            <b>Click Mouse and hold down! </b>
+
+            <br>
+            <br>
+
+            Display an alert box when the page has finished loading. 
+            <br>
+            Example:- 
+            <br>
+            <b>Refresh the page.</b>
+
+            <br>
+            <br>
+
+            Change the background-color of an input field when it gets focus. 
+            <br>
+            Example:- 
+            <br>
+            Enter your name: <input type="text" onfocus="myFunction1(this)">
+            <br>
+            <b>
+                When the input field gets focus, a function is triggered which changes the background-color. 
+            </b>
+
+            <br>
+            <br>
+
+            Change the color of an element when the cursor moves over it. 
+            <br>
+            Example:- 
+            <br>
+            <h1 onmouseover="style.color='red'" onmouseout="style.color='black'">
+                Mouse over this text. 
+            </h1>
+        </div>
+
+        <script>
+          function changeText(id) {
+            id.innerHTML = "Ooops!";
+          }
+
+          function displayDate() {
+            document.getElementById("demo1").innerHTML = Date();
+          }
+
+          function displayDate1() {
+            document.getElementById("demo3").innerHTML = Date();
+          }
+
+          document.getElementById("demo2").onclick = displayDate1;
+
+          function checkCookies() {
+            var text = "";
+            if(navigator.cookieEnabled == true) {
+                text = "Cookies are enabled.";
+            }
+            else
+            {
+                text = "Cookies are not enabled.";
+            }
+            document.getElementById("demo4").innerHTML = text;
+          }
+
+          function upperCase() {
+            const x = document.getElementById("fname");
+            x.value = x.value.toUpperCase();
+          }
+
+          function mOver(obj) {
+            obj.innerHTML = "Thank You";
+          }
+
+          function mOut(obj) {
+            obj.innerHTML = "Mouse Over Me";
+          }
+
+          function mDown(obj) {
+            obj.style.backgroundColor = "lightgreen";
+            obj.innerHTML = "Release Me";
+          }
+
+          function mUp(obj) {
+            obj.style.backgroundColor = "aqua";
+            obj.innerHTML = "Thank You";
+          }
+          
+          function lighton(obj) {
+            obj.src = "Image3.gif";
+          }
+
+          function lightoff(obj) {
+            obj.src = "Image2.gif";
+          }
+
+          function mymessage() {
+            alert("This message was triggered from the onload event.");
+          }
+
+          function myFunction1(obj) {
+            obj.style.background = "yellow";
+          }
+
+        </script>
+    </body>
+</html>

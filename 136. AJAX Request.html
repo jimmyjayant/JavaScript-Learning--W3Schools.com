@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en-in">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>
+            AJAX - XMLHttpRequest 
+        </title>
+        <style>
+            html {
+                font-size:calc(10px + 0.390625vw);
+            }
+
+            body {
+                font-family:verdana, sans-serif;
+                font-size:1rem;
+                line-height:1.5;
+            }
+
+            .edit {
+                background-color:#f1f1f1;
+                color:red;
+            }
+
+            .edit1 {
+                background-color:rgba(255,255,0,0.3);
+                padding:2rem;
+            }
+
+            .table1 {
+                width:100%;
+                border:1px solid #ddd;
+                border-collapse:collapse;
+            }
+
+            .table1 tr:nth-child(even) {
+                background-color:#f1f1f1;
+            }
+
+            .table1 th {
+                text-align:left;
+                padding:0.5rem;
+            }
+
+            .table1 td {
+                padding:0.5rem;
+                vertical-align:top;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>
+            AJAX - XMLHttpRequest 
+        </h1>
+
+        <div>
+            The XMLHttpRequest object is used to request data from a server. 
+        </div>
+
+        <hr>
+
+        <h2>
+            Send a Request To a Server 
+        </h2>
+
+        <div>
+            To send a request to a server, we use the open() and send() methods of the <span class="edit">XMLHttpRequest</span> object. 
+            <br>
+            <p class="edit1">
+                xhttp.open("GET", "ajax_info.txt", true);
+                <br>
+                xhttp.send(); 
+            </p>
+
+            <br>
+            <br>
+
+            <table class="table1">
+                <tr>
+                    <th>Method</th>
+                    <th>Description</th>
+                </tr>
+                <tr>
+                    <td>open(<i>method, url, async</i>)</td>
+                    <td>Specifies the type of request
+                        <br>
+                        <i>method</i>: the type of request: GET or POST 
+                        <br>
+                        <i>url</i>: the server (file) location 
+                        <br>
+                        <i>async</i>: true (asynchronous) or false (synchronous)
+                    </td>
+                </tr>
+                <tr>
+                    <td>send()</td>
+                    <td>Sends the request to the server (used for GET)</td>
+                </tr>
+                <tr>
+                    <td>send(<i>string</i>)</td>
+                    <td>Sends the request to the server (used for POST)</td>
+                </tr>
+            </table>
+        </div>
+
+        <hr>
+
+        <h2>
+            The url - A File On a Server 
+        </h2>
+
+        <div>
+            The url parameter of the <span class="edit">open()</span> method, is an address to a file on a server. 
+            <br>
+            <p class="edit1">
+                xhttp.open("GET", "ajax_test.asp", true); 
+            </p>
+
+            <br>
+            The file can be any kind of file, like .txt or .xml, or server scripting files like .asp and .php (which can perform actions on the server before sending the response back). 
+        </div>
+
+        <hr>
+
+        <h2>
+            Asynchronous - True or False? 
+        </h2>
+
+        <div>
+            Server requests should be sent asynchronously. 
+            <br>
+            The async parameter of the open() method should be set to true. 
+            <br>
+            <p class="edit1">
+                xhttp.open("GET", "ajax_test.asp", true); 
+            </p>
+            <br>
+            By sending asynchronously, the JavaScript does not have to wait for the server response, but can instead: 
+            <br>
+            <ul>
+                <li>execute other scripts while waiting for server response</li>
+                <li>deal with the response after the response is ready</li>
+            </ul>
+
+            <br>
+
+            <p style="background-color:rgba(255,0,0,0.2);padding:2rem;">
+            The default value for the async parameter is async = true. 
+            <br>
+            You can safely remove the third parameter from your code. 
+            <br>
+            Synchronous XMLHttpRequest (async = false) is not recommended because the JavaScript will stop executing until the server response is ready. If the server is busy or slow, the application will hang or stop. 
+            </p>
+        </div>
+
+        <hr>
+
+        <h2>
+            GET or POST? 
+        </h2>
+
+        <div>
+            <span class="edit">GET</span> is simpler and faster than <span class="edit">POST</span>, and can be used in most cases. 
+            <br>
+            However, always use POST requests when:- 
+            <br>
+            <ul>
+                <li>A cached file is not an option (update a file or database on the server).</li>
+                <li>Sending a large amount of data to the server (POST has no size limitations).</li>
+                <li>Sending user input (which can contain unknown characters), POST is more robust and secure than GET.</li>
+            </ul>
+        </div>
+
+        <hr>
+
+        <h2>
+            GET Requests 
+        </h2>
+
+        <div>
+            A simple <span class="edit">GET</span> request: 
+            <br>
+            Example:- 
+            <br>
+            <button type="button" onclick="myFunction1()">Request Data</button>
+            <br>
+            <p id="demo1"></p>
+
+            <br>
+            In the example above, you may get a cached result. To avoid this, add a unique ID to the URL. 
+            <br>
+            Example:- 
+            <br>
+            <button type="button" onclick="myFunction2()">Request Data</button>
+            <br>
+            <p id="demo2"></p>
+
+            <br>
+            If you want to send information with the <span class="edit">GET</span> method, add the information to the URL. 
+            <br>
+            Example:- 
+            <br>
+            <button type="button" onclick="myFunction3()">Request Data</button>
+            <br>
+            <p id="demo3"></p>
+            <br>
+            Here the server uses the input and how the server responds to a request, is explained in a later chapter. 
+        </div>
+
+        <hr>
+        <br>
+        <br>
+        <hr>
+
+        <h2>
+            POST Requests 
+        </h2>
+
+        <div>
+            A simple <span class="edit">POST</span> request: 
+            <br>
+            Example:- 
+            <br>
+            <button type="button" onclick="myFunction4()">Request Data</button>
+            <br>
+            <p id="demo4"></p>
+
+            <br>
+            To POST data like a HTML form, add a HTTP header with <span class="edit">setRequestHeader()</span>. Specify the data you want to send in the <span class="edit">send()</span> method. 
+            <br>
+            Example:- 
+            <br>
+            <button type="button" onclick="myFunction5()">Request Data</button>
+            <br>
+            <p id="demo5"></p>
+
+            <br>
+            <br>
+
+            <table class="table1">
+                <tr>
+                    <th>Method</th>
+                    <th>Description</th>
+                </tr>
+                <tr>
+                    <td>setRequestHeader(<i>header, value</i>)</td>
+                    <td>Adds HTTP headers to the request 
+                        <br>
+                        <i>header</i>: specifies the header name 
+                        <br>
+                        <i>value</i>: specifies the header value 
+                    </td>
+                </tr>
+            </table>
+        </div>
+
+        <hr>
+
+        <h2>
+            Synchronous Request 
+        </h2>
+
+        <div>
+            To execute a synchronous request, change the third parameter in the <span class="edit">open()</span> method to <span class="edit">false</span>: 
+            <br>
+            <p class="edit1">
+                xhttp.open("GET", "ajax_info.txt", false); 
+            </p>
+            <br>
+            Sometimes async = false are used for quick testing. You will also find synchronous requests in older JavaScript code. 
+            <br>
+            Since the code will wait for server completion, there is no need for an <span class="edit">onreadystatechange</span> function. 
+            <br>
+            Example:- 
+            <br>
+            <p id="demo6">Let AJAX change this text.</p>
+
+            <button type="button" onclick="myFunction6()">Change Content</button>
+
+            <br>
+            <br>
+
+            <p style="background-color:rgba(255,0,0,0.2);padding:2rem;">
+            Synchronous XMLHttpRequest (async = false) is not recommended because the JavaScript will stop executing until the server response is ready. If the server is busy or slow, the application will hang or stop. 
+            <br>
+            Modern developer tools are encouraged to warn about using synchronous requests and may throw an InvalidAccessError exception when it occurs. 
+            </p>
+        </div>
+
+        <script>
+            function myFunction1() {
+                const xhttp = new XMLHttpRequest();
+                xhttp.onload = function() {
+                    document.getElementById("demo1").innerHTML = this.responseText;
+                }
+                xhttp.open("GET", "demo_get.asp");
+                xhttp.send();
+            }
+
+            function myFunction2() {
+                const xhttp = new XMLHttpRequest();
+                xhttp.onload = function() {
+                    document.getElementById("demo2").innerHTML = this.responseText;
+                }
+                xhttp.open("GET", "demo_get.asp?t=" + Math.random());
+                xhttp.send();
+            }
+
+            function myFunction3() {
+                const xhttp = new XMLHttpRequest();
+                xhttp.onload = function() {
+                    document.getElementById("demo3").innerHTML = this.responseText;
+                }
+                xhttp.open("GET", "demo_get2.asp?fname=Henry&lname=Ford");
+                xhttp.send();
+            }
+
+            function myFunction4() {
+                const xhttp = new XMLHttpRequest();
+                xhttp.onload = function() {
+                    document.getElementById("demo4").innerHTML = this.responseText;
+                }
+                xhttp.open("POST", "demo_post.asp");
+                xhttp.send();
+            }
+
+            function myFunction5() {
+                const xhttp = new XMLHttpRequest();
+                xhttp.onload = function() {
+                    document.getElementById("demo5").innerHTML = this.responseText;
+                }
+                xhttp.open("POST", "demo_post2.asp");
+                xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+                xhttp.send("fname=Henry&lname=Ford");
+            }
+
+            function myFunction6() {
+                var xhttp = new XMLHttpRequest();
+                xhttp.open("GET", "ajax_info.txt", false);
+                xhttp.send();
+                document.getElementById("demo6").innerHTML = xhttp.responseText;
+            }
+        </script>
+    </body>
+</html>

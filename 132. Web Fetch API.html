@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en-in">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>
+            JavaScript Fetch API 
+        </title>
+        <style>
+            html {
+                font-size:calc(10px + 0.390625vw);
+            }
+
+            body {
+                font-family:verdana, sans-serif;
+                font-size:1rem;
+                line-height:1.5;
+            }
+
+            .edit {
+                background-color:#f1f1f1;
+                color:red;
+            }
+
+            .edit1 {
+                background-color:rgba(255,255,0,0.3);
+                padding:1rem;
+            }
+
+            .table1 {
+                width: 100%;
+                border:1px solid #ddd;
+                border-collapse:collapse;
+            }
+
+            .table1 tr {
+                height:3rem;
+            }
+
+            .table1 tr:nth-child(even) {
+                background-color:#f1f1f1;
+            }
+
+            .table1 td {
+                text-align:center;
+                padding:0.5rem;
+                border:1px solid #ddd;
+            }
+        </style>
+        </head>
+        <body>
+            <h1>
+               JavaScript Fetch API 
+            </h1>
+
+            <div style="background-color:rgba(0,255,0,0.2);padding:1rem;">
+            The Fetch API interface allows web browser to make HTTP requests to web servers. 
+            <br>
+            &#128512; No need for XMLHttpRequest anymore. 
+            </div>
+
+            <hr>
+
+            <h2>
+                Browser Support 
+            </h2>
+
+            <div>
+                The numbers in the table specify the first browser versions that fully support Fetch API. 
+                <br>
+                <br>
+                <table class="table1">
+                    <tr>
+                        <td><img src="Image4.svg.png" height="35" width="35" alt="Google Chrome"></td>
+                        <td><img src="Image5.png" height="35" width="35" alt="Microsoft Edge"></td>
+                        <td><img src="Image6.png" height="35" width="35" alt="Mozilla Firefox"></td>
+                        <td><img src="Image7.png" height="35" width="35" alt="Apple Safari"></td>
+                        <td><img src="Image8.png" height="35" width="35" alt="Opera"></td>
+                    </tr>
+                    <tr>
+                        <td>Chrome 42</td>
+                        <td>Edge 14</td>
+                        <td>Firefox 40</td>
+                        <td>Safari 10.1</td>
+                        <td>Opera 29</td>
+                    </tr>
+                    <tr>
+                        <td>Apr 2015</td>
+                        <td>Aug 2016</td>
+                        <td>Aug 2015</td>
+                        <td>Mar 2017</td>
+                        <td>Apr 2015</td>
+                    </tr>
+                </table>
+            </div>
+
+            <hr>
+
+            <h2>
+                A Fetch API Example 
+            </h2>
+
+            <div>
+                The example below fetches a file and displays the content. 
+                <br>
+                Example:- 
+                <br>
+                <p style="background-color:rgba(255,0,0,0.2);padding:0.5rem;color:red;font-weight:bold;">
+                Example Only Works in Live Server. 
+                </p>
+                <p id="demo1">Fetch a file to change this text.</p>
+
+                <br>
+                <br>
+
+                Since Fetch is based on async and await, the example above might be easier to understand like this. 
+                <br>
+                Example:- 
+                <br>
+                <p id="demo2">Fetch a file to change this text.</p>
+
+                <br>
+                <br>
+                Or even better: Use understandable names instead of x and y. 
+                <br>
+                Example:- 
+                <br>
+                <p id="demo3">Fetch a file to change this text.</p>
+            </div>
+
+            <script>
+                let file1 = "fetch_info.txt";
+
+                fetch(file1) 
+                .then(x => x.text())
+                .then(y => document.getElementById("demo1").innerHTML = y);
+
+                getText(file1);  //Or getText("fetch_info.txt"); 
+
+                async function getText(file) {
+                    let x = await fetch(file);
+                    let y = await x.text();
+                    document.getElementById("demo2").innerHTML = y;
+                }
+
+                getText1(file1);
+
+                async function getText1(file) {
+                    let myObject = await fetch(file);
+                    let myText = await myObject.text();
+                    document.getElementById("demo3").innerHTML = myText;
+                }
+            </script>
+        </body>
+</html>

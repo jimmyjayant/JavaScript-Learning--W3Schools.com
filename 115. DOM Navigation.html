@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="en-in">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>
+            JavaScript HTML DOM Navigation 
+        </title>
+        <style>
+            html {
+                font-size:62.5%;
+            }
+            body {
+                font-family:verdana, sans-serif;
+                font-size:2rem;
+                line-height:1.5;
+            }
+            .edit {
+                background-color:#f1f1f1;
+                color:red;
+            }
+            .edit1 {
+                background-color:rgba(255,255,0,0.3);
+                padding:2rem;
+            }
+            .parent {
+                display:flex;
+                gap:10px;
+                flex-wrap:wrap;
+            }
+            .table1 {
+                width:100%;
+                border:0.1rem solid #ddd;
+                border-collapse:collapse;
+            }
+            .table1 tr {
+                height:4rem;
+            }
+            .table1 tr:nth-child(even) {
+                background-color:#f1f1f1;
+            }
+            .table1 th {
+                text-align:left;
+                padding:1rem;
+            }
+            .table1 td {
+                padding:1rem;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>
+            JavaScript HTML DOM Navigation 
+        </h1>
+
+        <div>
+            With the HTML DOM, you can navigate the node tree using node relationships. 
+        </div>
+
+        <hr>
+
+        <h2>
+            DOM Nodes 
+        </h2>
+
+        <div>
+            According to the W3C HTML DOM Standard, everything in a HTML document is a node:- 
+            <br>
+            <ul>
+                <li>The entire document is a document node</li>
+                <li>Every HTML element is an element node</li>
+                <li>The text inside HTML elements are text nodes</li>
+                <li>Every HTML attribute is an attribute node (deprecated)</li>
+                <li>All comments are comment nodes</li>
+            </ul>
+
+            <br>
+            <img src="Image12.gif" alt="HTML DOM Node Tree">
+            <br>
+            With the HTML DOM, all nodes in the node tree can be accessed by JavaScript. 
+            <br>
+            New nodes can be created, and all nodes can be modified or deleted. 
+        </div>
+
+        <hr>
+
+        <h2>
+            Node Relationships 
+        </h2>
+
+        <div>
+            The nodes in the node tree have a hierarchical relationship to each other. 
+            <br>
+            The terms parent, child, and sibling are used to describe the relationships. 
+            <br>
+            <ul>
+                <li>In a node tree, the top node is called the root (or root node)</li>
+                <li>Every node has exactly one parent, except the root (which has no parent)</li>
+                <li>A node can have a number of children</li>
+                <li>Siblings (brothers or sisters) are nodes with the same parent</li>
+            </ul>
+
+            <br>
+            <br>
+            <div class="parent">
+            
+            <p class="edit1">
+                &lt;html&gt; 
+                <br>
+                &lt;head&gt; 
+                <br>
+                &lt;title&gt;DOM Tutorial&lt;/title&gt; 
+                <br>
+                &lt;/head&gt; 
+                <br>
+                &lt;body&gt; 
+                <br>
+                &lt;h1&gt;DOM Lesson one&lt;/h1&gt; 
+                <br>
+                &lt;p&gt;Hello world!&lt;/p&gt; 
+                <br>
+                &lt;/body&gt; 
+                <br>
+                &lt;/html&gt; 
+            </p>
+            <img src="Image13.gif" alt="HTML DOM Node Relationships">
+            </div>
+
+            <br>
+            <br>
+
+            From the HTML above you can read:- 
+            <br>
+            <ul>
+                <li><span class="edit">&lt;html&gt;</span> is the root node</li>
+                <li><span class="edit">&lt;html&gt;</span> has no parents</li>
+                <li><span class="edit">&lt;html&gt;</span> is the parent of <span class="edit">&lt;head&gt;</span> and <span class="edit">&lt;body&gt;</span></li>
+                <li><span class="edit">&lt;head&gt;</span> is the first child of <span class="edit">&lt;html&gt;</span></li>
+                <li><span class="edit">&lt;body&gt;</span> is the last child of <span class="edit">&lt;html&gt;</span></li>
+            </ul>
+
+            <br>
+
+            and:- 
+            <br>
+            <ul>
+                <li><span class="edit">&lt;head&gt;</span> has one child: <span class="edit">&lt;title&gt;</span></li>
+                <li><span class="edit">&lt;title&gt;</span> has one child (a text node): "DOM Tutorial"</li>
+                <li><span class="edit">&lt;body&gt;</span> has two children: <span class="edit">&lt;h1&gt;</span> and <span class="edit">&lt;p&gt;</span></li>
+                <li><span class="edit">&lt;h1&gt;</span> has one child: "DOM Lesson one"</li>
+                <li><span class="edit">&lt;p&gt;</span> has one child: "Hello world!"</li>
+                <li><span class="edit">&lt;h1&gt;</span> and <span class="edit">&lt;p&gt;</span> are siblings</li>
+            </ul>
+        </div>
+
+        <hr>
+        <br>
+        <hr>
+
+        <h2>
+            Navigation Between Nodes 
+        </h2>
+
+        <div>
+            You can use the following node properties to navigate between nodes with JavaScript: 
+            <br>
+            <ul>
+                <li><span class="edit">parentNode</span></li>
+                <li><span class="edit">childNodes[<i>nodenumber</i>]</span></li>
+                <li><span class="edit">firstChild</span></li>
+                <li><span class="edit">lastChild</span></li>
+                <li><span class="edit">nextSibling</span></li>
+                <li><span class="edit">previousSibling</span></li>
+            </ul>
+        </div>
+
+        <hr>
+
+        <h2>
+            Child Nodes and Node Values 
+        </h2>
+
+        <div>
+            <p class="edit1">
+                A common error in DOM processing is to expect an element node to contain text. 
+            </p>
+            <br>
+            Example:- 
+            <br>
+            <p class="edit1">
+                &lt;title id="demo"&gt;DOM Tutorial&lt;/title&gt; 
+            </p>
+            <br>
+            The element node <span class="edit">&lt;title&gt;</span> (in the example above) does <strong>not</strong> contain text. 
+            <br>
+            It contains a <strong>text node</strong> with the value "DOM Tutorial". 
+            <br>
+            The value of the text node can be accessed by the node's <span class="edit">innerHTML</span> property. 
+            <br>
+            <p class="edit1">
+                myTitle = document.getElementById("demo").innerHTML;
+            </p>
+            <br>
+            Accessing the innerHTML property is the same as accessing the <span class="edit">nodeValue</span> of the first child. 
+            <br>
+            <p class="edit1">
+                myTitle = document.getElementById("demo").firstChild.nodeValue;
+            </p>
+            <br>
+            Accessing the first child can also be done like this:- 
+            <br>
+            <p class="edit1">
+                myTitle = document.getElementById("demo").childNodes[0].nodeValue;
+            </p>
+            <br>
+            All the (3) following examples retrieves the text of an <span class="edit">&lt;h1&gt;</span> element and copies it into a <span class="edit">&lt;p&gt;</span> element. 
+            <br>
+            Example 1:- 
+            <br>
+            <h1 id="demo1">My First Heading</h1>
+            <p id="demo2"></p>
+
+            <br>
+            <br>
+            Example 2:- 
+            <br>
+            <h1 id="demo3">My Second Heading</h1>
+            <p id="demo4"></p>
+
+            <br>
+            <br>
+            Example 3:- 
+            <br>
+            <h1 id="demo5">My Third Heading</h1>
+            <p id="demo6"></p>
+        </div>
+
+        <hr>
+
+        <h2>
+            InnerHTML 
+        </h2>
+
+        <div>
+            In this tutorial we use the innerHTML property to retrieve the content of a HTML element. 
+            <br>
+            However, learning the other methods above is useful for understanding the tree structure and the navigation of the DOM. 
+        </div>
+
+        <hr>
+
+        <h2>
+            DOM Root Nodes 
+        </h2>
+
+        <div>
+            There are two special properties that allow access to the full document. 
+            <br>
+            <ul>
+                <li><span class="edit">document.body</span> - The body of the document</li>
+                <li><span class="edit">document.documentElement</span> The full document</li>
+            </ul>
+            <br>
+            Example:- 
+            <br>
+            <a href="115. DOM Navigation-DOM Root Node Example 1.html" target="_blank">DOM Root Node Example 1</a>
+
+            <br>
+            <br>
+            Example:- 
+            <br>
+            <a href="115. DOM Navigation-DOM Root Node Example 2.html" target="_blank">DOM Root Node Example 2</a>
+        </div>
+
+        <hr>
+
+        <h2>
+            The nodeName Property 
+        </h2>
+
+        <div>
+            The <span class="edit">nodeName</span> property specifies the name of a node. 
+            <br>
+            <ul>
+                <li>nodeName is read-only</li>
+                <li>nodeName of an element node is the same as the tag name</li>
+                <li>nodeName of an attribute node is the attribute name</li>
+                <li>nodeName of a text node is always #text</li>
+                <li>nodeName of the document node is always #document</li>
+            </ul>
+            <br>
+            Example:- 
+            <br>
+            <h1 id="demo7">My nodeName Heading</h1>
+
+            <p id="demo8"></p>
+
+            <br>
+            
+            <p class="edit1">
+                <strong>Note: </strong> <span class="edit">nodeName</span> always contains the uppercase tag name of a HTML element. 
+            </p>
+        </div>
+
+        <hr>
+
+        <h2>
+            The nodeValue Property 
+        </h2>
+
+        <div>
+            The <span class="edit">nodeValue</span> property specifies the value of a node. 
+            <br>
+            <ul>
+                <li>nodeValue for element nodes is <span class="edit">null</span></li>
+                <li>nodeValue for text nodes is the text itself</li>
+                <li>nodeValue for attribute nodes is the attribute value</li>
+            </ul>
+        </div>
+
+        <hr>
+
+        <h2>
+            The nodeType Property 
+        </h2>
+
+        <div>
+            The <span class="edit">nodeType</span> property is read only. It returns the type of a node. 
+            <br>
+            Example:- 
+            <br>
+            <h1 id="demo9">My nodeType Heading</h1>
+            <p id="demo10"></p>
+
+            <br>
+            The most important nodeType properties are:- 
+            <br>
+            <br>
+            <table class="table1">
+                <tr>
+                    <th>Node</th>
+                    <th>Type</th>
+                    <th>Example</th>
+                </tr>
+                <tr>
+                    <td>ELEMENT_NODE</td>
+                    <td>1</td>
+                    <td>&lt;h1 class="heading"&gt;W3Schools&lt;/h1&gt;</td>
+                </tr>
+                <tr>
+                    <td>ATTRIBUTE_NODE</td>
+                    <td>2</td>
+                    <td>class = "heading" (deprecated)</td>
+                </tr>
+                <tr>
+                    <td>TEXT_NODE</td>
+                    <td>3</td>
+                    <td>W3Schools</td>
+                </tr>
+                <tr>
+                    <td>COMMENT_NODE</td>
+                    <td>8</td>
+                    <td>&lt;!-- This is a comment --&gt;</td>
+                </tr>
+                <tr>
+                    <td>DOCUMENT_NODE</td>
+                    <td>9</td>
+                    <td>The HTML document itself (the parent of &lt;html&gt;)</td>
+                </tr>
+                <tr>
+                    <td>DOCUMENT_TYPE_NODE</td>
+                    <td>10</td>
+                    <td>&lt;!DOCTYPE html&gt;</td>
+                </tr>
+            </table>
+
+            <p class="edit1">
+                Type 2 is deprecated in the HTML DOM (but works). It is not deprecated in the XML DOM. 
+            </p>
+        </div>
+
+        <script>
+         document.getElementById("demo2").innerHTML = document.getElementById("demo1").innerHTML;
+
+         document.getElementById("demo4").innerHTML = document.getElementById("demo3").firstChild.nodeValue;
+
+         document.getElementById("demo6").innerHTML = document.getElementById("demo5").childNodes[0].nodeValue;
+
+         document.getElementById("demo8").innerHTML = document.getElementById("demo7").nodeName;
+
+         document.getElementById("demo10").innerHTML = document.getElementById("demo9").nodeType;
+        </script>
+    </body>
+</html>

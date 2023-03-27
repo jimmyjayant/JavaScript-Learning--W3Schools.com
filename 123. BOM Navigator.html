@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en-in">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>
+            JavaScript Window Navigator 
+        </title>
+        <style>
+            html {
+                font-size:calc(10px + 0.390625vw);
+            }
+            body {
+                font-family:verdana, sans-serif;
+                font-size:1rem;
+                line-height:1.5;
+            }
+            .edit {
+                background-color:#f1f1f1;
+                color:red;
+            }
+            .edit1 {
+                background-color:rgba(255,255,0,0.3);
+                padding:2rem;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>
+            JavaScript Window Navigator 
+        </h1>
+
+        <div>
+            The <span class="edit">window.navigator</span> object contains information about the visitor's browser. 
+        </div>
+
+        <hr>
+
+        <h2>
+            Window Navigator 
+        </h2>
+
+        <div>
+            The <span class="edit">window.navigator</span> object can be written without the window prefix. 
+            <br>
+            Some examples:- 
+            <br>
+            <ul>
+                <li><span class="edit">navigator.cookieEnabled</span></li>
+                <li><span class="edit">navigator.appCodeName</span></li>
+                <li><span class="edit">navigator.platform</span></li>
+            </ul> 
+        </div>
+
+        <hr>
+
+        <h2>
+            Browser Cookies 
+        </h2>
+
+        <div>
+            The <span class="edit">cookieEnabled</span> property returns true if cookies are enabled, otherwise false. 
+            <br>
+            Example:- 
+            <br>
+            <p id="demo1"></p>
+        </div>
+
+        <hr>
+
+        <h2>
+            Browser Application Name 
+        </h2>
+
+        <div>
+            The <span class="edit">appName</span> property returns the application name of the browser. 
+            <br>
+            Example:- 
+            <br>
+            <p id="demo2"></p>
+            <br>
+            Strange enough, "Netscape" is the application name for IE11, Chrome, Firefox, and Safari. 
+
+            <br>
+
+            <div style="background-color:rgba(255,0,0,0.2);padding:2rem;">
+            <h2>
+                Warning 
+            </h2>
+
+            <p>
+                This property is removed (deprecated) in the latest web standard. 
+                <br>
+                Most browsers (IE11, Chrome, Firefox, Safari) returns <strong>Netscape</strong> as appName. 
+            </p>
+            </div>
+        </div>
+
+        <hr>
+        <br>
+        <hr>
+
+        <h2>
+            Browser Application Code Name 
+        </h2>
+
+        <div>
+            The <span class="edit">appCodeName</span> property returns the application code name of the browser. 
+            <br>
+            Example:- 
+            <br>
+            <p id="demo3"></p>
+            <br>
+            Do not rely on it! "Mozilla" is the application code name for Chrome, Firefox, IE, Safari, and Opera.
+            
+            <br>
+
+            <div style="background-color:rgba(255,0,0,0.2);padding:2rem;">
+                <h2>
+                    Warning 
+                </h2>
+    
+                <p>
+                    This property is removed (deprecated) in the latest web standard. 
+                    <br>
+                    Most browsers (IE11, Chrome, Firefox, Safari) returns <strong>Mozilla</strong> as appCodeName. 
+                </p>
+            </div>
+        </div>
+
+        <hr>
+
+        <h2>
+            The Browser Engine 
+        </h2>
+
+        <div>
+            The <span class="edit">product</span> property returns the product name of the browser engine. 
+            <br>
+            Example:- 
+            <br>
+            <p id="demo4"></p>
+
+            <br>
+            Do not rely on it! Most browsers returns "Gecko" as product name! 
+
+            <br>
+
+            <div style="background-color:rgba(255,0,0,0.2);padding:2rem;">
+                <h2>
+                    Warning 
+                </h2>
+    
+                <p>
+                    This property is removed (deprecated) in the latest web standard. 
+                    <br>
+                    Most browsers (IE11, Chrome, Firefox, Safari) returns <strong>Gecko</strong> as product.  
+                </p>
+            </div>
+        </div>
+
+        <hr>
+
+        <h2>
+            The Browser Version 
+        </h2>
+
+        <div>
+            The <span class="edit">appVersion</span> property returns version information about the browser. 
+            <br>
+            Example:- 
+            <br>
+            <p id="demo5"></p>
+        </div>
+
+        <hr>
+
+        <h2>
+            The Browser Agent 
+        </h2>
+
+        <div>
+            The <span class="edit">userAgent</span> property returns the user-agent header sent by the browser to the server. 
+            <br>
+            Example:- 
+            <br>
+            <p id="demo6"></p>
+
+            <br>
+
+            <div style="background-color:rgba(255,0,0,0.2);padding:2rem;">
+            <h2>
+                Warning 
+            </h2>
+
+            <p>
+                The information from the navigator object can often be misleading. 
+                <br>
+                The navigator object should <strong>not be used to detect browser versions</strong> because:- 
+                <br>
+                <ul>
+                    <li>Different browsers can use the same name</li>
+                    <li>The navigator data can be changed by the browser owner</li>
+                    <li>Some browsers misidentify themselves to bypass site tests</li>
+                    <li>Browsers cannot report new operating systems, released later than the browser</li>
+                </ul>
+            </p>
+            </div>
+        </div>
+
+        <hr>
+
+        <h2>
+            The Browser Platform 
+        </h2>
+
+        <div>
+            The <span class="edit">platform</span> property returns the browser platform (operating system). 
+            <br>
+            Example:- 
+            <br>
+            <p id="demo7"></p> 
+        </div>
+
+        <hr>
+
+        <h2>
+            The Browser Language 
+        </h2>
+
+        <div>
+            The <span class="edit">language</span> property returns the browser's language. 
+            <br>
+            Example:- 
+            <br>
+            <p id="demo8"></p>
+        </div>
+
+        <hr>
+
+        <h2>
+            Is the Browser Online? 
+        </h2>
+
+        <div>
+            The <span class="edit">onLine</span> property returns true if the browser is online. 
+            <br>
+            Example:- 
+            <br>
+            <p id="demo9"></p>
+        </div>
+
+        <hr>
+
+        <h2>
+            Is Java Enabled? 
+        </h2>
+
+        <div>
+            The <span class="edit">javaEnabled()</span> method returns true if Java is enabled. 
+            <br>
+            Example:- 
+            <br>
+            <p id="demo10"></p>
+        </div>
+
+        <script>
+            document.getElementById("demo1").innerHTML = 
+            "navigator.cookieEnabled is " + navigator.cookieEnabled;
+
+            document.getElementById("demo2").innerHTML = 
+            "navigator.appName is " + navigator.appName;
+
+            document.getElementById("demo3").innerHTML = 
+            "navigator.appCodeName is " + navigator.appCodeName;
+
+            document.getElementById("demo4").innerHTML = 
+            "navigator.product is " + navigator.product;
+
+            document.getElementById("demo5").innerHTML = 
+            navigator.appVersion;
+
+            document.getElementById("demo6").innerHTML = 
+            navigator.userAgent;
+
+            document.getElementById("demo7").innerHTML = 
+            "navigator.platform is " + navigator.platform;
+
+            document.getElementById("demo8").innerHTML = 
+            "navigator.language is " + navigator.language;
+
+            document.getElementById("demo9").innerHTML = 
+            "navigator.onLine is " + navigator.onLine;
+
+            document.getElementById("demo10").innerHTML = 
+            "javaEnabled is " + navigator.javaEnabled();
+        </script>
+    </body>
+</html>

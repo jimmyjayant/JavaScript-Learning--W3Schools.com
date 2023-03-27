@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            ECMAScript 2016 
+        </title>
+        <style>
+            .edit {
+                background-color:#f1f1f1;
+                color:red;
+            }
+            .edit1 {
+                background-color:rgba(255,255,0,0.3);
+                padding:20px;
+            }
+            body {
+                font-family:verdana, sans-serif;
+                font-size:20px;
+                line-height:1.5;
+            }
+            .table1 {
+                width:100%;
+                border:1px solid #ddd;
+                border-collapse:collapse;
+            }
+            .table1 tr {
+                height:40px;
+            }
+            .table1 tr:nth-child(even) {
+                background-color:#f1f1f1;
+            }
+            .table1 td {
+                border:1px solid #ddd;
+                text-align:center;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>
+            ECMAScript 2016 
+        </h1>
+
+        <div style="background-color:rgba(0,255,0,0.1);padding:20px;">
+         Original JavaScript version numbers were ES5 (2009) and ES6 (2015). 
+         <br>
+         Since 2016, versions are named by year:- ECMAScript 2016, 2017, 2018, 2019.  
+        </div>
+
+        <hr>
+
+        <h2>
+            New Features in ECMAScript 2016 
+        </h2>
+
+        <div>
+            This chapter introduces the new features in ECMAScript 2016:- 
+            <br>
+            <ul>
+                <li>JavaScript Exponentiation (**)</li>
+                <li>JavaScript Exponentiation assignment (**=)</li>
+                <li>JavaScript Array includes()</li>
+            </ul>
+        </div>
+
+        <hr>
+
+        <h2>
+            Exponentiation Operator 
+        </h2>
+
+        <div>
+            The <strong>exponentiation</strong> operator (<span class="edit">**</span>) raises the first operand to the power of the second operand. 
+            <br>
+            Example:- 
+            <br>
+            <p id="demo1"></p>
+
+            <br>
+            <br>
+            <span class="edit">x ** y</span> produces the same result as <span class="edit">Math.pow(x,y)</span>. 
+            <br>
+            Example:- 
+            <br>
+            <p id="demo2"></p>
+        </div>
+
+
+        <hr>
+
+        <h2>
+            Exponentiation Assignment 
+        </h2>
+
+        <div>
+            The <strong>exponentiation assignment </strong> operator (<span class="edit">**=</span>) raises the value of a variable to the power of the right operand. 
+            <br>
+            Example:- 
+            <br>
+            <p id="demo3"></p>
+
+            <br>
+            <br>
+            The Exponentiation Operator is supported in all modern browsers since March 2017. 
+            <br>
+            <br>
+            <table class="table1">
+                <tr>
+                    <td><img src="Image4.svg.png" height="38" width="38" alt="Google Chrome"></td>
+                    <td><img src="Image5.png" height="38" width="38" alt="Microsoft Edge"></td>
+                    <td><img src="Image6.png" height="38" width="38" alt="Mozilla Firefox"></td>
+                    <td><img src="Image7.png" height="38" width="38" alt="Apple Safari"></td>
+                    <td><img src="Image8.png" height="38" width="38" alt="Opera"></td>
+                </tr>
+                <tr>
+                    <td>Chrome 52</td>
+                    <td>Edge 14</td>
+                    <td>Firefox 52</td>
+                    <td>Safari 10.1</td>
+                    <td>Opera 39</td>
+                </tr>
+                <tr>
+                    <td>Jul 2016</td>
+                    <td>Aug 2016</td>
+                    <td>Mar 2017</td>
+                    <td>Mar 2017</td>
+                    <td>Aug 2016</td>
+                </tr>
+            </table>
+        </div>
+
+        <hr>
+        <br>
+        <br>
+        <hr>
+
+        <h2>
+            JavaScript Array includes() 
+        </h2>
+
+        <div>
+            ECMAScript 2016 introduced <span class="edit">Array.includes</span> to arrays. 
+            <br>
+            This allows us to check if an element is present in an array. 
+            <br>
+            Example:- 
+            <br>
+            <p id="demo4"></p>
+
+            <br>
+            <br>
+            <span class="edit">Array.includes</span> is supported in all modern browsers since August 2016. 
+            <br>
+            <br>
+            <table class="table1">
+                <tr>
+                    <td><img src="Image4.svg.png" height="38" width="38" alt="Google Chrome"></td>
+                    <td><img src="Image5.png" height="38" width="38" alt="Microsoft Edge"></td>
+                    <td><img src="Image6.png" height="38" width="38" alt="Mozilla Firefox"></td>
+                    <td><img src="Image7.png" height="38" width="38" alt="Apple Safari"></td>
+                    <td><img src="Image8.png" height="38" width="38" alt="Opera"></td>
+                </tr>
+                <tr>
+                    <td>Chrome 47</td>
+                    <td>Edge 14</td>
+                    <td>Firefox 43</td>
+                    <td>Safari 9</td>
+                    <td>Opera 34</td>
+                </tr>
+                <tr>
+                    <td>Dec 2015</td>
+                    <td>Aug 2016</td>
+                    <td>Dec 2015</td>
+                    <td>Oct 2015</td>
+                    <td>Dec 2015</td>
+                </tr>
+            </table>
+        </div>
+
+        <script>
+            let a  = 5;
+            let b = a ** 2;
+            document.getElementById("demo1").innerHTML = b;
+
+            let c = Math.pow(a,2);
+            document.getElementById("demo2").innerHTML = c;
+
+            let d = 5;
+            d **= 2;
+            document.getElementById("demo3").innerHTML = d;
+
+            const fruits1 = ["Banana", "Apple", "Orange", "Mango"];
+            document.getElementById("demo4").innerHTML = 
+            "Is Apple present in the fruits array? = " + fruits1.includes("Apple");
+        </script>
+    </body>
+</html>

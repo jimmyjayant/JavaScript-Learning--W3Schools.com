@@ -1,0 +1,1026 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            JavaScript ES5 
+        </title>
+        <style>
+            .edit {
+                background-color: #f1f1f1;
+                color:red;
+            }
+            .edit1 {
+                background-color:rgba(255,255,0,0.3);
+                padding:20px;
+            }
+            body {
+                font-family:verdana, sans-serif;
+                font-size:20px;
+                line-height:1.5;
+            }
+            .table1 {
+                width: 100%;
+                border-collapse:collapse;
+                border:1px solid #ddd;
+            }
+            .table1 tr {
+                height:40px;
+            }
+            .table1 tr:nth-child(even) {
+                background-color:#f1f1f1;
+            }
+            .table1 td {
+                text-align:center;
+                padding:10px;
+                border:1px solid #ddd;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>
+            JavaScript ES5 
+        </h1>
+
+        <div style="background-color:rgba(0,255,0,0.2);padding:20px;">
+        ECMAScript 2009, also known as ES5, was the first major revision to JavaScript. 
+        <br>
+        This chapter describes the most important features of ES5. 
+        </div>
+
+        <hr>
+
+        <h2>
+            ES5 Features 
+        </h2>
+
+        <div>
+            <ul>
+                <li>"use strict"</li>
+                <li>String[number] access</li>
+                <li>Multiline strings</li>
+                <li>String.trim()</li>
+                <li>Array.isArray()</li>
+                <li>Array forEach()</li>
+                <li>Array map()</li>
+                <li>Array filter()</li>
+                <li>Array reduce()</li>
+                <li>Array reduceRight()</li>
+                <li>Array every()</li>
+                <li>Array some()</li>
+                <li>Array indexOf()</li>
+                <li>Array lastIndexOf()</li>
+                <li>JSON.parse()</li>
+                <li>JSON.stringify()</li>
+                <li>Date.now()</li>
+                <li>Date toISOString()</li>
+                <li>Date toJSON()</li>
+                <li>Property getters and setters</li>
+                <li>Reserved words as property names</li>
+                <li>Object methods</li>
+                <li>Object defineProperty()</li>
+                <li>Function bind()</li>
+                <li>Trailing commas</li>
+            </ul>
+        </div>
+
+        <hr>
+
+        <h2>
+            Browser Support 
+        </h2>
+
+        <div>
+            <span class="edit">ES5</span> is fully supported in all modern browsers:- 
+            <br>
+            <br>
+            <table class="table1">
+                <tr>
+                    <td><img src="Image4.svg.png" height="38" width="38" alt="Google Chrome"></td>
+                    <td><img src="Image10.png" height="38" width="38" alt="Internet Explorer"></td>
+                    <td><img src="Image5.png" height="38" width="38" alt="Microsoft Edge"></td>
+                    <td><img src="Image6.png" height="38" width="38" alt="Mozilla Firefox"></td>
+                    <td><img src="Image7.png" height="38" width="38" alt="Apple Safari"></td>
+                    <td><img src="Image8.png" height="38" width="38" alt="Opera"></td>
+                </tr>
+                <tr>
+                    <td>Chrome</td>
+                    <td>IE</td>
+                    <td>Edge</td>
+                    <td>Firefox</td>
+                    <td>Safari</td>
+                    <td>Opera</td>
+                </tr>
+                <tr>
+                    <td>Yes</td>
+                    <td>9.0</td>
+                    <td>Yes</td>
+                    <td>Yes</td>
+                    <td>Yes</td>
+                    <td>Yes</td>
+                </tr>
+            </table>
+        </div>
+
+        <hr>
+
+        <h2>
+            The "use strict" Directive 
+        </h2>
+
+        <div>
+            <span class="edit">"use strict"</span> defines that the JavaScript code should be executed in "strict mode". 
+            <br>
+            With strict mode you can, for example, not use undeclared variables. 
+            <br>
+            <p class="edit1">
+                You can use strict mode in all your programs. It helps you to write cleaner code, like preventing you from using undeclared variables. 
+                <br>
+                <span class="edit">"use strict"</span> is just a string expression. Old browsers will not throw an error if they don't understand it. 
+            </p>
+        </div>
+
+        <hr>
+
+        <h2>
+            Property Access on Strings 
+        </h2>
+
+        <div>
+            The <span class="edit">charAt()</span> method returns the character at a specified index (position) in a string. 
+            <br>
+            Example:- 
+            <br>
+            <p id="demo1"></p>
+
+            <br>
+            <br>
+
+            ES5 allows property access on strings:- 
+            <br>
+            Example:- 
+            <br>
+            <p id="demo2"></p>
+
+            <br>
+
+            <p class="edit1">
+                Property access on string might be a little unpredictable. 
+            </p>
+        </div>
+
+        <hr>
+
+        <h2>
+            Strings Over Multiple Lines 
+        </h2>
+
+        <div>
+            ES5 allows string literals over mulitple lines if escaped with a backslash:- 
+            <br>
+            Example:- 
+            <br>
+            <p id="demo3"></p>
+
+            <br>
+
+            <p class="edit1">
+                The \ method might not have universal support. 
+                <br>
+                Older browsers might treat the spaces around the backslash differently. 
+                <br>
+                Some older browsers do not allow spaces behind the \ character. 
+            </p>
+
+            <br>
+
+            A safer way to break up a string literal, is to use string addition:- 
+            <br>
+            Example:- 
+            <br>
+            <p id="demo4"></p>
+        </div>
+
+        <hr>
+
+        <h2>
+            Reserved Words as Property Names 
+        </h2>
+        
+        <div>
+            ES5 allows reserved words as property names. 
+            <br>
+            Example:- 
+            <br>
+            <p id="demo5"></p>
+        </div>
+
+        <hr>
+
+        <h2>
+            String trim() 
+        </h2>
+
+        <div>
+            The <span class="edit">trim()</span> method removes whitespace from both sides of a string. 
+            <br>
+            Example:- 
+            <br>
+            <p id="demo6"></p>
+        </div>
+
+        <hr>
+        <br>
+        <hr>
+
+        <h2>
+            Array.isArray() 
+        </h2>
+
+        <div>
+            The <span class="edit">isArray()</span> method checks whether an object is an array. 
+            <br>
+            Example:- 
+            <br>
+            Click on the button below to check if "fruits" is an array. 
+            <br>
+            <button type="button" onclick="myFunction1()">Try it</button>
+            <br>
+            <p id="demo7"></p>
+        </div>
+
+        <hr>
+
+        <h2>
+            Array forEach() 
+        </h2>
+
+        <div>
+            The <span class="edit">forEach()</span> method calls a function once for each array element. 
+            <br>
+            Example:- 
+            <br>
+            <p id="demo8"></p>
+        </div>
+
+        <hr>
+
+        <h2>
+            Array map() 
+        </h2>
+
+        <div>
+            This example multiplies each array value by 2. 
+            <br>
+            Example:- 
+            <br>
+            <p id="demo9"></p>
+        </div>
+
+        <hr>
+
+        <h2>
+            Array filter() 
+        </h2>
+
+        <div>
+            This example creates a new array from elements with a value larger than 18. 
+            <br>
+            Example:- 
+            <br>
+            <p id="demo10"></p>
+        </div>
+
+        <hr>
+
+        <h2>
+            Array reduce() 
+        </h2>
+
+        <div>
+            This example finds the sum of all numbers in an array. 
+            <br>
+            Example:- 
+            <br>
+            <p id="demo11"></p>
+        </div>
+
+        <hr>
+
+        <h2>
+            Array reduceRight() 
+        </h2>
+
+        <div>
+            This example also finds the sum of all numbers in an array. 
+            <br>
+            Example:- 
+            <br>
+            <p id="demo12"></p>
+        </div>
+
+        <hr>
+
+        <h2>
+            Array every() 
+        </h2>
+
+        <div>
+            This example checks if all values are over 18. 
+            <br>
+            Example:- 
+            <br>
+            <p id="demo13"></p>
+        </div>
+
+        <hr>
+
+        <h2>
+            Array some() 
+        </h2>
+
+        <div>
+            This example checks if some values are over 18. 
+            <br>
+            Example:- 
+            <br>
+            <p id="demo14"></p>
+        </div>
+
+        <hr>
+
+        <h2>
+            Array indexOf() 
+        </h2>
+
+        <div>
+            Search an array for an element value and returns its position. 
+            <br>
+            Example:- 
+            <br>
+            <p id="demo15"></p>
+        </div>
+
+        <hr>
+
+        <h2>
+            Array lastIndexOf() 
+        </h2>
+
+        <div>
+            <span class="edit">lastIndexOf()</span> is the same as <span class="edit">indexOf()</span>, but searches from the end of the array. 
+            <br>
+            Example:- 
+            <br>
+            <p id="demo16"></p>
+        </div>
+
+        <hr>
+
+        <h2>
+            JSON.parse() 
+        </h2>
+
+        <div>
+            A common use of JSON is to receive data from a web server. 
+            <br>
+            Imagine you received this text string from a web server. 
+            <br>
+            <p class="edit1">
+                '{"name":"John", "age":30, "city":"New York"}' 
+            </p>
+
+            <br>
+
+            The JavaScript function <span class="edit">JSON.parse()</span> is used to convert the text into a JavaScript object. 
+            <br>
+            Example:- 
+            <br>
+            <p id="demo17"></p>
+        </div>
+
+        <hr>
+
+        <h2>
+            JSON.stringify() 
+        </h2>
+
+        <div>
+            A common use of JSON is to send data to a web server. 
+            <br>
+            When sending data to a web server, the data has to be a string. 
+            <br>
+            Imagine we have this object in JavaScript. 
+            <br>
+            <p class="edit1">
+                var obj = {name:"John", age:30, city:"New York"};
+            </p>
+
+            <br>
+            Use the JavaScript function <span class="edit">JSON.stringify()</span> to convert it into a string. 
+            <br>
+            <p class="edit1">
+                var myJSON = JSON.stringify(obj); 
+            </p>
+
+            <br>
+            Example:- 
+            <br>
+            <p id="demo18"></p>
+
+            <br>
+
+            <p class="edit1">
+                The result will be a string following the JSON notation. 
+            </p>
+
+            <br>
+
+            myJSON is now a string, and ready to be sent to a server. 
+        </div>
+
+        <hr>
+
+        <h2>
+            Date.now() 
+        </h2>
+
+        <div>
+            <span class="edit">Date.now()</span> returns the number of milliseconds since zero date (January 1, 1970 00:00:00 UTC). 
+            <br>
+            Example:- 
+            <br>
+            <p id="demo19"></p> 
+
+            <br>
+
+            <span class="edit">Date.now()</span> returns the same as getTime() performed on a <span class="edit">Date</span> object. 
+        </div>
+
+        <hr>
+
+        <h2>
+            Date toISOString() 
+        </h2>
+
+        <div>
+            The <span class="edit">toISOString()</span> method converts a Date object to a string, using the ISO standard format. 
+            <br>
+            Example:- 
+            <br>
+            <p id="demo20"></p>
+        </div>
+
+        <hr>
+
+        <h2>
+            Date toJSON() 
+        </h2>
+
+        <div>
+            <span class="edit">toJSON()</span> converts a Date object into a string, formatted as a JSON date. 
+            <br>
+            JSON dates have the same format as the ISO-8601 standard: YYYY-MM-DDTHH:mm:ss.sssZ. 
+            <br>
+            Example:- 
+            <br>
+            <p id="demo21"></p>
+        </div>
+
+        <hr>
+
+        <h2>
+            Property Getters and Setters 
+        </h2>
+
+        <div>
+            ES5 lets you define object methods with a syntax that looks like getting or setting a property. 
+            <br>
+            This example creates a <strong>getter</strong> for a property called fullName. 
+            <br>
+            Example:- 
+            <br>
+            <p id="demo22"></p>
+
+            <br>
+            <br>
+            This example creates a <strong>setter</strong> and a <strong>getter</strong> for the language property. 
+            <br>
+            Example:- 
+            <br>
+            <p id="demo23"></p>
+
+            <br>
+            <br>
+
+            This example uses a setter to secure upper case updates of language:- 
+            <br>
+            Example:- 
+            <br>
+            <p id="demo24"></p>
+        </div>
+
+        <hr>
+
+        <h2>
+            Object.defineProperty() 
+        </h2>
+
+        <div>
+            <span class="edit">Object.defineProperty()</span> is a new Object method in ES5. 
+            <br>
+            It lets you define an object property and/or change a property's value and/or metadata. 
+            <br>
+            Example:- 
+            <br>
+            <p id="demo25"></p>
+
+            <br>
+            <br>
+            Next example is the same code, except it hides the language property from enumeration. 
+            <br>
+            Example:- 
+            <br>
+            <p id="demo26"></p>
+
+            <br>
+            <br>
+            This example creates a setter and a getter to secure upper case updates of language. 
+            <br>
+            Example:- 
+            <br>
+            <p id="demo27"></p>
+        </div>
+
+        <hr>
+
+        <h2>
+            E5 Object Methods 
+        </h2>
+
+        <div>
+            ES5 added a lot of new Object Methods to JavaScript. 
+            <br>
+            <br>
+            <p class="edit1">
+                <b>Managing Objects</b>
+                <br>
+
+                //Create object with an existing object as prototype 
+                <br>
+                Object.create(parent, donor) 
+
+                <br>
+                <br>
+
+                //Adding or changing an object property 
+                <br>
+                Object.defineProperty(object, property, descriptor) 
+                
+                <br>
+                <br>
+
+                //Adding or changing object properties 
+                <br>
+                Object.defineProperties(object, descriptors)
+
+                <br>
+                <br>
+
+                //Accessing Properties 
+                <br>
+                Object.getOwnPropertyDescriptor(object, property) 
+                
+
+                <br>
+                <br>
+
+                //Returns all properties as an array 
+                <br>
+                Object.getOwnPropertyNames(object) 
+
+                <br>
+                <br>
+
+                //Accessing the prototype 
+                <br>
+                Object.getPrototypeOf(object) 
+
+                <br>
+                <br>
+
+                //Returns enumerable properties as an array 
+                <br>
+                Object.keys(object) 
+            </p>
+
+            <br>
+            <br>
+
+            <p class="edit1">
+                <b>Protecting Objects</b>
+                <br>
+
+                //Prevents adding properties to an object 
+                <br>
+                Object.preventExtensions(object) 
+
+                <br>
+                <br>
+
+                //Returns true if properties can be added to an object 
+                <br>
+                Object.isExtensible(object) 
+
+                <br>
+                <br>
+
+                //Prevents changes of object properties (not values) 
+                <br>
+                Object.seal(object) 
+
+                <br>
+                <br>
+
+                //Returns true if object is sealed 
+                <br>
+                Object.isSealed(object) 
+
+                <br>
+                <br>
+
+                //Prevents any changes to an object 
+                <br>
+                Object.freeze(object) 
+
+                <br>
+                <br>
+
+                //Returns true if object is frozen 
+                <br>
+                Object.isFrozen(object) 
+            </p>
+        </div>
+
+        <hr>
+
+        <h2>
+            Function Bind() 
+        </h2>
+
+        <div>
+            With the <span class="edit">bind()</span> method, an object can borrow a method from another object. 
+            <br>
+            This example creates 2 objects (person and member). 
+            <br>
+            The member object borrows the fullname method from the person object. 
+            <br>
+            Example:- 
+            <br>
+            <p id="demo28"></p> 
+        </div>
+
+        <hr>
+
+        <h2>
+            Trailing Commas 
+        </h2>
+
+        <div>
+            ES5 allows trailing commas in object and array definitions. 
+            <br>
+            Example:- 
+            <br>
+            <p class="edit1">
+                <b>Object Example:- </b>
+                <br>
+                person = {
+                    <br>
+                    firstName: "John", 
+                    <br>
+                    lastName: "Doe",
+                    <br>
+                    age: 46, 
+                    <br>
+                }
+            </p>
+
+            <br>
+            <br>
+
+            <p class="edit1">
+                <b>Array Example:- </b>
+                <br>
+                points = [ 
+                <br>
+                1, 
+                <br>
+                5, 
+                <br>
+                10, 
+                <br>
+                25, 
+                <br>
+                40, 
+                <br>
+                100, 
+                <br>
+                ]; 
+            </p>
+
+            <br>
+            <br>
+
+            <p style="background-color:rgba(255,0,0,0.3);padding:20px;">
+            WARNING!! 
+            <br>
+            JSON does not allow trailing commas. 
+            </p>
+
+            <br>
+            <br>
+
+            <p class="edit1">
+                <b>JSON Objects:- </b>
+
+                <br>
+
+                //Allowed:- 
+                <br>
+                var person = '{"firstName":"John", "lastName":"Doe", "age":46}' 
+                <br>
+                JSON.parse(person) 
+
+                <br>
+                <br>
+
+                //Not allowed:- 
+                <br>
+                var person = '{"firstName":"John", "lastName":"Doe", "age":46,}'
+                <br>
+                JSON.parse(person) 
+
+                <br>
+                <br>
+
+                <b>JSON Arrays:- </b>
+
+                <br>
+
+                //Allowed:- 
+                <br>
+                points = [40, 100, 1, 5, 25, 10] 
+
+                <br>
+                <br>
+
+                //Not Allowed:- 
+                <br>
+                points = [40, 100, 1, 5, 25, 10] 
+            </p>
+        </div>
+
+
+
+
+
+
+
+
+
+
+
+
+        <script>
+            var str1 = "HELLO WORLD";
+            document.getElementById("demo1").innerHTML = 
+            "The character at position 0 in string 'HELLO WORLD' is:- " + str1.charAt(0);
+
+            document.getElementById("demo2").innerHTML = 
+            "The character at position 0 in string 'HELLO WORLD' is:- " + str1[0];
+
+            document.getElementById("demo3").innerHTML = "Hello \
+            Dolly!";
+
+            document.getElementById("demo4").innerHTML = "Hello " + "Dolly!";
+
+            var obj1 = {name: "John", new: "yes"};
+            document.getElementById("demo5").innerHTML = obj1.new;
+
+            let text1 = "          Hello World!                ";
+            let text2 = text1.trim();
+
+            document.getElementById("demo6").innerHTML = 
+            "Length text1 = " + text1.length + "<br>Length text2 = " + text2.length;
+
+            function myFunction1() {
+                var fruits = ["Banana", "Orange", "Apple", "Mango"];
+                var x = document.getElementById("demo7");
+                x.innerHTML = Array.isArray(fruits);
+            }
+
+            var txt1 = "";
+            var numbers1 = [45, 4, 9, 16, 25];
+            numbers1.forEach(myFunction2);
+            document.getElementById("demo8").innerHTML = txt1;
+
+            function myFunction2(value, index, array) {
+                txt1 = txt1 + value + "<br>";
+            }
+
+            var numbers2 = numbers1.map(myFunction3);
+
+            document.getElementById("demo9").innerHTML = numbers2;
+
+            function myFunction3(value, index, array) {
+                return value * 2;
+            }
+
+            var numbers3 = numbers1.filter(myFunction4);
+
+            document.getElementById("demo10").innerHTML = numbers3;
+
+            function myFunction4(value, index, array) {
+                return value > 18;
+            }
+
+            var numbers4 = numbers1.reduce(myFunction5);
+            document.getElementById("demo11").innerHTML = "The sum is:- " + numbers4;
+
+            function myFunction5(total, value, index, array) {
+                return total + value;
+            }
+
+            var numbers5 = numbers1.reduceRight(myFunction6);
+            document.getElementById("demo12").innerHTML = "The sum is:- " + numbers5;
+
+            function myFunction6(total, value, index, array) {
+                return total + value;
+            }
+
+            var numbers6 = numbers1.every(myFunction7);
+            document.getElementById("demo13").innerHTML = "All over 18 is:- " + numbers6;
+
+            function myFunction7(value, index, array) {
+                return value > 18;
+            }
+
+            var numbers7 = numbers1.some(myFunction8);
+            document.getElementById("demo14").innerHTML = "Some over 18 is:- " + numbers7;
+
+            function myFunction8(value, index, array) {
+                return value > 18;
+            }
+
+            const fruits1 = ["Apple", "Orange", "Apple", "Mango"];
+            let position1 = fruits1.indexOf("Apple") + 1;
+            document.getElementById("demo15").innerHTML = 
+            "Apple is found in position " + position1;
+
+            let position2 = fruits1.lastIndexOf("Apple") + 1;
+            document.getElementById("demo16").innerHTML = 
+            "Apple is found in position " + position2;
+
+            const txt2 = '{"name":"John", "age":30, "city":"New York"}';
+            const obj2 = JSON.parse(txt2);
+            document.getElementById("demo17").innerHTML = obj2.name + ", " + obj2.age;
+
+            const obj3 = {name:"John", age:30, city:"New York"};
+            var myJSON = JSON.stringify(obj3);
+            document.getElementById("demo18").innerHTML = myJSON;
+
+            var timINMSs = Date.now();
+            document.getElementById("demo19").innerHTML = timINMSs;
+
+            document.getElementById("demo20").innerHTML = new Date().toISOString();
+
+            document.getElementById("demo21").innerHTML = new Date().toJSON();
+            
+            //Create an object:- 
+            var person1 = {
+                firstName: "John",
+                lastName: "Doe",
+                get fullName() {
+                    return this.firstName + " " + this.lastName;
+                }
+            };
+
+            //Display data from the object using a getter:- 
+            document.getElementById("demo22").innerHTML = person1.fullName;
+
+            //Create object:- 
+            var person2 = {
+                firstName: "John",
+                lastName: "Doe",
+                language: "NO",
+                get lang() {
+                    return this.language;
+                },
+                set lang(value) {
+                    this.language = value;
+                }
+            };
+
+            //Set an object property using a setter:- 
+            person2.lang = "en";
+
+            //Display data from the object using a getter:- 
+            document.getElementById("demo23").innerHTML = person2.lang;
+
+            //Create an object:- 
+            var person3 = {
+                firstName: "John", 
+                lastName: "Doe",
+                language: "",
+                set lang(value) {
+                    this.language = value.toUpperCase();
+                }
+            };
+
+            //Set an object property using a setter:- 
+            person3.lang = "en";
+
+            //Display data from the object:- 
+            document.getElementById("demo24").innerHTML = person3.language;
+
+            //Create an object:- 
+            var person4 = {
+                firstName: "John",
+                lastName: "Doe",
+                language: "NO",
+            };
+
+            //Change a Property:- 
+            Object.defineProperty(person4, "language", {
+                value: "EN",
+                writable: true,
+                enumerable: true,
+                configurable: true 
+            });
+
+            //Enumerate Properties:- 
+            let txt3 = "";
+            for(var x in person4) {
+                txt3 += person4[x] + "<br>";
+            }
+
+            document.getElementById("demo25").innerHTML = txt3;
+
+            //Create an object:- 
+            var person5 = {
+                firstName: "John",
+                lastName: "Doe",
+                language: "NO",
+            };
+
+            //Change a Property:- 
+            Object.defineProperty(person5, "language", {
+                value: "EN",
+                writable: true,
+                enumerable: false,
+                configurable: true 
+            });
+
+            //Enumerate Properties:- 
+            let txt4 = "";
+            for(var x in person5) {
+                txt4 += person5[x] + "<br>";
+            }
+            document.getElementById("demo26").innerHTML = txt4;
+
+            //Create an object:- 
+            var person6 = {
+                firstName: "John",
+                lastName: "Doe",
+                language: "NO"
+            };
+
+            //Change a Property:- 
+            Object.defineProperty(person6, "language", {
+                get : function() { return language},
+                set : function(value) { language = value.toUpperCase()}
+            });
+
+            //Change language:- 
+            person6.language = "en";
+
+            //Display language:- 
+            document.getElementById("demo27").innerHTML = person6.language;
+
+            const person7 = {
+                firstName: "John",
+                lastName: "Doe",
+                fullName: function() {
+                    return this.firstName + " " + this.lastName;
+                }
+            };
+
+            const member = {
+                firstName: "Hege",
+                lastName: "Nilsen",
+            };
+
+            let fullName = person7.fullName.bind(member); 
+            document.getElementById("demo28").innerHTML = fullName();
+        </script>
+    </body>
+</html>

@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en-in">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>
+            JavaScript DOM Nodes 
+        </title>
+        <style>
+            html {
+                font-size:62.5%;
+            }
+            body {
+                font-family:verdana, sans-serif;
+                font-size:2rem;
+                line-height:1.5;
+            }
+            .edit {
+                background-color:#f1f1f1;
+                color:red;
+            }
+            .edit1 {
+                background-color:rgba(255,255,0,0.3);
+                padding:2rem;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>
+            JavaScript HTML DOM Elements (Nodes)  
+        </h1>
+
+        <div>
+            Adding and Removing Nodes (HTML Elements) 
+        </div>
+
+        <hr>
+
+        <h2>
+            Creating New HTML Elements (Nodes)  
+        </h2>
+
+        <div>
+            To add a new element to the HTML DOM, you must create the element (element node) first, and then append it to an existing element. 
+            <br>
+            Example:- 
+            <br>
+            <div id="demo1">
+                <p id="demo2">This is a paragraph.</p>
+                <p id="demo3">This is another paragraph.</p>
+            </div>
+        </div>
+
+        <hr>
+
+        <h2>
+            Example Explained 
+        </h2>
+
+        <div>
+            This code creates a new <span class="edit">&lt;p&gt;</span> element. 
+            <br>
+            <p class="edit1">
+                const para1 = document.createElement("p");
+            </p>
+
+            <br>
+            
+            To add text to the <span class="edit">&lt;p&gt;</span> element, you must create a text node first. This code creates a text node. 
+            <br>
+            <p class="edit1">
+                const node1 = document.createTextNode("This is a new paragraph.");
+            </p>
+
+            <br>
+            Then you must append the text node to the <span class="edit">&lt;p&gt;</span> element. 
+            <br>
+            <p class="edit1">
+                para1.appendChild(node1);
+            </p>
+
+            <br>
+            Finally you must append the new element to an existing element. 
+            <br>
+            This code finds an existing element. 
+            <br>
+            <p class="edit1">
+                const element1 = document.getElementById("demo1");
+            </p>
+
+            <br>
+            This code appends the new element to the existing element. 
+            <br>
+            <p class="edit1">
+                element1.appendChild(para1);
+            </p>
+        </div>
+
+        <hr>
+        <br>
+        <hr>
+
+        <h2>
+            Creating new HTML Elements - insertBefore() 
+        </h2>
+
+        <div>
+             The <span class="edit">appendChild()</span> method in the previous example, appended the new element as the last child of the parent. 
+             <br>
+             If you don't want that you can use the <span class="edit">insertBefore()</span> method. 
+             <br>
+             Example:- 
+             <br>
+             <div id="demo4">
+                <p id="demo5">This is a paragraph.</p>
+                <p id="demo6">This is another paragraph.</p>
+             </div>
+        </div>
+
+        <hr>
+
+        <h2>
+            Removing Existing HTML Elements 
+        </h2>
+
+        <div>
+            To remove a HTML element, use the <span class="edit">remove()</span> method. 
+            <br>
+            Example:- 
+            <br>
+            <p id="demo7">This is a paragraph.</p>
+            <br>
+            <p id="demo8">This is another paragraph.</p>
+            <br>
+            <button onclick="myFunction1()">Remove Element</button>
+            <br>
+            <br>
+            <b>Example Explained:- </b>
+
+            <br>
+            The HTML document contains a <span class="edit">&lt;div&gt;</span> element with two child nodes (two <span class="edit">&lt;p&gt;</span> elements). 
+            <br>
+            <p class="edit1">
+                &lt;div&gt; 
+                <br>
+                &lt;p id="demo7"&gt;This is a paragraph.&lt;/p&gt; 
+                <br>
+                &lt;p id="demo8"&gt;This is another paragraph.&lt;/p&gt; 
+                <br>
+                &lt;/div&gt; 
+            </p>
+
+            <br>
+
+            Find the element you want to remove. 
+            <br>
+            <p class="edit1">
+                const element2 = document.getElementById("demo7");
+            </p>
+
+            <br>
+            Then execute the remove() method on that element. 
+            <br>
+            <p class="edit1">
+                element2.remove();
+            </p>
+
+            <br>
+
+            <p style="background:rgba(255,0,0,0.1);padding:2rem;">
+            The <span class="edit">remove()</span> method does not work in older browsers, see the example below on how to use <span class="edit">removeChild()</span> instead. 
+            </p>
+
+        </div>
+
+        <hr>
+
+        <h2>
+            Removing a Child Node 
+        </h2>
+
+        <div>
+            For browsers that does not support the <span class="edit">remove()</span> method, you have to find the parent node to remove an element. 
+            <br>
+            <div id="demo9">
+            <p id="demo10">This is a paragraph.</p>
+            <p id="demo11">This is another paragraph.</p>
+            </div>
+        </div>
+
+        <hr>
+
+        <h2>
+            Example Explained 
+        </h2>
+
+        <div>
+            This HTML document contains a <span class="edit">&lt;div&gt;</span> element with two child nodes (two <span class="edit">&lt;p&gt;</span> elements). 
+            <br>
+            <p class="edit1">
+                &lt;div id="demo9"&gt; 
+                <br>
+                &lt;p id="demo10"&gt;This is a paragraph.&lt;/p&gt; 
+                <br>
+                &lt;p id="demo11"&gt;This is another paragraph.&lt;/p&gt; 
+                <br>
+                &lt;/div&gt; 
+            </p>
+
+            <br>
+            Find the element with <span class="edit">id="demo9"</span>. 
+            <br>
+            <p class="edit1">
+                const parent1 = document.getElementById("demo9");
+            </p>
+
+            <br>
+            Find the <span class="edit">&lt;p&gt;</span> element with <span class="edit">id="demo10"</span>. 
+            <br>
+            <p class="edit1">
+                const child2 = document.getElementById("demo10"); 
+            </p>
+
+            <br>
+            Remove the child from the parent. 
+            <br>
+            <p class="edit1">
+                parent1.removeChild(child2); 
+            </p>
+
+            <br>
+            Here is a common workaround: Find the child you want to remove, and use its <span class="edit">parentNode</span> property to find the parent. 
+            <br>
+            <p class="edit1">
+                const child2 = document.getElementById("demo10");
+                <br>
+                child2.parentNode.removeChild(child2);
+            </p>
+        </div>
+
+        <hr>
+
+        <h2>
+            Replacing HTML Elements 
+        </h2>
+
+        <div>
+            To replace an element to the HTML DOM, use the <span class="edit">replaceChild()</span> method. 
+            <br>
+            Example:- 
+            <br>
+            <div id="demo12">
+                <p id="demo13">This is a paragraph.</p>
+                <p id="demo14">This is another paragraph.</p>
+            </div>
+        </div>
+
+        <script>
+          const para1 = document.createElement("p");
+          const node1 = document.createTextNode("This is new.");
+          para1.appendChild(node1);
+          const element1 = document.getElementById("demo1");
+          /*But if id="demo1" is of p element, then the newly created element will be the first child of p parent.*/
+          element1.appendChild(para1);
+
+          const para2 = document.createElement("p");
+          const node2 = document.createTextNode("This is new.");
+          para2.appendChild(node2);
+          const element2 = document.getElementById("demo4");
+          const child1 = document.getElementById("demo5");
+          element2.insertBefore(para2,child1);
+
+          function myFunction1() {
+            document.getElementById("demo7").remove();
+          }
+
+          const parent1 = document.getElementById("demo9");
+          const child2 = document.getElementById("demo10");
+          parent1.removeChild(child2);
+
+          const parent2 = document.getElementById("demo12");
+          const child3 = document.getElementById("demo13");
+          const para3 = document.createElement("p");
+          const node3 = document.createTextNode("This is new.");
+          para3.appendChild(node3);
+          parent2.replaceChild(para3,child3);
+        </script>
+    </body>
+</html>

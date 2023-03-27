@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en-in">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>
+            JavaScript Function call() 
+        </title>
+        <style>
+            html {
+                font-size:62.5%;
+            }
+            body {
+                font-family:verdana, sans-serif;
+                font-size:2rem;
+                line-height:1.5;
+            }
+            .edit {
+                background-color:#f1f1f1;
+                color:red;
+            }
+            .edit1 {
+                background-color:rgba(255,255,0,0.3);
+                padding:2rem;
+            }
+            .table1 {
+                width:100%;
+                border:0.1rem solid #ddd;
+                border-collapse:collapse;
+            }
+            .table1 tr {
+                height:4rem;
+            }
+            .table1 tr:nth-child(even) {
+                background-color:#f1f1f1;
+            }
+            .table1 td {
+                padding:1rem;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>
+            JavaScript Function call() 
+        </h1>
+
+        <hr>
+
+        <h2>
+            Method Reuse 
+        </h2>
+
+        <div>
+            With the <span class="edit">call()</span> method, you can write a method that can be used on different objects. 
+        </div>
+
+        <hr>
+
+        <h2>
+            All Functions are Methods 
+        </h2>
+
+        <div>
+            In JavaScript all functions are object methods. 
+            <br>
+            If a function is not a method of a JavaScript object, it is a function of the global object. 
+            <br>
+            The example below creates an object with 3 properties, firstName, lastName, fullName. 
+            <br>
+            Example:- 
+            <br>
+            <p id="demo1"></p>
+
+            <br>
+            In the example above, <span class="edit">this</span> refers to the <strong>person object</strong>. 
+            <br>
+            <strong>this.firstName</strong> means the <strong>firstName</strong> property of <strong>this</strong>. 
+            <br>
+            Same as:- 
+            <br>
+            <strong>this.firstName</strong> means the <strong>firstName</strong> property of <strong>person</strong>. 
+        </div>
+
+        <hr>
+
+        <h2>
+            What is this? 
+        </h2>
+
+        <div>
+            In JavaScript, the <span class="edit">this</span> keyword refers to an <strong>object</strong>. 
+            <br>
+            <strong>Which</strong> object depends on how <span class="edit">this</span> is being invoked (used or called). 
+            <br>
+            The <span class="edit">this</span> keyword refers to different objects depending on how it is used. 
+            <br>
+            <br>
+            <table class="table1">
+                <tr>
+                    <td>In an object method, <span class="edit">this</span> refers to the <strong>object</strong>.</td>
+                </tr>
+                <tr>
+                    <td>Alone, <span class="edit">this</span> refers to the <strong>global object</strong>.</td>
+                </tr>
+                <tr>
+                    <td>In a function, <span class="edit">this</span> refers to the <strong>global object</strong>.</td>
+                </tr>
+                <tr>
+                    <td>In a function, in strict mode, <span class="edit">this</span> is <span class="edit">undefined</span>.</td>
+                </tr>
+                <tr>
+                    <td>In an event, <span class="edit">this</span> refers to the <strong>element</strong> that received the event.</td>
+                </tr>
+                <tr>
+                    <td>Methods like <span class="edit">call()</span>, <span class="edit">apply()</span>, and <span class="edit">bind()</span> can refer <span class="edit">this</span> to <strong>any object</strong>.</td>
+                </tr>
+            </table> 
+
+            <br>
+            <br>
+
+            <div class="edit1">
+                <span style="font-size:3rem;">Note</span>
+                <br>
+                <span class="edit">this</span> is not a variable. It is a keyword. You cannot change the value of <span class="edit">this</span>. 
+            </div>
+        </div>
+
+        <hr>
+        <br>
+        <hr>
+
+        <h2>
+            The JavaScript call() Method 
+        </h2>
+
+        <div>
+            The <span class="edit">call()</span> method is a predefined JavaScript method. 
+            <br>
+            It can be used to invoke (call) a method with an owner object as an argument (parameter). 
+            <br>
+            <p class="edit1">
+                With <span class="edit">call()</span>, an object can use a method belonging to another object. 
+            </p> 
+            <br>
+            This example calls the <strong>fullName</strong> method of person1, using it on <strong>person2</strong>. 
+            <br>
+            Example:- 
+            <br>
+            <p id="demo2"></p>
+
+            <br>
+            <br>
+            This example calls the <strong>fullName</strong> method of person1, using it on <strong>person3</strong>. 
+            <br>
+            Example:- 
+            <br>
+            <p id="demo3"></p>
+        </div>
+
+        <hr>
+
+        <h2>
+            The call() Method with Arguments 
+        </h2>
+
+        <div>
+            The <span class="edit">call()</span> method can accept arguments. 
+            <br>
+            Example:- 
+            <br>
+            <p id="demo4"></p>
+        </div>
+
+        <script>
+            //Create an object:- 
+            const myObj1 = {
+                firstName: "John",
+                lastName: "Doe",
+                fullName: function() {
+                    return this.firstName + " " + this.lastName;
+                }
+            }
+            document.getElementById("demo1").innerHTML = myObj1.fullName();
+
+            const person1 = {
+                fullName: function() {
+                    return this.firstName + " " + this.lastName;
+                }
+            }
+
+            const person2 = {
+                firstName: "John",
+                lastName: "Doe"
+            } 
+
+            const person3 = {
+                firstName: "Mary",
+                lastName: "Doe"
+            }
+
+            document.getElementById("demo2").innerHTML = person1.fullName.call(person2);
+
+            document.getElementById("demo3").innerHTML = person1.fullName.call(person3);
+
+            const person0 = {
+                fullName: function(city, country) {
+                    return this.firstName + " " + this.lastName + "," + city + "," + country;
+                }
+            }
+
+            document.getElementById("demo4").innerHTML = person0.fullName.call(person2,"Oslo","Norway");
+        </script>
+    </body>
+</html>

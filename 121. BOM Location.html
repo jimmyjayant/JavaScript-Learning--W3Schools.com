@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en-in">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>
+            JavaScript Window Location 
+        </title>
+        <style>
+            html {
+                font-size:calc(15px + 0.390625vw);
+            }
+            body {
+                font-family:verdana, sans-serif;
+                font-size:1rem;
+                line-height:1.5;
+            }
+            .edit {
+                background-color:#f1f1f1;
+                color:red;
+            }
+            .edit1 {
+                background-color:rgba(255,255,0,0.3);
+                padding:2rem;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>
+            JavaScript Window Location 
+        </h1>
+
+        <div>
+            The <span class="edit">window.location</span> object can be used to get the current page address (URL) and to redirect the browser to a new page. 
+        </div>
+
+        <hr>
+
+        <h2>
+            Window Location 
+        </h2>
+
+        <div>
+            The <span class="edit">window.location</span> object can be written without the window prefix. 
+            <br>
+            Some examples:- 
+            <br>
+            <ul>
+                <li><span class="edit">window.location.href</span> returns the href (URL) of the current page</li>
+                <li><span class="edit">window.location.hostname</span> returns the domain name of the web host</li>
+                <li><span class="edit">window.location.pathname</span> returns the path and filename of the current page</li>
+                <li><span class="edit">window.location.protocol</span> returns the web protocol used (http: or https:)</li>
+                <li><span class="edit">window.location.assign()</span> loads a new document</li>
+            </ul>
+        </div>
+
+        <hr>
+
+        <h2>
+            Window Location Href 
+        </h2>
+
+        <div>
+            The <span class="edit">window.location.href</span> property returns the URL of the current page. 
+            <br>
+            Example:- 
+            <br>
+            <p id="demo1"></p>
+        </div>
+
+        <hr>
+
+        <h2>
+            Window Location Hostname 
+        </h2>
+
+        <div>
+            The <span class="edit">window.location.hostname</span> property returns the name of the internet host (of the current page). 
+            <br>
+            Example:- 
+            <br>
+            <p id="demo2"></p> 
+        </div>
+
+        <hr>
+
+        <h2>
+            Window Location Pathname 
+        </h2>
+
+        <div>
+            The <span class="edit">window.location.pathname</span> property returns the pathname of the current page. 
+            <br>
+            Example:- 
+            <br>
+            <p id="demo3"></p>
+        </div>
+
+        <hr>
+
+        <h2>
+            Window Location Protocol 
+        </h2>
+
+        <div>
+            The <span class="edit">window.location.protocol</span> property returns the web protocol of the page. 
+            <br>
+            Example:- 
+            <br>
+            <p id="demo4"></p>
+        </div>
+
+        <hr>
+
+        <h2>
+            Window Location Port 
+        </h2>
+
+        <div>
+            The <span class="edit">window.location.port</span> property returns the number of the internet host port (of the current page). 
+            <br>
+            Example:- 
+            <br>
+            <p id="demo5"></p> 
+            <br>
+            <strong>Note: </strong>If the port number is default (80 for http and 443 for https), most browsers will display 0 or nothing. 
+        </div>
+
+        <hr>
+
+        <h2>
+            Window Location Assign 
+        </h2>
+
+        <div>
+            The <span class="edit">window.location.assign()</span> method loads a new document. 
+            <br>
+            Example:- 
+            <br>
+            <input type="button" value="Load new document" onclick="newDoc()">
+        </div>
+
+        <script>
+            document.getElementById("demo1").innerHTML = 
+            "The full URL of this page is: <br>" + window.location.href;
+
+            document.getElementById("demo2").innerHTML = 
+            "Page hostname is " + window.location.hostname;
+
+            document.getElementById("demo3").innerHTML = 
+            "Page path is " + window.location.pathname;
+        
+            document.getElementById("demo4").innerHTML = 
+            "The page protocol is " + window.location.protocol;
+
+            document.getElementById("demo5").innerHTML = 
+            "The URL port number of the current page is " + window.location.port;
+
+            function newDoc() {
+                window.location.assign("https://www.w3schools.com");
+            }
+        </script>
+    </body>
+</html>

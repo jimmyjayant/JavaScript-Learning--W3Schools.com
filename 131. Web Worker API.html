@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en-in">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>
+            Web Workers API 
+        </title>
+        <style>
+            html {
+                font-size:calc(10px + 0.390625vw);
+            }
+
+            body {
+                font-family:verdana, sans-serif;
+                font-size:1rem;
+                line-height:1.5;
+            }
+
+            .edit {
+                background-color:#f1f1f1;
+                color:red;
+            }
+
+            .edit1 {
+                background-color:rgba(255,255,0,0.3);
+                padding:2rem;
+            }
+
+            .table1 {
+                width:100%;
+                border:1px solid #ddd;
+                border-collapse:collapse;
+            }
+
+            .table1 tr {
+                height:3rem;
+            }
+
+            .table1 tr:nth-child(even) {
+                background-color:#f1f1f1;
+            }
+
+            .table1 td {
+                text-align:center;
+                padding:0.5rem;
+                border:1px solid #ddd;
+            }
+            
+            
+        </style>
+    </head>
+    <body>
+        <h1>
+            Web Workers API 
+        </h1>
+
+        <div>
+            A web worker is a JavaScript running in the background, without affecting the performance of the page. 
+        </div>
+
+        <hr>
+
+        <h2>
+            What is a Web Worker? 
+        </h2>
+
+        <div>
+            When executing scripts in a HTML page, the page becomes unresponsive until the script is finished. 
+            <br>
+            A web worker is a JavaScript that runs in the background, independently of other scripts, without affecting the performance of the page. You can continue to do whatever you want: clicking, selecting things, etc., while the web worker runs in the background. 
+        </div>
+
+        <hr>
+
+        <h2>
+            Browser Support 
+        </h2>
+
+        <div>
+            The numbers in the table specify the first browser versions that fully support Web Workers. 
+            <br>
+            <br>
+            <table class="table1">
+                <tr>
+                    <td><img src="Image4.svg.png" height="35" width="35" alt="Google Chrome"></td>
+                    <td><img src="Image5.png" height="35" width="35" alt="Microsoft Edge"></td>
+                    <td><img src="Image6.png" height="35" width="35" alt="Mozilla Firefox"></td>
+                    <td><img src="Image7.png" height="35" width="35" alt="Apple Safari"></td>
+                    <td><img src="Image8.png" height="35" width="35" alt="Opera"></td>
+                </tr>
+                <tr>
+                    <td>Chrome 4</td>
+                    <td>IE 10</td>
+                    <td>Firefox 3.5</td>
+                    <td>Safari 4</td>
+                    <td>Opera 11.5</td>
+                </tr>
+                <tr>
+                    <td>Jan 2010</td>
+                    <td>Sep 2012</td>
+                    <td>Jun 2009</td>
+                    <td>Jun 2009</td>
+                    <td>Jun 2011</td>
+                </tr>
+            </table>
+        </div>
+
+        <hr>
+
+        <h2>
+            Web Workers Example 
+        </h2>
+
+        <div>
+            The example below creates a simple web worker that count numbers in the background. 
+            <br>
+            Example:- 
+            <br>
+            <p style="background:rgba(255,0,0,0.1);padding:1rem;color:red;font-weight:bold;">
+             Below example will only work in Live Server. 
+            </p>
+            <p id="demo0"></p>
+            <p>
+                Count numbers: <output id="demo1"></output>
+            </p>
+            <button onclick="startWorker()">Start Worker</button>
+            <button onclick="stopWorker()">Stop Worker</button>
+        </div>
+
+        <hr>
+
+        <h2>
+            Check Web Worker Support 
+        </h2>
+
+        <div>
+            Before creating a web worker, check whether the user's browser supports it. 
+            <br>
+            <p class="edit1">
+                if (typeof(Worker) !== "undefined") {
+                    <br>
+                    // Yes! Web worker support! 
+                    <br>
+                    // Some code.... 
+                    <br>
+                } else {
+                    <br>
+                    // Sorry! No Web Worker support.... 
+                    <br>
+                }
+            </p>
+        </div>
+
+        <hr>
+        <br>
+        <hr>
+
+        <h2>
+            Create a Web Worker File 
+        </h2>
+
+        <div>
+            Now, let's create our web worker in an external JavaScript. 
+            <br>
+            Here, we create a script that counts. The script is stored in the "demo_workers.js" file. 
+            <br>
+            <p class="edit1">
+                let i = 0;
+                <br>
+                function timedCount() {
+                    <br>
+                    i++;
+                    <br>
+                    postMessage(i);
+                    <br>
+                    setTimeout("timedCount()", 500);
+                    <br>
+                }
+                <br>
+                timedCount();
+            </p>
+
+            <br>
+
+            The important part of the code above is the <span class="edit">postMessage()</span> method - which is used to post a message back to the HTML page. 
+            <br>
+            <strong>Note: </strong> Normally web workers are not used for such simple scripts, but for more CPU intensive tasks. 
+        </div>
+
+        <hr>
+
+        <h2>
+            Create a Web Worker Object 
+        </h2>
+
+        <div>
+            Now that we have the web worker file, we need to call it from a HTML page. 
+            <br>
+            The following lines checks if the worker already exists, if not - it creates a new web worker object and runs the code in "demo_workers.js". 
+            <br>
+            <p class="edit1">
+                if(typeof(a) == "undefined") {
+                    <br>
+                    a = new Worker("demo_workers.js"); 
+                    <br>
+                }
+            </p>
+
+            <br>
+            Then we can send and receive messages from the web worker. 
+            <br>
+            Add an "onmessage" event listener to the web worker. 
+            <br>
+            <p class="edit1">
+                a.onmessage = function(event) {
+                    <br>
+                    document.getElementById("demo1").innerHTML = event.data;
+                    <br>
+                }
+            </p>
+
+            <br>
+            When the web worker posts a message, the code within the event listener is executed. The data from the web worker is stored in event.data. 
+        </div>
+
+        <hr>
+
+        <h2>
+            Terminate a Web Worker 
+        </h2>
+
+        <div>
+            When a web worker object is created, it will continue to listen for messages (even after the external script is finished) until it is terminated. 
+            <br>
+            To terminate a web worker, and free browser/computer resources, use the <span class="edit">terminate()</span> method. 
+            <br>
+            <p class="edit1">
+                a.terminate(); 
+            </p>
+        </div>
+
+        <hr>
+
+        <h2>
+            Reuse the Web Worker 
+        </h2>
+
+        <div>
+            If you set the worker variable to undefined, after it has been terminated, you can reuse the code. 
+            <br>
+            <p class="edit1">
+                a = undefined; 
+            </p>
+        </div>
+
+        <hr>
+
+        <h2>
+            Full Web Worker Example Code 
+        </h2>
+
+        <div>
+            We have already seen the Worker code in the .js file. Below is the code for the HTML page. 
+            <br>
+            Example:- 
+            <br>
+            <p>
+                Count Numbers:- 
+                <output id="demo2"></output>
+            </p>
+            <button onclick="startWorker1()">Start</button>
+            <button onclick="stopWorker1()">Stop</button>
+        </div>
+
+        <hr>
+
+        <h2>
+            Web Workers and the DOM 
+        </h2>
+
+        <div>
+            Since web workers are in external files, they do not have access to the following JavaScript objects. 
+            <br>
+            <ul>
+                <li>The window object</li>
+                <li>The document object</li>
+                <li>The parent object</li>
+            </ul>
+        </div>
+
+        <script>
+            let a;
+
+            function startWorker() {
+                if(typeof(a) == "undefined") {
+                    a = new Worker("demo_workers.js");
+                }
+                a.onmessage = function(event) {
+                    document.getElementById("demo1").innerHTML = event.data;
+                };
+            }
+
+            function stopWorker() {
+                a.terminate();
+                a = undefined;
+            }
+
+            let b;
+
+            function startWorker1() {
+                if(typeof(b) == "undefined") {
+                    b = new Worker("demo_workers.js");
+                }
+                b.onmessage = function(event) {
+                    document.getElementById("demo2").innerHTML = event.data;
+                };
+            }
+
+            function stopWorker1() {
+                b.terminate();
+                b = undefined;
+            }
+        </script>
+    </body>
+</html>

@@ -1,0 +1,511 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            JavaScript Sorting Arrays 
+        </title>
+        <style>
+            .edit {
+                background-color:#f1f1f1;
+                color:red;
+            }
+            .edit1 {
+                background-color:rgba(255,255,0,0.3);
+                padding:20px;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>
+            JavaScript Sorting Arrays 
+        </h1>
+
+        <hr>
+
+        <h2>
+            Sorting an Array 
+        </h2>
+
+        <p>
+            The <span class="edit">sort()</span> method sorts an array alphabetically. 
+            <br>
+            Example:- 
+            <br>
+            <p id="demo1"></p>
+            <br>
+            <p id="demo2"></p>
+        </p>
+
+        <hr>
+
+        <h2>
+            Reversing an Array 
+        </h2>
+
+        <p>
+            The <span class="edit">reverse()</span> method reverses the elements in an array. 
+            <br>
+            You can use it to sort an array in descending order. 
+            <br>
+            Example:- 
+            <br>
+            <p id="demo3"></p>
+            <br>
+            <p id="demo4"></p>
+        </p>
+
+        <hr>
+
+        <h2>
+            Numeric Sort 
+        </h2>
+
+        <p>
+            By default, the <span class="edit">sort()</span> function sorts values as <strong>strings</strong>. 
+            <br>
+            This works well for strings ("Apple" comes before "Banana"). 
+            <br>
+            However, if numbers are sorted as strings, "25" is bigger than "100", because "2" is bigger than "1". 
+            <br>
+            Because of this, the <span class="edit">sort()</span> method will produce incorrect result when sorting numbers. 
+            <br>
+            You can fix this by providing a <strong>compare function</strong>. 
+            <br>
+            Example:- 
+            <br>
+            <p id="demo5"></p>
+            <br>
+            <p id="demo6"></p>
+            <br>
+            Use the same trick to sort an array descending. 
+            <br>
+            Example:- 
+            <br>
+            <p id="demo7"></p>
+        </p>
+
+        <hr>
+        <br>
+        <hr>
+
+        <h2>
+            The Compare Function 
+        </h2>
+
+        <p>
+            The purpose of the compare function is to define an alternative sort order. 
+            <br>
+            The compare function should return a negative, zero, or positive value, depending on the arguments. 
+            <br>
+            <p class="edit1">
+                function(a, b) {return a-b} 
+            </p>
+            <br>
+            When the <span class="edit">sort()</span> function compares two values, it sends the values to the compare function, and sorts the values according to the returned (negative, zero, positive) value. 
+            <br>
+            If the result is negative, <span class="edit"> a </span> is sorted before <span class="edit"> b </span>. 
+            <br>
+            If the result is positive, <span class="edit"> b </span> is sorted before <span class="edit"> a </span>. 
+            <br>
+            If the result is 0, no changes are done with the sort order of the two values. 
+            <br>
+            Example:- 
+            <br>
+            The compare function compares all the values in the array, two values at a time <span class="edit"> (a, b) </span>. 
+            <br>
+            When comparing 40 and 100, the <span class="edit">sort()</span> method calls the compare function (40,100). 
+            <br>
+            The function calculates 40 - 100 <span class="edit"> (a - b) </span>, and since the result is negative (-60), the sort function will sort 40 as a value lower than 100. 
+            <br>
+            You can use this code snippet to experiment with numerically and alphabetically sorting. 
+            <br>
+            Example:- 
+            <br>
+            Click on the buttons below to sort the array alphabetically or numerically. 
+            <br>
+            <button type="button" onclick="myFunction1()">Sort Alphabetically</button>
+            <button type="button" onclick="myFunction2()">Sort Numerically</button>
+            <br>
+            <p id="demo8"></p>
+        </p>
+
+        <hr>
+
+        <h2>
+            Sorting an Array in Random Order 
+        </h2>
+
+        <p>
+            Example:- 
+            <br>
+            Click the button again and again to sort the array in random order. 
+            <br>
+            <button type="button" onclick="myFunction3()">Try it</button>
+            <br>
+            <p id="demo9"></p>
+        </p>
+
+        <hr>
+
+        <h2>
+            The Fisher Yates Method 
+        </h2>
+
+        <p>
+            The above example, <i>array.sort()</i>, is not accurate. It will favour some numbers over the others. 
+            <br>
+            The most popular correct method, is called the Fisher Yates shuffle, and was introduced in data science as early as 1938! 
+            <br>
+            In JavaScript the method can be translated to this. 
+            <br>
+            Example:- 
+            <br>
+            Click the button below again and again to sort the array in random order. 
+            <br>
+            <button type="button" onclick="myFunction4()">Try it</button>
+            <br>
+            <p id="demo10"></p>
+        </p>
+
+        <hr>
+
+        <h2>
+            Find the Highest (or Lowest) Array Value 
+        </h2>
+
+        <p>
+            There are no built-in functions for finding the max or min value in an array. 
+            <br>
+            However, after you have sorted an array, you can use the index to obtain the highest and lowest values. 
+            <br>
+            Sorting ascending:- 
+            <br>
+            Example:- 
+            <br>
+            <p id="demo11"></p>
+            <br>
+            <p id="demo12"></p>
+            <br>
+            <p id="demo13"></p>
+
+            <br>
+            <br>
+            Sorting descending:- 
+            <br>
+            Example:- 
+            <br>
+            <p id="demo14"></p>
+            <br>
+            <p id="demo15"></p>
+
+            <br>
+            <p class="edit1">
+                Sorting a whole array is a very inefficient method if you only want to find the highest (or lowest) value. 
+            </p>
+        </p>
+
+        <hr>
+
+        <h2>
+            Using Math.max() on an Array 
+        </h2>
+
+        <p>
+            You can use <span class="edit">Math.max.apply</span> to find the highest number in an array. 
+            <br>
+            Example:- 
+            <br>
+            <p id="demo16"></p>
+            <br>
+            <span class="edit">Math.max.apply(null, [1, 2, 3])</span> is equivalent to <span class="edit">Math.max(1, 2, 3)</span>. 
+            <br>
+            So, in above example, <span class="edit">Math.max.apply(null, [5,6,7,1,9,4,3])</span> is equivalent to <span class="edit">Math.max(5,6,7,1,9,4,3)</span>
+        </p>
+
+        <hr>
+
+        <h2>
+            Using Math.min() on an Array 
+        </h2>
+
+        <p>
+            You can use <span class="edit">Math.min.apply</span> to find the lowest number in an array. 
+            <br>
+            Example:- 
+            <br>
+            <p id="demo17"></p>
+            <br>
+            <span class="edit">Math.min.apply(null,[1,2,3])</span> is equivalent to <span class="edit">Math.min(1,2,3)</span>. 
+        </p>
+
+        <hr>
+
+        <h2>
+            My Min / Max JavaScript Methods 
+        </h2>
+
+        <p>
+            The fastest solution is to use a "home made" method. 
+            <br>
+            This function loops through an array comparing each value with the highest value found. 
+            <br>
+            Example:- 
+            <br>
+            <p id="demo18"></p>
+
+            <br>
+            <br>
+            This function loops through an array comparing each value with the lowest value found. 
+            <br>
+            Example:- 
+            <br>
+            <p id="demo19"></p>
+        </p>
+
+        <hr>
+
+        <h2>
+            Sorting Object Arrays 
+        </h2>
+
+        <p>
+            JavaScript arrays often contain objects. 
+            <br>
+            <p class="edit1">
+                const cars = [
+                <br>
+                {type:"Volvo", year:2016},
+                <br>
+                {type:"Saab", year:2001},
+                <br>
+                {type:"BMW", year:2010}
+                <br>
+                ];
+            </p>
+            <br>
+            Even if objects have properties of different data types, the <span class="edit">sort()</span> method can be used to sort the array. 
+            <br>
+            The solution is to write a compare function to compare the property values. 
+            <br>
+            Example:- 
+            <br>
+            <p id="demo20"></p>
+            <br>
+            Sort car objects on age:- 
+            <br>
+            <p id="demo21"></p>
+
+            <br>
+            <br>
+            Comparing string properties is a little more complex. 
+            <br>
+            Example:- 
+            <br>
+            Click the button below to sort car object on type. 
+            <br>
+            <button type="button" onclick="myFunction5()">Sort</button>
+            <br>
+            <p id="demo22"></p>
+        </p>
+
+
+        <script>
+            const fruits1 = ["Banana", "Orange", "Apple", "Mango"];
+            document.getElementById("demo1").innerHTML = "Unsorted Array:- " + fruits1;
+
+            fruits1.sort();
+            document.getElementById("demo2").innerHTML = "Sorted Array:- " + fruits1;
+
+            document.getElementById("demo3").innerHTML = "Sorted Array:- " + fruits1;
+
+            //Reverse the array:- 
+            fruits1.reverse();
+
+            document.getElementById("demo4").innerHTML = 
+            "Sorted in reverse order:- " + fruits1;
+
+            const points1 = [40, 100, 1, 5, 25, 10];
+            document.getElementById("demo5").innerHTML = points1;
+
+            points1.sort(function(a,b){return a-b});
+            document.getElementById("demo6").innerHTML = points1;
+
+            points1.sort(function(a,b){return b-a});
+            document.getElementById("demo7").innerHTML = points1;
+
+            const points2 = [40, 100, 1, 5, 25, 10];
+            document.getElementById("demo8").innerHTML = points2;
+
+            function myFunction1() {
+                points2.sort();
+                document.getElementById("demo8").innerHTML = points2;
+            }
+
+            function myFunction2()
+            {
+                points2.sort(function(a,b){return a-b});
+                document.getElementById("demo8").innerHTML = points2;
+            }
+
+            document.getElementById("demo9").innerHTML = points2;
+
+            function myFunction3()
+            {
+                points2.sort(function(){return 0.5 - Math.random()});
+                document.getElementById("demo9").innerHTML = points2;
+            }
+
+            document.getElementById("demo10").innerHTML = points2;
+
+            function myFunction4()
+            {
+                for (let i = points2.length - 1; i > 0; i--)
+                {
+                    let j = Math.floor(Math.random() * (i+1));
+                    let k = points2[i];
+                    points2[i] = points2[j];
+                    points2[j] = k;
+                }
+                document.getElementById("demo10").innerHTML = points2;
+            }
+
+            const points3 = [15,40,55,1,2,6,52];
+            document.getElementById("demo11").innerHTML = 
+            "The array before sorting is:- " + points3;
+            points3.sort(function(a,b){return a-b});
+            document.getElementById("demo12").innerHTML = 
+            "The array after sorting is:- " + points3;
+            document.getElementById("demo13").innerHTML = 
+            "The lowest value in array is:- " + points3[0] + 
+            "<br>" + 
+            "And the highest value in array is:- " + points3[points3.length-1];
+            
+            points3.sort(function(a,b){return b-a});
+            document.getElementById("demo14").innerHTML = 
+            "The sorted array in descending order is:- " + points3;
+
+            document.getElementById("demo15").innerHTML = 
+            "The highest value is:- " + points3[0] + "<br>" + 
+            "And the lowest value is:- " + points3[points3.length-1];
+
+            const points4 = [5,6,7,1,9,4,3];
+            document.getElementById("demo16").innerHTML = 
+            "The array is:- " + points4 + "<br>" + 
+            "And the highest value in array is:- " +  myArrayMax(points4);
+
+            function myArrayMax(arr) 
+            {
+                return Math.max.apply(null, arr);
+            }
+
+            
+            document.getElementById("demo17").innerHTML = 
+            "The array is:- " + points4 + "<br>" + 
+            "And the lowest value in array is:- " + myArrayMin(points4);
+
+            function myArrayMin(arr)
+            {
+                return Math.min.apply(null,arr);
+            }
+
+            document.getElementById("demo18").innerHTML = 
+            "The array is:- " + points4 + "<br>" + 
+            "And the highest value is:- " +  myArrayMax1(points4);
+
+            function myArrayMax1(arr)
+            {
+                let len = arr.length;
+                let max = -Infinity;
+                while(len--)
+                {
+                    if(arr[len] > max)
+                    max = arr[len];
+                }
+                return max;
+            }
+
+            document.getElementById("demo19").innerHTML = 
+            "The array is:- " + points4 + "<br>" + 
+            "And the lowest value is:- " + myArrayMin1(points4);
+
+            function myArrayMin1(arr)
+            {
+                let len = arr.length;
+                let min = Infinity;
+                while(len--)
+                {
+                    if(arr[len] < min)
+                    min = arr[len];
+                }
+                return min;
+            }
+
+            const cars = [
+              {type:"Volvo", year:2016},
+              {type:"Saab", year:2001},
+              {type:"BMW", year:2010}
+            ];
+
+            displayCars1();
+
+            function displayCars1()
+            {
+                document.getElementById("demo20").innerHTML = 
+                cars[0].type + " " + cars[0].year + "<br>" +
+                cars[1].type + " " + cars[1].year + "<br>" + 
+                cars[2].type + " " + cars[2].year;
+            }
+            
+            cars.sort(function(a,b){return a.year - b.year});
+            displayCars2();
+
+            function displayCars2()
+            {
+                document.getElementById("demo21").innerHTML = 
+                cars[0].type + " " + cars[0].year + "<br>" +
+                cars[1].type + " " + cars[1].year + "<br>" +
+                cars[2].type + " " + cars[2].year;
+            }
+
+            const cars1 = [
+              {type:"Volvo", year:2016},
+              {type:"Saab", year:2001},
+              {type:"BMW", year:2010}
+            ];
+
+            document.getElementById("demo22").innerHTML = 
+                cars1[0].type + " " + cars1[0].year + "<br>" +
+                cars1[1].type + " " + cars1[1].year + "<br>" +
+                cars1[2].type + " " + cars1[2].year;
+
+            
+            function myFunction5()
+            {
+                cars1.sort(function(a,b)
+                {
+                    let x = a.type.toLowerCase();
+                    let y = b.type.toLowerCase();
+                    if(x < y)
+                    {
+                        return -1;
+                    }
+                    if(x > y)
+                    {
+                        return 1;
+                    }
+                    return 0;
+                });
+                displayCars3();
+            }
+
+            function displayCars3()
+            {
+                document.getElementById("demo22").innerHTML = 
+                cars1[0].type + " " + cars1[0].year + "<br>" +
+                cars1[1].type + " " + cars1[1].year + "<br>" +
+                cars1[2].type + " " + cars1[2].year;
+            }
+
+        </script>
+    </body>
+</html>

@@ -1,0 +1,149 @@
+<!DOCTYPE html
+<html lang="en-in">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>
+            AJAX Database Example 
+        </title>
+        <style>
+            html {
+                font-size:calc(10px + 0.390625vw);
+            }
+
+            body {
+                font-family:verdana, sans-serif;
+                font-size:1rem;
+                line-height:1.5;
+            }
+
+            .edit {
+                background-color:#f1f1f1;
+                color:red;
+            }
+
+            .edit1 {
+                background-color:rgba(255,255,0,0.3);
+                padding:2rem;
+            }
+
+            th, td {
+                padding:0.5rem;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>
+            AJAX Database Example 
+        </h1>
+
+        <div>
+            AJAX can be used for interactive communication with a database. 
+        </div>
+
+        <hr>
+
+        <h2>
+            AJAX Database Example 
+        </h2>
+
+        <div>
+            The following example will demonstrate how a web page can fetch information from a database with AJAX. 
+            <br>
+            Example:- 
+            <br>
+            <h2>
+                The XMLHttpRequest Object 
+            </h2>
+
+            <form action="">
+                <select name="customers" onchange="showCustomer(this.value)">
+                   <option value="">Select a Customer:</option>
+                   <option value="ALFKI">Alfreds Futterkiste</option>
+                   <option value="NORTS">North/South</option>
+                   <option value="WOLZA">Wolski Zajazd</option>
+                </select>
+            </form>
+            <br>
+            <div id="txtHint">Customer info will be listed here....</div>
+        </div>
+
+        <hr>
+
+        <h2>
+            Example Explained - The showCustomer() Function 
+        </h2>
+
+        <div>
+            When a user selects a customer in the dropdown list above, a function called <span class="edit">showCustomer()</span> is executed. The function is triggered by the <span class="edit">onchange</span> event. 
+            <br>
+            <b>showCustomer</b>
+            <br>
+            <p class="edit1">
+                function showCustomer(str) {
+                    <br>
+                    if(str == "") {
+                        <br>
+                        document.getElementById("txtHint").innerHTML = "";
+                        <br>
+                        return;
+                        <br>
+                    }
+                    <br>
+                    const xhttp = new XMLHttpRequest();
+                    <br>
+                    xhttp.onload = function() {
+                        <br>
+                        document.getElementById("txtHint").innerHTML = this.responseText;
+                        <br>
+                    }
+                    <br>
+                    xhttp.open("GET", "getcustomer.php?q="+str);
+                    <br>
+                    xhttp.send();
+                    <br>
+                }
+            </p>
+
+            <br>
+            The <span class="edit">showCustomer()</span> function does the following:- 
+            <br>
+            <ul>
+                <li>Check if a customer is selected</li>
+                <li>Create an XMLHttpRequest object</li>
+                <li>Create the function to be executed when the server response is ready</li>
+                <li>Send the request off to a file on the server</li>
+                <li>Notice that a parameter (q) is added to the URL (with the content of the dropdown list)</li>
+            </ul>
+        </div>
+
+        <hr>
+        <br>
+        <br>
+        <hr>
+
+        <h2>
+            The AJAX Server Page 
+        </h2>
+
+        <div>
+            The page on the server called by the JavaScript above is a PHP file called "getcustomer.php". 
+            <br>
+            The source code in "getcustomer.php" runs a query against a database, and returns the result in a HTML table. 
+        </div>
+        <script>
+            function showCustomer(str) {
+                if(str == "") {
+                    document.getElementById("txtHint").innerHTML = "";
+                    return;
+                }
+                const xhttp = new XMLHttpRequest();
+                xhttp.onload = function() {
+                    document.getElementById("txtHint").innerHTML = this.responseText;
+                }
+                xhttp.open("GET", "getcustomer.php?q="+str);
+                xhttp.send();
+            }
+        </script>
+    </body>
+</html>

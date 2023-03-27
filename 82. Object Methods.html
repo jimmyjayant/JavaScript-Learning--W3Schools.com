@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en-in">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>
+            JavaScript Object Methods 
+        </title>
+        <style>
+            .edit {
+                background-color:#f1f1f1;
+                color:red;
+            }
+            .edit1 {
+                background-color:rgba(255,255,0,0.3);
+                padding:20px;
+            }
+            body {
+                font-family:verdana, sans-serif;
+                font-size:20px;
+                line-height:1.5;
+            }
+            .table1 {
+                width: 100%;
+                border:1px solid #ddd;
+                border-collapse:collapse;
+            }
+            .table1 tr {
+                height:40px;
+            }
+            .table1 tr:nth-child(even) {
+                background-color:#f1f1f1;
+            }
+            .table1 td {
+                padding:10px;
+            }
+            .table1 th {
+                text-align:left;
+                padding:10px;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>
+            JavaScript Object Methods 
+        </h1>
+
+        <div>
+            Example:- 
+            <br>
+            <p id="demo1"></p>
+        </div>
+
+        <hr>
+
+        <h2>
+            What is this? 
+        </h2>
+
+        <div>
+            In JavaScript, the <span class="edit">this</span> keyword refers to an <strong>object</strong>. 
+            <br>
+            <strong>Which</strong> object depends on how <span class="edit">this</span> is being invoked (used or called). 
+            <br>
+            The <span class="edit">this</span> keyword refers to different objects depending on how it is used. 
+            <br>
+            <br>
+            <table class="table1">
+              <tr>
+                <td>In an object method, <span class="edit">this</span> refers to the <strong>object</strong>.</td>
+              </tr>
+              <tr>
+                <td>Alone, <span class="edit">this</span> refers to the <strong>global object</strong>.</td>
+              </tr>
+              <tr>
+                <td>In a function, <span class="edit">this</span> refers to the <strong>global object</strong>.</td>
+              </tr>
+              <tr>
+                <td>In a function, in strict mode, <span class="edit">this</span> is <span class="edit">undefined</span>.</td>
+              </tr>
+              <tr>
+                <td>In an event, <span class="edit">this</span> refers to the <strong>element</strong> that received the event.</td>
+              </tr>
+              <tr>
+                <td>Methods like <span class="edit">call()</span>, <span class="edit">apply()</span>, and <span class="edit">bind()</span> can refer <span class="edit">this</span> to <strong>any object</strong>.</td>
+              </tr>
+            </table> 
+
+            <br>
+
+            <div class="edit1">
+                <span style="font-size:30px;">Note</span>
+                <br>
+                <span class="edit">this</span> is not a variable. It is a keyword. You cannot change the value of <span class="edit">this</span>. 
+            </div>
+        </div>
+
+        <hr>
+
+        <h2>
+            JavaScript Methods 
+        </h2>
+
+        <div>
+            JavaScript methods are actions that can be performed on objects. 
+            <br>
+            A JavaScript <strong>method</strong> is a property containing a <strong>function definition</strong>. 
+            <br>
+            <br>
+            <table class="table1">
+                <tr>
+                    <th>Property</th>
+                    <th>Value</th>
+                </tr>
+                <tr>
+                    <td>firstName</td>
+                    <td>John</td>
+                </tr>
+                <tr>
+                    <td>lastName</td>
+                    <td>Doe</td>
+                </tr>
+                <tr>
+                    <td>age</td>
+                    <td>50</td>
+                </tr>
+                <tr>
+                    <td>eyeColor</td>
+                    <td>blue</td>
+                </tr>
+                <tr>
+                    <td>fullName</td>
+                    <td>function() {return this.firstName + " " + this.lastName;}</td>
+                </tr>
+            </table>
+
+            <br>
+
+            <p class="edit1">
+                Methods are functions stored as object properties. 
+            </p>
+        </div>
+
+        <hr>
+
+        <h2>
+            Accessing Object Methods 
+        </h2>
+
+        <div>
+            You access an object method with the following syntax:- 
+            <br>
+            <p class="edit1">
+                <i>objectName.methodName()</i>
+            </p>
+            <br>
+            You will typically describe fullName() as a method of the person object, and fullName as a property. 
+            <br>
+            The fullName property will execute (as a function) when it is invoked with (). 
+            <br>
+            This example accesses the fullName() <strong>method</strong> of a person object. 
+            <br>
+            Example:- 
+            <br>
+            <p id="demo2"></p>
+
+            <br>
+            <br>
+            If you access the fullName <strong>property</strong>, without (), it will return the <strong>function definition</strong>. 
+            <br>
+            Example:- 
+            <br>
+            <p id="demo3"></p>
+        </div>
+
+        <hr>
+        <br>
+        <br>
+        <hr>
+
+        <h2>
+            Adding a Method to an Object 
+        </h2>
+
+        <div>
+            Adding a new method to an object is easy. 
+            <br>
+            Example:- 
+            <br>
+            <p id="demo4"></p>
+        </div>
+
+        <hr>
+
+        <h2>
+            Using Built-In Methods 
+        </h2>
+
+        <div>
+            This example uses the <span class="edit">toUpperCase()</span> method of the String object, to convert a text to uppercase. 
+            <br>
+            <p class="edit1">
+                let message = "Hello World!";
+                <br>
+                let x = message.toUpperCase(); 
+            </p>
+
+            <br>
+
+            The value of x, after execution of the code above will be:- 
+            <br>
+            <p class="edit1">
+                HELLO WORLD! 
+            </p>
+
+            <br>
+            Example:- 
+            <br>
+            <p id="demo5"></p>
+
+            <br>
+            Example:- 
+            <br>
+            <p id="demo6"></p>
+        </div>
+
+        <script>
+            //Create an object:- 
+            const person1 = {
+                firstName: "John",
+                lastName: "Doe",
+                id: 5566,
+                fullName: function() {
+                      return this.firstName + " " + this.lastName; 
+                }
+            };
+
+            //Display data from the object:- 
+            document.getElementById("demo1").innerHTML = 
+            person1.fullName();
+
+            document.getElementById("demo2").innerHTML = 
+            person1.fullName();
+
+            document.getElementById("demo3").innerHTML = 
+            person1.fullName;
+
+            person1.name = function()
+            {
+                return this.firstName + " " + this.lastName;
+            };
+
+            document.getElementById("demo4").innerHTML = 
+            "My name is " + person1.name();
+
+            person1.name1 = function()
+            {
+                return (this.firstName + " " + this.lastName).toUpperCase();
+            };
+
+            document.getElementById("demo5").innerHTML = 
+            "My name is:- " + person1.name1();
+
+            let message = "Hello World!";
+            let x = message.toUpperCase();
+
+            document.getElementById("demo6").innerHTML = 
+            message + "<br>" + x;
+        </script>
+    </body>
+</html>

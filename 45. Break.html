@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            JavaScript Break and Continue 
+        </title>
+        <style>
+            .edit {
+                background-color:#f1f1f1;
+                color:red;
+            }
+            .edit1 {
+                background-color:rgba(255,255,0,0.3);
+                padding:20px;
+            }
+            body {
+                font-family:verdana, sans-serif;
+                font-size:20px;
+                line-height:1.5;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>
+            JavaScript Break and Continue 
+        </h1>
+
+        <p>
+            The <span class="edit">break</span> statement "jumps out" of a loop. 
+            <br>
+            The <span class="edit">continue</span> statement "jumps over" one iteration in the loop. 
+        </p>
+
+        <hr>
+
+        <h2>
+            The Break Statement 
+        </h2>
+
+        <p>
+            You have already seen the <span class="edit">break</span> statement used in an earlier chapter of this tutorial. It was used to "jump out" of a <span class="edit">switch()</span> statement. 
+            <br>
+            The <span class="edit">break</span> statement can also be used to jump out of a loop. 
+            <br>
+            Example:- 
+            <br>
+            <p id="demo1"></p>
+            <br>
+            In the example above, the <span class="edit">break</span> statement ends the loop ("breaks" the loop) when the loop counter (i) is 3. 
+        </p>
+
+        <hr>
+
+        <h2>
+            The Continue Statement 
+        </h2>
+
+        <p>
+            The <span class="edit">continue</span> statement breaks one iteration (in the loop), if a specified condition occurs, and continues with the next iteration in the loop. 
+            <br>
+            This example skips the value of 3. 
+            <br>
+            Example:- 
+            <br>
+            <p id="demo2"></p>
+        </p>
+
+        <hr>
+        <br>
+        <br>
+        <hr>
+
+        <h2>
+            JavaScript Labels 
+        </h2>
+
+        <p>
+            To label JavaScript statements you precede the statements with a label name and a colon. 
+            <br>
+            <p class="edit1">
+                label: 
+                <br>
+                statements 
+            </p>
+            <br>
+            The <span class="edit">break</span> and the <span class="edit">continue</span> statements are the only JavaScript statements that can "jump out of" a code block. 
+            <br>
+            Syntax:- 
+            <br>
+            <p class="edit1">
+                break labelname;
+                <br>
+                continue labelname;
+            </p>
+
+            <br>
+            <br>
+
+            The <span class="edit">continue</span> statement (with or without a label reference) can only be used to <strong>skip one loop iteration</strong>. 
+            <br>
+            The <span class="edit">break</span> statement, without a label reference, can only be used to <strong>jump out of a loop or a switch</strong>. 
+            <br>
+            With a label reference, the break statement can be used to <strong>jump out of any code block</strong>. 
+            <br>
+            Example:- 
+            <br>
+            <p id="demo3"></p>
+
+            <br>
+
+            <p class="edit1">
+                A code block is a block of code between { and }. 
+            </p>
+        </p>
+
+
+        <script>
+            let text1 = "";
+            for(let i = 0; i < 10; i++)
+            {
+                if(i==3)
+                {
+                    break;
+                }
+                text1 += "The number is:- " + i + "<br>";
+            }
+            document.getElementById("demo1").innerHTML = text1;
+
+            let text2 = "";
+
+            for(let i = 0; i < 10; i++)
+            {
+                if(i==3)
+                {
+                    continue;
+                }
+                text2 += "The number is:- " + i + "<br>";
+            }
+            document.getElementById("demo2").innerHTML = text2;
+
+            let text3 = "";
+            const cars = ["BMW", "Volvo", "Saab", "Ford"];
+
+
+            list: {
+                text3 += cars[0] + "<br>";
+                text3 += cars[1] + "<br>";
+                break list;
+                text3 += cars[2] + "<br>";
+                text3 += cars[3] + "<br>";
+            }
+
+            document.getElementById("demo3").innerHTML = text3;
+        </script>
+    </body>
+</html>

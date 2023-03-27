@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en-in">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>
+            JavaScript Popup Boxes 
+        </title>
+        <style>
+            html {
+                font-size:calc(10px + 0.390625vw);
+            }
+            body {
+                font-family:verdana, sans-serif;
+                font-size:1rem;
+                line-height:1.5;
+            }
+            .edit {
+                background-color:#f1f1f1;
+                color:red;
+            }
+            .edit1 {
+                background-color:rgba(255,255,0,0.3);
+                padding:2rem;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>
+            JavaScript Popup Boxes 
+        </h1>
+
+        <div>
+            JavaScript has three kind of popup boxes: Alert box, Confirm box, and Prompt box. 
+        </div>
+
+        <hr>
+
+        <h2>
+            Alert Box 
+        </h2>
+
+        <div>
+            An alert box is often used if you want to make sure information comes through to the user. 
+            <br>
+            When an alert box pops up, the user will have to click "OK" to proceed. 
+            <br>
+            Syntax:- 
+            <br>
+            <p class="edit1">
+                window.alert("<i>sometext</i>"); 
+            </p>
+            <br>
+            The <span class="edit">window.alert()</span> method can be written without the window prefix. 
+            <br>
+            Example:- 
+            <br>
+            <button onclick="myFunction1()">Try it</button>
+        </div>
+
+        <hr>
+
+        <h2>
+            Confirm Box 
+        </h2>
+
+        <div>
+            A confirm box is often used if you want the user to verify or accept something. 
+            <br>
+            When a confirm box pops up, the user will have to click either "OK" or "Cancel" to proceed. 
+            <br>
+            If the user clicks "OK", the box returns <b>true</b>. If the user clicks "Cancel", the box returns <b>false</b>. 
+            <br>
+            Syntax:- 
+            <br>
+            <p class="edit1">
+                window.confirm("<i>sometext</i>");
+            </p>
+            <br>
+            The <span class="edit">window.confirm()</span> method can be written without the window prefix. 
+            <br>
+            Example:- 
+            <br>
+            <button onclick="myFunction2()">Try it</button>
+
+            <p id="demo1"></p>
+            
+        </div>
+
+        <hr>
+
+        <h2>
+            Prompt Box 
+        </h2>
+
+        <div>
+            A prompt box is often used if you want the user to input a value before entering a page. 
+            <br>
+            When a prompt box pops up, the user will have to click either "OK" or "Cancel" to proceed after entering an input value. 
+            <br>
+            If the user clicks "OK" the box returns the input value. If the user clicks "Cancel" the box returns null. 
+            <br>
+            Syntax:- 
+            <br>
+            <p class="edit1">
+                window.prompt("<i>sometext</i>","<i>defaultText</i>"); 
+            </p>
+            <br>
+            The <span class="edit">window.prompt()</span> method can be written without the window prefix. 
+            <br>
+            Example:- 
+            <br>
+            <button onclick="myFunction3()">Try it</button>
+
+            <p id="demo2"></p>
+        </div>
+
+        <hr>
+
+        <h2>
+            Line Breaks 
+        </h2>
+
+        <div>
+            To display line breaks inside a popup box, use a back-slash followed by the character n. 
+            <br>
+            Example:- 
+            <br>
+            <button onclick="alert('Hello\nHow are you?')">Try it</button>
+        </div>
+
+        <script>
+            function myFunction1() {
+                alert("I am an alert box!");
+            }
+
+            function myFunction2() {
+                var txt;
+                if(confirm("Press a button!")) {
+                    txt = "You Pressed OK!";
+                }
+                else {
+                    txt = "You Pressed Cancel!";
+                }
+                document.getElementById("demo1").innerHTML = txt;
+            }
+
+            function myFunction3() {
+                let text;
+                let person = prompt("Please enter your name:", "Harry Potter");
+                if(person==null || person == "") {
+                    text = "User cancelled the prompt.";
+                }
+                else {
+                    text = "Hello " + person + "! How are you today?";
+                }
+                document.getElementById("demo2").innerHTML = text;
+            }
+        </script>
+    </body>
+</html>

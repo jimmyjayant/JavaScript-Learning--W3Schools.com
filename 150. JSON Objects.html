@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en-in">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>
+            JSON Objects 
+        </title>
+        <style>
+          html {
+            font-size:calc(10px + 0.390625vw);
+          }
+
+          body {
+            font-size:1rem;
+            font-family:verdana, sans-serif;
+            line-height:1.5;
+          }
+
+          .edit {
+            background-color:#f1f1f1;
+            color:red;
+          }
+
+          .edit1 {
+            background-color:rgba(255,255,0,0.3);
+            padding:2rem;
+          }
+        </style>
+    </head>
+    <body>
+      <h1>
+        JSON Object Literals 
+      </h1>
+
+      <div>
+        This is a JSON string: 
+        <br>
+        <p class="edit1">
+            '{"name":"John", "age":30, "car":null}' 
+        </p>
+
+        <br>
+
+        Inside the JSON string there is a JSON object literal: 
+        <br>
+        <p class="edit1">
+            {"name":"John", "age":30, "car":null}
+        </p>
+
+        <br>
+
+        JSON object literals are surrounded by curly braces {}. 
+        <br>
+        JSON object literals contains key/value pairs. 
+        <br>
+        Keys and values are separated by a colon. 
+        <br>
+        Keys must be strings, and values must be a valid JSON data type: 
+        <br>
+        <ul>
+            <li>string</li>
+            <li>number</li>
+            <li>object</li>
+            <li>array</li>
+            <li>boolean</li>
+            <li>null</li>
+        </ul>
+
+        <br>
+
+        Each key/value pair is separated by a comma. 
+        <br>
+        <p class="edit1">
+            It is a common mistake to call a JSON object literal "a JSON object". 
+            <br>
+            JSON cannot be an object. JSON is a string format. 
+            <br>
+            The data is only JSON when it is in a string format. When it is converted to a JavaScript variable, it becomes a JavaScript object. 
+        </p>
+      </div>
+
+      <hr>
+
+      <h2>
+        JavaScript Objects 
+      </h2>
+
+      <div>
+        You can create a JavaScript object from a JSON object literal. 
+        <br>
+        Example:- 
+        <br>
+        <p id="demo1"></p>
+
+        <br>
+        Normally, you create a JavaScript object by parsing a JSON string. 
+        <br>
+        Example:- 
+        <br>
+        <p id="demo2"></p>
+      </div>
+
+      <hr>
+
+      <h2>
+        Accessing Object Values 
+      </h2>
+
+      <div>
+        You can access object values by using dot(.) notation. 
+        <br>
+        Example:- 
+        <br>
+        <p id="demo3"></p>
+
+        <br>
+        You can also access object values by using bracket ([]) notation. 
+        <br>
+        Example:- 
+        <br>
+        <p id="demo4"></p>
+      </div>
+
+      <hr>
+      <br>
+      <br>
+      <hr>
+
+      <h2>
+        Looping an Object 
+      </h2>
+
+      <div>
+        You can loop through object properties with a for-in loop. 
+        <br>
+        Example:- 
+        <br>
+        <p id="demo5"></p>
+
+        <br>
+        <br>
+        In a for-in loop, use the bracket notation to access the property <i>values</i>. 
+        <br>
+        Example:- 
+        <br>
+        <p id="demo6"></p>
+
+      </div>
+
+      <script>
+        const myObj1 = {"name":"John", "age":30, "car":null};
+        document.getElementById("demo1").innerHTML = myObj1.name;
+
+        const myJSON1 = '{"name":"John", "age":30, "car":null}';
+        const myObj2 = JSON.parse(myJSON1);
+        document.getElementById("demo2").innerHTML = myObj2.name;
+
+        const myJSON2 = '{"name":"John", "age":30, "car":null}';
+        const myObj3 = JSON.parse(myJSON2);
+        document.getElementById("demo3").innerHTML = myObj3.name;
+
+        const myJSON3 = '{"name":"John", "age":30, "car":null}';
+        const myObj4 = JSON.parse(myJSON3);
+        document.getElementById("demo4").innerHTML = myObj4["name"];
+
+        let text1 = "";
+        for(const x in myObj4) {
+            text1 += x + ", ";
+        }
+        document.getElementById("demo5").innerHTML = text1;
+
+        let text2 = "";
+        for(const x in myObj4) {
+            text2 += myObj4[x] + ", ";
+        }
+        document.getElementById("demo6").innerHTML = text2;
+      </script>
+    </body>
+</html>

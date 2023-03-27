@@ -1,0 +1,605 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            JavaScript Precedence 
+        </title>
+        <style>
+            .edit {
+                background-color:#f1f1f1;
+                color:red;
+            }
+            .edit1 {
+                background-color:rgba(255,255,0,0.3);
+                padding:20px;
+            }
+            body {
+                font-family:verdana, sans-serif;
+                font-size:20px;
+                line-height:1.5;
+            }
+            .table2 {
+                width:100%;
+                border:1px solid grey;
+                border-collapse:collapse;
+            }
+            .table2 td {
+                height:40px;
+                padding:10px;
+                border-bottom:1px solid grey;
+            }
+            .row {
+                background-color:rgba(255,255,0,0.3);
+                text-align:center;
+            }
+            
+        </style>
+    </head>
+    <body>
+        <h1>
+            JavaScript Operator Precedence 
+        </h1>
+        
+        <div>
+        <div style="background-color:rgba(0,255,0,0.3);padding:20px;">
+          Operator precedence describes the order in which operations are performed in an arithmetic expression. 
+          <br>
+          Multiplication (<span class="edit"> * </span>) and division (<span class="edit"> / </span>) have higher <strong>precedence</strong> than addition (<span class="edit"> + </span>) and subtraction (<span class="edit"> - </span>).  
+        </div>
+
+        <br>
+        <br>
+        As in traditional mathematics, multiplication is done first. 
+        <br>
+        Example:- 
+        <br>
+        <p id="demo1"></p>
+
+        <br>
+        <br>
+        When using parentheses, operations inside the parentheses are computed first. 
+        <br>
+        So Multiplication has precedence over addition. 
+        <br>
+        But parenthesis has precedence over multiplication. 
+        <br>
+        Example:- 
+        <br>
+        <p id="demo2"></p>
+
+        <br>
+        <br>
+        Operations with the same precedence (like * and /) are computed from left to right. 
+        <br>
+        Example:- 
+        <br>
+        <p id="demo3"></p>
+
+        <br>
+        <br>
+        <br>
+
+        <table class="table2">
+            <tr class="row">
+                <td colspan="4">
+                    <h1>
+                        Operator Precedence Values 
+                    </h1>
+                    
+                    <p>
+                        Expressions in parentheses are computed <strong>before</strong> the rest of the expression 
+                        <br>
+                        Function are executed <strong>before</strong> the result is used in the rest of the expression 
+                    </p>
+                </td>
+            </tr>
+            <tr>
+                <td>Val</td>
+                <td>Operator</td>
+                <td>Description</td>
+                <td>Example</td>
+            </tr>
+            <tr>
+                <td>18</td>
+                <td>()</td>
+                <td>Expression Grouping</td>
+                <td>(100 + 50) * 3</td>
+            </tr>
+            <tr>
+                <td>17</td>
+                <td>.</td>
+                <td>Member Of</td>
+                <td>person.name</td>
+            </tr>
+            <tr>
+                <td>17</td>
+                <td>[]</td>
+                <td>Member Of</td>
+                <td>person["name"]</td>
+            </tr>
+            <tr>
+                <td>17</td>
+                <td>?.</td>
+                <td>Optional Chaining ES2020</td>
+                <td>x ?. y</td>
+            </tr>
+            <tr>
+                <td>17</td>
+                <td>()</td>
+                <td>Function Call</td>
+                <td>myFunction()</td>
+            </tr>
+            <tr>
+                <td>17</td>
+                <td>new</td>
+                <td>New with Arguments</td>
+                <td>new Date("January 31, 2023")</td>
+            </tr>
+            <tr>
+                <td>16</td>
+                <td>new</td>
+                <td>New without Arguments</td>
+                <td>new Date()</td>
+            </tr>
+            <tr class="row">
+                <td colspan="4">
+                    <h1>
+                        Increment Operators 
+                    </h1>
+                    <p>
+                        Postfix increments are executed <strong>before</strong> prefix increments 
+                    </p>
+                </td>
+            </tr>
+            <tr>
+                <td>15</td>
+                <td>++</td>
+                <td>Postfix Increment</td>
+                <td>i++</td>
+            </tr>
+            <tr>
+                <td>15</td>
+                <td>--</td>
+                <td>Postfix Decrement</td>
+                <td>i--</td>
+            </tr>
+            <tr>
+                <td>14</td>
+                <td>++</td>
+                <td>Prefix Increment</td>
+                <td>++i</td>
+            </tr>
+            <tr>
+                <td>14</td>
+                <td>--</td>
+                <td>Prefix Decrement</td>
+                <td>--i</td>
+            </tr>
+            <tr class="row">
+                <td colspan="4">
+                    <h1>
+                        NOT Operators 
+                    </h1>
+                </td>
+            </tr>
+            <tr>
+                <td>14</td>
+                <td>!</td>
+                <td>Logical NOT</td>
+                <td>!(x==y)</td>
+            </tr>
+            <tr>
+                <td>14</td>
+                <td>~</td>
+                <td>Bitwise NOT</td>
+                <td>~x</td>
+            </tr>
+            <tr class="row">
+                <td colspan="4">
+                    <h1>
+                        Unary Operators 
+                    </h1>
+                </td>
+            </tr>
+            <tr>
+                <td>14</td>
+                <td>+</td>
+                <td>Unary Plus</td>
+                <td>+x</td>
+            </tr>
+            <tr>
+                <td>14</td>
+                <td>-</td>
+                <td>Unary Minus</td>
+                <td>-x</td>
+            </tr>
+            <tr>
+                <td>14</td>
+                <td>typeof</td>
+                <td>Data Type</td>
+                <td>typeof x</td>
+            </tr>
+            <tr>
+                <td>14</td>
+                <td>void</td>
+                <td>Evaluate Void</td>
+                <td>void(0)</td>
+            </tr>
+            <tr>
+                <td>14</td>
+                <td>delete</td>
+                <td>Property Delete</td>
+                <td>delete myCar.color</td>
+            </tr>
+            <tr class="row">
+                <td colspan="4">
+                   <h1>
+                    Arithmetic Operators 
+                   </h1>
+                   <p>
+                    Exponentiations are executed <strong>before</strong> multiplications 
+                    <br>
+                    Multiplications and divisions are executed <strong>before</strong> additions and subtractions 
+                   </p>
+                </td>
+            </tr>
+            <tr>
+                <td>13</td>
+                <td>**</td>
+                <td>Exponentiation ES2016</td>
+                <td>10 ** 2</td>
+            </tr>
+            <tr>
+                <td>12</td>
+                <td>*</td>
+                <td>Multiplication</td>
+                <td>10 * 5</td>
+            </tr>
+            <tr>
+                <td>12</td>
+                <td>/</td>
+                <td>Division</td>
+                <td>10 / 5</td>
+            </tr>
+            <tr>
+                <td>12</td>
+                <td>%</td>
+                <td>Division Remainder</td>
+                <td>10 % 5</td>
+            </tr>
+            <tr>
+                <td>11</td>
+                <td>+</td>
+                <td>Addition</td>
+                <td>10 + 5</td>
+            </tr>
+            <tr>
+                <td>11</td>
+                <td>-</td>
+                <td>Subtraction</td>
+                <td>10 - 5</td>
+            </tr>
+            <tr>
+                <td>11</td>
+                <td>+</td>
+                <td>Concatenation</td>
+                <td>"John" + "Doe"</td>
+            </tr>
+            <tr class="row">
+                <td colspan="4">
+                    <h1>
+                        Shift Operators 
+                    </h1>
+                </td>
+            </tr>
+            <tr>
+                <td>10</td>
+                <td>&lt;&lt;</td>
+                <td>Shift Left</td>
+                <td>x &lt;&lt; 2</td>
+            </tr>
+            <tr>
+                <td>10</td>
+                <td>&gt;&gt;</td>
+                <td>Shift Right (signed)</td>
+                <td>x &gt;&gt; 2</td>
+            </tr>
+            <tr>
+                <td>10</td>
+                <td>&gt;&gt;&gt;</td>
+                <td>Shift Right (unsigned)</td>
+                <td>x &gt;&gt;&gt; 2</td>
+            </tr>
+            <tr class="row">
+                <td colspan="4">
+                    <h1>
+                        Relational Operators 
+                    </h1>
+                </td>
+            </tr>
+            <tr>
+                <td>9</td>
+                <td>in</td>
+                <td>Property in Object</td>
+                <td>"PI" in Math</td>
+            </tr>
+            <tr>
+                <td>9</td>
+                <td>instanceof</td>
+                <td>Instance of Object</td>
+                <td>x instanceof Array</td>
+            </tr>
+            <tr class="row">
+                <td colspan="4">
+                    <h1>
+                        Comparison Operators 
+                    </h1>
+                </td>
+            </tr>
+            <tr>
+                <td>9</td>
+                <td>&lt;</td>
+                <td>Less than</td>
+                <td>x &lt; y</td>
+            </tr>
+            <tr>
+                <td>9</td>
+                <td>&lt;=</td>
+                <td>Less than or equal</td>
+                <td>x &lt;= y</td>
+            </tr>
+            <tr>
+                <td>9</td>
+                <td>&gt;</td>
+                <td>Greater than</td>
+                <td>x &gt; y</td>
+            </tr>
+            <tr>
+                <td>9</td>
+                <td>&gt;=</td>
+                <td>Greater than or equal</td>
+                <td>x &gt;= Array</td>
+            </tr>
+            <tr>
+                <td>8</td>
+                <td>==</td>
+                <td>Equal</td>
+                <td>x == y</td>
+            </tr>
+            <tr>
+                <td>8</td>
+                <td>===</td>
+                <td>Strict equal</td>
+                <td>x === y</td>
+            </tr>
+            <tr>
+                <td>8</td>
+                <td>!=</td>
+                <td>Unequal</td>
+                <td>x != y</td>
+            </tr>
+            <tr>
+                <td>8</td>
+                <td>!==</td>
+                <td>Strict unequal</td>
+                <td>x !== y</td>
+            </tr>
+            <tr class="row">
+                <td colspan="4">
+                    <h1>
+                        Bitwise Operators 
+                    </h1>
+                </td>
+            </tr>
+            <tr>
+                <td>7</td>
+                <td>&</td>
+                <td>Bitwise AND</td>
+                <td>x & y</td>
+            </tr>
+            <tr>
+                <td>6</td>
+                <td>^</td>
+                <td>Bitwise XOR</td>
+                <td>x ^ y</td>
+            </tr>
+            <tr>
+                <td>5</td>
+                <td>|</td>
+                <td>Bitwise OR</td>
+                <td>x | y</td>
+            </tr>
+            <tr class="row">
+                <td colspan="4">
+                    <h1>
+                        Logical Operators 
+                    </h1>
+                </td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td>&&</td>
+                <td>Logical AND</td>
+                <td>x && y</td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>||</td>
+                <td>Logical OR</td>
+                <td>x || y</td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>??</td>
+                <td>Nullish Coalescing ES2020</td>
+                <td>x ?? y</td>
+            </tr>
+            <tr class="row">
+                <td colspan="4">
+                    <h1>
+                        Conditional (ternary) Operator 
+                    </h1>
+                </td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>?:</td>
+                <td>Condition</td>
+                <td>?"yes":"no"</td>
+            </tr>
+            <tr class="row">
+                <td colspan="4">
+                    <h1>
+                        Assignment Operators 
+                    </h1>
+                    <p>
+                        Assignments are executed <strong>after</strong> other operations 
+                    </p>
+                </td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>=</td>
+                <td>Simple Assignment</td>
+                <td>x = y</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>:</td>
+                <td>Colon Assignment</td>
+                <td>x : y</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>+=</td>
+                <td>Addition Assignment</td>
+                <td>x += y</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>-=</td>
+                <td>Subtraction Assignment</td>
+                <td>x -= y</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>*=</td>
+                <td>Multiplication Assignment</td>
+                <td>x *= y</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>**=</td>
+                <td>Exponentiation Assignment</td>
+                <td>x **= y</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>/=</td>
+                <td>Division Assignment</td>
+                <td>x /= y</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>%=</td>
+                <td>Remainder Assignment</td>
+                <td>x %= y</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>&lt;&lt;=</td>
+                <td>Left Shift Assignment</td>
+                <td>x &lt;&lt;= y</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>&gt;&gt;=</td>
+                <td>Right Shift Assignment</td>
+                <td>x &gt;&gt;= y</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>&gt;&gt;&gt;=</td>
+                <td>Unsigned Right Shift</td>
+                <td>x &gt;&gt;&gt;= y</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>&=</td>
+                <td>Bitwise AND Assignment</td>
+                <td>x &= y</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>|=</td>
+                <td>Bitwise OR Assignment</td>
+                <td>x |= y</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>^=</td>
+                <td>Bitwise XOR Assignment</td>
+                <td>x ^= y</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>&&=</td>
+                <td>Logical AND Assignment</td>
+                <td>x &= y</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>||=</td>
+                <td>Logical OR Assignment</td>
+                <td>x ||= y</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>=&gt;</td>
+                <td>Arrow</td>
+                <td>x =&gt; y</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>yield</td>
+                <td>Pause / Resume</td>
+                <td>yield x</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>yield*</td>
+                <td>Delegate</td>
+                <td>yield* x</td>
+            </tr>
+
+            <tr>
+                <td>2</td>
+                <td>...</td>
+                <td>Spread</td>
+                <td>... x</td>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>,</td>
+                <td>Comma</td>
+                <td>x, y</td>
+            </tr>
+
+        </table>
+        </div>
+
+        <script>
+            let x = 100 + 50 * 3;
+            document.getElementById("demo1").innerHTML = 
+            "100 + 50 X 3 is:- " + x;
+
+            let y = (100 + 50) * 3;
+            document.getElementById("demo2").innerHTML = 
+            "(100 + 50) X 3 is:- " + y;
+
+            let z = 100 / 50 * 3;
+            document.getElementById("demo3").innerHTML = 
+            "100 / 50 X 3 is:- " + z;
+        </script>
+    </body>
+</html>

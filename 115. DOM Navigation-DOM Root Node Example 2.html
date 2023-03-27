@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en-in">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>
+            JavaScript HTML DOM Root Node Example 2 
+        </title>
+        <style>
+            html {
+                font-size:62.5%;
+            }
+            body {
+                font-family:verdana, sans-serif;
+                font-size:2rem;
+                line-height:1.5;
+            }
+            #demo1 {
+                background:coral;
+            }
+        </style>
+    </head>
+    <body>
+        <h2>
+            JavaScript HTML DOM
+        </h2>
+
+        <p>
+            Displaying document.documentElement 
+        </p>
+
+        <p id="demo1"></p>
+
+        <script>
+           document.getElementById("demo1").innerHTML = document.documentElement.innerHTML;
+        </script>
+    </body>
+</html>

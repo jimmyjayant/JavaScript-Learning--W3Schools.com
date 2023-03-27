@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            The JavaScript this Keyword 
+        </title>
+        <style>
+            .edit {
+                background-color:#f1f1f1;
+                color:red;
+            }
+            .edit1 {
+                background-color:rgba(255,255,0,0.3);
+                padding:20px;
+            }
+            body {
+                font-family:verdana, sans-serif;
+                font-size:20px;
+                line-height:1.5;
+            }
+            .table1 {
+                width:100%;
+                border:1px solid #ddd;
+                border-collapse:collapse;
+            }
+            .table1 tr {
+                height:40px;
+            }
+            .table1 tr:nth-child(even) {
+                background-color:#f1f1f1;
+            }
+            .table1 td {
+                padding:10px;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>
+            The JavaScript this Keyword 
+        </h1>
+
+        <div>
+            Example:- 
+            <br>
+            In this example, <strong>this</strong> refers to the <strong>person</strong> object. 
+            <br>
+            Because <strong>fullName</strong> is a method of the person object. 
+            <br>
+            <p id="demo1"></p>
+        </div>
+
+        <hr>
+
+        <h2>
+            What is this? 
+        </h2>
+
+        <div>
+            In JavaScript, the <span class="edit">this</span> keyword refers to an <strong>object</strong>. 
+            <br>
+            <strong>Which</strong> object depends on how <span class="edit">this</span> is being invoked (used or called). 
+            <br>
+            The <span class="edit">this</span> keyword refers to different objects depending on how it is used: 
+            <br>
+            <br>
+            <table class="table1">
+                <tr>
+                    <td>In an object method, <span class="edit">this</span> refers to the <strong>object</strong>.</td>
+                </tr>
+                <tr>
+                    <td>Alone, <span class="edit">this</span> refers to the <strong>global object</strong>.</td>
+                </tr>
+                <tr>
+                    <td>In a function, <span class="edit">this</span> refers to the <strong>global object</strong>.</td>
+                </tr>
+                <tr>
+                    <td>In a function, in strict mode, <span class="edit">this</span> is <span class="edit">undefined</span>.</td>
+                </tr>
+                <tr>
+                    <td>In an event, <span class="edit">this</span> refers to the <strong>element</strong> that received the event.</td>
+                </tr>
+                <tr>
+                    <td>Methods like <span class="edit">call()</span>, <span class="edit">apply()</span>, and <span class="edit">bind()</span> can refer <span class="edit">this</span> to <strong>any object</strong>.</td>
+                </tr>
+            </table>
+
+            <br>
+
+            <div class="edit1">
+                <span style="font-size:30px;font-weight:bold;">Note</span>
+                <br>
+                <span class="edit">this</span> is not a variable. It is a keyword. You cannot change the value of <span class="edit">this</span>. 
+            </div>
+        </div>
+
+        <hr>
+
+        <h2>
+            this in a Method 
+        </h2>
+
+        <div>
+            When used in an object method, <span class="edit">this</span> refers to the <strong>object</strong>. 
+            <br>
+            In the example on the top of this page, <span class="edit">this</span> refers to the <strong>person</strong> object. 
+            <br>
+            Because the <strong>fullName</strong> method is a method of the <strong>person</strong> object. 
+            <br>
+            Example:- 
+            <br>
+            In the below example, <strong>this</strong> refers to the <strong>course</strong> object. 
+            <br>
+            Because <strong>generate</strong> is a method of the course object. 
+            <br>
+            <p id="demo2"></p>
+        </div>
+
+        <hr>
+
+        <h2>
+            this Alone 
+        </h2>
+
+        <div>
+            When used alone, <span class="edit">this</span> refers to the <strong>global object</strong>. 
+            <br>
+            Because <span class="edit">this</span> is running in the global scope. 
+            <br>
+            In a browser window, the global object is <span class="edit">[object Window]</span>. 
+            <br>
+            Example:- 
+            <br>
+            <p id="demo3"></p>
+
+            <br>
+            <br>
+
+            In <strong>strict mode</strong>, when used alone, <span class="edit">this</span> refers to the <strong>global object</strong>. 
+            <br>
+            Example:- 
+            <br>
+            <p id="demo4"></p>
+        </div>
+
+        <hr>
+
+        <h2>
+            this in a Function (Default) 
+        </h2>
+
+        <div>
+            In a function, the <strong>global object</strong> is the default binding for <span class="edit">this</span>. 
+            <br>
+            In a browser window the global object is <span class="edit">[object Window]</span>. 
+            <br>
+            Example:- 
+            <br>
+            <p id="demo5"></p>
+        </div>
+
+        <hr>
+        <br>
+        <br>
+        <hr>
+
+        <h2>
+            this in a Function (Strict) 
+        </h2>
+
+        <div>
+            JavaScript <strong>strict mode</strong> does not allow default binding. 
+            <br>
+            So, when used in a function, in strict mode, <span class="edit">this</span> is <span class="edit">undefined</span>. 
+            <br>
+            Example:- 
+            <br>
+            <p id="demo6"></p>
+        </div>
+
+        <hr>
+
+        <h2>
+            this in Event Handlers 
+        </h2>
+
+        <div>
+            In HTML event handlers, <span class="edit">this</span> refers to the HTML element that received the event. 
+            <br>
+            Example:- 
+            <br>
+            <button id="demo7" onclick="this.style.display='none'">Click to Remove Me!</buton>
+            <br>
+            <button onclick="document.getElementById('demo7').style.display='inline-block'">Click to Appear!</button>
+        </div>
+
+        <hr>
+
+        <h2>
+            Object Method Binding 
+        </h2>
+
+        <div>
+            In these examples, <span class="edit">this</span> is the <strong>person object</strong>. 
+            <br>
+            Example:- 
+            <br>
+            <p id="demo8"></p>
+
+            <br>
+            <br>
+            Example:- 
+            <br>
+            <p id="demo9"></p>
+
+            <br>
+            i.e. <strong>this.firstName</strong> is the <strong>firstName</strong> property of <strong>this</strong> (the person object). 
+        </div>
+
+        <hr>
+
+        <h2>
+            Explicit Function Binding 
+        </h2>
+
+        <div>
+            The <span class="edit">call()</span> and <span class="edit">apply()</span> methods are predefined JavaScript methods. 
+            <br>
+            They can both be used to call an object method with another object as argument. 
+            <br>
+            The example below calls person1.fullName with person2 as an argument, <strong>this</strong> refers to person2, even if fullName is a method of person1. 
+            <br>
+            Example:- 
+            <br>
+            <p id="demo10"></p>
+        </div>
+
+        <hr>
+
+        <h2>
+            Function Borrowing 
+        </h2>
+
+        <div>
+            With the <span class="edit">bind()</span> method, an object can borrow a method from another object. 
+            <br>
+            This example creates 2 objects (person and member). 
+            <br>
+            The member object borrows the fullname method from the person object. 
+            <br>
+            Example:- 
+            <br>
+            <p id="demo11"></p> 
+        </div>
+
+        <hr>
+
+        <h2>
+            This Precedence 
+        </h2>
+
+        <div>
+            To determine which object <span class="edit">this</span> refers to; use the following precedence of order. 
+            <br>
+            <table class="table1">
+                <tr>
+                    <td>Precedence</td>
+                    <td>Object</td>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>bind()</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>apply() and call()</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>Object method</td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td>Global scope</td>
+                </tr>
+            </table>
+
+            <br>
+            <br>
+
+            Is <span class="edit">this</span> in a function being called using bind()? 
+            <br>
+            Is <span class="edit">this</span> in a function being called using apply()?
+            <br>
+            Is <span class="edit">this</span> in a function being called using call()? 
+            <br>
+            Is <span class="edit">this</span> in an object function (method)?
+            <br>
+            Is <span class="edit">this</span> in a function in the global scope. 
+        </div>
+
+        <script>
+            //Create an object: 
+            const person = {
+                firstName: "John",
+                lastName: "Doe",
+                id:5566,
+                fullName: function() {
+                    return this.firstName + " " + this.lastName;
+                }
+            };
+
+            //Display data from the object: 
+            document.getElementById("demo1").innerHTML = person.fullName();
+
+            //Create an object
+            const course = {
+                name: "JavaScript",
+                source: "W3Schools.com",
+                generate: function() {
+                    return "Course Name is:- " + this.name + 
+                    " and " + "the source is:- " + this.source; 
+                }
+            };
+
+            //Display data from the object: 
+            document.getElementById("demo2").innerHTML = course.generate();
+            
+            //this keyword in Alone 
+            let x = this;
+            document.getElementById("demo3").innerHTML = x;
+
+            //this keyword Alone in strict mode
+            myFunction1();
+            function myFunction1()
+            {
+                "use strict";
+                let y = this;
+                document.getElementById("demo4").innerHTML = x;
+            }
+
+            //this in a Function (Default)
+            document.getElementById("demo5").innerHTML = myFunction2();
+            function myFunction2()
+            {
+                return this;
+            }
+
+            //this in a Function (Strict mode)
+            document.getElementById("demo6").innerHTML = myFunction3();
+            function myFunction3()
+            {
+                "use strict";
+                return this;
+            }
+
+            //Create an object
+            const person1 = {
+                firstName: "Jimmy",
+                lastName: "Jayant",
+                age:29,
+                name: function() {
+                    return this;
+                },
+                fullName: function() {
+                    return this.firstName + " " + this.lastName + " " + this.age;
+                }
+            };
+
+
+            //Display data from the object: 
+            document.getElementById("demo8").innerHTML = person1.name();
+
+            //Display data from the object: 
+            document.getElementById("demo9").innerHTML = person1.fullName();
+
+            const person2 = {
+                firstName: "Simmy", 
+                lastName: "Prashant",
+                age:27
+            };
+
+            let y = person1.fullName.call(person2);
+            document.getElementById("demo10").innerHTML = y;
+
+            const member = {
+                firstName: "Nimmy",
+                lastName: "Kaur",
+                age:25
+            };
+
+            let fullname = person1.fullName.bind(member);
+            document.getElementById("demo11").innerHTML = fullname();
+        </script>
+    </body>
+</html>

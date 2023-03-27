@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            JavaScript For Of 
+        </title>
+        <style>
+            .edit {
+                background-color:#f1f1f1;
+                color:red;
+            }
+            .edit1 {
+                background-color:rgba(255,255,0,0.3);
+                padding:20px;
+            }
+            body {
+                font-family:verdana, sans-serif;
+                font-size:20px;
+                line-height:1.5;
+            }
+            .table1 {
+                width:100%;
+                border:1px solid #ddd;
+                border-collapse:collapse;
+            }
+            .table1 tr {
+                height:40px;
+            }
+            .table1 tr:nth-child(even) {
+                background-color:#f1f1f1;
+            }
+            .table1 td {
+                text-align:center;
+                padding:10px;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>
+            JavaScript For Of 
+        </h1>
+
+        <hr>
+
+        <h2>
+            The For Of Loop 
+        </h2>
+
+        <p>
+            The JavaScript <span class="edit">for of</span> statement loops through the values of an iterable object. 
+            <br>
+            It lets you loop over iterable data structures such as Arrays, Strings, Maps, NodeLists, and more. 
+            <br>
+            Syntax:- 
+            <br>
+            <p class="edit1">
+                <span style="color:blue">for</span> (variable of iterable) {
+                    <br>
+                    <span style="color:green"><i>//code block to be executed </i></span>
+                    <br>
+                }
+            </p>
+            <br>
+            <strong>variable</strong> - For every iteration the value of the next property is assigned to the variable. <i>Variable</i> can be declared with <span class="edit">const</span>, <span class="edit">let</span>, or <span class="edit">var</span>. 
+            <br>
+            <br>
+            <strong>iterable</strong> - An object that has iterable properties. 
+        </p>
+
+        <hr>
+
+        <h2>
+            Browser Support 
+        </h2>
+
+        <p>
+            <strong>For/of</strong> was added to JavaScript in 2015 (ES6). 
+            <br>
+            Safari 7 was the first browser to support for of:- 
+            <br>
+            <br>
+            <table class="table1">
+                <tr>
+                    <td><img src="Image4.svg.png" height="38" width="38" alt="Google Chrome"></td>
+                    <td><img src="Image5.png" height="38" width="38" alt="Microsoft Edge"></td>
+                    <td><img src="Image6.png" height="38" width="38" alt="Mozilla Firefox"></td>
+                    <td><img src="Image7.png" height="38" width="38" alt="Apple Safari"></td>
+                    <td><img src="Image8.png" height="38" width="38" alt="Opera"></td>
+                </tr>
+                <tr>
+                    <td>Chrome 38</td>
+                    <td>Edge 12</td>
+                    <td>Firefox 51</td>
+                    <td>Safari 7</td>
+                    <td>Opera 25</td>
+                </tr>
+                <tr>
+                    <td>Oct 2014</td>
+                    <td>Jul 2015</td>
+                    <td>Oct 2016</td>
+                    <td>Oct 2013</td>
+                    <td>Oct 2014</td>
+                </tr>
+            </table>
+
+            <br>
+            <br>
+
+            <strong>For/of</strong> is not supported in Internet Explorer. 
+        </p>
+
+        <hr>
+
+        <h2>
+            Looping over an Array 
+        </h2>
+
+        <p>
+            Example:- 
+            <br>
+            <p id="demo1"></p>
+        </p>
+
+        <hr>
+
+        <h2>
+            Looping over a String 
+        </h2>
+
+        <p>
+            Example:- 
+            <br>
+            Looping over a String "JavaScript":- 
+            <br>
+            <p id="demo2"></p>
+
+            <br>
+            <br>
+
+            <hr>
+
+            <br>
+
+            Example:- 
+            <br>
+            Looping over the Alphabet String:- 
+            <br>
+            <p id="demo3"></p>
+        </p>
+
+        <script>
+        const cars = ["BMW", "Audi", "Maruti", "Toyota", "Honda"];
+        let text1 = "";
+        for(let x of cars)
+        {
+            text1 += x + "<br>";
+        }
+        document.getElementById("demo1").innerHTML = text1;
+
+        let language = "JavaScript";
+        let text2 = "";
+        for(let y of language)
+        {
+            text2 += y + "<br>";
+        }
+        document.getElementById("demo2").innerHTML = text2;
+
+        let alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+        let text3 = "";
+        for(let z of alphabet)
+        {
+            text3 += z + "<br>";
+        }
+        document.getElementById("demo3").innerHTML = text3;
+        </script>
+    </body>
+</html>

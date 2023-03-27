@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en-in">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>
+            JavaScript HTML DOM Node Lists 
+        </title>
+        <style>
+            html {
+                font-size:62.5%;
+            }
+            body {
+                font-family:verdana, sans-serif;
+                font-size:2rem;
+                line-height:1.5;
+            }
+            .edit {
+                background-color:#f1f1f1;
+                color:red;
+            }
+            .edit1 {
+                background-color:rgba(255,255,0,0.3);
+                padding:2rem;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>
+            JavaScript HTML DOM Node Lists 
+        </h1>
+
+        <hr>
+
+        <h2>
+            The HTML DOM NodeList Object 
+        </h2>
+
+        <div>
+            A <span class="edit">NodeList</span> object is a list (collection) of nodes extracted from a document. 
+            <br>
+            A <span class="edit">NodeList</span> object is almost the same as a <span class="edit">HTMLCollection</span> object. 
+            <br>
+            Some (older) browsers return a NodeList object instead of a HTMLCollection for methods like <span class="edit">getElementsByClassName()</span>. 
+            <br>
+            All browsers return a NodeList object for the property <span class="edit">childNodes</span>. 
+            <br>
+            Most browsers return a NodeList object for the method <span class="edit">querySelectorAll()</span>. 
+            <br>
+            The following code selects all <span class="edit">&lt;p&gt;</span> nodes in a document. 
+            <br>
+            Example:- 
+            <br>
+            <p class="edit1">
+                const myNodeList1 = document.querySelectorAll("p"); 
+            </p>
+            <br>
+            The elements in the NodeList can be accessed by an index number. 
+            <br>
+            To access the second &lt;p&gt; node you can write:- 
+            <br>
+            <p>Hello World!</p>
+
+            <p>Hello Norway!</p>
+
+            <p id="demo1"></p>
+
+            <br>
+
+            <strong>Note: </strong>The index starts at 0. 
+        </div>
+
+        <hr>
+
+        <h2>
+            HTML DOM Node List Length 
+        </h2>
+
+        <div>
+            The <span class="edit">length</span> property defines the number of nodes in a node list. 
+            <br>
+            Example:- 
+            <br>
+            <p id="demo2"></p>
+
+            <br>
+            The <span class="edit">length</span> property is useful when you want to loop through the nodes in a node list. 
+            <br>
+            Example:- 
+            <br>
+            <b>
+                Change the color of all &lt;p&gt; elements in a node list:- 
+            </b>
+            <br>
+            <p>
+                Click the button to change the color of all p elements. 
+            </p>
+
+            <button onclick="myFunction1()">Try it</button>
+        </div>
+
+        <hr>
+        <br>
+        <br>
+        <hr>
+
+        <h2>
+            The Difference Between a HTMLCollection and a NodeList 
+        </h2>
+
+        <div>
+            A <strong>NodeList</strong> and a <strong>HTMLCollection</strong> is very much the same thing. 
+            <br>
+            Both are array-like collections (lists) of nodes (elements) extracted from a document. The nodes can be accessed by index numbers. The index starts at 0. 
+            <br>
+            Both have a <strong>length</strong> property that returns the number of elements in the list (collection). 
+            <br>
+            A HTMLCollection is a collection of <strong>document elements</strong>. 
+            <br>
+            A NodeList is a collection of <strong>document nodes</strong> (element nodes, attribute nodes, and text nodes). 
+            <br>
+            HTMLCollection items can be accessed by their name, id, or index number. 
+            <br>
+            NodeList items can only be accessed by their index number. 
+            <br>
+            A HTMLCollection is always a <strong>live</strong> collection. Example:- If you add a &lt;li&gt; element to a list in the DOM, the list in the HTMLCollection will also change. 
+            <br>
+            A NodeList is most often a <strong>static</strong> collection. Example:- If you add a &lt;li&gt; element to a list in the DOM, the list in NodeList will not change. 
+            <br>
+            The <span class="edit">getElementsByClassName()</span> and <span class="edit">getElementsByTagName()</span> methods return a live HTMLCollection. 
+            <br>
+            The <span class="edit">querySelectorAll()</span> method returns a static NodeList. 
+            <br>
+            The <span class="edit">childNodes</span> property returns a live NodeList. 
+        </div>
+
+        <hr>
+
+        <div class="edit1">
+            <h2>
+                Not an Array! 
+            </h2>
+
+            <p>
+                A NodeList may look like an array, but it is not. 
+                <br>
+                You can loop through a NodeList and refer to its nodes by index. 
+                <br>
+                But, you cannot use Array methods like push(), pop(), or join() on a NodeList. 
+            </p>
+        </div>
+
+        <script>
+            const myNodeList1 = document.querySelectorAll("p"); 
+
+            document.getElementById("demo1").innerHTML = 
+            "The innerHTML of the second paragraph is:- " + myNodeList1[1].innerHTML;
+
+            document.getElementById("demo2").innerHTML = 
+            "This document contains " + myNodeList1.length + " paragraphs.";
+
+            function myFunction1() {
+                for(let i = 0; i < myNodeList1.length; i++) {
+                    myNodeList1[i].style.color = "red";
+                }
+            }
+        </script>
+    </body>
+</html>

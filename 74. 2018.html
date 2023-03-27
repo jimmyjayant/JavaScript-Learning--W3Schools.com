@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            ECMAScript 2018 
+        </title>
+        <style>
+            .edit {
+                background-color:#f1f1f1;
+                color:red;
+            }
+            .edit1 {
+                background-color:rgba(255,255,0,0.3);
+                padding:20px;
+            }
+            body {
+                font-family:verdana, sans-serif;
+                font-size:20px;
+                line-height:1.5;
+            }
+            .table1 {
+                width:100%;
+                border:1px solid #ddd;
+                border-collapse:collapse;
+            }
+            .table1 tr {
+                height:40px;
+            }
+            .table1 td {
+                text-align:center;
+                padding:10px;
+                border:1px solid #ddd;
+            }
+            .table1 tr:nth-child(even) {
+                background-color:#f1f1f1;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>
+            ECMAScript 2018 
+        </h1>
+
+        <div style="background-color:rgba(0,255,0,0.2);padding:20px;">
+        Original JavaScript version numbers were ES5 (2009) and ES6 (2015). 
+        <br>
+         Since 2016, versions are named by year:- ECMAScript 2016, 2017, 2018, 2019. 
+        </div>
+
+        <hr>
+
+        <h2>
+            New Features in ECMAScript 2018 
+        </h2>
+
+        <div>
+            This chapter introduces the new features in ECMAScript 2018. 
+            <br>
+            <ul>
+                <li>Asynchronous Iteration</li>
+                <li>Promise Finally</li>
+                <li>Object Rest Properties</li>
+                <li>New RegExp Features</li>
+                <li>JavaScript Shared Memory</li>
+            </ul>
+        </div>
+
+        <hr>
+
+        <h2>
+            JavaScript Asynchronous Iteration 
+        </h2>
+
+        <div>
+            ECMAScript 2018 added asynchronous iterators and iterables. 
+            <br>
+            With asynchronous iterables, we can use the <span class="edit">await</span> keyword in <span class="edit">for/of</span> loops. 
+
+            <br>
+            Example:- 
+            <br>
+            <p class="edit1">
+                for await () {} 
+            </p>
+
+            <br>
+            <br>
+            JavaScript asynchronous iteration is supported in all modern browsers since January 2020. 
+            <br>
+            <br>
+            <table class="table1">
+                <tr>
+                    <td><img src="Image4.svg.png" height="38" width="38" alt="Google Chrome"></td>
+                    <td><img src="Image5.png" height="38" width="38" alt="Microsoft Edge"></td>
+                    <td><img src="Image6.png" height="38" width="38" alt="Mozilla Firefox"></td>
+                    <td><img src="Image7.png" height="38" width="38" alt="Apple Safari"></td>
+                    <td><img src="Image8.png" height="38" width="38" alt="Opera"></td>
+                </tr>
+                <tr>
+                    <td>Chrome 63</td>
+                    <td>Edge 79</td>
+                    <td>Firefox 57</td>
+                    <td>Safari 11</td>
+                    <td>Opera 50</td>
+                </tr>
+                <tr>
+                    <td>Dec 2017</td>
+                    <td>Jan 2020</td>
+                    <td>Nov 2017</td>
+                    <td>Sep 2017</td>
+                    <td>Jan 2018</td>
+                </tr>
+            </table>
+        </div>
+
+        <hr>
+
+        <h2>
+            JavaScript Promise.finally 
+        </h2>
+
+        <div>
+            ECMAScript 2018 finalizes the full implementation of the Promise object with <span class="edit">Promise.finally</span>. 
+            <br>
+            Example:- 
+            <br>
+            <p class="edit1">
+                let myPromise = new Promise();
+
+                <br>
+                <br>
+
+                myPromise.then();
+                <br>
+                myPromise.catch();
+                <br>
+                myPromise.finally();
+            </p>
+
+            <br>
+            <br>
+            <span class="edit">Promise.finally</span> is supported in all modern browsers since November 2018. 
+            <br>
+            <br>
+            <table class="table1">
+                <tr>
+                    <td><img src="Image4.svg.png" height="38" width="38" alt="Google Chrome"></td>
+                    <td><img src="Image5.png" height="38" width="38" alt="Microsoft Edge"></td>
+                    <td><img src="Image6.png" height="38" width="38" alt="Mozilla Firefox"></td>
+                    <td><img src="Image7.png" height="38" width="38" alt="Apple Safari"></td>
+                    <td><img src="Image8.png" height="38" width="38" alt="Opera"></td>
+                </tr>
+                <tr>
+                    <td>Chrome 63</td>
+                    <td>Edge 18</td>
+                    <td>Firefox 58</td>
+                    <td>Safari 11.1</td>
+                    <td>Opera 50</td>
+                </tr>
+                <tr>
+                    <td>Dec 2017</td>
+                    <td>Nov 2018</td>
+                    <td>Jan 2018</td>
+                    <td>Mar 2018</td>
+                    <td>Jan 2018</td>
+                </tr>
+            </table>
+        </div>
+
+        <hr>
+        <br>
+        <br>
+        <hr>
+
+        <h2>
+            JavaScript Object Rest Properties 
+        </h2>
+
+        <div>
+            ECMAScript 2018 added rest properties. 
+            <br>
+            This allows us to destruct an object and collect the leftovers onto a new object. 
+            <br>
+            Example:- 
+            <br>
+            <p class="edit1">
+                let { x, y, ...z} = { x: 1, y: 2, a: 3, b: 4 };
+                <br>
+                x; // 1
+                <br>
+                y; // 2
+                <br>
+                z; // { a: 3, b: 4 } 
+            </p>
+
+            <br>
+            <br>
+            Object rest properties is supported in all modern browsers since January 2020. 
+            <br>
+            <br>
+            <table class="table1">
+                <tr>
+                    <td><img src="Image4.svg.png" height="38" width="38" alt="Google Chrome"></td>
+                    <td><img src="Image5.png" height="38" width="38" alt="Microsoft Edge"></td>
+                    <td><img src="Image6.png" height="38" width="38" alt="Mozilla Firefox"></td>
+                    <td><img src="Image7.png" height="38" width="38" alt="Apple Safari"></td>
+                    <td><img src="Image8.png" height="38" width="38" alt="Opera"></td>
+                </tr>
+                <tr>
+                    <td>Chrome 60</td>
+                    <td>Edge 79</td>
+                    <td>Firefox 55</td>
+                    <td>Safari 11.1</td>
+                    <td>Opera 47</td>
+                </tr>
+                <tr>
+                    <td>Jul 2017</td>
+                    <td>Jan 2020</td>
+                    <td>Aug 2017</td>
+                    <td>Mar 2018</td>
+                    <td>Aug 2017</td>
+                </tr>
+            </table>
+        </div>
+
+        <hr>
+
+        <h2>
+            New JavaScript RegExp Features 
+        </h2>
+
+        <div>
+            ECMAScript 2018 added 4 new RegExp features. 
+            <br>
+            <ul>
+                <li>Unicode Property Escapes (\p{...})</li>
+                <li>Lookbehind Assertions (?&lt;=) and (?&lt;!)</li>
+                <li>Named Capture Groups</li>
+                <li>s (dotAll) Flag</li>
+            </ul>
+
+            <br>
+
+            The new RegExp features is supported in all modern browsers since June 2020. 
+            <br>
+            <br>
+            <table class="table1">
+                <tr>
+                    <td><img src="Image4.svg.png" height="38" width="38" alt="Google Chrome"></td>
+                    <td><img src="Image5.png" height="38" width="38" alt="Microsoft Edge"></td>
+                    <td><img src="Image6.png" height="38" width="38" alt="Mozilla Firefox"></td>
+                    <td><img src="Image7.png" height="38" width="38" alt="Apple Safari"></td>
+                    <td><img src="Image8.png" height="38" width="38" alt="Opera"></td>
+                </tr>
+                <tr>
+                    <td>Chrome 64</td>
+                    <td>Edge 79</td>
+                    <td>Firefox 78</td>
+                    <td>Safari 12</td>
+                    <td>Opera 51</td>
+                </tr>
+                <tr>
+                    <td>Jan 2018</td>
+                    <td>Jan 2020</td>
+                    <td>Jun 2020</td>
+                    <td>Sep 2018</td>
+                    <td>Feb 2018</td>
+                </tr>
+            </table>
+        </div>
+
+        <hr>
+
+        <h2>
+            JavaScript Threads 
+        </h2>
+
+        <div>
+            In JavaScript you use the Web Workers API to create threads. 
+            <br>
+            Worker threads are used to execute code in the background so that the main program can continue execution. 
+            <br>
+            Worker threads run simultaneously with the main program. Simultaneous execution of different parts of a program can be time-saving. 
+        </div>
+
+        <hr>
+
+        <h2>
+            JavaScript Shared Memory 
+        </h2>
+
+        <div>
+            Shared memory is a feature that allows threads (different parts of a program) to access and update the same data in the same memory. 
+            <br>
+            Instead of passing data between threads, you can pass a SharedArrayBuffer object that points to the memory where data is saved. 
+        </div>
+
+        <hr>
+
+        <h2>
+            SharedArrayBuffer 
+        </h2>
+
+        <div>
+            A SharedArrayBuffer object represents a fixed-length raw binary data buffer similar to the ArrayBuffer object. 
+        </div>
+    </body>
+</html>

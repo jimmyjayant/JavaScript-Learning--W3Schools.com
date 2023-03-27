@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en-in">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>
+            JSON - Introduction 
+        </title>
+        <style>
+            html {
+                font-size:calc(10px + 0.390625vw);
+            }
+
+            body {
+                font-size:1rem;
+                font-family:verdana, sans-serif;
+                line-height:1.5;
+            }
+
+            .edit {
+                background-color:#f1f1f1;
+                color:red;
+            }
+
+            .edit1 {
+                background-color:rgba(255,255,0,0.3);
+                padding:2rem;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>
+            JSON - Introduction 
+        </h1>
+
+        <div>
+        <table>
+            <tr>
+                <td>
+                    <img src="Image15.jpg" alt="JSON Image">
+                </td>
+                <td>
+                    <p>
+                      JSON stands for <b>J</b>ava<b>S</b>cript <b>O</b>bject <b>N</b>otation 
+                      <br>
+                      JSON is a <b>text format</b> for storing and transporting data 
+                      <br>
+                      JSON is "self-describing" and easy to understand 
+                    </p>
+                </td>
+            </tr>
+        </table>
+        </div>
+
+        <hr>
+
+        <h2>
+            JSON Example 
+        </h2>
+
+        <div>
+            This example is a JSON string: 
+            <br>
+            <p class="edit1">
+                '{"name":"John", "age":30, "car":null}' 
+            </p>
+
+            <br>
+            It defines an object with 3 properties:- 
+            <br>
+            <ul>
+                <li>name</li>
+                <li>age</li>
+                <li>car</li>
+            </ul>
+
+            <br>
+            Each property has a value. 
+            <br>
+            If you parse the JSON string with a JavaScript program, you can access the data as an object. 
+            <br>
+            <p class="edit1">
+                let personName = obj.name; 
+                <br>
+                let personAge = obj.age; 
+            </p>
+        </div>
+
+        <hr>
+
+        <h2>
+            What is JSON? 
+        </h2>
+
+        <div>
+            <ul>
+                <li>JSON stands for <b>J</b>ava<b>S</b>cript <b>O</b>bject <b>N</b>otation</li>
+                <li>JSON is a lightweight data-interchange format</li>
+                <li>JSON is plain text written in JavaScript object notation</li>
+                <li>JSON is used to send data between computers</li>
+                <li>JSON is language independent*</li>
+            </ul>
+
+            <br>
+
+            <p class="edit1">
+                * 
+                <br>
+                The JSON syntax is derived from JavaScript object notation, but the JSON format is text only. 
+                <br>
+                Code for reading and generating JSON exists in many programming languages. 
+            </p>
+
+            <br>
+            The JSON format was originally specified by <a href="http://www.crockford.com/" target="_blank">Douglas Crockford</a>. 
+        </div>
+
+        <hr>
+        <br>
+        <br>
+        <hr>
+
+        <h2>
+            Why Use JSON? 
+        </h2>
+
+        <div>
+            The JSON format is syntactically similar to the code for creating JavaScript objects. Because of this, a JavaScript program can easily convert JSON data into JavaScript objects. 
+            <br>
+            Since the format is text only, JSON data can easily be sent between computers, and used by any programming language. 
+            <br>
+            JavaScript has a built in function for converting JSON strings into JavaScript objects: 
+            <br>
+            <span class="edit">JSON.parse()</span>
+            <br>
+            JavaScript also has a built in function for converting an object into a JSON string: 
+            <br>
+            <span class="edit">JSON.stringify()</span>
+            <br>
+            <p class="edit1">
+                You can receive pure text from a server and use it as a JavaScript object. 
+                <br>
+                You can send a JavaScript object to a server in pure text format. 
+                <br>
+                You can work with data as JavaScript objects, with no complicated parsing and translations. 
+            </p>
+        </div>
+
+        <hr>
+
+        <h2>
+            Storing Data 
+        </h2>
+
+        <div>
+            When storing data, the data has to be a certain format, and regardless of where you choose to store it, <i>text</i> is always one of the legal formats. 
+            <br>
+            JSON makes it possible to store JavaScript objects as text. 
+        </div>
+    </body>
+</html>

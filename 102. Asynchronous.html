@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en-in">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>
+            Asynchronous JavaScript 
+        </title>
+        <style>
+            html {
+                font-size:62.5%;
+            }
+            body {
+                font-family:verdana, sans-serif;
+                font-size:2rem;
+                line-height:1.5;
+            }
+            .edit {
+                background-color:#f1f1f1;
+                color:red;
+            }
+            .edit1 {
+                background-color:rgba(255,255,0,0.3);
+                padding:2rem;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>
+            Asynchronous JavaScript 
+        </h1>
+
+        <div style="background-color:rgba(0,255,0,0.2);padding:2rem;text-align:center;">
+        <span style="font-size:3rem;font-style:italic;">"I will finish later!"</span>
+        <br>
+        Functions running in <strong>parallel</strong> with other functions are called <strong>asynchronous</strong> 
+        <br>
+        A good example is JavaScript setTimeout() 
+        </div>
+
+        <hr>
+
+        <h2>
+            Asynchronous JavaScript 
+        </h2>
+
+        <div>
+            The examples used in the previous chapter, was very simplified. 
+            <br>
+            The purpose of the examples was to demonstrate the syntax of callback functions. 
+            <br>
+            Example:- 
+            <br>
+            <p id="demo1"></p>
+            <br>
+            In the example above, <span class="edit">myDisplayer1</span> is the name of a function. 
+            <br>
+            It is passed to <span class="edit">myCalculator1()</span> as an argument. 
+            <br>
+            <p class="edit1">
+                In the real world, callbacks are most often used with asynchronous functions. 
+                <br>
+                A typical example is JavaScript <span class="edit">setTimeout()</span>. 
+            </p>
+        </div>
+
+        <hr>
+
+        <h2>
+            Waiting for a Timeout 
+        </h2>
+
+        <div>
+            When using the JavaScript function <span class="edit">setTimeout()</span>, you can specify a callback function to be executed on time-out. 
+            <br>
+            Example:- 
+            <br>
+            <p id="demo2"></p>
+            <br>
+            In the example above, <span class="edit">myFunction1</span> is used as a callback. 
+            <br>
+            <span class="edit">myFunction1</span> is passed to <span class="edit">setTimeout()</span> as an argument. 
+            <br>
+            3000 is the number of milliseconds before time-out, so <span class="edit">myFunction1()</span> will be called after 3 seconds. 
+            <br>
+            <br>
+            <div class="edit1">
+                <span style="font-size:3rem;">Note</span>
+                <br>
+                When you pass a function as an argument, remember not to use parenthesis. 
+                <br>
+                Right: setTimeout(myFunction1, 3000); 
+                <br>
+                Wrong: <del>setTimeout(myFunction1(), 3000);</del>
+            </div>
+            <br>
+            Instead of passing the name of the function as an argument to another function, you can always pass a whole function instead. 
+            <br>
+            Example:- 
+            <br>
+            <p id="demo3"></p>
+            <br>
+            In the example above, <span class="edit">function() {myFunction2("I Love You!");}</span> is used as a callback. It is a complete function. The complete function is passed to setTimeout() as an argument. 
+            <br>
+            3000 is the number of milliseconds before time-out, so <span class="edit">myFunction2()</span> will be called after 3 seconds. 
+        </div>
+
+        <hr>
+        <br>
+        <hr>
+
+        <h2>
+            Waiting for Intervals 
+        </h2>
+
+        <div>
+            When using the JavaScript function <span class="edit">setInterval()</span>, you can specify a callback function to be executed for each interval. 
+            <br>
+            Example:- 
+            <br>
+            <p id="demo4"></p>
+            <br>
+            In the example above, <span class="edit">myFunction3</span> is used as a callback. 
+            <br>
+            <span class="edit">myFunction3</span> is passed to <span class="edit">setInterval()</span> as an argument. 
+            <br>
+            1000 is the number of milliseconds between intervals, so <span class="edit">myFunction3()</span> will be called every second. 
+        </div>
+
+        <hr>
+
+        <h2>
+            Callback Alternatives 
+        </h2>
+
+        <div>
+            With asynchronous programming, JavaScript programs can start long-running tasks, and continue running other tasks in parallel. 
+            <br>
+            But, asynchronous programmes are difficult to write and difficult to debug. 
+            <br>
+            Because of this, most modern asynchronous JavaScript methods don't use callbacks. Instead, in JavaScript, asynchronous programming is solved using <strong>Promises</strong> instead. 
+        </div>
+
+
+        <script>
+         function myDisplayer1(some) {
+            document.getElementById("demo1").innerHTML = some;
+         }
+
+         function myCalculator1(num1, num2, myCallback) {
+            let sum = num1 + num2;
+            myCallback(sum);
+         }
+
+         myCalculator1(5, 5, myDisplayer1);
+
+         setTimeout(myFunction1, 3000);
+
+         function myFunction1() {
+            document.getElementById("demo2").innerHTML = "I Love You!";
+         }
+
+         setTimeout(function() {myFunction2("I Love You!");}, 3000);
+
+         function myFunction2(value) {
+            document.getElementById("demo3").innerHTML = value;
+         }
+
+         setInterval(myFunction3, 1000);
+
+         function myFunction3() {
+            let d = new Date();
+            document.getElementById("demo4").innerHTML = 
+            d.getHours() + ":" + 
+            d.getMinutes() + ":" + 
+            d.getSeconds();
+         }
+        </script>
+    </body>
+</html>

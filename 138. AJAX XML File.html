@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en-in">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>
+            AJAX XML Example 
+        </title>
+        <style>
+            html {
+                font-size:calc(10px + 0.390625vw);
+            }
+
+            body {
+                font-family:verdana, sans-serif;
+                font-size:1rem;
+                line-height:1.5;
+            }
+
+            .edit {
+                background-color:#f1f1f1;
+                color:red;
+            }
+
+            .edit1 {
+                background-color:rgba(255,255,0,0.3);
+                padding:2rem;
+            }
+
+            .table1,.table1 th, .table1 td {
+                border:1px solid #ddd;
+                border-collapse:collapse;
+            }
+            .table1 th, .table1 td {
+                padding:0.5rem;
+                text-align:left;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>
+            AJAX XML Example 
+        </h1>
+
+        <div>
+            AJAX can be used for interactive communication with an XML file. 
+        </div>
+
+        <hr>
+
+        <h2>
+            AJAX XML Example 
+        </h2>
+
+        <div>
+            The following example will demonstrate how a web page can fetch information from an XML file with AJAX. 
+            <br>
+            Example:- 
+            <br>
+            <h2>
+                The XMLHttpRequest Object 
+            </h2>
+
+            <button type="button" onclick="myFunction1()">Get my CD collection</button>
+
+            <br>
+            <br>
+            <table id="demo1" class="table1"></table>
+        </div>
+
+        <hr>
+
+        <h2>
+            Example Explained 
+        </h2>
+
+        <div>
+            When a user clicks on the "GET CD info" button above, the <span class="edit">myFunction1()</span> function is executed. 
+            <br>
+            The <span class="edit">myFunction1()</span> function creates an <span class="edit">XMLHttpRequest</span> object, adds the function to be executed when the server response is ready, and sends the request off to the server. 
+            <br>
+            When the server response is ready, a HTML table is built, nodes (elements) are extracted from the XML file, and it finally updates the element "demo1" with the HTML table filled with XML data. 
+            <br>
+            <br>
+            <p class="edit1">
+                function myFunction1() {
+                    <br>
+                    const xhttp = new XMLHttpRequest();
+                    <br>
+                    xhttp.onload = function() {
+                        <br>
+                        myFunction(this);
+                        <br>
+                    }
+                    <br>
+                    xhttp.open("GET", "cd_catalog.xml");
+                    <br>
+                    xhttp.send();
+                    <br>
+                }
+                <br>
+    
+                function myFunction(xml) {
+                    <br>
+                    const xmlDoc = xml.responseXML;
+                    <br>
+                    const x = xmlDoc.getElementsByTagName("CD");
+                    <br>
+                    let table = "&lt;tr&gt;&lt;th&gt;Artist&lt;/th&gt;&lt;th&gt;Title&lt;/th&gt;&lt;/tr&gt;";
+                    <br>
+                    for (let i = 0; i &lt; x.length; i++) 
+                    <br>
+                    {
+                        <br>
+                        table += "&lt;tr&gt;&lt;td&gt;" + 
+                            <br>
+                            x[i].getElementsByTagName("ARTIST")[0].childNodes[0].nodeValue + 
+                            <br>
+                            "&lt;/td&gt;&lt;td&gt;" + 
+                                <br>
+                            x[i].getElementsByTagName("TITLE")[0].childNodes[0].nodeValue +
+                            <br>
+                            "&lt;/td&gt;&lt;/tr&gt;";
+                            <br>
+                    }
+                    <br>
+                    document.getElementById("demo1").innerHTML = table;
+                    <br>
+                }
+            </p>
+        </div>
+
+        <hr>
+
+        <h2>
+            The XML File 
+        </h2>
+
+        <div>
+            The XML file used in the example above looks like this: "<a href="cd_catalog.xml" target="_blank">cd_catalog.xml</a>". 
+        </div>
+
+        <script>
+            function myFunction1() {
+                const xhttp = new XMLHttpRequest();
+                xhttp.onload = function() {
+                    myFunction(this);
+                }
+                xhttp.open("GET", "cd_catalog.xml");
+                xhttp.send();
+            }
+
+            function myFunction(xml) {
+                const xmlDoc = xml.responseXML;
+                const x = xmlDoc.getElementsByTagName("CD");
+                let table = "<tr><th>Artist</th><th>Title</th></tr>";
+                for (let i = 0; i < x.length; i++) 
+                {
+                    table += "<tr><td>" + 
+                        x[i].getElementsByTagName("ARTIST")[0].childNodes[0].nodeValue + 
+                        "</td><td>" + 
+                        x[i].getElementsByTagName("TITLE")[0].childNodes[0].nodeValue +
+                        "</td></tr>";
+                }
+                document.getElementById("demo1").innerHTML = table;
+            }
+        </script>
+    </body>
+</html>

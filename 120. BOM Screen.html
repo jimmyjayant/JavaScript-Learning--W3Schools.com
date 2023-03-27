@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en-in">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>
+            JavaScript Window Screen 
+        </title>
+        <style>
+            html {
+                font-size:calc(15px + 0.390625vw);
+            }
+            body {
+                font-family:verdana, sans-serif;
+                font-size:1rem;
+                line-height:1.5;
+            }
+            .edit {
+                background-color:#f1f1f1;
+                color:red;
+            }
+            .edit1 {
+                background-color:rgba(255,255,0,0.3);
+                padding:2rem;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>
+            JavaScript Window Screen 
+        </h1>
+
+        <div>
+            The window.screen object contains information about the user's screen. 
+        </div>
+
+        <hr>
+
+        <h2>
+            Window Screen 
+        </h2>
+
+        <div>
+            The <span class="edit">window.screen</span> object can be written without the window prefix. 
+            <br>
+            Properties:- 
+            <br>
+            <ul>
+                <li><span class="edit">screen.width</span></li>
+                <li><span class="edit">screen.height</span></li>
+                <li><span class="edit">screen.availWidth</span></li>
+                <li><span class="edit">screen.availHeight</span></li>
+                <li><span class="edit">screen.colorDepth</span></li>
+                <li><span class="edit">screen.pixelDepth</span></li>
+            </ul>
+        </div>
+
+        <hr>
+
+        <h2>
+            Window Screen Width 
+        </h2>
+
+        <div>
+            The <span class="edit">screen.width</span> property returns the width of the visitor's screen in pixels. 
+            <br>
+            Example:- 
+            <br>
+            Display the width of the screen in pixels. 
+            <br>
+            <p id="demo1"></p>
+        </div>
+
+        <hr>
+
+        <h2>
+            Window Screen Height 
+        </h2>
+
+        <div>
+            The <span class="edit">screen.height</span> property returns the height of the visitor's screen in pixels. 
+            <br>
+            Example:- 
+            <br>
+            Display the height of the screen in pixels. 
+            <br>
+            <p id="demo2"></p>
+        </div>
+
+        <hr>
+        <br>
+        <hr>
+
+        <h2>
+            Window Screen Available Width 
+        </h2>
+
+        <div>
+            The <span class="edit">screen.availWidth</span> property returns the width of the visitor's screen, in pixels, minus interface features like the Windows Taskbar. 
+            <br>
+            Example:- 
+            <br>
+            Display the available width of the screen in pixels. 
+            <br>
+            <p id="demo3"></p>
+        </div>
+
+        <hr>
+
+        <h2>
+            Window Screen Available Height 
+        </h2>
+
+        <div>
+            The <span class="edit">screen.availHeight</span> property returns the height of the visitor's screen, in pixels, minus interface features like the Windows Taskbar. 
+            <br>
+            Example:- 
+            <br>
+            Display the available height of the screen in pixels. 
+            <br>
+            <p id="demo4"></p>
+        </div>
+
+        <hr>
+
+        <h2>
+            Window Screen Color Depth 
+        </h2>
+
+        <div>
+            The <span class="edit">screen.colorDepth</span> property returns the number of bits used to display one color. 
+            <br>
+            All modern computers use 24 bit or 32 bit hardware for color resolution:- 
+            <br>
+            <ul>
+                <li>24 bits = 16,777,216 different "True Colors"</li>
+                <li>32 bits = 4,294,967,296 different "Deep Colors"</li>
+            </ul> 
+
+            <br>
+            Older computers used 16 bits: 65,536 different "High Colors" resolution. 
+            <br>
+            Very old computers, and old cell phones used 8 bits: 256 different "VGA colors". 
+            <br>
+            Example:- 
+            <br>
+            <p id="demo5"></p>
+
+            <br>
+
+            <p class="edit1">
+                The #rrggbb (rgb) values used in HTML represents "True Colors" (16,777,216 different colors).  
+            </p>
+        </div>
+
+        <hr>
+
+        <h2>
+            Window Screen Pixel Depth 
+        </h2>
+
+        <div>
+            The <span class="edit">screen.pixelDepth</span> property returns the pixel depth of the screen. 
+            <br>
+            Example:- 
+            <br>
+            Display the pixel depth of the screen in bits. 
+            <br>
+            <p id="demo6"></p>
+
+            <br>
+
+            <p class="edit1">
+                For modern computers, Color Depth and Pixel Depth are equal. 
+            </p>
+        </div>
+
+        <script>
+            document.getElementById("demo1").innerHTML = 
+            "Screen width is " + screen.width;
+
+            document.getElementById("demo2").innerHTML = 
+            "Screen height is " + screen.height;
+
+            document.getElementById("demo3").innerHTML = 
+            "Available screen width is " + screen.availWidth;
+
+            document.getElementById("demo4").innerHTML = 
+            "Available screen height is " + screen.availHeight;
+
+            document.getElementById("demo5").innerHTML = 
+            "Screen color depth is " + screen.colorDepth;
+
+            document.getElementById("demo6").innerHTML = 
+            "Screen pixel depth is " + screen.pixelDepth;
+        </script>
+    </body>
+</html>

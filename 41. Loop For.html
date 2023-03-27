@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            JavaScript For Loop 
+        </title>
+        <style>
+            .edit {
+                background-color:#f1f1f1;
+                color:red;
+            }
+            .edit1 {
+                background-color:rgba(255,255,0,0.3);
+                padding:20px;
+            }
+            body {
+                font-family:verdana, sans-serif;
+                font-size:20px;
+                line-height:1.5;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>
+            JavaScript For Loop 
+        </h1>
+
+        <p>
+            Loops can execute a block of code a number of times. 
+        </p>
+
+        <hr>
+
+        <h2>
+            JavaScript Loops 
+        </h2>
+
+        <p>
+            Loops are handy, if you want to run the same code over and over again, each time with a different value. 
+            <br>
+            Often this is the case when working with arrays. 
+            <br>
+            <p class="edit1">
+                <span style="font-weight:bold">Instead of Writing:- </span>
+                <br>
+                text += cars[0] + "&lt;br&gt;" + 
+                <br>
+                text += cars[1] + "&lt;br&gt;" + 
+                <br>
+                text += cars[2] + "&lt;br&gt;" + 
+                <br>
+                text += cars[3] + "&lt;br&gt;" + 
+                <br>
+                text += cars[4] + "&lt;br&gt;" + 
+                <br>
+                text += cars[5] + "&lt;br&gt;";
+                <br>
+                <br>
+                <span style="font-weight:bold">You can write:- </span>
+                <br>
+                for (let i = 0; i &lt; cars.length; i++) {
+                    <br>
+                    text += cars[i] + "&lt;br&gt;";
+                    <br>
+                }
+            </p>
+            <br>
+            Example:- 
+            <br>
+            <p id="demo1"></p>
+        </p>
+
+        <hr>
+
+        <h2>
+            Different Kinds of Loops 
+        </h2>
+
+        <p>
+            JavaScript supports different kinds of loops: 
+            <br>
+            <ul>
+                <li><span class="edit">for</span> - loops through a block of code a number of times</li>
+                <li><span class="edit">for/in</span> - loops through the properties of an object</li>
+                <li><span class="edit">for/of</span> - loops through the values of an iterable object</li>
+                <li><span class="edit">while</span> - loops through a block of code while a specified condition is true</li>
+                <li><span class="edit">do/while</span> - also loops through a block of code while a specified condition is true</li>
+            </ul>
+        </p>
+
+        <hr>
+
+        <h2>
+            The For Loop 
+        </h2>
+
+        <p>
+            The <span class="edit">for</span> statement creates a loop with 3 optional expressions. 
+            <br>
+            <p class="edit1">
+                for (expression 1; expression 2; expression 3) {
+                    <br>
+                    //code block to be executed 
+                    <br>
+                }
+            </p>
+            <br>
+            <strong>Expression 1</strong> is executed (one time) before the execution of the code block. 
+            <br>
+            <strong>Expression 2</strong> defines the condition for executing the code block. 
+            <br>
+            <strong>Expression 3</strong> is executed (every time) after the code block has been executed. 
+
+            <br>
+            <br>
+            Example:- 
+            <br>
+            <p id="demo2"></p>
+
+            <br>
+            <br>
+            From the example above, you can read: 
+            <br>
+            Expression 1 sets a variable before the loop starts (let i = 0). 
+            <br>
+            Expression 2 defines the condition for the loop to run (i must be less than 5). 
+            <br>
+            Expression 3 increases a value (i++) each time the code block in the loop has been executed. 
+        </p>
+
+        <hr>
+
+        <h2>
+            Expression 1 
+        </h2>
+
+        <p>
+           Normally you will use expression 1 to initialize the variable used in the loop (let i = 0). 
+           <br>
+           This is not always the case. JavaScript doesn't care. Expression 1 is optional. 
+           <br>
+           You can initialize many values in expression 1 (separated by comma). 
+           <br>
+           Example:- 
+           <br>
+           <p id="demo3"></p>
+
+           <br>
+           <br>
+           And you can omit expression 1 (like when your values are set before the loop starts). 
+           <br>
+           Example:- 
+           <br>
+           <p id="demo4"></p>
+        </p>
+
+        <hr>
+
+        <h2>
+            Expression 2 
+        </h2>
+
+        <p>
+            Often expression 2 is used to evaluate the condition of the initial variable. 
+            <br>
+            This is not always the case. JavaScript does not care. Expression 2 is also optional. 
+            <br>
+            If expression 2 returns true, the loop will start over again. If it returns false, the loop will end. 
+            <br>
+            <p class="edit1">
+                If you omit expression 2, you must provide a <strong>break</strong> inside the loop. Otherwise the loop will never end. This will crash your browser. 
+            </p>
+        </p>
+
+        <hr>
+
+        <h2>
+            Expression 3 
+        </h2>
+
+        <p>
+            Often expression 3 increments the value of the initial variable. 
+            <br>
+            This is not always the case. JavaScript does not care. Expression 3 is optional. 
+            <br>
+            Expression 3 can do anything like negative increment (i--), positive increment (i = i + 15), or anything else. 
+            <br>
+            Expression 3 can also be omitted (like when you increment your values inside the loop). 
+            <br>
+            Example:- 
+            <br>
+            <p id="demo5"></p>
+        </p>
+
+        <hr>
+
+        <h2>
+            Loop Scope 
+        </h2>
+
+        <p>
+            Using <span class="edit">var</span> in a loop. 
+            <br>
+            Example:- 
+            <br>
+            <p id="demo6"></p>
+
+            <br>
+            <br>
+
+            Using <span class="edit">let</span> in a loop. 
+            <br>
+            Example:- 
+            <br>
+            <p id="demo7"></p>
+
+            <br>
+            <br>
+
+            In the first example, using <span class="edit">var</span>, the variable declared in the loop redeclares the variable outside the loop. 
+            <br>
+            In the second example, using <span class="edit">let</span>, the variable declared in the loop does not redeclare the variable outside the loop. 
+            <br>
+            When <span class="edit">let</span> is used to declare the i variable in a loop, the i variable will only be visible within the loop. 
+        </p>
+
+        <script>
+        const cars1 = ["BMW", "Volvo", "Saab", "Ford", "Fiat", "Audi"];
+        let text1 = "";
+        for(let i = 0; i < cars1.length; i++)
+        {
+            text1 += cars1[i] + "<br>";
+        }
+        document.getElementById("demo1").innerHTML = 
+        "The array cars is as follows:- <br>" + text1;
+
+        let text2 = "";
+        for(let i = 0; i < 5; i++)
+        {
+            text2 += "The number is " + i + "<br>";
+        }
+        document.getElementById("demo2").innerHTML = text2;
+
+        const cars2 = ["BMW", "Saab", "Ford", "Volvo"];
+
+        let i, len, text3;
+
+        for(i=0, len = cars2.length, text3 = ""; i < len; i++)
+        {
+            text3 += cars2[i] + "<br>";
+        }
+
+        document.getElementById("demo3").innerHTML = text3;
+
+        let l = 0;
+        let len1 = cars1.length;
+        let text4 = "";
+
+        for(; l < len1; l++)
+        {
+            text4 += cars1[l] + "<br>";
+        }
+
+        document.getElementById("demo4").innerHTML = text4;
+
+        let m = 0;
+        let last = 10;
+        let text5 = "";
+
+        for(; m < last; )
+        {
+            text5 += m + "<br>";
+            m++;
+        }
+        document.getElementById("demo5").innerHTML = text5;
+
+        var v = 5;
+        for(var v = 0; v < 10; v++)
+        {
+            //some statements 
+        }
+        document.getElementById("demo6").innerHTML = v;
+
+        let loop1 = 5;
+        for(let loop1 = 0; loop1 < 10; loop1++)
+        {
+            //some statements 
+        } 
+        document.getElementById("demo7").innerHTML = loop1;
+        </script>
+    </body>
+</html>

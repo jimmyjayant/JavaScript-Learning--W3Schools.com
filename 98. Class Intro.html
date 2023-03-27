@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en-in">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>
+            JavaScript Classes 
+        </title>
+        <style>
+            html {
+                font-size:62.5%;
+            }
+            
+            body {
+                font-family:verdana, sans-serif;
+                font-size:2rem;
+                line-height:1.5;
+            }
+
+            .edit {
+                background-color:#f1f1f1;
+                color:red;
+            }
+            
+            .edit1 {
+                background-color:rgba(255,255,0,0.3);
+                padding:2rem;
+            }
+
+            .table1 {
+                width: 100%;
+                border:0.1rem solid #ddd;
+                border-collapse:collapse;
+            }
+
+            .table1 tr {
+                height:4rem;
+            }
+            .table1 tr:nth-child(even) {
+                background-color:#f1f1f1;
+            }
+            .table1 td {
+                padding:1rem;
+                text-align:center;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>
+            JavaScript Classes 
+        </h1>
+
+        <div style="background-color:rgba(0,255,0,0.1);padding:2rem;">
+         ECMAScript 2015, also known as ES6, introduced JavaScript Classes. 
+         <br>
+         JavaScript Classes are templates for JavaScript Objects. 
+        </div>
+
+        <hr>
+
+        <h2>
+            JavaScript Class Syntax 
+        </h2>
+
+        <div>
+            Use the keyword <span class="edit">class</span> to create a class. 
+            <br>
+            Always add a method named <span class="edit">constructor()</span>. 
+            <br>
+            Syntax:- 
+            <br>
+            <p class="edit1">
+                class ClassName {
+                    <br>
+                    constructor() { ... } 
+                    <br>
+                }
+            </p>
+
+            <br>
+            Example:- 
+            <br>
+            <p class="edit1">
+                class Car {
+                    <br>
+                    constructor(name, year) {
+                        <br>
+                        this.name = name;
+                        <br>
+                        this.year = year;
+                        <br>
+                    }
+                    <br>
+                }
+            </p>
+
+            <br>
+            <br>
+            The example above creates a class named "Car". 
+            <br>
+            The class has two initial properties:- "name" and "year". 
+            <br>
+            <p class="edit1">
+                A JavaScript class is <strong>not</strong> an object. 
+                <br>
+                It is a <strong>template</strong> for JavaScript objects. 
+            </p>
+        </div>
+
+        <hr>
+
+        <h2>
+            Using a Class 
+        </h2>
+
+        <div>
+            When you have a class, you can use the class to create objects. 
+            <br>
+            Example:- 
+            <br>
+            <p id="demo1"></p>
+            <br>
+            The example above uses the <strong>Car class</strong> to create two <strong>Car objects</strong>. 
+            <br>
+            <p class="edit1">
+              The constructor method is called automatically when a new object is created. 
+            </p>
+        </div>
+
+        <hr>
+
+        <h2>
+            The Constructor Method 
+        </h2>
+
+        <div>
+            The constructor method is a special method:- 
+            <br>
+            <ul>
+                <li>It has to have the exact name "constructor"</li>
+                <li>It is executed automatically when a new object is created</li>
+                <li>It is used to initialize object properties</li>
+            </ul>
+
+            <br>
+            If you do not define a constructor method, JavaScript will add an empty constructor method. 
+        </div>
+
+        <hr>
+        <br>
+        <hr>
+
+        <h2>
+            Class Methods 
+        </h2>
+
+        <div>
+            Class methods are created with the same syntax as object methods. 
+            <br>
+            Use the keyword <span class="edit">class</span> to create a class. 
+            <br>
+            Always add a <span class="edit">constructor()</span> method. 
+            <br>
+            Then add any number of methods. 
+            <br>
+            Syntax:- 
+            <br>
+            <p class="edit1">
+                class ClassName {
+                    <br>
+                    constructor() { ... } 
+                    <br>
+                    method_1() { ... } 
+                    <br>
+                    method_2() { ... } 
+                    <br>
+                    method_3() { ... } 
+                    <br> 
+                }
+            </p>
+
+            <br>
+            Create a Class method named "age", that returns the Car age. 
+            <br>
+            Example:- 
+            <br>
+            <p id="demo2"></p>
+
+            <br>
+            <br>
+            You can send parameters to Class methods. 
+            <br>
+            Example:- 
+            <br>
+            <p id="demo3"></p>
+        </div>
+
+        <hr>
+
+        <h2>
+            Browser Support 
+        </h2>
+
+        <div>
+            The following table defines the first browser version that fully support for Classes in JavaScript. 
+            <br>
+            <br>
+            <table class="table1">
+                <tr>
+                    <td><img src="Image4.svg.png" height="35" width="35" alt="Google Chrome"></td>
+                    <td><img src="Image5.png" height="35" width="35" alt="Microsoft Edge"></td>
+                    <td><img src="Image6.png" height="35" width="35" alt="Mozilla Firefox"></td>
+                    <td><img src="Image7.png" height="35" width="35" alt="Apple Safari"></td>
+                    <td><img src="Image8.png" height="35" width="35" alt="Opera"></td>
+                </tr>
+                <tr>
+                    <td>Chrome 49</td>
+                    <td>Edge 12</td>
+                    <td>Firefox 45</td>
+                    <td>Safari 9</td>
+                    <td>Opera 36</td>
+                </tr>
+                <tr>
+                    <td>Mar, 2016</td>
+                    <td>Jul, 2015</td>
+                    <td>Mar, 2016</td>
+                    <td>Oct, 2015</td>
+                    <td>Mar, 2016</td>
+                </tr>
+            </table>
+        </div>
+
+        <hr>
+        <br>
+        <hr>
+
+        <h2>
+            "use strict" 
+        </h2>
+
+        <div>
+            The syntax in classes must be written in "strict mode". 
+            <br>
+            You will get an error if you do not follow the "strict mode" rules. 
+            <br>
+            Example:- 
+            <br>
+            In "strict mode" you will get an error if you use a variable without declaring it. 
+            <br>
+            <p id="demo4"></p>
+        </div>
+
+        <script>
+            class Car {
+                constructor(name, year) {
+                    this.name = name;
+                    this.year = year;
+                }
+            }
+
+            const myCar1 = new Car("Ford", 2014);
+            const myCar2 = new Car("Audi", 2019);
+            document.getElementById("demo1").innerHTML = 
+            myCar1.name + " " + myCar1.year + 
+            "<br>" + myCar2.name + " " + myCar2.year;
+
+            class Car1 {
+                constructor(name, year) {
+                    this.name = name;
+                    this.year = year;
+                }
+                age() {
+                    let date = new Date();
+                    return date.getFullYear() - this.year;
+                }
+            }
+
+            let myCar3 = new Car1("Hyundai", 2014);
+            document.getElementById("demo2").innerHTML = 
+            "My car is " + myCar3.age() + " years old.";
+
+            class Car2{
+                constructor(name, year) {
+                    this.name = name;
+                    this.year = year;
+                }
+                age(x) {
+                    return x - this.year;
+                }
+            }
+
+            let date1 = new Date();
+            let year1 = date1.getFullYear();
+
+            let myCar4 = new Car2("BMW", 2014);
+            document.getElementById("demo3").innerHTML = 
+            "My car is " + myCar4.age(year1) + " years old.";
+
+            class Car3 {
+                constructor(name, year) {
+                    this.name = name;
+                    this.year = year;
+                }
+                age() {
+                    //date = new Date(); //This will not work
+                    let date = new Date(); //This will work
+                    return date.getFullYear() - this.year;
+                }
+            }
+
+            myCar5 = new Car3("Ford", 2014);
+            document.getElementById("demo4").innerHTML = 
+            "My car is " + myCar5.age() + " years old.";
+        </script>
+    </body>
+</html>

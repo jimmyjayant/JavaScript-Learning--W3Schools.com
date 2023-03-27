@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en-in">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>
+            jQuery Selectors 
+        </title>
+        <style>
+            html {
+                font-size:calc(10px + 0.390625vw);
+            }
+
+            body {
+                font-size:1rem;
+                font-family:verdana, sans-serif;
+                line-height:1.5;
+            }
+
+            .edit {
+                background-color:#f1f1f1;
+                color:red;
+            }
+
+            .edit1 {
+                background-color:rgba(255,255,0,0.3);
+                padding:2rem;
+            }
+        </style>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    </head>
+    <body>
+        <h1>
+            JavaScript / jQuery DOM Selectors 
+        </h1>
+
+        <hr>
+
+        <h2>
+            jQuery vs JavaScript 
+        </h2>
+
+        <div>
+            jQuery was created in 2006 by John Resig. It was designed to handle Browser Incompatibilities and to simplify HTML DOM Manipulation, Event Handling, Animations, and Ajax. 
+            <br>
+            For more than 10 years, jQuery has been the most popular JavaScript library in the world. 
+            <br>
+            However, after JavaScript Version 5 (2009), most of the jQuery utilities can be solved with a few lines of standard JavaScript. 
+        </div>
+
+        <hr>
+
+        <h2>
+            Finding HTML Element by Id 
+        </h2>
+
+        <div>
+            Return the element with id="id01". 
+            <br>
+            <b>jQuery</b>
+            <br>
+            Example:- 
+            <br>
+            <div style="background-color:orange;">
+            <p id="id01">Hello World!</p>
+            <p id="id02">Hello Sweden!</p>
+            <p id="id03">Hello Japan!</p>
+
+            <p id="demo1"></p>
+            </div>
+
+            <br>
+            <br>
+
+            <b>JavaScript</b>
+            <br>
+            Example:- 
+            <br>
+            <div style="background-color:coral;">
+            <p id="id04">Hello World!</p>
+            <p id="id05">Hello Sweden!</p>
+            <p id="id06">Hello Japan!</p>
+
+            <p id="demo2"></p>
+            </div>
+        </div>
+
+        <hr>
+
+        <h2>
+            Finding HTML Elements by Tag Name 
+        </h2>
+
+        <div>
+            Return all &lt;p&gt; elements. 
+            <br>
+
+            <b>jQuery</b>
+            <br>
+            Example:- 
+            <br>
+            <p>Hello World!</p>
+            <p>Hello Sweden!</p>
+            <p>Hello Japan!</p>
+
+            <p id="demo3"></p>
+
+            <br>
+            <br>
+            <b>JavaScript</b>
+            <br>
+            Example:- 
+            <br>
+            <p>Hello World!</p>
+            <p>Hello Sweden!</p>
+            <p>Hello Japan!</p>
+
+            <p id="demo4"></p>
+        </div>
+
+        <hr>
+        <br>
+        <br>
+        <hr>
+
+        <h2>
+            Finding HTML Elements by Class Name 
+        </h2>
+
+        <div>
+            Return all elements with class="intro". 
+            <br>
+            <b>jQuery</b>
+            <br>
+            Example:- 
+            <br>
+            <p class="intro">Hello World!</p>
+            <p class="intro">Hello Sweden!</p>
+            <p class="intro">Hello Japan!</p>
+
+            <p id="demo5"></p>
+
+            <br>
+            <br>
+            <b>JavaScript</b>
+            <br>
+            Example:- 
+            <br>
+            <p class="intro">Hello World!</p>
+            <p class="intro">Hello Sweden!</p>
+            <p class="intro">Hello Japan!</p>
+
+            <p id="demo6"></p>
+        </div>
+
+        <hr>
+
+        <h2>
+            Finding HTML Elements by CSS Selectors 
+        </h2>
+
+        <div>
+            Return a list of all &lt;p&gt; elements with class="intro1". 
+            <br>
+            Example:- 
+            <br>
+            <b>jQuery</b>
+            <br>
+            <p class="intro1">Hello World!</p>
+            <p class="intro1">Hello Sweden!</p>
+            <p class="intro1">Hello Japan!</p>
+
+            <p id="demo7"></p>
+
+            <br>
+            <br>
+            <b>JavaScript</b>
+            <br>
+
+            <p id="demo8"></p>
+
+        </div>
+
+        <script>
+            $(document).ready(function() {
+                var myElements = $("#id01");
+                $("#demo1").text("The text from the id01 paragraph is: " + myElements[0].innerHTML);
+            });
+
+            const myElement1 = document.getElementById("id04");
+            document.getElementById("demo2").innerHTML = 
+            "The text from the id04 paragraph is: " + myElement1.innerHTML;
+
+            $(document).ready(function() {
+                var myElements = $("p");
+                $("#demo3").text("The text in the eighth paragraph is: " + myElements[8].innerHTML);
+            });
+
+            const myElement2 = document.getElementsByTagName("p");
+            document.getElementById("demo4").innerHTML = 
+            "The text in the twelve paragraph is: " + myElement2[12].innerHTML;
+
+            $(document).ready(function() {
+                var myElements = $(".intro");
+                $("#demo5").text("The first paragraph with class='intro' is: " + myElements[0].innerHTML);
+            });
+
+            const myElement3 = document.getElementsByClassName("intro");
+            document.getElementById("demo6").innerHTML = 
+            "The first paragraph with class='intro' is: " + myElement3[0].innerHTML;
+
+            $(document).ready(function() {
+                var myElement = $("p.intro1");
+                $("#demo7").text("The first paragraph with class='intro1' is: " + myElement[0].innerHTML);
+            });
+
+            const myElement4 = document.querySelectorAll("p.intro1");
+            document.getElementById("demo8").innerHTML = 
+            "The first paragraph with class='intro1' is: " + myElement4[0].innerHTML;
+        </script>
+    </body>
+</html>

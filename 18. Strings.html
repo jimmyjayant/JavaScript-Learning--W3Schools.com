@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            JavaScript Strings 
+        </title>
+        <style>
+            .edit {
+                background-color:#f1f1f1;
+                color:red;
+            }
+            .edit1 {
+                background-color:rgba(255,255,0,0.3);
+                padding:20px;
+            }
+            .table1 {
+                width: 100%;
+                border:1px solid #ddd;
+                border-collapse:collapse;
+            }
+            .table1 tr {
+                height:40px;
+            }
+            .table1 tr:nth-child(even) {
+                background-color:#ddd;
+            }
+            .table1 td {
+                padding:10px;
+            }
+            .table1 th {
+                text-align:left;
+                padding:10px;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>
+            JavaScript Strings 
+        </h1>
+
+        <p>
+        
+            <p style="background-color:lightgreen;padding:10px;">
+              JavaScript strings are for storing and manipulating text. 
+            </p>
+
+            <br>
+            <br>
+
+            A JavaScript string is zero or more characters written inside quotes. 
+            <br>
+            Example:- 
+            <br>
+            <p id="demo1"></p>
+
+            <br>
+            <br>
+            You can use single or double quotes: 
+            <br>
+            Example:- 
+            <br>
+            <p id="demo2"></p>
+
+            <br>
+            <br>
+
+            You can use quotes inside a string, as long as they don't match the quotes surrounding the string: 
+            <br>
+            Example:- 
+            <br>
+            <p id="demo3"></p>
+        </p>
+
+        <hr>
+
+        <h2>
+            String Length 
+        </h2>
+
+        <p>
+            To find the length of a string, use the built-in <span class="edit">length</span> property. 
+            <br>
+            Example:- 
+            <br>
+            <p id="demo4"></p>
+        </p>
+
+        <hr>
+        <br>
+        <hr>
+
+        <h2>
+            Escape Character 
+        </h2>
+
+        <p>
+           Because strings must be written within quotes, JavaScript will misunderstand this string: 
+           <br>
+           <p class="edit1">
+            let text = "We are the so-called "Vikings" from the north.";
+           </p>
+
+           <br>
+
+           The string will be chopped to "We are the so-called". 
+           <br>
+           The solution to avoid this problem, is to use the <strong>backslash escape character</strong>. 
+           <br>
+           The backslash (<span class="edit"> \ </span>) escape character turns special characters into string characters: 
+           <br>
+           <table class="table1">
+            <tr>
+                <th>Code</th>
+                <th>Result</th>
+                <th>Description</th>
+            </tr>
+            <tr>
+                <td>\'</td>
+                <td>'</td>
+                <td>Single quote</td>
+            </tr>
+            <tr>
+                <td>\"</td>
+                <td>"</td>
+                <td>Double quote</td>
+            </tr>
+            <tr>
+                <td>\\</td>
+                <td>\</td>
+                <td>Backslash</td>
+            </tr>
+           </table>
+
+           <br>
+           <br>
+
+           The sequence <span class="edit"> \" </span> inserts a double quote in a string. 
+           <br>
+           Example:- 
+           <br>
+           <p id="demo5"></p>
+
+           <br>
+           <br>
+           The sequence <span class="edit"> \' </span> inserts a single quote in a string. 
+           <br>
+           Example:- 
+           <br>
+           <p id="demo6"></p>
+
+           <br>
+           <br>
+           The sequence <span class="edit"> \\ </span> inserts a backslash in a string. 
+           <br>
+           Example:- 
+           <br>
+           <p id="demo7"></p>
+
+           <br>
+           <br>
+           Six other escape sequences are valid in JavaScript: 
+           <br>
+           <table class="table1">
+            <tr>
+                <th>Code</th>
+                <th>Result</th>
+            </tr>
+            <tr>
+                <td>\b</td>
+                <td>Backspace</td>
+            </tr>
+            <tr>
+                <td>\f</td>
+                <td>Form Feed</td>
+            </tr>
+            <tr>
+                <td>\n</td>
+                <td>New Line</td>
+            </tr>
+            <tr>
+                <td>\r</td>
+                <td>Carriage Return</td>
+            </tr>
+            <tr>
+                <td>\t</td>
+                <td>Horizontal Tabulator</td>
+            </tr>
+            <tr>
+                <td>\v</td>
+                <td>Vertical Tabulator</td>
+            </tr>
+           </table>
+
+           <br>
+           <br>
+
+           <p class="edit1">
+            The 6 escape characters above were originally designed to control typewriters, teletypes, and fax machines. They do not make any sense in HTML. 
+           </p>
+        </p>
+
+        <hr>
+
+        <h2>
+            Breaking Long Code Lines 
+        </h2>
+
+        <p>
+            For best readability, programmers often like to avoid code lines longer than 80 characters. 
+            <br>
+            If a JavaScript statement does not fit on one line, the best place to break it is after an <strong>operator</strong> or a <strong>comma</strong>. 
+            <br>
+            Example:- 
+            <br>
+            <p class="edit1">
+                document.getElementById(id).innerHTML =
+                <br>
+                "Hello Dolly!";
+            </p>
+            <br>
+            <p id="demo8"></p>
+
+            <br>
+            <br>
+            You can also break up a code line <strong>within a text string</strong> with a single backslash: 
+            <br>
+            <p class="edit1">
+                document.getElementById(id).innerHTML = "Hello \
+                <br>
+                Dolly!";
+            </p>
+            <br>
+            <p id="demo9"></p>
+
+            <br>
+            <br>
+
+            <p class="edit1">
+                The <span class="edit"> \ </span> method is not the preferred method. It might not have universal support. 
+                <br>
+                Some browsers do not allow spaces behind the <span class="edit"> \ </span> character. 
+            </p>
+
+            <br>
+            <br>
+
+            A safer way to break up a string, is to use string addition: 
+            <br>
+            Example:- 
+            <br>
+            <p class="edit1">
+                document.getElementById(id).innerHTML = "Hello" + 
+                <br>
+                "Dolly!";
+            </p>
+            <br>
+            <p id="demo10"></p>
+
+            <br>
+            <br>
+            You cannot break up a code line with a backslash: 
+            <br>
+            <p class="edit1">
+                document.getElementById(id).innerHTML = \
+                <br>
+                "Hello Dolly!";
+            </p>
+            <br>
+            See above style of coding in JavaScript below:- 
+            <br>
+            <p id="demo11"></p>
+        </p>
+
+        <hr>
+
+        <h2>
+            JavaScript Strings as Objects 
+        </h2>
+
+        <p>
+            Normally, JavaScript strings are primitive values, created from literals: 
+            <br>
+            <p class="edit1">
+                let x ="John";
+            </p>
+            <br>
+            But strings can also be defined as objects with the keyword <span class="edit">new</span>. 
+            <br>
+            <p class="edit1">
+                let y = new String("John");
+            </p>
+            <br>
+            Example:- 
+            <br>
+            <p id="demo12"></p>
+
+            <br>
+            <br>
+
+            <p class="edit1">
+                Do not create String objects. 
+                <br>
+                The <span class="edit">new</span> keyword complicates the code and slows down execution speed. 
+                <br>
+                String objects can produce unexpected results. 
+            </p>
+
+            <br>
+            <br>
+
+            When using the <span class="edit"> == </span> operator, a and b are <strong>equal</strong>. 
+            <br>
+            <p class="edit1">
+                let a = "John";   //a is a string 
+                <br>
+                let b = new String("John");  //b is an object 
+            </p>
+            Example:- 
+            <br>
+            Is a equal in value to b? = 
+            <br>
+            <p id="demo13"></p>
+
+            <br>
+            <br>
+            When using the <span class="edit"> === </span> operator, a and b are <strong>not equal</strong>. 
+            <br>
+            Example:- 
+            <br>
+            Is a equal in value and type to b? = 
+            <br>
+            <p id="demo14"></p>
+
+            <br>
+            <br>
+
+            <p class="edit1">
+                Note the difference between <span class="edit"> (x==y) </span> and <span class="edit"> (x===y) </span>. 
+            </p>
+
+            <br>
+            <br>
+
+            <span class="edit"> (x == y) </span> true or false? 
+            <br>
+            <p class="edit1">
+                let c = new String("John");
+                <br>
+                let d = new String("John");
+            </p>
+            <br>
+            JavaScript Objects cannot be compared. 
+            <br>
+            Example:- 
+            <br>
+            <p id="demo15"></p>
+
+            <br>
+            <br>
+            <span class="edit"> (x === y)</span> true or false? 
+            <br>
+            <p class="edit1">
+                let e = new String("John");
+                <br>
+                let f = new String("John");
+            </p>
+            <br>
+            Example:- 
+            <br>
+            <p id="demo16"></p>
+
+            <br>
+            <br>
+
+            <p class="edit1">
+                Comparing two JavaScript objects <strong>always</strong> returns <strong>false</strong>. 
+            </p>
+
+        </p>
+
+        <script>
+            let text1 = "John Doe";            //String written inside quotes 
+            document.getElementById("demo1").innerHTML = text1;
+
+            let carName1 = "Volvo XC60";       //Double quotes
+            let carName2 = 'Volvo XC60';       //Single quotes
+
+            document.getElementById("demo2").innerHTML = 
+            carName1 + "<br>" + carName2;
+
+            let answer1 = "It's alright.";
+            let answer2 = "He is called 'Johnny'";
+            let answer3 = 'He is called "Johnny"';
+            document.getElementById("demo3").innerHTML = 
+            answer1 + "<br>" + answer2 + "<br>" + answer3;
+
+            let text2 = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+            document.getElementById("demo4").innerHTML = "The Length of the string is:- " + text2.length;
+
+            let text3 = "We are the so-called \"Vikings\" from the north.";
+            document.getElementById("demo5").innerHTML = text3;
+
+            let text4 = "It\'s alright.";
+            document.getElementById("demo6").innerHTML = text4;
+
+            let text5 = "The character \\ is called backslash.";
+            document.getElementById("demo7").innerHTML = text5;
+
+            document.getElementById("demo8").innerHTML = 
+            "Hello Dolly!";
+
+            document.getElementById("demo9").innerHTML = "Hello \
+            Dolly!";
+
+            document.getElementById("demo10").innerHTML = "Hello" +
+            "Dolly!";
+
+            /*document.getElementById("demo11").innerHTML = \
+            "Hello Dolly!";*/
+
+
+            //x is a string
+            let x = "John";
+
+            //y is an object
+            let y = new String("John");
+
+            document.getElementById("demo12").innerHTML = 
+            typeof x + "<br>" + typeof y;
+
+
+            let a = "John";               //a is a string 
+            let b = new String("John");   //b is an object 
+            document.getElementById("demo13").innerHTML = (a==b);
+            
+            document.getElementById("demo14").innerHTML = (a===b);
+
+            let c = new String("John");          //c is an object
+            let d = new String("John");          //d is an object
+            document.getElementById("demo15").innerHTML = (c==d);
+            
+            let e = new String("John");
+            let f = new String("John");
+            document.getElementById("demo16").innerHTML = (e===f);
+        </script>
+    </body>
+</html>

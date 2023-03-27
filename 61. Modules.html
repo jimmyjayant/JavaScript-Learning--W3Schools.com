@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en-in">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+        JavaScript Modules 
+    </title>
+    <style>
+        .edit {
+            background: color #f1f1f1;
+            color:red;
+        }
+        .edit1 {
+            background-color:rgba(255,255,0,0.3);
+            padding:20px;
+        }
+        body {
+            font-family:verdana, sans-serif;
+            font-size:20px;
+            line-height:1.5;
+        }
+    </style>
+  </head>
+  <body>
+
+    <div style="background-color:rgba(255,0,0,0.5);padding:20px;">
+     <h1>
+        CAN ONLY RUN FROM LOCAL SERVER. SO TRY LIVE SERVER EXTENSION IN VISUAL STUDIO CODE. 
+     </h1>
+    </div>
+    <h1>
+        JavaScript Modules 
+    </h1>
+
+    <hr>
+
+    <h2>
+        Modules 
+    </h2>
+
+    <div>
+        JavaScript Modules allow you to break up your code into separate files. 
+        <br>
+        This makes it easier to maintain a code-base. 
+        <br>
+        Modules are imported from external files with the <span class="edit">import</span> statement. 
+        <br>
+        Modules also rely on <span class="edit">type="module"</span> in the &lt;script&gt; tag. 
+        <br>
+        Example:- 
+        <br>
+        <p id="demo1"></p>
+    </div>
+
+    <hr>
+
+    <h2>
+        Export 
+    </h2>
+
+    <div>
+        Modules with <strong>functions</strong> or <strong>variables</strong> can be stored in any external file. 
+        <br>
+        There are two types of exports: <strong>Named Exports</strong> and <strong>Default Exports</strong>. 
+    </div>
+
+    <hr>
+
+    <h2>
+        Named Exports 
+    </h2>
+
+    <div>
+        Let us create a file named <span class="edit">person.js</span>, and fill it with the things we want to export. 
+        <br>
+        You can create named exports two ways. In-line individually, or all at once at the bottom. 
+        <br>
+        Example:- 
+        <br>
+        In-line individually:- 
+        <br>
+        <p class="edit1">
+            <span class="edit">person.js</span>
+            <br>
+            export const name = "Jesse";
+            <br>
+            export const age = 40;
+        </p>
+
+        <br>
+        <br>
+        Example:- 
+        <br>
+        All at once at the bottom:- 
+        <br>
+        <p class="edit1">
+            <span class="edit">person.js</span>
+            <br>
+            const name = "Jesse";
+            <br>
+            const age = 40;
+            <br>
+            export {name, age};
+        </p>
+    </div>
+
+    <hr>
+
+    <h2>
+        Default Exports 
+    </h2>
+
+    <div>
+        Let us create another file, named <span class="edit">message.js</span>, and use it for demonstrating default export. 
+        <br>
+        You can only have one default export in a file. 
+        <br>
+        Example:- 
+        <br>
+        <p class="edit1">
+            <span class="edit">message.js</span>
+            <br>
+            const message = () => {
+                const name = "Jesse";
+                <br>
+                const age = 40;
+                <br>
+                return name + " is " + age + "years old.";
+                <br>
+            };
+            <br>
+            export default message;
+        </p>
+    </div>
+
+    <hr>
+    <br>
+    <br>
+    <hr>
+
+    <h2>
+        Import 
+    </h2>
+
+    <div>
+        You can import modules into a file in two ways, based on if they are named exports or default exports. 
+        <br>
+        Named exports are constructed using curly braces. Default exports are not. 
+        <br>
+        Example:- 
+        <br>
+        Import from named exports 
+        <br>
+        Import named exports from the file person.js:- 
+        <br>
+        <p id="demo2"></p>
+
+        <br>
+        <br>
+        Import from default exports 
+        <br>
+        Import a default export from the file message.js:- 
+        <br>
+        <p id="demo3"></p>
+
+        <br>
+        <br>
+
+        <div class="edit1">
+         <h1>Note</h1>
+         Modules only work with the HTTP(s) protocol. 
+         <br>
+         A web-page opened via the file:// protocol cannot use import / export. 
+        </div>
+    </div>
+
+    <script type="module">
+
+        //Use relative reference '/' or './' before file name 
+     import message from "/message.js";
+     document.getElementById("demo1").innerHTML = message();
+     document.getElementById("demo3").innerHTML = message();
+
+     import {name1, age1} from "/person.js";
+     let text1 = "My name is " + name1 + ", I am " + age1 + ".";
+     document.getElementById("demo2").innerHTML = text1;
+    </script>
+  </body>
+</html>

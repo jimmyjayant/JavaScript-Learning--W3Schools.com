@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en-in">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>
+            JavaScript Forms 
+        </title>
+        <style>
+            html {
+                font-size:62.5%;
+            }
+            body {
+                font-family:verdana, sans-serif;
+                font-size:2rem;
+                line-height:1.5;
+            }
+            .edit {
+                background-color:#f1f1f1;
+                color:red;
+            }
+            .edit1 {
+                background-color:rgba(255,255,0,0.3);
+                padding:2rem;
+            }
+            .table1 {
+                width:100%;
+                border:0.1rem solid #ddd;
+                border-collapse:collapse;
+            }
+            .table1 tr {
+                height:4rem;
+            }
+            .table1 tr:nth-child(even) {
+                background-color:#f1f1f1;
+            }
+            .table1 th {
+                text-align:left;
+                padding:1rem;
+            }
+            .table1 td {
+                padding:1rem;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>
+            JavaScript Forms 
+        </h1>
+
+        <hr>
+
+        <h2>
+            JavaScript Form Validation 
+        </h2>
+
+        <div>
+            HTML form validation can be done by JavaScript. 
+            <br>
+            If a form field (fname) is empty, this function alerts a message, and returns false, to prevent the form from being submitted. 
+            <br>
+            Example:- 
+            <br>
+            <p class="edit1">
+                function validateForm() {
+                    <br>
+                    let x = document.forms["myForm"]["fname"].value;
+                    <br>
+                    if(x == "") {
+                        <br>
+                        alert("Name must be filled out.");
+                        <br>
+                        return false;
+                        <br>
+                    }
+                    <br>
+                }
+            </p>
+
+            <br>
+
+            The function can be called when the form is submitted. 
+            <br>
+            Example:- 
+            <br>
+            <form name="myForm" action="https://www.w3schools.com/action_page.php" onsubmit="return validateForm()" method="post">
+             Name: <input type="text" name="fname">
+             <input type="submit" value="Submit">
+            </form>
+        </div>
+
+        <hr>
+
+        <h2>
+            JavaScript Can Validate Numeric Input 
+        </h2>
+
+        <div>
+           JavaScript is often used to validate numeric input. 
+           <br>
+           Example:- 
+           <br>
+           Please enter a number between 1 and 10. 
+           <br>
+           <input id="demo1">
+
+           <button type="button" onclick="myFunction1()">Submit</button>
+
+           <p id="demo2"></p>
+        </div>
+
+        <hr>
+        <br>
+        <hr>
+
+        <h2>
+            Automatic HTML Form Validation 
+        </h2>
+
+        <div>
+            HTML form validation can be performed automatically by the browser. 
+            <br>
+            If a form field (fname) is empty, the <span class="edit">required</span> attribute prevents this form from being submitted. 
+            <br>
+            Example:- 
+            <br>
+            <form action="https://www.w3schools.com/action_page.php" method="post">
+                <input type="text" name="fname1" required>
+                <input type="submit" value="Submit">
+            </form>
+            <br>
+            If you click Submit, without filling out the text field, your browser will display an error message. 
+
+            <br>
+            <p class="edit1">
+                Automatic HTML form validation does not work in Internet Explorer 9 or earlier. 
+            </p>
+        </div>
+
+        <hr>
+
+        <h2>
+            Data Validation 
+        </h2>
+
+        <div>
+            Data validation is the process of ensuring that user input is clean, correct, and useful. 
+            <br>
+            Typical validation tasks are: 
+            <br>
+            <ul>
+                <li>has the user filled in all required fields?</li>
+                <li>has the user entered a valid date?</li>
+                <li>has the user entered text in a numeric field?</li>
+            </ul>
+
+            <br>
+
+            Most often, the purpose of data validation is to ensure correct user input. 
+            <br>
+            Validation can be defined by many different methods, and deployed in many different ways. 
+            <br>
+            <strong>Server side validation</strong> is performed by a web server, after input has been sent to the server. 
+            <br>
+            <strong>Client side validation</strong> is performed by a web browser, before input is sent to a web server. 
+        </div>
+
+        <hr>
+
+        <h2>
+            HTML Constraint Validation 
+        </h2>
+
+        <div>
+            HTML5 introduced a new HTML validation concept called <strong>constraint validation</strong>. 
+            <br>
+            HTML constraint validation is based on:- 
+            <br>
+            <ul>
+                <li>Constraint validation <strong>HTML Input Attributes</strong></li>
+                <li>Constraint validation <strong>CSS Pseudo Selectors</strong></li>
+                <li>Constraint validation <strong>DOM Properties and Methods</strong></li>
+            </ul>
+        </div>
+
+        <hr>
+
+        <h2>
+            Constraint Validation HTML Input Attributes 
+        </h2>
+
+        <div>
+            <table class="table1">
+                <tr>
+                    <th>Attribute</th>
+                    <th>Description</th>
+                </tr>
+                <tr>
+                    <td>disabled</td>
+                    <td>Specifies that the input element should be disabled</td>
+                </tr>
+                <tr>
+                    <td>max</td>
+                    <td>Specifies the maximum value of an input element</td>
+                </tr>
+                <tr>
+                    <td>min</td>
+                    <td>Specifies the minimum value of an input element</td>
+                </tr>
+                <tr>
+                    <td>pattern</td>
+                    <td>Specifies the value pattern of an input element</td>
+                </tr>
+                <tr>
+                    <td>required</td>
+                    <td>Specifies that the input field requires an element</td>
+                </tr>
+                <tr>
+                    <td>type</td>
+                    <td>Specifies the type of an input element</td>
+                </tr>
+            </table>
+        </div>
+
+        <hr>
+
+        <h2>
+            Constraint Validation CSS Pseudo Selectors 
+        </h2>
+
+        <div>
+            <table class="table1">
+                <tr>
+                    <th>Selector</th>
+                    <th>Description</th>
+                </tr>
+                <tr>
+                    <td>:disabled</td>
+                    <td>Selects input elements with the "disabled" attribute specified</td>
+                </tr>
+                <tr>
+                    <td>:invalid</td>
+                    <td>Selects input elements with invalid values</td>
+                </tr>
+                <tr>
+                    <td>:optional</td>
+                    <td>Selects input elements with no "required" attribute specified</td>
+                </tr>
+                <tr>
+                    <td>:required</td>
+                    <td>Selects input elements with the "required" attribute specified</td>
+                </tr>
+                <tr>
+                    <td>:valid</td>
+                    <td>Selects input elements with valid values</td>
+                </tr>
+            </table>
+        </div>
+
+        <script>
+            function validateForm() {
+                let x = document.forms["myForm"]["fname"].value;
+                if(x == "") {
+                    alert("Name must be filled out.");
+                    return false;
+                }
+            }
+
+            function myFunction1() {
+                //Get the value of the input field with id="demo1"
+                let x = document.getElementById("demo1").value;
+                //If x is not a number or less than one or greater than 10
+                let text1;
+                if(isNaN(x) || x < 1 || x > 10) {
+                    text1 = "Input not valid.";
+                }
+                else
+                {
+                    text1 = "Input OK.";
+                }
+                document.getElementById("demo2").innerHTML = text1;
+            }
+        </script>
+    </body>
+</html>

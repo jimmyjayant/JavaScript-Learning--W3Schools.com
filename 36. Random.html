@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            JavaScript Random 
+        </title>
+        <style>
+            .edit {
+                background-color:#f1f1f1;
+                color:red;
+            }
+            .edit1 {
+                background-color:rgba(255,255,0,0.3);
+                padding:20px;
+            }
+            body {
+                font-family:verdana, sans-serif;
+                font-size:20px;
+                line-height:1.5;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>
+           JavaScript Random 
+        </h1>
+
+        <hr>
+
+        <h2>
+            Math.random() 
+        </h2>
+
+        <p>
+            <span class="edit">Math.random()</span> returns a random number between 0 (inclusive), and 1 (exclusive). 
+            <br>
+            Example:- 
+            <br>
+            Click the button below to generate random number between 0(inclusive) and 1(exclusive). 
+            <br>
+            <button type="button" onclick="myFunction1()">Random</button>
+            <br>
+            <p id="demo1"></p> 
+
+            <br>
+            <br>
+
+            <p class="edit1">
+                <span class="edit">Math.random()</span> always returns a number lower than 1. 
+            </p>
+        </p>
+
+        <hr>
+
+        <h2>
+            JavaScript Random Integers 
+        </h2>
+
+        <p>
+            <span class="edit">Math.random()</span> used with <span class="edit">Math.floor()</span> can be used to return random integers. 
+            <br>
+            <br>
+            <p class="edit1">
+                There is no such thing as JavaScript integers. 
+                <br>
+                We are talking about numbers with no decimals here. 
+            </p>
+
+            <br>
+            Example:- 
+            <br>
+            Click on the button below to return random integers from 0 to 9 (both included). 
+            <br>
+            <button type="button" onclick="myFunction2()">Random Integers</button>
+            <br>
+            <p id="demo2"></p>
+
+            <br>
+            <br>
+            Example:- 
+            <br>
+            Click on the button below to return random integers from 0 to 10 (both included). 
+            <br>
+            <button type="button" onclick="myFunction3()">Random Integers</button>
+            <br>
+            <p id="demo3"></p>
+
+            <br>
+            <br>
+            Example:- 
+            <br>
+            Click on the button below to return random integers from 0 to 99 (both included). 
+            <br>
+            <button type="button" onclick="myFunction4()">Random Integers</button>
+            <br>
+            <p id="demo4"></p>
+
+            <br>
+            <br>
+            Example:- 
+            <br>
+            Click on the button below to generate random integers from 0 to 100 (both included). 
+            <br>
+            <button type="button" onclick="myFunction5()">Random Integers</button>
+            <br>
+            <p id="demo5"></p>
+
+            <br>
+            <br>
+            Example:- 
+            <br>
+            Click on the button below to generate a random integer from 1 to 10. 
+            <br>
+            <button type="button" onclick="myFunction6()">Random Integers</button>
+            <br>
+            <p id="demo6"></p>
+
+            <br>
+            <br>
+            Example:- 
+            <br>
+            Click on the button below to generate a random integer from 1 to 100. 
+            <br>
+            <button type="button" onclick="myFunction7()">Random Integers</button>
+            <br>
+            <p id="demo7"></p>
+        </p>
+
+        <hr>
+        <br>
+        <br>
+        <hr>
+
+        <h2>
+            A Proper Random Function 
+        </h2>
+
+        <p>
+            As you can see in the examples above, it might be a good idea to create a proper random function to use for all random integer purposes. 
+            <br>
+            This JavaScript function always return a random number between min (included) and max (excluded). 
+            <br>
+            Example:- 
+            <br>
+            Click on the button below to generate random numbers between 0 (included) and 10 (excluded). 
+            <br>
+            <button type="button" onclick="myFunction8(0,10)">Random Integer</button>
+            <br>
+            <p id="demo8"></p>
+
+            <br>
+            <br>
+            This JavaScript function always returns a random number between min and max (both included). 
+            <br>
+            Example:- 
+            <br>
+            Click on the button below to generate random numbers between 1 and 10 (both included). 
+            <br>
+            <button type="button" onclick="myFunction9(1,10)">Random Integer</button>
+            <br>
+            <p id="demo9"></p> 
+        </p>
+
+
+
+
+        <script>
+         function myFunction1()
+         {
+            document.getElementById("demo1").innerHTML = Math.random();
+         }
+
+         function myFunction2()
+         {
+            document.getElementById("demo2").innerHTML = Math.floor(Math.random() * 10);
+         }
+
+         function myFunction3()
+         {
+            document.getElementById("demo3").innerHTML = Math.floor(Math.random() * 11);
+         }
+
+         function myFunction4()
+         {
+            document.getElementById("demo4").innerHTML = Math.floor(Math.random() * 100);
+         }
+
+         function myFunction5()
+         {
+            document.getElementById("demo5").innerHTML = Math.floor(Math.random() * 101);
+         }
+
+         function myFunction6()
+         {
+            document.getElementById("demo6").innerHTML = Math.floor(Math.random() * 10) + 1;
+         }
+
+         function myFunction7()
+         {
+            document.getElementById("demo7").innerHTML = 
+            Math.floor(Math.random() * 100) + 1;
+         }
+
+         function myFunction8(min, max)
+         {
+            document.getElementById("demo8").innerHTML = Math.floor(Math.random() * (max-min)) + min;
+         }
+
+         function myFunction9(min,max)
+         {
+            document.getElementById("demo9").innerHTML = 
+            Math.floor(Math.random() * (max - min + 1)) + min;
+         }
+        </script>
+    </body>
+</html>

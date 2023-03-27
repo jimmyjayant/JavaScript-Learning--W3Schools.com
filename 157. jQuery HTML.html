@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en-in">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>
+            jQuery HTML 
+        </title>
+        <style>
+            html {
+                font-size:calc(10px + 0.390625vw);
+            }
+
+            body {
+                font-size:1rem;
+                font-family:verdana, sans-serif;
+                line-height:1.5;
+            }
+
+            .edit {
+                background-color:#f1f1f1;
+                color:red;
+            }
+
+            .edit1 {
+                background-color:rgba(255,255,0,0.3);
+                padding:2rem;
+            }
+        </style>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    </head>
+    <body>
+        <h1>
+            JavaScript / jQuery HTML Elements 
+        </h1>
+
+        <hr>
+
+        <h2>
+            jQuery vs JavaScript 
+        </h2>
+
+        <div>
+            jQuery was created in 2006 by John Resig. It was designed to handle Browser Incompatibilities and to simplify HTML DOM Manipulation, Event Handling, Animations, and Ajax. 
+            <br>
+            For more than 10 years, jQuery has been the most popular JavaScript library in the world. 
+            <br>
+            However, after JavaScript Version 5 (2009), most of the jQuery utilities can be solved with a few lines of standard JavaScript. 
+        </div>
+
+        <hr>
+
+        <h2>
+            Set Text Content 
+        </h2>
+
+        <div>
+            Set the inner text of a HTML element. 
+            <br>
+            <b>jQuery</b>
+            <br>
+            <p id="01">Hello World!</p>
+            <p id="02">Hello Sweden!</p>
+
+            <br>
+            <br>
+            <b>JavaScript</b>
+            <br>
+            <p id="03">Hello World!</p>
+            <p id="04">Hello Sweden!</p>
+        </div>
+
+        <hr>
+
+        <h2>
+            Get Text Content 
+        </h2>
+
+        <div>
+            Get the inner text of a HTML element. 
+            <br>
+            <b>jQuery</b>
+            <br>
+            Example:- 
+            <br>
+            <div style="background-color:lightgreen;">
+            <p id="01">Hello World!</p>
+            <p id="02">Hello Sweden!</p>
+            <p id="03">Hello Japan!</p>
+            </div>
+
+            <div style="background-color:aqua;">
+               <p id="demo1"></p>
+            </div>
+
+            <br>
+            <br>
+            <b>JavaScript</b>
+            <br>
+            Example:- 
+            <br>
+            <div style="background-color:mediumpurple;">
+                <p id="demo2"></p>
+            </div>
+        </div>
+
+        <hr>
+        <br>
+        <br>
+        <hr>
+
+        <h2>
+            Set HTML Content 
+        </h2>
+
+        <div>
+            Set the HTML content of an element. 
+            <br>
+            Example:- 
+            <br>
+            <b>jQuery</b>
+            <br>
+            Example:- 
+            <br>
+            <div id="04">
+                <p>
+                    Hello World! 
+                </p>
+            </div>
+
+            <div id="05">
+                <p>
+                    Hello Sweden! 
+                </p>
+            </div>
+
+            <br>
+            <br>
+            <b>JavaScript</b>
+            <br>
+            Example:- 
+            <br>
+            <div id="06"><p>Hello World!</p></div>
+
+            <div id="07"><p>Hello Sweden!</p></div>
+        </div>
+
+        <hr>
+
+        <h2>
+            Get HTML Content 
+        </h2>
+
+        <div>
+            Get the HTML content of an element. 
+            <br>
+            <b>jQuery</b>
+            <br>
+            Example:- 
+            <br>
+            <div id="08"><p>Hello World!</p></div>
+            <div id="09"><p>Hello Sweden!</p></div>
+
+            <br>
+            <br>
+            <b>JavaScript</b>
+            <br>
+            Example:- 
+            <br>
+            <div id="10"><p>Hello World!</p></div>
+            <div id="11"><p>Hello Sweden!</p></div>
+        </div>
+
+        <script>
+            $(document).ready(function(){
+                var myElement = $("#01");
+                myElement.text("Hello Sweden!");
+            });
+
+            const myElement1 = document.getElementById("03");
+            myElement1.textContent = "Hello Sweden!";
+
+            $(document).ready(function(){
+                var myText = $("#02").text();
+                $("#demo1").text(myText);
+            });
+
+            const myText1 = document.getElementById("02").textContent;
+            document.getElementById("demo2").innerHTML = myText1;
+            
+            $(document).ready(function() {
+               $("#05").html("<p>Hello World!</p>");
+            });
+
+            document.getElementById("07").innerHTML = "<p>Hello World!</p>";
+
+            $(document).ready(function() {
+                var content = $("#09").html();
+                $("#08").html(content);
+            });
+
+            const text1 = document.getElementById("11").innerHTML;
+            document.getElementById("10").innerHTML = text1;
+        </script>
+    </body>
+</html>

@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en-in">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>
+            JavaScript Iterables 
+        </title>
+        <style>
+            .edit {
+                background-color:#f1f1f1;
+                color:red;
+            }
+            .edit1 {
+                background-color:rgba(255,255,0,0.3);
+                padding:20px;
+            }
+            body {
+                font-size:20px;
+                font-family:verdana, sans-serif;
+                line-height:1.5;
+            }
+            .table1 {
+                width: 100%;
+                border:1px solid #ddd;
+                border-collapse:collapse;
+            }
+            .table1 tr {
+                height:40px;
+            }
+            .table1 tr:nth-child(even) {
+                background-color:#f1f1f1;
+            }
+            .table1 td {
+                padding:10px;
+            }
+            .table1 th {
+                padding:10px;
+                text-align:left;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>
+            JavaScript Iterables 
+        </h1>
+
+        <div style="background-color:rgba(0,255,0,0.2);padding:20px;">
+         Iterable objects are objects that can be iterated over with <span class="edit">for..of</span>. 
+         <br>
+         Technically, iterables must implement the <span class="edit">Symbol.iterator</span> method. 
+        </div>
+
+        <hr>
+
+        <h2>
+            Iterating Over a String 
+        </h2>
+
+        <div>
+            You can use a <span class="edit">for..of</span> loop to iterate over the elements of a string. 
+            <br>
+            Example:- 
+            <br>
+            <p id="demo1"></p>
+        </div>
+
+        <hr>
+
+        <h2>
+            Iterating Over an Array 
+        </h2>
+
+        <div>
+            You can use a <span class="edit">for..of</span> loop to iterate over the elements of an Array. 
+            <br>
+            Example:- 
+            <br>
+            <p id="demo2"></p>
+        </div>
+
+        <hr>
+
+        <h2>
+            JavaScript Iterators 
+        </h2>
+
+        <div>
+            The <strong>iterator protocol</strong> defines how to produce a <strong>sequence of values</strong> from an object. 
+            <br>
+            An object becomes an <strong>iterator</strong> when it implements a <span class="edit">next()</span> method. 
+            <br>
+            The <span class="edit">next()</span> method must return an object with two properties:- 
+            <br>
+            <ul>
+                <li>value (the next value)</li>
+                <li>done (true or false)</li>
+            </ul>
+
+            <br>
+            <br>
+            <table class="table1">
+                <tr>
+                    <th>value</th>
+                    <td>The value returned by the iterator 
+                        <br>
+                        (Can be omitted if done is true)
+                    </td>
+                </tr>
+                <tr>
+                    <th>done</th>
+                    <td><i>true</i> if the iterator has completed
+                    <br>
+                    <i>false</i> if the iterator has produced a new value</td>
+                </tr>
+            </table>
+        </div>
+
+        <hr>
+        <br>
+        <hr>
+
+        <h2>
+            Home Made Iterable 
+        </h2>
+
+        <div>
+            This iterable returns never ending: 10, 20, 30, 40,.... Everytime <span class="edit">next()</span> is called:- 
+            <br>
+            Example:- 
+            <br>
+            <p id="demo3"></p>
+
+            <br>
+            <p class="edit1">
+                The problem with a home made iterable:- 
+                <br>
+                It does not support the JavaScript <span class="edit">for..of</span> statement. 
+            </p>
+
+            <br>
+            <br>
+            A JavaScript iterable is an object that has a <strong>Symbol.iterator</strong>. 
+            <br>
+            The <span class="edit">Symbol.iterator</span> is a function that returns a <span class="edit">next()</span> function. 
+            <br>
+            An iterable can be iterated over with the code:- <span class="edit">for (const x of iterable) { }</span>
+            <br>
+            Example:- 
+            <br>
+            <p id="demo4"></p>
+
+            <br>
+            <br>
+            The Symbol.iterator method is called automatically by <span class="edit">for..of</span>. 
+            <br>
+            But we can also do it "manually". 
+            <br>
+            Example:- 
+            <br>
+            <p id="demo5"></p>
+        </div>
+
+        <script>
+            //Create a String:- 
+            const name = "W3Schools";
+
+            //List all Elements:- 
+            let text1 = "";
+            for(const x of name)
+            {
+                text1 += x + "<br>";
+            }
+
+            document.getElementById("demo1").innerHTML = text1;
+
+            //Create an Array:- 
+            const letters1 = ["a", "b", "c", "d", "e"];
+
+            //List all elements:- 
+            let text2 = "";
+            for(const x of letters1)
+            {
+                text2 += x + "<br>";
+            }
+
+            document.getElementById("demo2").innerHTML = text2;
+
+            //Home Made Iterable:- 
+            function myNumbers() {
+                let n = 0;
+                return {
+                    next: function() {
+                        n += 10;
+                        return {value:n, done:false};
+                    }
+                };
+            }
+
+            //Create Iterable:- 
+            const n = myNumbers();
+            n.next(); //10
+            n.next(); //20
+            n.next(); //30
+
+            document.getElementById("demo3").innerHTML = 
+            n.next().value;
+
+            //Create an Object:- 
+            myNumbers1 = {};
+
+            //Make it Iterable:- 
+            myNumbers1[Symbol.iterator] = function() {
+                let n = 0;
+                done = false;
+                return {
+                    next() {
+                        n += 10;
+                        if (n == 100) {done = true}
+                        return {value:n, done:done};
+                    }
+                };
+            }
+
+            let text3 = "";
+
+            for(const num of myNumbers1) {
+                text3 += num + "<br>";
+            }
+
+            document.getElementById("demo4").innerHTML = text3;
+
+            //Create an object:- 
+            myNumbers2 = {};
+
+            //Make it Iterable:- 
+            myNumbers2[Symbol.iterator] = function() {
+                let n = 0;
+                done = false;
+                return {
+                    next() {
+                        n += 10;
+                        if (n == 100) {done = true}
+                        return {value:n, done:done};
+                    }
+                };
+            }
+
+            //Create an Iterator:- 
+            let iterator = myNumbers2[Symbol.iterator]();
+
+            let text4 = "";
+            while(true)
+            {
+                const result = iterator.next();
+                if (result.done) break;
+                text4 += result.value + "<br>";
+            }
+
+            document.getElementById("demo5").innerHTML = text4;
+        </script>
+    </body>
+</html>

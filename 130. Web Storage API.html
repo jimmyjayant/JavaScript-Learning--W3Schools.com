@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en-in">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>
+            Web Storage API 
+        </title>
+        <style>
+            html {
+                font-size:calc(10px + 0.390625vw);
+            }
+
+            body {
+                font-family:verdana, sans-serif;
+                font-size:1rem;
+                line-height:1.5;
+            }
+
+            .edit {
+                background-color:#f1f1f1;
+                color:red;
+            }
+
+            .edit1 {
+                background-color:rgba(255,255,0,0.3);
+                padding:2rem;
+            }
+
+            .table1 {
+                width: 100%;
+                border:1px solid #ddd;
+                border-collapse:collapse;
+            }
+
+            .table1 tr {
+                height:3rem;
+            }
+
+            .table1 tr:nth-child(even) {
+                background-color:#f1f1f1;
+            }
+
+            .table1 td {
+                text-align:center;
+                padding:0.5rem;
+                border:1px solid #ddd;
+            }
+
+            .table2 {
+                width: 100%;
+                border:1px solid #ddd;
+                border-collapse:collapse;
+            }
+
+            .table2 tr{
+                height:3rem;
+            }
+
+            .table2 tr:nth-child(even) {
+                background-color:#f1f1f1;
+            }
+
+            .table2 td {
+                padding:0.5rem;
+            }
+
+            .table2 th {
+                text-align:left;
+                padding:0.5rem;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>
+            Web Storage API 
+        </h1>
+
+        <div>
+            The Web Storage API is a simple syntax for storing and retrieving data in the browser. It is very easy to use. 
+            <br>
+            Example:- 
+            <br>
+            <p id="demo1"></p>
+
+            <br>
+            The Web Storage API is supported in all browsers. 
+            <br>
+            <table class="table1">
+                <tr>
+                    <td><img src="Image4.svg.png" height="35" width="35" alt="Google Chrome"></td>
+                    <td><img src="Image5.png" height="35" width="35" alt="Microsoft Edge"></td>
+                    <td><img src="Image6.png" height="35" width="35" alt="Mozilla Firefox"></td>
+                    <td><img src="Image7.png" height="35" width="35" alt="Apple Safari"></td>
+                    <td><img src="Image8.png" height="35" width="35" alt="Opera"></td>
+                </tr>
+                <tr>
+                    <td>Chrome</td>
+                    <td>IE/Edge</td>
+                    <td>Firefox</td>
+                    <td>Safari</td>
+                    <td>Opera</td>
+                </tr>
+                <tr>
+                    <td>Yes</td>
+                    <td>Yes</td>
+                    <td>Yes</td>
+                    <td>Yes</td>
+                    <td>Yes</td>
+                </tr>
+            </table>
+        </div>
+
+        <hr>
+
+        <h2>
+            The localStorage Object 
+        </h2>
+
+        <div>
+            The localStorage object provides access to a local storage for a particular Web Site. It allows you to store, read, add, modify, and delete data items for that domain. 
+            <br>
+            The data is stored with no expiration date, and will not be deleted when the browser is closed. 
+            <br>
+            The data will be available for days, weeks, and years. 
+        </div>
+
+        <hr>
+
+        <h2>
+            The setItem() Method 
+        </h2>
+
+        <div>
+            The localStorage.setItem() method stores a data item in a storage. 
+            <br>
+            It takes a name and a value as parameters. 
+            <br>
+            Example:- 
+            <br>
+            <p class="edit1">
+                localStorage.setItem("name", "John Doe"); 
+            </p>
+        </div>
+
+        <hr>
+
+        <h2>
+            The getItem() Method 
+        </h2>
+
+        <div>
+            The localStorage.getItem() method retrieves a data item from the storage. 
+            <br>
+            It takes a name as parameters. 
+            <br>
+            Example:- 
+            <br>
+            <p class="edit1">
+                localStorage.getItem("name"); 
+            </p>
+        </div>
+
+        <hr>
+        <br>
+        <hr>
+
+        <h2>
+            The sessionStorage Object 
+        </h2>
+
+        <div>
+            The sessionStorage object is identical to the localStorage object. 
+            <br>
+            The difference is that the sessionStorage object stores data for one session. 
+            <br>
+            The data is deleted when the browser is closed. 
+            <br>
+            Example:- 
+            <br>
+            <p id="demo2"></p>
+        </div>
+
+        <hr>
+
+        <h2>
+            The setItem() Method 
+        </h2>
+
+        <div>
+            The sessionStorage.setItem() method stores a data item in a storage. 
+            <br>
+            It takes a name and a value as parameters. 
+            <br>
+            Example:- 
+            <br>
+            <p class="edit1">
+                sessionStorage.setItem("name", "John Doe"); 
+            </p>
+        </div>
+
+        <hr>
+
+        <h2>
+            The getItem() Method 
+        </h2>
+
+        <div>
+            The sessionStorage.getItem() method retrieves a data item from the storage. 
+            <br>
+            It takes a name as parameter. 
+            <br>
+            Example:- 
+            <br>
+            <p class="edit1">
+                sessionStorage.getItem("name"); 
+            </p>
+        </div>
+
+        <hr>
+
+        <h2>
+            Storage Object Properties and Methods 
+        </h2>
+
+        <div>
+            <table class="table2">
+                <tr>
+                    <th>Property/Method</th>
+                    <th>Description</th>
+                </tr>
+                <tr>
+                    <td>key(n)</td>
+                    <td>Returns the name of the nth key in the storage</td>
+                </tr>
+                <tr>
+                    <td>length</td>
+                    <td>Returns the number of data items stored in the Storage object</td>
+                </tr>
+                <tr>
+                    <td>getItem(keyname)</td>
+                    <td>Returns the value of the specified key name</td>
+                </tr>
+                <tr>
+                    <td>setItem(keyname, value)</td>
+                    <td>Adds a key to the storage, or updates a key value (if it already exists)</td>
+                </tr>
+                <tr>
+                    <td>removeItem(keyname)</td>
+                    <td>Removes that key from the storage</td>
+                </tr>
+                <tr>
+                    <td>clear()</td>
+                    <td>Empty all key out of the storage</td>
+                </tr>
+            </table>
+        </div>
+
+        <hr>
+
+        <h2>
+            Related Pages for Web Storage API 
+        </h2>
+
+        <div>
+            <table class="table2">
+                <tr>
+                    <th>Property</th>
+                    <th>Description</th>
+                </tr>
+                <tr>
+                    <td>window.localStorage</td>
+                    <td>Allows to save key/value pairs in a web browser. Stores the data with no expiration date</td>
+                </tr>
+                <tr>
+                    <td>window.sessionStorage</td>
+                    <td>Allows to save key/value pairs in a web browser. Stores the data for one session</td>
+                </tr>
+            </table>
+        </div>
+
+        <script>
+            localStorage.setItem("name", "John Doe");
+            document.getElementById("demo1").innerHTML = localStorage.getItem("name");
+
+            sessionStorage.setItem("name", "Peter Parker");
+            document.getElementById("demo2").innerHTML = sessionStorage.getItem("name"); 
+        </script>
+    </body>
+</html>

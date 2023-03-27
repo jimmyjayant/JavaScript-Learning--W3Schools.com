@@ -1,0 +1,588 @@
+<!DOCTYPE html>
+<html lang="en-in">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>
+            JavaScript Maps 
+        </title>
+        <style>
+            .edit {
+                background-color:#f1f1f1;
+                color:red;
+            }
+            .edit1 {
+                background-color:rgba(255,255,0,0.3);
+                padding:20px;
+            }
+            body {
+                font-family:verdana, sans-serif;
+                font-size:20px;
+                line-height:1.5;
+            }
+            .table1 {
+                width:100%;
+                border:1px solid #ddd;
+                border-collapse:collapse;
+            }
+            .table1 tr {
+                height:40px;
+            }
+            .table1 tr:nth-child(even) {
+                background-color:#f1f1f1;
+            }
+            .table1 th {
+                text-align:left;
+                padding:10px;
+            }
+            .table1 td {
+                padding:10px;
+            }
+            .table2 td {
+                text-align:center;
+                padding:10px;
+                border:1px solid #ddd;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>
+            JavaScript Maps 
+        </h1>
+
+        <div style="background-color:rgba(0,255,0,0.1);padding:10px;">
+         A Map holds the key-value pairs where the keys can be any datatype. 
+         <br>
+         A Map remembers the original insertion order of the keys. 
+         <br>
+         A Map has a property that represents the size of the map. 
+        </div>
+
+        <hr>
+
+        <h2>
+            Map Methods 
+        </h2>
+
+        <div>
+            <table class="table1">
+                <tr>
+                    <th>Method</th>
+                    <th>Description</th>
+                </tr>
+                <tr>
+                    <td>new Map()</td>
+                    <td>Creates a new Map object</td>
+                </tr>
+                <tr>
+                    <td>set()</td>
+                    <td>Sets the value for a key in a Map</td>
+                </tr>
+                <tr>
+                    <td>get()</td>
+                    <td>Gets the value for a key in a Map</td>
+                </tr>
+                <tr>
+                    <td>clear()</td>
+                    <td>Removes all the elements from a Map</td>
+                </tr>
+                <tr>
+                    <td>delete()</td>
+                    <td>Removes a Map element specified by a key</td>
+                </tr>
+                <tr>
+                    <td>has()</td>
+                    <td>Returns true if a key exists in a Map</td>
+                </tr>
+                <tr>
+                    <td>forEach()</td>
+                    <td>Invokes a callback for each key/value pair in a Map</td>
+                </tr>
+                <tr>
+                    <td>entries()</td>
+                    <td>Returns an iterator object with the [key,value] pairs in a Map</td>
+                </tr>
+                <tr>
+                    <td>keys()</td>
+                    <td>Returns an iterator object with the keys in a Map</td>
+                </tr>
+                <tr>
+                    <td>values()</td>
+                    <td>Returns an iterator object of the values in a Map</td>
+                </tr>
+            </table>
+
+            <br>
+            <br>
+
+            <table class="table1">
+                <tr>
+                    <th>Property</th>
+                    <th>Description</th>
+                </tr>
+                <tr>
+                    <td>size</td>
+                    <td>Returns the number of Map elements</td>
+                </tr>
+            </table>
+        </div>
+
+        <hr>
+
+        <h2>
+            How to Create a Map 
+        </h2>
+
+        <div>
+            You can create a JavaScript Map by:- 
+            <br>
+            <ul>
+                <li>Passing an Array to <span class="edit">new Map()</span></li>
+                <li>Create a Map and use <span class="edit">Map.set()</span></li>
+            </ul>
+        </div>
+
+        <hr>
+
+        <h2>
+            new Map() 
+        </h2>
+
+        <div>
+            You can create a Map by passing an Array to the <span class="edit">new Map()</span> constructor. 
+            <br>
+            Example:- 
+            <br>
+            <p id="demo1"></p>
+        </div>
+
+        <hr>
+
+        <h2>
+            Map.set() 
+        </h2>
+
+        <div>
+            You can add elements to a Map with the <span class="edit">set()</span> method. 
+            <br>
+            Example:- 
+            <br>
+            <p id="demo2"></p>
+
+            <br>
+            <br>
+            The <span class="edit">set()</span> method can also be used to change existing Map values. 
+            <br>
+            Example:- 
+            <br>
+            <p id="demo3"></p>
+        </div>
+
+        <hr>
+
+        <h2>
+            Map.get() 
+        </h2>
+
+        <div>
+            The <span class="edit">get()</span> method gets the value of a key in a Map. 
+            <br>
+            Example:- 
+            <br>
+            <p id="demo4"></p>
+        </div>
+
+        <hr>
+
+        <h2>
+            Map.size 
+        </h2>
+
+        <div>
+            The <span class="edit">size</span> property returns the number of elements in a Map. 
+            <br>
+            Example:- 
+            <br>
+            <p id="demo5"></p>
+        </div>
+
+        <hr>
+
+        <h2>
+            Map.delete() 
+        </h2>
+
+        <div>
+            The <span class="edit">delete()</span> method removes a Map element. 
+            <br>
+            Example:- 
+            <br>
+            <p id="demo6"></p>
+        </div>
+
+        <hr>
+
+        <h2>
+            Map.clear() 
+        </h2>
+
+        <div>
+            The <span class="edit">clear()</span> method removes all the elements from a Map. 
+            <br>
+            Example:- 
+            <br>
+            <p id="demo7"></p>
+        </div>
+
+        <hr>
+
+        <h2>
+            Map.has() 
+        </h2>
+
+        <div>
+            The <span class="edit">has()</span> method returns true if a key exists in a Map. 
+            <br>
+            Example:- 
+            <br>
+            <p id="demo8"></p>
+
+            <br>
+            <br>
+            Example:- 
+            <br>
+            <p id="demo9"></p>
+        </div>
+
+        <hr>
+
+        <h2>
+            Maps are Objects 
+        </h2>
+
+        <div>
+            <span class="edit">typeof</span> returns object. 
+            <br>
+            Example:- 
+            <br>
+            <p id="demo10"></p>
+
+            <br>
+            <br>
+            <span class="edit">instanceof</span> Map returns true. 
+            <br>
+            Example:- 
+            <br>
+            <p id="demo11"></p>
+        </div>
+
+        <hr>
+
+        <h2>
+            JavaScript Objects vs Maps 
+        </h2>
+
+        <div>
+            Differences between JavaScript Objects and Maps:- 
+            <br>
+            <table class="table1">
+                <tr>
+                    <th>Object</th>
+                    <th>Map</th>
+                </tr>
+                <tr>
+                    <td>Not directly iterable</td>
+                    <td>Directly iterable</td>
+                </tr>
+                <tr>
+                    <td>Do not have a size property</td>
+                    <td>Have a size property</td>
+                </tr>
+                <tr>
+                    <td>Keys must be Strings (or Symbols)</td>
+                    <td>Keys can be any datatype</td>
+                </tr>
+                <tr>
+                    <td>Keys are not well ordered</td>
+                    <td>Keys are ordered by insertion</td>
+                </tr>
+                <tr>
+                    <td>Have default keys</td>
+                    <td>Do not have default keys</td>
+                </tr>
+            </table>
+        </div>
+
+        <hr>
+
+        <h2>
+            Map.forEach() 
+        </h2>
+
+        <div>
+            The <span class="edit">forEach()</span> method invokes a callback for each key/value pair in a Map. 
+            <br>
+            Example:- 
+            <br>
+            <p id="demo12"></p>
+        </div>
+
+        <hr>
+
+        <h2>
+            Map.entries() 
+        </h2>
+
+        <div>
+            The <span class="edit">entries()</span> method returns an iterator object with the [key,values] in a Map. 
+            <br>
+            Example:- 
+            <br>
+            <p id="demo13"></p>
+        </div>
+
+        <hr>
+
+        <h2>
+            Map.keys() 
+        </h2>
+
+        <div>
+            The <span class="edit">keys()</span> method retuns an iterator object with the keys in a Map. 
+            <br>
+            Example:- 
+            <br>
+            <p id="demo14"></p>
+        </div>
+
+        <hr>
+
+        <h2>
+            Map.values() 
+        </h2>
+
+        <div>
+            The <span class="edit">values()</span> method returns an iterator object with the values in a Map. 
+            <br>
+            Example:- 
+            <br>
+            <p id="demo15"></p>
+
+            <br>
+            <br>
+            You can use the <span class="edit">values()</span> method to sum the values in a Map. 
+            <br>
+            Example:- 
+            <br>
+            <p id="demo16"></p>
+        </div>
+
+        <hr>
+
+        <h2>
+            Object as Keys 
+        </h2>
+
+        <div>
+            <p class="edit1">
+                Being able to use objects as keys is an important Map feature. 
+            </p>
+
+            <br>
+            Example:- 
+            <br>
+            <p id="demo17"></p>
+
+            <br>
+            <br>
+            Remember: The key is an object (apples), not a string ("apples"). 
+            <br>
+            Example:- 
+            <br>
+            <p id="demo18"></p> 
+        </div>
+
+        <hr>
+
+        <h2>
+            Browser Support 
+        </h2>
+
+        <div>
+            JavaScript Maps are supported in all browsers, except Internet Explorer. 
+            <br>
+            <br>
+            <table class="table1 table2">
+                <tr>
+                    <td><img src="Image4.svg.png" height="35" width="35" alt="Google Chrome"></td>
+                    <td><img src="Image5.png" height="35" width="35" alt="Microsoft Edge"></td>
+                    <td><img src="Image6.png" height="35" width="35" alt="Mozilla Firefox"></td>
+                    <td><img src="Image7.png" height="35" width="35" alt="Apple Safari"></td>
+                    <td><img src="Image8.png" height="35" width="35" alt="Opera"></td>
+                </tr>
+                <tr>
+                    <td>Chrome</td>
+                    <td>Edge</td>
+                    <td>Firefox</td>
+                    <td>Safari</td>
+                    <td>Opera</td>
+                </tr>
+            </table>
+        </div>
+
+
+
+
+
+
+        <script>
+            //Create a Map:- 
+            const fruits1 = new Map([
+                ["apples", 500],
+                ["bananas", 300],
+                ["oranges", 200]
+            ]);
+
+            document.getElementById("demo1").innerHTML = 
+            fruits1.get("apples");
+
+            //Create a Map:- 
+            const fruits2 = new Map();
+
+            //Set Map Values:- 
+            fruits2.set("apples", 500);
+            fruits2.set("bananas", 300);
+            fruits2.set("oranges", 200);
+
+            document.getElementById("demo2").innerHTML = 
+            fruits2.get("apples");
+            
+            //Set new value of key apple in a Map:- 
+            fruits2.set("apples", 200);
+            document.getElementById("demo3").innerHTML = 
+            fruits2.get("apples");
+
+            //Using the get method in a Map:- 
+            document.getElementById("demo4").innerHTML = 
+            fruits2.get("apples");
+
+            //the size property of a Map:- 
+            document.getElementById("demo5").innerHTML = 
+            "The size of the Map fruits2 is:- " + fruits2.size;
+
+            //Delete an Element:- 
+            fruits2.delete("bananas");
+            document.getElementById("demo6").innerHTML = 
+            fruits2.size;
+
+            //Create a Map:- 
+            const fruits3 = new Map([
+                ["apples", 500],
+                ["bananas", 300],
+                ["oranges", 100]
+            ]);
+
+            //Clear a Map:- 
+            fruits3.clear();
+
+            document.getElementById("demo7").innerHTML = 
+            fruits3.size;
+
+            //Create a Map:-
+            const fruits4 = new Map([
+                ["apples", 500],
+                ["kiwi", 100],
+                ["pineapple", 300]
+            ]);
+
+            document.getElementById("demo8").innerHTML = 
+            "Do the key apples exist in the Map? = " + 
+            fruits4.has("apples");
+
+            //Create a Map:- 
+            const fruits5 = new Map([
+                ["apples", 800],
+                ["bananas", 300],
+                ["papaya", 560]
+            ]);
+
+            //Delete an element:- 
+            fruits5.delete("bananas");
+
+            document.getElementById("demo9").innerHTML = 
+            "Do the key apples exist in the Map after deleting it? = " + 
+            fruits5.has("bananas");
+
+            //type of Maps:- 
+            document.getElementById("demo10").innerHTML = 
+            "The type of Map is:- " + typeof fruits5;
+
+            document.getElementById("demo11").innerHTML = 
+            "Is fruits5 an instance of Map? = " + 
+            (fruits5 instanceof Map);
+
+            //Create a Map:- 
+            const fruits6 = new Map([
+                ["apples", 500],
+                ["bananas", 100],
+                ["pineapple", 300]
+            ]);
+
+            let text1 = "";
+            fruits6.forEach(function(value, key) {
+                text1 += key + " = " + value + "<br>"
+            })
+
+            document.getElementById("demo12").innerHTML = text1;
+
+            let text2 = "";
+            for(const x of fruits6.entries())
+            {
+                text2 += x + "<br>";
+            }
+
+            document.getElementById("demo13").innerHTML = text2;
+
+            let text3 = "";
+            for(const x of fruits6.keys())
+            {
+                text3 += x + "<br>";
+            }
+
+            document.getElementById("demo14").innerHTML = text3;
+
+            let text4 = "";
+            for(const x of fruits6.values())
+            {
+                text4 += x + "<br>";
+            }
+
+            document.getElementById("demo15").innerHTML = text4;
+
+            let total = 0;
+            for(const x of fruits6.values())
+            {
+                total += x;
+            }
+
+            document.getElementById("demo16").innerHTML = total;
+
+            //Create Objects:- 
+            const apples = {name: 'Apples'};
+            const bananas = {name: 'Bananas'};
+            const oranges = {name: 'Oranges'};
+
+            //Create a Map:- 
+            const fruits7 = new Map();
+
+            //Add the objects to the Map:- 
+            fruits7.set(apples, 500);
+            fruits7.set(bananas, 300);
+            fruits7.set(oranges, 200);
+
+            document.getElementById("demo17").innerHTML = fruits7.get(apples);
+
+            document.getElementById("demo18").innerHTML = fruits7.get("apples");
+        </script>
+    </body>
+</html>

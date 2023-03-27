@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en-in">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>
+            JS Canvas 
+        </title>
+        <style>
+            html {
+                font-size:calc(10px + 0.390625vw);
+            }
+
+            body {
+                font-family:verdana, sans-serif;
+                font-size:1rem;
+                line-height:1.5;
+            }
+
+            .edit {
+                background-color:#f1f1f1;
+                color:red;
+            }
+
+            .edit1 {
+                background-color:rgba(255,255,0,0.3);
+                padding:2rem;
+            }
+
+            canvas {
+                border:1px solid grey;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>
+            HTML Canvas 
+        </h1>
+
+        <div style="background-color:rgba(0,255,0,0.1);padding:2rem;">
+            HTML Canvas is perfect for <strong>Scatter Plots</strong>
+            <br>
+            HTML Canvas is perfect for <strong>Line Graphs</strong>
+            <br>
+            HTML Canvas is perfect for combining <strong>Scatter</strong> and <strong>Lines</strong> 
+        </div>
+
+        <hr>
+
+        <h2>
+            Scatter Plots 
+        </h2>
+
+        <div>
+            Example:- 
+            <br>
+            <canvas id="myCanvas" width="400" height="400"></canvas>
+        </div>
+
+        <hr>
+
+        <h2>
+            Line Graphs 
+        </h2>
+
+        <div>
+            Example:- 
+            <br>
+            <canvas id="myCanvas1" width="400" height="400"></canvas>
+        </div>
+
+        <hr>
+        <br>
+        <hr>
+
+        <h2>
+            Combined 
+        </h2>
+
+        <div>
+            Example:- 
+            <br>
+            <canvas id="myCanvas2" width="400" height="400"></canvas>
+        </div>
+
+        <script>
+            const canvas = document.getElementById("myCanvas");
+            const ctx = canvas.getContext("2d");
+            canvas.height = canvas.width;
+            ctx.transform(1,0,0,-1,0, canvas.height);
+
+            const xArray = [50,60,70,80,90,100,110,120,130,140,150];
+            const yArray = [7,8,8,9,9,9,10,11,14,14,15];
+
+            ctx.fillStyle = "red";
+            for (let i = 0; i < xArray.length-1; i++) {
+                let x = xArray[i]*400/150;
+                let y = yArray[i]*400/15;
+                ctx.beginPath();
+                ctx.ellipse(x,y,3,3,0,0,Math.PI*2);
+                ctx.fill();
+            }
+
+            const canvas1 = document.getElementById("myCanvas1");
+            const ctx1 = canvas1.getContext("2d");
+            ctx1.fillStyle = "red";
+            canvas1.height = canvas1.width;
+            ctx1.transform(1,0,0,-1,0, canvas1.height);
+
+            let xMax = canvas1.height;
+            let slope = 1.2;
+            let intercept = 70;
+
+            ctx1.moveTo(0, intercept);
+            ctx1.lineTo(xMax, f(xMax));
+            ctx1.strokeStyle = "black";
+            ctx1.stroke();
+
+            function f(x) {
+                return x * slope + intercept;
+            }
+            
+
+            //Combined Charts 
+            const canvas2 = document.getElementById("myCanvas2");
+            const ctx2 = canvas2.getContext("2d");
+            ctx2.fillStyle = "red";
+            canvas2.height = canvas2.width;
+            ctx2.transform(1,0,0,-1,0,canvas2.height);
+
+            let xMax1 = canvas2.height;
+            let yMax1 = canvas2.width;
+            let slope1 = 1.2;
+            let intercept1 = 70;
+
+            const xArray1 = [50,60,70,80,90,100,110,120,130,140,150];
+            const yArray1 = [7,8,8,9,9,9,10,11,14,14,15];
+
+            // Plot Scatter
+            ctx2.fillStyle = "red";
+            for (let i = 0; i < xArray1.length-1; i++) {
+                let x = xArray1[i]*xMax1/150;
+                let y = yArray1[i]*yMax1/15;
+                ctx2.beginPath();
+                ctx2.ellipse(x,y,3,3,0,0,Math.PI * 2);
+                ctx2.fill();
+            }
+
+            // Plot Line
+            ctx2.moveTo(0, intercept1);
+            ctx2.lineTo(xMax1, f1(xMax1));
+            ctx2.strokeStyle = "black";
+            ctx2.stroke();
+
+            // Line Function<br>
+            function f1(x) {
+                return x * slope1 + intercept1;
+            }
+        </script>
+    </body>
+</html>

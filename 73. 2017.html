@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            ECMAScript 2017 
+        </title>
+        <style>
+            .edit {
+                background-color:#f1f1f1;
+                color:red;
+            }
+            .edit1 {
+                background-color:rgba(255,255,0,0.3);
+                padding:20px;
+            }
+            body {
+                font-family:verdana, sans-serif;
+                font-size:20px;
+                line-height:1.5;
+            }
+            .table1 {
+                width:100%;
+                border:1px solid #ddd;
+                border-collapse:collapse;
+            }
+            .table1 tr {
+                height:40px;
+            }
+            .table1 tr:nth-child(even) {
+                background-color:#f1f1f1;
+            }
+            .table1 td {
+                text-align:center;
+                padding:10px;
+                border:1px solid #ddd;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>
+            ECMAScript 2017 
+        </h1>
+
+        <div style="background-color:rgba(0,255,0,0.2);padding:20px;">
+        Original JavaScript version numbers were ES5 (2009) and ES6 (2015). 
+        <br>
+        Since 2016, versions are named by year:- ECMAScript 2016, 2017, 2018, 2019. 
+        </div>
+
+        <hr>
+
+        <h2>
+            New Features in ECMAScript 2017 
+        </h2>
+
+        <div>
+            This chapter introduces the new features in ECMAScript 2017:- 
+            <br>
+            <ul>
+                <li>JavaScript String padding</li>
+                <li>JavaScript Object entries()</li>
+                <li>JavaScript Object values()</li>
+                <li>JavaScript async and await</li>
+                <li>JavaScript Object.getOwnPropertyDescriptors</li>
+            </ul>
+        </div>
+
+        <hr>
+
+        <h2>
+            JavaScript String Padding 
+        </h2>
+
+        <div>
+            ECMAScript 2017 added two String methods:- <span class="edit">padStart</span> and <span class="edit">padEnd</span> to support padding at the beginning and at the end of a string. 
+            <br>
+            Example:- 
+            <br>
+            Padding at the beginning:- 
+            <br>
+            <p id="demo1"></p>
+
+            <br>
+            <br>
+            Example:- 
+            <br>
+            Padding at the end:- 
+            <br>
+            <p id="demo2"></p>
+
+            <br>
+            <br>
+            JavaScript string padding is supported in all modern browsers since April 2017. 
+            <br>
+            <br>
+            <table class="table1">
+                <tr>
+                    <td><img src="Image4.svg.png" height="38" width="38" alt="Google Chrome"></td>
+                    <td><img src="Image5.png" height="38" width="38" alt="Microsoft Edge"></td>
+                    <td><img src="Image6.png" height="38" width="38" alt="Mozilla Firefox"></td>
+                    <td><img src="Image7.png" height="38" width="38" alt="Apple Safari"></td>
+                    <td><img src="Image8.png" height="38" width="38" alt="Opera"></td>
+                </tr>
+                <tr>
+                    <td>Chrome 57</td>
+                    <td>Edge 15</td>
+                    <td>Firefox 48</td>
+                    <td>Safari 10</td>
+                    <td>Opera 44</td>
+                </tr>
+                <tr>
+                    <td>Mar 2017</td>
+                    <td>Apr 2017</td>
+                    <td>Aug 2016</td>
+                    <td>Sep 2016</td>
+                    <td>Mar 2017</td>
+                </tr>
+            </table>
+        </div>
+
+        <hr>
+
+        <h2>
+            JavaScript Object Entries 
+        </h2>
+
+        <div>
+            ECMAScript 2017 added the <span class="edit">Object.entries()</span> method to objects. 
+            <br>
+            <span class="edit">Object.entries()</span> returns an array of the key/value pairs in an object. 
+            <br>
+            Example:- 
+            <br>
+            <p id="demo3"></p>
+
+            <br>
+            <br>
+            <span class="edit">Object.entries()</span> makes it simple to use objects in loops. 
+            <br>
+            Example:- 
+            <br>
+            <p id="demo4"></p>
+
+            <br>
+            <br>
+            <span class="edit">Object.entries()</span> also makes it simple to convert object to maps. 
+            <br>
+            Example:- 
+            <br>
+            <p id="demo5"></p>
+
+            <br>
+            <br>
+            <span class="edit">Object.entries()</span> is supported in all modern browsers since March 2017. 
+            <br>
+            <br>
+            <table class="table1">
+                <tr>
+                    <td><img src="Image4.svg.png" height="38" width="38" alt="Google Chrome"></td>
+                    <td><img src="Image5.png" height="38" width="38" alt="Microsoft Edge"></td>
+                    <td><img src="Image6.png" height="38" width="38" alt="Mozilla Firefox"></td>
+                    <td><img src="Image7.png" height="38" width="38" alt="Apple Safari"></td>
+                    <td><img src="Image8.png" height="38" width="38" alt="Opera"></td>
+                </tr>
+                <tr>
+                    <td>Chrome 47</td>
+                    <td>Edge 14</td>
+                    <td>Firefox 47</td>
+                    <td>Safari 10.1</td>
+                    <td>Opera 41</td>
+                </tr>
+                <tr>
+                    <td>Jun 2016</td>
+                    <td>Aug 2016</td>
+                    <td>Jun 2016</td>
+                    <td>Mar 2017</td>
+                    <td>Oct 2016</td>
+                </tr>
+            </table>
+        </div>
+
+        <hr>
+
+        <h2>
+            JavaScript Object Values 
+        </h2>
+
+        <div>
+            <span class="edit">Object.values()</span> are similar to <span class="edit">Object.entries()</span>, but returns a single dimension array of the object values. 
+            <br>
+            Example:- 
+            <br>
+            <p id="demo6"></p>
+
+            <br>
+            <br>
+            <span class="edit">Object.values()</span> is supported in all modern browsers since March 2017. 
+            <br>
+            <br>
+            <table class="table1">
+                <tr>
+                    <td><img src="Image4.svg.png" height="38" width="38" alt="Google Chrome"></td>
+                    <td><img src="Image5.png" height="38" width="38" alt="Microsoft Edge"></td>
+                    <td><img src="Image6.png" height="38" width="38" alt="Mozilla Firefox"></td>
+                    <td><img src="Image7.png" height="38" width="38" alt="Apple Safari"></td>
+                    <td><img src="Image8.png" height="38" width="38" alt="Opera"></td>
+                </tr>
+                <tr>
+                    <td>Chrome 54</td>
+                    <td>Edge 14</td>
+                    <td>Firefox 47</td>
+                    <td>Safari 10.1</td>
+                    <td>Opera 41</td>
+                </tr>
+                <tr>
+                    <td>Oct 2016</td>
+                    <td>Aug 2016</td>
+                    <td>Jun 2016</td>
+                    <td>Mar 2017</td>
+                    <td>Oct 2016</td>
+                </tr>
+            </table>
+        </div>
+
+        <hr>
+        <br>
+        <br>
+        <hr>
+
+        <h2>
+            JavaScript Async Functions 
+        </h2>
+
+        <div>
+            Waiting For a Timeout:- 
+            <br>
+            Example:- 
+            <br>
+            <h1 id="demo7"></h1>
+
+            <br>
+            <br>
+            Firefox and Chrome were the first browsers with support for async JavaScript functions. 
+            <br>
+            <br>
+            <table class="table1">
+                <tr>
+                    <td><img src="Image4.svg.png" height="38" width="38" alt="Google Chrome"></td>
+                    <td><img src="Image5.png" height="38" width="38" alt="Microsoft Edge"></td>
+                    <td><img src="Image6.png" height="38" width="38" alt="Mozilla Firefox"></td>
+                    <td><img src="Image7.png" height="38" width="38" alt="Apple Safari"></td>
+                    <td><img src="Image8.png" height="38" width="38" alt="Opera"></td>
+                </tr>
+                <tr>
+                    <td>Chrome 55</td>
+                    <td>Edge 15</td>
+                    <td>Firefox 52</td>
+                    <td>Safari 11</td>
+                    <td>Opera 42</td>
+                </tr>
+                <tr>
+                    <td>Dec 2016</td>
+                    <td>Apr 2017</td>
+                    <td>Mar 2017</td>
+                    <td>Sep 2017</td>
+                    <td>Dec 2016</td>
+                </tr>
+            </table>
+        </div>
+
+        <script>
+            let text1 = "5";
+            text1 = text1.padStart(4,"0");
+            document.getElementById("demo1").innerHTML = text1;
+
+            let text2 = "5";
+            text2 = text2.padEnd(4,"0");
+            document.getElementById("demo2").innerHTML = text2;
+
+            const person1 = {
+                firstName: "John",
+                lastName: "Doe",
+                age: 50, 
+                eyeColor: "blue"
+            };
+
+            let text3 = Object.entries(person1);
+            document.getElementById("demo3").innerHTML = text3;
+
+            const fruits1 = {Bananas:300, Oranges:200, Apples:500};
+
+            let text4 = "";
+            for(let [fruit, amount] of Object.entries(fruits1))
+            {
+                text4 += fruit + ": " + amount + "<br>";
+            }
+
+            document.getElementById("demo4").innerHTML = text4;
+
+            const myMap = new Map(Object.entries(fruits1));
+            document.getElementById("demo5").innerHTML = myMap;
+
+            let text5 = Object.values(person1);
+            document.getElementById("demo6").innerHTML = text5;
+
+            async function myDisplay() 
+            {
+                let myPromise = new Promise(function(resolve) {
+                    setTimeout(function(){resolve("I Love You!!");},3000);
+                });
+                document.getElementById("demo7").innerHTML = await myPromise;
+            }
+            myDisplay();
+        </script>
+    </body>
+</html>

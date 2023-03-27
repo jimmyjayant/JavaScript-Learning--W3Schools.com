@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            JavaScript Debugging 
+        </title>
+        <style>
+            .edit {
+                background-color:#f1f1f1;
+                color:red;
+            }
+            .edit1 {
+                background-color:rgba(255,255,0,0.3);
+                padding:20px;
+            }
+            body {
+                font-family:verdana, sans-serif;
+                font-size:20px;
+                line-height:1.5;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>
+            JavaScript Debugging 
+        </h1>
+
+        <div class="edit1">
+            Errors can (will) happen, every time you write some new computer code. 
+        </div>
+
+        <hr>
+
+        <h2>
+            Code Debugging 
+        </h2>
+
+        <div>
+            Programming code might contain syntax errors, or logical errors. 
+            <br>
+            Many of these errors are difficult to diagnose. 
+            <br>
+            Often, when programming code contain errors, nothing will happen. There are no error messages, and you will get no indications where to search for errors. 
+            <br>
+            Searching for (and fixing) errors in programming code is called code debugging. 
+        </div>
+
+        <hr>
+
+        <h2>
+            JavaScript Debuggers 
+        </h2>
+
+        <div>
+            Debugging is not easy. But fortunately, all modern browsers have a built-in JavaScript debugger. 
+            <br>
+            Built-in debuggers can be turned on or off, forcing errors to be reported to the user. 
+            <br>
+            With a debugger, you can also set breakpoints (places where code execution can be stopped), and examine variables while the code is executing. 
+            <br>
+            Normally (otherwise follow the steps at the bottom of this page), you activate debugging in your browser with the F12 key, and select "Console" in the debugger menu. 
+        </div>
+
+        <hr>
+
+        <h2>
+            The console.log() Method 
+        </h2>
+
+        <div>
+            If your browser supports debugging, you can use <span class="edit">console.log()</span> to display JavaScript values in the debugger window. 
+            <br>
+            Example:- 
+            <br>
+            Activate debugging in your browser (Chrome, IE, Firefox) with F12, and select "Console" in the debugger menu. 
+            <br>
+            And check the value of the variable c = a + b where a is 5 and b is 6. 
+        </div>
+
+        <hr>
+
+        <h2>
+            Setting Breakpoints 
+        </h2>
+
+        <div>
+            In the debugger window, you can set breakpoints in the JavaScript code. 
+            <br>
+            At each breakpoint, JavaScript will stop executing, and let you examine JavaScript values. 
+            <br>
+            After examining values, you can resume the execution of code (typically with a play button).  
+        </div>
+
+        <hr>
+        <br>
+        <br>
+        <hr>
+
+        <h2>
+            The debugger Keyword 
+        </h2>
+
+        <div>
+            The <span class="edit">debugger</span> keyword stops the execution of JavaScript, and calls (if available) the debugging function. 
+            <br>
+            This has the same function as setting a breakpoint in the debugger. 
+            <br>
+            If no debugging is available, the debugger statement has no effect. 
+            <br>
+            With the debugger turned on, this code will stop executing before it executes the third line. 
+            <br>
+            <p class="edit1">
+                let x = 15 * 5;
+                <br>
+                debugger;
+                <br>
+                document.getElementById("demo").innerHTML = x;
+            </p>
+            <br>
+            <br>
+            Example:- 
+            <br>
+            Below p element with id="demo1" will show 75 which is variable x = 15 X 5. But if you activate the console mode (debugging mode) by pressing F12, and refreshing the browser, then the p element WILL NOT SHOW 75. 
+            <br>
+            <p id="demo1"></p>
+        </div>
+
+        <hr>
+
+        <h2>
+            Major Browsers' Debugging Tools 
+        </h2>
+
+        <div>
+            Normally, you activate debugging in your browser with F12, and select "Console" in the debugger menu. 
+            <br>
+            Otherwise follow these steps:- 
+            <br>
+            <h3>
+                Chrome 
+            </h3>
+
+            <ul>
+                <li>Open the browser.</li>
+                <li>From the menu, select "More tools".</li>
+                <li>From tools, choose "Developer tools".</li>
+                <li>Finally, select Console.</li>
+            </ul>
+
+            <br>
+            <br>
+
+            <h3>
+                Firefox 
+            </h3>
+
+            <ul>
+                <li>Open the browser.</li>
+                <li>From the menu, select "Web Developer".</li>
+                <li>Finally, select "Web Console".</li>
+            </ul>
+
+            <br>
+            <br>
+
+            <h3>
+                Edge 
+            </h3>
+
+            <ul>
+                <li>Open the browser.</li>
+                <li>From the menu, select "Developer Tools".</li>
+                <li>Finally, select "Console".</li>
+            </ul>
+
+            <br>
+            <br>
+
+            <h3>
+                Opera 
+            </h3>
+
+            <ul>
+                <li>Open the browser.</li>
+                <li>From the menu, select "Developer".</li>
+                <li>From "Developer", select "Developer tools".</li>
+                <li>Finally, select "Console".</li>
+            </ul>
+
+            <br>
+            <br>
+
+            <h3>
+                Safari 
+            </h3>
+
+            <ul>
+                <li>Go to Safari, Preferences, Advanced in the main menu.</li>
+                <li>Check "Enable Show Develop menu in menu bar".</li>
+                <li>When the new option "Develop" appears in the menu: 
+                    <br>
+                    Choose "Show Error Console". 
+                </li>
+            </ul>
+        </div>
+
+        <hr>
+
+        <h2>
+            Did You Know? 
+        </h2>
+
+        <div class="edit1">
+            Debugging is the process of testing, finding, and reducing bugs (errors) in computer programs. 
+            <br>
+            The first known computer bug was a real bug (an insect) stuck in the electronics. 
+        </div>
+
+        <script>
+            a = 5;
+            b = 6;
+            c = a + b;
+            console.log(c);
+
+            let x = 15 * 5;
+            debugger;
+            document.getElementById("demo1").innerHTML = x;
+        </script>
+    </body>
+</html>

@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            JavaScript While Loop 
+        </title>
+        <style>
+            .edit {
+                background-color:#f1f1f1;
+                color:red;
+            }
+            .edit1 {
+                background-color:rgba(255,255,0,0.3);
+                padding:20px;
+            }
+            body {
+                font-family:verdana, sans-serif;
+                font-size:20px;
+                line-height:1.5;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>
+            JavaScript While Loop 
+        </h1>
+
+        <hr>
+
+        <p>
+            Loops can execute a block of code as long as a specified condition is true. 
+        </p>
+
+        <hr>
+
+        <h2>
+            The While Loop 
+        </h2>
+
+        <p>
+            The <span class="edit">while</span> loop loops through a block of code as long as a specified condition is true. 
+            <br>
+            Syntax:- 
+            <br>
+            <p class="edit1">
+                while (condition) {
+                    <br>
+                    //code block to be executed 
+                    <br>
+                }
+            </p>
+            <br>
+            Example:- 
+            <br>
+            In the following example, the code in the loop will run, over and over again, as long as a variable (i) is less than 10. 
+            <br>
+            <p id="demo1"></p>
+
+            <br>
+
+            <p class="edit1">
+                If you forgot to increase the variable used in the condition, the loop will never end. This will crash your browser. 
+            </p>
+        </p>
+
+        <hr>
+
+
+        <h2>
+            The Do While Loop 
+        </h2>
+
+        <p>
+            The <span class="edit">do while</span> loop is a variant of the while loop. This loop will execute the code block once, before checking if the condition is true, then it will repeat the loop as long as the condition is true. 
+            <br>
+            Syntax:- 
+            <br>
+            <p class="edit1">
+                do {
+                    <br>
+                    //code block to be executed 
+                    <br>
+                }
+                <br>
+                while (condition);
+            </p>
+
+            <br>
+            Example:- 
+            <br>
+            The example below uses a <span class="edit">do while</span> loop. The loop will always be executed at least once, even if the condition is false, because the code block is executed before the condition is tested. 
+            <br>
+            <p id="demo2"></p>
+
+            <br>
+            <br>
+            Do not forget to increase the variable used in the condition, otherwise the loop will never end! 
+        </p>
+
+        <hr>
+
+        <h2>
+            Comparing For and While 
+        </h2>
+
+        <p>
+            The while loop is much the same as a for loop, with statement 1 and statement 3 omitted. 
+            <br>
+            The loop in this example uses a <span class="edit">for</span> loop to collect the car names from the cars array. 
+            <br>
+            Example:- 
+            <br>
+            <p id="demo3"></p>
+
+            <br>
+            <br>
+            The loop in this example uses a <span class="edit">while</span> loop to collect the car names from the cars array. 
+            <br>
+            Example:- 
+            <br>
+            <p id="demo4"></p>
+        </p>
+
+        <script>
+            let i = 1;
+            let text1 = "";
+
+            while(i<10)
+            {
+                text1 += "The number is " + i + "<br>";
+                i++;
+            }
+            document.getElementById("demo1").innerHTML = text1;
+
+            let a = 1;
+            let text2 = "";
+
+            do {
+                text2 += "The number is " + a + "<br>";
+                a++;
+            }
+            while(a<10);
+
+            document.getElementById("demo2").innerHTML = text2;
+
+            //for loop to collect car names from car array 
+            const cars = ["BMW", "Audi", "Volvo", "Saab", "Maruti", "Hyundai"];
+            let n = 0;
+            let text3 = "";
+            for(;cars[n];)
+            {
+                text3 += cars[n] + "<br>";
+                n++;
+            }
+            document.getElementById("demo3").innerHTML = text3;
+
+            let p = 0;
+            let text4 = "";
+            while(cars[p])
+            {
+                text4 += cars[p] + "<br>";
+                p++;
+            }
+
+            document.getElementById("demo4").innerHTML = text4;
+        </script>
+    </body>
+
+</html>

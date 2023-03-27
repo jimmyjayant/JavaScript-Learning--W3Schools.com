@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en-in">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>
+            JavaScript Function Parameters 
+        </title>
+        <style>
+            .edit {
+                background-color:#f1f1f1;
+                color:red;
+            }
+            .edit1 {
+                background-color:rgba(255,255,0,0.3);
+                padding:20px;
+            }
+            body {
+                font-family:verdana, sans-serif;
+                font-size:2rem;
+                line-height:1.5;
+            }
+            html {
+                font-size:62.5%;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>
+          JavaScript Function Parameters 
+        </h1>
+
+        <div>
+            A JavaScript <span class="edit">function</span> does not perform any checking on parameter values (arguments). 
+        </div>
+
+        <hr>
+
+        <h2>
+            Function Parameters and Arguments 
+        </h2>
+
+        <div>
+            Earlier in this tutorial, you learned that functions can have <strong>parameters</strong>. 
+            <br>
+            <p class="edit1">
+                function <i>functionName</i>(<i>parameter1, parameter2, parameter3</i>) {
+                    <br>
+                    //<i>code to be executed</i> 
+                    <br>
+                }
+            </p>
+            <br>
+            Function <strong>parameters</strong> are the <strong>names</strong> listed in the function definition. 
+            <br>
+            Function <strong>arguments</strong> are the real <strong>values</strong> passed to (and received by) the function. 
+        </div>
+
+        <hr>
+
+        <h2>
+            Parameter Rules 
+        </h2>
+
+        <div>
+            JavaScript function definitions do not specify data types for parameters. 
+            <br>
+            JavaScript functions do not perform type checking on the passed arguments. 
+            <br>
+            JavaScript functions do not check the number of arguments received. 
+        </div>
+
+        <hr>
+
+        <h2>
+            Default Parameters 
+        </h2>
+
+        <div>
+            If a function is called with <strong>missing arguments</strong> (less than declared), the missing values are set to <span class="edit">undefined</span>. 
+            <br>
+            Sometimes this is acceptable, but sometimes it is better to assign a default value to the parameter. 
+            <br>
+            Example:- 
+            <br>
+            <p id="demo1"></p>
+        </div>
+
+        <hr>
+
+        <h2>
+            Default Parameter Values 
+        </h2>
+
+        <div>
+            ES6 allows function parameters to have default values. 
+            <br>
+            Example:- 
+            <br>
+            If y is not passed or undefined, then y = 10. 
+            <br>
+            <p id="demo2"></p>
+        </div>
+
+        <hr>
+
+        <h2>
+            Function Rest Parameter 
+        </h2>
+
+        <div>
+            The rest parameter(...) allows a function to treat an indefinite number of arguments as an array. 
+            <br>
+            Example:- 
+            <br>
+            <p id="demo3"></p>
+        </div>
+
+        <hr>
+
+        <h2>
+            The Arguments Object 
+        </h2>
+
+        <div>
+            JavaScript functions have a built-in object called the arguments object. 
+            <br>
+            The argument object contains an array of the arguments used when the function was called (invoked). 
+            <br>
+            This way you can simply use a function to find (for instance) the highest value in a list of numbers. 
+            <br>
+            Example:- 
+            <br>
+            <p id="demo4"></p>
+
+            <br>
+            <br>
+            Or create a function to sum all input values. 
+            <br>
+            Example:- 
+            <br>
+            <p id="demo5"></p>
+
+            <br>
+            <p class="edit1">
+                If a function is called with <strong>too many arguments</strong> (more than declared), these arguments can be reached using <strong>the arguments object</strong>. 
+            </p>
+        </div>
+
+        <hr>
+
+        <h2>
+            Arguments are Passed by Value 
+        </h2>
+
+        <div>
+            The parameters, in a function call, are the function's arguments. 
+            <br>
+            JavaScript arguments are passed by <strong>value</strong>: The function only gets to know the values, not the argument's locations. 
+            <br>
+            If a function changes an argument's value, it does not change the parameter's original value. 
+            <br>
+            <b>
+            Changes to arguments are not visible (reflected) outside the function. 
+            </b>
+        </div>
+
+        <hr>
+
+        <h2>
+            Objects are Passed by Reference 
+        </h2>
+
+        <div>
+            In JavaScript, object references are values. 
+            <br>
+            Because of this, objects will behave like they are passed by <strong>reference: </strong>
+            <br>
+            If a function changes an object property, it changes the original value. 
+            <br>
+            <strong>Changes to object properties are visible (reflected) outside the function.</strong>
+        </div>
+
+        <script>
+            function myFunction1(x,y) {
+                if(y === undefined) {
+                    y = 2;
+                }
+                return x * y;
+            }
+
+            document.getElementById("demo1").innerHTML = 
+            myFunction1(4);
+
+            function myFunction2(x, y = 10) {
+                return x + y;
+            }
+
+            document.getElementById("demo2").innerHTML = 
+            "If y is not passed, then y is 10 = " + 
+            myFunction2(5) + "<br>" + 
+            "If y is passed = " + myFunction2(5,3);
+
+            function sum1(...args) {
+                let sum = 0;
+                for(let arg of args) 
+                {
+                    sum += arg;
+                }
+                return sum;
+            }
+            let a = sum1(4,9,16,25,29,100,66,77);
+            document.getElementById("demo3").innerHTML = a;
+
+            function findMax() {
+                let max = -Infinity;
+                for(let i = 0; i < arguments.length; i++) {
+                    if(arguments[i] > max) {
+                        max = arguments[i];
+                    }
+                }
+                return max;
+            }
+            document.getElementById("demo4").innerHTML = findMax(4,5,6);
+
+            function sumAll() {
+                let sum = 0;
+                for(let i = 0; i < arguments.length; i++) {
+                    sum += arguments[i];
+                }
+                return sum;
+                }
+            document.getElementById("demo5").innerHTML = sumAll(1,123,500,115,44,88);
+        </script>
+    </body>
+</html>

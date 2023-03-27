@@ -1,0 +1,508 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            JavaScript Strict Mode 
+        </title>
+        <style>
+            .edit {
+                background-color:#f1f1f1;
+                color:red;
+            }
+            .edit1 {
+                background-color:rgba(255,255,0,0.3);
+                padding:20px;
+            }
+            body {
+                font-family:verdana, sans-serif;
+                font-size:20px;
+                line-height:1.5;
+            }
+            .table1 {
+                width:100%;
+                border:1px solid #ddd;
+                border-collapse:collapse;
+            }
+            .table1 tr {
+                height:40px;
+            }
+            .table1 tr:nth-child(even) {
+                background-color:#f1f1f1;
+            }
+            .table1 td {
+                padding:10px;
+                text-align:center;
+                border:1px solid #ddd;
+            }
+            .table1 th {
+                text-align:left;
+                padding:10px;
+                border:1px solid #ddd;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>
+            JavaScript Use Strict 
+        </h1>
+
+        <div>
+            <span class="edit">"use strict";</span> Defines that JavaScript code should be executed in "Strict mode". 
+        </div>
+
+        <hr>
+
+        <h2>
+            The "use strict" Directive 
+        </h2>
+
+        <div>
+            The <span class="edit">"use strict"</span> directive was new in ECMAScript version 5. 
+            <br>
+            It is not a statement, but a literal expression, ignored by earlier versions of JavaScript. 
+            <br>
+            The purpose of <span class="edit">"use strict"</span> is to indicate that the code should be executed in "strict mode". 
+            <br>
+            With strict mode, you cannot, for example, use undeclared variables. 
+            <br>
+            All modern browsers support "use strict" except Internet Explorer 9 or lower. 
+            <br>
+            <br>
+            <table class="table1">
+                <tr>
+                    <th>Directive</th>
+                    <td><img src="Image4.svg.png" height="38" width="38" alt="Google Chrome"></td>
+                    <td><img src="Image5.png" height="38" width="38" alt="Microsoft Edge"></td>
+                    <td><img src="Image6.png" height="38" width="38" alt="Mozilla Firefox"></td>
+                    <td><img src="Image7.png" height="38" width="38" alt="Apple Safari"></td>
+                    <td><img src="Image8.png" height="38" width="38" alt="Opera"></td>
+                </tr>
+                <tr>
+                    <th>"use strict"</th>
+                    <td>13.0</td>
+                    <td>10.0</td>
+                    <td>4.0</td>
+                    <td>6.0</td>
+                    <td>12.1</td>
+                </tr>
+            </table>
+
+            <br>
+
+            The numbers in the table specify the first browser version that fully supports the directive. 
+
+            <br>
+
+            <p class="edit1">
+                You can use strict mode in all your programs. It helps you to write cleaner code, like preventing you from using undeclared variables. 
+                <br>
+                <span class="edit">"use strict"</span> is just a string, so IE 9 will not throw an error even if it does not understand it. 
+            </p>
+        </div>
+
+        <hr>
+
+        <h2>
+            Declaring Strict Mode 
+        </h2>
+
+        <div>
+            Strict mode is declared by adding <span class="edit">"use strict";</span> to the beginning of a script or a function. 
+            <br>
+            Declared at the beginning of a script, it has global scope (all code in the script will execute in strict mode). 
+            <br>
+            Example:- 
+            <br>
+            Activate debugging in your browser (F12) to see the error report. 
+            <br>
+            <p id="demo1"></p>
+            <br>
+            Example:- 
+            <br>
+            <p id="demo2"></p>
+
+            <br>
+            <br>
+            Declared inside a function, it has local scope (only the code inside the function is in strict mode): 
+            <br>
+            Example:- 
+            <br>
+            "use strict" in a function will only cause errors in that function. 
+            <br>
+            Activate debugging in your browser (F12) to see the error report. 
+            <br>
+            <p id="demo3"></p>
+        </div>
+
+        <hr>
+
+        <h2>
+            The "use strict"; Syntax 
+        </h2>
+
+        <div>
+            The syntax, for declaring strict mode, was designed to be compatible with older versions of JavaScript. 
+            <br>
+            Compiling a numeric literal (4 + 5;) or a string literal ("John Doe";) in a JavaScript program has no side effects. It simply compiles to a non existing variable and dies. 
+            <br>
+            So <span class="edit">"use strict";</span> only matters to new compilers that "understand" the meaning of it. 
+        </div>
+
+        <hr>
+
+        <h2>
+            Why Strict Mode? 
+        </h2>
+
+        <div>
+            Strict mode makes it easier to write "secure" JavaScript. 
+            <br>
+            Strict mode changes previously accepted "bad syntax" into real errors. 
+            <br>
+            As an example, in normal JavaScript, mistyping a variable name creates a new global variable. In strict mode, this will throw an error, making it impossible to accidentally create a global variable. 
+            <br>
+            In normal JavaScript, a developer will not receive any error feedback assigning values to non-writable properties. 
+            <br>
+            In strict mode, any assignment to a non-writable property, a getter-only property, a non-existing property, a non-existing variable, or a non-existing object, will throw an error. 
+        </div>
+
+        <hr>
+
+        <h2>
+            Not Allowed in Strict Mode 
+        </h2>
+
+        <div>
+            Using a variable, without declaring it, is not allowed. 
+            <br>
+            Example:- 
+            <br>
+            <p id="demo4"></p>
+            <br>
+            <p class="edit1">
+                Objects are variables too. 
+            </p>
+
+            <br>
+
+            Using an object, without declaring it, is not allowed. 
+            <br>
+            <p id="demo5"></p>
+
+            <br>
+            <br>
+            Deleting a variable (or object) is not allowed. 
+            <br>
+            Example:- 
+            <br>
+            <p class="edit1">
+                "use strict";
+                <br>
+                let b = 3.14;
+                <br>
+                delete b; //This will cause an error. 
+            </p>
+
+            <br>
+            <br>
+            Deleting a function is not allowed. 
+            <br>
+            Example:- 
+            <br>
+            <p class="edit1">
+             "use strict";
+             <br>
+             function x(p1, p2) {};
+             <br>
+             delete x; //This will cause an error 
+            </p>
+
+            <br>
+            <br>
+            Duplicating a parameter name is not allowed. 
+            <br>
+            Example:- 
+            <br>
+            <p class="edit1">
+                "use strict";
+                <br>
+                function x(p1, p1) {}; //This will cause an error 
+            </p>
+
+            <br>
+            <br>
+            Octal numeric literals are not allowed. 
+            <br>
+            Example:- 
+            <br>
+            <p class="edit1">
+                "use strict";
+                <br>
+                let x = 010; //This will cause an error. 
+            </p>
+
+            <br>
+            <br>
+            Octal escape characters are not allowed. 
+            <br>
+            Example:- 
+            <br>
+            <p class="edit1">
+                "use strict"; 
+                <br>
+                let x = "\010"; //This will cause an error 
+            </p>
+
+            <br>
+            <br>
+            Writing to a read-only property is not allowed. 
+            <br>
+            Example:- 
+            <br>
+            <p class="edit1">
+                "use strict";
+                <br>
+                const obj = {};
+                <br>
+                Object.defineProperty(obj, "x", {value:0, writable:false});
+                <br>
+                obj.x = 3.14; //This will cause an error 
+            </p>
+
+            <br>
+            <br>
+            Writing to a get-only property is not allowed. 
+            <br>
+            Example:- 
+            <br>
+            <p class="edit1">
+                "use strict";
+                <br>
+                const obj = {get x() {return 0}};
+                <br>
+                obj.x = 3.14; //This will cause an error 
+            </p>
+
+            <br>
+            <br>
+            Deleting an undeletable property is not allowed. 
+            <br>
+            Example:- 
+            <br>
+            <p class="edit1">
+                "use strict"; 
+                <br>
+                delete Object.prototype; //This will cause an error 
+            </p>
+
+            <br>
+            <br>
+            The word <span class="edit">eval</span> cannot be used as a variable. 
+            <br>
+            Example:- 
+            <br>
+            <p class="edit1">
+                "use strict";
+                <br>
+                let eval = 3.14; //This will cause an error 
+            </p>
+
+            <br>
+            <br>
+            The word <span class="edit">arguments</span> cannot be used as a variable. 
+            <br>
+            Example:- 
+            <br>
+            <p class="edit1">
+                "use strict";
+                <br>
+                let arguments = 3.14; //This will cause an error 
+            </p>
+
+            <br>
+            <br>
+            The <span class="edit">with</span> statement is not allowed. 
+            <br>
+            Example:- 
+            <br>
+            <p class="edit1">
+                "use strict"; 
+                <br>
+                with (Math) {x = cos(2)}; //This will cause an error 
+            </p>
+
+            <br>
+            <br>
+            For security reasons, <span class="edit">eval()</span> is not allowed to create variables in the scope from which it was called. 
+            <br>
+            Example:- 
+            <br>
+            In strict mode, a variable can not be used before it is declared. 
+            <br>
+            <p class="edit1">
+             "use strict"; 
+             <br>
+             eval("x = 2");
+             <br>
+             alert(x); //This will cause an error 
+            </p>
+
+            <br>
+            <br>
+            Example:- 
+            <br>
+            In strict mode, eval() can not declare a variable using the var keyword. 
+            <br>
+            <p class="edit1">
+                "use strict";
+                <br>
+                eval("var x = 2");
+                <br>
+                alert(x); //This will cause an error 
+            </p>
+
+            <br>
+            <br>
+            Example:- 
+            <br>
+            eval() can not declare a variable using the let keyword. 
+            <br>
+            <p class="edit1">
+                eval("let x = 2");
+                <br>
+                alert(x); //This will cause an error 
+            </p>
+
+            <br>
+            <br>
+            The <span class="edit">this</span> keyword in functions behaves differently in strict mode. 
+            <br>
+            The <span class="edit">this</span> keyword refers to the object that called the function. 
+            <br>
+            If the object is not specified, functions in strict mode will return <span class="edit">undefined</span> and functions in normal mode will return the global object (window). 
+            <br>
+            Example:- 
+            <br>
+            <p id="demo6"></p> 
+        </div>
+
+        <hr>
+
+        <h2>
+            Future Proof! 
+        </h2>
+
+        <div>
+            Keywords reserved for future JavaScript versions can NOT be used as variable names in strict mode. 
+            <br>
+            These are:- 
+            <br>
+            <ul>
+                <li>implements</li>
+                <li>interface</li>
+                <li>let</li>
+                <li>package</li>
+                <li>private</li>
+                <li>protected</li>
+                <li>public</li>
+                <li>static</li>
+                <li>yield</li>
+            </ul>
+
+            <br>
+            Example:- 
+            <br>
+            <p class="edit1">
+                "use strict"; 
+                <br>
+                let public = 1500; //This will cause an error since public is a reserved keyword 
+            </p>
+
+            <br>
+            <br>
+
+            <div style="background-color:rgba(255,0,0,0.3);padding:20px;">
+            <h2>
+                Watch Out! 
+            </h2>
+            <p>
+                The "use strict" directive is only recognized at the <strong>beginning</strong> of a script or a function. 
+            </p>
+            </div>
+        </div>
+
+
+        <script>
+        //Using Strict Mode 
+        "use strict";
+
+
+        try {
+            x = 3.14;  //This will cause an error (x is not defined). 
+           }
+        catch(err) {
+            document.getElementById("demo1").innerHTML = 
+            "Error Name:- " + err.name + "<br>" + 
+            "Error Message:- " +  err.message;
+        }
+        
+        try {
+        myFunction1();
+
+        function myFunction1()
+        {
+            y = 3.14;  //This will cause an error (y is not defined).  
+        }
+        }
+        catch(err)
+        {
+            document.getElementById("demo2").innerHTML = 
+            "Error Name:- " + err.name + "<br>" + "Error Message:- " + err.message;
+        }
+
+        try {
+            myFunction2();
+
+            function myFunction2()
+            {
+                "use strict";
+                y = 3.14;   //This will cause an error (y is not defined). 
+            }
+        }
+        catch(err)
+        {
+            document.getElementById("demo3").innerHTML = 
+            "Error Name:- " + err.name + "<br>" + 
+            "Error Message:- " + err.message;
+        }
+
+        try {
+            z = 3.14;  //This will cause an error (z is not defined). 
+        }
+        catch(err)
+        {
+            document.getElementById("demo4").innerHTML = 
+            "Error Name:- " + err.name + "<br>" + 
+            "Error Message:- " + err.message; 
+        }
+
+        try {
+            a = {p1:10, p2:20}; //This will cause an error (a is not defined).  
+        }
+        catch(err)
+        {
+            document.getElementById("demo5").innerHTML = 
+            "Error Name:- " + err.name + "<br>" + 
+            "Error Message:- " + err.message;
+        }
+        
+        myFunction3();
+
+        function myFunction3()
+        {
+            document.getElementById("demo6").innerHTML = this;  //will print "undefined" 
+        }
+        </script>
+    </body>
+
+</html>

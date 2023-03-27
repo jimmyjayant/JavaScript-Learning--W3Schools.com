@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en-in">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>
+            JavaScript Display Objects 
+        </title>
+        <style>
+            .edit {
+                background-color:#f1f1f1;
+                color:red;
+            }
+            .edit1 {
+                background-color:rgba(255,255,0,0.3);
+                padding:20px;
+            }
+            body {
+                font-family:Verdana, sans-serif;
+                font-size:20px;
+                line-height:1.5;
+            }
+            .table1 {
+                width: 100%;
+                border:1px solid #ddd;
+                border-collapse:collapse;
+            }
+            .table1 tr {
+                height:40px;
+            }
+            .table1 tr:nth-child(even) {
+                background-color:#f1f1f1;
+            }
+            .table1 td {
+                text-align:center;
+                padding:10px;
+                border:1px solid #ddd;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>
+            JavaScript Display Objects 
+        </h1>
+
+        <hr>
+
+        <h2>
+            How to Display JavaScript Objects? 
+        </h2>
+
+        <div>
+            Displaying a JavaScript object will output <strong>[object Object]</strong>. 
+            <br>
+            Example:- 
+            <br>
+            <p id="demo1"></p>
+
+            <br>
+            <br>
+            Some common solutions to display JavaScript objects are:- 
+            <br>
+            <ul>
+                <li>Displaying the Object Properties by name</li>
+                <li>Displaying the Object Properties in a Loop</li>
+                <li>Displaying the Object using Object.values()</li>
+                <li>Displaying the Object using JSON.stringify()</li>
+            </ul>
+        </div>
+
+        <hr>
+
+        <h2>
+            Displaying Object Properties 
+        </h2>
+
+        <div>
+            The properties of an object can be displayed as a string. 
+            <br>
+            Example:- 
+            <br>
+            <p id="demo2"></p>
+        </div>
+
+        <hr>
+
+        <h2>
+            Displaying the Object in a Loop 
+        </h2>
+
+        <div>
+            The properties of an object can be collected in a loop. 
+            <br>
+            Example:- 
+            <br>
+            <p id="demo3"></p>
+
+            <br>
+
+            <p class="edit1">
+                You must use <strong>person[x]</strong> in the loop. 
+                <br>
+                <strong>person.x</strong> will not work (Because <strong>x</strong> is a variable).  
+            </p>
+        </div>
+
+        <hr>
+
+        <h2>
+            Using Object.values() 
+        </h2>
+
+        <div>
+            Any JavaScript object can be converted to an array using <span class="edit">Object.values()</span>. 
+            <br>
+            Example:- 
+            <br>
+            <p class="edit1">
+                const person1 = {
+                    <br>
+                    name: "John",
+                    <br>
+                    age: 30, 
+                    <br>
+                    city: "New York"
+                    <br>
+                };
+                <br>
+                const myArray1 = Object.values(person1); 
+            </p>
+
+            <br>
+            <br>
+            <span class="edit">myArray1</span> is now a JavaScript array, ready to be displayed. 
+            <br>
+            Example:- 
+            <br>
+            <p id="demo4"></p>
+
+            <br>
+            <span class="edit">Object.values()</span> is supported in all major browsers since 2016. 
+            <br>
+            <br>
+            <table class="table1">
+                <tr>
+                    <td><img src="Image4.svg.png" height="38" width="38" alt="Google Chrome"></td>
+                    <td><img src="Image5.png" height="38" width="38" alt="Microsoft Edge"></td>
+                    <td><img src="Image6.png" height="38" width="38" alt="Mozilla Firefox"></td>
+                    <td><img src="Image7.png" height="38" width="38" alt="Apple Safari"></td>
+                    <td><img src="Image8.png" height="38" width="38" alt="Opera"></td>
+                </tr>
+                <tr>
+                    <td>54 (2016)</td>
+                    <td>14 (2016)</td>
+                    <td>47 (2016)</td>
+                    <td>10 (2016)</td>
+                    <td>41 (2016)</td>
+                </tr>
+            </table>
+        </div>
+
+        <hr>
+        <br>
+        <br>
+        <hr>
+
+        <h2>
+            Using JSON.stringify() 
+        </h2>
+
+        <div>
+            Any JavaScript object can be stringified (converted to a string) with the JavaScript function <span class="edit">JSON.stringify()</span>. 
+            <br>
+            Example:- 
+            <br>
+            <p class="edit1">
+                const person1 = {
+                    <br>
+                    name: "John",
+                    <br>
+                    age: 30, 
+                    <br>
+                    city: "New York"
+                    <br>
+                };
+                <br>
+                let myString1 = JSON.stringify(person1);
+            </p>
+
+            <br>
+            <span class="edit">myString1</span> is now a JavaScript string, ready to be displayed. 
+            <br>
+            Example:- 
+            <br>
+            <p id="demo5"></p>
+
+            <br>
+
+            <p class="edit1">
+                The result will be a string following the JSON notation:- 
+                <br>
+                {"name":"John","age":30,"city":"New York"} 
+            </p>
+
+            <br>
+
+            <span class="edit">JSON.stringify()</span> is included in JavaScript and supported in all major browsers. 
+        </div>
+
+        <hr>
+
+        <h2>
+            Stringify Dates 
+        </h2>
+
+        <div>
+            <span class="edit">JSON.stringify</span> converts dates into strings. 
+            <br>
+            Example:- 
+            <br>
+            <p id="demo6"></p>
+        </div>
+
+        <hr>
+
+        <h2>
+            Stringify Functions 
+        </h2>
+
+        <div>
+            <span class="edit">JSON.stringify</span> will not stringify functions. 
+            <br>
+            Example:- 
+            <br>
+            <p id="demo7"></p>
+
+            <br>
+            This can be "fixed" if you convert the functions into strings before stringifying. 
+            <br>
+            Example:- 
+            <br>
+            <p id="demo8"></p>
+        </div>
+
+        <hr>
+
+        <h2>
+            Stringify Arrays 
+        </h2>
+
+        <div>
+            It is also possible to stringify JavaScript arrays. 
+            <br>
+            Example:- 
+            <br>
+            <p id="demo9"></p>
+
+            <br>
+            <p class="edit1">
+                The result will be a string following the JSON notation:- 
+                <br>
+                ["John","Peter","Sally","Jane"] 
+            </p>
+        </div>
+
+        <script>
+            const person1 = {
+                name: "John",
+                age: 30,
+                city: "New York"
+            };
+
+            document.getElementById("demo1").innerHTML = 
+            person1;
+
+            document.getElementById("demo2").innerHTML = 
+            person1.name + ", " + person1.age + ", " + person1.city;
+
+            let txt1 = "";
+            for(let x in person1)
+            {
+                txt1 += person1[x] + " ";
+            }
+
+            document.getElementById("demo3").innerHTML = txt1;
+
+            const myArray1 = Object.values(person1);
+
+            document.getElementById("demo4").innerHTML = myArray1;
+
+            document.getElementById("demo5").innerHTML = 
+            JSON.stringify(person1);
+
+            var person2 = {
+                name: "John",
+                today: new Date()
+            };
+
+            document.getElementById("demo6").innerHTML = 
+            JSON.stringify(person2);
+
+            const person3 = {
+                name: "John",
+                age: function() {return 30;}
+            };
+
+            document.getElementById("demo7").innerHTML = 
+            JSON.stringify(person3);
+
+            const person4 = {
+                name: "John",
+                age: function() {return 30;}
+            };
+
+            person4.age = person4.age.toString();
+
+            document.getElementById("demo8").innerHTML = 
+            JSON.stringify(person4);
+
+            const arr1 = ["John", "Peter", "Sally", "Jane"];
+            document.getElementById("demo9").innerHTML = 
+            JSON.stringify(arr1);
+        </script>
+    </body>
+</html>

@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en-in">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>
+            JSON JSONP 
+        </title>
+        <style>
+            html {
+                font-size:calc(10px + 0.390625vw);
+            }
+
+            body {
+                font-size:1rem;
+                font-family:verdana, sans-serif;
+                line-height:1.5;
+            }
+
+            .edit {
+                background-color:#f1f1f1;
+                color:red;
+            }
+
+            .edit1 {
+                background-color:rgba(255,255,0,0.3);
+                padding:2rem;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>
+            JSONP 
+        </h1>
+
+        <div>
+            JSONP is a method for sending JSON data without worrying about cross-domain issues. 
+            <br>
+            JSONP does not use the <span class="edit">XMLHttpRequest</span> object. 
+            <br>
+            JSONP uses the <span class="edit">&lt;script&gt;</span> tag instead. 
+        </div>
+
+        <hr>
+
+        <h2>
+            JSONP Intro 
+        </h2>
+
+        <div>
+            <p class="edit1">
+                JSONP stands for JSON with Padding. 
+            </p>
+
+            <br>
+            Requesting a file from another domain can cause problems, due to cross-domain policy. 
+            <br>
+            Requesting an external <i>script</i> from another domain does not have this problem. 
+            <br>
+            JSONP uses this advantage, and request file using the script tag instead of the <span class="edit">XMLHttpRequest</span> object. 
+            <br>
+            <p class="edit1">
+                &lt;script src="demo_jsonp.php"&gt; 
+            </p>
+        </div>
+
+        <hr>
+
+        <h2>
+            The Server File 
+        </h2>
+
+        <div>
+            The file on the server wraps the result inside a function call. 
+            <br>
+            Example:- 
+            <br>
+            <p class="edit1">
+                &lt;?php
+                <br>
+                $myJSON = '{"name":"John", "age":30, "city":"New York"}';
+                <br>
+                echo "myFunc(".$myJSON.");";
+                <br>
+                ?&gt; 
+            </p>
+
+            <br>
+            The result returns a call to a function named "myFunc" with the JSON data as a parameter. 
+            <br>
+            Make sure that the function exists on the client. 
+        </div>
+
+        <hr>
+
+        <h2>
+            The JavaScript Function 
+        </h2>
+
+        <div>
+            The function named "myFunc" is located on the client, and ready to handle JSON data. 
+            <br>
+            Example:- 
+            <br>
+            <b>
+                The PHP file returns a call to a function that will handle the JSON data. 
+            </b>
+            <br>
+            <p id="demo1"></p>
+        </div>
+
+        <hr>
+
+        <h2>
+            Creating a Dynamic Script Tag 
+        </h2>
+
+        <div>
+            The example above will execute the "myFunc" function when the page is loading, based on where you put the script tag, which is not very satisfying. 
+            <br>
+            The script tag should only be created when needed. 
+            <br>
+            Example:- 
+            <br>
+            <b>
+                Create and insert the &lt;script&gt; tag when a button is clicked. 
+            </b>
+            <br>
+            <p>
+                Click the button below. 
+            </p>
+            <br>
+            <button onclick="clickButton()">Click me!</button>
+
+            <p id="demo2"></p>
+        </div>
+
+        <hr>
+
+        <h2>
+            Dynamic JSONP Result 
+        </h2>
+
+        <div>
+            The examples above are still very static. 
+            <br>
+            Make the example dynamic by sending JSON to the php file, and let the php file return a JSON object based on the information it gets. 
+            <br>
+            <b>PHP File</b>
+            <br>
+            <p class="edit1">
+                &lt;?php
+                <br>
+                header("Content-Type: application/json; charset=UTF-8");
+                <br>
+                $obj = json_decode($_GET["x"], false);
+                <br>
+                $conn = new mysqli("myServer", "myUser", "myPassword", "Northwind");
+                <br>
+                $result = $conn-&gt;query("SELECT name FROM ".$obj-&gt;$table." LIMIT ".$obj-&gt;$limit);
+                <br>
+                $outp = array();
+                <br>
+                $outp = $result-&gt;fetch_all(MYSQLI_ASSOC);
+                <br>
+                echo "myFunc2(".json_encode($outp).")";
+                <br>
+                ?&gt; 
+            </p>
+
+            <br>
+
+            <b>PHP File explained: </b>
+            <br>
+            <ul>
+                <li>Convert the request into an object, using the PHP function <span class="edit">json_decode()</span>.</li>
+                <li>Access the database, and fill an array with the requested data.</li>
+                <li>Add the array to an object.</li>
+                <li>Convert the array into JSON using the <span class="edit">json_encode()</span> function.</li>
+                <li>Wrap "myFunc2()" around the return object.</li>
+            </ul>
+
+            <br>
+            <b>JavaScript Example:- </b>
+            <br>
+            <u>
+                The "myFunc2" function will be called from the php file:- 
+            </u>
+            <br>
+            <p id="demo3"></p>
+        </div>
+
+        <hr>
+
+        <h2>
+            Callback Function 
+        </h2>
+
+        <div>
+            When you have no control over the server file, how do you get the server file to call the correct function? 
+            <br>
+            Sometimes the server file offers a callback function as a parameter. 
+            <br>
+            Example:- 
+            <br>
+            <u>
+                The php file will call the function you pass as a callback parameter:- 
+            </u>
+            <br>
+            <p id="demo4"></p>
+        </div>
+
+        <script>
+            function myFunc(myObj) {
+                document.getElementById("demo1").innerHTML = myObj.name;
+            }
+
+            function clickButton() {
+                let s = document.createElement("script");
+                s.src = "demo_jsonp1.php";
+                document.body.appendChild(s);
+            }
+
+            function myFunc1(myObj) 
+            {
+                document.getElementById("demo2").innerHTML = myObj.name;
+            }
+
+            const obj = { table: "customers", limit: 10 };
+            let s = document.createElement("script");
+            s.src = "jsonp_demo_db.php?x=" + JSON.stringify(obj);
+            document.body.appendChild(s);
+
+            function myFunc2(myObj) {
+                let txt = "";
+                for (let x in myObj) {
+                    txt += myObj[x].name + "<br>";
+                }
+                 document.getElementById("demo3").innerHTML = txt;
+            }
+
+            let s1 = document.createElement("script");
+            s1.src = "demo_jsonp2.php?callback=myDisplayFunction";
+            document.body.appendChild(s1);
+
+            function myDisplayFunction(myObj) {
+                document.getElementById("demo4").innerHTML = myObj.name;
+            }
+        </script>
+
+        <script src="demo_jsonp.php"></script>
+    </body>
+</html>

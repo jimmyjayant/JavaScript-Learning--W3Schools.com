@@ -1,0 +1,589 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            ECMAScript 2019 
+        </title>
+        <style>
+            .edit {
+                background-color:#f1f1f1;
+                color:red;
+            }
+            .edit1 {
+                background-color:rgba(255,255,0,0.3);
+                padding:20px;
+            }
+            body {
+                font-family:verdana, sans-serif;
+                font-size:20px;
+                line-height:1.5;
+            }
+            .table1 {
+                width:100%;
+                border:1px solid #ddd;
+                border-collapse:collapse;
+            }
+            .table1 tr {
+                height:40px;
+            }
+            .table1 tr:nth-child(even) {
+                background-color:#f1f1f1;
+            }
+            .table1 td {
+                text-align:center;
+                padding:10px;
+                border:1px solid #ddd;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>
+            ECMAScript 2019 
+        </h1>
+
+        <div style="background-color:rgba(0,255,0,0.2);padding:20px;">
+          Original JavaScript version numbers were ES5 (2009) and ES6 (2015). 
+          <br>
+          Since 2016, versions are named by year:- ECMAScript 2016, 2017, 2018, 2019, 2020.  
+        </div>
+
+        <hr>
+
+        <h2>
+            New Features in ES2019 
+        </h2>
+
+        <div>
+            <ul>
+                <li>String.trimStart()</li>
+                <li>String.trimEnd()</li>
+                <li>Object.fromEntries</li>
+                <li>Optional catch binding</li>
+                <li>Array.flat()</li>
+                <li>Array.flatMap()</li>
+                <li>Revised Array.Sort()</li>
+                <li>Revised JSON.stringify()</li>
+                <li>Separator symbols allowed in string literals</li>
+                <li>Revised Function.toString()</li>
+            </ul>
+
+            <br>
+            <br>
+
+            <div style="background-color:rgba(255,0,0,0.3);padding:20px;">
+            <span style="font-size:30px;font-weight:bold;">Warning</span>
+            <br>
+            These features are relatively new. Old browser may need an alternative code (Polyfill) 
+            </div>
+        </div>
+
+        <hr>
+
+        <h2>
+            JavaScript String trimStart() 
+        </h2>
+
+        <div>
+            ES2019 added the String method <span class="edit">trimStart()</span> to JavaScript. 
+            <br>
+            The <span class="edit">trimStart()</span> method works like <span class="edit">trim()</span>, but removes whitespace only from the start of a string. 
+            <br>
+            Example:- 
+            <br>
+            <p id="demo1"></p>
+
+            <br>
+            <br>
+            JavaScript String <span class="edit">trimStart()</span> is supported in all modern browsers since January 2020. 
+            <br>
+            <br>
+            <table class="table1">
+                <tr>
+                    <td><img src="Image4.svg.png" height="38" width="38" alt="Google Chrome"></td>
+                    <td><img src="Image5.png" height="38" width="38" alt="Microsoft Edge"></td>
+                    <td><img src="Image6.png" height="38" width="38" alt="Mozilla Firefox"></td>
+                    <td><img src="Image7.png" height="38" width="38" alt="Apple Safari"></td>
+                    <td><img src="Image8.png" height="38" width="38" alt="Opera"></td>
+                </tr>
+                <tr>
+                    <td>Chrome 66</td>
+                    <td>Edge 79</td>
+                    <td>Firefox 61</td>
+                    <td>Safari 12</td>
+                    <td>Opera 50</td>
+                </tr>
+                <tr>
+                    <td>Apr 2018</td>
+                    <td>Jan 2020</td>
+                    <td>Jun 2018</td>
+                    <td>Sep 2018</td>
+                    <td>May 2018</td>
+                </tr>
+            </table>
+        </div>
+
+        <hr>
+
+        <h2>
+            JavaScript String trimEnd() 
+        </h2>
+
+        <div>
+            ES2019 added the String method <span class="edit">trimEnd()</span> to JavaScript. 
+            <br>
+            The <span class="edit">trimEnd()</span> method works like <span class="edit">trim()</span>, but removes whitespace only from the end of a string. 
+            <br>
+            Example:- 
+            <br>
+            <p id="demo2"></p>
+
+            <br>
+            <br>
+            JavaScript String <span class="edit">trimEnd()</span> is supported in all browsers since January 2020. 
+            <br>
+            <br>
+            <table class="table1">
+                <tr>
+                    <td><img src="Image4.svg.png" height="38" width="38" alt="Google Chrome"></td>
+                    <td><img src="Image5.png" height="38" width="38" alt="Microsoft Edge"></td>
+                    <td><img src="Image6.png" height="38" width="38" alt="Mozilla Firefox"></td>
+                    <td><img src="Image7.png" height="38" width="38" alt="Apple Safari"></td>
+                    <td><img src="Image8.png" height="38" width="38" alt="Opera"></td>
+                </tr>
+                <tr>
+                    <td>Chrome 66</td>
+                    <td>Edge 79</td>
+                    <td>Firefox 61</td>
+                    <td>Safari 12</td>
+                    <td>Opera 50</td>
+                </tr>
+                <tr>
+                    <td>Apr 2018</td>
+                    <td>Jan 2020</td>
+                    <td>Jun 2018</td>
+                    <td>Sep 2018</td>
+                    <td>May 2018</td>
+                </tr>
+            </table>
+        </div>
+
+        <hr>
+
+        <h2>
+            JavaScript Object fromEntries() 
+        </h2>
+
+        <div>
+            ES2019 added the Object method <span class="edit">fromEntries()</span> to JavaScript. 
+            <br>
+            The <span class="edit">fromEntries()</span> method creates an object from iterable key / value pairs. 
+            <br>
+            Example:- 
+            <br>
+            <p id="demo3"></p>
+
+            <br>
+            <br>
+            JavaScript Object <span class="edit">fromEntries()</span> is supported in all browsers since January 2020. 
+            <br>
+            <br>
+            <table class="table1">
+                <tr>
+                    <td><img src="Image4.svg.png" height="38" width="38" alt="Google Chrome"></td>
+                    <td><img src="Image5.png" height="38" width="38" alt="Microsoft Edge"></td>
+                    <td><img src="Image6.png" height="38" width="38" alt="Mozilla Firefox"></td>
+                    <td><img src="Image7.png" height="38" width="38" alt="Apple Safari"></td>
+                    <td><img src="Image8.png" height="38" width="38" alt="Opera"></td>
+                </tr>
+                <tr>
+                    <td>Chrome 73</td>
+                    <td>Edge 79</td>
+                    <td>Firefox 63</td>
+                    <td>Safari 12.1</td>
+                    <td>Opera 60</td>
+                </tr>
+                <tr>
+                    <td>Mar 2019</td>
+                    <td>Jan 2020</td>
+                    <td>Oct 2018</td>
+                    <td>Mar 2019</td>
+                    <td>Apr 2019</td>
+                </tr>
+            </table>
+        </div>
+
+        <hr>
+        <br>
+        <br>
+        <hr>
+
+        <h2>
+            Optional catch Binding 
+        </h2>
+
+        <div>
+            From ES2019 you can omit the catch parameter if you don't need it. 
+            <br>
+            Example:- 
+            <br>
+            <b>Before 2019:- </b>
+            <br>
+            <p class="edit1">
+                try {
+                    <br>
+                    // code 
+                    <br>
+                } catch (err) {
+                    <br>
+                    // code 
+                    <br>
+                }
+            </p>
+
+            <br>
+            <br>
+            <b>After 2019:- </b>
+            <br>
+            <p class="edit1">
+                try {
+                    <br>
+                    // code 
+                    <br>
+                } catch {
+                    <br>
+                    // code 
+                    <br>
+                }
+            </p>
+
+            <br>
+            <br>
+            Optional catch binding is supported in all browsers since January 2020. 
+            <br>
+            <br>
+            <table class="table1">
+                <tr>
+                    <td><img src="Image4.svg.png" height="38" width="38" alt="Google Chrome"></td>
+                    <td><img src="Image5.png" height="38" width="38" alt="Microsoft Edge"></td>
+                    <td><img src="Image6.png" height="38" width="38" alt="Mozilla Firefox"></td>
+                    <td><img src="Image7.png" height="38" width="38" alt="Apple Safari"></td>
+                    <td><img src="Image8.png" height="38" width="38" alt="Opera"></td>
+                </tr>
+                <tr>
+                    <td>Chrome 66</td>
+                    <td>Edge 79</td>
+                    <td>Firefox 58</td>
+                    <td>Safari 11.1</td>
+                    <td>Opera 53</td>
+                </tr>
+                <tr>
+                    <td>Apr 2018</td>
+                    <td>Jan 2020</td>
+                    <td>Jan 2018</td>
+                    <td>Mar 2018</td>
+                    <td>May 2018</td>
+                </tr>
+            </table>
+        </div>
+
+        <hr>
+
+        <h2>
+            JavaScript Array flat() 
+        </h2>
+
+        <div>
+            ES2019 added the Array <span class="edit">flat()</span> method to JavaScript. 
+            <br>
+            The <span class="edit">flat()</span> method creates a new array by flattening a nested array. 
+            <br>
+            Example:- 
+            <br>
+            <p id="demo4"></p>
+
+            <br>
+            <br>
+            JavaScript Array <span class="edit">flat()</span> is supported in all browsers since January 2020. 
+            <br>
+            <br>
+            <table class="table1">
+                <tr>
+                    <td><img src="Image4.svg.png" height="38" width="38" alt="Google Chrome"></td>
+                    <td><img src="Image5.png" height="38" width="38" alt="Microsoft Edge"></td>
+                    <td><img src="Image6.png" height="38" width="38" alt="Mozilla Firefox"></td>
+                    <td><img src="Image7.png" height="38" width="38" alt="Apple Safari"></td>
+                    <td><img src="Image8.png" height="38" width="38" alt="Opera"></td>
+                </tr>
+                <tr>
+                    <td>Chrome 69</td>
+                    <td>Edge 79</td>
+                    <td>Firefox 62</td>
+                    <td>Safari 12</td>
+                    <td>Opera 56</td>
+                </tr>
+                <tr>
+                    <td>Sep 2018</td>
+                    <td>Jan 2020</td>
+                    <td>Sep 2018</td>
+                    <td>Sep 2018</td>
+                    <td>Sep 2018</td>
+                </tr>
+            </table>
+        </div>
+
+        <hr>
+
+        <h2>
+            JavaScript Array flatMap() 
+        </h2>
+
+        <div>
+            ES2019 added the Array <span class="edit">flatMap()</span> method to JavaScript. 
+            <br>
+            The <span class="edit">flatMap()</span> method first maps all elements of an Array and then creates a new array by flattening the array. 
+            <br>
+            Example:- 
+            <br>
+            <p id="demo5"></p>
+
+            <br>
+            <br>
+            JavaScript Array <span class="edit">flatMap()</span> is supported in all browsers since January 2020. 
+            <br>
+            <br>
+            <table class="table1">
+                <tr>
+                    <td><img src="Image4.svg.png" height="38" width="38" alt="Google Chrome"></td>
+                    <td><img src="Image5.png" height="38" width="38" alt="Microsoft Edge"></td>
+                    <td><img src="Image6.png" height="38" width="38" alt="Mozilla Firefox"></td>
+                    <td><img src="Image7.png" height="38" width="38" alt="Apple Safari"></td>
+                    <td><img src="Image8.png" height="38" width="38" alt="Opera"></td>
+                </tr>
+                <tr>
+                    <td>Chrome 69</td>
+                    <td>Edge 79</td>
+                    <td>Firefox 62</td>
+                    <td>Safari 12</td>
+                    <td>Opera 56</td>
+                </tr>
+                <tr>
+                    <td>Sep 2018</td>
+                    <td>Jan 2020</td>
+                    <td>Sep 2018</td>
+                    <td>Sep 2018</td>
+                    <td>Sep 2018</td>
+                </tr>
+            </table>
+        </div>
+
+        <hr>
+
+        <h2>
+            Stable Array sort() 
+        </h2>
+
+        <div>
+            ES2019 <strong>revised</strong> the Array <span class="edit">sort()</span> method. 
+            <br>
+            Before 2019, the specification allowed unstable sorting algorithms such as QuickSort. 
+            <br>
+            After ES2019, browsers must use a stable sorting algorithm. 
+            <br>
+            When sorting elements on a value, the elements must keep their relative position to other elements with the same value. 
+            <br>
+            Example:- 
+            <br>
+            <p id="demo6"></p>
+
+            <br>
+            <br>
+            In the example above, when sorting on price, the result is not allowed to come out with the names in an other relative position like this. 
+            <br>
+            <br>
+            <p class="edit1">
+                X01 100 
+                <br>
+                X03 100 
+                <br>
+                X00 100
+                <br>
+                X03 100
+                <br>
+                X05 110 
+                <br>
+                X04 110 
+                <br>
+                X06 110 
+                <br>
+                X07 110 
+            </p>
+        </div>
+
+        <hr>
+
+        <h2>
+            Revised JSON.stringify() 
+        </h2>
+
+        <div>
+            ES2019 <strong>revised</strong> the JSON <span class="edit">stringify()</span> method. 
+            <br>
+            Before 2019, JSON could not stringify character encoded with \. 
+            <br>
+            Example:- 
+            <br>
+            <p id="demo7"></p>
+
+            <br>
+            <br>
+            Before ES2019, using <span class="edit">JSON.stringify()</span> JSON on UTF-8 code points (U+D800 to U+DFFF) returned broken Unicode characters like ���. 
+            <br>
+            After this revision, strings with UTF-8 code points convert safely with <span class="edit">JSON.stringify()</span>, and back to the original using <span class="edit">JSON.parse()</span>. 
+        </div>
+
+        <hr>
+
+        <h2>
+            Separator Symbols 
+        </h2>
+
+        <div>
+            Line separators and paragraph separator symbols (\u2028 and \u2029) are now allowed in string literals. 
+            <br>
+            Before 2019, these were treated as line terminators and resulted in error exceptions. 
+            <br>
+            Example:- 
+            <br>
+            <p id="demo8"></p>
+
+            <br>
+            <br>
+
+            <div class="edit1">
+                <span style="font-size:30px;">Note</span>
+                <br>
+                Now, JavaScript and JSON have equal rules. 
+                <br>
+                Before ES2019:- 
+                <br>
+                text = JSON.parse('"\u2028"') would parse to ". 
+                <br>
+                text = '"\u2028"' would give <strong>syntax error</strong>. 
+            </div>
+        </div>
+
+        <hr>
+
+        <h2>
+            Revised Function toString() 
+        </h2>
+
+        <div>
+            ES2019 <strong>revised</strong> the Function <span class="edit">toString()</span> method. 
+            <br>
+            The <span class="edit">toString()</span> method returns a string representing the source code of a function. 
+            <br>
+            From 2019, toString() must return the source code of the function including comments, spaces, and syntax details. 
+            <br>
+            Before 2019, different browsers returned different variants of the function (like without comments and spaces). From 2019 the function should be returned exactly as it is written. 
+            <br>
+            Example:- 
+            <br>
+            <p id="demo9"></p>
+        </div>
+
+
+
+
+
+
+
+        <script>
+            let text1 = "          Hello World!            ";
+            let text2 = text1.trimStart();
+            document.getElementById("demo1").innerHTML = 
+            "text1 is:- " + text1 + "<br>" + 
+            "Length of text1 = " + text1.length + 
+            "<br>" + "text2 is:- " + text2 + 
+            "<br>" +  "Length of text2 = " + 
+            text2.length;
+            
+
+            let text3 = text1.trimEnd();
+            document.getElementById("demo2").innerHTML = 
+            "text1 is:- " + text1 + "<br>" + 
+            "Length of text1 = " + text1.length + 
+            "<br>" + "text3 is:- " + text3 + 
+            "<br>" + "Length of text3 = " + 
+            text3.length;
+
+            const fruits1 = [
+                ["apples",900],
+                ["pears",300],
+                ["bananas",500]
+            ];
+            
+            const myObj1 = Object.fromEntries(fruits1);
+            document.getElementById("demo3").innerHTML = myObj1.pears;
+
+            const myArr1 = [[1,2],[3,4],[5,6]];
+            const newArr1 = myArr1.flat();
+            document.getElementById("demo4").innerHTML = newArr1;
+
+            const myArr2 = [1,2,3,4,5,6];
+            const newArr2 = myArr2.flatMap((x) => x * 2);
+            document.getElementById("demo5").innerHTML = newArr2;
+
+            const myArr3 = [
+                {name:"X00", price:100},
+                {name:"X01", price:100},
+                {name:"X02", price:100},
+                {name:"X03", price:100},
+                {name:"X04", price:110},
+                {name:"X05", price:110},
+                {name:"X06", price:110},
+                {name:"X07", price:110},
+                {name:"X08", price:120},
+                {name:"X09", price:120},
+                {name:"X10", price:120},
+                {name:"X11", price:120},
+                {name:"X12", price:130},
+                {name:"X13", price:130},
+                {name:"X14", price:130},
+                {name:"X15", price:130},
+                {name:"X16", price:140},
+                {name:"X17", price:140},
+                {name:"X18", price:140},
+                {name:"X19", price:140}
+            ];
+
+            myArr3.sort( (p1, p2) => {
+                if (p1.price < p2.price) return -1;
+                if (p1.price > p2.price) return 1;
+                return 0;
+            });
+
+            let txt1 = "";
+            myArr3.forEach(myFunction1);
+            function myFunction1(value)
+            {
+                txt1 += value.name + " " + value.price + "<br>";
+            }
+
+            document.getElementById("demo6").innerHTML = txt1;
+
+            let text4 = JSON.stringify("\u26D4");
+            document.getElementById("demo7").innerHTML = JSON.parse(text4);
+
+            let text5 = "\u2028";
+            document.getElementById("demo8").innerHTML = text5;
+
+            function myFunction2(a, b) 
+            {
+                return a * b;
+            }
+
+            document.getElementById("demo9").innerHTML = myFunction2.toString();
+        </script>
+    </body>
+</html>

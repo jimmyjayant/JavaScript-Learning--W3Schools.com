@@ -1,0 +1,508 @@
+<!DOCTYPE html>
+<html lang="en-in">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>
+            AJAX - The XMLHttpRequest Object 
+        </title>
+        <style>
+            html {
+                font-size:calc(10px + 0.390625vw);
+            }
+
+            body {
+                font-size:1rem;
+                font-family:verdana, sans-serif;
+                line-height:1.5;
+            }
+
+            .edit {
+                background-color:#f1f1f1;
+                color:red;
+            }
+
+            .edit1 {
+                background-color:rgba(255,255,0,0.3);
+                padding:1rem;
+            }
+
+            .table1 {
+                width:100%;
+                border:1px solid #ddd;
+                border-collapse:collapse;
+            }
+
+            .table1 tr:nth-child(even) {
+                background-color:#f1f1f1;
+            }
+
+            .table1 th {
+                text-align:left;
+                padding:0.5rem;
+            }
+
+            .table1 td {
+                padding:0.5rem;
+                vertical-align:top;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>
+            AJAX - The XMLHttpRequest Object 
+        </h1>
+
+        <div>
+            <div style="background-color:rgba(0,255,0,0.2);padding:1rem;">
+            The keystone of AJAX is the XMLHttpRequest object. 
+            <br>
+            <ol>
+                <li>Create an XMLHttpRequest object</li>
+                <li>Define a callback function</li>
+                <li>Open the XMLHttpRequest object</li>
+                <li>Send a Request to a server</li>
+            </ol>
+            </div>
+        </div>
+        
+        <hr>
+
+        <h2>
+            The XMLHttpRequest Object 
+        </h2>
+
+        <div>
+            All modern browsers support the <span class="edit">XMLHttpRequest</span> object. 
+            <br>
+            The <span class="edit">XMLHttpRequest</span> object can be used to exchange the data with a web server behind the scenes. This means that it is possible to update parts of a web page, without reloading the whole page. 
+        </div>
+
+        <hr>
+
+        <h2>
+            Create an XMLHttpRequest Object 
+        </h2>
+
+        <div>
+            All modern browsers (Chrome, Firefox, IE, Edge, Safari, Opera) have a built-in <span class="edit">XMLHttpRequest</span> object. 
+            <br>
+            Syntax for creating an <span class="edit">XMLHttpRequest</span> object:- 
+            <br>
+            <p class="edit1">
+                <i>variable</i> = new XMLHttpRequest(); 
+            </p>
+        </div>
+
+        <hr>
+
+        <h2>
+            Define a Callback Function 
+        </h2>
+
+        <div>
+            A callback function is a function passed as a parameter to another function. 
+            <br>
+            In this case, the callback function should contain the code to execute when the response is ready. 
+            <br>
+            <p class="edit1">
+                xhttp1.onload = function() {
+                    <br>
+                    <span style="color:green">// What to do when the response is ready </span>
+                    <br>
+                }
+            </p>
+        </div>
+
+        <hr>
+
+        <h2>
+            Send a Request 
+        </h2>
+
+        <div>
+            To send a request to a server, you can use the open() and send() methods of the <span class="edit">XMLHttpRequest</span> object. 
+            <br>
+            <p class="edit1">
+                xhttp1.open("GET", "ajax_info.txt");
+                <br>
+                xhttp1.send(); 
+            </p>
+            <br>
+            Example:- 
+            <br>
+            <div id="demo1">
+                <p>
+                    Let AJAX change this text. 
+                </p>
+                <button type="button" onclick="loadDoc()">Change Content</button>
+            </div>
+        </div>
+
+        <hr>
+
+        <h2>
+            Access Across Domains 
+        </h2>
+
+        <div>
+            For security reasons, modern browsers do not allow access across domains. 
+            <br>
+            This means that both the web page and the XML file it tries to load, must be located on the same server. 
+            <br>
+            The examples on W3Schools all open XML files located on the W3Schools domain. 
+            <br>
+            If you want to use the example above on one of your own web pages, the XML files you load must be located on your own server. 
+        </div>
+
+        <hr>
+        <br>
+        <hr>
+
+        <h2>
+            XMLHttpRequest Object Methods 
+        </h2>
+
+        <div>
+            <table class="table1">
+                <tr>
+                    <th>Method</th>
+                    <th>Description</th>
+                </tr>
+                <tr>
+                    <td>new XMLHttpRequest()</td>
+                    <td>Creates a new XMLHttpRequest object</td>
+                </tr>
+                <tr>
+                    <td>abort()</td>
+                    <td>Cancels the current request</td>
+                </tr>
+                <tr>
+                    <td>getAllResponseHeaders()</td>
+                    <td>Returns header information</td>
+                </tr>
+                <tr>
+                    <td>getResponseHeader()</td>
+                    <td>Returns specific header information</td>
+                </tr>
+                <tr>
+                    <td>open(<i>method, url, async, user, psw</i>)</td>
+                    <td>Specifies the request
+                        <br>
+                        <i>method</i>: The request type GET or POST 
+                        <br>
+                        <i>url</i>: the file location 
+                        <br>
+                        <i>async</i>: true (asynchronous) or false (synchronous) 
+                        <br>
+                        <i>user</i>: optional user name 
+                        <br>
+                        <i>psw</i>: optional password 
+                    </td>
+                </tr>
+                <tr>
+                    <td>send()</td>
+                    <td>Sends the request to the server
+                        <br>
+                        Used for GET requests 
+                    </td>
+                </tr>
+                <tr>
+                    <td>send(<i>string</i>)</td>
+                    <td>Sends the request to the server. 
+                        <br>
+                        Used for POST requests 
+                    </td>
+                </tr>
+                <tr>
+                    <td>setRequestHeader()</td>
+                    <td>Adds a label/value pair to the header to be sent</td>
+                </tr>
+            </table>
+        </div>
+
+        <hr>
+
+        <h2>
+            XMLHttpRequest Object Properties 
+        </h2>
+
+        <div>
+            <table class="table1">
+                <tr>
+                    <th>Property</th>
+                    <th>Description</th>
+                </tr>
+                <tr>
+                    <td>onload</td>
+                    <td>Defines a function to be called when the request is received (loaded)</td>
+                </tr>
+                <tr>
+                    <td>onreadystatechange</td>
+                    <td>Defines a function to be called when the readyState property changes</td>
+                </tr>
+                <tr>
+                    <td>readyState</td>
+                    <td>Holds the status of the XMLHttpRequest. 
+                        <br>
+                        <ol start="0">
+                            <li>request not initialized</li>
+                            <li>server connection established</li>
+                            <li>request received</li>
+                            <li>processing request</li>
+                            <li>request finished and response is ready</li>
+                        </ol>
+                    </td>
+                </tr>
+                <tr>
+                    <td>responseText</td>
+                    <td>Returns the response data as a string</td>
+                </tr>
+                <tr>
+                    <td>responseXML</td>
+                    <td>Returns the response data as XML data</td>
+                </tr>
+                <tr>
+                    <td>status</td>
+                    <td>Returns the status-number of a request
+                        <br>
+                        200: "OK"
+                        <br>
+                        403: "Forbidden"
+                        <br>
+                        404: "Not Found"
+                        <br>
+                        For a complete list go to the <a href="https://www.w3schools.com/tags/ref_httpmessages.asp" target="_blank">Http Messages Reference</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>statusText</td>
+                    <td>Returns the status-text (e.g. "OK" or "Not Found")</td>
+                </tr>
+            </table>
+        </div>
+
+        <hr>
+
+        <h2>
+            The onload Property 
+        </h2>
+
+        <div>
+            With the <span class="edit">XMLHttpRequest</span> object you can define a callback function to be executed when the request receives an answer. 
+            <br>
+            The function is defined in the <span class="edit">onload</span> property of the <span class="edit">XMLHttpRequest</span> object. 
+            <br>
+            Example:- 
+            <br>
+            <div id="demo2">
+                <h2>
+                    The XMLHttpRequest Object 
+                </h2>
+                <button type="button" onclick="loadDoc1()">Change Content</button>
+            </div>
+        </div>
+
+        <hr>
+
+        <h2>
+            Multiple Callback Functions 
+        </h2>
+
+        <div>
+            If you have more than one AJAX task in a website, you should create one function for executing the <span class="edit">XMLHttpRequest</span> object, and one callback function for each AJAX task. 
+            <br>
+            The function call should contain the URL and what function to call when the response is ready. 
+            <br>
+            Example:- 
+            <br>
+            <p class="edit1">
+                loadDoc("url-1", myFunction1);
+                <br>
+                loadDoc("url-2", myFunction2);
+                <br>
+                function loadDoc(url, cFunction) {
+                    <br>
+                    const xhttp = new XMLHttpRequest();
+                    <br>
+                    xhttp.onload = function() {cFunction(this);}
+                    <br>
+                    xhttp.open("GET", url);
+                    <br>
+                    xhttp.send();
+                }
+
+                <br>
+                <br>
+
+                function myFunction1(xhttp) {
+                    <br>
+                    //action goes here
+                    <br> 
+                }
+
+                <br>
+
+                function myFunction2(xhttp) {
+                    <br>
+                    //action goes here 
+                    <br>
+                }
+            </p>
+
+            <br>
+            <br>
+            Example 1:- 
+            <br>
+            <div id="demo3">
+                <h2>
+                    This text will be changed by AJAX technique. 
+                </h2>
+                <button type="button" onclick='loadDoc2("ajax1.txt",myFunction1)'>Change</button>
+            </div>
+
+            <br>
+            <br>
+            Example 2:- 
+            <br>
+            <div id="demo4">
+                <h2>
+                    This text will be changed by AJAX technique again. 
+                </h2>
+                <button type="button" onclick='loadDoc2("ajax2.txt",myFunction2)'>Change</button>
+            </div>
+        </div>
+
+        <hr>
+
+        <h2>
+            The onreadystatechange Property 
+        </h2>
+
+        <div>
+            The <span class="edit">readyState</span> property holds the status of the XMLHttpRequest. 
+            <br>
+            The <span class="edit">onreadystatechange</span> property defines a callback function to be executed when the readyState changes. 
+            <br>
+            The <span class="edit">status</span> property and the <span class="edit">statusText</span> properties hold the status of the XMLHttpRequest object. 
+            <br>
+            <br>
+            <table class="table1">
+                <tr>
+                    <th>Property</th>
+                    <th>Description</th>
+                </tr>
+                <tr>
+                    <td>onreadystatechange</td>
+                    <td>Defines a function to be called when the readyState property changes</td>
+                </tr>
+                <tr>
+                    <td>readyState</td>
+                    <td>Holds the status of the XMLHttpRequest. 
+                        <br>
+                        <ol start="0">
+                            <li>request not initialized</li>
+                            <li>server connection established</li>
+                            <li>request received</li>
+                            <li>processing request</li>
+                            <li>request finished and response is ready</li>
+                        </ol>
+                    </td>
+                </tr>
+                <tr>
+                    <td>status</td>
+                    <td>Returns the status-number of a request
+                        <br>
+                        200: "OK"
+                        <br>
+                        403: "Forbidden"
+                        <br>
+                        404: "Not Found"
+                        <br>
+                        For a complete list go to the <a href="https://www.w3schools.com/tags/ref_httpmessages.asp" target="_blank">Http Messages Reference</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>statusText</td>
+                    <td>Returns the status-text (e.g. "OK" or "Not Found")</td>
+                </tr>
+            </table>
+
+            <br>
+
+            The <span class="edit">onreadystatechange</span> function is called every time the readyState changes. 
+            <br>
+            When <span class="edit">readyState</span> is 4 and status is 200, the response is ready. 
+            <br>
+            Example:- 
+            <br>
+            <div id="demo5">
+                <h2>
+                    The XMLHttpRequest Object 
+                </h2>
+                <button type="button" onclick="loadDoc3()">Change Content</button>
+            </div>
+
+            <br>
+
+            <p class="edit1">
+                The <span class="edit">onreadystatechange</span> event is triggered four times (1-4), one time for each change in the readyState. 
+            </p>
+        </div>
+
+        <script>
+            function loadDoc() {
+                //Create a XMLHttpRequest Object:- 
+                const xhttp1 = new XMLHttpRequest();
+
+                //Define a Callback function:- 
+                xhttp1.onload = function() {
+                    //Here you can use the data:- 
+                    document.getElementById("demo1").innerHTML = this.responseText;
+                }
+
+                //Send a request:- 
+                xhttp1.open("GET", "ajax_info.txt");
+                xhttp1.send();
+            }
+
+            function loadDoc1() {
+                const xhttp2 = new XMLHttpRequest();
+
+                xhttp2.onload = function() {
+                    document.getElementById("demo2").innerHTML = this.responseText;
+                }
+                xhttp2.open("GET", "ajax_info.txt");
+                xhttp2.send();
+            }
+
+            function loadDoc2(url, cFunction) {
+                const xhttp = new XMLHttpRequest();
+                xhttp.onload = function() {cFunction(this);}
+                xhttp.open("GET",url);
+                xhttp.send();
+            }
+
+            function myFunction1(xhttp) {
+                document.getElementById("demo3").innerHTML = xhttp.responseText;
+            }
+
+            function myFunction2(xhttp) {
+                document.getElementById("demo4").innerHTML = xhttp.responseText;
+            }
+
+            function loadDoc3() {
+                const xhttp = new XMLHttpRequest();
+                xhttp.onreadystatechange = function() {
+                    if(this.readyState == 4 && this.status == 200) {
+                        document.getElementById("demo5").innerHTML = this.responseText;
+                    }
+                };
+                xhttp.open("GET","ajax1.txt");
+                xhttp.send();
+            }
+
+        
+        </script>
+    </body>
+</html>

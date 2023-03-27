@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en-in">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>
+            JavaScript Function bind() 
+        </title>
+        <style>
+            html {
+                font-size:62.5%;
+            }
+            body {
+                font-family:verdana, sans-serif;
+                font-size:2rem;
+                line-height:1.5;
+            }
+            .edit {
+                background-color:#f1f1f1;
+                color:red;
+            }
+            .edit1 {
+                background-color:rgba(255,255,0,0.3);
+                padding:2rem;
+            }
+            .table1 {
+                width:100%;
+                border:0.1rem solid #ddd;
+                border-collapse:collapse;
+            }
+            .table1 tr {
+                height:4rem;
+            }
+            .table1 tr:nth-child(even) {
+                background-color:#f1f1f1;
+            }
+            .table1 td {
+                padding:1rem;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>
+            JavaScript Function bind() 
+        </h1>
+
+        <hr>
+
+        <h2>
+            Function Borrowing 
+        </h2>
+
+        <div>
+            With the <span class="edit">bind()</span> method, an object can borrow a method from another object. 
+            <br>
+            The example below creates 2 objects (person1 and member1). 
+            <br>
+            The member1 object borrows the fullName method from the person1 object. 
+            <br>
+            Example:- 
+            <br>
+            <p id="demo1"></p>
+        </div>
+
+        <hr>
+
+        <h2>
+            Preserving this 
+        </h2>
+
+        <div>
+            Sometimes the <span class="edit">bind()</span> method has to be used to prevent losing <strong>this</strong>. 
+            <br>
+            In the following example, the person2 object has a display method. In the display method, <strong>this</strong> refers to the person2 object. 
+            <br>
+            Example:- 
+            <br>
+            <p id="demo2"></p>
+
+            <br>
+            When a function is used as a callback, <strong>this</strong> is lost. 
+            <br>
+            This example will try to display the person1 name after 3 seconds, but it will display <strong>undefined</strong> instead. 
+            <br>
+            Example:- 
+            <br>
+            <p id="demo3"></p>
+
+            <br>
+            <br>
+            The <span class="edit">bind()</span> method solves this problem. 
+            <br>
+            In the following example, the <span class="edit">bind()</span> method is used to bind person4.display to person4.
+            <br>
+            This example will display the person4 name after 3 seconds. 
+            <br>
+            Example:- 
+            <br>
+            <p id="demo4"></p>
+        </div>
+
+        <hr>
+
+        <h2>
+            What is this? 
+        </h2>
+
+        <div>
+            In JavaScript, the <span class="edit">this</span> keyword refers to an <strong>object</strong>. 
+            <br>
+            <strong>Which</strong> object depends on how <span class="edit">this</span> is being invoked (used or called). 
+            <br>
+            The <span class="edit">this</span> keyword refers to different objects depending on how it is used. 
+            <br>
+            <br>
+            <table class="table1">
+                <tr>
+                    <td>In an object method, <span class="edit">this</span> refers to the <strong>object</strong>.</td>
+                </tr>
+                <tr>
+                    <td>Alone, <span class="edit">this</span> refers to the <strong>global object</strong>.</td>
+                </tr>
+                <tr>
+                    <td>In a function, <span class="edit">this</span> refers to the <strong>global object</strong>.</td>
+                </tr>
+                <tr>
+                    <td>In a function, in strict mode, <span class="edit">this</span> is <span class="edit">undefined</span>.</td>
+                </tr>
+                <tr>
+                    <td>In an event, <span class="edit">this</span> refers to the <strong>element</strong> that received the event.</td>
+                </tr>
+                <tr>
+                    <td>Methods like <span class="edit">call()</span>, <span class="edit">apply()</span>, and <span class="edit">bind()</span> can refer <span class="edit">this</span> to <strong>any object</strong>.</td>
+                </tr>
+            </table> 
+
+            <br>
+            <br>
+
+            <div class="edit1">
+                <span style="font-size:3rem">Note</span>
+                <br>
+                <span class="edit">this</span> is not a variable. It is a keyword. You cannot change the value of <span class="edit">this</span>. 
+            </div>
+        </div>
+
+        <script>
+            const person1 = {
+                firstName: "John",
+                lastName: "Doe",
+                fullName: function() {
+                    return this.firstName + " " + this.lastName;
+                }
+            }
+
+            const member1 = {
+                firstName: "Hege", 
+                lastName: "Nilsen"
+            }
+
+            let fullName = person1.fullName.bind(member1);
+
+            document.getElementById("demo1").innerHTML = fullName();
+
+            const person2 = {
+                firstName: "John",
+                lastName: "Doe",
+                display: function() {
+                    let x = document.getElementById("demo2");
+                    x.innerHTML = this.firstName + " " + this.lastName;
+                }
+            }
+
+            person2.display();
+
+            const person3 = {
+                firstName: "Peter",
+                lastName: "Parker",
+                display: function() {
+                    let y = document.getElementById("demo3");
+                    y.innerHTML = this.firstName + " " + this.lastName;
+                }
+            }
+
+            setTimeout(person3.display,3000);
+
+            const person4 = {
+                firstName: "Peter",
+                lastName: "Jackson",
+                display: function() {
+                    let z = document.getElementById("demo4");
+                    z.innerHTML = this.firstName + " " + this.lastName;
+                }
+            }
+
+            let display = person4.display.bind(person4);
+            setTimeout(display,3000);
+        </script>
+    </body>
+</html>

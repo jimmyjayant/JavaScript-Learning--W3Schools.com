@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            JavaScript Iterables 
+        </title>
+        <style>
+            .edit {
+                background-color:#f1f1f1;
+                color:red;
+            }
+            .edit1 {
+                background-color:rgba(255,255,0,0.3);
+                padding:20px;
+            }
+            body {
+                font-family:verdana, sans-serif;
+                font-size:20px;
+                line-height:1.5;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>
+            JavaScript Iterables 
+        </h1>
+
+        <p style="background-color:rgba(0,255,0,0.3);padding:10px;">
+        Iterables are iterable objects (like Arrays). 
+        <br>
+        Iterables can be accessed with simple and efficient code. 
+        <br>
+        Iterables can be iterated over with <span class="edit">for..of</span> loops. 
+        </p>
+
+        <hr>
+
+        <h2>
+            The For Of Loop 
+        </h2>
+
+        <p>
+            The JavaScript <span class="edit">for..of</span> statement loops through the elements of an iterable object. 
+            <br>
+            Syntax:- 
+            <br>
+            <p class="edit1">
+                for (variable of iterable) {
+                    <br>
+                    //code block to be executed
+                    <br> 
+                }
+            </p>
+        </p>
+
+        <hr>
+
+        <h2>
+            Iterating 
+        </h2>
+
+        <p>
+            Iterating is easy to understand. 
+            <br>
+            It simply means looping over a sequence of elements. 
+            <br>
+            Here are some easy examples:- 
+            <br>
+            <ul>
+                <li>Iterating over a String</li>
+                <li>Iterating over an Array</li>
+            </ul>
+        </p>
+
+        <hr>
+
+        <h2>
+            Iterating Over a String 
+        </h2>
+
+        <p>
+            You can use a <span class="edit">for..of</span> loop to iterate over the elements of a string. 
+            <br>
+            Example:- 
+            <br>
+            <p id="demo1"></p>
+        </p>
+
+        <hr>
+
+        <h2>
+            Iterating Over an Array 
+        </h2>
+
+        <p>
+            You can use a <span class="edit">for...of</span> loop to iterate over the elements of an Array. 
+            <br>
+            Example:- 
+            <br>
+            <p id="demo2"></p>
+        </p>
+
+        <hr>
+        <br>
+        <br>
+        <hr>
+
+        <h2>
+            Iterating Over a Set 
+        </h2>
+
+        <p>
+            You can use a <span class="edit">for...of</span> loop to iterate over the elements of a Set. 
+            <br>
+            Example:- 
+            <br>
+            <p id="demo3"></p>
+        </p>
+
+        <hr>
+
+        <h2>
+            Iterating Over a Map 
+        </h2>
+
+        <p>
+            You can use a <span class="edit">for..of</span> loop to iterate over the elements of a Map. 
+            <br>
+            Example:- 
+            <br>
+            <p id="demo4"></p>
+        </p>
+
+        <script>
+        //Create a String
+        let name1 = "W3Schools";
+        let text1 = "";
+
+        for(let x of name1)
+        {
+            text1 += x + "<br>";
+        }
+        document.getElementById("demo1").innerHTML = text1;
+        
+        //Create an Array
+        const name2 = ["a", "b", "c", "d", "e", "f", "g", "h", "i"];
+        let text2 = "";
+        for(let x of name2)
+        {
+            text2 += x + "<br>";
+        }
+        document.getElementById("demo2").innerHTML = text2;
+        
+        //Create a Set
+        const letters1 = new Set(["a", "b", "c", "d"]);
+
+        let text3 = "";
+        for(let x of letters1)
+        {
+            text3 += x + "<br>";
+        }
+        document.getElementById("demo3").innerHTML = text3;
+
+        //Create a Map
+        const fruits = new Map([["apples",500], ["bananas",300], ["oranges",200]]);
+
+        //List all entries
+        let text4 = "";
+        for(let x of fruits)
+        {
+            text4 += x + "<br>";
+        }
+        document.getElementById("demo4").innerHTML = text4;
+        </script>
+    </body>
+
+</html>

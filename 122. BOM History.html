@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en-in">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>
+            JavaScript Window History 
+        </title>
+        <style>
+            html {
+                font-size:calc(10px + 0.390625vw);
+            }
+            body {
+                font-family:verdana, sans-serif;
+                font-size:1rem;
+                line-height:1.5;
+            }
+            .edit {
+                background-color:#f1f1f1;
+                color:red;
+            }
+            .edit1 {
+                background-color:rgba(255,255,0,0.3);
+                padding:2rem;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>
+            JavaScript Window History 
+        </h1>
+
+        <div>
+            The <span class="edit">window.history</span> object contains the browsers history. 
+        </div>
+
+        <hr>
+
+        <h2>
+            Window History 
+        </h2>
+
+        <div>
+            The <span class="edit">window.history</span> object can be written without the window prefix. 
+            <br>
+            To protect the privacy of the users, there are limitations to how JavaScript can access this object. 
+            <br>
+            Some methods:- 
+            <br>
+            <ul>
+                <li><span class="edit">history.back()</span> - same as clicking back in the browser</li>
+                <li><span class="edit">history.forward()</span> - same as clicking forward in the browser</li>
+            </ul>
+        </div>
+
+        <hr>
+
+        <h2>
+            Window History Back 
+        </h2>
+
+        <div>
+            The <span class="edit">history.back()</span> method loads the previous URL in the history list. 
+            <br>
+            This is the same as clicking the Back button in the browser. 
+            <br>
+            Example:- 
+            <br>
+            <a href="https://www.w3schools.com">W3Schools</a>
+            <br>
+            Create a back button on a page. 
+            <br>
+            <input type="button" value="Back" onclick="goBack()">
+        </div>
+
+        <hr>
+        <br>
+        <br>
+        <hr>
+
+        <h2>
+            Window History Forward 
+        </h2>
+
+        <div>
+            The <span class="edit">history.forward()</span> method loads the next URL in the history list. 
+            <br>
+            This is the same as clicking the Forward button in the browser. 
+            <br>
+            Example:- 
+            <br>
+            Create a forward button on a page. 
+            <br>
+            <input type="button" value="Forward" onclick="goForward()">
+        </div>
+
+        <script>
+            function goBack() {
+                window.history.back();
+            }
+
+            function goForward() {
+                window.history.forward();
+            }
+        </script>
+    </body>
+</html>

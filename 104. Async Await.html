@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en-in">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>
+            JavaScript Async/Await 
+        </title>
+        <style>
+            html {
+                font-size:62.5%;
+            }
+            body {
+                font-family:verdana, sans-serif;
+                font-size:2rem;
+                line-height:1.5;
+            }
+            .edit {
+                background-color:#f1f1f1;
+                color:red;
+            }
+            .edit1 {
+                background-color:rgba(255,255,0,0.3);
+                padding:2rem;
+            }
+            .table1 {
+                width: 100%;
+                border:0.1rem solid #ddd;
+                border-collapse:collapse;
+            }
+            .table1 tr {
+                height:4rem;
+            }
+            .table1 tr:nth-child(even) {
+                background-color:#f1f1f1;
+            }
+            .table1 td {
+                text-align:center;
+                padding:1rem;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>
+          JavaScript Async 
+        </h1>
+
+        <div style="background-color:rgba(0,255,0,0.1);padding:2rem;text-align:center;">
+         <em>
+            "async and await make promises easier to write"
+         </em>
+         <br>
+         <strong>async</strong> makes a function returns a Promise 
+         <br>
+         <strong>await</strong> makes a function wait for a Promise 
+        </div>
+
+        <hr>
+
+        <h2>
+            Async Syntax 
+        </h2>
+
+        <div>
+            The keyword <span class="edit">async</span> before a function makes the function return a promise. 
+            <br>
+            Example:- 
+            <br>
+            <p class="edit1">
+                async function myFunction1() {
+                    <br>
+                    return "Hello";
+                    <br>
+                }
+            </p>
+            <br>
+            Is same as:- 
+            <br>
+            <p class="edit1">
+                function myFunction1() {
+                    <br>
+                    return Promise.resolve("Hello");
+                    <br>
+                }
+            </p>
+            <br>
+            Here is how to use the Promise. 
+            <br>
+            <p class="edit1">
+                myFunction1().then(
+                    <br>
+                    function(value) { /* code if successful */ }, 
+                    <br>
+                    function(error) { /* code if some error */ }
+                    <br>
+                );
+            </p>
+
+            <br>
+            <br>
+            Example:- 
+            <br>
+            <p id="demo1"></p>
+
+            <br>
+            Or simpler, since you expect a normal value (a normal response, not an error). 
+            <br>
+            Example:- 
+            <br>
+            <p id="demo2"></p>
+        </div>
+
+        <hr>
+
+        <h2>
+            Await Syntax 
+        </h2>
+
+        <div>
+            The <span class="edit">await</span> keyword can only be used inside an <span class="edit">async</span> function. 
+            <br>
+            The <span class="edit">await</span> keyword makes the function pause the execution and wait for a resolved promise before it continues. 
+            <br>
+            Example:- 
+            <br>
+            <p class="edit1">
+                let value = await promise; 
+            </p>
+        </div>
+
+        <hr>
+        <br>
+        <hr>
+
+        <h2>
+            Example 
+        </h2>
+
+        <div>
+            Let's go slowly and learn how to use it. 
+            <br>
+            <strong>Basic Syntax:- </strong>
+            <br>
+            <p id="demo3"></p>
+
+            <br>
+
+            <p class="edit1">
+                The two arguments (resolve and reject) are pre-defined by JavaScript. 
+                <br>
+                We will not create them, but call one of them when the executor function is ready. 
+                <br>
+                Very often we will not need a reject function. 
+            </p>
+
+            <br>
+            <br>
+            <strong>Example without reject:- </strong>
+            <br>
+            <p id="demo4"></p>
+
+            <br>
+            <br>
+            <strong>Waiting for a Timeout:- </strong>
+            <br>
+            <p id="demo5"></p>
+
+            <br>
+            <br>
+            <strong>Waiting for a File:- </strong>
+            <br>
+            <p style="background-color:rgba(255,0,0,0.2);padding:2rem">
+            Use the Live Server. 
+            </p>
+            <br>
+            <p id="demo6"></p>
+        </div>
+
+        <hr>
+
+        <h2>
+            Browser Support 
+        </h2>
+
+        <div>
+            ECMAScript 2017 introduced the JavaScript keywords <span class="edit">async</span> and <span class="edit">await</span>. 
+            <br>
+            The following table defines the first browser version with full support for both. 
+            <br>
+            <br>
+            <table class="table1">
+                <tr>
+                    <td><img src="Image4.svg.png" height="35" width="35" alt="Google Chrome"></td>
+                    <td><img src="Image5.png" height="35" width="35" alt="Microsoft Edge"></td>
+                    <td><img src="Image6.png" height="35" width="35" alt="Mozilla Firefox"></td>
+                    <td><img src="Image7.png" height="35" width="35" alt="Apple Safari"></td>
+                    <td><img src="Image8.png" height="35" width="35" alt="Opera"></td>
+                </tr>
+                <tr>
+                    <td>Chrome 55</td>
+                    <td>Edge 15</td>
+                    <td>Firefox 52</td>
+                    <td>Safari 11</td>
+                    <td>Opera 42</td>
+                </tr>
+                <tr>
+                    <td>Dec, 2016</td>
+                    <td>Apr, 2017</td>
+                    <td>Mar, 2017</td>
+                    <td>Sep, 2017</td>
+                    <td>Dec, 2016</td>
+                </tr>
+            </table>
+        </div>
+
+
+        <script>
+         function myDisplayer1(some) {
+            document.getElementById("demo1").innerHTML = some;
+         }
+
+         async function myFunction1() {
+            return "Hello";
+         }
+
+         myFunction1().then( 
+            function(value)  {myDisplayer1(value);},
+            function(error) {myDisplayer1(error);}
+         );
+        
+        function myDisplayer2(some) {
+            document.getElementById("demo2").innerHTML = some;
+        }
+
+        async function myFunction2() {
+            return "Hello";
+        }
+
+        myFunction2().then(
+            function(value) {myDisplayer2(value);}
+        );
+
+        async function myDisplay1() {
+            let myPromise1 = new Promise(function(resolve,reject) {
+                resolve("I Love You!!");
+            });
+            document.getElementById("demo3").innerHTML = await myPromise1;
+        }
+
+        myDisplay1();
+
+        async function myDisplay2() {
+            let myPromise2 = new Promise(function(resolve) {
+                resolve("I Love You!!");
+            });
+            document.getElementById("demo4").innerHTML = await myPromise2;
+        }
+
+        myDisplay2();
+
+        async function myDisplay3() {
+            let myPromise3 = new Promise(function(resolve) {
+                setTimeout(function() {resolve("I Love You!!");}, 3000);
+            });
+            document.getElementById("demo5").innerHTML = await myPromise3;
+        }
+        myDisplay3();
+
+        async function getFile() {
+            let myPromise4 = new Promise(function(resolve) {
+                let req = new XMLHttpRequest();
+                req.open('GET', "mycar.html");
+                req.onload = function() {
+                    if(req.status == 200) {
+                        resolve(req.response);
+                    }
+                    else {
+                        resolve("File not Found");
+                    }
+                };
+                req.send();
+            });
+            document.getElementById("demo6").innerHTML = await myPromise4;
+        }
+
+        getFile();
+        </script>
+    </body>
+</html>

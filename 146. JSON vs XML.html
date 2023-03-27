@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en-in">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>
+            JSON vs XML 
+        </title>
+        <style>
+            html {
+                font-size:calc(10px + 0.390625vw);
+            }
+
+            body {
+                font-size:1rem;
+                font-family:verdana, sans-serif;
+                line-height:1.5;
+            }
+
+            .edit {
+                background-color:#f1f1f1;
+                color:red;
+            }
+
+            .edit1 {
+                background-color:rgba(255,255,0,0.3);
+                padding:2rem;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>
+            JSON vs XML 
+        </h1>
+
+        <div>
+            Both JSON and XML can be used to receive data from a web server. 
+            <br>
+            The following JSON and XML examples both define an employees object, with an array of 3 employees. 
+            <br>
+            <b>JSON Example</b>
+            <br>
+            <p class="edit1">
+                {"employees" :[
+                <br>
+                { "firstName":"John", "lastName":"Doe" }, 
+                <br>
+                { "firstName":"Anna", "lastName":"Smith" }, 
+                <br>
+                { "firstName":"Peter", "lastName":"Jones" } 
+                <br>
+                ]}
+            </p>
+
+            <br>
+            <br>
+            <b>XML Example</b>
+            <br>
+            <p class="edit1">
+                &lt;employees&gt; 
+                <br>
+                &lt;employee&gt; 
+                <br>
+                &lt;firstName&gt;John&lt;/firstName&gt; &lt;lastName&gt;Doe&lt;/lastName&gt; 
+                <br>
+                &lt;/employee&gt; 
+                <br>
+                &lt;employee&gt; 
+                <br>
+                &lt;firstName&gt;Anna&lt;/firstName&gt; &lt;lastName&gt;Smith&lt;/lastName&gt; 
+                <br>
+                &lt;/employee&gt; 
+                <br>
+                &lt;employee&gt; 
+                <br>
+                &lt;firstName&gt;Peter&lt;/firstName&gt; &lt;lastName&gt;Jones&lt;/lastName&gt; 
+                <br>
+                &lt;/employee&gt; 
+                <br>
+                &lt;/employees&gt;
+            </p>
+        </div>
+
+        <hr>
+
+        <h2>
+            JSON is like XML Because 
+        </h2>
+
+        <div>
+            <ul>
+                <li>Both JSON and XML are "self describing" (human readable)</li>
+                <li>Both JSON and XML are hierarchical (values within values)</li>
+                <li>Both JSON and XML can be parsed and used by lots of programming languages</li>
+                <li>Both JSON and XML can be fetched with an XMLHttpRequest</li>
+            </ul>
+        </div>
+
+        <hr>
+
+        <h2>
+            JSON is Unlike XML Because 
+        </h2>
+
+        <div>
+            <ul>
+                <li>JSON doesn't use end tag</li>
+                <li>JSON is shorter</li>
+                <li>JSON is quicker to read and write</li>
+                <li>JSON can use arrays</li>
+            </ul>
+
+            <br>
+            The biggest difference is: 
+            <br>
+            XML has to be parsed with an XML parser. JSON can be parsed by a standard JavaScript function. 
+        </div>
+
+        <hr>
+
+        <h2>
+            Why JSON is Better Than XML 
+        </h2>
+
+        <div>
+            <p class="edit1">
+                XML is much more difficult to parse than JSON. 
+                <br>
+                JSON is parsed into a ready-to-use JavaScript object. 
+            </p>
+
+            <br>
+            For AJAX applications, JSON is faster and easier than XML: 
+            <br>
+            Using XML
+            <br>
+            <ul>
+                <li>Fetch an XML document</li>
+                <li>Use the XML DOM to loop through the document</li>
+                <li>Extract values and store in variables</li>
+            </ul>
+
+            <br>
+            Using JSON 
+            <br>
+            <ul>
+                <li>Fetch a JSON string</li>
+                <li>JSON.Parse the JSON string</li>
+            </ul>
+        </div>
+
+
+    </body>
+</html>

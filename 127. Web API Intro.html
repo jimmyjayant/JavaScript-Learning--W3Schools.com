@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en-in">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>
+            Web APIs - Introduction 
+        </title>
+        <style>
+            html {
+                font-size:calc(10px + .390625vw);
+            }
+
+            body {
+                font-size:1rem;
+                font-family:verdana, sans-serif;
+                line-height:1.5;
+            }
+
+            .edit {
+                background-color:#f1f1f1;
+                color:red;
+            }
+            
+            .edit1 {
+                background-color:rgba(255,255,0,0.3);
+                padding:2rem;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>
+            Web APIs - Introduction 
+        </h1>
+
+        <div style="background-color:rgba(0,255,0,0.1);padding:1rem;">
+        A Web API is a developer's dream. 
+        <br>
+        <ul>
+            <li>It can extend the functionality of the browser.</li>
+            <li>It can greatly simplify complex functions.</li>
+            <li>It can provide easy syntax to complex code.</li>
+        </ul>
+        </div>
+
+        <hr>
+
+        <h2>
+            What is Web API? 
+        </h2>
+
+        <div>
+            API stands for <b>A</b>pplication <b>P</b>rogramming <b>I</b>nterface. 
+            <br>
+            A Web API is an application programming interface for the web. 
+            <br>
+            A Browser API can extend the functionality of a web browser. 
+            <br>
+            A Server API can extend the functionality of a web server. 
+        </div>
+
+        <hr>
+
+        <h2>
+            Browser APIs 
+        </h2>
+
+        <div>
+            All browsers have a set of built-in Web APIs to support complex operations, and to help accessing data. 
+            <br>
+            For example, the Geolocation API can return the coordinates of where the browser is located. 
+            <br>
+            Example:- 
+            <br>
+            Get the latitude and longitude of the user's position. 
+            <br>
+            Click the button to get your coordinates. 
+            <br>
+            <button onclick="getLocation()">Try It</button>
+
+            <br>
+            <p id="demo1"></p>
+        </div>
+
+        <hr>
+        <br>
+        <br>
+        <hr>
+
+        <h2>
+            Third Party APIs 
+        </h2>
+
+        <div>
+            Third party APIs are not built into your browser. 
+            <br>
+            To use these APIs, you will have to download the code from the Web. 
+            <br>
+            Examples:- 
+            <br>
+            <ul>
+                <li>YouTube API - Allows you to display videos on a web site.</li>
+                <li>Twitter API - Allows you to display Tweets on a web site.</li>
+                <li>Facebook API - Allows you to display Facebook info on a web site.</li>
+            </ul>
+        </div>
+
+        <script>
+            const x = document.getElementById("demo1");
+
+            function getLocation() {
+                try {
+                    navigator.geolocation.getCurrentPosition(showPosition);
+                }
+                catch {
+                    x.innerHTML = err;
+                }
+            }
+
+            function showPosition(position) {
+                x.innerHTML = "Latitude: " + position.coords.latitude + 
+                "<br>Longitude: " + position.coords.longitude;
+            }
+        </script>
+    </body>
+</html>
