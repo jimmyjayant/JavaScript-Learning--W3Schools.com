@@ -1,40 +1,53 @@
 <!DOCTYPE html>
-<html>
+<html lang="en-in">
     <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>
             JavaScript Math Object 
         </title>
         <style>
+            html {
+                font-size:calc(10px + 0.390625vw);
+            }
+
+            body {
+                font-family:Verdana, sans-serif;
+                font-size:1rem;
+                line-height:1.5;
+            }
+
             .edit {
                 background-color:#f1f1f1;
                 color:red;
             }
+
             .edit1 {
                 background-color:rgba(255,255,0,0.3);
-                padding:20px;
+                padding:2rem;
             }
-            body {
-                font-family:verdana, sans-serif;
-                font-size:20px;
-                line-height:1.5;
-            }
+
             .table1 {
                 width:100%;
-                border:1px solid #ddd;
+                border:0.1rem solid #ddd;
                 border-collapse:collapse;
             }
+
             .table1 tr {
-                height:40px;
+                height:3rem;
             }
+
             .table1 tr:nth-child(even) {
                 background-color:#f1f1f1;
             }
+
             .table1 td {
-                padding:10px;
+                padding:1rem;
             }
+
             .table1 th {
                 text-align:left;
-                padding:10px;
+                padding:1rem;
             }
         </style>
     </head>
@@ -43,7 +56,7 @@
             JavaScript Math Object 
         </h1>
 
-        <div style="background-color:rgba(0,255,0,0.3);padding:20px;">
+        <div style="background-color:rgba(0,255,0,0.3);padding:2rem;">
           The JavaScript Math Object allows you to perform mathematical tasks on numbers. 
           <br>
           Example:- 
@@ -59,13 +72,13 @@
             The Math Object 
         </h2>
 
-        <p>
+        <div>
             Unlike other objects, the Math object has no constructor. 
             <br>
             The Math object is static. 
             <br>
             All methods and properties can be used without creating a Math object first. 
-        </p>
+        </div>
 
         <hr>
 
@@ -73,7 +86,7 @@
             Math Properties (Constants) 
         </h2>
 
-        <p>
+        <div>
            The syntax for any Math property is: <span class="edit">Math.property</span>. 
            <br>
            JavaScript provides 8 mathematical constants that can be accessed as Math properties. 
@@ -81,7 +94,7 @@
            Example:- 
            <br>
            <p id="demo2"></p> 
-        </p>
+        </div>
 
         <hr>
 
@@ -89,9 +102,9 @@
             Math Methods 
         </h2>
 
-        <p>
+        <div>
             The syntax for Math any methods is:- <span class="edit">Math.method(number)</span>. 
-        </p>
+        </div>
 
         <hr>
 
@@ -99,7 +112,7 @@
             Number to Integer 
         </h2>
 
-        <p>
+        <div>
             There are 4 common methods to round a number to an integer. 
             <br>
             <br>
@@ -121,7 +134,7 @@
                     <td>Returns the integer part of x (new in ES6)</td>
                 </tr>
             </table>
-        </p>
+        </div>
 
         <hr>
 
@@ -129,13 +142,13 @@
             Math.round() 
         </h2>
 
-        <p>
+        <div>
             <span class="edit">Math.round()</span> returns the nearest integer. 
             <br>
             Example:- 
             <br>
             <p id="demo3"></p>
-        </p>
+        </div>
 
         <hr>
 
@@ -143,13 +156,13 @@
             Math.ceil() 
         </h2>
         
-        <p>
+        <div>
             <span class="edit">Math.ceil()</span> returns the value of x rounded <strong>up</strong> to its nearest integer. 
             <br>
             Example:- 
             <br>
             <p id="demo4"></p>
-        </p>
+        </div>
 
         <hr>
 
@@ -157,13 +170,13 @@
             Math.floor() 
         </h2>
 
-        <p>
+        <div>
             <span class="edit">Math.floor()</span> returns the value of x rounded <strong>down</strong> to its nearest integer. 
             <br>
             Example:- 
             <br>
             <p id="demo5"></p>
-        </p>
+        </div>
 
         <hr>
 
@@ -171,13 +184,13 @@
             Math.trunc() 
         </h2>
 
-        <p>
+        <div>
             <span class="edit">Math.trunc()</span> returns the integer part of x. 
             <br>
             Example:- 
             <br>
             <p id="demo6"></p>
-        </p>
+        </div>
 
         <hr>
 
@@ -185,7 +198,7 @@
             Math.sign() 
         </h2>
 
-        <p>
+        <div>
             <span class="edit">Math.sign()</span> returns if x is negative, null or positive. 
             <br>
             Math.sign() returns -1 for negative, 0 for null and 1 for positive. 
@@ -200,7 +213,7 @@
             <p class="edit1">
                 Math.trunc() and Math.sign() were added to JavaScript 2015 - ES6. 
             </p>
-        </p>
+        </div>
 
         <hr>
         <br>
@@ -211,13 +224,13 @@
             Math.pow() 
         </h2>
 
-        <p>
+        <div>
             <span class="edit">Math.pow(x,y)</span> returns the value of x to the power of y. 
             <br>
             Example:- 
             <br>
             <p id="demo8"></p>
-        </p>
+        </div>
 
         <hr>
 
@@ -225,13 +238,13 @@
             Math.sqrt() 
         </h2>
 
-        <p>
+        <div>
             <span class="edit">Math.sqrt(x)</span> returns the square root of x. 
             <br>
             Example:- 
             <br>
             <p id="demo9"></p>
-        </p>
+        </div>
 
         <hr>
 
@@ -239,13 +252,13 @@
             Math.abs() 
         </h2>
 
-        <p>
+        <div>
             <span class="edit">Math.abs()</span> returns the absolute (positive) value of x. 
             <br>
             Example:- 
             <br>
             <p id="demo10"></p>
-        </p>
+        </div>
 
         <hr>
 
@@ -253,7 +266,7 @@
             Math.sin() 
         </h2>
 
-        <p>
+        <div>
             <span class="edit">Math.sin()</span> returns the sine (a value between -1 and 1) of the angle x (given in radians). 
             <br>
             If you want to use degrees instead of radians, you have to convert degrees to radians. 
@@ -263,7 +276,7 @@
             Example:- 
             <br>
             <p id="demo11"></p>
-        </p>
+        </div>
 
         <hr>
 
@@ -271,7 +284,7 @@
             Math.cos() 
         </h2>
 
-        <p>
+        <div>
             <span class="edit">Math.cos()</span> returns the cosine (a value between -1 and 1) of the angle x (given in radians). 
             <br>
             If you want to use degrees instead of radians, you have to convert degrees to radians. 
@@ -281,7 +294,7 @@
             Example:- 
             <br>
             <p id="demo12"></p> 
-        </p>
+        </div>
 
         <hr>
 
@@ -289,13 +302,13 @@
             Math.min() and Math.max() 
         </h2>
 
-        <p>
+        <div>
             <span class="edit">Math.min()</span> and <span class="edit">Math.max()</span> can be used to find the lowest or highest value in a list of arguments. 
             <br>
             Example:- 
             <br>
             <p id="demo13"></p>
-        </p>
+        </div>
 
         <hr>
 
@@ -303,7 +316,7 @@
             Math.random() 
         </h2>
 
-        <p>
+        <div>
             <span class="edit">Math.random()</span> returns a random number between 0 (inclusive), and 1 (exclusive). 
             <br>
             Example:- 
@@ -313,8 +326,7 @@
             <button type="button" onclick="myFunction1()">Generate Random Number</button>
             <br>
             <p id="demo14"></p>
-        </p>
-
+        </div>
 
         <hr>
 
@@ -322,7 +334,7 @@
            The Math.log() Method 
         </h2>
 
-        <p>
+        <div>
             <span class="edit">Math.log(x)</span> returns the natural logarithm of x. 
             <br>
             The natural logarithm returns the time needed to reach a certain level of growth. 
@@ -340,7 +352,7 @@
             How many times must we multiply Math.E to get 10? = 
             <br>
             <p id="demo16"></p>
-        </p>
+        </div>
 
         <hr>
 
@@ -348,7 +360,7 @@
             The Math.log2() Method 
         </h2>
 
-        <p>
+        <div>
             <span class="edit">Math.log2(x)</span> returns the base 2 logarithm of x. 
             <br>
             Example:- 
@@ -356,7 +368,7 @@
             How many times must we multiply 2 to get 8? = 
             <br>
             <p id="demo17"></p> 
-        </p>
+        </div>
 
         <hr>
 
@@ -364,7 +376,7 @@
             The Math.log10() Method 
         </h2>
 
-        <p>
+        <div>
             <span class="edit">Math.log10(x)</span> returns the base 10 logarithm of x. 
             <br>
             Example:- 
@@ -372,14 +384,15 @@
             How many times must we multiply 10 to get 1000? 
             <br>
             <p id="demo18"></p>
-        </p>
+        </div>
 
         <hr>
 
         <h2>
             JavaScript Math Methods 
         </h2>
-
+        
+        <div>
         <table class="table1">
             <tr>
                 <th>Method</th>
@@ -494,14 +507,8 @@
                 <td>Returns the integer part of a number (x)</td>
             </tr>
         </table>
-
-
-
-
-
-
-
-
+        </div>
+        
         <script>
             document.getElementById("demo1").innerHTML = Math.PI;
 

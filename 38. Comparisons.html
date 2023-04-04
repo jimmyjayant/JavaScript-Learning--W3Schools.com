@@ -1,48 +1,59 @@
 <!DOCTYPE html>
-<html>
+<html lang="en-in">
     <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>
             JavaScript Comparison and Logical Operators 
         </title>
         <style>
+            html {
+                font-size:calc(10px + 0.390625vw);
+            }
+
+            body {
+                font-family:Verdana, sans-serif;
+                font-size:1rem;
+                line-height:1.5;
+            }
+
             .edit {
                 background-color:#f1f1f1;
                 color:red;
             }
             .edit1 {
                 background-color:rgba(255,255,0,0.3);
-                padding:20px;
+                padding:2rem;
             }
-            body {
-                font-family:verdana, sans-serif;
-                font-size:20px;
-                line-height:1.5;
-            }
+            
             .table1 {
                 width:100%;
-                border:1px solid #ddd;
+                border:0.1rem solid #ddd;
                 border-collapse:collapse;
             }
+
             .table1 tr {
-                height:40px;
+                height:3rem;
             }
+
             .table1 tr:nth-child(even) {
                 background-color:#ddd;
             }
+
             .table1 th {
                 text-align:left;
-                padding:10px;
+                padding:1rem;
             }
+
             .table1 td {
-                padding:10px;
+                padding:1rem;
             }
 
             .table2 td {
                 text-align:center;
-                padding:10px;
-                border:1px solid grey;
+                padding:1rem;
+                border:0.1rem solid grey;
             }
-
         </style>
     </head>
     <body>
@@ -50,9 +61,9 @@
             JavaScript Comparison and Logical Operators 
         </h1>
 
-        <p>
+        <div>
             Comparison and Logical Operators are used to test for <span class="edit">true</span> or <span class="edit">false</span>. 
-        </p>
+        </div>
 
         <hr>
 
@@ -60,7 +71,7 @@
             Comparison Operators 
         </h2>
 
-        <p>
+        <div>
             Comparison operators are used in logical statements to determine equality or difference between variables or values. 
             <br>
             Given that <span class="edit">a = 5</span>, the table below explains the comparison operators. 
@@ -166,7 +177,7 @@
                     <td><a href="38. Comparisons-Equal to-Example 13.html" target="_blank">Try it &gt; &gt; </a></td>
                 </tr>
             </table>
-        </p>
+        </div>
 
         <hr>
         <br>
@@ -176,13 +187,13 @@
             How Can it be Used 
         </h2>
 
-        <p>
+        <div>
             Comparison Operators can be used in conditional statements to compare values and take action depending on the result. 
             <br>
             <p class="edit1">
                 if (age &lt; 18) text = "Too young to buy alcohol.";
             </p>
-        </p>
+        </div>
 
         <hr>
 
@@ -190,7 +201,7 @@
             Logical Operators 
         </h2>
 
-        <p>
+        <div>
             Logical Operators are used to determine the logic between variables and values. 
             <br>
             Given that <span class="edit">a = 6</span> and <span class="edit">b = 3</span>, the table below explains the logical operators. 
@@ -222,7 +233,7 @@
                     <td><a href="38. Comparisons-Logical Operators-Example 3.html" target="_blank">Try it &gt;&gt;</a></td>
                 </tr>
             </table>
-        </p>
+        </div>
 
         <hr>
 
@@ -230,7 +241,7 @@
             Conditional (Ternary) Operator 
         </h2>
 
-        <p>
+        <div>
             JavaScript also contains a conditional operator that assigns a value to a variable based on some condition. 
             <br>
             Syntax:- 
@@ -251,7 +262,7 @@
             <p id="demo1"></p>
             <br>
             If the variable age is a value below 18, the value of the variable voteable will be "Too young", otherwise the value of voteable will be "Old enough". 
-        </p>
+        </div>
 
         <hr>
 
@@ -259,7 +270,7 @@
             Comparing Different Types 
         </h2>
 
-        <p>
+        <div>
            Comparing data of different types may give unexpected results. 
            <br>
            When comparing a string with a number, JavaScript will convert the string to a number when doing the comparison. An empty string converts to 0. A non-numeric string converts to <span class="edit">NaN</span> which is always <span class="edit">false</span>. 
@@ -328,7 +339,7 @@
            <button type="button" onclick="myFunction2()">Try it</button>
            <br>
            <p id="demo2"></p>
-        </p>
+        </div>
 
         <hr>
 
@@ -336,7 +347,7 @@
             The Nullish Coalescing Operator (??)  
         </h2>
 
-        <p>
+        <div>
             The <span class="edit">??</span> operator returns the first argument if it is not <strong>nullish</strong> (<span class="edit">null</span> or <span class="edit">undefined</span>). 
             <br>
             Otherwise it returns the second argument. 
@@ -375,7 +386,7 @@
                     <td>Mar 2020</td>
                 </tr>
             </table>
-        </p>
+        </div>
 
         <hr>
 
@@ -383,7 +394,7 @@
             The Optional Chaining Operator (?.) 
         </h2>
 
-        <p>
+        <div>
             The Optional Chaining Operator <span class="edit">?.</span> accesses an object's property or calls a function. 
             <br>
             If the object accessed or function called is <span class="edit">undefined</span> or <span class="edit">null</span>, it returns <span class="edit">undefined</span> instead of throwing an error. 
@@ -420,7 +431,7 @@
                     <td>Mar 2020</td>
                 </tr>
             </table>
-        </p>
+        </div>
 
         
         <script>

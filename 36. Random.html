@@ -1,22 +1,30 @@
 <!DOCTYPE html>
-<html>
+<html lang="en-in">
     <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>
             JavaScript Random 
         </title>
         <style>
+            html {
+                font-size:calc(10px + 0.390625vw);
+            }
+
+            body {
+                font-family:Verdana, sans-serif;
+                font-size:1rem;
+                line-height:1.5;
+            }
+
             .edit {
                 background-color:#f1f1f1;
                 color:red;
             }
+
             .edit1 {
                 background-color:rgba(255,255,0,0.3);
-                padding:20px;
-            }
-            body {
-                font-family:verdana, sans-serif;
-                font-size:20px;
-                line-height:1.5;
+                padding:2rem;
             }
         </style>
     </head>
@@ -31,7 +39,7 @@
             Math.random() 
         </h2>
 
-        <p>
+        <div>
             <span class="edit">Math.random()</span> returns a random number between 0 (inclusive), and 1 (exclusive). 
             <br>
             Example:- 
@@ -48,7 +56,7 @@
             <p class="edit1">
                 <span class="edit">Math.random()</span> always returns a number lower than 1. 
             </p>
-        </p>
+        </div>
 
         <hr>
 
@@ -56,7 +64,7 @@
             JavaScript Random Integers 
         </h2>
 
-        <p>
+        <div>
             <span class="edit">Math.random()</span> used with <span class="edit">Math.floor()</span> can be used to return random integers. 
             <br>
             <br>
@@ -124,7 +132,7 @@
             <button type="button" onclick="myFunction7()">Random Integers</button>
             <br>
             <p id="demo7"></p>
-        </p>
+        </div>
 
         <hr>
         <br>
@@ -135,7 +143,7 @@
             A Proper Random Function 
         </h2>
 
-        <p>
+        <div>
             As you can see in the examples above, it might be a good idea to create a proper random function to use for all random integer purposes. 
             <br>
             This JavaScript function always return a random number between min (included) and max (excluded). 
@@ -159,10 +167,7 @@
             <button type="button" onclick="myFunction9(1,10)">Random Integer</button>
             <br>
             <p id="demo9"></p> 
-        </p>
-
-
-
+        </div>
 
         <script>
          function myFunction1()

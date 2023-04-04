@@ -1,40 +1,53 @@
 <!DOCTYPE html>
-<html>
+<html lang="en-in">
     <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>
             JavaScript Date Set Methods 
         </title>
         <style>
+            html {
+                font-size:calc(10px + 0.390625vw);
+            }
+
+            body {
+                font-family:Verdana, sans-serif;
+                font-size:1rem;
+                line-height:1.5;
+            }
+
             .edit {
                 background-color:#f1f1f1;
                 color:red;
             }
+
             .edit1 {
                 background-color:rgba(255,255,0,0.3);
-                padding:20px;
+                padding:2rem;
             }
-            body {
-                font-family:verdana, sans-serif;
-                font-size:20px;
-                line-height:1.5;
-            }
+
             .table1 {
                 width:100%;
-                border:1px solid #ddd;
+                border:0.1rem solid #ddd;
                 border-collapse:collapse;
             }
+
             .table1 tr {
-                height:40px;
+                height:3rem;
             }
+
             .table1 tr:nth-child(even) {
                 background-color:#ddd;
             }
+
             .table1 th {
                 text-align:left;
-                padding:10px;
+                padding:1rem;
             }
+
             .table1 td {
-                padding:10px;
+                padding:1rem;
             }
         </style>
     </head>
@@ -43,9 +56,9 @@
             JavaScript Set Date Methods 
         </h1>
 
-        <p>
+        <div>
             Set Date Methods let you set date values (years, months, days, hours, minutes, seconds, milliseconds) for a Date Object. 
-        </p>
+        </div>
 
         <hr>
 
@@ -53,7 +66,7 @@
             Set Date Methods 
         </h2>
 
-        <p>
+        <div>
             Set Date Methods are used for setting a part of a date:- 
             <br>
             <br>
@@ -95,7 +108,7 @@
                     <td>Set the time (milliseconds since January 01, 1970)</td>
                 </tr>
             </table>
-        </p>
+        </div>
 
         <hr>
 
@@ -103,7 +116,7 @@
             The setFullYear() Method 
         </h2>
 
-        <p>
+        <div>
             The <span class="edit">setFullYear()</span> method sets the year of a date object. In this example to 2020. 
             <br>
             Example:- 
@@ -119,7 +132,7 @@
             Please note that month counts from 0. December is month 11. 
             <br>
             <p id="demo2"></p>
-        </p>
+        </div>
 
         <hr>
         <br>
@@ -130,13 +143,13 @@
             The setMonth() Method 
         </h2>
 
-        <p>
+        <div>
             The <span class="edit">setMonth()</span> method sets the month of a date object (0-11). 
             <br>
             Example:- 
             <br>
             <p id="demo3"></p>
-        </p>
+        </div>
 
         <hr>
 
@@ -144,7 +157,7 @@
             The setDate() Method 
         </h2>
 
-        <p>
+        <div>
             The <span class="edit">setDate()</span> method sets the day of a date object (1-31). 
             <br>
             Example:- 
@@ -163,7 +176,7 @@
             <p class="edit1">
                 If adding days shifts the month or year, the changes are handled automatically by the Date object. 
             </p>
-        </p>
+        </div>
 
         <hr>
 
@@ -171,13 +184,13 @@
             The setHours() Method 
         </h2>
 
-        <p>
+        <div>
             The <span class="edit">setHours()</span> method sets the hours of a date object (0-23). 
             <br>
             Example:- 
             <br>
             <p id="demo6"></p>
-        </p>
+        </div>
 
         <hr>
 
@@ -185,13 +198,13 @@
             The setMinutes() Method 
         </h2>
 
-        <p>
+        <div>
             The <span class="edit">setMinutes()</span> method sets the minutes of a date object (0-59). 
             <br>
             Example:- 
             <br>
             <p id="demo7"></p> 
-        </p>
+        </div>
 
         <hr>
 
@@ -199,13 +212,13 @@
             The setSeconds() Method 
         </h2>
 
-        <p>
+        <div>
             The <span class="edit">setSeconds()</span> method sets the seconds of a date object (0-59). 
             <br>
             Example:- 
             <br>
             <p id="demo8"></p>
-        </p>
+        </div>
 
         <hr>
 
@@ -213,7 +226,7 @@
             Compare Dates 
         </h2>
 
-        <p>
+        <div>
             Dates can easily be compared. 
             <br>
             The following example compares today's date with January 14, 2100. 
@@ -228,12 +241,7 @@
             <p class="edit1">
                 JavaScript counts month from 0 to 11. January is 0. December is 11. 
             </p>
-        </p>
-
-
-
-
-
+        </div>
 
         <script>
             const d1 = new Date();

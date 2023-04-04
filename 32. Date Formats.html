@@ -1,39 +1,53 @@
 <!DOCTYPE html>
-<html>
+<html lang="en-in">
     <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>
             JavaScript Date Formats 
         </title>
         <style>
+            html {
+                font-size:calc(10px + 0.390625vw);
+            }
+
+            body {
+                font-family:Verdana, sans-serif;
+                font-size:1rem;
+                line-height:1.5;
+            }
+
             .edit {
                 background-color:#f1f1f1;
                 color:red;
             }
+
             .edit1 {
                 background-color:rgba(255,255,0,0.3);
-                padding:20px;
+                padding:2rem;
             }
-            body {
-                font-family:verdana, sans-serif;
-                font-family:20px;
-            }
+
             .table1 {
                 width:100%;
-                border:1px solid #ddd;
+                border:0.1rem solid #ddd;
                 border-collapse:collapse;
             }
+
             .table1 tr {
-                height:40px;
+                height:3rem;
             }
+
             .table1 tr:nth-child(even) {
                 background-color:#ddd;
             }
+
             .table1 th {
                 text-align:left;
-                padding:10px;
+                padding:1rem;
             }
+
             .table1 td {
-                padding:10px;
+                padding:1rem;
             }
         </style>
     </head>
@@ -48,7 +62,7 @@
             JavaScript Date Input 
         </h2>
 
-        <p>
+        <div>
             There are generally 3 types of JavaScript date input formats:- 
             <br>
             <table class="table1">
@@ -77,7 +91,7 @@
                 <br>
                 The other formats are not so well defined and might be browser specific. 
             </p>
-        </p>
+        </div>
 
         <hr>
 
@@ -85,13 +99,13 @@
             JavaScript Date Output 
         </h2>
 
-        <p>
+        <div>
             Independent of input format, JavaScript will (by default) output dates in full text string format. 
             <br>
             <p class="edit1">
                 <span id="demo1"></span>
             </p>
-        </p>
+        </div>
 
         <hr>
 
@@ -99,7 +113,7 @@
             JavaScript ISO Dates 
         </h2>
 
-        <p>
+        <div>
             ISO 8601 is the international standard for the representation of dates and times. 
             <br>
             The ISO 8601 syntax (YYYY-MM-DD) is also the preferred JavaScript date format. 
@@ -115,7 +129,7 @@
                 <br>
                 Depending on your time zone, the result above will vary between March 24 and March 25. 
             </p>
-        </p>
+        </div>
 
         <hr>
         <br>
@@ -126,7 +140,7 @@
             ISO Dates (Year and Month) 
         </h2>
 
-        <p>
+        <div>
             ISO dates can be written without specifying the day (YYYY-MM). 
             <br>
             Example:- 
@@ -138,7 +152,7 @@
             <p class="edit1">
                 Time zones will vary the result above between February 28 and March 01. 
             </p>
-        </p>
+        </div>
 
         <hr>
 
@@ -146,7 +160,7 @@
             ISO Dates (Only Year) 
         </h2>
 
-        <p>
+        <div>
             ISO dates can be written without month and day (YYYY). 
             <br>
             Example:- 
@@ -156,7 +170,7 @@
             <p class="edit1">
                 Time zones will vary the result above between December 31 2014 and January 01 2015. 
             </p>
-        </p>
+        </div>
 
         <hr>
 
@@ -164,7 +178,7 @@
             ISO Dates (Date-Time) 
         </h2>
 
-        <p>
+        <div>
             ISO dates can be written with added hours, minutes, and seconds (YYYY-MM-DDTHH:MM:SSZ). 
             <br>
             Separate date and Time with a capital T. 
@@ -193,10 +207,10 @@
 
             <br>
 
-            <p style="background-color:pink;padding:20px;">
+            <p style="background-color:pink;padding:2rem;">
             Omitting T or Z in a date-time string can give different results in different browsers. 
             </p>
-        </p>
+        </div>
 
         <hr>
 
@@ -204,13 +218,13 @@
             Time Zones 
         </h2>
 
-        <p>
+        <div>
             When setting a date, without specifying the time zone, JavaScript will use the browser's time zone. 
             <br>
             When getting a date, without specifying the time zone, the result is converted to the browser's time zone. 
             <br>
             In other words: If a date/time is created in GMT (Greenwich Mean Time), the date/time will be converted to CDT (Central US Daylight Time) if a user browses from central US. 
-        </p>
+        </div>
 
         <hr>
 
@@ -218,13 +232,13 @@
             JavaScript Short Dates 
         </h2>
 
-        <p>
+        <div>
             Short dates are written with an "MM/DD/YYYY" syntax like this:- 
             <br>
             Example:- 
             <br>
             <p id="demo7"></p>
-        </p>
+        </div>
 
         <hr>
 
@@ -232,7 +246,7 @@
             WARNINGS ! 
         </h2>
 
-        <p>
+        <div>
             In some browsers, months or days with no leading zeroes may produce an error. 
             <br>
             Example:- 
@@ -265,7 +279,7 @@
             <p class="edit1">
                 const d = new Date("25-03-2015");
             </p>
-        </p>
+        </div>
 
         <hr>
 
@@ -273,7 +287,7 @@
             JavaScript Long Dates 
         </h2>
 
-        <p>
+        <div>
             Long dates are most often written with a "MMM DD YYYY" syntax like this:- 
             <br>
             Example:- 
@@ -308,7 +322,7 @@
             Example:- 
             <br>
             <p id="demo12"></p>
-        </p>
+        </div>
 
         <hr>
 
@@ -316,7 +330,7 @@
             Date Input - Parsing Dates 
         </h2>
 
-        <p>
+        <div>
             If you have a valid date string, you can use the <span class="edit">Date.parse()</span> method to convert it to milliseconds. 
             <br>
             <span class="edit">Date.parse()</span> returns the number of milliseconds between the date and January 1, 1970. 
@@ -332,9 +346,7 @@
             Example:- 
             <br>
             <p id="demo14"></p>
-        </p>
-
-
+        </div>
 
     <script>
         const d1 = new Date();

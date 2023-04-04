@@ -1,40 +1,53 @@
 <!DOCTYPE html>
-<html>
+<html lang="en-in">
     <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>
             JavaScript Booleans 
         </title>
         <style>
+            html {
+                font-size:calc(10px + 0.390625vw);
+            }
+
+            body {
+                font-family:Verdana, sans-serif;
+                font-size:1rem;
+                line-height:1.5;
+            }
+
             .edit {
                 background-color:#f1f1f1;
                 color:red;
             }
+
             .edit1 {
                 background-color:rgba(255,255,0,0.3);
-                padding:20px;
+                padding:2rem;
             }
-            body {
-                font-family:verdana, sans-serif;
-                font-size:20px;
-                line-height:1.5;
-            }
+
             .table1 {
                 width:100%;
-                border:1px solid #ddd;
+                border:0.1rem solid #ddd;
                 border-collapse:collapse;
             }
+
             .table1 tr {
-                height:40px;
+                height:3rem;
             }
+
             .table1 tr:nth-child(even) {
                 background-color:#ddd;
             }
+
             .table1 th {
                 text-align:left;
-                padding:10px;
+                padding:1rem;
             }
+
             .table1 td {
-                padding:10px;
+                padding:1rem;
             }
         </style>
     </head>
@@ -43,7 +56,7 @@
             JavaScript Booleans 
         </h1>
 
-        <div style="background-color:rgba(0,255,0,0.3);padding:20px;">
+        <div style="background-color:rgba(0,255,0,0.3);padding:2rem;">
         A JavaScript Boolean represents one of two values: <strong>true</strong> or <strong>false</strong>. 
         </div>
 
@@ -53,7 +66,7 @@
             Boolean Values 
         </h2>
 
-        <p>
+        <div>
             Very often, in programming, you will need a data type that can only have one of two values, like 
             <br>
             <ul>
@@ -63,7 +76,7 @@
             </ul>
             <br>
             For this, JavaScript has a <strong>Boolean</strong> data type. It can only take the values <strong>true</strong> or <strong>false</strong>. 
-        </p>
+        </div>
 
         <hr>
 
@@ -71,7 +84,7 @@
             The Boolean() Function 
         </h2>
         
-        <p>
+        <div>
             You can use the <span class="edit">Boolean()</span> function to find out if an expression (or a variable) is true. 
             <br>
             Example:- 
@@ -85,7 +98,7 @@
             Example:- 
             <br>
             <p id="demo2"></p>
-        </p>
+        </div>
 
         <hr>
 
@@ -93,7 +106,7 @@
             Comparisons and Conditions 
         </h2>
 
-        <p>
+        <div>
             The chapter JS Comparisons gives a full overview of comparison operators. 
             <br>
             The chapter JS Conditions gives a full overview of conditional statements. 
@@ -130,7 +143,7 @@
             <p class="edit1">
                 The Boolean value of an expression is the basis of all JavaScript comparisons and conditions. 
             </p>
-        </p>
+        </div>
 
         <hr>
         <br>
@@ -141,11 +154,11 @@
             Everything With a "Value" is True 
         </h2>
 
-        <p>
+        <div>
             Example:- 
             <br>
             <p id="demo3"></p>
-        </p>
+        </div>
 
         <hr>
 
@@ -153,7 +166,7 @@
             Everything Without a "Value" is False 
         </h2>
 
-        <p>
+        <div>
             The Boolean Value of <strong>0</strong> (zero) is <strong>false</strong>. 
             <br>
             Example:- 
@@ -209,7 +222,7 @@
             Example:- 
             <br>
             <p id="demo10"></p>
-        </p>
+        </div>
 
         <hr>
 
@@ -217,7 +230,7 @@
             JavaScript Booleans as Objects 
         </h2>
 
-        <p>
+        <div>
             Normally JavaScript booleans are primitive values created from literals. 
             <br>
             <p class="edit1">
@@ -301,9 +314,7 @@
             <p class="edit1">
                 Comparing two JavaScript objects <strong>always</strong> return <strong>false</strong>. 
             </p>
-        </p>
-
-
+        </div>
 
         <script>
             document.getElementById("demo1").innerHTML = 
@@ -362,6 +373,5 @@
             document.getElementById("demo15").innerHTML = 
             "The x and y are equal in value and type:= " + (x===y);
         </script>
-
     </body>
 </html>

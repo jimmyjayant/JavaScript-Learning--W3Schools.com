@@ -1,40 +1,53 @@
 <!DOCTYPE html>
-<html>
+<html lang="en-in">
     <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>
             JavaScript Get Date Methods 
         </title>
         <style>
+            html {
+                font-size:calc(10px + 0.390625vw);
+            }
+
+            body {
+                font-family:Verdana, sans-serif;
+                font-size:1rem;
+                line-height:1.5;
+            }
+
             .edit {
                 background-color:#f1f1f1;
                 color:red;
             }
+
             .edit1 {
                 background-color:rgba(255,255,0,0.3);
-                padding:20px;
+                padding:2rem;
             }
-            body {
-                font-family:verdana, sans-serif;
-                font-size:20px;
-                line-height:1.5;
-            }
+
             .table1 {
                 width:100%;
-                border:1px solid #ddd;
+                border:0.1rem solid #ddd;
                 border-collapse:collapse;
             }
+
             .table1 tr {
-                height:40px;
+                height:3rem;
             }
+
             .table1 tr:nth-child(even) {
                 background-color:#ddd;
             }
+
             .table1 th {
                 text-align:left;
-                padding:10px;
+                padding:1rem;
             }
+
             .table1 td {
-                padding:10px;
+                padding:1rem;
             }
         </style>
     </head>
@@ -49,7 +62,7 @@
             The new Date() constructor 
         </h2>
 
-        <p>
+        <div>
            In JavaScript, date objects are created with <span class="edit">new Date()</span>. 
            <br>
            <span class="edit">new Date()</span> returns a date object with the current date and time. 
@@ -57,7 +70,7 @@
            Example:- 
            <br>
            <p id="demo1"></p>
-        </p>
+        </div>
 
         <hr>
 
@@ -65,7 +78,7 @@
             Date Get Methods 
         </h2>
 
-        <p>
+        <div>
             <table class="table1">
                 <tr>
                     <th>Method</th>
@@ -113,7 +126,7 @@
             <br>
 
             <p class="edit1">
-                <span style="font-size:30px">Note 1</span>
+                <span style="font-size:2rem">Note 1</span>
                 <br>
                 The get methods above return <strong>Local time</strong>. 
                 <br>
@@ -123,7 +136,7 @@
             <br>
 
             <p class="edit1">
-                <span style="font-size:30px">Note 2</span>
+                <span style="font-size:2rem">Note 2</span>
                 <br>
                 The get methods return information from existing date objects. 
                 <br>
@@ -131,7 +144,7 @@
                 <br>
                 The time in a date object is NOT the same as current time. 
             </p>
-        </p>
+        </div>
 
         <hr>
 
@@ -139,7 +152,7 @@
             The getFullYear() Method 
         </h2>
 
-        <p>
+        <div>
             The <span class="edit">getFullYear()</span> method returns the year of a date as a four digit number. 
             <br>
             Example:- 
@@ -155,8 +168,8 @@
             <br>
             <br>
 
-            <p style="background-color:pink;padding:20px;">
-            <span style="font-size:30px;">Warning !</span>
+            <p style="background-color:pink;padding:2rem;">
+            <span style="font-size:2rem;">Warning !</span>
             <br>
             Old JavaScript code might use the non-standard method getYear(). 
             <br>
@@ -164,7 +177,7 @@
             <br>
             getYear() is deprecated. Do not use it! 
             </p>
-        </p>
+        </div>
 
         <hr>
 
@@ -172,12 +185,12 @@
             The getMonth() Method 
         </h2>
 
-        <p>
+        <div>
             The <span class="edit">getMonth()</span> method returns the month of a date as a number (0-11). 
             <br>
             <br>
             <p class="edit1">
-                <span style="font-size:30px;">Note</span>
+                <span style="font-size:2rem;">Note</span>
                 <br>
                 In JavaScript, January is month number 0, February is number 1, ..... 
                 <br>
@@ -202,7 +215,7 @@
             <br>
 
             <p class="edit1">
-                <span style="font-size:30px;">Note</span>
+                <span style="font-size:2rem;">Note</span>
                 <br>
                 You can use an array of names to return the month as a name. 
             </p>
@@ -217,7 +230,7 @@
             Example:- 
             <br>
             <p id="demo7"></p>
-        </p>
+        </div>
 
         <hr>
 
@@ -225,7 +238,7 @@
             The getDate() Method 
         </h2>
 
-        <p>
+        <div>
             The <span class="edit">getDate()</span> method returns the day of a date as a number (1-31). 
             <br>
             Example:- 
@@ -236,7 +249,7 @@
             Example:- 
             <br>
             <p id="demo9"></p>
-        </p>
+        </div>
 
         <hr>
         <br>
@@ -247,7 +260,7 @@
             The getHours() Method 
         </h2>
 
-        <p>
+        <div>
             The <span class="edit">getHours()</span> method returns the hours of a date as a number (0-23). 
             <br>
             Example:- 
@@ -258,7 +271,7 @@
             Example:- 
             <br>
             <p id="demo11"></p>
-        </p>
+        </div>
 
         <hr>
 
@@ -266,7 +279,7 @@
             The getMinutes() Method 
         </h2>
 
-        <p>
+        <div>
             The <span class="edit">getMinutes()</span> method returns the minutes of a date as a number (0-59). 
             <br>
             Example:- 
@@ -277,7 +290,7 @@
             Example:- 
             <br>
             <p id="demo13"></p>
-        </p>
+        </div>
 
         <hr>
 
@@ -285,7 +298,7 @@
             The getSeconds() Method 
         </h2>
 
-        <p>
+        <div>
             The <span class="edit">getSeconds()</span> method returns the seconds of a date as a number (0-59). 
             <br>
             Example:- 
@@ -296,7 +309,7 @@
             Example:- 
             <br>
             <p id="demo15"></p>
-        </p>
+        </div>
 
         <hr>
 
@@ -304,7 +317,7 @@
             The getMilliseconds() Method 
         </h2>
 
-        <p>
+        <div>
             The <span class="edit">getMilliseconds()</span> method returns the milliseconds of a date as a number (0-999). 
             <br>
             Example:- 
@@ -315,7 +328,7 @@
             Example:- 
             <br>
             <p id="demo17"></p>
-        </p>
+        </div>
 
         <hr>
 
@@ -323,11 +336,11 @@
             The getDay() Method 
         </h2>
 
-        <p>
+        <div>
             The <span class="edit">getDay()</span> method returns the weekday of a date as a number (0 - 6). 
             <br>
             <p class="edit1">
-                <span style="font-size:30px">Note</span>
+                <span style="font-size:2rem">Note</span>
                 <br>
                 In JavaScript, the first day of the week (day 0) is Sunday. 
                 <br>
@@ -347,11 +360,11 @@
             <br>
 
             <p class="edit1">
-                <span style="font-size:30px;">Note</span>
+                <span style="font-size:2rem;">Note</span>
                 <br>
                 You can use an array of names, and <span class="edit">getDay()</span> to return weekday as a name. 
             </p>
-        </p>
+        </div>
 
         <hr>
 
@@ -359,13 +372,13 @@
             The getTime() Method 
         </h2>
 
-        <p>
+        <div>
             The <span class="edit">getTime()</span> method returns the number of milliseconds since January 1, 1970. 
             <br>
             Example:- 
             <br>
             <p id="demo20"></p>
-        </p>
+        </div>
 
         <hr>
 
@@ -373,7 +386,7 @@
             The Date.now() Method 
         </h2>
 
-        <p>
+        <div>
             <span class="edit">Date.now()</span> returns the number of milliseconds since January 01, 1970. 
             <br>
             Example:- 
@@ -395,7 +408,7 @@
             You cannot use it on a date object like <span class="edit">myDate.now()</span>. 
             <br>
             The syntax is always <span class="edit">Date.now()</span>. 
-        </p>
+        </div>
 
         <hr>
 
@@ -403,7 +416,7 @@
             UTC Date Get Methods 
         </h2>
 
-        <p>
+        <div>
             <table class="table1">
                 <tr>
                     <th>Method</th>
@@ -460,7 +473,7 @@
             UTC time is the same as GMT (Greenwich Mean Time). 
             <br>
             The difference between Local Time and UTC time can be up to 24 hours.   
-        </p>
+        </div>
 
         <hr>
 
@@ -468,15 +481,13 @@
             The getTimezoneOffset() Method 
         </h2>
 
-        <p>
+        <div>
             The <span class="edit">getTimezoneOffset()</span> method returns the difference (in minutes) between local time and UTC time. 
             <br>
             Example:- 
             <br>
             <p id="demo23"></p>
-        </p>
-
-
+        </div>
 
         <script>
           const d1 = new Date();

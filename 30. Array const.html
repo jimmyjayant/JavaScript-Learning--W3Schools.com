@@ -1,37 +1,49 @@
 <!DOCTYPE html>
-<html>
+<html lang="en-in">
     <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>
             JavaScript Array Const 
         </title>
         <style>
+            html {
+                font-size:calc(10px + 0.390625vw);
+            }
+
             body {
-                font-family:verdana, sans-serif;
-                font-size:20px;
+                font-family:Verdana, sans-serif;
+                font-size:1rem;
                 line-height:1.5;
             }
+
             .edit {
                 background-color:#f1f1f1;
                 color:red;
             }
+
             .edit1 {
                 background-color:rgba(255,255,0,0.3);
-                padding:20px;
+                padding:2rem;
             }
+
             .table1 {
                 width:100%;
-                border:1px solid #ddd;
+                border:0.1rem solid #ddd;
                 border-collapse:collapse;
             }
+
             .table1 tr {
-                height:40px;
+                height:3rem;
             }
+
             .table1 tr:nth-child(even) {
                 background-color:#f1f1f1;
             }
+
             .table1 td {
                 text-align:center;
-                padding:10px;
+                padding:1rem;
             }
         </style>
     </head>
@@ -46,7 +58,7 @@
             ECMAScript 2015 (ES6) 
         </h2>
 
-        <p>
+        <div>
             In 2015, JavaScript introduced an important new keyword: <span class="edit">const</span>. 
             <br>
             It has become a common practice to declare arrays using <span class="edit">const</span>. 
@@ -54,7 +66,7 @@
             Example:- 
             <br>
             <p id="demo1"></p>
-        </p>
+        </div>
 
         <hr>
 
@@ -62,13 +74,13 @@
             Cannot be Reassigned 
         </h2>
 
-        <p>
+        <div>
             An array declared with <span class="edit">const</span> cannot be reassigned. 
             <br>
             Example:- 
             <br>
             <p id="demo2"></p>
-        </p>
+        </div>
 
         <hr>
 
@@ -76,13 +88,13 @@
             Arrays are Not Constants 
         </h2>
 
-        <p>
+        <div>
             The keyword <span class="edit">const</span> is a little misleading. 
             <br>
             It does NOT define a constant array. It defines a constant reference to an array. 
             <br>
             Because of this, we can still change the elements of a constant array. 
-        </p>
+        </div>
 
         <hr>
 
@@ -90,7 +102,7 @@
             Elements Can be Reassigned 
         </h2>
 
-        <p>
+        <div>
            You can change the elements of a constant array. 
            <br>
            Example:- 
@@ -98,7 +110,7 @@
            <p id="demo3"></p>
            <br>
            <p id="demo4"></p>
-        </p>
+        </div>
 
         <hr>
 
@@ -106,7 +118,7 @@
             Browser Support 
         </h2>
 
-        <p>
+        <div>
             The <span class="edit">const</span> keyword is not supported in Internet Explorer 10 or earlier. 
             <br>
             The following table defines the first browser versions with full support for the <span class="edit">const</span> keyword. 
@@ -135,7 +147,7 @@
                     <td>Mar, 2016</td>
                 </tr>
             </table>
-        </p>
+        </div>
 
         <hr>
 
@@ -143,14 +155,14 @@
             Assigned when Declared 
         </h2>
 
-        <p>
+        <div>
             JavaScript <span class="edit">const</span> variables must be assigned a value when they are declared. 
             <br>
             Meaning: An array declared with <span class="edit">const</span> must be initialized when it is declared. 
             <br>
             Using <span class="edit">const</span> without initializing the array is a syntax error. 
             <br>
-            <p style="background-color:pink;padding:20px;">
+            <p style="background-color:pink;padding:2rem;">
             This will not work:- 
             <br>
             const cars;
@@ -162,14 +174,14 @@
             <br>
             You can even use the array before it is declared. 
             <br>
-            <p style="background-color:lightgreen;padding:20px;">
+            <p style="background-color:lightgreen;padding:2rem;">
             This is OK:- 
             <br>
             cars = ["Saab", "Volvo", "BMW"];
             <br>
             var cars; 
             </p>
-        </p>
+        </div>
 
         <hr>
 
@@ -177,7 +189,7 @@
             Const Block Scope 
         </h2>
 
-        <p>
+        <div>
             An array declared with <span class="edit">const</span> has <strong>Block Scope</strong>. 
             <br>
             An array declared in a block is not the same as an array declared outside the block. 
@@ -192,7 +204,7 @@
             Example:- 
             <br>
             <p id="demo6"></p>
-        </p>
+        </div>
 
         <hr>
 
@@ -200,7 +212,7 @@
             Redeclaring Arrays 
         </h2>
 
-        <p>
+        <div>
             Redeclaring an array declared with <span class="edit">var</span> is allowed anywhere in a program. 
             <br>
             Example:- 
@@ -284,11 +296,7 @@
                     <br>
                 }
             </p>
-        </p>
-
-
-
-
+        </div>
 
         <script>
             const cars1 = ["Saab", "Volvo", "BMW"];

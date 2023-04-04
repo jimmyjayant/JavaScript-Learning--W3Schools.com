@@ -1,25 +1,35 @@
 <!DOCTYPE html>
-<html>
+<html lang="en-in">
     <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>
             JavaScript Dates 
         </title>
         <style>
+            html {
+                font-size:calc(10px + 0.390625vw);
+            }
+
+            body {
+                font-family:Verdana, sans-serif;
+                font-size:1rem;
+                line-height:1.5;
+            }
+
             .edit {
                 background-color:#f1f1f1;
                 color:red;
             }
+
             .edit1 {
                 background-color:rgba(255,255,0,0.3);
-                padding:20px;
+                padding:2rem;
             }
-            body {
-                font-family:verdana, sans-serif;
-                font-size:20px;
-            }
+
             #demo1, #demo4 {
                 font-weight:bold;
-                font-size:25px;
+                font-size:1.5rem;
             }
             
         </style>
@@ -29,7 +39,7 @@
             JavaScript Date Objects 
         </h1>
 
-        <p>
+        <div>
             JavaScript <strong>Date Objects</strong> let us work with dates:- 
             <br>
             <p id="demo1"></p>
@@ -52,13 +62,13 @@
             <br>
 
             <p class="edit1">
-                <span style="font-size:30px;">Note</span>
+                <span style="font-size:2rem;">Note</span>
                 <br>
                 Date objects are static. The "clock" is not "running". 
                 <br>
                 The computer clock is ticking, date objects are not. 
             </p>
-        </p>
+        </div>
 
         <hr>
 
@@ -66,11 +76,11 @@
             JavaScript Date Output 
         </h2>
 
-        <p>
+        <div>
             By default, JavaScript will use the browser's time zone and display a date as a full text string. 
             <br>
             <p id="demo4"></p>
-        </p>
+        </div>
 
         <hr>
         
@@ -78,7 +88,7 @@
             Creating Date Objects 
         </h2>
 
-        <p>
+        <div>
             Date objects are created with the <span class="edit">new Date()</span> constructor. 
             <br>
             There are <strong>9 ways</strong> to create a new date object. 
@@ -102,7 +112,7 @@
                 <br>
                 new Date(milliseconds)
             </p>
-        </p>
+        </div>
 
         <hr>
 
@@ -110,13 +120,13 @@
             JavaScript new Date() 
         </h2>
 
-        <p>
+        <div>
             <span class="edit">new Date()</span> creates a date object with the <strong>current date and time</strong>. 
             <br>
             Example:- 
             <br>
             <p id="demo5"></p>
-        </p>
+        </div>
 
         <hr>
         
@@ -124,7 +134,7 @@
             new Date(date string) 
         </h2>
 
-        <p>
+        <div>
             <span class="edit">new Date(date string)</span> creates a date object from a <strong>date string</strong>. 
             <br>
             Example:- 
@@ -135,7 +145,7 @@
             Example:- 
             <br>
             <p id="demo7"></p>
-        </p>
+        </div>
 
         <hr>
 
@@ -143,7 +153,7 @@
             new Date(year, month, .....) 
         </h2>
 
-        <p>
+        <div>
             <span class="edit">new Date(year, month, .....)</span> creates a date object with the <strong>specified date and time</strong>. 
             <br>
             7 numbers specify year, month, day ,hour, minutes, seconds, milliseconds (in that order). 
@@ -155,7 +165,7 @@
             <br>
             <br>
             <p class="edit1">
-                <span style="font-size:30px;">Note</span>
+                <span style="font-size:2rem;">Note</span>
                 <br>
                 JavaScript counts months from <strong>0</strong> to <strong>11</strong>. 
                 <br>
@@ -195,7 +205,7 @@
             Example:- 
             <br>
             <p id="demo10"></p>
-        </p>
+        </div>
 
         <hr>
 
@@ -203,7 +213,7 @@
             Using 6, 4, 3 or 2 Numbers 
         </h2>
 
-        <p>
+        <div>
             6 numbers specify year, month, day, hour, minute, second. 
             <br>
             Example:- 
@@ -249,7 +259,7 @@
             Example:- 
             <br>
             <p id="demo16"></p>
-        </p>
+        </div>
 
         <hr>
 
@@ -257,7 +267,7 @@
             Previous Century 
         </h2>
 
-        <p>
+        <div>
             One and two digit years will be interpreted as 19xx. 
             <br>
             Example:- 
@@ -272,7 +282,7 @@
             <br>
             <br>
             <p class="edit1">
-                <span style="font-size:30px;">JavaScript Stores Dates as Milliseconds</span>
+                <span style="font-size:2rem;">JavaScript Stores Dates as Milliseconds</span>
                 <br>
                 JavaScript stores dates as number of milliseconds since January 01, 1970. 
                 <br>
@@ -284,7 +294,7 @@
                 <br>
                 Now the time is:- <strong>1674614204596</strong> milliseconds past January 01, 1970. 
             </p>
-        </p>
+        </div>
 
         <hr>
 
@@ -292,7 +302,7 @@
             new Date(milliseconds)  
         </h2>
 
-        <p>
+        <div>
             <span class="edit">new Date(milliseconds)</span> creates a new date object as <strong>milliseconds</strong> plus zero time. 
             <br>
             Example:- 
@@ -318,7 +328,7 @@
             January 01, 1970 <strong>plus</strong> 0 milliseconds is:- 
             <br>
             <p id="demo22"></p>
-        </p>
+        </div>
 
         <hr>
         <br>
@@ -329,12 +339,12 @@
             Date Methods 
         </h2>
 
-        <p>
+        <div>
             When a date object is created, a number of <strong>methods</strong> allow you to operate on it.
             <br>
             Date methods allow you to get and set the year, month, day, hour, minute, second, and millisecond of date objects, using either local time or UTC (universal, or GMT) time. 
             <br>
-        </p>
+        </div>
 
         <hr>
 
@@ -342,7 +352,7 @@
             Displaying Dates 
         </h2>
 
-        <p>
+        <div>
             JavaScript will (by default) output dates in full text string format. 
             <br>
             Example:- 
@@ -380,11 +390,7 @@
             Example:- 
             <br>
             <p id="demo27"></p>
-        </p>
-
-
-
-
+        </div>
 
         <script>
             document.getElementById("demo1").innerHTML = Date();
@@ -461,5 +467,4 @@
             document.getElementById("demo27").innerHTML = d1.toISOString();
         </script>
     </body>
-
 </html>
