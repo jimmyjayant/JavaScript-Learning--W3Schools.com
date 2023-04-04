@@ -1,35 +1,53 @@
 <!DOCTYPE html>
-<html>
+<html lang="en-in">
     <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>
             JavaScript Number Methods 
         </title>
         <style>
+            html {
+                font-size:calc(10px + 0.390625vw);
+            }
+
+            body {
+                font-family:Verdana, sans-serif;
+                font-size:1rem;
+                line-height:1.5;
+            }
+
             .edit {
                 background-color: #f1f1f1;
                 color:red;
             }
+
             .edit1 {
                 background-color:rgba(255,255,0,0.3);
-                padding:10px;
+                padding:1rem;
             }
+
             .table1 {
                 width:50%;
-                border:1px solid #ddd;
+                border:0.1rem solid #ddd;
                 border-collapse:collapse;
             }
+
             .table1 tr {
-                height:40px;
+                height:3rem;
             }
+
             .table1 tr:nth-child(even) {
                 background-color:#f1f1f1;
             }
+
             .table1 td {
-                padding:10px;
+                padding:1rem;
             }
+
             .table1 th {
                 text-align:left;
-                padding:10px;
+                padding:1rem;
             }
         </style>
     </head>
@@ -44,7 +62,7 @@
             JavaScript Number Methods 
         </h2>
 
-        <p>
+        <div>
            These <strong>number methods</strong> can be used on all JavaScript numbers: 
            <br>
            <br>
@@ -74,7 +92,7 @@
                 <td>Returns a number as a number</td>
             </tr>
            </table>
-        </p>
+        </div>
 
         <hr>
 
@@ -82,7 +100,7 @@
             The toString() Method 
         </h2>
 
-        <p>
+        <div>
             The <span class="edit">toString()</span> method returns a number as a string. 
             <br>
             All number methods can be used on any type of numbers (literals, variables, or expressions). 
@@ -99,7 +117,7 @@
             Example:- 
             <br>
             <p id="demo1"></p>
-        </p>
+        </div>
 
         <hr>
 
@@ -107,7 +125,7 @@
             The toExponential() Method 
         </h2>
 
-        <p>
+        <div>
             <span class="edit">toExponential()</span> returns a string, with a number rounded and written using exponential notation. 
             <br>
             A parameter defines the number of characters behind the decimal point. 
@@ -119,7 +137,7 @@
             <br>
             <br>
             The parameter is optional. If you don't specify it, JavaScript will not round the number. 
-        </p>
+        </div>
 
         <hr>
         <br>
@@ -130,7 +148,7 @@
             The toFixed() Method 
         </h2>
 
-        <p>
+        <div>
             <span class="edit">toFixed()</span> returns a string, with a number written using a specified number of decimals. 
             <br>
             Example:- 
@@ -143,7 +161,7 @@
             <p class="edit1">
                 <span class="edit">toFixed(2)</span> is perfect for working with money. 
             </p>
-        </p>
+        </div>
 
         <hr>
 
@@ -151,13 +169,13 @@
             The toPrecision() Method 
         </h2>
 
-        <p>
+        <div>
             <span class="edit">toPrecision()</span> returns a string, with a number written with a specified length. 
             <br>
             Example:- 
             <br>
             <p id="demo4"></p>
-        </p>
+        </div>
 
         <hr>
 
@@ -165,7 +183,7 @@
             The valueOf() Method 
         </h2>
 
-        <p>
+        <div>
             <span class="edit">valueOf()</span> returns a number as a number. 
             <br>
             Example:- 
@@ -184,7 +202,7 @@
             <p class="edit1">
                 All JavaScript data types have a <span class="edit">valueOf()</span> and a <span class="edit">toString()</span> method. 
             </p> 
-        </p>
+        </div>
 
         <hr>
 
@@ -192,7 +210,7 @@
             Converting Variables to Numbers 
         </h2>
 
-        <p>
+        <div>
             There are 3 JavaScript methods that can be used to convert a variable to a number. 
             <br>
             <table class="table1">
@@ -221,7 +239,7 @@
                 The methods above are not <strong>number</strong> methods. They are <strong>global</strong> JavaScript methods. 
             </p>
 
-        </p>
+        </div>
 
         <hr>
 
@@ -229,7 +247,7 @@
             The Number() Method 
         </h2>
 
-        <p>
+        <div>
             The <span class="edit">Number()</span> method can be used to convert JavaScript variables to numbers. 
             <br>
             Example:- 
@@ -241,7 +259,7 @@
             <p class="edit1">
                 If the number cannot be converted, <span class="edit">NaN</span> (Not a Number) is returned. 
             </p>
-        </p>
+        </div>
 
         <hr>
 
@@ -249,7 +267,7 @@
             The Number() Method Used on Dates 
         </h2>
 
-        <p>
+        <div>
             <span class="edit">Number()</span> can also convert a date to a number. 
             <br>
             Example:- 
@@ -271,7 +289,7 @@
             Example:- 
             <br>
             <p id="demo9"></p>
-        </p>
+        </div>
 
         <hr>
 
@@ -279,7 +297,7 @@
             The parseInt() Method 
         </h2>
 
-        <p>
+        <div>
             <span class="edit">parseInt()</span> parses a string and returns a whole number. Spaces are allowed. Only the first number is returned. 
             <br>
             Example:- 
@@ -288,7 +306,7 @@
 
             <br>
             If the number cannot be converted, <span class="edit">NaN</span> (Not a Number) is returned. 
-        </p>
+        </div>
 
         <hr>
 
@@ -296,7 +314,7 @@
             The parseFloat() Method 
         </h2>
 
-        <p>
+        <div>
             <span class="edit">parseFloat()</span> parses a string and returns a number. Spaces are allowed. Only the first number is returned. 
             <br>
             Example:- 
@@ -304,7 +322,7 @@
             <p id="demo11"></p>
             <br>
             If a number cannot be converted, <span class="edit">NaN</span> (Not a Number) is returned. 
-        </p>
+        </div>
 
         <hr>
 
@@ -312,7 +330,7 @@
             Number Object Methods 
         </h2>
 
-        <p>
+        <div>
             These <strong>object methods</strong> belong to the <strong>Number</strong> object. 
             <br>
             <table class="table1">
@@ -342,7 +360,7 @@
             <br>
 
             <p class="edit1">
-                <span style=font-size:30px;>Number Methods Cannot be Used on Variables</span>
+                <span style=font-size:2rem;>Number Methods Cannot be Used on Variables</span>
                 <br>
                 The number methods above belong to the JavaScript <strong>Number Object</strong>. 
                 <br>
@@ -352,7 +370,7 @@
                 <br>
                 <span class="edit">TypeError X.isInteger is not a function</span>.             
             </p>
-        </p>
+        </div>
 
         <hr>
 
@@ -360,13 +378,13 @@
             The Number.isInteger() Method 
         </h2>
 
-        <p>
+        <div>
             The <span class="edit">Number.isInteger()</span> method returns <span class="edit">true</span> if the argument is an integer. 
             <br>
             Example:- 
             <br>
             <p id="demo12"></p>
-        </p>
+        </div>
 
         <hr>
 
@@ -374,7 +392,7 @@
             The Number.isSafeInteger() Method 
         </h2>
 
-        <p>
+        <div>
             A safe integer is an integer that can be exactly represented as a double precision number. 
             <br>
             The <span class="edit">Number.isSafeInteger()</span> method returns <span class="edit">true</span> if the argument is a safe integer. 
@@ -390,7 +408,7 @@
                 <br>
                 This is safe: 9007199254740991. This is not safe: 9007199254740992.  
             </p>
-        </p>
+        </div>
 
         <hr>
 
@@ -398,7 +416,7 @@
             The Number.parseFloat() Method 
         </h2>
 
-        <p>
+        <div>
             <span class="edit">Number.parseFloat()</span> parses a string and returns a number. 
             <br>
             Spaces are allowed. Only the first number is returned. 
@@ -411,7 +429,7 @@
             <br>
             <br>
             <p class="edit1">
-                <span style="font-size:30px;">Note</span>
+                <span style="font-size:32rem;">Note</span>
                 <br>
                 The <strong>Number</strong> methods <span class="edit">Number.parseInt()</span> and <span class="edit">Number.parseFloat()</span>
                 <br>
@@ -421,7 +439,7 @@
                 <br>
                 The purpose is modularization of globals (to make it easier to use the same JavaScript code outside the browser). 
             </p>
-        </p>
+        </div>
 
         <hr>
 
@@ -429,7 +447,7 @@
             The Number.parseInt() Method 
         </h2>
 
-        <p>
+        <div>
             <span class="edit">Number.parseInt()</span> parses a string and returns a whole number. 
             <br>
             Spaces are allowed. Only the first number is returned. 
@@ -439,7 +457,7 @@
             <p id="demo15"></p>
             <br>
             If the number cannot be converted, <span class="edit">NaN</span> (Not a Number) is returned. 
-        </p>
+        </div>
 
 
 

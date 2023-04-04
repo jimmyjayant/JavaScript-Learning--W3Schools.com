@@ -1,17 +1,30 @@
 <!DOCTYPE html>
-<html>
+<html lang="en-in">
     <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>
             JavaScript Data Types 
         </title>
         <style>
+            html {
+                font-size:calc(10px + 0.390625vw);
+            }
+
+            body {
+                font-family:Verdana, sans-serif;
+                font-size:1rem;
+                line-height:1.5;
+            }
+
             .edit {
                 background-color:#f1f1f1;
                 color:red;
             }
+
             .edit1 {
                 background-color:rgba(255,255,0,0.3);
-                padding:20px;
+                padding:2rem;
             }
         </style>
     </head>
@@ -20,8 +33,8 @@
             JavaScript Data Types 
         </h1>
         
-        <div style="background-color:lightgreen;padding:20px;">
-          <span style="font-size:30px;">JavaScript has 8 Datatypes</span>
+        <div style="background-color:lightgreen;padding:2rem;">
+          <span style="font-size:3rem;">JavaScript has 8 Datatypes</span>
           <br>
           <ol>
             <li>String</li>
@@ -37,7 +50,7 @@
           <br>
           <br>
 
-          <span style="font-size:30px;">The Object Datatype</span>
+          <span style="font-size:3rem;">The Object Datatype</span>
           <br>
           <ol>
             <li>An object</li>
@@ -48,7 +61,7 @@
 
         <br>
         <br>
-
+        <div>
         Example:- 
         <br>
         <p class="edit1">
@@ -102,19 +115,22 @@
         <br>
 
         <p class="edit1">
-            <span style="font-size:30px;">Note</span>
+            <span style="font-size:3rem;">Note</span>
             <br>
             A JavaScript variable can hold any type of data. 
         </p>
 
         <br>
         <br>
+        </div>
+        
+        <hr>
 
         <h2>
             The Concept of Data Types 
         </h2>
 
-        <p>
+        <div>
             In programming, data types is an important concept. 
             <br>
             To be able to operate on variables, it is important to know something about the type. 
@@ -186,7 +202,7 @@
             In the first example, JavaScript treats 16 and 4 as numbers, until it reaches "Volvo". 
             <br>
             In the second example, since the first operand is a string, all operands are treated as strings. 
-        </p>
+        </div>
 
         <hr>
         <br>
@@ -197,7 +213,7 @@
             JavaScript Types are Dynamic 
         </h2>
 
-        <p>
+        <div>
             JavaScript has dynamic types. This means that the same variable can be used to hold different data types. 
             <br>
             Example:- 
@@ -215,7 +231,7 @@
             <br>
 
             <p id="demo5"></p>
-        </p>
+        </div>
 
         <hr>
 
@@ -223,7 +239,7 @@
             JavaScript Strings 
         </h2>
 
-        <p>
+        <div>
             A string (or a text string) is a series of characters like "John Doe". 
             <br>
             Strings are written with quotes. You can use single or double quotes. 
@@ -270,7 +286,7 @@
             <br>
             <br>
             <p id="demo7"></p>
-        </p>
+        </div>
 
         <hr>
         
@@ -278,7 +294,7 @@
             JavaScript Numbers 
         </h2>
 
-        <p>
+        <div>
             All JavaScript numbers are stored as decimal numbers (floating point). 
             <br>
             Numbers can be written with, or without decimals. 
@@ -294,7 +310,7 @@
             </p>
             <br>
             <p id="demo8"></p>
-        </p>
+        </div>
 
         <hr>
 
@@ -302,7 +318,7 @@
             Exponential Notation 
         </h2>
 
-        <p>
+        <div>
             Extra large or extra small numbers can be written with scientific (exponential) notation. 
             <br>
             Example:- 
@@ -315,12 +331,12 @@
             </p>
             <br>
             <p id="demo9"></p>
-        </p>
+        
 
         <hr>
 
         <p class="edit1">
-            <span style="font-size:30px;">Note</span>
+            <span style="font-size:2rem;">Note</span>
             <br>
             Most programming languages have many number types: 
             <br>
@@ -340,6 +356,7 @@
                 double(64-bit floating point). 
             </strong>
         </p>
+        </div>
 
         <hr>
 
@@ -347,7 +364,7 @@
             JavaScript BigInt 
         </h2>
 
-        <p>
+        <div>
             All JavaScript numbers are stored in a 64-bit floating point format. 
             <br>
             JavaScript BigInt is a new datatype (2020) that can be used to store integer values that are too big to be represented by a normal JavaScript number. 
@@ -363,7 +380,7 @@
             Example:- 
             <br>
             <p id="demo10"></p>
-        </p>
+        </div>
 
         <hr>
 
@@ -371,7 +388,7 @@
             JavaScript Booleans 
         </h2>
 
-        <p>
+        <div>
             Booleans can only have two values:- <span class="edit">true</span> or <span class="edit">false</span>. 
             <br>
             <p class="edit1">
@@ -393,7 +410,7 @@
             <br>
             <br>
             Booleans are often used in conditional testing. 
-        </p>
+        </div>
 
         <hr>
 
@@ -401,7 +418,7 @@
             JavaScript Arrays 
         </h2>
 
-        <p>
+        <div>
             JavaScript arrays are written with square brackets. 
             <br>
             Array items are separated by commas. 
@@ -416,7 +433,7 @@
             <br>
             <br>
             Array indexes are zero-based, which means the first item is [0], second is [1], and so on. 
-        </p>
+        </div>
 
         <hr>
 
@@ -424,7 +441,7 @@
             JavaScript Objects 
         </h2>
 
-        <p>
+        <div>
             JavaScript objects are written with curly braces <span class="edit">{}</span>. 
             <br>
             Object properties are written as name: value pairs, separated by commas. 
@@ -439,7 +456,7 @@
             <br>
             <br>
             The object (person) in the example above has 4 properties: firstName, lastName, age, and eyeColor. 
-        </p>
+        </div>
 
         <hr>
 
@@ -447,7 +464,7 @@
             The typeof Operator 
         </h2>
 
-        <p>
+        <div>
             You can use the JavaScript <span class="edit">typeof</span> operator to find the type of a JavaScript variable. 
             <br>
             The <span class="edit">typeof</span> operator returns the type of a variable or an expression. 
@@ -469,7 +486,7 @@
             Example:- 
             <br>
             <p id="demo15"></p>
-        </p>
+        </div>
 
         <hr>
 
@@ -477,7 +494,7 @@
             Undefined 
         </h2>
 
-        <p>
+        <div>
             In JavaScript, a variable without a value, has the value <span class="edit">undefined</span>. The type is also <span class="edit">undefined</span>. 
             <br>
             <p class="edit1">
@@ -499,7 +516,7 @@
             Example:- 
             <br>
             <p id="demo17"></p>
-        </p>
+        </div>
 
         <hr>
 
@@ -507,7 +524,7 @@
             Empty Values 
         </h2>
 
-        <p>
+        <div>
             An empty value has nothing to do with <span class="edit">undefined</span>. 
             <br>
             An empty string has both a legal value and a type. 
@@ -519,28 +536,7 @@
             Example:- 
             <br>
             <p id="demo18"></p>
-        </p>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+        </div>
 
         <script>
         let x = 16 + "Volvo";

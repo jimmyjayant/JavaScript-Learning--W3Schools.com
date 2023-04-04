@@ -1,42 +1,60 @@
 <!DOCTYPE html>
-<html>
+<html lang="en-in">
     <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>
             JavaScript String Methods 
         </title>
         <style>
+           html {
+                font-size:calc(10px + 0.390625vw);
+            }
+
+            body {
+                font-family:Verdana, sans-serif;
+                font-size:1rem;
+                line-height:1.5;
+            }
+
             .edit {
                 background-color:#f1f1f1;
                 color:red;
             }
+
             .edit1 {
                 background-color:rgba(255,255,0,0.3);
-                padding:10px;
+                padding:1rem;
             }
+
             .table1 {
                 width: 100%;
                 background-color:lightgreen;
                 border:none;
             }
+
             .table1 td {
-                padding:20px;
-                font-size:20px;
+                padding:2rem;
+                font-size:2rem;
             }
 
             .table2 {
                 width:100%;
-                border:1px solid #ddd;
+                border:0.1rem solid #ddd;
                 border-collapse:collapse;
             }
+
             .table2 tr {
-                height:40px;
+                height:3rem;
             }
+
             .table2 tr:nth-child(even) {
                 background-color:#ddd;
             }
+
             .table2 td {
                 text-align:center;
-                padding:10px;
+                padding:1rem;
             }
         </style>
     </head>
@@ -44,7 +62,8 @@
         <h1>
             JavaScript String Methods 
         </h1>
-
+        
+        <div>
         <table class="table1">
         <tr>
             <td>String length</td>
@@ -82,6 +101,7 @@
             <td>String concat()</td>
         </tr>
         </table>
+        </div>
 
         <hr>
 
@@ -89,13 +109,13 @@
             JavaScript String Length 
         </h2>
 
-        <p>
+        <div>
             The <span class="edit">length</span> property returns the length of a string. 
             <br>
             Example:- 
             <br>
             <p id="demo1"></p>
-        </p>
+        </div>
 
         <hr>
 
@@ -103,7 +123,7 @@
             Extracting String Parts 
         </h2>
 
-        <p>
+        <div>
             There are 3 methods for extracting a part of a string: 
             <br>
             <ul>
@@ -111,7 +131,7 @@
                 <li><span class="edit">substring(start, end)</span></li>
                 <li><span class="edit">substr(start, length)</span></li>
             </ul>
-        </p>
+        </div>
 
         <hr>
 
@@ -119,7 +139,7 @@
             JavaScript String slice() 
         </h2>
 
-        <p>
+        <div>
             <span class="edit">slice()</span> extracts a part of a string and returns the extracted part in a new string. 
             <br>
             The method takes 2 parameters: start position, and end position (end not included). 
@@ -175,7 +195,7 @@
             <p class="edit1">
                 If the second parameter of slice method, i.e., end, is less than or equal to start parameter. Then the resultant string will be an <strong>EMPTY STRING</strong>. 
             </p>
-        </p>
+        </div>
 
         <hr>
         <br>
@@ -185,7 +205,7 @@
         JavaScript String substring() 
         </h2>
 
-        <p>
+        <div>
             <span class="edit">substring()</span> is similar to <span class="edit">slice()</span>. 
             <br>
             The difference is that start and end values less than 0 are treated as 0 in <span class="edit">substring()</span>. 
@@ -197,7 +217,7 @@
             <br>
             <br>
             If you omit the second parameter, <span class="edit">substring()</span> will slice out the rest of the string. 
-        </p>
+        </div>
 
         <hr>
 
@@ -205,7 +225,7 @@
             JavaScript String substr() 
         </h2>
 
-        <p>
+        <div>
             <span class="edit"> substr() </span> is similar to <span class="edit"> slice() </span>. 
             <br>
             The difference is that the second parameter specifies the <strong>length</strong> of the extracted part. 
@@ -229,7 +249,7 @@
             <br>
             <p id="demo9"></p>
 
-        </p>
+        </div>
 
         <hr>
 
@@ -237,7 +257,7 @@
             Replacing String Content 
         </h2>
 
-        <p>
+        <div>
             The <span class="edit"> replace() </span> method replaces a specified value with another value in a string. 
             <br>
             Example:- 
@@ -313,7 +333,7 @@
             <button onclick="myFunction5()">Try it</button>
             <br>
             <p id="demo14">Please visit Microsoft and Microsoft!</p>
-        </p>
+        </div>
 
         <hr>
 
@@ -321,7 +341,7 @@
             JavaScript String ReplaceAll() 
         </h2>
 
-        <p>
+        <div>
             In 2021, JavaScript introduced the string method <span class="edit">replaceAll()</span>. 
             <br>
             Example:- 
@@ -349,7 +369,7 @@
                 <br>
                 <span class="edit">replaceAll()</span> does not work in Internet Explorer. 
             </p>
-        </p>
+        </div>
 
         <hr>
 
@@ -357,11 +377,11 @@
             Converting to Upper and Lower Case 
         </h2>
 
-        <p>
+        <div>
             A string is converted to upper case with <span class="edit">toUpperCase()</span>. 
             <br>
             A string is converted to lower case with <span class="edit">toLowerCase()</span>. 
-        </p>
+        </div>
 
         <hr>
 
@@ -369,13 +389,13 @@
             JavaScript String toUpperCase() 
         </h2>
 
-        <p>
+        <div>
             Example:- 
             <br>
             <button onclick="myFunction6()">Try it</button>
             <br>
             <p id="demo17">Hello World!</p>
-        </p>
+        </div>
 
         <br>
 
@@ -383,13 +403,13 @@
             JavaScript String toLowerCase() 
         </h2>
 
-        <p>
+        <div>
             Example:- 
             <br>
             <button onclick="myFunction7()">Try it</button>
             <br>
             <p id="demo18">Hello World!</p>
-        </p>
+        </div>
 
         <hr>
 
@@ -397,7 +417,7 @@
             JavaScript String concat() 
         </h2>
 
-        <p>
+        <div>
             <span class="edit"> concat() </span> joins two or more strings. 
             <br>
             Example:- 
@@ -418,7 +438,7 @@
             <br>
 
             <p class="edit1">
-                <span style="font-size:30px;">Note</span>
+                <span style="font-size:2rem;">Note</span>
                 <br>
                 All string methods return a new string. They don't modify the original string. 
                 <br>
@@ -426,8 +446,7 @@
                 <br>
                 Strings are immutable: Strings cannot be changed, only replaced. 
             </p>
-
-        </p>
+        </div>
 
         <hr>
 
@@ -435,7 +454,7 @@
             JavaScript String trim() 
         </h2>
 
-        <p>
+        <div>
             The <span class="edit">trim()</span> method removes whitespace from both sides of a string. 
             <br>
             Example:- 
@@ -445,7 +464,7 @@
             After trimming, text = "Hello World!"
             <br>
             <p id="demo20"></p>
-        </p>
+        </div>
 
         <hr>
 
@@ -453,7 +472,7 @@
             JavaScript String trimStart() 
         </h2>
 
-        <p>
+        <div>
             ECMAScript 2019 added the String method <span class="edit"> trimStart() </span> to JavaScript. 
             <br>
             The <span class="edit">trimStart()</span> method works like <span class="edit">trim()</span>, but removes whitespace only from the start of a string. 
@@ -490,7 +509,7 @@
                     <td>May 2018</td>
                 </tr>
             </table>
-        </p>
+        </div>
 
         <hr>
 
@@ -498,7 +517,7 @@
             JavaScript String trimEnd() 
         </h2>
 
-        <p>
+        <div>
             ECMAScript 2019 added the String method <span class="edit">trimEnd()</span> to JavaScript. 
             <br>
             The <span class="edit">trimEnd()</span> method works like <span class="edit">trim()</span>, but removes whitespace only from the end of a string. 
@@ -534,7 +553,7 @@
                     <td>May 2018</td>
                 </tr>
             </table>
-        </p>
+        </div>
 
         <hr>
 
@@ -542,9 +561,9 @@
             JavaScript String Padding 
         </h2>
 
-        <p>
+        <div>
             ECMAScript 2017 added two String methods: <span class="edit">padStart()</span> and <span class="edit">padEnd()</span> to support padding at the beginning and at the end of a string. 
-        </p>
+        </div>
 
         <hr>
 
@@ -552,7 +571,7 @@
             JavaScript String padStart() 
         </h2>
 
-        <p>
+        <div>
            The <span class="edit">padStart()</span> method pads a string with another string. 
            <br>
            Example:- 
@@ -569,7 +588,7 @@
            <br>
 
            <p class="edit1">
-            <span style="font-size:30px;">Note</span>
+            <span style="font-size:2rem;">Note</span>
             <br>
             The <span class="edit">padStart()</span> method is a string method. 
             <br>
@@ -621,7 +640,7 @@
            <br>
            <br>
            <span class="edit">padStart()</span> is not supported in Internet Explorer. 
-        </p>
+        </div>
 
         <hr>
 
@@ -629,7 +648,7 @@
             JavaScript String padEnd() 
         </h2>
 
-        <p>
+        <div>
            The <span class="edit">padEnd()</span> method pads a string with another string. 
            <br>
            Example:- 
@@ -646,7 +665,7 @@
            <br>
 
            <p class="edit1">
-            <span style="font-size:30px;">Note</span>
+            <span style="font-size:2rem;">Note</span>
             <br>
             The <span class="edit">padEnd()</span> method is a string method. 
             <br>
@@ -699,7 +718,7 @@
            <br>
 
            <span class="edit">padEnd()</span> is not supported in Internet Explorer. 
-        </p>
+        </div>
 
         <hr>
 
@@ -707,7 +726,7 @@
             Extracting String Characters 
         </h2>
 
-        <p>
+        <div>
             There are 3 methods for extracting string characters:- 
             <br>
             <ul>
@@ -715,7 +734,7 @@
                 <li><span class="edit">charCodeAt(position)</span></li>
                 <li>Property access [ ]</li>
             </ul>
-        </p>
+        </div>
 
         <hr>
 
@@ -723,13 +742,13 @@
             JavaScript String charAt() 
         </h2>
 
-        <p>
+        <div>
             The <span class="edit">charAt()</span> method returns the character at a specified index (position) in a string. 
             <br>
             Example:- 
             <br>
             <p id="demo29"></p>
-        </p>
+        </div>
 
         <hr>
 
@@ -737,7 +756,7 @@
             JavaScript String charCodeAt() 
         </h2>
 
-        <p>
+        <div>
             The <span class="edit">charCodeAt()</span> method returns the unicode of the character at a specified index in a string. 
             <br>
             The method returns an UTF-16 code (an integer between 0 and 65535). 
@@ -745,7 +764,7 @@
             Example:- 
             <br>
             <p id="demo30"></p>
-        </p>
+        </div>
 
         <hr>
 
@@ -753,7 +772,7 @@
             Property Access 
         </h2>
 
-        <p>
+        <div>
             ECMAScript 5 (2009) allows property access [ ] on strings. 
             <br>
             Example:- 
@@ -764,7 +783,7 @@
             <br>
 
             <p class="edit1">
-                <span style="font-size:30px;">Note</span>
+                <span style="font-size:2rem;">Note</span>
                 <br>
                 Property access might be a little <strong>unpredictable: </strong>
                 <br>
@@ -784,7 +803,7 @@
             Changing the first character of string "HELLO WORLD" to "A" and getting result:- 
             <br>
             <p id="demo32"></p>
-        </p>
+        </div>
 
         <hr>
 
@@ -792,11 +811,11 @@
             Converting a String to an Array 
         </h2>
 
-        <p>
+        <div>
             <p class="edit1">
                 If you want to work with string as an array, you can convert it to an array. 
             </p>
-        </p>
+        </div>
 
         <br>
 
@@ -804,7 +823,7 @@
             JavaScript String split() 
         </h2>
 
-        <p>
+        <div>
             A string can be converted to an array with the <span class="edit">split()</span> method. 
             <br>
             <p class="edit1">
@@ -829,11 +848,7 @@
             Example:- 
             <br>
             <p id="demo34"></p>
-        </p>
-
-
-
-
+        </div>
 
         <script>
             let text1 = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";

@@ -1,17 +1,30 @@
 <!DOCTYPE html>
-<html>
+<html lang="en-in">
     <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>
             JavaScript Arrays 
         </title>
         <style>
+            html {
+                font-size:calc(10px + 0.390625vw);
+            }
+
+            body {
+                font-family:Verdana, sans-serif;
+                font-size:1rem;
+                line-height:1.5;
+            }
+
             .edit {
                 background-color:#f1f1f1;
                 color:red;
             }
+
             .edit1 {
                 background-color:rgba(255,255,0,0.3);
-                padding:20px;
+                padding:2rem;
             }
         </style>
     </head>
@@ -20,7 +33,7 @@
             JavaScript Arrays 
         </h1>
 
-        <div style="background-color:lightgreen;padding:20px;">
+        <div style="background-color:lightgreen;padding:2rem;">
         An array is a special variable, which can hold more than one value. 
         <br>
         Example:- 
@@ -34,7 +47,7 @@
             Why Use Arrays? 
         </h2>
 
-        <p>
+        <div>
             If you have a list of items (a list of car names, for example), storing the cars in single variables could look like this:- 
             <br>
             <p class="edit1">
@@ -50,7 +63,7 @@
             The solution is an array! 
             <br>
             An array can hold many values under a single name, and you can access the values by referring to an index number. 
-        </p>
+        </div>
 
         <hr>
 
@@ -58,7 +71,7 @@
             Create an Array 
         </h2>
 
-        <p>
+        <div>
            Using an array literal is the easiest way to create a JavaScript Array. 
            <br>
            Syntax:- 
@@ -93,7 +106,7 @@
            Example:- 
            <br>
            <p id="demo4"></p>
-        </p>
+        </div>
 
         <hr>
 
@@ -101,7 +114,7 @@
             Using the JavaScript Keyword new 
         </h2>
 
-        <p>
+        <div>
             The following example also creates an Array, and assigns values to it. 
             <br>
             Example:- 
@@ -122,7 +135,7 @@
                 <br>
                 For simplicity, readability and execution speed, use the array literal method. 
             </p>
-        </p>
+        </div>
 
         <hr>
         <br>
@@ -133,7 +146,7 @@
             Accessing Array Elements 
         </h2>
 
-        <p>
+        <div>
             You access an array element by referring to the <strong>index number</strong>. 
             <br>
             Example:- 
@@ -146,7 +159,7 @@
                 <br>
                 [0] is the first element. [1] is the second element. 
             </p>
-        </p>
+        </div>
 
         <hr>
 
@@ -154,7 +167,7 @@
             Changing an Array Element 
         </h2>
 
-        <p>
+        <div>
             This statement changes the value of the first element in <span class="edit>">cars7</span>. 
             <br>
             <p class="edit1">
@@ -164,7 +177,7 @@
             Example:- 
             <br>
             <p id="demo7"></p>
-        </p>
+        </div>
 
         <hr>
 
@@ -172,13 +185,13 @@
             Access the Full Array 
         </h2>
 
-        <p>
+        <div>
             With JavaScript, the full array can be accessed by referring to the array name. 
             <br>
             Example:- 
             <br>
             <p id="demo8"></p>
-        </p>
+        </div>
 
         <hr>
 
@@ -186,7 +199,7 @@
             Arrays are Objects 
         </h2>
 
-        <p>
+        <div>
             Arrays are a special type of objects. The <span class="edit">typeof</span> operator in JavaScript returns "object" for arrays. 
             <br>
             But, JavaScript arrays are best described as arrays. 
@@ -204,7 +217,7 @@
             Object Example:- 
             <br>
             <p id="demo10"></p>
-        </p>
+        </div>
 
         <hr>
 
@@ -212,7 +225,7 @@
             Array Elements Can Be Objects 
         </h2>
 
-        <p>
+        <div>
             JavaScript variables can be objects. Arrays are special kinds of objects. 
             <br>
             Because of this, you can have variables of different types in the same Array. 
@@ -228,7 +241,7 @@
              <br>
              myArray[2] = myCars;
             </p>
-        </p>
+        </div>
 
         <hr>
 
@@ -236,7 +249,7 @@
             Array Properties and Methods 
         </h2>
 
-        <p>
+        <div>
             The real strength of JavaScript arrays are the built-in array properties and methods. 
             <br>
             Example:- 
@@ -246,7 +259,7 @@
                 <br>
                 cars.sort()   //Sorts the array 
             </p>
-        </p>
+        </div>
 
         <hr>
 
@@ -254,7 +267,7 @@
             The length Property 
         </h2>
 
-        <p>
+        <div>
             The <span class="edit">length</span> property of an array returns the length of an array (the number of array elements). 
             <br>
             Example:- 
@@ -266,7 +279,7 @@
             <p class="edit1">
                 The <span class="edit">length</span> property is always one more than the highest array index. 
             </p>
-        </p>
+        </div>
 
         <hr>
 
@@ -274,11 +287,11 @@
             Accessing the First Array Element 
         </h2>
 
-        <p>
+        <div>
             Example:- 
             <br>
             <p id="demo12"></p>
-        </p>
+        </div>
 
         <hr>
 
@@ -286,11 +299,11 @@
             Accessing the Last Array Element 
         </h2>
 
-        <p>
+        <div>
             Example:- 
             <br>
             <p id="demo13"></p>
-        </p>
+        </div>
 
         <hr>
 
@@ -298,7 +311,7 @@
             Looping Array Elements 
         </h2>
 
-        <p>
+        <div>
             One way to loop through an array, is using a <span class="edit">for</span> loop. 
             <br>
             Example:- 
@@ -313,7 +326,7 @@
             Example:- 
             <br>
             <p id="demo15"></p>
-        </p>
+        </div>
 
         <hr>
 
@@ -321,7 +334,7 @@
             Adding Array Elements 
         </h2>
 
-        <p>
+        <div>
             The easiest way to add a new element to an array is using the <span class="edit">push()</span> method. 
             <br>
             <p class="edit1">
@@ -354,8 +367,8 @@
 
             <br>
 
-            <p style="background-color:rgba(255,0,0,0.3);padding:20px;">
-            <span style="font-size:20px;font-weight:bold;">WARNING! </span>
+            <p style="background-color:rgba(255,0,0,0.3);padding:2rem;">
+            <span style="font-size:2rem;font-weight:bold;">WARNING! </span>
             <br>
             Adding elements with high indexes can create undefined "holes" in an array. 
             </p>
@@ -370,7 +383,7 @@
             </p>
             <br>
             <p id="demo18"></p>
-        </p>
+        </div>
 
         <hr>
 
@@ -378,7 +391,7 @@
             Associative Arrays 
         </h2>
 
-        <p>
+        <div>
             Many programming languages support arrays with named indexes. 
             <br>
             Arrays with named indexes are called associative arrays (or hashes). 
@@ -393,8 +406,8 @@
 
             <br>
 
-            <p style="background-color:rgba(255,0,0,0.3);padding:20px;">
-            <span style="font-size:20px;font-weight:bold;">WARNING !! </span>
+            <p style="background-color:rgba(255,0,0,0.3);padding:2rem;">
+            <span style="font-size:2rem;font-weight:bold;">WARNING !! </span>
              <br>
              If you use named indexes, JavaScript will redefine the array to an object. 
              <br>
@@ -420,7 +433,7 @@
             </p>
             <br>
             <p id="demo20"></p>
-        </p>
+        </div>
 
         <hr>
 
@@ -428,7 +441,7 @@
             The Difference Between Arrays and Objects 
         </h2>
 
-        <p>
+        <div>
             In JavaScript, <strong>arrays</strong> use <strong>numbered indexes</strong>. 
             <br>
             In JavaScript, <strong>objects</strong> use <strong>named indexes</strong>. 
@@ -436,7 +449,7 @@
             <p class="edit1">
                 Arrays are a special kind of objects, with numbered indexes. 
             </p>
-        </p>
+        </div>
 
         <hr>
 
@@ -444,13 +457,13 @@
             When to Use Arrays. When to use Objects. 
         </h2>
 
-        <p>
+        <div>
            <ul>
             <li>JavaScript does not support associative arrays.</li>
             <li>You should use <strong>objects</strong> when you want the element names to be <strong>strings (text)</strong>.</li>
             <li>You should use <strong>arrays</strong> when you want the element names to be <strong>numbers</strong>.</li>
            </ul> 
-        </p>
+        </div>
 
         <hr>
 
@@ -458,7 +471,7 @@
             JavaScript new Array() 
         </h2>
 
-        <p>
+        <div>
             JavaScript has a built-in array constructor <span class="edit">new Array()</span>. 
             <br>
             But you can safely use <span class="edit">[]</span> instead. 
@@ -530,7 +543,7 @@
             Example:- 
             <br>
             <p id="demo26"></p>
-        </p>
+        </div>
 
         <hr>
 
@@ -538,7 +551,7 @@
             How to Recognize an Array 
         </h2>
 
-        <p>
+        <div>
             A common question is:- How do I know if a variable is an array? 
             <br>
             The problem is that JavaScript operator <span class="edit">typeof</span> returns "<span class="edit">object</span>". 
@@ -582,14 +595,7 @@
             Example:- 
             <br>
             <p id="demo29"></p>
-        </p>
-
-
-
-
-
-
-
+        </div>
 
         <script>
             const cars1 = ["Saab", "Volvo", "BMW"];

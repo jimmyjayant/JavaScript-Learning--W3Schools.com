@@ -1,17 +1,30 @@
 <!DOCTYPE html>
-<html>
+<html lang="en-in">
     <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>
             JavaScript Functions 
         </title>
         <style>
+            html {
+                font-size:calc(10px + 0.390625vw);
+            }
+
+            body {
+                font-family:Verdana, sans-serif;
+                font-size:1rem;
+                line-height:1.5;
+            }
+
             .edit {
                 background-color:#f1f1f1;
                 color:red;
             }
+
             .edit1 {
                 background-color:rgba(255,255,0,0.3);
-                padding:20px;
+                padding:2rem;
             }
         </style>
     </head>
@@ -20,7 +33,7 @@
             JavaScript Functions 
         </h1>
 
-        <p>
+        <div>
             A JavaScript function is a block of code designed to perform a particular task. 
             <br>
             A JavaScript function is executed when "something" invokes it (calls it). 
@@ -38,7 +51,7 @@
             Example:- 
             <br>
             <p id="demo1"></p>
-        </p>
+        </div>
 
         <hr>
 
@@ -46,7 +59,7 @@
            JavaScript Function Syntax 
         </h2>
 
-        <p>
+        <div>
             A JavaScript function is defined with the <span class="edit">function</span> keyword, followed by a <strong>name</strong>, followed by parentheses <strong>()</strong>. 
             <br>
             Function names can contain letters, digits, underscores, and dollar signs (same rules as variables). 
@@ -71,7 +84,7 @@
             Function <strong>arguments</strong> are the <strong>values</strong> received by the function when it is invoked. 
             <br>
             Inside the function, the arguments (the parameters) behave as local variables. 
-        </p>
+        </div>
 
         <hr>
 
@@ -79,7 +92,7 @@
             Function Invocation 
         </h2>
 
-        <p>
+        <div>
            The code inside the function will execute when "something" <strong>invokes</strong> (calls) the function: 
            <br>
            <ul>
@@ -87,7 +100,7 @@
             <li>When it is invoked (called) from Javascript code</li>
             <li>Automatically (self invoked)</li>
            </ul> 
-        </p>
+        </div>
 
         <hr>
         <br>
@@ -98,7 +111,7 @@
             Function Return 
         </h2>
 
-        <p>
+        <div>
             When JavaScript reaches a <span class="edit">return</span> statement, the function will stop executing. 
             <br>
             If the function was invoked from a statement, JavaScript will "return" to execute the code after the invoking statement. 
@@ -110,7 +123,7 @@
             Calculate the product of two numbers, and return the result. 
             <br>
             <p id="demo2"></p>
-        </p>
+        </div>
 
         <hr>
 
@@ -118,7 +131,7 @@
             Why Functions? 
         </h2>
 
-        <p>
+        <div>
             You can reuse the code: Define the code once, and use it many times. 
             <br>
             You can use the same code many times with different arguments, to produce different results. 
@@ -128,7 +141,7 @@
             Convert Fahrenheit to Celsius: 
             <br>
             <p id="demo3"></p>
-        </p>
+        </div>
 
         <hr>
 
@@ -136,7 +149,7 @@
             The () Operator Invokes the Function 
         </h2>
 
-        <p>
+        <div>
             Using the example above, <span class="edit">toCelsius</span> refers to the function object, and <span class="edit">toCelsius()</span> refers to the function result. 
             <br>
             Accessing a function without () will return the function object instead of the function result. 
@@ -144,7 +157,7 @@
             Example:- 
             <br>
             <p id="demo4"></p>
-        </p>
+        </div>
 
         <hr>
 
@@ -152,7 +165,7 @@
             Functions Used as Variable Values 
         </h2>
 
-        <p>
+        <div>
             Functions can be used the same way as you use variables, in all types of formulas, assignments, and calculations. 
             <br>
             Example:- 
@@ -173,7 +186,7 @@
             <br>
             <br>
             <p id="demo5"></p>
-        </p>
+        </div>
 
         <hr>
 
@@ -181,7 +194,7 @@
             Local Variables 
         </h2>
 
-        <p>
+        <div>
             Variables declared within a JavaScript function, become <strong>LOCAL</strong> to the function. 
             <br>
             Local variables can only be accessed from within the function. 
@@ -217,24 +230,7 @@
             Since local variables are only recognized inside their functions, variables with the same name can be used in different functions. 
             <br>
             Local variables are created when a function starts, and deleted when the function is completed. 
-        </p>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+        </div>
 
         <script>
             function myFunction(p1,p2)

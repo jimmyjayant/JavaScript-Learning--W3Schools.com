@@ -1,25 +1,37 @@
 <!DOCTYPE html>
-<html>
+<html lang="en-in">
     <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>
             JavaScript Let 
         </title>
         <style>
+
+            html {
+                font-size:calc(10px + 0.390625vw);
+            }
+
+            body {
+                font-family:Verdana, sans-serif;
+                font-size:1rem;
+                line-height:1.5;
+            }
             .edit {
                 background-color:#f1f1f1;
                 color:red;
             }
             .edit1 {
                 background-color:rgba(255,255,0,0.3);
-                padding:20px;
+                padding:2rem;
             }
             .table1 {
                 width:100%;
                 border-collapse:collapse;
-                border:1px solid #f1f1f1;
+                border:0.1rem solid #f1f1f1;
             }
             .table1 tr {
-                height:40px;
+                height:3rem;
             }
             .table1 tr:nth-child(even) {
                 background-color:#f1f1f1;
@@ -34,7 +46,7 @@
             JavaScript Let 
         </h1>
 
-        <p style="background-color:lightgreen;padding:10px;">
+        <div style="background-color:lightgreen;padding:1rem;">
         The <span class="edit">let</span> keyword was introduced in ES6 (2015). 
         <br>
         Variables defined with <span class="edit">let</span> cannot be Redeclared. 
@@ -42,7 +54,7 @@
         Variables defined with <span class="edit">let</span> must be Declared before use. 
         <br>
         Variables defined with <span class="edit">let</span> have Block Scope. 
-        </p>
+        </div>
 
         <br>
         <br>
@@ -51,7 +63,7 @@
             Cannot be Redeclared 
         </h2>
 
-        <p>
+        <div>
            Variables defined with <span class="edit">let</span> cannot be <strong>redeclared</strong>. 
            <br>
            You cannot accidentally redeclare a variable. 
@@ -80,7 +92,7 @@
             <br>
             var x = 0;
            </p>
-        </p>
+        </div>
 
         <hr>
 
@@ -88,7 +100,7 @@
             Block Scope 
         </h2>
 
-        <p>
+        <div>
             Before ES6 (2015), JavaScript had only <strong>Global Scope</strong> and <strong>Function Scope</strong>. 
             <br>
             ES6 introduced two important new JavaScript keywords: <span class="edit">let</span> and <span class="edit">const</span>. 
@@ -127,7 +139,7 @@
                 <br>
                 // x CAN be used here 
             </p> 
-        </p>
+        </div>
 
         <hr>
 
@@ -135,7 +147,7 @@
             Redeclaring Variables 
         </h2>
 
-        <p>
+        <div>
             Redeclaring a variable using the <span class="edit">var</span> keyword can impose problems. 
             <br>
             Redeclaring a variable inside a block will also redeclare the variable outside the block. 
@@ -191,7 +203,7 @@
             Example:- 
             <br>
             <p id="demo2"></p>
-        </p>
+        </div>
 
         <hr>
 
@@ -199,7 +211,7 @@
             Browser Support 
         </h2>
 
-        <p>
+        <div>
             The <span class="edit">let</span> keyword is not fully supported in Internet Explorer 11 or earlier. 
             <br>
             The following table defines the first browser versions with full support for the <span class="edit">let</span> keyword. 
@@ -227,7 +239,7 @@
                     <td>Mar, 2016</td>
                 </tr>
             </table>
-        </p>
+        </div>
 
         <hr>
         <br>
@@ -238,7 +250,7 @@
             Redeclaring 
         </h2>
 
-        <p>
+        <div>
             Redeclaring a JavaScript variable with <span class="edit">var</span> is allowed anywhere in a program. 
             <br>
             Example:- 
@@ -324,7 +336,7 @@
             <br>
             <p id="demo4"></p>
 
-        </p>
+        </div>
 
         <hr>
 
@@ -332,7 +344,7 @@
             Let Hoisting 
         </h2>
 
-        <p>
+        <div>
             Variables defined with <span class="edit">var</span> are <strong>hoisted</strong> to the top and can be initialized at any time. 
             <br>
             Meaning: You can use the variable before it is declared. 
@@ -359,7 +371,7 @@
             Example:- 
             <br>
             <p id="demo6"></p>
-        </p>
+        </div>
 
 
         <script>

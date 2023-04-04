@@ -1,17 +1,30 @@
 <!DOCTYPE html>
-<html>
+<html lang="en-in">
     <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>
             JavaScript Syntax 
         </title>
         <style>
+        html {
+            font-size:calc(10px + 0.390625vw);
+        }
+
+        body {
+            font-family:Verdana, sans-serif;
+            font-size:1rem;
+            line-height:1.5;
+        }
+
          .edit {
             background-color:#f1f1f1;
             color:red;
          }
+
          .edit1 {
             background-color:rgba(255,255,0,0.3);
-            padding:20px;
+            padding:2rem;
          }
         </style>
     </head>
@@ -20,7 +33,7 @@
             JavaScript Syntax 
         </h1>
 
-        <p>
+        <div>
             JavaScript syntax is the set of rules, how JavaScript programs are constructed. 
             <br>
             Example:- 
@@ -42,7 +55,7 @@
             <br>
             let z = x + y;
             </p>
-        </p>
+        </div>
 
         <hr>
 
@@ -50,7 +63,7 @@
             JavaScript Values 
         </h2>
 
-        <p>
+        <div>
             The JavaScript syntax defines two types of values:- 
             <br>
             <ul>
@@ -62,7 +75,7 @@
             Fixed values are called <strong>Literals</strong>. 
             <br>
             Variable values are called <strong>Variables</strong>. 
-        </p>
+        </div>
 
         <hr>
 
@@ -70,7 +83,7 @@
             JavaScript Literals 
         </h2>
 
-        <p>
+        <div>
             The two most important syntax rules for fixed values are:- 
             <br>
             <ol>
@@ -88,7 +101,7 @@
                 <p id="demo2"></p>
                 </li>
             </ol>
-        </p>
+        </div>
 
         <hr>
         <br>
@@ -98,7 +111,7 @@
             JavaScript Variables 
         </h2>
 
-        <p>
+        <div>
             In a programming language, <strong>variables</strong> are used to <strong>store</strong> data values. 
             <br>
             JavaScript uses the keywords <span class="edit">var</span>, <span class="edit">let</span> and <span class="edit">const</span> to <strong>declare</strong> variables. 
@@ -110,7 +123,7 @@
             Example:- 
             <br>
             <p id="demo3"></p>
-        </p>
+        </div>
         
         <hr>
 
@@ -118,7 +131,7 @@
             JavaScript Operators 
         </h2>
 
-        <p>
+        <div>
             JavaScript uses <strong>arithmetic operators</strong> (<span class="edit">+</span> <span class="edit">-</span> <span class="edit">*</span> <span class="edit">/</span> ) to <strong>compute</strong> values. 
             <br>
             Example:- 
@@ -133,7 +146,7 @@
             Example:- 
             <br>
             <p id="demo5"></p>
-        </p>
+        </div>
 
         <hr>
 
@@ -141,7 +154,7 @@
             JavaScript Expressions 
         </h2>
 
-        <p>
+        <div>
             An expression is a combination of values, variables, and operators, which computes to a value. 
             <br>
             The computation is called an evaluation. 
@@ -171,7 +184,7 @@
             Example:- 
             <br>
             <p id="demo8"></p>
-        </p>
+        </div>
 
         <hr>
 
@@ -179,7 +192,7 @@
             JavaScript Keywords 
         </h2>
 
-        <p>
+        <div>
            JavaScript <strong>keywords</strong> are used to identify actions to be performed. 
            <br>
            The <span class="edit">let</span> keyword tells the browser to create variables. 
@@ -203,7 +216,7 @@
            <p class="edit1">
             In these examples, using <span class="edit">var</span> or <span class="edit">let</span> will produce the same result. 
            </p>
-        </p>
+        </div>
 
         <hr>
 
@@ -211,7 +224,7 @@
             JavaScript Comments 
         </h2>
 
-        <p>
+        <div>
            Not all JavaScript statements are "executed". 
            <br>
            Code after double slashes <span class="edit">//</span> or between <span class="edit">/*</span> and <span class="edit">*/</span> is treated as a <strong>comment</strong>. 
@@ -221,7 +234,7 @@
            Example:- 
            <br>
            <p id="demo11"></p>
-        </p>
+        </div>
 
         <hr>
 
@@ -229,7 +242,7 @@
             JavaScript Identifiers / Names 
         </h2>
 
-        <p>
+        <div>
             Identifiers are JavaScript names. 
             <br>
             Identifiers are used to name variables and keywords, and functions. 
@@ -258,7 +271,7 @@
                 <br>
                 This way JavaScript can easily distinguish identifiers from numbers. 
             </p>
-        </p>
+        </div>
 
         <hr>
 
@@ -266,7 +279,7 @@
             JavaScript is Case Sensitive 
         </h2>
 
-        <p>
+        <div>
            All JavaScript identifiers are <strong>case sensitive</strong>. 
            <br>
            The variables <span class="edit">lastName</span> and <span class="edit">lastname</span>, are two different variables. 
@@ -279,7 +292,7 @@
            <br>
 
            JavaScript does not interpret <strong>LET</strong> or <strong>Let</strong> as the keyword <strong>let</strong>. 
-        </p>
+        </div>
 
         <hr>
 
@@ -287,7 +300,7 @@
             JavaScript and Camel Case 
         </h2>
 
-        <p>
+        <div>
             Historically, programmers have used different ways of joining multiple words into one variable name:- 
             <br>
             <strong>Hyphens: </strong>
@@ -315,7 +328,7 @@
             JavaScript programmers tend to use camel case that starts with a lowercase letter. 
             <br>
             firstName, lastName, masterCard, interCity. 
-        </p>
+        </div>
 
         <hr>
 
@@ -323,11 +336,11 @@
             JavaScript Character Set 
         </h2>
 
-        <p>
+        <div>
             JavaScript uses the <strong>Unicode</strong> character set. 
             <br>
             Unicode covers (almost) all the characters, punctuations, and symbols in the world. 
-        </p>
+        </div>
 
 
 

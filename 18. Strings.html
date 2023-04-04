@@ -1,35 +1,53 @@
 <!DOCTYPE html>
-<html>
+<html lang="en-in">
     <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>
             JavaScript Strings 
         </title>
         <style>
+            html {
+                font-size:calc(10px + 0.390625vw);
+            }
+
+            body {
+                font-family:Verdana, sans-serif;
+                font-size:1rem;
+                line-height:1.5;
+            }
+
             .edit {
                 background-color:#f1f1f1;
                 color:red;
             }
+
             .edit1 {
                 background-color:rgba(255,255,0,0.3);
-                padding:20px;
+                padding:2rem;
             }
+
             .table1 {
                 width: 100%;
-                border:1px solid #ddd;
+                border:0.1rem solid #ddd;
                 border-collapse:collapse;
             }
+
             .table1 tr {
-                height:40px;
+                height:3rem;
             }
+
             .table1 tr:nth-child(even) {
                 background-color:#ddd;
             }
+
             .table1 td {
-                padding:10px;
+                padding:1rem;
             }
+
             .table1 th {
                 text-align:left;
-                padding:10px;
+                padding:1rem;
             }
         </style>
     </head>
@@ -38,9 +56,9 @@
             JavaScript Strings 
         </h1>
 
-        <p>
+        <div>
         
-            <p style="background-color:lightgreen;padding:10px;">
+            <p style="background-color:lightgreen;padding:1rem;">
               JavaScript strings are for storing and manipulating text. 
             </p>
 
@@ -69,7 +87,7 @@
             Example:- 
             <br>
             <p id="demo3"></p>
-        </p>
+        </div>
 
         <hr>
 
@@ -77,13 +95,13 @@
             String Length 
         </h2>
 
-        <p>
+        <div>
             To find the length of a string, use the built-in <span class="edit">length</span> property. 
             <br>
             Example:- 
             <br>
             <p id="demo4"></p>
-        </p>
+        </div>
 
         <hr>
         <br>
@@ -93,7 +111,7 @@
             Escape Character 
         </h2>
 
-        <p>
+        <div>
            Because strings must be written within quotes, JavaScript will misunderstand this string: 
            <br>
            <p class="edit1">
@@ -197,7 +215,7 @@
            <p class="edit1">
             The 6 escape characters above were originally designed to control typewriters, teletypes, and fax machines. They do not make any sense in HTML. 
            </p>
-        </p>
+        </div>
 
         <hr>
 
@@ -205,7 +223,7 @@
             Breaking Long Code Lines 
         </h2>
 
-        <p>
+        <div>
             For best readability, programmers often like to avoid code lines longer than 80 characters. 
             <br>
             If a JavaScript statement does not fit on one line, the best place to break it is after an <strong>operator</strong> or a <strong>comma</strong>. 
@@ -269,7 +287,7 @@
             See above style of coding in JavaScript below:- 
             <br>
             <p id="demo11"></p>
-        </p>
+        </div>
 
         <hr>
 
@@ -277,7 +295,7 @@
             JavaScript Strings as Objects 
         </h2>
 
-        <p>
+        <div>
             Normally, JavaScript strings are primitive values, created from literals: 
             <br>
             <p class="edit1">
@@ -376,7 +394,7 @@
                 Comparing two JavaScript objects <strong>always</strong> returns <strong>false</strong>. 
             </p>
 
-        </p>
+        </div>
 
         <script>
             let text1 = "John Doe";            //String written inside quotes 

@@ -1,25 +1,40 @@
 <!DOCTYPE html>
-<html>
+<html lang="en-in">
     <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>
             JavaScript Assignment 
         </title>
         <style>
+            html {
+                font-size:calc(10px + 0.390625vw);
+            }
+
+            body {
+                font-family:Verdana, sans-serif;
+                font-size:1rem;
+                line-height:1.5;
+            }
+
             .edit {
                 background-color:#f1f1f1;
                 color:red;
             }
+
             .edit1 {
                 background-color:rgba(255,255,0,0.3);
-                padding:20px;
+                padding:2rem;
             }
+
             .table1 {
                 width: 100%;
-                border:1px solid #ddd;
+                border:0.1rem solid #ddd;
                 border-collapse:collapse;
             }
+
             .table1 tr {
-                height:40px;
+                height:3rem;
             }
             .table1 tr:nth-child(even) {
                 background-color:#f1f1f1;
@@ -40,7 +55,7 @@
             JavaScript Assignment Operators 
         </h2>
 
-        <p>
+        <div>
             Assignment Operators assign values to JavaScript variables. 
             <br>
             <table class="table1">
@@ -85,14 +100,15 @@
                     <td>x = x ** y</td>
                 </tr>
             </table>
-        </p>
+        </div>
 
         <hr>
 
         <h2>
             Shift Assignment Operators 
         </h2>
-
+        
+        <div>
         <table class="table1">
             <tr>
                 <th>Operator</th>
@@ -115,13 +131,15 @@
                 <td>x = x &gt; &gt; &gt; y</td>
             </tr>
         </table>
+        </div>
 
         <hr>
 
         <h2>
             Bitwise Assignment Operators 
         </h2>
-
+        
+        <div>
         <table class="table1">
             <tr>
                 <th>Operator</th>
@@ -144,6 +162,7 @@
                 <td>x = x|y</td>
             </tr>
         </table>
+        </div>
 
         <hr>
 
@@ -151,6 +170,7 @@
             Logical Assignment Operators 
         </h2>
 
+        <div>
         <table class="table1">
             <tr>
                 <th>Operator</th>
@@ -173,7 +193,7 @@
                 <td>x = x ?? (x = y)</td>
             </tr>
         </table>
-
+    
         <br>
 
         <p class="edit1">
@@ -181,6 +201,7 @@
             <br>
             The Logical assignment operators are ES2020. 
         </p>
+        </div>
 
         <hr>
 
@@ -188,7 +209,7 @@
             The = Operator 
         </h2>
 
-        <p>
+        <div>
             The <strong>Simple Assignment Operator</strong> assigns a value to a variable. 
             <br>
             Example:- 
@@ -199,7 +220,7 @@
             Another Example:- 
             <br>
             <p id="demo2"></p>
-        </p>
+        </div>
 
         <hr>
 
@@ -207,7 +228,7 @@
             The += Operator 
         </h2>
 
-        <p>
+        <div>
             The <strong>Addition Assignment Operator</strong> adds a value to a variable. 
             <br>
             Example:- 
@@ -218,7 +239,7 @@
             Another Example:- 
             <br>
             <p id="demo4"></p>
-        </p>
+        </div>
 
         <hr>
 
@@ -226,13 +247,13 @@
             The -= Operator 
         </h2>
 
-        <p>
+        <div>
             The <strong>Subtraction Assignment Operator</strong> subtracts a value from a variable. 
             <br>
             Example:- 
             <br>
             <p id="demo5"></p>
-        </p>
+        </div>
 
         <hr>
 
@@ -240,13 +261,13 @@
             The *= Operator 
         </h2>
 
-        <p>
+        <div>
             The <strong>Multiplication Assignment Operator</strong> multiplies a variable. 
             <br>
             Example:- 
             <br>
             <p id="demo6"></p>
-        </p>
+        </div>
 
         <hr>
 
@@ -254,13 +275,13 @@
             The **= Operator 
         </h2>
 
-        <p>
+        <div>
             The <strong>Exponentiation Assignment Operator</strong> raises a variable to the power of the operand. 
             <br>
             Example:- 
             <br>
             <p id="demo7"></p>
-        </p>
+        </div>
 
         <hr>
 
@@ -268,13 +289,13 @@
             The /= Operator 
         </h2>
 
-        <p>
+        <div>
             The <strong>Division Assignment Operator</strong> divides a variable. 
             <br>
             Example:- 
             <br>
             <p id="demo8"></p>
-        </p>
+        </div>
 
         <hr>
 
@@ -282,13 +303,13 @@
             The %= Operator 
         </h2>
 
-        <p>
+        <div>
             The <strong>Remainder Assignment Operator</strong> assigns a remainder to a variable. 
             <br>
             Example:- 
             <br>
             <p id="demo9"></p>
-        </p>
+        </div>
 
         <hr>
         <br>
@@ -299,13 +320,13 @@
             The &lt; &lt; = Operator 
         </h2>
 
-        <p>
+        <div>
             The <strong>Left Shift Assignment Operator</strong> left shifts a variable. 
             <br>
             Example:- 
             <br>
             <p id="demo10"></p>
-        </p>
+        </div>
 
         <hr>
 
@@ -313,13 +334,13 @@
             The &gt; &gt; = Operator 
         </h2>
 
-        <p>
+        <div>
             The <strong>Right Shift Assignment Operator</strong> right shifts a variable (signed). 
             <br>
             Example:- 
             <br>
             <p id="demo11"></p>
-        </p>
+        </div>
 
         <hr>
 
@@ -327,13 +348,13 @@
             The &gt; &gt; &gt;= Operator 
         </h2>
 
-        <p>
+        <div>
             The <strong>Unsigned Right Shift Assignment Operator</strong> right shifts a variable (unsigned). 
             <br>
             Example:- 
             <br>
             <p id="demo12"></p>
-        </p>
+        </div>
 
         <hr>
 
@@ -341,13 +362,13 @@
             The &= Operator 
         </h2>
 
-        <p>
+        <div>
             The <strong>Bitwise AND Assignment Operator</strong> does a bitwise AND operation on two operands and assigns the result to the other variable. 
             <br>
             Example:- 
             <br>
             <p id="demo13"></p>
-        </p>
+        </div>
 
         <hr>
 
@@ -355,13 +376,13 @@
             The |= Operator 
         </h2>
 
-        <p>
+        <div>
             The <strong>Bitwise OR Assignment Operator</strong> does a bitwise OR operation on two operands and assigns the result to the variable. 
             <br>
             Example:- 
             <br>
             <p id="demo14"></p>
-        </p>
+        </div>
 
         <hr>
 
@@ -369,13 +390,13 @@
             The ^= Operator 
         </h2>
 
-        <p>
+        <div>
             The <strong>Bitwise XOR Assignment Operator</strong> does a bitwise XOR operation on two operands and assigns the result to the variable. 
             <br>
             Example:- 
             <br>
             <p id="demo15"></p>
-        </p>
+        </div>
 
         <hr>
 
@@ -383,7 +404,7 @@
             The &&= Operator 
         </h2>
 
-        <p>
+        <div>
             The <strong>Logical AND assignment operator</strong> is used between two values. 
             <br>
             If the first value is true, the second value is assigned. 
@@ -396,7 +417,7 @@
             <p class="edit1">
                 The <span class="edit">&&=</span> operator is an ES2020 feature. 
             </p>
-        </p>
+        </div>
 
         <hr>
 
@@ -404,7 +425,7 @@
             The ||= Operator 
         </h2>
 
-        <p>
+        <div>
             The <strong>Logical OR assignment operator</strong> is used between two values. 
             <br>
             If the first value is false, the second value is assigned. 
@@ -417,7 +438,7 @@
             <p class="edit1">
                 The <span class="edit">||=</span> operator is an ES2020 feature. 
             </p>
-        </p>
+        </div>
 
         <hr>
 
@@ -425,7 +446,7 @@
             The ??= Operator 
         </h2>
 
-        <p>
+        <div>
             The <strong>Nullish coalescing assignment operator</strong> is used between two values. 
             <br>
             If the first value is undefined or null, the second value is assigned. 
@@ -438,7 +459,8 @@
             <p class="edit1">
                 The <span class="edit">??=</span> operator is an ES2020 feature. 
             </p>
-        </p>
+        </div>
+        
     <script>
        let x = 10;
        document.getElementById("demo1").innerHTML = "The Value of x is:- " + x;

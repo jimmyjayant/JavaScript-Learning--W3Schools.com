@@ -1,33 +1,50 @@
 <!DOCTYPE html>
-<html>
+<html lang="en-in">
     <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>
             JavaScript BigInt 
         </title>
         <style>
+            html {
+                font-size:calc(10px + 0.390625vw);
+            }
+
+            body {
+                font-family:Verdana, sans-serif;
+                font-size:1rem;
+                line-height:1.5;
+            }
+
             .edit {
                 background-color:#f1f1f1;
                 color:red;
             }
+
             .edit1 {
                 background-color:rgba(255,255,0,0.3);
-                padding:10px;
+                padding:1rem;
             }
+
             .table1 {
                 width:100%;
-                border:1px solid #ddd;
+                border:0.1rem solid #ddd;
                 border-collapse:collapse;
             }
+
             .table1 tr:nth-child(even) {
                 background-color:#f1f1f1;
             }
+
             .table1 tr {
-                height:40px;
+                height:3rem;
             }
+
             .table1 td {
                 text-align:center;
-                padding:10px;
-                border:1px solid #ddd;
+                padding:1rem;
+                border:0.1rem solid #ddd;
             }
         </style>
     </head>
@@ -36,9 +53,9 @@
             JavaScript BigInt 
         </h1>
 
-        <p style="background-color:lightgreen;padding:20px;">
+        <div style="background-color:lightgreen;padding:2rem;">
         JavaScript <span class="edit">BigInt</span> variables are used to store big integer values that are too big to be represented by a normal JavaScript <span class="edit">Number</span>. 
-        </p>
+        </div>
 
         <hr>
 
@@ -46,7 +63,7 @@
             JavaScript Integer Accuracy 
         </h2>
 
-        <p>
+        <div>
             JavaScript integers are only accurate up to 15 digits. 
             <br>
             Example:- 
@@ -68,7 +85,7 @@
              Down to <strong>-9007199254740991</strong> -(2<sup>53</sup>-1) 
              <br>
              Integer values outside this range lose precision. 
-        </p>
+        </div>
 
         <hr>
 
@@ -76,7 +93,7 @@
             How to Create a BigInt 
         </h2>
 
-        <p>
+        <div>
             To create a <span class="edit">BigInt</span>, append n to the end of an integer or call <span class="edit">BigInt()</span>. 
             <br>
             Example:- 
@@ -88,7 +105,7 @@
             Example:- 
             <br>
             <p id="demo3"></p>
-        </p>
+        </div>
 
         <hr>
 
@@ -96,7 +113,7 @@
             BigInt: A new JavaScript Datatype 
         </h2>
 
-        <p>
+        <div>
             The JavaScript <span class="edit">typeof</span> a <span class="edit">BigInt</span> is "bigint". 
             <br>
             Example:- 
@@ -120,7 +137,7 @@
                 <li>Symbol</li>
                 <li>Object</li>
             </ol>
-        </p>
+        </div>
 
         <hr>
 
@@ -128,7 +145,7 @@
             BigInt Operators 
         </h2>
 
-        <p>
+        <div>
             Operators that can be used on a JavaScript <span class="edit">Number</span> can also be used on a <span class="edit">BigInt</span>. 
             <br>
             Example:- 
@@ -141,13 +158,13 @@
             <br>
 
             <p class="edit1">
-                <span style="font-size:30px;padding:10px;">Note</span>
+                <span style="font-size:2rem;padding:1rem;">Note</span>
                 <br>
                 Arithmetic between a <span class="edit">BigInt</span> and a <span class="edit">Number</span> is not allowed (type conversion lose information). 
                 <br>
                 Unsigned right shift (&gt; &gt; &gt;) can not be done on a <span class="edit">BigInt</span> (it does not have a fixed width).  
             </p>
-        </p>
+        </div>
 
         <hr>
 
@@ -155,7 +172,7 @@
             BigInt Decimals 
         </h2>
 
-        <p>
+        <div>
             A <span class="edit">BigInt</span> can not have decimals. 
             <br>
             BigInt Division Example:- 
@@ -179,7 +196,7 @@
             Example:- 
             <br>
             <p id="demo6"></p>
-        </p>
+        </div>
 
         <hr>
 
@@ -187,7 +204,7 @@
             BigInt Hex, Octal and Binary 
         </h2>
 
-        <p>
+        <div>
             <span class="edit">BigInt</span> can also be written in hexadecimal, octal, or binary notation. 
             <br>
             Example:- 
@@ -195,7 +212,7 @@
             BigInt Hex Example:- 
             <br>
             <p id="demo7"></p>
-        </p>
+        </div>
 
         <hr>
 
@@ -203,13 +220,13 @@
             Precision Curiosity 
         </h2>
 
-        <p>
+        <div>
             Rounding can compromise program security. 
             <br>
             Example:- 
             <br>
             <p id="demo8"></p>
-        </p>
+        </div>
 
         <hr>
 
@@ -217,7 +234,7 @@
             Browser Support 
         </h2>
 
-        <p>
+        <div>
             <span class="edit">BigInt</span> is supported in all browsers since September 2020. 
             <br>
             <table class="table1">
@@ -243,7 +260,7 @@
                     <td>Jun 2018</td>
                 </tr>
             </table>
-        </p>
+        </div>
 
         <hr>
         <br>
@@ -254,7 +271,7 @@
             Minimum and Maximum Safe Integers 
         </h2>
 
-        <p>
+        <div>
             ES6 added max and min properties to the Number object: 
             <br>
             <ul>
@@ -274,7 +291,7 @@
             MIN_SAFE_INTEGER Example:- 
             <br>
             <p id="demo10"></p>
-        </p>
+        </div>
 
         <hr>
 
@@ -282,14 +299,14 @@
             New Number Methods 
         </h2>
 
-        <p>
+        <div>
             ES6 also added 2 new methods to the Number object:- 
             <br>
             <ul>
                 <li><span class="edit">Number.isInteger()</span></li>
                 <li><span class="edit">Number.isSafeInteger()</span></li>
             </ul>
-        </p>
+        </div>
 
         <hr>
 
@@ -297,13 +314,13 @@
             The Number.isInteger() Method 
         </h2>
 
-        <p>
+        <div>
             The <span class="edit">Number.isInteger()</span> method returns <span class="edit">true</span> if the argument is an integer. 
             <br>
             Example:- 
             <br>
             <p id="demo11"></p>
-        </p>
+        </div>
 
         <hr>
 
@@ -311,7 +328,7 @@
             The Number.isSafeInteger() Method 
         </h2>
 
-        <p>
+        <div>
             A safe integer is an integer that can be exactly represented as a double precision number. 
             <br>
             The <span class="edit">Number.isSafeInteger()</span> method returns <span class="edit">true</span> if the argument is a safe integer. 
@@ -328,7 +345,7 @@
                 <br>
                 This is safe: 9007199254740991. This is not safe: 9007199254740992. 
             </p>
-        </p>
+        </div>
 
 
         <script>

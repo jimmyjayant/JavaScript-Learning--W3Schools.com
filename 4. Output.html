@@ -1,17 +1,29 @@
 <!DOCTYPE html>
-<html>
+<html lang="en-in">
     <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>
             JavaScript Output 
         </title>
         <style>
+        html {
+            font-size:calc(10px + 0.390625vw);
+        }
+
+        body {
+            font-family:Verdana, sans-serif;
+            font-size:1rem;
+            line-height:1.5;
+        }
+
          .edit {
             background-color:#f1f1f1;
             color:red;
          }
          .edit1 {
             background-color:rgba(255,255,0,0.3);
-            padding:20px;
+            padding:2rem;
          }
         </style>
     </head>
@@ -26,7 +38,7 @@
             JavaScript Display Possibilities 
         </h2>
 
-        <p>
+        <div>
            JavaScript can "display" data in different ways:- 
            <br>
            <ul>
@@ -35,7 +47,7 @@
             <li>Writing into an alert box, using <span class="edit">window.alert()</span>.</li>
             <li>Writing into the browser console, using <span class="edit">console.log()</span>.</li>
            </ul>
-        </p>
+        </div>
 
         <hr>
 
@@ -43,7 +55,7 @@
             Using innerHTML 
         </h2>
 
-        <p>
+        <div>
             To access a HTML element, JavaScript can use the <span class="edit">document.getElementById(id)</span> method. 
             <br>
             The <span class="edit">id</span> attribute defines the HTML element. The <span class="edit">innerHTML</span> property defines the HTML content. 
@@ -56,7 +68,7 @@
             <p class="edit1">
                 Changing the innerHTML property of a HTML element is a common way to display data in HTML. 
             </p>
-        </p>
+        </div>
 
         <hr>
 
@@ -64,7 +76,7 @@
             Using document.write() 
         </h2>
 
-        <p>
+        <div>
             For testing purposes, it is convenient to use <span class="edit">document.write()</span>. 
             <br>
             Example:- 
@@ -79,7 +91,7 @@
             </script>
         
 
-           <p style="background-color:pink;padding:20px;">
+           <p style="background-color:pink;padding:2rem;">
               Using document.write() after a HTML document is loaded, will <strong>delete all existing HTML</strong>. 
            </p>
 
@@ -95,7 +107,7 @@
            <p class="edit1">
             The document.write() method should only be used for testing. 
            </p>
-        </p>
+        </div>
 
         <hr>
         <br>
@@ -105,7 +117,7 @@
             Using window.alert() 
         </h2>
 
-        <p>
+        <div>
             You can use an alert box to display data. 
             <br>
             Example:- 
@@ -124,7 +136,7 @@
             Example:- 
             <br>
             <button type="button" onclick="alert(5 + 15)">Alert Button</button>
-        </p>
+        </div>
 
         <hr>
 
@@ -132,7 +144,7 @@
             Using console.log() 
         </h2>
 
-        <p>
+        <div>
             For debugging purposes, you can call the <span class="edit">console.log()</span> method in the browser to display data. 
             <br>
             Example:- 
@@ -152,7 +164,7 @@
             <script>
                 console.log(5 + 10);
             </script>
-        </p>
+        </div>
 
         <hr>
 
@@ -160,7 +172,7 @@
             JavaScript Print 
         </h2>
 
-        <p>
+        <div>
             JavaScript does not have any print objects or print methods. 
             <br>
             You cannot output devices from JavaScript. 
@@ -173,7 +185,7 @@
                 Click the button below to print the page. 
             </p>
             <button type="button" onclick="window.print()">Print this Page</button>
-        </p>
+        </div>
 
         <script>
             document.getElementById("demo1").innerHTML = 5 + 6;

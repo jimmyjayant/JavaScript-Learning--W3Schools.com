@@ -1,35 +1,53 @@
 <!DOCTYPE html>
-<html>
+<html lang="en-in">
     <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>
             JavaScript Number Properties 
         </title>
         <style>
+            html {
+                font-size:calc(10px + 0.390625vw);
+            }
+
+            body {
+                font-family:Verdana, sans-serif;
+                font-size:1rem;
+                line-height:1.5;
+            }
+
             .edit {
                 background-color:#f1f1f1;
                 color:red;
             }
+
             .edit1 {
                 background-color:rgba(255,255,0,0.3);
-                padding:20px;
+                padding:2rem;
             }
+
             .table1 {
                 width:70%;
-                border:1px solid #ddd;
+                border:0.1rem solid #ddd;
                 border-collapse:collapse;
             }
+
             .table1 tr {
-                height:40px;
+                height:3rem;
             }
+
             .table1 tr:nth-child(even) {
                 background-color:#f1f1f1;
             }
+
             .table1 th {
                 text-align:left;
-                padding:10px;
+                padding:1rem;
             }
+
             .table1 td {
-                padding:10px;
+                padding:1rem;
             }
         </style>
     </head>
@@ -37,7 +55,8 @@
         <h1>
             JavaScript Number Properties 
         </h1>
-
+        
+        <div>
         <table class="table1">
             <tr>
                 <th>Property</th>
@@ -76,6 +95,7 @@
                 <td>A "Not-a-Number" value</td>
             </tr>
         </table>
+        </div>
 
         <hr>
 
@@ -83,7 +103,7 @@
             JavaScript EPSILON 
         </h2>
 
-        <p>
+        <div>
             <span class="edit">Number.EPSILON</span> represents the difference between 1 and the smallest floating point number. 
             <br>
             Example:- 
@@ -96,13 +116,13 @@
             <br>
             <br>
             <p class="edit1">
-                <span style="font-size:30px;">Note</span>
+                <span style="font-size:2rem;">Note</span>
                 <br>
                 <span class="edit">Number.EPSILON</span> is an ES6 feature. 
                 <br>
                 It does not work in Internet Explorer. 
             </p>
-        </p>
+        </div>
 
         <hr>
 
@@ -110,7 +130,7 @@
             JavaScript MAX_VALUE 
         </h2>
 
-        <p>
+        <div>
             <span class="edit">Number.MAX_VALUE</span> is a constant representing the largest possible number in JavaScript. 
             <br>
             Example:- 
@@ -123,7 +143,7 @@
             <br>
             <br>
             <p class="edit1">
-                <span style="font-size:30px;">Number Properties Cannot be Used on Variables</span>
+                <span style="font-size:2rem;">Number Properties Cannot be Used on Variables</span>
                 <br>
                 Number properties belong to the JavaScript <strong>Number Object</strong>. 
                 <br>
@@ -135,7 +155,7 @@
             Example:- 
             <br>
             <p id="demo3"></p>
-        </p>
+        </div>
 
         <hr>
 
@@ -143,7 +163,7 @@
             JavaScript MIN_VALUE 
         </h2>
 
-        <p>
+        <div>
             <span class="edit">Number.MIN_VALUE</span> is a constant representing the lowest possible number in JavaScript. 
             <br>
             <p class="edit1">
@@ -154,7 +174,7 @@
             Example:- 
             <br>
             <p id="demo4"></p>
-        </p>
+        </div>
 
         <hr>
 
@@ -162,7 +182,7 @@
             JavaScript MAX_SAFE_INTEGER 
         </h2>
 
-        <p>
+        <div>
             <span class="edit">Number.MAX_SAFE_INTEGER</span> represents the maximum safe integer in JavaScript. 
             <br>
             <span class="edit">Number.MAX_SAFE_INTEGER</span> is (2<sup>53</sup> - 1).
@@ -174,7 +194,7 @@
             Example:- 
             <br>
             <p id="demo5"></p> 
-        </p>
+        </div>
 
         <hr>
 
@@ -182,7 +202,7 @@
             JavaScript MIN_SAFE_INTEGER 
         </h2>
 
-        <p>
+        <div>
             <span class="edit">Number.MIN_SAFE_INTEGER</span> represents the minimum safe integer in JavaScript. 
             <br>
             <span class="edit">Number.MIN_SAFE_INTEGER</span> is -(2<sup>53</sup> - 1).
@@ -198,13 +218,13 @@
             <br>
             <br>
             <p class="edit1">
-                <span style="font-size:30px;">Note</span>
+                <span style="font-size:2rem;">Note</span>
                 <br>
                 <span class="edit">MAX_SAFE_INTEGER</span> and <span class="edit">MIN_SAFE_INTEGER</span> are ES6 features. 
                 <br>
                 They do not work in Internet Explorer. 
             </p>
-        </p>
+        </div>
 
         <hr>
         <br>
@@ -215,7 +235,7 @@
             JavaScript POSITIVE_INFINITY 
         </h2>
 
-        <p>
+        <div>
             <p class="edit1">
                 let g = Number.POSITIVE_INFINITY;
             </p>
@@ -228,7 +248,7 @@
             <span class="edit">POSITIVE_INFINITY</span> is returned on Overflow. 
             <br>
             <p id="demo8"></p>
-        </p>
+        </div>
 
         <hr>
 
@@ -236,7 +256,7 @@
             JavaScript NEGATIVE_INFINITY 
         </h2>
 
-        <p>
+        <div>
             <p class="edit1">
                 let i = Number.NEGATIVE_INFINITY;
             </p>
@@ -252,7 +272,7 @@
             Example:- 
             <br>
             <p id="demo10"></p>
-        </p>
+        </div>
 
         <hr>
 
@@ -260,7 +280,7 @@
             JavaScript NaN - Not a Number 
         </h2>
 
-        <p>
+        <div>
             <span class="edit">NaN</span> is a JavaScript reserved word for a number that is not a legal number. 
             <br>
             Example:- 
@@ -274,14 +294,7 @@
             Example:- 
             <br>
             <p id="demo12"></p> 
-        </p>
-
-
-
-
-
-
-
+        </div>
 
         <script>
             let a = Number.EPSILON;

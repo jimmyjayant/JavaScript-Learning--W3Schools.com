@@ -1,17 +1,29 @@
 <!DOCTYPE html>
-<html>
+<html lang="en-in">
     <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>
             JavaScript Where To 
         </title>
         <style>
+        html {
+            font-size:calc(10px + 0.390625vw);
+        }
+
+        body {
+            font-family:Verdana, sans-serif;
+            font-size:1rem;
+            line-height:1.5;
+        }
+
         .edit {
             background-color:#f1f1f1;
             color:red;
         }
         .edit1 {
             background-color:rgba(255,255,0,0.3);
-            padding:20px;
+            padding:2rem;
         }
         </style>
         <script>
@@ -32,21 +44,20 @@
             The &lt;script&gt; Tag 
         </h2>
 
-        <p>
+        <div>
            In HTML, JavaScript code is inserted between <span class="edit">&lt;script&gt;</span> and <span class="edit">&lt;/script&gt;</span> tags. 
            <br>
            Example:- 
            <br>
            <p id="demo">
-
            </p>
-        </p>
+        </div>
 
-        <p class="edit1">
+        <div class="edit1">
             Old JavaScript examples may use a type attribute: &lt;script type="text/javascript"&gt;. 
             <br>
             The type attribute is not required. JavaScript is the default scripting language in HTML. 
-        </p>
+        </div>
 
         <hr>
 
@@ -54,11 +65,11 @@
             JavaScript Functions and Events 
         </h2>
 
-        <p>
+        <div>
             A JavaScript <span class="edit">function</span> is a block of JavaScript code, that can be executed when "called" for. 
             <br>
             For example, a function can be called when an <strong>event</strong> occurs, like when the user clicks a button. 
-        </p>
+        </div>
 
         <hr>
 
@@ -66,11 +77,11 @@
             JavaScript in &lt;head&gt; or &lt;body&gt; 
         </h2>
 
-        <p>
+        <div>
             You can place any number of scripts in a HTML document. 
             <br>
             Scripts can be placed in the <span class="edit">&lt;body&gt;</span>, or in the <span class="edit">&lt;head&gt;</span> section of a HTML page, or in both. 
-        </p>
+        </div>
 
         <hr>
 
@@ -78,7 +89,7 @@
             JavaScript in &lt;head&gt; 
         </h2>
 
-        <p>
+        <div>
             In this example, a JavaScript <span class="edit">function</span> is placed in the <span class="edit">&lt;head&gt;</span> section of a HTML page. 
             <br>
             The function is invoked (called) when a button is clicked. 
@@ -89,7 +100,7 @@
                 A Paragraph. 
             </p>
             <button type="button" onclick="myFunction()">Try It</button>
-        </p>
+        </div>
 
         <hr>
         <br>
@@ -101,7 +112,7 @@
             JavaScript in &lt;body&gt; 
         </h2>
 
-        <p>
+        <div>
             In this example, a JavaScript <span class="edit">function</span> is placed in the <span class="edit">&lt;body&gt;</span> section of a HTML page. 
             <br>
             The function is invoked (called) when a button is clicked. 
@@ -112,13 +123,13 @@
                 A Paragraph. 
             </p>
             <button type="button" onclick="myFunction1()">Try It</button>
-        </p>
+        </div>
 
         <br>
 
-        <p class="edit1">
+        <div class="edit1">
            Placing scripts at the bottom of the &lt;body&gt; element improves the display speed, because script interpretation slows down the display. 
-        </p>
+        </div>
 
         <hr>
 
@@ -126,12 +137,12 @@
             External JavaScript 
         </h2>
 
-        <p>
+        <div>
             Scripts can also be placed in external files. 
             <br>
             Example:- 
             <br>
-            <p style="font-size:20px;">
+            <p style="font-size:1.5rem;">
             External File:- myScript1.js 
             </p>
             <p class="edit1">
@@ -179,7 +190,7 @@
             <p class="edit1">
                 External scripts cannot contain <span class="edit">&lt;script&gt;</span> tags. 
             </p>
-        </p>
+        </div>
 
         <hr>
 
@@ -187,7 +198,7 @@
             External JavaScript Advantages 
         </h2>
 
-        <p>
+        <div>
             Placing scripts in external files has some advantages:- 
             <br>
             <ul>
@@ -206,7 +217,7 @@
                 <br>
                 &lt;script src="myScript2.js"&gt;&lt;/script&gt; 
             </p>
-        </p>
+        </div>
 
         <hr>
 
@@ -214,7 +225,7 @@
             External References 
         </h2>
 
-        <p>
+        <div>
            An external script can be referenced in 3 different ways:- 
            <br>
            <ul>
@@ -251,29 +262,7 @@
            <p class="edit1">
             &lt;script src="myScript1.js"&gt;&lt;/script&gt; 
            </p>
-        </p>
-
-        
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+        </div>
 
         <script src="myScript1.js"></script>
         <script>

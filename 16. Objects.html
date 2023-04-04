@@ -1,51 +1,72 @@
 <!DOCTYPE html>
-<html>
+<html lang="en-in">
     <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>
             JavaScript Objects 
         </title>
         <style>
+            html {
+                font-size:calc(10px + 0.390625vw);
+            }
+
+            body {
+                font-family:Verdana, sans-serif;
+                font-size:1rem;
+                line-height:1.5;
+            }
+
             .edit {
                 background-color:#f1f1f1;
                 color:red;
             }
+
             .edit1 {
                 background-color:rgba(255,255,0,0.3);
-                padding:20px;
+                padding:2rem;
             }
+
             .table1 {
                 width:100%;
                 border-collapse:collapse;
-                border:1px solid #ddd;
+                border:0.1rem solid #ddd;
             }
+
             .table1 tr {
-                border:1px solid #ddd;
+                border:0.1rem solid #ddd;
             }
+
             .table1 tr:nth-child(1) {
-                height:40px;
+                height:3rem;
             }
+
             .table1 tr:nth-child(even) {
-                height:250px;
+                height:25rem;
             }
+
             .table1 td {
                 text-align:center;
                 line-height:2;
             }
 
             .table2 {
-                border:1px solid #f1f1f1;
+                border:0.1rem solid #f1f1f1;
                 border-collapse:collapse;
                 width:50%;
             }
+
             .table2 tr:nth-child(even) {
                 background-color:#f1f1f1;
             }
+
             .table2 th {
                 text-align:left;
-                padding:10px;
+                padding:1rem;
             }
+
             .table2 td {
-                padding:10px;
+                padding:1rem;
             }
             
         </style>
@@ -61,7 +82,7 @@
             Real Life Objects, Properties, and Methods 
         </h2>
 
-        <p>
+        <div>
             In real life, a car is an <strong>object</strong>. 
             <br>
             A car has <strong>properties</strong> like weight and color, and <strong>methods</strong> like start and stop. 
@@ -101,7 +122,7 @@
             All cars have the same <strong>properties</strong>, but the property <strong>values</strong> differ from car to car. 
             <br>
             All cars have the same <strong>methods</strong>, but the methods are performed <strong>at different times</strong>. 
-        </p>
+        </div>
 
         <hr>
 
@@ -109,7 +130,7 @@
             JavaScript Objects 
         </h2>
 
-        <p>
+        <div>
             You have already learned that JavaScript variables are containers for data values. 
             <br>
             This code assigns a <strong>simple value</strong> (Fiat) to a <strong>variable</strong> named car. 
@@ -138,7 +159,7 @@
             <p class="edit1">
                 It is a common practice to declare objects with the <span class="edit">const</span> keyword. 
             </p>
-        </p>
+        </div>
 
         <hr>
 
@@ -146,7 +167,7 @@
             Object Definition 
         </h2>
 
-        <p>
+        <div>
             You define (and create) a JavaScript object with an object literal. 
             <br>
             Example:- 
@@ -161,7 +182,7 @@
             Example:- 
             <br>
             <p id="demo4"></p>
-        </p>
+        </div>
 
         <hr>
 
@@ -169,7 +190,7 @@
             Object Properties 
         </h2>
 
-        <p>
+        <div>
             The <strong>name:values</strong> pairs in JavaScript objects are called <strong>properties</strong>. 
             <br>
             <table class="table2">
@@ -194,7 +215,7 @@
                     <td>blue</td>
                 </tr>
             </table>
-        </p>
+        </div>
 
         <hr>
 
@@ -202,7 +223,7 @@
             Accessing Object Properties 
         </h2>
 
-        <p>
+        <div>
             You can access object properties in two ways:- 
             <br>
             <p class="edit1">
@@ -241,7 +262,7 @@
             <p class="edit1">
                 JavaScript objects are containers for <strong>named values</strong> called properties. 
             </p>
-        </p>
+        </div>
 
         <hr>
 
@@ -249,7 +270,7 @@
             Object Methods 
         </h2>
 
-        <p>
+        <div>
             Objects can also have <strong>methods</strong>. 
             <br>
             Methods are <strong>actions</strong> that can be performed on objects. 
@@ -324,7 +345,7 @@
             <br>
             I.E. <strong>this.firstName</strong> means the <strong>firstName</strong> property of <strong>person</strong>. 
 
-        </p>
+        </div>
 
         <hr>
 
@@ -332,7 +353,7 @@
             What is <strong>this</strong>? 
         </h2>
 
-        <p>
+        <div>
             In JavaScript, the <strong>this</strong> keyword refers to an <strong>object</strong>. 
             <br>
             <strong>Which</strong> object depends on how <span class="edit">this</span> is being invoked (used or called). 
@@ -364,11 +385,11 @@
             <br>
 
             <p class="edit1">
-                <span style="font-size:30px;">Note</span>
+                <span style="font-size:2rem;">Note</span>
                 <br>
                 <span class="edit">this</span> is not a variable. It is a keyword. You cannot change the value of <span class="edit">this</span>. 
             </p>
-        </p>
+        </div>
 
         <hr>
 
@@ -376,13 +397,13 @@
             The <strong>this</strong> Keyword 
         </h2>
 
-        <p>
+        <div>
             In a function definition, <span class="edit">this</span> refers to the "owner" of the function. 
             <br>
             In the example above, <span class="edit">this</span> is the <strong>person object</strong> that "owns" the <span class="edit">fullName</span> function. 
             <br>
             In other words, <span class="edit">this.firstName</span> means the <span class="edit">firstName</span> property of <strong>this object</strong>. 
-        </p>
+        </div>
 
         <hr>
 
@@ -390,7 +411,7 @@
             Accessing Object Methods 
         </h2>
 
-        <p>
+        <div>
             You access an object method with the following syntax:- 
             <br>
             <p class="edit1">
@@ -409,7 +430,7 @@
             Example:- 
             <br>
             <p id="demo8"></p>
-        </p>
+        </div>
 
         <hr>
 
@@ -417,7 +438,7 @@
             Do Not Declare Strings, Numbers, and Booleans as Objects! 
         </h2>
 
-        <p>
+        <div>
             When a JavaScript variable is declared with the keyword "<span class="edit">new</span>", the variable is created as an object. 
             <br>
             <p class="edit1">
@@ -430,7 +451,7 @@
             <br>
             <br>
             Avoid <span class="edit">String</span>, <span class="edit">Number</span>, and <span class="edit">Boolean</span> objects. They complicate your code and slow down execution speed. 
-        </p>
+        </div>
 
         <script>
             //Create and display a variable:- 

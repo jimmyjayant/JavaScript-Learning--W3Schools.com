@@ -1,37 +1,51 @@
 <!DOCTYPE html>
-<html>
+<html lang="en-in">
     <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>
             JavaScript Array Iteration 
         </title>
         <style>
-            body {
-                font-size:16px;
-                font-family:verdana, sans-serif;
+            html {
+                font-size:calc(10px + 0.390625vw);
             }
+
+            body {
+                font-family:Verdana, sans-serif;
+                font-size:1rem;
+                line-height:1.5;
+            }
+
             .edit {
                 background-color:#f1f1f1;
                 color:red;
             }
+
             .edit1 {
                 background-color:rgba(255,255,0,0.3);
-                padding:20px;
+                padding:2rem;
             }
+
             .table1 {
                 width:100%;
-                border:1px solid #ddd;
+                border:0.1rem solid #ddd;
                 border-collapse:collapse;
             }
+
             .table1 tr:nth-child(even) {
                 background-color:#f1f1f1;
             }
+
             .table1 tr {
-                height:40px;
+                height:3rem;
             }
+
             .table1 td, .table1 th {
-                border:1px solid #ddd;
-                padding:10px;
+                border:0.1rem solid #ddd;
+                padding:1rem;
             }
+
             .table2 td {
                 text-align:center;
             }
@@ -42,9 +56,9 @@
             JavaScript Array Iteration 
         </h1>
 
-        <p>
+        <div>
             Array Iteration methods operate on every array item. 
-        </p>
+        </div>
 
         <hr>
 
@@ -52,7 +66,7 @@
             JavaScript Array forEach() 
         </h2>
 
-        <p>
+        <div>
             The <span class="edit">forEach()</span> method calls a function (a callback function) once for each array element. 
             <br>
             Example:- 
@@ -75,7 +89,7 @@
             Example:- 
             <br>
             <p id="demo2"></p>
-        </p>
+        </div>
 
         <hr>
 
@@ -83,7 +97,7 @@
             JavaScript Array map() 
         </h2>
 
-        <p>
+        <div>
             The <span class="edit">map()</span> method creates a new array by performing a function on each array element. 
             <br>
             The <span class="edit">map()</span> method does not execute the function for array elements without values. 
@@ -111,7 +125,7 @@
             Example:- 
             <br>
             <p id="demo4"></p>
-        </p>
+        </div>
 
         <hr>
         <br>
@@ -122,7 +136,7 @@
             JavaScript Array filter() 
         </h2>
 
-        <p>
+        <div>
             The <span class="edit">filter()</span> method creates a new array with array elements that pass a test. 
             <br>
             This example creates a new array from elements with a value larger than 18. 
@@ -146,7 +160,7 @@
             Example:- 
             <br>
             <p id="demo6"></p>
-        </p>
+        </div>
 
         <hr>
 
@@ -154,7 +168,7 @@
             JavaScript Array reduce() 
         </h2>
 
-        <p>
+        <div>
             The <span class="edit">reduce()</span> method runs a function on each array element to produce (reduce it to) a single value. 
             <br>
             The <span class="edit">reduce()</span> method works from left-to-right in the array. See also <span class="edit">reduceRight()</span>. 
@@ -195,7 +209,7 @@
             Example:- 
             <br>
             <p id="demo9"></p>
-        </p>
+        </div>
 
         <hr>
 
@@ -203,7 +217,7 @@
             JavaScript Array reduceRight() 
         </h2>
 
-        <p>
+        <div>
             The <span class="edit">reduceRight()</span> method runs a function on each array element to produce (reduce it to) a single value. 
             <br>
             The <span class="edit">reduceRight()</span> works from right-to-left in the array. See also <span class="edit">reduce()</span>. 
@@ -234,7 +248,7 @@
             Example:- 
             <br>
             <p id="demo11"></p>
-        </p>
+        </div>
 
         <hr>
 
@@ -242,7 +256,7 @@
             JavaScript Array every() 
         </h2>
 
-        <p>
+        <div>
             The <span class="edit">every()</span> method checks if all array values pass a test. 
             <br>
             <p class="edit1">
@@ -270,7 +284,7 @@
             Example:- 
             <br>
             <p id="demo13"></p>
-        </p>
+        </div>
 
         <hr>
 
@@ -278,7 +292,7 @@
             JavaScript Array some() 
         </h2>
 
-        <p>
+        <div>
             The <span class="edit">some()</span> method checks if some array value pass a test. 
             <br>
             <p class="edit1">
@@ -300,7 +314,7 @@
                 <li>The item index</li>
                 <li>The array itself</li>
             </ul>
-        </p>
+        </div>
 
         <hr>
 
@@ -308,7 +322,7 @@
             JavaScript Array indexOf() 
         </h2>
 
-        <p>
+        <div>
             The <span class="edit">indexOf()</span> method searches an array for an element value and returns its position. 
             <br>
             <p class="edit1">
@@ -348,7 +362,7 @@
             <span class="edit">Array.indexOf()</span> returns -1 if the item is not found. 
             <br>
             If the item is present more than once, it returns the position of the first occurence. 
-        </p>
+        </div>
 
         <hr>
 
@@ -356,7 +370,7 @@
             JavaScript Array lastIndexOf() 
         </h2>
 
-        <p>
+        <div>
             <span class="edit">Array.lastIndexOf()</span> is the same as <span class="edit">Array.indexOf()</span>, but returns the position of the last occurrence of the specified element. 
             <br>
             Example:- 
@@ -384,7 +398,7 @@
                     <td>Optional. Where to start the search. Negative values will start at the given position counting from the end, and search to the beginning.</td>
                 </tr>
             </table>
-        </p>
+        </div>
 
         <hr>
 
@@ -392,7 +406,7 @@
             JavaScript Array find() 
         </h2>
 
-        <p>
+        <div>
             The <span class="edit">find()</span> method returns the value of the first array element that passes a test function. 
             <br>
             This example finds (returns the value of) the first element that is larger than 18. 
@@ -440,7 +454,7 @@
 
             <br>
             <span class="edit">find()</span> is not supported in Internet Explorer. 
-        </p>
+        </div>
 
         <hr>
 
@@ -448,7 +462,7 @@
             JavaScript Array findIndex() 
         </h2>
 
-        <p>
+        <div>
             The <span class="edit">findIndex()</span> method returns the index of the first array element that passes a test function. 
             <br>
             This example finds the index of the first element that is larger than 18. 
@@ -507,7 +521,7 @@
             <br>
 
             <span class="edit">findIndex()</span> is not supported in Internet Explorer. 
-        </p>
+        </div>
 
         <hr>
         <br>
@@ -518,7 +532,7 @@
             JavaScript Array.from() 
         </h2>
 
-        <p>
+        <div>
             The <span class="edit">Array.from()</span> method returns an Array object from any object with a length property or any iterable object. 
             <br>
             Example:- 
@@ -566,7 +580,7 @@
 
             <br>
             <span class="edit">from()</span> is not supported in Internet Explorer. 
-        </p>
+        </div>
 
         <hr>
 
@@ -574,7 +588,7 @@
             JavaScript Array keys() 
         </h2>
 
-        <p>
+        <div>
             The <span class="edit">Array.keys()</span> method returns an Array Iterator object with the keys of an array. 
             <br>
             Example:- 
@@ -624,7 +638,7 @@
             <br>
 
             <span class="edit">keys()</span> is not supported in Internet Explorer. 
-        </p>
+        </div>
 
         <hr>
 
@@ -632,7 +646,7 @@
             Array entries() 
         </h2>
 
-        <p>
+        <div>
             The Array <span class="edit">entries()</span> method returns an Array Iterator object with key/value pairs. 
             <br>
             Example:- 
@@ -684,7 +698,7 @@
             <br>
 
             <span class="edit">entries()</span> is not supported in Internet Explorer. 
-        </p>
+        </div>
 
         <hr>
 
@@ -692,7 +706,7 @@
             JavaScript Array includes() 
         </h2>
 
-        <p>
+        <div>
             ECMAScript 2016 introduced <span class="edit">Array.includes()</span> to arrays. This allows us to check if an element is present in an array (including NaN, unlike indexOf). 
             <br>
             Example:- 
@@ -754,25 +768,7 @@
                     <td>Yes</td>
                 </tr>
             </table>
-        </p>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+        </div>
 
         <script>
             const numbers1 = [45,4,9,16,25];

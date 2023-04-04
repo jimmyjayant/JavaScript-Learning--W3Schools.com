@@ -1,21 +1,33 @@
 <!DOCTYPE html>
-<html>
+<html lang="en-in">
     <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>
             JavaScript Variables 
         </title>
         <style>
+        html {
+            font-size:calc(10px + 0.390625vw);
+        }
+
+        body {
+            font-family:Verdana, sans-serif;
+            font-size:1rem;
+            line-height:1.5;
+        }
+
         .edit {
             background-color:#f1f1f1;
             color:red;
         }
         .edit1 {
             background-color:rgba(255,255,0,0.3);
-            padding:20px;
+            padding:2rem;
         }
         .green {
             background-color:lightgreen;
-            padding:10px;
+            padding:1rem;
         }
         </style>
     </head>
@@ -39,7 +51,7 @@
            What are Variables? 
         </h2>
 
-        <p>
+        <div>
             Variables are containers for storing data (storing data values). 
             <br>
             In this example, <span class="edit">a</span>, <span class="edit">b</span>, and <span class="edit">c</span>, are variables, declared with the <span class="edit">var</span> keyword. 
@@ -75,11 +87,11 @@
                 <li>b, e, h stores the value 6</li>
                 <li>c, g, i stores the value 11</li>
             </ul>
-        </p>
+        </div>
 
         <hr>
 
-        <div style="background-color:rgba(255,255,0,0.3);margin:0;padding:10px;">
+        <div style="background-color:rgba(255,255,0,0.3);margin:0;padding:1rem;">
 
           <h2>
             When to Use JavaScript var? 
@@ -102,7 +114,7 @@
             When to Use JavaScript const? 
         </h2>
 
-        <p>
+        <div>
             If you want a general rule: always declare variables with <span class="edit">const</span>. 
             <br>
             If you think the value of the variable can change, use <span class="edit">let</span>. 
@@ -123,7 +135,7 @@
             The variable <span class="edit">total</span> is declared with the <span class="edit">let</span> keyword. 
             <br>
             This is a value that can be changed. 
-        </p>
+        </div>
 
         <hr>
 
@@ -131,7 +143,7 @@
             Just Like Algebra 
         </h2>
 
-        <p>
+        <div>
             Just like in Algebra, variables hold values. 
             <br>
             Example:- 
@@ -161,7 +173,7 @@
                 Variables are containers for storing values. 
             </p>
 
-        </p>
+        </div>
 
         <hr>
         <br>
@@ -171,7 +183,7 @@
             JavaScript Identifiers 
         </h2>
 
-        <p>
+        <div>
             All JavaScript <strong>variables</strong> must be <strong>identified</strong> with <strong>unique names</strong>. 
             <br>
             These unique names are called <strong>identifiers</strong>. 
@@ -196,7 +208,7 @@
                 <br>
                 JavaScript identifiers are case-sensitive. 
             </p>
-        </p>
+        </div>
 
         <hr>
 
@@ -204,7 +216,7 @@
             The Assignment Operator 
         </h2>
 
-        <p>
+        <div>
             In JavaScript, the equal sign ( <span class="edit">=</span> ) is an "assignment" operator, not an "equal to" operator. 
             <br>
             This is different from algebra. The following does not make sense in algebra. 
@@ -223,11 +235,11 @@
             <br>
 
             <p class="edit1">
-                <span style="font-size:30px;">Note</span>
+                <span style="font-size:2rem;">Note</span>
                 <br>
                 The "equal to" operator is written like <span class="edit"> == </span> in JavaScript. 
             </p>
-        </p>
+        </div>
 
         <hr>
 
@@ -235,7 +247,7 @@
             JavaScript Data Types 
         </h2>
 
-        <p>
+        <div>
             JavaScript variables can hold numbers like 100 and text values like "John Doe". 
             <br>
             In programming, text values are called text strings. 
@@ -249,7 +261,7 @@
             Example:- 
             <br>
             <p id="demo5"></p>
-        </p>
+        </div>
 
         <hr>
 
@@ -257,7 +269,7 @@
             Declaring a JavaScript Variable 
         </h2>
 
-        <p>
+        <div>
            Creating a variable in JavaScript is called "declaring" a variable. 
            <br>
            You declare a JavaScript variable with the <span class="edit">var</span> or the <span class="edit">let</span> keyword. 
@@ -306,11 +318,11 @@
            <br>
 
            <p class="edit1">
-            <span style="font-size:30px;">Note</span>
+            <span style="font-size:2rem;">Note</span>
             <br>
             It's a good programming practice to declare all variables at the beginning of a script. 
            </p>
-        </p>
+        </div>
 
         <hr>
 
@@ -318,7 +330,7 @@
             One Statement, Many Variables 
         </h2>
 
-        <p>
+        <div>
             You can declare many variables in one statement. 
             <br>
             Start with statement with <span class="edit">let</span> and separate the variables by <strong>comma</strong>. 
@@ -334,7 +346,7 @@
             Example:- 
             <br>
             <p id="demo8"></p>
-        </p>
+        </div>
 
         <hr>
 
@@ -342,7 +354,7 @@
             Value = undefined 
         </h2>
 
-        <p>
+        <div>
             In computer programs, variables are often declared without a value. The value can be something that has to be calculated, or something that will be provided later, like user input. 
             <br>
             A variable declared without a value will have the value <span class="edit">undefined</span>. 
@@ -356,7 +368,7 @@
             Example:- 
             <br>
             <p id="demo9"></p>
-        </p>
+        </div>
 
         <hr>
 
@@ -364,7 +376,7 @@
             Re-Declaring JavaScript Variables 
         </h2>
 
-        <p>
+        <div>
             If you re-declare a JavaScript variable declared with <span class="edit">var</span>, it will not lost its value. 
             <br>
             The variable <span class="edit">TName</span> will still have the value "Maruti" after the execution of these statements. 
@@ -382,7 +394,7 @@
             <br>
 
             <p class="edit1">
-                <span style="font-size:30px;">Note</span>
+                <span style="font-size:2rem;">Note</span>
                 <br>
                 You cannot re-declare a variable declared with <span class="edit">let</span> or <span class="edit">const</span>. 
                 <br>
@@ -392,7 +404,7 @@
                 <br>
                 let TName;
             </p>
-        </p>
+        </div>
 
         <hr>
 
@@ -400,7 +412,7 @@
             JavaScript Arithmetic 
         </h2>
 
-        <p>
+        <div>
             As with algebra, you can do arithmetic with JavaScript variables, using operators like <span class="edit"> = </span> and <span class="edit"> + </span>. 
             <br>
             Example:- 
@@ -429,7 +441,7 @@
             <br>
 
             <p class="edit1">
-                <span style="font-size:30px;">Note</span>
+                <span style="font-size:2rem;">Note</span>
                 <br>
                 If you put a number in quotes, the rest of the numbers will be treated as strings, and concatenated. 
             </p>
@@ -441,7 +453,7 @@
             Example:- 
             <br>
             <p id="demo14"></p>
-        </p>
+        </div>
 
         <hr>
 
@@ -449,7 +461,7 @@
             JavaScript Dollar Sign $ 
         </h2>
 
-        <p>
+        <div>
             Since JavaScript treats a dollar sign as a letter, identifiers containing $ are valid variable names. 
             <br>
             <p class="edit1">
@@ -467,7 +479,7 @@
             Using the dollar sign is not very common in JavaScript, but professional programmers often use it as an alias for the main function in a JavaScript library. 
             <br>
             In the JavaScript library jQuery, for instance, the main function <span class="edit"> $ </span> is used to select HTML elements. In jQuery <span class="edit"> $("p"); </span> means "select all p elements". 
-        </p>
+        </div>
 
         <hr>
 
@@ -475,7 +487,7 @@
             JavaScript Underscore(_) 
         </h2>
 
-        <p>
+        <div>
             Since JavaScript treats underscore as a letter, identifiers containing _ are valid variable names. 
             <br>
             <p class="edit1">
@@ -492,7 +504,7 @@
 
             <br>
             Using the underscore is not very common in JavaScript, but a convention among professional programmers is to use it as an alias for "private (hidden)" variables. 
-        </p>
+        </div>
 
 
         <script>

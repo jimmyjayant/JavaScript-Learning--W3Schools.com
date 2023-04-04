@@ -1,30 +1,47 @@
 <!DOCTYPE html>
-<html>
+<html lang="en-in">
     <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>
             JavaScript Const 
         </title>
         <style>
+        html {
+            font-size:calc(10px + 0.390625vw);
+            }
+
+        body {
+            font-family:Verdana, sans-serif;
+            font-size:1rem;
+            line-height:1.5;
+        }
+
          .edit {
             background-color:#f1f1f1;
             color:red;
          }
+
          .edit1 {
             background-color:rgba(255,255,0,0.3);
-            padding:20px;
+            padding:2rem;
          }
+
          .table1 {
             width:100%;
-            border:1px solid #f1f1f1;
+            border:0.1rem solid #f1f1f1;
             border-collapse:collapse;
          }
+
          .table1 tr {
-            height:40px;
-            border:1px solid #f1f1f1;
+            height:3rem;
+            border:0.1rem solid #f1f1f1;
          }
+
          .table1 tr:nth-child(even) {
             background-color:#f1f1f1;
          }
+
          .table1 td {
             text-align:center;
          }
@@ -35,7 +52,7 @@
             JavaScript Const 
         </h1>
 
-        <p style="background-color:lightgreen;padding:10px;">
+        <div style="background-color:lightgreen;padding:1rem;">
             The <span class="edit">const</span> keyword was introduced in ES6 (2015). 
             <br>
             Variables defined with <span class="edit">const</span> cannot be Redeclared. 
@@ -43,7 +60,7 @@
             Variables defined with <span class="edit">const</span> cannot be Reassigned. 
             <br>
             Variables defined with <span class="edit">const</span> have Block Scope. 
-        </p>
+        </div>
 
         <hr>
 
@@ -51,7 +68,7 @@
             Cannot be Reassigned 
         </h2>
 
-        <p>
+        <div>
            A <span class="edit">const</span> variable cannot be REASSIGNED. 
            <br>
            <p class="edit1">
@@ -64,7 +81,7 @@
            Example:- 
            <br>
            <p id="demo1"></p>
-        </p>
+        </div>
 
         <hr>
 
@@ -72,18 +89,18 @@
             Must Be Assigned 
         </h2>
 
-        <p>
+        <div>
             JavaScript <span class="edit">const</span> variables must be assigned a value when they are declared. 
             <br>
-            <span style="font-size:30px;font-weight:bold;">Correct</span>
+            <span style="font-size:3rem;font-weight:bold;">Correct</span>
             <br>
             <p class="edit1">
                 const PI = 3.141;
             </p>
             <br>
-            <span style="font-size:30px;font-weight:bold;">Incorrect</span>
+            <span style="font-size:3rem;font-weight:bold;">Incorrect</span>
             <br>
-            <p style="background-color:pink;padding:20px;">
+            <p style="background-color:pink;padding:2rem;">
                 const PI;
                 <br>
                 PI = 3.141;
@@ -92,8 +109,8 @@
             <br>
             <br>
 
-            <p class="edit1">
-                <span style="font-size:30px;display:inline-block;">When to use JavaScript const? </span>
+            <div class="edit1">
+                <span style="font-size:3rem;display:inline-block;">When to use JavaScript const? </span>
                 <br>
                 <span style="font-weight:bold;display:inline-block;">Always declare a variable with <span class="edit">const</span> when you know the value should not be changed. </span>
                 
@@ -108,7 +125,8 @@
                     <li>A new Function</li>
                     <li>A new RegExp</li>
                 </ul>
-            </p>
+            </div>
+        </div>
 
             <hr>
 
@@ -116,7 +134,7 @@
                 Constant Objects and Arrays 
             </h2>
 
-            <p>
+            <div>
                The keyword <span class="edit">const</span> is a little misleading. 
                <br>
                It does not define a constant value. It defines a constant reference to a value. 
@@ -139,8 +157,7 @@
                 <li>Change the elements of constant array</li>
                 <li>Change the properties of constant object</li>
                </ul>
-            </p>
-        </p>
+            </div>
 
         <hr>
 
@@ -148,7 +165,7 @@
             Constant Arrays 
         </h2>
 
-        <p>
+        <div>
             You can change the elements of a constant array. 
             <br>
             Example:- 
@@ -162,7 +179,7 @@
 
             But you can NOT reassign the array. 
             <br>
-            <p style="background-color:pink;padding:20px;">
+            <p style="background-color:pink;padding:2rem;">
             const cars = ["Saab", "Volvo", "BMW"];
             <br>
             cars = ["Toyoto", "Volvo", "Audi"];  //ERROR 
@@ -170,7 +187,7 @@
             Example:- 
             <br>
             <p id="demo3"></p>
-        </p>
+        </div>
 
         <hr>
 
@@ -178,7 +195,7 @@
             Constant Objects 
         </h2>
 
-        <p>
+        <div>
             You can change the properties of a constant object. 
             <br>
             Example:- 
@@ -193,7 +210,7 @@
             Example:- 
             <br>
             <p id="demo5"></p>
-        </p>
+        </div>
 
         <hr>
 
@@ -201,7 +218,7 @@
             Browser Support 
         </h2>
 
-        <p>
+        <div>
             The <span class="edit">const</span> keyword is not fully supported in Internet Explorer. 
             <br>
             The following table defines the first browser versions with full support for the <span class="edit">const</span> keyword. 
@@ -229,7 +246,7 @@
                 <td>Mar, 2016</td>
                </tr>
             </table>
-        </p>
+        </div>
 
         <hr>
         <br>
@@ -240,7 +257,7 @@
             Block Scope 
         </h2>
 
-        <p>
+        <div>
            Declaring a variable with <span class="edit">const</span> is similar to <span class="edit">let</span> when it comes to <strong>Block Scope</strong>. 
            <br>
            The x declared in the block, in this example, is not the same as the x declared outside the block. 
@@ -265,7 +282,7 @@
            Example:- 
            <br>
            <p id="demo6"></p> 
-        </p>
+        </div>
 
         <hr>
 
@@ -273,7 +290,7 @@
             Redeclaring 
         </h2>
 
-        <p>
+        <div>
             Redeclaring a JavaScript <span class="edit">var</span> variable is allowed anywhere in a program. 
             <br>
             Example:- 
@@ -374,7 +391,7 @@
                     <br>
                 }
             </p>
-        </p>
+        </div>
 
         <hr>
 
@@ -382,7 +399,7 @@
             Hoisting 
         </h2>
 
-        <p>
+        <div>
             Variables defined with <span class="edit">var</span> are <strong>hoisted</strong> to the top and can be initialized at any time. 
             <br>
             Meaning: You can use the variable before it is declared. 
@@ -409,7 +426,7 @@
             Example:- 
             <br>
             <p id="demo8"></p>
-        </p>
+        </div>
 
 
         <script>

@@ -1,17 +1,30 @@
 <!DOCTYPE html>
-<html>
+<html lang="en-in">
     <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>
             JavaScript Array Methods 
         </title>
         <style>
+            html {
+                font-size:calc(10px + 0.390625vw);
+            }
+
+            body {
+                font-family:Verdana, sans-serif;
+                font-size:1rem;
+                line-height:1.5;
+            }
+
             .edit {
                 background-color:#f1f1f1;
                 color:red;
             }
+
             .edit1 {
                 background-color:rgba(255,255,0,0.3);
-                padding:20px;
+                padding:2rem;
             }
         </style>
     </head>
@@ -26,7 +39,7 @@
             Converting Arrays to Strings 
         </h2>
 
-        <p>
+        <div>
             The JavaScript method <span class="edit">toString()</span> converts an array to a string of (comma separated) array values. 
             <br>
             <p class="edit1">
@@ -53,7 +66,7 @@
                 document.getElementById("demo2").innerHTML = fruits1.join(" * ");
             </p>
             <p id="demo2"></p>
-        </p>
+        </div>
 
         <hr>
 
@@ -61,13 +74,13 @@
             Popping and Pushing 
         </h2>
 
-        <p>
+        <div>
             When you work with arrays, it is easy to remove elements and add new elements. 
             <br>
             This is what popping and pushing is: 
             <br>
             Popping items <strong>out</strong> of an array, or pushing items <strong>into</strong> an array. 
-        </p>
+        </div>
 
         <hr>
         <br>
@@ -78,7 +91,7 @@
             JavaScript Array pop() 
         </h2>
 
-        <p>
+        <div>
             The <span class="edit">pop()</span> method removes the last element from an array. 
             <br>
             <p class="edit1">
@@ -104,7 +117,7 @@
             <p id="demo5"></p>
             <br>
             <p id="demo6"></p>
-        </p>
+        </div>
 
         <hr>
 
@@ -112,7 +125,7 @@
             JavaScript Array push() 
         </h2>
 
-        <p>
+        <div>
             The <span class="edit">push()</span> method adds a new element to an array (at the end). 
             <br>
             Example:- 
@@ -128,7 +141,7 @@
             Example:- 
             <br>
             <p id="demo9"></p>
-        </p>
+        </div>
 
         <hr>
 
@@ -136,9 +149,9 @@
             Shifting Elements 
         </h2>
 
-        <p>
+        <div>
             Shifting is equivalent to popping, but working on the first element instead of the last. 
-        </p>
+        </div>
 
         <hr>
 
@@ -146,7 +159,7 @@
             JavaScript Array shift() 
         </h2>
 
-        <p>
+        <div>
             The <span class="edit">shift()</span> method removes the first array element and "shifts" all other elements to a lower index. 
             <br>
             <p class="edit1">
@@ -166,7 +179,7 @@
             Example:- 
             <br>
             <p id="demo11"></p>
-        </p>
+        </div>
 
         <hr>
 
@@ -174,7 +187,7 @@
             JavaScript Array unshift() 
         </h2>
 
-        <p>
+        <div>
             The <span class="edit">unshift()</span> method adds a new element to an array (at the beginning), and "unshifts" older elements. 
             <br>
             <p class="edit1">
@@ -203,7 +216,7 @@
             Example:- 
             <br>
             <p id="demo14"></p>
-        </p>
+        </div>
 
         <hr>
 
@@ -211,7 +224,7 @@
             Changing Elements 
         </h2>
 
-        <p>
+        <div>
             Array elements are accessed using their <strong>index number</strong>. 
             <br>
             <p class="edit1">
@@ -229,7 +242,7 @@
             <p id="demo15"></p>
             <br>
             <p id="demo16"></p>
-        </p>
+        </div>
 
         <hr>
 
@@ -237,7 +250,7 @@
             JavaScript Array Length 
         </h2>
 
-        <p>
+        <div>
             The <span class="edit">length</span> property provides an easy way to append a new element to an array. 
             <br>
             <p class="edit1">
@@ -251,23 +264,24 @@
             <p id="demo17"></p>
             <br>
             <p id="demo18"></p>
-        </p>
+        </div>
 
         <hr>
 
         <h2>
             JavaScript Array delete() 
         </h2>
-
-        <p style="background-color:rgba(255,0,0,0.3);padding:20px;">
-            <span style="font-size:30px;">Warning !</span>
+        
+        <div>
+        <div style="background-color:rgba(255,0,0,0.3);padding:2rem;">
+            <span style="font-size:2rem;">Warning !</span>
             <br>
             Array elements can be deleted using the JavaScript operator <span class="edit">delete</span>. 
             <br>
             Using <span class="edit">delete</span> leaves <span class="edit">undefined</span> holes in the array. 
             <br>
             Use pop() and shift() instead. 
-        </p>
+        </div>
 
         <br>
 
@@ -278,6 +292,7 @@
             <br>
             <p id="demo20"></p>
         </p>
+        </div>
 
         <hr>
 
@@ -285,7 +300,7 @@
             Merging (Concatenating) Arrays 
         </h2>
 
-        <p>
+        <div>
             The <span class="edit">concat()</span> method creates a new array by merging (concatenating) existing arrays. 
             <br>
             Example:- 
@@ -314,7 +329,7 @@
             Merging an array with values:- 
             <br>
             <p id="demo23"></p>
-        </p>
+        </div>
 
         <hr>
 
@@ -322,11 +337,11 @@
             Splicing and Slicing Arrays 
         </h2>
 
-        <p>
+        <div>
             The <span class="edit">splice()</span> method adds new items to an array. 
             <br>
             The <span class="edit">slice()</span> method slices out a piece of an array. 
-        </p>
+        </div>
 
         <hr>
 
@@ -334,7 +349,7 @@
             JavaScript Array splice() 
         </h2>
 
-        <p>
+        <div>
             The <span class="edit">splice()</span> method can be used to add new items to an array. 
             <br>
             Example:- 
@@ -356,7 +371,7 @@
             <p id="demo26"></p>
             <br>
             <p id="demo27"></p>
-        </p>
+        </div>
 
         <hr>
 
@@ -364,7 +379,7 @@
             Using splice() to Remove Elements 
         </h2>
 
-        <p>
+        <div>
             With clever parameter setting, you can use <span class="edit">splice()</span> to remove elements without leaving "holes" in the array. 
             <br>
             Example:- 
@@ -378,7 +393,7 @@
             The second parameter (1) defines <strong>how many</strong> elements should be <strong>removed</strong>. 
             <br>
             The rest of the parameters are omitted. No new elements will be added.  
-        </p>
+        </div>
 
         <hr>
 
@@ -386,7 +401,7 @@
             JavaScript Array slice() 
         </h2>
 
-        <p>
+        <div>
             The <span class="edit">slice()</span> method slices out a piece of an array into a new array. 
             <br>
             This example slices out a part of an array starting from array element 1 ("Orange"). 
@@ -396,7 +411,7 @@
             <p id="demo30"></p>
             <br>
             <p class="edit1">
-                <span style="font-size:30px;padding:10px;">Note</span>
+                <span style="font-size:2rem;padding:1rem;">Note</span>
                 <br>
                 The <span class="edit">slice()</span> method creates a new array. 
                 <br>
@@ -421,7 +436,7 @@
             Example:- 
             <br>
             <p id="demo33"></p>
-        </p>
+        </div>
 
         <hr>
 
@@ -429,7 +444,7 @@
             Automatic toString() 
         </h2>
 
-        <p>
+        <div>
             JavaScript automatically converts an array to comma separated string when a primitive value is expected. 
             <br>
             This is always the case when you try to output an array. 
@@ -453,11 +468,11 @@
             <br>
 
             <p class="edit1">
-                <span style="font-size:30px">Note</span>
+                <span style="font-size:2rem">Note</span>
                 <br>
                 All JavaScript objects have a toString() method. 
             </p>
-        </p>
+        </div>
 
         <hr>
 
@@ -465,9 +480,9 @@
             Finding Max and Min Values in an Array 
         </h2>
 
-        <p>
+        <div>
             There are no built-in functions for finding the highest or lowest value in a JavaScript array. 
-        </p>
+        </div>
 
 
         <script>

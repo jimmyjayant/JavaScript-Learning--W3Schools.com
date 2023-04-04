@@ -1,32 +1,49 @@
 <!DOCTYPE html>
-<html>
+<html lang="en-in">
  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>
         JavaScript Numbers 
     </title>
     <style>
+        html {
+            font-size:calc(10px + 0.390625vw);
+            }
+
+        body {
+            font-family:Verdana, sans-serif;
+            font-size:1rem;
+            line-height:1.5;
+        }
+
         .edit {
             background-color:#f1f1f1;
             color:red;
         }
+
         .edit1 {
             background-color:rgba(255,255,0,0.3);
-            padding:10px;
+            padding:1rem;
         }
+
         .table1 {
             width:100%;
-            border:1px solid #ddd;
+            border:0.1rem solid #ddd;
             border-collapse:collapse;
         }
+
         .table1 tr:nth-child(even) {
             background-color:#f1f1f1;
         }
+
         .table1 td {
-            padding:10px;
+            padding:1rem;
         }
+
         .table1 th {
             text-align:left;
-            padding:10px;
+            padding:1rem;
         }
     </style>
  </head>
@@ -35,7 +52,7 @@
         JavaScript Numbers 
     </h1>
 
-    <p>
+    <div>
         JavaScript has only one type of number. Numbers can be written with or without decimals. 
         <br>
         Example:- 
@@ -50,7 +67,7 @@
         Example:- 
         <br>
         <p id="demo2"></p>
-    </p>
+    </div>
 
     <hr>
 
@@ -58,7 +75,7 @@
         JavaScript Numbers are Always 64-bit Floating Point 
     </h2>
 
-    <p>
+    <div>
         Unlike many other programming languages, JavaScript does not define different types of numbers, like integers, short, long, floating-point, etc. 
         <br>
         JavaScript numbers are always stored as double precision floating point numbers, following the international IEEE 754 standard. 
@@ -77,7 +94,7 @@
                 <td>1 bit (63)</td>
             </tr>
         </table>
-    </p>
+    </div>
 
     <hr>
 
@@ -85,7 +102,7 @@
         Integer Precision 
     </h2>
 
-    <p>
+    <div>
       Integers (numbers without a period or exponent notation) are accurate up to 15 digits. 
       <br>
       Example:- 
@@ -93,7 +110,7 @@
       <p id="demo3"></p>
       <br>
       The maximum number of decimals is 17. 
-    </p>
+    </div>
 
     <hr>
 
@@ -101,7 +118,7 @@
         Floating Precision 
     </h2>
 
-    <p>
+    <div>
         Floating point arithmetic is not always 100% accurate. 
         <br>
         Example:- 
@@ -115,7 +132,7 @@
         Example:- 
         <br>
         <p id="demo5"></p>
-    </p>
+    </div>
 
     <hr>
 
@@ -123,7 +140,7 @@
         Adding Numbers and Strings 
     </h2>
 
-    <p>
+    <div>
         <p style="background-color:pink">
         WARNING !! 
         <br>
@@ -191,7 +208,7 @@
             Then 30 + "30" is concatenated because "30" is a string. 
         </p>
 
-    </p>
+    </div>
 
     <hr>
 
@@ -199,7 +216,7 @@
         Numeric Strings 
     </h2>
 
-    <p>
+    <div>
         JavaScript strings can have numeric content. 
         <br>
         Example:- 
@@ -256,7 +273,7 @@
         <p class="edit1">
             In the last example JavaScript uses the + operator to concatenate the strings. 
         </p>
-    </p>
+    </div>
 
     <hr>
 
@@ -264,7 +281,7 @@
         NaN - Not a Number 
     </h2>
 
-    <p>
+    <div>
         <span class="edit">NaN</span> is a JavaScript reserved word indicating that a number is not a legal number. 
         <br>
         Trying to do arithmetic with a non-numeric string will result in <span class="edit">NaN</span> (Not a Number). 
@@ -325,7 +342,7 @@
         Example:- 
         <br>
         <p id="demo20"></p>
-    </p>
+    </div>
 
     <hr>
 
@@ -333,7 +350,7 @@
         Infinity 
     </h2>
 
-    <p>
+    <div>
         <span class="edit">Infinity</span> (or <span class="edit">-Infinity</span>) is the value JavaScript will return if you calculate a number outside the largest possible number. 
         <br>
         Example:- 
@@ -357,7 +374,7 @@
         <br>
         Type of Infinity is:- 
         <p id="demo23"></p>
-    </p>
+    </div>
 
     <hr>
 
@@ -365,7 +382,7 @@
         Hexadecimal 
     </h2>
 
-    <p>
+    <div>
         JavaScript interprets numeric constants as hexadecimal if they are preceded by 0x. 
         <br>
         Example:- 
@@ -393,7 +410,7 @@
         Example:- 
         <br>
         <p id="demo25"></p>
-    </p>
+    </div>
 
     <hr>
 
@@ -401,7 +418,7 @@
         JavaScript Numbers as Objects 
     </h2>
 
-    <p>
+    <div>
         Normally JavaScript numbers are primitive values created from literals. 
         <br>
         Example:- 
@@ -482,7 +499,7 @@
         </p>
 
 
-    </p>
+    </div>
 
 
 

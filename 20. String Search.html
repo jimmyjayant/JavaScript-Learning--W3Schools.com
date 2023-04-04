@@ -1,17 +1,30 @@
 <!DOCTYPE html>
-<html>
+<html lang="en-in">
     <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>
             JavaScript String Search 
         </title>
         <style>
+            html {
+                font-size:calc(10px + 0.390625vw);
+            }
+
+            body {
+                font-family:Verdana, sans-serif;
+                font-size:1rem;
+                line-height:1.5;
+            }
+
             .edit {
                 background-color:#f1f1f1;
                 color:red;
             }
+
             .edit1 {
                 background-color:rgba(255,255,0,0.3);
-                padding:10px;
+                padding:1rem;
             }
         </style>
     </head>
@@ -20,9 +33,8 @@
             JavaScript String Search 
         </h1>
 
-        <div style="background-color:lightgreen;padding:20px;">
-        <p>
-          <span style="font-size:30px;">JavaScript Search Methods</span>
+        <div style="background-color:lightgreen;padding:2rem;">
+          <span style="font-size:2rem;">JavaScript Search Methods</span>
           <br>
           <ul>
             <li>String indexOf()</li>
@@ -34,7 +46,6 @@
             <li>String startsWith()</li>
             <li>String endsWith()</li>
           </ul>
-        </p>
         </div>
 
         <hr>
@@ -43,7 +54,7 @@
             JavaScript String indexOf() 
         </h2>
 
-        <p>
+        <div>
             The <span class="edit">indexOf()</span> method returns the index of (position of) the <strong>first</strong> occurrence of a string in a string. 
             <br>
             Example:- 
@@ -56,13 +67,13 @@
             <br>
 
             <p class="edit1">
-                <span style="font-size:30px;">Note</span>
+                <span style="font-size:2rem;">Note</span>
                 <br>
                 JavaScript counts positions from zero. 
                 <br>
                 0 is the first position in a string, 1 is the second, 2 is the third, ... 
             </p>
-        </p>
+        </div>
 
         <hr>
 
@@ -70,7 +81,7 @@
             JavaScript String lastIndexOf() 
         </h2>
 
-        <p>
+        <div>
             The <span class="edit">lastIndexOf()</span> method returns the index of the <strong>last</strong> occurrence of a specified text in a string. 
             <br>
             Example:- 
@@ -106,7 +117,7 @@
             Example:- 
             <br>
             <p id="demo5"></p>
-        </p>
+        </div>
 
         <hr>
 
@@ -114,7 +125,7 @@
             JavaScript String search() 
         </h2>
 
-        <p>
+        <div>
             The <span class="edit">search()</span> method searches a string for a string (or a regular expression) and returns the position of the match. 
             <br>
             Example:- 
@@ -127,7 +138,7 @@
             Please find the <strong>FIRST OCCURRENCE</strong> of regular expression "locate" in the string "Please locate where 'locate' occurs!". 
             <br>
             <p id="demo7"></p>
-        </p>
+        </div>
 
         <hr>
 
@@ -135,7 +146,7 @@
             Did You Notice? 
         </h2>
 
-        <p>
+        <div>
             The two methods, <span class="edit">indexOf()</span> and <span class="edit">search()</span>, are <strong>equal? </strong>
             <br>
             They accept the same arguments (parameters), and return the same value? 
@@ -146,7 +157,7 @@
                 <li>The <span class="edit">search()</span> method cannot take a second start position argument.</li>
                 <li>The <span class="edit">indexOf()</span> method cannot take powerful search values (regular expressions).</li>
             </ul>
-        </p>
+        </div>
 
         <hr>
         <br>
@@ -157,7 +168,7 @@
             JavaScript String match() 
         </h2>
 
-        <p>
+        <div>
             The <span class="edit">match()</span> method returns an array containing the results of matching a string against a string (or a regular expression). 
             <br>
             Example:- 
@@ -186,11 +197,11 @@
             <br>
 
             <p class="edit1">
-                <span style="font-size:30px;">Note</span>
+                <span style="font-size:2rem;">Note</span>
                 <br>
                 If a regular expression does not include the g modifier (global match), <span class="edit">match()</span> will return only the first match in the string. 
             </p>
-        </p>
+        </div>
 
         <hr>
 
@@ -198,7 +209,7 @@
             JavaScript String matchAll() 
         </h2>
 
-        <p>
+        <div>
            The <span class="edit">matchAll()</span> method returns an iterator containing the results of matching a string against a string (or a regular expression). 
            <br>
            Example:- 
@@ -232,7 +243,7 @@
             <br>
             <span class="edit">matchAll()</span> does not work in Internet Explorer. 
            </p>
-        </p>
+        </div>
 
         <hr>
 
@@ -240,7 +251,7 @@
             JavaScript String includes() 
         </h2>
 
-        <p>
+        <div>
             The <span class="edit">includes()</span> method returns true if a string contains a specified value. 
             <br>
             Otherwise it returns <span class="edit">false</span>. 
@@ -262,7 +273,7 @@
             <br>
 
             <p class="edit1">
-                <span style="font-size:30px;">Note</span>
+                <span style="font-size:2rem;">Note</span>
                 <br>
                 <span class="edit">includes()</span> is case sensitive. 
                 <br>
@@ -270,7 +281,7 @@
                 <br>
                 <span class="edit">includes()</span> is not supported in Internet Explorer. 
             </p>
-        </p>
+        </div>
 
         <hr>
 
@@ -278,7 +289,7 @@
             JavaScript String startsWith() 
         </h2>
 
-        <p>
+        <div>
             The <span class="edit">startsWith()</span> method returns <span class="edit">true</span> if a string begins with a specified value. 
             <br>
             Otherwise it returns <span class="edit">false</span>. 
@@ -320,7 +331,7 @@
             <br>
 
             <p class="edit1">
-                <span style="font-size:30px;">Note</span>
+                <span style="font-size:2rem;">Note</span>
                 <br>
                 <span class="edit">startsWith()</span> is case sensitive. 
                 <br>
@@ -328,7 +339,7 @@
                 <br>
                 <span class="edit">startsWith()</span> is not supported in Internet Explorer. 
             </p>
-        </p>
+        </div>
 
         <hr>
 
@@ -336,7 +347,7 @@
             JavaScript String endsWith() 
         </h2>
 
-        <p>
+        <div>
             The <span class="edit">endsWith()</span> method returns <span class="edit">true</span> if a string ends with a specified value. 
             <br>
             Otherwise it returns <span class="edit">false</span>. 
@@ -359,7 +370,7 @@
             <br>
 
             <p class="edit1">
-                <span style="font-size:30px;">Note</span>
+                <span style="font-size:2rem;">Note</span>
                 <br>
                 <span class="edit">endsWith()</span> is case sensitive. 
                 <br>
@@ -368,7 +379,7 @@
                 <span class="edit">endsWith()</span> is not supported in Internet Explorer. 
             </p>
 
-        </p>
+        </div>
 
 
 

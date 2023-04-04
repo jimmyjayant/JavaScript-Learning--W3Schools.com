@@ -1,35 +1,53 @@
 <!DOCTYPE html>
-<html>
+<html lang="en-in">
     <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>
             JavaScript Events 
         </title>
         <style>
+           html {
+                font-size:calc(10px + 0.390625vw);
+            }
+
+            body {
+                font-family:Verdana, sans-serif;
+                font-size:1rem;
+                line-height:1.5;
+            }
+
             .edit {
                 background-color:#f1f1f1;
                 color:red;
             }
+
             .edit1 {
                 background-color:rgba(255,255,0,0.3);
-                padding:20px;
+                padding:2rem;
             }
+
             .table1 {
                 width:100%;
-                border:1px solid #ddd;
+                border:0.1rem solid #ddd;
                 border-collapse:collapse;
             }
+
             .table1 tr:nth-child(even) {
                 background-color:#ddd;
             }
+
             .table1 tr {
-                height:40px;
+                height:3rem;
             }
+
             .table1 td {
-                padding:10px;
+                padding:0.1rem;
             }
+
             .table1 th {
                 text-align:left;
-                padding:10px;
+                padding:1rem;
             }
         </style>
     </head>
@@ -38,11 +56,11 @@
             JavaScript Events 
         </h1>
 
-        <p>
+        <div>
             HTML events are <strong>"things"</strong> that happen to HTML elements. 
             <br>
             When JavaScript is used in HTML pages, JavaScript can <strong>"react"</strong> on these events. 
-        </p>
+        </div>
 
         <hr>
 
@@ -50,7 +68,7 @@
             HTML Events 
         </h2>
 
-        <p>
+        <div>
             A HTML event can be something the browser does, or something a user does. 
             <br>
             Here are some examples of HTML events:- 
@@ -120,7 +138,7 @@
             <button onclick="displayDate()">The time is?</button>
             <br>
             <p id="demo2"></p>
-        </p>
+        </div>
 
         <hr>
         <br>
@@ -131,7 +149,7 @@
             Common HTML Events 
         </h2>
 
-        <p>
+        <div>
             Here is a list of some common HTML events:- 
             <br>
             <table class="table1">
@@ -164,7 +182,7 @@
                     <td>The browser has finished loading the page</td>
                 </tr>
             </table>
-        </p>
+        </div>
 
         <hr>
 
@@ -172,7 +190,7 @@
            JavaScript Event Handlers 
         </h2>
 
-        <p>
+        <div>
            Event handlers can be used to handle and verify user input, user actions, and browser actions: 
            <br>
            <ul>
@@ -181,8 +199,8 @@
             <li>Action that should be performed when a user clicks a button</li>
             <li>Content that should be verified when a user inputs data</li>
             <li>And more.......</li>
-        </ul>
-
+            </ul>
+        
         <br>
         <br>
 
@@ -195,7 +213,7 @@
             <li>You can prevent events from being sent or being handled</li>
             <li>And more.......</li>
         </ul>
-        </p>
+        </div>
 
         <script>
             function displayDate() {

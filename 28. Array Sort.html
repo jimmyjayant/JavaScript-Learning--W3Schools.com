@@ -1,17 +1,30 @@
 <!DOCTYPE html>
-<html>
+<html lang="en-in">
     <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>
             JavaScript Sorting Arrays 
         </title>
         <style>
+            html {
+                font-size:calc(10px + 0.390625vw);
+            }
+
+            body {
+                font-family:Verdana, sans-serif;
+                font-size:1rem;
+                line-height:1.5;
+            }
+
             .edit {
                 background-color:#f1f1f1;
                 color:red;
             }
+
             .edit1 {
                 background-color:rgba(255,255,0,0.3);
-                padding:20px;
+                padding:2rem;
             }
         </style>
     </head>
@@ -26,7 +39,7 @@
             Sorting an Array 
         </h2>
 
-        <p>
+        <div>
             The <span class="edit">sort()</span> method sorts an array alphabetically. 
             <br>
             Example:- 
@@ -34,7 +47,7 @@
             <p id="demo1"></p>
             <br>
             <p id="demo2"></p>
-        </p>
+        </div>
 
         <hr>
 
@@ -42,7 +55,7 @@
             Reversing an Array 
         </h2>
 
-        <p>
+        <div>
             The <span class="edit">reverse()</span> method reverses the elements in an array. 
             <br>
             You can use it to sort an array in descending order. 
@@ -52,7 +65,7 @@
             <p id="demo3"></p>
             <br>
             <p id="demo4"></p>
-        </p>
+        </div>
 
         <hr>
 
@@ -60,7 +73,7 @@
             Numeric Sort 
         </h2>
 
-        <p>
+        <div>
             By default, the <span class="edit">sort()</span> function sorts values as <strong>strings</strong>. 
             <br>
             This works well for strings ("Apple" comes before "Banana"). 
@@ -82,7 +95,7 @@
             Example:- 
             <br>
             <p id="demo7"></p>
-        </p>
+        </div>
 
         <hr>
         <br>
@@ -92,7 +105,7 @@
             The Compare Function 
         </h2>
 
-        <p>
+        <div>
             The purpose of the compare function is to define an alternative sort order. 
             <br>
             The compare function should return a negative, zero, or positive value, depending on the arguments. 
@@ -127,7 +140,7 @@
             <button type="button" onclick="myFunction2()">Sort Numerically</button>
             <br>
             <p id="demo8"></p>
-        </p>
+        </div>
 
         <hr>
 
@@ -135,7 +148,7 @@
             Sorting an Array in Random Order 
         </h2>
 
-        <p>
+        <div>
             Example:- 
             <br>
             Click the button again and again to sort the array in random order. 
@@ -143,7 +156,7 @@
             <button type="button" onclick="myFunction3()">Try it</button>
             <br>
             <p id="demo9"></p>
-        </p>
+        </div>
 
         <hr>
 
@@ -151,7 +164,7 @@
             The Fisher Yates Method 
         </h2>
 
-        <p>
+        <div>
             The above example, <i>array.sort()</i>, is not accurate. It will favour some numbers over the others. 
             <br>
             The most popular correct method, is called the Fisher Yates shuffle, and was introduced in data science as early as 1938! 
@@ -165,7 +178,7 @@
             <button type="button" onclick="myFunction4()">Try it</button>
             <br>
             <p id="demo10"></p>
-        </p>
+        </div>
 
         <hr>
 
@@ -173,7 +186,7 @@
             Find the Highest (or Lowest) Array Value 
         </h2>
 
-        <p>
+        <div>
             There are no built-in functions for finding the max or min value in an array. 
             <br>
             However, after you have sorted an array, you can use the index to obtain the highest and lowest values. 
@@ -202,7 +215,7 @@
             <p class="edit1">
                 Sorting a whole array is a very inefficient method if you only want to find the highest (or lowest) value. 
             </p>
-        </p>
+        </div>
 
         <hr>
 
@@ -210,7 +223,7 @@
             Using Math.max() on an Array 
         </h2>
 
-        <p>
+        <div>
             You can use <span class="edit">Math.max.apply</span> to find the highest number in an array. 
             <br>
             Example:- 
@@ -220,7 +233,7 @@
             <span class="edit">Math.max.apply(null, [1, 2, 3])</span> is equivalent to <span class="edit">Math.max(1, 2, 3)</span>. 
             <br>
             So, in above example, <span class="edit">Math.max.apply(null, [5,6,7,1,9,4,3])</span> is equivalent to <span class="edit">Math.max(5,6,7,1,9,4,3)</span>
-        </p>
+        </div>
 
         <hr>
 
@@ -228,7 +241,7 @@
             Using Math.min() on an Array 
         </h2>
 
-        <p>
+        <div>
             You can use <span class="edit">Math.min.apply</span> to find the lowest number in an array. 
             <br>
             Example:- 
@@ -236,7 +249,7 @@
             <p id="demo17"></p>
             <br>
             <span class="edit">Math.min.apply(null,[1,2,3])</span> is equivalent to <span class="edit">Math.min(1,2,3)</span>. 
-        </p>
+        </div>
 
         <hr>
 
@@ -244,7 +257,7 @@
             My Min / Max JavaScript Methods 
         </h2>
 
-        <p>
+        <div>
             The fastest solution is to use a "home made" method. 
             <br>
             This function loops through an array comparing each value with the highest value found. 
@@ -260,7 +273,7 @@
             Example:- 
             <br>
             <p id="demo19"></p>
-        </p>
+        </div>
 
         <hr>
 
@@ -268,7 +281,7 @@
             Sorting Object Arrays 
         </h2>
 
-        <p>
+        <div>
             JavaScript arrays often contain objects. 
             <br>
             <p class="edit1">
@@ -306,7 +319,7 @@
             <button type="button" onclick="myFunction5()">Sort</button>
             <br>
             <p id="demo22"></p>
-        </p>
+        </div>
 
 
         <script>
