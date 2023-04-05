@@ -1,11 +1,21 @@
 <!DOCTYPE html>
-<html>
+<html lang="en-in">
     <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>
             JavaScript Regular Expression Patterns (x|y) 
         </title>
         <style>
-            
+            html {
+                font-size:calc(10px + 0.390625vw);
+            }
+
+            body {
+                font-family:Verdana, sans-serif;
+                font-size:1rem;
+                line-height:1.5;
+            }
         </style>
     </head>
     <body>
@@ -16,15 +26,15 @@
         <h2>
             Do a global search for any of the specified alternatives (red|green). 
         </h2>
-
+        
+        <div>
         <p id="demo1"></p>
+        </div>
 
         <script>
             let text1 = "re, green, red, green, gren, gr, blue, yellow";
             let result = text1.match(/(red|green)/g);
             document.getElementById("demo1").innerHTML = result;
         </script>
-
     </body>
-
 </html>

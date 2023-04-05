@@ -1,38 +1,50 @@
 <!DOCTYPE html>
-<html>
+<html lang="en-in">
     <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>
             JavaScript 2015 (ES6) 
         </title>
         <style>
+            html {
+                font-size:calc(10px + 0.390625vw);
+            }
+
+            body {
+                font-family:Verdana, sans-serif;
+                font-size:1rem;
+                line-height:1.5;
+            }
+
             .edit {
                 background-color:#f1f1f1;
                 color:red;
             }
+
             .edit1 {
                 background-color:rgba(255,255,0,0.3);
-                padding:20px;
+                padding:2rem;
             }
-            body {
-                font-family:verdana, sans-serif;
-                font-size:20px;
-                line-height:1.5;
-            }
+
             .table1 {
                 width: 100%;
-                border:1px solid #ddd;
+                border:0.1rem solid #ddd;
                 border-collapse:collapse;
             }
+
             .table1 tr {
-                height:40px;
+                height:3rem;
             }
+
             .table1 tr:nth-child(even) {
                 background-color:#f1f1f1;
             }
+
             .table1 td {
                 text-align:center;
-                padding:10px;
-                border:1px solid #ddd;
+                padding:1rem;
+                border:0.1rem solid #ddd;
             }
         </style>
     </head>
@@ -41,7 +53,7 @@
             JavaScript ES6 
         </h1>
 
-        <div style="background-color:rgba(0,255,0,0.2);padding:20px;">
+        <div style="background-color:rgba(0,255,0,0.2);padding:2rem;">
         ECMAScript 2015 was the second major revision to JavaScript. 
         <br>
         ECMAScript 2015 is also known as ES6 and ECMAScript 6. 
@@ -217,7 +229,7 @@
             The <span class="edit">for/of</span> loop has the following syntax:- 
             <br>
             <br>
-            <p style="border:2px solid grey;" class="edit1">
+            <p style="border:0.2rem solid grey;" class="edit1">
             for (variable of iterable) {
                 <br>
                 //code block to be executed 
@@ -419,13 +431,13 @@
             <br>
 
             <div class="edit1">
-                <span style="font-size:30px;">Note</span>
+                <span style="font-size:2rem;">Note</span>
                 <br>
                 Symbols are always unique. 
                 <br>
                 If you create two symbols with the same description they will have different values. 
                 <br>
-                <p style="background-color:white;padding:10px;">
+                <p style="background-color:white;padding:1rem;">
                 Symbol("id") == Symbol("id"); //false 
                 </p>
             </div>
@@ -857,17 +869,7 @@
             <br>
             <p id="demo37"></p>
         </div>
-
-
-
-
-
-
-
-
-
-
-
+        
         <script>
             let x = 10;
             //Here x is 10

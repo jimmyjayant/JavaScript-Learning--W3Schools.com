@@ -1,22 +1,30 @@
 <!DOCTYPE html>
-<html>
+<html lang="en-in">
     <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>
             JavaScript typeof 
         </title>
         <style>
+            html {
+                font-size:calc(10px + 0.390625vw);
+            }
+
+            body {
+                font-family:Verdana, sans-serif;
+                font-size:1rem;
+                line-height:1.5;
+            }
+
             .edit {
                 background-color:#f1f1f1;
                 color:red;
             }
+
             .edit1 {
                 background-color:rgba(255,255,0,0.3);
-                padding:20px;
-            }
-            body {
-                font-family:verdana, sans-serif;
-                font-size:20px;
-                line-height:1.5;
+                padding:2rem;
             }
         </style>
     </head>
@@ -25,7 +33,7 @@
             JavaScript typeof 
         </h1>
 
-        <p>
+        <div>
            In JavaScript there are 5 different data types that can contain values:- 
            <br>
            <ul>
@@ -60,7 +68,7 @@
             <li><span class="edit">undefined</span></li>
            </ul>
 
-        </p>
+        </div>
 
         <hr>
 
@@ -68,7 +76,7 @@
             The typeof Operator 
         </h2>
 
-        <p>
+        <div>
             You can use the <span class="edit">typeof</span> operator to find the data type of a JavaScript variable. 
             <br>
             Example:- 
@@ -95,7 +103,7 @@
             <p class="edit1">
                 You cannot use <span class="edit">typeof</span> to determine if a JavaScript object is an array (or a date). 
             </p>
-        </p>
+        </div>
 
         <hr>
         <br>
@@ -105,7 +113,7 @@
             Primitive Data 
         </h2>
 
-        <p>
+        <div>
             A primitive data value is a single simple data value with no additional properties and methods. 
             <br>
             The <span class="edit">typeof</span> operator can return one of these primitive types:- 
@@ -122,7 +130,7 @@
             Example:- 
             <br>
             <p id="demo2"></p>
-        </p>
+        </div>
 
         <hr>
 
@@ -130,7 +138,7 @@
             Complex Data 
         </h2>
 
-        <p>
+        <div>
             The <span class="edit">typeof</span> operator can return one of two complex types:- 
             <br>
             <ul>
@@ -152,7 +160,7 @@
             <p class="edit1">
                 The <span class="edit">typeof</span> operator returns "<span class="edit">object</span>" for arrays because in JavaScript arrays are objects. 
             </p>
-        </p>
+        </div>
 
         <hr>
 
@@ -160,11 +168,11 @@
             The Data Type of typeof 
         </h2>
 
-        <p>
+        <div>
             The <span class="edit">typeof</span> operator is not a variable. It is an operator. Operators (+ - * /) do not have any data type. 
             <br>
             But, the <span class="edit">typeof</span> operator always <strong>returns a string</strong> (containing the type of the operand). 
-        </p>
+        </div>
 
         <hr>
 
@@ -172,7 +180,7 @@
             The constructor Property 
         </h2>
 
-        <p>
+        <div>
             The <span class="edit">constructor</span> property returns the constructor function for all JavaScript variables. 
             <br>
             Example:- 
@@ -211,7 +219,7 @@
             Example:- 
             <br>
             <p id="demo8"></p>
-        </p>
+        </div>
 
         <hr>
 
@@ -219,7 +227,7 @@
             Undefined 
         </h2>
 
-        <p>
+        <div>
             In JavaScript, a variable without a value, has the value <span class="edit">undefined</span>. The type is also <span class="edit">undefined</span>. 
             <br>
             Example:- 
@@ -238,7 +246,7 @@
             <br>
 
             <p id="demo11"></p>
-        </p>
+        </div>
 
         <hr>
 
@@ -246,7 +254,7 @@
             Empty Values 
         </h2>
 
-        <p>
+        <div>
             An empty value has nothing to do with <span class="edit">undefined</span>. 
             <br>
             An empty string has both a legal value and a type. 
@@ -254,7 +262,7 @@
             Example:- 
             <br>
             <p id="demo12"></p>
-        </p>
+        </div>
 
         <hr>
 
@@ -262,7 +270,7 @@
             Null 
         </h2>
 
-        <p>
+        <div>
             In JavaScript <span class="edit">null</span> is "nothing". It is supposed to be something that doesn't exist. 
             <br>
             Unfortunately, in JavaScript, the data type of <span class="edit">null</span> is an object. 
@@ -290,7 +298,7 @@
             <p id="demo15"></p>
             <br>
             <p id="demo16"></p>
-        </p>
+        </div>
 
         <hr>
 
@@ -298,13 +306,13 @@
             Difference Between Undefined and Null 
         </h2>
 
-        <p>
+        <div>
             <span class="edit">undefined</span> and <span class="edit">null</span> are equal in value but different in type. 
             <br>
             Example:- 
             <br>
             <p id="demo17"></p>
-        </p>
+        </div>
 
         <hr>
 
@@ -312,13 +320,13 @@
             The instanceof Operator 
         </h2>
 
-        <p>
+        <div>
             The <span class="edit">instanceof</span> operator returns <span class="edit">true</span> if an object is an instance of the specified object. 
             <br>
             Example:- 
             <br>
             <p id="demo18"></p>
-        </p>
+        </div>
 
         <hr>
 
@@ -326,7 +334,7 @@
             The void Operator 
         </h2>
 
-        <p>
+        <div>
             The <strong>void</strong> operator evaluates an expression and returns <strong>undefined</strong>. This operator is often used to obtain the undefined primitive value, using "void(0)" (useful when evaluating an expression without using the return value). 
             <br>
             Example:- 
@@ -337,7 +345,7 @@
             <a href="javascript:void(document.body.style.backgroundColor='red');">
                 Click me to change the background color of body to red. 
             </a>
-        </p>
+        </div>
 
 
         <script>
@@ -473,8 +481,6 @@
             "<br>" + "Is the variable cars4 an instance of Object? = " + (cars4 instanceof Object) + 
             "<br>" + "Is the variable cars4 an instance of String? = " + (cars4 instanceof String) + 
             "<br>" + "Is the variable cars4 an instance of Number? = " + (cars4 instanceof Number);
-
-
         </script>
     </body>
 </html> 

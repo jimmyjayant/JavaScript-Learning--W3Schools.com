@@ -1,22 +1,30 @@
 <!DOCTYPE html>
-<html>
+<html lang="en-in">
     <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>
             JavaScript While Loop 
         </title>
         <style>
+            html {
+                font-size:calc(10px + 0.390625vw);
+            }
+
+            body {
+                font-family:Verdana, sans-serif;
+                font-size:1rem;
+                line-height:1.5;
+            }
+
             .edit {
                 background-color:#f1f1f1;
                 color:red;
             }
+
             .edit1 {
                 background-color:rgba(255,255,0,0.3);
-                padding:20px;
-            }
-            body {
-                font-family:verdana, sans-serif;
-                font-size:20px;
-                line-height:1.5;
+                padding:2rem;
             }
         </style>
     </head>
@@ -27,9 +35,9 @@
 
         <hr>
 
-        <p>
+        <div>
             Loops can execute a block of code as long as a specified condition is true. 
-        </p>
+        </div>
 
         <hr>
 
@@ -37,7 +45,7 @@
             The While Loop 
         </h2>
 
-        <p>
+        <div>
             The <span class="edit">while</span> loop loops through a block of code as long as a specified condition is true. 
             <br>
             Syntax:- 
@@ -61,16 +69,15 @@
             <p class="edit1">
                 If you forgot to increase the variable used in the condition, the loop will never end. This will crash your browser. 
             </p>
-        </p>
+        </div>
 
         <hr>
-
 
         <h2>
             The Do While Loop 
         </h2>
 
-        <p>
+        <div>
             The <span class="edit">do while</span> loop is a variant of the while loop. This loop will execute the code block once, before checking if the condition is true, then it will repeat the loop as long as the condition is true. 
             <br>
             Syntax:- 
@@ -95,7 +102,7 @@
             <br>
             <br>
             Do not forget to increase the variable used in the condition, otherwise the loop will never end! 
-        </p>
+        </div>
 
         <hr>
 
@@ -103,7 +110,7 @@
             Comparing For and While 
         </h2>
 
-        <p>
+        <div>
             The while loop is much the same as a for loop, with statement 1 and statement 3 omitted. 
             <br>
             The loop in this example uses a <span class="edit">for</span> loop to collect the car names from the cars array. 
@@ -119,7 +126,7 @@
             Example:- 
             <br>
             <p id="demo4"></p>
-        </p>
+        </div>
 
         <script>
             let i = 1;
@@ -165,5 +172,4 @@
             document.getElementById("demo4").innerHTML = text4;
         </script>
     </body>
-
 </html>

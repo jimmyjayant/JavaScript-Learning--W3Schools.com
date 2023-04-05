@@ -1,45 +1,60 @@
 <!DOCTYPE html>
-<html>
+<html lang="en-in">
     <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>
             JavaScript Type Conversion 
         </title>
         <style>
+            html {
+                font-size:calc(10px + 0.390625vw);
+            }
+
+            body {
+                font-family:Verdana, sans-serif;
+                font-size:1rem;
+                line-height:1.5;
+            }
+
             .edit {
                 background-color:#f1f1f1;
                 color:red;
             }
+
             .edit1 {
                 background-color:rgba(255,255,0,0.3);
-                padding:20px;
+                padding:2rem;
             }
-            body {
-                font-family:verdana, sans-serif;
-                font-size:20px;
-                line-height:1.5;
-            }
+
             .table1 {
                 width:100%;
-                border:1px solid #ddd;
+                border:0.1rem solid #ddd;
                 border-collapse:collapse;
             }
+
             .table1 tr {
-                height:40px;
+                height:3rem;
             }
+
             .table1 tr:nth-child(even) {
                 background-color:#f1f1f1;
             }
+
             .table1 th {
                 text-align:left;
-                padding:10px;
+                padding:1rem;
             }
+
             .table1 td {
-                padding:10px;
+                padding:1rem;
             }
+
             .anchor1 {
                 text-decoration:underline;
                 color:black;
             }
+
             .anchor1:hover {
                 color:green;
             }
@@ -50,7 +65,7 @@
             JavaScript Type Conversion 
         </h1>
 
-        <div style="background-color:rgba(0,255,0,0.3);padding:10px;">
+        <div style="background-color:rgba(0,255,0,0.3);padding:1rem;">
             <ul>
             <li>Converting Strings to Numbers</li>
             <li>Converting Numbers to Strings</li>
@@ -67,14 +82,14 @@
             JavaScript Type Conversion 
         </h2>
 
-        <p>
+        <div>
             JavaScript variables can be converted to a new variable and another data type: 
             <br>
             <ul>
                 <li>By the use of a JavaScript function</li>
                 <li><strong>Automatically</strong> by JavaScript itself</li>
             </ul>
-        </p>
+        </div>
 
         <hr>
 
@@ -602,8 +617,6 @@
             "\"5\" - 2 is:- " + ("5" - 2) + "<br>" +                       //returns 3 because "5" is converted to 5 
             "\"5\" * \"2\" is:- " + ("5" * "2") + "<br>" +                 //returns 10 because "5" and "2" are converted to 5 and 2
             "\"5\" / \"2\" is:- " + ("5" / "2");                           //returns 2.5 because "5" and "2" are converted to 5 and 2
-            
-            
         </script>
     </body>
 </html>

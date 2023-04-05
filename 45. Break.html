@@ -1,22 +1,30 @@
 <!DOCTYPE html>
-<html>
+<html lang="en-in">
     <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>
             JavaScript Break and Continue 
         </title>
         <style>
+            html {
+                font-size:calc(10px + 0.390625vw);
+            }
+
+            body {
+                font-family:Verdana, sans-serif;
+                font-size:1rem;
+                line-height:1.5;
+            }
+
             .edit {
                 background-color:#f1f1f1;
                 color:red;
             }
+
             .edit1 {
                 background-color:rgba(255,255,0,0.3);
-                padding:20px;
-            }
-            body {
-                font-family:verdana, sans-serif;
-                font-size:20px;
-                line-height:1.5;
+                padding:2rem;
             }
         </style>
     </head>
@@ -25,11 +33,11 @@
             JavaScript Break and Continue 
         </h1>
 
-        <p>
+        <div>
             The <span class="edit">break</span> statement "jumps out" of a loop. 
             <br>
             The <span class="edit">continue</span> statement "jumps over" one iteration in the loop. 
-        </p>
+        </div>
 
         <hr>
 
@@ -37,7 +45,7 @@
             The Break Statement 
         </h2>
 
-        <p>
+        <div>
             You have already seen the <span class="edit">break</span> statement used in an earlier chapter of this tutorial. It was used to "jump out" of a <span class="edit">switch()</span> statement. 
             <br>
             The <span class="edit">break</span> statement can also be used to jump out of a loop. 
@@ -47,7 +55,7 @@
             <p id="demo1"></p>
             <br>
             In the example above, the <span class="edit">break</span> statement ends the loop ("breaks" the loop) when the loop counter (i) is 3. 
-        </p>
+        </div>
 
         <hr>
 
@@ -55,7 +63,7 @@
             The Continue Statement 
         </h2>
 
-        <p>
+        <div>
             The <span class="edit">continue</span> statement breaks one iteration (in the loop), if a specified condition occurs, and continues with the next iteration in the loop. 
             <br>
             This example skips the value of 3. 
@@ -63,7 +71,7 @@
             Example:- 
             <br>
             <p id="demo2"></p>
-        </p>
+        </div>
 
         <hr>
         <br>
@@ -74,7 +82,7 @@
             JavaScript Labels 
         </h2>
 
-        <p>
+        <div>
             To label JavaScript statements you precede the statements with a label name and a colon. 
             <br>
             <p class="edit1">
@@ -111,7 +119,7 @@
             <p class="edit1">
                 A code block is a block of code between { and }. 
             </p>
-        </p>
+        </div>
 
 
         <script>

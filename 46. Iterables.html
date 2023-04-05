@@ -1,22 +1,30 @@
 <!DOCTYPE html>
-<html>
+<html lang="en-in">
     <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>
             JavaScript Iterables 
         </title>
         <style>
+            html {
+                font-size:calc(10px + 0.390625vw);
+            }
+
+            body {
+                font-family:Verdana, sans-serif;
+                font-size:1rem;
+                line-height:1.5;
+            }
+
             .edit {
                 background-color:#f1f1f1;
                 color:red;
             }
+
             .edit1 {
                 background-color:rgba(255,255,0,0.3);
-                padding:20px;
-            }
-            body {
-                font-family:verdana, sans-serif;
-                font-size:20px;
-                line-height:1.5;
+                padding:2rem;
             }
         </style>
     </head>
@@ -25,13 +33,13 @@
             JavaScript Iterables 
         </h1>
 
-        <p style="background-color:rgba(0,255,0,0.3);padding:10px;">
+        <div style="background-color:rgba(0,255,0,0.3);padding:1rem;">
         Iterables are iterable objects (like Arrays). 
         <br>
         Iterables can be accessed with simple and efficient code. 
         <br>
         Iterables can be iterated over with <span class="edit">for..of</span> loops. 
-        </p>
+        </div>
 
         <hr>
 
@@ -39,7 +47,7 @@
             The For Of Loop 
         </h2>
 
-        <p>
+        <div>
             The JavaScript <span class="edit">for..of</span> statement loops through the elements of an iterable object. 
             <br>
             Syntax:- 
@@ -51,7 +59,7 @@
                     <br> 
                 }
             </p>
-        </p>
+        </div>
 
         <hr>
 
@@ -59,7 +67,7 @@
             Iterating 
         </h2>
 
-        <p>
+        <div>
             Iterating is easy to understand. 
             <br>
             It simply means looping over a sequence of elements. 
@@ -70,7 +78,7 @@
                 <li>Iterating over a String</li>
                 <li>Iterating over an Array</li>
             </ul>
-        </p>
+        </div>
 
         <hr>
 
@@ -78,13 +86,13 @@
             Iterating Over a String 
         </h2>
 
-        <p>
+        <div>
             You can use a <span class="edit">for..of</span> loop to iterate over the elements of a string. 
             <br>
             Example:- 
             <br>
             <p id="demo1"></p>
-        </p>
+        </div>
 
         <hr>
 
@@ -92,13 +100,13 @@
             Iterating Over an Array 
         </h2>
 
-        <p>
+        <div>
             You can use a <span class="edit">for...of</span> loop to iterate over the elements of an Array. 
             <br>
             Example:- 
             <br>
             <p id="demo2"></p>
-        </p>
+        </div>
 
         <hr>
         <br>
@@ -109,13 +117,13 @@
             Iterating Over a Set 
         </h2>
 
-        <p>
+        <div>
             You can use a <span class="edit">for...of</span> loop to iterate over the elements of a Set. 
             <br>
             Example:- 
             <br>
             <p id="demo3"></p>
-        </p>
+        </div>
 
         <hr>
 
@@ -123,13 +131,13 @@
             Iterating Over a Map 
         </h2>
 
-        <p>
+        <div>
             You can use a <span class="edit">for..of</span> loop to iterate over the elements of a Map. 
             <br>
             Example:- 
             <br>
             <p id="demo4"></p>
-        </p>
+        </div>
 
         <script>
         //Create a String
@@ -173,5 +181,4 @@
         document.getElementById("demo4").innerHTML = text4;
         </script>
     </body>
-
 </html>

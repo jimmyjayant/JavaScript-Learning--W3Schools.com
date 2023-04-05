@@ -1,13 +1,19 @@
 <!DOCTYPE html>
-<html>
+<html lang="en-in">
     <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>
             JavaScript Regular Expression Metacharacters \b  
         </title>
         <style>
-             body {
-                font-family:verdana, sans-serif;
-                font-size:20px;
+            html {
+                font-size:calc(10px + 0.390625vw);
+            }
+
+            body {
+                font-family:Verdana, sans-serif;
+                font-size:1rem;
                 line-height:1.5;
             }
         </style>
@@ -21,13 +27,19 @@
             Search for the characters "LO" in the <u>beginning</u> of a word in the phrase "HELLO, LOOK AT YOU!". 
         </h2>
 
+        <div>
         <p id="demo1"></p>
+        </div>
+
+        <hr>
 
         <h2>
             Search for the characters "LO" in the <u>end</u> of a word in the phrase "HELLO, LOOK AT YOU!".  
         </h2>
 
+        <div>
         <p id="demo2"></p>
+        </div>
 
         <script>
             let text1 = "HELLO, LOOK AT YOU!";
@@ -39,7 +51,5 @@
             document.getElementById("demo2").innerHTML = 
             "Found in position:- " + result1;
         </script>
-
     </body>
-
 </html>

@@ -1,13 +1,19 @@
 <!DOCTYPE html>
-<html>
+<html lang="en-in">
     <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>
             JavaScript Regular Expression Quantifiers n? 
         </title>
         <style>
+            html {
+                font-size:calc(10px + 0.390625vw);
+            }
+
             body {
-                font-family:verdana, sans-serif;
-                font-size:20px;
+                font-family:Verdana, sans-serif;
+                font-size:1rem;
                 line-height:1.5;
             }
         </style>
@@ -21,14 +27,14 @@
             Do a global search for a "1", followed by zero or one "0" characters. 
         </h2>
 
+        <div>
         <p id="demo1"></p>
+        </div>
 
         <script>
             let text1 = "1, 100 or 1000?"; 
             let result = text1.match(/10?/g);
             document.getElementById("demo1").innerHTML = result;
         </script>
-
     </body>
-
 </html>

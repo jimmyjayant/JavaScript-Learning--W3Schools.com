@@ -1,22 +1,30 @@
 <!DOCTYPE html>
-<html>
+<html lang="en-in">
     <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>
             JavaScript Style Guide 
         </title>
         <style>
+            html {
+                font-size:calc(10px + 0.390625vw);
+            }
+
+            body {
+                font-family:Verdana, sans-serif;
+                font-size:1rem;
+                line-height:1.5;
+            }
+
             .edit {
                 background-color:#f1f1f1;
                 color:red;
             }
+
             .edit1 {
                 background-color:rgba(255,255,0,0.3);
-                padding:20px;
-            }
-            body {
-                font-family:verdana, sans-serif;
-                font-size:20px;
-                line-height:1.5;
+                padding:2rem;
             }
         </style>
     </head>
@@ -131,7 +139,7 @@
                 }
             </p>
             <br>
-            <p style="background-color:rgba(255,0,0,0.3);padding:20px;">
+            <p style="background-color:rgba(255,0,0,0.3);padding:2rem;">
               Do not use tabs (tabulators) for indentation. Different editors interpret tabs differently. 
             </p>
         </div>
@@ -322,7 +330,7 @@
             <br>
             <br>
 
-            <p style="background-color:rgba(255,0,0,0.3);padding:20px;">
+            <p style="background-color:rgba(255,0,0,0.3);padding:2rem;">
             Hyphens can be mistaken as subtraction attempts. Hyphens are not allowed in JavaScript names. 
             </p>
 
@@ -351,7 +359,7 @@
             <br>
             <br>
 
-            <p style="background-color:rgba(255,0,0,0.3);padding:20px;">
+            <p style="background-color:rgba(255,0,0,0.3);padding:2rem;">
             Do not start names with a $ sign. It will put you in conflict with many JavaScript library names. 
             </p>
         </div>

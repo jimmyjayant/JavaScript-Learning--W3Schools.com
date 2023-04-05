@@ -1,45 +1,58 @@
 <!DOCTYPE html>
-<html>
+<html lang="en-in">
     <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>
             JavaScript Maps 
         </title>
         <style>
+            html {
+                font-size:calc(10px + 0.390625vw);
+            }
+
+            body {
+                font-family:Verdana, sans-serif;
+                font-size:1rem;
+                line-height:1.5;
+            }
+
             .edit {
                 background-color:#f1f1f1;
                 color:red;
             }
+
             .edit1 {
                 background-color:rgba(255,255,0,0.3);
-                padding:20px;
+                padding:2rem;
             }
-            body {
-                font-family:verdana, sans-serif;
-                font-size:20px;
-                line-height:1.5;
-            }
+
             .table1 {
                 width:100%;
-                border:1px solid #ddd;
+                border:0.1rem solid #ddd;
                 border-collapse:collapse;
             }
+
             .table1 tr {
-                height:40px;
+                height:3rem;
             }
+
             .table1 tr:nth-child(even) {
                 background-color:#ddd;
             }
+
             .table1 th {
                 text-align:left;
-                padding:10px;
+                padding:1rem;
             }
+
             .table1 td {
-                padding:10px;
+                padding:1rem;
             }
 
             .table2 td {
                 text-align:center;
-                border:1px solid grey;
+                border:0.1rem solid grey;
             }
         </style>
     </head>
@@ -48,11 +61,11 @@
             JavaScript Maps 
         </h1>
 
-        <p style="background-color:rgba(0,255,0,0.3);padding:20px;">
+        <div style="background-color:rgba(0,255,0,0.3);padding:2rem;">
          A Map holds key-value pairs where the keys can be any datatype. 
          <br>
          A Map remembers the original insertion order of the keys. 
-        </p>
+        </div>
 
         <hr>
 
@@ -60,6 +73,7 @@
             Essential Map Methods 
         </h2>
 
+        <div>
         <table class="table1">
             <tr>
                 <th>Method</th>
@@ -102,6 +116,7 @@
                 <td>Returns the number of elements in a Map</td>
             </tr>
         </table>
+        </div>
 
         <hr>
 
@@ -109,14 +124,14 @@
             How to Create a Map 
         </h2>
 
-        <p>
+        <div>
             You can create a JavaScript Map by: 
             <br>
             <ul>
                 <li>Passing an Array to <span class="edit">new Map()</span></li>
                 <li>Create a Map and use <span class="edit">Map.set()</span></li>
             </ul>
-        </p>
+        </div>
 
         <hr>
 
@@ -124,13 +139,13 @@
             The new Map() Method 
         </h2>
 
-        <p>
+        <div>
             You can create a Map by passing an Array to the <span class="edit">new Map()</span> constructor. 
             <br>
             Example:- 
             <br>
             <p id="demo1"></p>
-        </p>
+        </div>
 
         <hr>
 
@@ -138,7 +153,7 @@
             The set() Method 
         </h2>
 
-        <p>
+        <div>
             You can add elements to a Map with the <span class="edit">set()</span> method. 
             <br>
             Example:- 
@@ -155,7 +170,7 @@
             <br>
             <br>
             <p id="demo4"></p>
-        </p>
+        </div>
 
         <hr>
 
@@ -163,13 +178,13 @@
             The get() Method 
         </h2>
 
-        <p>
+        <div>
             The <span class="edit">get()</span> method gets the value of a key in a Map. 
             <br>
             Example:- 
             <br>
             <p id="demo5"></p>
-        </p>
+        </div>
 
         <hr>
 
@@ -177,13 +192,13 @@
             The size Property 
         </h2>
 
-        <p>
+        <div>
             The <span class="edit">size</span> property returns the number of elements in a Map. 
             <br>
             Example:- 
             <br>
             <p id="demo6"></p>
-        </p>
+        </div>
 
         <hr>
 
@@ -191,7 +206,7 @@
             The delete() Method 
         </h2>
 
-        <p>
+        <div>
             The <span class="edit">delete()</span> method removes a Map element. 
             <br>
             Example:- 
@@ -200,7 +215,7 @@
             <br>
             <br>
             <p id="demo8"></p>
-        </p>
+        </div>
 
         <hr>
 
@@ -208,7 +223,7 @@
             The has() Method 
         </h2>
 
-        <p>
+        <div>
             The <span class="edit">has()</span> method returns true if a key exists in a Map. 
             <br>
             Example:- 
@@ -216,7 +231,7 @@
             <p id="demo9"></p>
             <br>
             <p id="demo10"></p>
-        </p>
+        </div>
 
         <hr>
 
@@ -224,7 +239,7 @@
             JavaScript Objects vs Maps 
         </h2>
 
-        <p>
+        <div>
             Differences between JavaScript Objects and Maps. 
             <br>
             <br>
@@ -261,7 +276,7 @@
                     <td>Do not have default keys</td>
                 </tr>
             </table>
-        </p>
+        </div>
 
         <hr>
 
@@ -269,13 +284,13 @@
             The forEach() Method 
         </h2>
 
-        <p>
+        <div>
             The <span class="edit">forEach()</span> method calls a function for each key/value pair in a Map. 
             <br>
             Example:- 
             <br>
             <p id="demo11"></p>
-        </p>
+        </div>
 
         <hr>
 
@@ -283,13 +298,13 @@
             The entries() Method 
         </h2>
 
-        <p>
+        <div>
             The <span class="edit">entries()</span> method returns an iterator object with the [key, values] in a Map. 
             <br>
             Example:- 
             <br>
             <p id="demo12"></p>
-        </p>
+        </div>
 
         <hr>
 
@@ -297,7 +312,7 @@
             Browser Support 
         </h2>
 
-        <p>
+        <div>
             JavaScript Maps are supported in all browsers, except Internet Explorer. 
             <br>
             <br>
@@ -317,7 +332,7 @@
                     <td>Opera</td>
                 </tr>
             </table>
-        </p>
+        </div>
 
         <script>
             //Create a Map
@@ -421,7 +436,6 @@
             }
 
             document.getElementById("demo12").innerHTML = text5;
-
         </script>
     </body>
 </html>

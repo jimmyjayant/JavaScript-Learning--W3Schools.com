@@ -1,23 +1,32 @@
 <!DOCTYPE html>
-<html>
+<html lang="en-in">
     <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>
             JavaScript If Else 
         </title>
         <style>
+            html {
+                font-size:calc(10px + 0.390625vw);
+            }
+
+            body {
+                font-family:Verdana, sans-serif;
+                font-size:1rem;
+                line-height:1.5;
+            }
+
             .edit {
                 background-color:#f1f1f1;
                 color:red;
             }
+
             .edit1 {
                 background-color:rgba(255,255,0,0.3);
-                padding:20px;
+                padding:2rem;
             }
-            body {
-                font-family:verdana, sans-serif;
-                font-size:20px;
-                line-height:1.5;
-            }
+            
         </style>
     </head>
     <body>
@@ -25,9 +34,9 @@
             JavaScript if, else, and else if 
         </h1>
 
-        <p>
+        <div>
             Conditional Statements are used to perform different actions based on different conditions. 
-        </p>
+        </div>
 
         <hr>
 
@@ -35,7 +44,7 @@
             Conditional Statements 
         </h2>
 
-        <p>
+        <div>
             Very often when you write code, you want to perform different actions for different decisions. 
             <br>
             You can use conditional statements in your code to do this. 
@@ -48,7 +57,7 @@
                 <li>Use <span class="edit">else if</span> to specify a new condition to test, if the first condition is false</li>
                 <li>Use <span class="edit">switch</span> to specify many alternative blocks of code to be executed</li>
             </ul>
-        </p>
+        </div>
 
         <hr>
 
@@ -56,7 +65,7 @@
             The if Statement 
         </h2>
 
-        <p>
+        <div>
             Use the <span class="edit">if</span> statement to specify a block of JavaScript code to be executed if a condition is true. 
             <br>
             Syntax:- 
@@ -79,7 +88,7 @@
             Make a "Good day" greeting if the hour is less than 18:00. 
             <br>
             <p id="demo1"></p>
-        </p>
+        </div>
 
         <hr>
         <br>
@@ -89,7 +98,7 @@
             The else Statement 
         </h2>
 
-        <p>
+        <div>
             Use the <span class="edit">else</span> statement to specify a block of code to be executed if the condition is false. 
             <br>
             <p class="edit1">
@@ -111,7 +120,7 @@
             If the hour is less than 18, create a "Good day" greeting, otherwise "Good evening". 
             <br>
             <p id="demo2"></p>
-        </p>
+        </div>
 
         <hr>
 
@@ -119,7 +128,7 @@
             The else if Statement 
         </h2>
 
-        <p>
+        <div>
             Use the <span class="edit">else if</span> statement to specify a new condition if the first condition is false. 
             <br>
             Syntax:- 
@@ -155,7 +164,7 @@
             </strong>
             <br>
             <p id="demo4"></p>
-        </p>
+        </div>
         
         <script>
             let hours = new Date().getHours();

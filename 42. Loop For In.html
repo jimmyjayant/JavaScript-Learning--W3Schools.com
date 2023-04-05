@@ -1,22 +1,29 @@
 <!DOCTYPE html>
-<html>
+<html lang="en-in">
     <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>
             JavaScript For In 
         </title>
         <style>
+            html {
+                font-size:calc(10px + 0.390625vw);
+            }
+
+            body {
+                font-family:Verdana, sans-serif;
+                font-size:1rem;
+                line-height:1.5;
+            }
+
             .edit {
                 background-color:#f1f1f1;
                 color:red;
             }
             .edit1 {
                 background-color:rgba(255,255,0,0.3);
-                padding:20px;
-            }
-            body {
-                font-family:verdana, sans-serif;
-                font-size:20px;
-                line-height:1.5;
+                padding:2rem;
             }
         </style>
     </head>
@@ -31,7 +38,7 @@
             The For In Loop 
         </h2>
 
-        <p>
+        <div>
             The JavaScript <span class="edit">for in</span> statement loops through the properties of an Object. 
             <br>
             Syntax:- 
@@ -58,7 +65,7 @@
                 <li>The key is used to access the <strong>value</strong> of the key</li>
                 <li>The value of the key is <strong>person[x]</strong></li>
             </ul>
-        </p>
+        </div>
 
         <hr>
 
@@ -66,7 +73,7 @@
             For In Over Arrays 
         </h2>
 
-        <p>
+        <div>
             The JavaScript <span class="edit">for in</span> statement can also loop over the properties of an Array. 
             <br>
             <p class="edit1">
@@ -91,7 +98,7 @@
                 <br>
                 It is better to use a <strong>for</strong> loop, a <strong>for of</strong> loop, or <strong>Array.forEach()</strong> when the order is important. 
             </p>
-        </p>
+        </div>
 
         <hr>
 
@@ -99,7 +106,7 @@
             Array.forEach() 
         </h2>
 
-        <p>
+        <div>
             The <span class="edit">forEach()</span> method calls a function (a callback function) once for each array element. 
             <br>
             Example:- 
@@ -122,7 +129,7 @@
             Example:- 
             <br>
             <p id="demo4"></p>
-        </p>
+        </div>
 
         <script>
             const person1 = {firstName:"John", lastName:"Doe", age:29};
@@ -160,8 +167,6 @@
             }
 
             document.getElementById("demo4").innerHTML = text4;
-
-
         </script>
     </body>
 </html>

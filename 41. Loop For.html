@@ -1,22 +1,29 @@
 <!DOCTYPE html>
-<html>
+<html lang="en-in">
     <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>
             JavaScript For Loop 
         </title>
         <style>
+            html {
+                font-size:calc(10px + 0.390625vw);
+            }
+
+            body {
+                font-family:Verdana, sans-serif;
+                font-size:1rem;
+                line-height:1.5;
+            }
+
             .edit {
                 background-color:#f1f1f1;
                 color:red;
             }
             .edit1 {
                 background-color:rgba(255,255,0,0.3);
-                padding:20px;
-            }
-            body {
-                font-family:verdana, sans-serif;
-                font-size:20px;
-                line-height:1.5;
+                padding:2rem;
             }
         </style>
     </head>
@@ -25,9 +32,9 @@
             JavaScript For Loop 
         </h1>
 
-        <p>
+        <div>
             Loops can execute a block of code a number of times. 
-        </p>
+        </div>
 
         <hr>
 
@@ -35,7 +42,7 @@
             JavaScript Loops 
         </h2>
 
-        <p>
+        <div>
             Loops are handy, if you want to run the same code over and over again, each time with a different value. 
             <br>
             Often this is the case when working with arrays. 
@@ -68,7 +75,7 @@
             Example:- 
             <br>
             <p id="demo1"></p>
-        </p>
+        </div>
 
         <hr>
 
@@ -76,7 +83,7 @@
             Different Kinds of Loops 
         </h2>
 
-        <p>
+        <div>
             JavaScript supports different kinds of loops: 
             <br>
             <ul>
@@ -86,7 +93,7 @@
                 <li><span class="edit">while</span> - loops through a block of code while a specified condition is true</li>
                 <li><span class="edit">do/while</span> - also loops through a block of code while a specified condition is true</li>
             </ul>
-        </p>
+        </div>
 
         <hr>
 
@@ -94,7 +101,7 @@
             The For Loop 
         </h2>
 
-        <p>
+        <div>
             The <span class="edit">for</span> statement creates a loop with 3 optional expressions. 
             <br>
             <p class="edit1">
@@ -126,7 +133,7 @@
             Expression 2 defines the condition for the loop to run (i must be less than 5). 
             <br>
             Expression 3 increases a value (i++) each time the code block in the loop has been executed. 
-        </p>
+        </div>
 
         <hr>
 
@@ -134,7 +141,7 @@
             Expression 1 
         </h2>
 
-        <p>
+        <div>
            Normally you will use expression 1 to initialize the variable used in the loop (let i = 0). 
            <br>
            This is not always the case. JavaScript doesn't care. Expression 1 is optional. 
@@ -152,7 +159,7 @@
            Example:- 
            <br>
            <p id="demo4"></p>
-        </p>
+        </div>
 
         <hr>
 
@@ -160,7 +167,7 @@
             Expression 2 
         </h2>
 
-        <p>
+        <div>
             Often expression 2 is used to evaluate the condition of the initial variable. 
             <br>
             This is not always the case. JavaScript does not care. Expression 2 is also optional. 
@@ -170,7 +177,7 @@
             <p class="edit1">
                 If you omit expression 2, you must provide a <strong>break</strong> inside the loop. Otherwise the loop will never end. This will crash your browser. 
             </p>
-        </p>
+        </div>
 
         <hr>
 
@@ -178,7 +185,7 @@
             Expression 3 
         </h2>
 
-        <p>
+        <div>
             Often expression 3 increments the value of the initial variable. 
             <br>
             This is not always the case. JavaScript does not care. Expression 3 is optional. 
@@ -190,7 +197,7 @@
             Example:- 
             <br>
             <p id="demo5"></p>
-        </p>
+        </div>
 
         <hr>
 
@@ -198,7 +205,7 @@
             Loop Scope 
         </h2>
 
-        <p>
+        <div>
             Using <span class="edit">var</span> in a loop. 
             <br>
             Example:- 
@@ -222,7 +229,7 @@
             In the second example, using <span class="edit">let</span>, the variable declared in the loop does not redeclare the variable outside the loop. 
             <br>
             When <span class="edit">let</span> is used to declare the i variable in a loop, the i variable will only be visible within the loop. 
-        </p>
+        </div>
 
         <script>
         const cars1 = ["BMW", "Volvo", "Saab", "Ford", "Fiat", "Audi"];

@@ -1,11 +1,21 @@
 <!DOCTYPE html>
-<html>
+<html lang="en-in">
     <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>
             JavaScript Regular Expression Modifier i 
         </title>
         <style>
-            
+            html {
+                font-size:calc(10px + 0.390625vw);
+            }
+
+            body {
+                font-family:Verdana, sans-serif;
+                font-size:1rem;
+                line-height:1.5;
+            }
         </style>
     </head>
     <body>
@@ -17,14 +27,14 @@
             Do a case-insensitive search for "w3schools" in a string "Visit W3Schools". 
         </h2>
 
+        <div>
         <p id="demo1"></p>
-
+        </div>
+        
         <script>
             let text1 = "Visit W3Schools";
             let result = text1.match(/w3schools/i);
             document.getElementById("demo1").innerHTML = result;
         </script>
-
     </body>
-
 </html>

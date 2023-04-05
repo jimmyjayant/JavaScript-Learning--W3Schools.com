@@ -1,11 +1,21 @@
 <!DOCTYPE html>
-<html>
+<html lang="en-in">
     <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>
             JavaScript Regular Expression Patterns [0-9] 
         </title>
         <style>
-            
+            html {
+                font-size:calc(10px + 0.390625vw);
+            }
+
+            body {
+                font-family:Verdana, sans-serif;
+                font-size:1rem;
+                line-height:1.5;
+            }
         </style>
     </head>
     <body>
@@ -17,14 +27,14 @@
             Do a global search for the numbers 1 to 4 in a string "123456789".   
         </h2>
 
+        <div>
         <p id="demo1"></p>
+        </div>
 
         <script>
             let text1 = "123456789";
             let result = text1.match(/[1-4]/g);
             document.getElementById("demo1").innerHTML = result;
         </script>
-
     </body>
-
 </html>
