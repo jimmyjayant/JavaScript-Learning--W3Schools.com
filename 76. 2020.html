@@ -1,38 +1,50 @@
 <!DOCTYPE html>
-<html>
+<html lang="en-in">
     <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>
             ECMAScript 2020 
         </title>
         <style>
+            html {
+                font-size:calc(10px + 0.390625vw);
+            }
+
+            body {
+                font-family:Verdana, sans-serif;
+                font-size:1rem;
+                line-height:1.5;
+            }
+
             .edit {
                 background-color:#f1f1f1;
                 color:red;
             }
+
             .edit1 {
                 background-color:rgba(255,255,0,0.3);
-                padding:20px;
+                padding:2rem;
             }
-            body {
-                font-family:verdana, sans-serif;
-                font-size:20px;
-                line-height:1.5;
-            }
+
             .table1 {
                 width:100%;
-                border:1px solid #ddd;
+                border:0.1rem solid #ddd;
                 border-collapse:collapse;
             }
+
             .table1 tr {
-                height:40px;
+                height:3rem;
             }
+
             .table1 tr:nth-child(even) {
                 background-color:#f1f1f1;
             }
+
             .table1 td {
-                padding:10px;
+                padding:1rem;
                 text-align:center;
-                border:1px solid #ddd;
+                border:0.1rem solid #ddd;
             }
         </style>
     </head>
@@ -41,7 +53,7 @@
             ECMAScript 2020 
         </h1>
 
-        <div style="background-color:rgba(0,255,0,0.2);padding:20px;">
+        <div style="background-color:rgba(0,255,0,0.2);padding:2rem;">
         Original JavaScript version numbers were ES5 (2009) and ES6 (2015). 
         <br>
         Since 2016 versions are named by year.  
@@ -71,8 +83,8 @@
 
             <br>
 
-            <div style="background-color:rgba(255,0,0,0.3);padding:20px;">
-            <span style="font-size:30px;">Warning</span>
+            <div style="background-color:rgba(255,0,0,0.3);padding:2rem;">
+            <span style="font-size:2rem;">Warning</span>
             <br>
             These features are relatively new. Old browser may need an alternative code (Polifill) 
             </div>
@@ -179,7 +191,7 @@
             <br>
             <br>
             <div class="edit1">
-                <span style="font-size:30px;">Note</span>
+                <span style="font-size:2rem;">Note</span>
                 <br>
                 ES2021 introduced the string method replaceAll(). 
             </div>
@@ -463,9 +475,6 @@
             let k = 100;
             k ??= 5;
             document.getElementById("demo13").innerHTML = "Value of k is:- " + k;
-
-            
-            
         </script>
     </body>
 </html>
